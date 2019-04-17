@@ -1,0 +1,37 @@
+---
+title: Experiencias compartidas en Unity
+description: Compartir el mismos hologramas entre varios usuarios en una aplicación de Unity.
+author: thetuvix
+ms.author: alexturn
+ms.date: 02/24/2019
+ms.topic: article
+keywords: Uso compartido, delimitador, WorldAnchor, MR compartir 250, WorldAnchorTransferBatch, SpatialPerception, Azure, Azure delimitadores espaciales, ASA
+ms.openlocfilehash: fe755c15d942660b1e16b2335db28d3d7ce72816
+ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59605778"
+---
+# <a name="shared-experiences-in-unity"></a><span data-ttu-id="27e2b-104">Experiencias compartidas en Unity</span><span class="sxs-lookup"><span data-stu-id="27e2b-104">Shared experiences in Unity</span></span>
+
+<span data-ttu-id="27e2b-105">Una experiencia compartida es uno donde varios usuarios, cada uno con sus propios HoloLens, dispositivo iOS o Android, colectivamente ver e interactuar con el mismo holograma que se coloca en un punto fijo en el espacio.</span><span class="sxs-lookup"><span data-stu-id="27e2b-105">A shared experience is one where multiple users, each with their own HoloLens, iOS or Android device, collectively view and interact with the same hologram which is positioned at a fixed point in space.</span></span> <span data-ttu-id="27e2b-106">Esto se logra mediante el uso compartido de anclaje espacial.</span><span class="sxs-lookup"><span data-stu-id="27e2b-106">This is accomplished through spatial anchor sharing.</span></span>
+
+## <a name="azure-spatial-anchors"></a><span data-ttu-id="27e2b-107">Anclas espaciales de Azure</span><span class="sxs-lookup"><span data-stu-id="27e2b-107">Azure Spatial Anchors</span></span>
+
+<span data-ttu-id="27e2b-108">Puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure espacial delimitadores</a> crear duraderos delimitadores espaciales basado en la nube, que, a continuación, puede localizar su aplicación a través de varios HoloLens, dispositivos iOS y Android.</span><span class="sxs-lookup"><span data-stu-id="27e2b-108">You can use <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> to create durable cloud-backed spatial anchors, which your app can then locate across multiple HoloLens, iOS and Android devices.</span></span>  <span data-ttu-id="27e2b-109">Al compartir un anclaje espacial comunes en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física.</span><span class="sxs-lookup"><span data-stu-id="27e2b-109">By sharing a common spatial anchor across multiple devices, each user can see content rendered relative to that anchor in the same physical location.</span></span>  <span data-ttu-id="27e2b-110">Esto permite experiencias compartidas en tiempo real.</span><span class="sxs-lookup"><span data-stu-id="27e2b-110">This allows for real-time shared experiences.</span></span>
+
+<span data-ttu-id="27e2b-111">También puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure espacial delimitadores</a> para la persistencia holograma asincrónica a través de dispositivos Android, iOS y HoloLens.</span><span class="sxs-lookup"><span data-stu-id="27e2b-111">You can also use <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> for asynchronous hologram persistence across HoloLens, iOS and Android devices.</span></span>  <span data-ttu-id="27e2b-112">Al compartir un anclaje espacial en la nube duraderas, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes entre sí al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="27e2b-112">By sharing a durable cloud spatial anchor, multiple devices can observe the same persisted hologram over time, even if those devices are not present together at the same time.</span></span>
+
+<span data-ttu-id="27e2b-113">Para empezar a crear experiencias compartidas en Unity, pruebe el minuto 5 <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">guías de inicio rápido de Azure espacial delimitadores Unity</a>.</span><span class="sxs-lookup"><span data-stu-id="27e2b-113">To get started building shared experiences in Unity, try out the 5-minute <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Azure Spatial Anchors Unity quickstarts</a>.</span></span>
+
+<span data-ttu-id="27e2b-114">Una vez que esté en marcha con delimitadores espacial de Azure, a continuación, puede <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">crear y localizar los anclajes en Unity</a>.</span><span class="sxs-lookup"><span data-stu-id="27e2b-114">Once you're up and running with Azure Spatial Anchors, you can then <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">create and locate anchors in Unity</a>.</span></span>
+
+## <a name="local-anchor-transfers"></a><span data-ttu-id="27e2b-115">Transferencias de anclaje local</span><span class="sxs-lookup"><span data-stu-id="27e2b-115">Local anchor transfers</span></span>
+
+<span data-ttu-id="27e2b-116">En situaciones donde no se puede usar Azure delimitadores espacial, [delimitador local transferencias](local-anchor-transfers-in-unity.md) habilitar un dispositivo HoloLens exportar un delimitador para ser importadas por un segundo dispositivo HoloLens.</span><span class="sxs-lookup"><span data-stu-id="27e2b-116">In situations where you cannot use Azure Spatial Anchors, [local anchor transfers](local-anchor-transfers-in-unity.md) enable one HoloLens device to export an anchor to be imported by a second HoloLens device.</span></span>  <span data-ttu-id="27e2b-117">Tenga en cuenta que este enfoque proporciona la retirada de delimitador menos sólida que Azure espacial delimitadores y dispositivos iOS y Android no son compatibles con este enfoque.</span><span class="sxs-lookup"><span data-stu-id="27e2b-117">Note that this approach provides less robust anchor recall than Azure Spatial Anchors, and iOS and Android devices are not supported by this approach.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="27e2b-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="27e2b-118">See also</span></span>
+* [<span data-ttu-id="27e2b-119">Compartir experiencias en realidad mixta</span><span class="sxs-lookup"><span data-stu-id="27e2b-119">Shared experiences in mixed reality</span></span>](shared-experiences-in-mixed-reality.md)
+* <span data-ttu-id="27e2b-120"><a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure delimitadores espaciales</a></span><span class="sxs-lookup"><span data-stu-id="27e2b-120"><a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a></span></span>
+* <span data-ttu-id="27e2b-121"><a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Delimitadores espaciales Azure SDK para Unity</a></span><span class="sxs-lookup"><span data-stu-id="27e2b-121"><a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Azure Spatial Anchors SDK for Unity</a></span></span>
