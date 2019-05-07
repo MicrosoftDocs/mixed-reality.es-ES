@@ -7,12 +7,12 @@ ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
 keywords: La realidad mixta, desarrollar, desarrollo, HoloLens, unity, directx
-ms.openlocfilehash: e48a1cbfbe084de9382b9fa1104b2d5fc0f68fcc
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b4fa41171fff1f1fdc10359c93f4d1e7e4a84867
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597498"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993590"
 ---
 # <a name="development-launchpad"></a>Launchpad de desarrollo
 
@@ -38,7 +38,7 @@ ms.locfileid: "59597498"
                             <a href="install-the-tools.md">Instalar las herramientas</a>
                         </p>
                         <p>
-                            <a href="holograms-100.md">Aplicaciones de ejemplo y tutoriales</a>
+                            <a href="mrlearning-base-ch1.md">MR de aprendizaje: HoloLens 2 y MRTK v2</a>
                         </p>
                     </div>
                 </div>
@@ -132,10 +132,10 @@ ms.locfileid: "59597498"
                     <div class="cardText">
                         <h3>Guías de migración</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Actualizar a la última mixto<br>El Kit de herramientas de la realidad (MRTK)</a>
+                            <a href="mrtk-porting-guide.md">Actualizar aplicaciones en HoloLens 2<br>de HoloLens (gen 1)</a>
                         </p>
                         <p>
-HoloLens (gen 1) a 2 HoloLens<br>- ¡Próximamente!
+                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Kit de herramientas de realidad mixta (MRTK)<br>Guía de migración de API</a>
                         </p>
                         <p>
                             <a href="porting-guides.md">Aplicaciones envolventes auriculares</a>
@@ -235,5 +235,5 @@ Independientemente del tipo de aplicación que está compilando, estas herramien
 * [Portal de dispositivos Windows](using-the-windows-device-portal.md)
 * [Emulador de HoloLens](using-the-hololens-emulator.md)
 * [Simulador de Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)
-* [Criterios de calidad de la aplicación](app-quality-criteria.md)
+* [Criterios de calidad de aplicaciones](app-quality-criteria.md)
 
