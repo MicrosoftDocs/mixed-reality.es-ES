@@ -6,12 +6,12 @@ ms.author: haejinl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Personal de Windows Mixed Reality, HoloLens, diseño, editorial,
-ms.openlocfilehash: e16be57d42bdc003fd601b94e054c7c25ebd290e
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 050645e6096559a4f37b033e5ddfdc5444039c08
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605770"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873953"
 ---
 # <a name="case-study---my-first-year-on-the-hololens-design-team"></a>Caso práctico: equipo de diseño de mi primer año en el HoloLens
 
@@ -105,7 +105,7 @@ Cuando trabajé en 2D, había esbozada principalmente solo el contenido. Sin emb
 
 **"Aproximación esbozado la escena en 3D, independientemente de la experiencia real en auriculares era casi nunca el mismo que el boceto. Por eso es importante probar la escena en el destino auriculares. "— Hae Jin Lee**
 
-Para crear prototipos de HoloLens, he intentado todos los tutoriales en [Mixed Reality Academy](academy.md) para iniciar. Luego comencé a jugar con [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) que Microsoft proporciona a los desarrolladores para acelerar el desarrollo de aplicaciones holográficas. Cuando fui bloqueado con algo, registrar mi pregunta a [foro de respuesta y la pregunta de HoloLens](https://forums.hololens.com/categories/questions-and-answers/).
+Para crear prototipos de HoloLens, he intentado todos los tutoriales en [tutoriales Mixed Reality](tutorials.md) para iniciar. Luego comencé a jugar con [HoloToolkit.Unity](https://github.com/Microsoft/HoloToolkit-Unity/) que Microsoft proporciona a los desarrolladores para acelerar el desarrollo de aplicaciones holográficas. Cuando fui bloqueado con algo, registrar mi pregunta a [foro de respuesta y la pregunta de HoloLens](https://forums.hololens.com/categories/questions-and-answers/).
 
 Después de adquirir conocimientos básicos de creación de prototipos de HoloLens, deseaba permitir que a otros no codificadores prototipos por sí solos. Por lo que hice un tutorial de vídeo que enseña a desarrollar un proyectil simple con HoloLens. Explican brevemente los conceptos básicos, incluso que si tiene cero experiencia en desarrollo de HoloLens, podrá seguir el tutorial.
 

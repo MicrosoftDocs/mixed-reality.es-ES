@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, la realidad mixta HoloLens, envolvente, vr, mr, empezar a trabajar, holograma, academy, tutorial
-ms.openlocfilehash: 1f4a5490383671fba694b386015ff6742d37241b
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fd3bed955e80ec18b7be500adbdb0fcb7062d129
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597558"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993621"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -97,7 +97,7 @@ En este capítulo, se establecerá a algunas configuraciones de proyecto de Unit
 
 Puesto que es tan importante mantener la alta velocidad de fotogramas en HoloLens, queremos que la configuración de calidad, optimizada para rendimiento más rápido. Para obtener más información de rendimiento, [recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md).
 1. Seleccione **Editar > configuración del proyecto > calidad**
-2. Seleccione el **desplegable** bajo el **Windows Store** logotipo y seleccione **Very Low**. Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna de Windows Store y la fila más rápida es verde.
+2. Seleccione el **desplegable** bajo el **Windows Store** logotipo y seleccione **Very Low**. Sabrá que la configuración se aplique correctamente cuando la casilla de la columna de Windows Store y **Very Low** fila es verde.
 
 **Para aplicaciones de realidad mixta dirigidas a las pantallas de ocluidos**, puede dejar la configuración de calidad a sus valores predeterminados.
 

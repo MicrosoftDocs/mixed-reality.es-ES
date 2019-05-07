@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, tutorial, asignación espacial, reconstrucción expuesta, malla
-ms.openlocfilehash: 8d5715337ddd20e9868b18fdf0c63c704f584972
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600927"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993560"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -85,7 +85,7 @@ ms.locfileid: "59600927"
     * Micrófono
     * SpatialPerception
 * Vaya a **Editar > configuración del proyecto > calidad**
-* En el **Inspector** panel, bajo el icono de Windows Store, seleccione la flecha de lista desplegable negra en la fila "Default" y cambie la configuración predeterminada para **Fastest**.
+* En el **Inspector** panel, bajo el icono de Windows Store, seleccione la flecha de lista desplegable negra en la fila "Default" y cambie la configuración predeterminada para **Very Low**.
 * Vaya a **activos > Importar paquete > paquete personalizado**.
 * Navegue hasta la **...\HolographicAcademy-Holograms-230-SpatialMapping\Starting** carpeta.
 * Haga clic en **Planetarium.unitypackage**.

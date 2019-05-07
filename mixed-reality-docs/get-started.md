@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/06/2018
 ms.topic: article
 keywords: empezar a trabajar, conceptos básicos, HoloLens, auriculares envolventes, ar, vr, unity, visual studio, inicio rápido, cómo
-ms.openlocfilehash: 92fbc6eee227da571ff36401f84cf81a093062d7
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4277de37ffe4a7ab03f382626452b96bf9157634
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59601347"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873960"
 ---
 # <a name="get-started"></a>Comenzar
 
@@ -63,7 +63,7 @@ Ahora que su PC y dispositivos están configuradas, está listo para crear su pr
 
 Ahora que ha creado correctamente su primer proyecto MR, probablemente ya tenga ganas para obtener más información. Estos son algunos recursos que le ayudarán:
 * [Mixto documentación para desarrolladores de realidad](mixed-reality.md) : ya está aquí, pero hay mucho más que desproteja, incluidos casos prácticos, instrucciones de diseño, proyectos de ejemplo y documentación técnica.
-* [Academia de realidad mixta](academy.md) -seguir tutoriales que abarcan todo, desde configurar proyectos para implementar los bloques de creación fundamentales MR, a la integración de Azure servicios en la nube en su aplicación MR.
+* [Mixto tutoriales realidad](tutorials.md) -seguir tutoriales que abarcan todo, desde configurar proyectos para implementar los bloques de creación fundamentales MR, a la integración de Azure servicios en la nube en su aplicación MR.
 * [Obtenga información sobre Unity](https://unity3d.com/learn) -sitio Web de Unity ofrece tutoriales, proyectos y las sesiones de formación en línea para los creadores de en cada fase de aprendizaje.
 
 También puede obtener ayuda de estos recursos de comunidad excelente:

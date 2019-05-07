@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, la configuración, la realidad mixta
-ms.openlocfilehash: a67c3a65819855be6d43941c05f9a0027abf2f6d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c7029f2dfaf246db9f972c7d89b46e4fb9b5f1a1
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600157"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993609"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -19,13 +19,24 @@ Unity proporciona un conjunto de opciones predeterminadas que suelen ser el caso
 
 ## <a name="performant-environment-set-up"></a>Configuración del entorno de alto rendimiento
 
-### <a name="low-quality-setting"></a>Configuración de calidad baja
+### <a name="low-quality-settings"></a>Configuración de baja calidad
 
-Es importante modificar el **configuración de calidad de Unity** de su entorno para **"más rápido"**. Esto le ayudará a asegurarse de que la aplicación se está ejecutando el modo más eficaz en la velocidad de fotogramas adecuada. Esto es muy importante para el desarrollo de Hololens. Para el desarrollo en inmersivos, según las especificaciones del escritorio potenciar la experiencia de realidad virtual, uno puede conseguir aún framerate sin los parámetros de calidad más bajos. 
+Es importante modificar el **configuración de calidad de Unity** de su entorno para **Very Low**. Esto le ayudará a asegurarse de que la aplicación se está ejecutando el modo más eficaz en la velocidad de fotogramas adecuada. Esto es muy importante para el desarrollo de Hololens. Para el desarrollo en inmersivos, según las especificaciones del escritorio potenciar la experiencia de realidad virtual, uno puede conseguir aún framerate sin los parámetros de calidad más bajos. 
 
 En Unity 2018 LTS +, el nivel de calidad del proyecto puede establecerse mediante:
 
-En **editar** > **configuración del proyecto** > **calidad** > Establezca el **predeterminado** haciendo clic en el la flecha hacia abajo a la **Fastest** nivel de calidad
+En **editar** > **configuración del proyecto** > **calidad** > Establezca el **predeterminado** haciendo clic en el la flecha hacia abajo a la **Very Low** nivel de calidad
+
+### <a name="lighting-settings"></a>Configuración de iluminación
+
+Al igual que la configuración de la escena de calidad, es importante establecer la configuración óptima de iluminación de la aplicación de realidad mixta. En Unity, la opción de iluminación que normalmente, tendrá el mayor impacto de rendimiento en su escena es **iluminación Global en tiempo real**. Esto se puede desactivar yendo **ventana** > **representación** > **iluminación configuración** > **en tiempo real Iluminación global**. 
+
+Hay otra configuración de iluminación, **incorporada iluminación Global**. Esta configuración puede proporcionar un rendimiento y resultados visualmente sorprendente en inmersivos, pero generalmente no es aplicable para el desarrollo de HoloLens. **Incorporada Illumniation Global** solo se calcula para GameObjects estático que generalmente no se encuentran en segundo plano de HoloLens debido a la naturaleza de un entorno cambiante y desconocida.
+
+Lea [iluminación Global de Unity](https://docs.unity3d.com/Manual/GIIntro.html) para obtener más información. 
+
+>[!NOTE]
+> **En tiempo real de iluminación Global** se establece **por escena** y, por tanto, los desarrolladores deben guardar esta propiedad para cada escena de Unity en su proyecto. 
 
 ### <a name="single-pass-instancing-rendering-path"></a>Ruta de representación de creación de instancias de paso único
 

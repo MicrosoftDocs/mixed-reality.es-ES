@@ -6,12 +6,12 @@ ms.author: ericrehm
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, ventana mágica, paralaje
-ms.openlocfilehash: 0c0828a6ebbefdcff7f0a66f48469007c5c532df
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600748"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873937"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Caso práctico: examinar los huecos en la realidad
 
@@ -93,7 +93,7 @@ Tiene un HoloLens y desea probar el efecto para usted mismo? Lo más fácil hace
 
 Ver este modelo en el editor de Unity, se mostrará un cuadro negro grande en torno a la flowerpot. En HoloLens, desaparece el cuadro, dar forma a un efecto de ventana mágica.
 
-Si desea compilar una aplicación que usa esta técnica, consulte el [MR Fundamentos 101 tutorial](holograms-101.md) en el [Mixed Reality Academy](academy.md). Capítulo 7 termina con un aumento vertiginoso en el suelo que revela un Underword oculto (como se muestra en la imagen anterior). ¿Quién ha dicho tutoriales tenían que ser aburrido?
+Si desea compilar una aplicación que usa esta técnica, consulte el [MR Fundamentos 101 tutorial](holograms-101.md) en el [tutoriales Mixed Reality](tutorials.md). Capítulo 7 termina con un aumento vertiginoso en el suelo que revela un Underword oculto (como se muestra en la imagen anterior). ¿Quién ha dicho tutoriales tenían que ser aburrido?
 
 Aquí le presentamos algunas ideas de donde puede tomar esta idea siguiente:
 * Pensar en maneras de hacer que el contenido en el orificio virtual interactiva. Permitir que los usuarios tener algún impacto más allá de sus paredes puede mejorar realmente el sentido de extrañar que puede proporcionar este truco.
@@ -109,7 +109,7 @@ Aquí le presentamos algunas ideas de donde puede tomar esta idea siguiente:
 </table>
 
 ## <a name="see-also"></a>Vea también
-* [Conceptos básicos de MR 101: Proyecto completo con el dispositivo](holograms-101.md)
+* [MR Basics 101: proyecto completo con dispositivo](holograms-101.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Delimitadores espaciales](spatial-anchors.md)
 * [Asignación espacial](spatial-mapping.md)

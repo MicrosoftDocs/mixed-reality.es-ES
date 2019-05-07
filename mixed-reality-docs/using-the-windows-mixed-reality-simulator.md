@@ -1,17 +1,17 @@
 ---
 title: Mediante el simulador de Windows Mixed Reality
 description: El simulador de Windows Mixed Reality le permite probar aplicaciones de realidad mixta en su PC sin un auricular envolvente de Windows Mixed Reality.
-author: JonMLyons
-ms.author: jlyons
-ms.date: 03/21/2018
+author: pbarnettms
+ms.author: pbarnett
+ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows mixto en realidad, el simulador, las pruebas
-ms.openlocfilehash: 782cab85f163edd2afc4251210b7596c73dcc8b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
+ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605462"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64580704"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Mediante el simulador de Windows Mixed Reality
 
@@ -28,7 +28,7 @@ El simulador de Windows Mixed Reality le permite probar aplicaciones de realidad
    4. Haga clic en **configurar** para confirmar su elección
 4. Haga clic en el **para desarrolladores** botón en el lado izquierdo del Portal de realidad mixta
 5. Gire el interruptor de alternancia de simulación a **en**
-   * Esto requiere permisos de administrador y debe aceptar el cuadro de diálogo Control de cuentas de usuario que aparece
+   * Habilitar la simulación se instala y habilita el controlador de la izquierda 6-GDL simulado de forma predeterminada.  Antes de Windows 10 de mayo de 2019 update, instalar un controlador de 6-GDL simulado requiere permisos de administrador.  Debe aceptar el cuadro de diálogo Control de cuentas de usuario si aparece alguno.
 
 Ahora debe ejecutar con la simulación.
 
@@ -50,11 +50,13 @@ Controlar el simulador dirigiendo las acciones de un usuario simulado gastando d
 ## <a name="tracked-controllers"></a>Controladores de seguimiento
 
 El simulador de realidad mixta puede simular hasta dos controladores de mano movimiento sometidas a seguimiento. Habilitarlas mediante los conmutadores de alternancia en el Portal de realidad mixta. Cada controlador simulado tiene:
-* Posición en el espacio
+* Posición y orientación en el espacio
 * Botón Inicio
 * Botón de menú
 * Botón de control
 * Panel táctil
+* Tecla de navegación
+* Nivel de batería
 
 ## <a name="see-also"></a>Vea también
 * [Uso del emulador HoloLens](using-the-hololens-emulator.md)

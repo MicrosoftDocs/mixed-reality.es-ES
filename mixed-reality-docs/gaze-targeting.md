@@ -6,13 +6,31 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar
-ms.openlocfilehash: c3225e27331f8afcda65469eb84fe5470bf6ee8c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600678"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873924"
 ---
+# <a name="gaze-and-dwell"></a>Mirada y permanencia
+Hay muchas maneras diferentes para confirmar una _confirmación_ , como la combinación mirada con _voz_ o _gestos de mano_.
+Hay varios escenarios de usuario sin embargo, en el que manos de los usuarios, o bien pueden estar ocupadas o no se puede realizar el seguimiento (p. ej., los trabajadores de fábrica con guantes pesados demasiado grande). Entrada de voz también no estén disponible debido a las preferencias del usuario, contexto social o entornos de altos.
+Como una solución de reserva otra opción para realizar un _confirmación_ es simplemente mantener que comience en un elemento de interfaz de usuario que nos referiremos como _profundizaré_.
+Un _profundizaré_ puede realizarse con mirada head o efecto de ojos. La idea es sencilla y puede dividirse en las siguientes fases: 
+1. Usuario comienza a gazing en un botón holográfico
+
+2. Después de un retraso breve manifestación (p. ej., 150 ms) se ha iniciado alguna animación comentarios visuales. El retraso de aparición se usa para evitar sobrecargar el usuario haciendo que emerja inmediatamente los comentarios todo el tiempo.
+    - Para _mirada ojo_, se recomienda lo siguiente para el diseño del objeto visual profundizaré comentarios:
+      - **Blend se**: Blend sin problemas en los comentarios de apenas visible en primer lugar a totalmente opaco. Esto hace que los comentarios a menos que distraen y overwhleming y bien se alinea con la confianza de que el sistema tiene que el usuario realmente desea ponerse en contacto con este botón.
+      - **Incorporación de cambios**: Cree un comentarios visuales que disminuye de tamaño y se mueve hacia el centro del destino, dirige la atención del usuario visual. 
+
+3. Después de una duración de permanencia definido previamente (por ejemplo, 800 ms), se completa la permanencia y se desencadena un evento asociado.
+    - Proporcionar algunos finalizando auditorio o comentarios visuales poner realmente inicio el elemento tienen seleccionada ahora.
+
+![Profundizaré Estados](images/eyes_dwellstate_recommendation.png)
+
+
 # <a name="gaze-targeting"></a>Mirada destinadas a
 
 Todas las interacciones se basan en la capacidad de un usuario para el elemento que desean interactuar, independientemente de la modalidad de entrada de destino. En Windows Mixed Reality, por lo general esto se hace mediante la mirada del usuario.
@@ -32,7 +50,7 @@ Para que los usuarios puedan trabajar con una experiencia correctamente, debe al
 </table>
 
 > [!NOTE]
-> Obtener información más específica de HoloLens 2 [próximamente](index.md#news-and-notes).
+> Obtener información más específica de HoloLens 2 [próximamente](index.md).
 
 ## <a name="target-sizing-and-feedback"></a>Comentarios y ajuste de tamaño de destino
 
@@ -81,5 +99,5 @@ Al determinar qué cercanas a elementos interactivos para dar el foco a, proporc
 
 ## <a name="see-also"></a>Vea también
 * [Gestos](gestures.md)
-* [Diseño de voz](voice-design.md)
+* [Diseño de la voz](voice-design.md)
 * [Cursores](cursors.md)

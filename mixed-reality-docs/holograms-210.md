@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, mirada tutorial, academy,
-ms.openlocfilehash: 63c55e8a7a348f2a3e0cc29a9795d7fabcef5df0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 076314389ec5ed70347c26d50c6a993f55da0758
+ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59599377"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64993551"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -103,7 +103,7 @@ Por último, actualizaremos nuestra configuración de calidad para lograr un ren
 
 1. Vaya a **Editar > configuración del proyecto > calidad**.
 2. Haga clic en la flecha hacia abajo en la **predeterminado** fila bajo el icono de Windows Store.
-3. Seleccione **más rápido** para **Windows Store Apps**.
+3. Seleccione **muy baja** para **Windows Store Apps**.
 
 ### <a name="import-project-assets"></a>Importar los recursos del proyecto
 

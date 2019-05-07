@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: al obtener iniciados, conceptos básicos, HoloLens, HoloLens 2, auriculares envolventes, unity, visual studio
-ms.openlocfilehash: 1d23e458477cc23252ccd4c44f67c400aa356965
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 23bd173f89a468b4403d44236534bfe811a968dd
+ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605786"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64873975"
 ---
 # <a name="development-overview"></a>Información general sobre desarrollo
 
@@ -75,13 +75,13 @@ Independientemente del tipo de aplicación que está compilando, estas herramien
 * [Portal de dispositivos Windows](using-the-windows-device-portal.md)
 * [Emulador de HoloLens](using-the-hololens-emulator.md) (emulador de HoloLens 2 próximamente)
 * [Simulador de Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)
-* [Criterios de calidad de la aplicación](app-quality-criteria.md)
+* [Criterios de calidad de aplicaciones](app-quality-criteria.md)
 
 ## <a name="see-also"></a>Vea también
-* [Instalar las herramientas](install-the-tools.md)
+* [Instalación de las herramientas](install-the-tools.md)
 * <a href="https://azure.microsoft.com/topic/mixed-reality" target="_blank">Servicios de realidad mixta</a>
-* [Tutoriales de realidad mixtas](academy.md)
+* [Tutoriales de realidad mixtas](tutorials.md)
 * [Proyectos de código abierto](open-source-projects.md)
-* [Conceptos básicos de MR 100: Introducción a Unity](holograms-100.md)
+* [MR Basics 100: introducción a Unity](holograms-100.md)
 * [Directrices para compatibilidad de hardware mínimas PC de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Envío de una aplicación para el Store de Windows](submitting-an-app-to-the-microsoft-store.md)
