@@ -7,12 +7,12 @@ ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, interacción, estilo, Color, patrones de aplicaciones, controles, aplicaciones de ejemplo, el Kit de herramientas de realidad mixta, MRTK
-ms.openlocfilehash: 470dff4319abded630e084f46193dcc79531aa54
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 8d5618b6f01f379b70f95e6493bdc670a1338e4c
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605479"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469093"
 ---
 # <a name="design-for-mixed-reality"></a>Diseño de realidad mixta
 
@@ -64,21 +64,21 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Diseño de interacción</h3>
-                        <p>
-                            <a href="interaction-fundamentals.md">Aspectos básicos de interacción</a>
-                        </p>
+                        <h3>Diseño de la interacción</h3>
                         <p>
                             <a href="comfort.md">Comodidad</a>
                         </p>
-                        <p>
-                            <a href="gaze-targeting.md">Mirada destinadas a</a>
+            <p>
+                            <a href="interaction-fundamentals.md">Interacciones instinctual</a>
                         </p>
                         <p>
-                            <a href="gestures.md">Gestos</a>
+                            <a href="hands-and-tools.md">Las manos y controladores</a>
+                        </p>
+                        <p>
+                            <a href="hands-free.md">Hands-free</a>
                         </p>
                          <p>
-                            <a href="voice-design.md">Diseño de voz</a>
+                            <a href="gaze-and-commit.md">Mirada de encabezado y confirmación</a>
                         </p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Patrones de aplicaciones</h3>
+                        <h3>Patrones de las aplicaciones</h3>
                         <p>
                             <a href="types-of-mixed-reality-apps.md">Tipos de aplicaciones de realidad mixta</a>
                         </p>
