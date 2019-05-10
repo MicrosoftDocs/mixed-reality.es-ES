@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Diseñar la realidad, mirada, mirada como destino, interacción, mixta
-ms.openlocfilehash: f52a0cd8ec53bfe0f4c5da2c054c538eda1c93ca
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993599"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469101"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instinctual
 La filosofía de interacciones simple, instinctual es integrando a través de la plataforma Microsoft Mixed Reality.  Hemos tomado tres pasos para asegurarse de que los desarrolladores y diseñadores de aplicaciones pueden proporcionar interacciones sencillas e intuitivas para sus clientes. 
@@ -55,13 +55,13 @@ El gráfico siguiente es una introducción simplificada.  Información detallada
         <td>HoloLens 2<br>Envolventes con 6GDL controladores de Windows</td>
     </tr>
     <tr>
-        <td><a href="hands-free.md">Hands-free</a></td>
+        <td><a href="hands-free.md">Manos libres</a></td>
         <td>Experiencias contextuales donde están ocupadas, por ejemplo, las manos de un usuario en el trabajo de aprendizaje, mantenimiento</td>
         <td>Algunos de aprendizaje necesarios<br>Si no están disponibles las manos<br>pares de bien con lenguaje natural y voz</td>
         <td>HoloLens 2<br>HoloLens (gen 1)<br> Envolventes de Windows</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Mirada de encabezado y confirmación</a></td>
+        <td><a href="gaze-and-commit.md">Mirada-cabeza y confirmación</a></td>
         <td>Por ejemplo, 3D presentaciones, demostraciones de experiencias de Click-through</td>
         <td>Requiere recursos de aprendizaje en HMDs pero no en dispositivos móviles<br>Lo mejor para los controladores accesible<br>Lo mejor para HoloLens (gen 1)</td>
         <td>HoloLens 2<br>HoloLens (gen 1)<br> Envolventes de Windows<br> Mobile AR</td>
@@ -107,7 +107,7 @@ Estos son algunos ejemplos de cómo se optimizan factibilidad y comportamientos 
     <tr>
         <td><strong>Modelo</strong></td>
         <td><strong>¿Cómo puede saber funciona?</strong></td>
-        <td><strong>¿Cómo puedo saber qué puedo hacer?</strong></td>
+        <td><strong>¿Cómo se puede saber qué puedo hacer?</strong></td>
         <td><strong>¿Cómo se puede saber lo que hice?</strong></td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@ Estos son algunos ejemplos de cómo se optimizan factibilidad y comportamientos 
         <td>Puedo oír tonos audibles y ver animaciones en la captura y liberación.</td>
     </tr>
     <tr>
-        <td><a href="gaze-and-commit.md">Mirada de encabezado y confirmación</a></td>
+        <td><a href="gaze-and-commit.md">Mirada-cabeza y confirmación</a></td>
         <td>Veo un cursor en el centro de mi campo de visión.</td>
         <td>El cursor mirada cambia el estado cuando se encuentre sobre determinados objetos.</td>
         <td>Puedo ver o escuchar visuales y audibles confirmaciones al realizar una acción.</td>
@@ -175,9 +175,9 @@ Si su experiencia requieren varios modelos de interacción, hemos visto que much
  
 
 ## <a name="see-also"></a>Vea también
-* [Mirada de encabezado y confirmación](gaze-and-commit.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Manipulación directa](direct-manipulation.md)
-* [Punto y confirmación](point-and-commit.md)
+* [Señalar y confirmar](point-and-commit.md)
 * [Selección de destinos de la mirada](gaze-targeting.md)
 * [Gestos](gestures.md)
 * [Diseño de la voz](voice-design.md)

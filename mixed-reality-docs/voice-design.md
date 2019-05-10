@@ -1,21 +1,21 @@
 ---
-title: Diseño de voz
+title: Mirada y voz
 description: Mirada, gestos y voz (GGV) son el medio principal de interacción en HoloLens. Este artículo proporciona información detallada sobre el diseño de voz.
-author: rwinj
-ms.author: randyw
-ms.date: 03/21/2018
+author: grbury
+ms.author: grbury
+ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, la interacción, voz
-ms.openlocfilehash: 2df0e15c66891b08577fcf203d11f7c7008247f1
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 35e4c72026acaa36e5fd686cf892dd602f6626d6
+ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605588"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469069"
 ---
-# <a name="voice-design"></a>Diseño de voz
+# <a name="gaze-and-voice"></a>Mirada y voz
 
-Mirada, gestos y voz (GGV) son el medio principal de interacción en HoloLens. [Observación](gaze.md) usa con un [cursor](cursors.md) es el mecanismo para tener como destino el contenido que están listos para interactuar con un usuario. [Gesto](gestures.md) o [voz](voice-input.md) son los mecanismos de intención. Mirada puede utilizarse con el gesto o de voz para completar una interacción.
+Mirada, gestos y voz (GGV) son el medio principal de interacción en HoloLens (gen 1). [Observación](gaze.md) usa con un [cursor](cursors.md) es el mecanismo para tener como destino el contenido que están listos para interactuar con un usuario. [Gesto](gestures.md) o [voz](voice-input.md) son los mecanismos de intención. Mirada puede utilizarse con el gesto o de voz para completar una interacción.
 
 En inmersivos, el medio principal de interacción es mirada y confirmación y punto y confirmación (con un [controlador de movimiento](motion-controllers.md)). Si el usuario tiene un auricular con capacidades de voz, voz puede usarse en combinación con la mirada o punto para completar una acción.
 
@@ -27,7 +27,7 @@ Durante el diseño de aplicaciones, debe considerar cómo puede hacer que estas 
 <tr>
 <th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
 </tr><tr>
-<td> Voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con auriculares adjuntadas)</td>
+<td>Mirada y voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con auriculares adjuntadas)</td>
 </tr>
 </table>
 
@@ -102,4 +102,4 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 
 ## <a name="see-also"></a>Vea también
 * [Gestos](gestures.md)
-* [Mirada destinadas a](gaze-targeting.md)
+* [Selección de destinos de la mirada](gaze-targeting.md)
