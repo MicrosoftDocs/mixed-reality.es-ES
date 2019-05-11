@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: La realidad mixta, manos libres, que mirar, mirar como destino, interacción, diseño
-ms.openlocfilehash: b64dec802d8ed2886021a54f302ba4a948c4f5b9
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581035"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524329"
 ---
 # <a name="optimizing-your-app-for-hands-free"></a>Optimizar la aplicación para la configuración manos libres
 
@@ -97,6 +97,6 @@ Un modificador de modo es un componente indispensable, es importante que cuando 
 
 
 ## <a name="see-also"></a>Vea también
-* [Mirada y confirmación](gaze-and-commit.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Manipulación directa](direct-manipulation.md)
-* [Punto y confirmación](point-and-commit.md)
+* [Señalar y confirmar](point-and-commit.md)
