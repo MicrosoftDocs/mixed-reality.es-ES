@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Windows Mixed Reality, AfterNow, visualización, creación de prototipos, compilar
 ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59605700"
@@ -121,7 +121,7 @@ Se comenzará a ver un mapa térmico de personas ideas les interesa y durante lo
 
 En este paso también queremos permitir que usuarios oportunidades para explicar ideas que no ha recibido mucha atención. A veces, encontrará que un gem de personas de una idea realmente no entendía anteriormente.
 
-**Sondeo de la paja & supervote**
+**Sondeo extraoficial y supervoto**
 
 Cada persona elegirá automáticamente su idea favorito y, cuando esté listo, personas colocará a la vez una marca en su favoritos uno. El Decider, a continuación, obtendrá tres puntos grandes para la idea que le gustó el máximo. Los marcados por el Decider son las ideas que se van a ser el prototipo.
 

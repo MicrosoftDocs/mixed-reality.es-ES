@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/11/2019
 ms.topic: article
 keywords: Diseñar la realidad, mirada, mirada como destino, interacción, mixta
-ms.openlocfilehash: c762518a224138dab248670eaef23ccb92016fce
-ms.sourcegitcommit: a4a53e6772805d89a47588857e3e8fb1fd8d9710
+ms.openlocfilehash: 8c578d9a67f6809df69fb132f4c46a381726596e
+ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469101"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524337"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instinctual
 La filosofía de interacciones simple, instinctual es integrando a través de la plataforma Microsoft Mixed Reality.  Hemos tomado tres pasos para asegurarse de que los desarrolladores y diseñadores de aplicaciones pueden proporcionar interacciones sencillas e intuitivas para sus clientes. 
@@ -51,7 +51,7 @@ El gráfico siguiente es una introducción simplificada.  Información detallada
     <tr>
         <td><a href="hands-and-tools.md">Las manos y herramientas</a></td>
         <td>Experiencias espaciales en 3D<br>Por ejemplo, diseño espacial y diseño, manipulación de contenido o simulación</td>
-        <td>Ideal para nuevos usuarios<br>Curva de aprendizaje reducida<br>Conexión a tierra en factibilidad visual fácil<br>Experiencia de usuario coherente a través de la mano de seguimiento y controladores GDL 6<br>Excelente cuando se combina con la voz, seguimiento de los ojos o head que mirar</td>
+        <td>Ideal para nuevos usuarios<br>Curva de aprendizaje reducida<br>Conexión a tierra en factibilidad visual fácil<br>Experiencia de usuario coherente a través de la mano de seguimiento y 6GDL controladores<br>Excelente cuando se combina con la voz, seguimiento de los ojos o head que mirar</td>
         <td>HoloLens 2<br>Envolventes con 6GDL controladores de Windows</td>
     </tr>
     <tr>

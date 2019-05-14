@@ -8,7 +8,7 @@ ms.topic: article
 keywords: release notes, versión, windows 10, compilación, rs3, sistema operativo
 ms.openlocfilehash: 7274dcf1db449fa35981eb72192fea9873fcc90a
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59597828"
@@ -87,7 +87,7 @@ Hemos trabajado duro para ofrecer una excelente experiencia de Windows Mixed Rea
 
 ### <a name="motion-controllers"></a>Controladores de movimiento
 * En ocasiones, si hace clic en una página Web en Edge, irá el contenido en lugar de hacer clic.
-* En ocasiones, al hacer clic en un vínculo en Edge, la selección no funcionará.
+* En ocasiones, al hacer clic en un vínculo en Microsoft Edge, la selección no funcionará.
 
 ## <a name="prior-release-notes"></a>Notas de la versión anterior
 * [Notas de la versión - agosto de 2016](release-notes-august-2016.md)

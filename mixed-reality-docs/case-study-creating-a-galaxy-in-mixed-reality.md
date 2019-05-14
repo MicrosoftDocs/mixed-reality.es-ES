@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Explorador de Galaxy, HoloLens, Windows Mixed Reality, comparta sus ideas, caso práctico
 ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59605730"
@@ -147,7 +147,7 @@ Realizando las nubes de pantalla completa y tratando de les desenfoque habría s
 
 ### <a name="a-bit-of-context-first"></a>Un bit del contexto en primer lugar
 
-Al usar las texturas en un juego el tamaño de la textura rara vez coincidirá con el área que deseamos utilizar en, pero podemos usar otro tipo de filtrado para obtener la tarjeta gráfica para interpolar el color que desee de los píxeles de la textura de textura ([Texture Filtering<C3/>). El filtrado que nos interesa es [filtrado bilineal](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) que va a calcular el valor de cualquier píxel con el 4 de vecinos más cercanos.
+Al usar las texturas en un juego el tamaño de la textura rara vez coincidirá con el área que deseamos utilizar en, pero podemos usar otro tipo de filtrado para obtener la tarjeta gráfica para interpolar el color que desee de los píxeles de la textura de textura ([Texture Filtering<C3/>).](https://msdn.microsoft.com/library/dn642451.aspx) El filtrado que nos interesa es [filtrado bilineal](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) que va a calcular el valor de cualquier píxel con el 4 de vecinos más cercanos.
 
 ![Original antes de filtrado](images/texture-1.png)
 
