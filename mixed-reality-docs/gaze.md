@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidad mixta, mirada, interacción, diseñar
-ms.openlocfilehash: 9a12a5a3b3a583477fd98caeaa2f6890c67e2655
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 738ba9063a5d00f3bbedce989d93076d56ad1a44
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605758"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629105"
 ---
 # <a name="gaze"></a>Mirada
 
@@ -61,6 +61,6 @@ La mayoría de las aplicaciones debe usar un [cursor](cursors.md) (u otra indica
 Una vez que el usuario destina un holograma o un objeto del mundo real mediante su mirada, su siguiente paso es realizar la acción en ese objeto. Las formas principales de un usuario para tomar medidas son a través de [gestos](gestures.md), [controladores de movimiento](motion-controllers.md) y [voz](voice-input.md).
 
 ## <a name="see-also"></a>Vea también
-* [Entrada MR 210: Gaze](holograms-210.md)
-* [Mirada, gestos y controladores de movimiento de DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
-* [Mirar en Unity](gaze-in-unity.md)
+* [MR Input 210: mirada](holograms-210.md)
+* [Mirada principal y de ojo de DirectX](gaze-in-directx.md)
+* [Mirada en Unity](gaze-in-unity.md)

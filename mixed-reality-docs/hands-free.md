@@ -1,19 +1,19 @@
 ---
-title: Optimizar la aplicación para la configuración manos libres
+title: Manos libres
 description: Optimizar la aplicación para la configuración manos libres
 author: liamar
 ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: La realidad mixta, manos libres, que mirar, mirar como destino, interacción, diseño
-ms.openlocfilehash: f39a9524831161997b59be6cf89b124fa5b29c78
-ms.sourcegitcommit: d6d96d552ec10cd7e6502fbbc1905432e2878325
+ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524329"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629018"
 ---
-# <a name="optimizing-your-app-for-hands-free"></a>Optimizar la aplicación para la configuración manos libres
+# <a name="hands-free"></a>Manos libres
 
 
 
@@ -31,18 +31,16 @@ Podrían ser algunos escenarios concretos:
 
 ## <a name="hands-free-modalities"></a>Modalidades de manos libres
 
-### <a name="voice-commanding"></a>Comandos de voz
+### <a name="voice-commandingvoice-designmd"></a>[Comandos de voz](voice-design.md)
 
 Uso de la voz para comando y control de que una interfaz puede no sólo permite al usuario manos libres de funcionar, pero también omitir varios pasos. El uso de esta modalidad puede oscilar entre que permite al usuario simplemente leyendo el nombre de cualquier botón en voz alta activarlo, como se muestra en vea-it-say-it, para conversar con un agente que puede realizar las tareas por usted.
 
-* [Diseño de la voz](voice-design.md)
 
 
-### <a name="head-gaze-and-dwell"></a>Mirada HEAD y permanencia
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Head mirada y permanencia](gaze-and-dwell.md)
 
 En algunas situaciones en las manos libres, uso de la voz no es ideal o posible. Entornos de fábrica fuerte, privacidad o normas sociales pueden ser restricciones. El encabezado que mirar + profundizaré modelo permite al usuario navegar por la aplicación mediante el uso de su vector principal para que apunte al persistentes, o reposo en un botón se activarán después de una cierta cantidad de tiempo (normalmente aproximadamente 1 segundo o menos). 
 
-* [Mirada y permanencia](gaze-and-dwell.md)
 
 ## <a name="transitioning-in-and-out-of-hands-free"></a>Transición dentro y fuera de manos libres
 

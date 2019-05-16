@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, representación, gráficos 3D, HolographicFrame, representar el bucle, el bucle de actualización, el tutorial, código de ejemplo
-ms.openlocfilehash: fd35f971af4c3c9dfd7f21ee396c92216b3246e9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605796"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629035"
 ---
 # <a name="rendering-in-directx"></a>Representación de DirectX
 
@@ -89,7 +89,7 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Mirada de proceso y el gesto de entrada
 
-[Observación](gaze.md) y [gesto](gestures.md) no están basados en tiempo de entrada y, por tanto, no es necesario actualizar en el **StepTimer** función. Sin embargo [esta entrada](gaze,-gestures,-and-motion-controllers-in-directx.md) es algo que la aplicación debe consultar cada fotograma.
+[Observación](gaze-in-directx.md) y [mano](hands-and-motion-controllers-in-directx.md) no están basados en tiempo de entrada y, por tanto, no es necesario actualizar en el **StepTimer** función. Sin embargo, esta entrada es algo que la aplicación debe consultar cada fotograma.
 
 ### <a name="process-time-based-updates"></a>Actualizaciones basadas en tiempo de proceso
 
@@ -742,5 +742,5 @@ if (FAILED(hr))
 ```
 
 ## <a name="see-also"></a>Vea también
-* [Sistemas de coordenadas en DirectX](coordinate-systems-in-directx.md)
+* [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)
 * [Uso del emulador HoloLens](using-the-hololens-emulator.md)

@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 6GDL controladores, los controladores de movimiento
-ms.openlocfilehash: b44964ab872bd080349ecf1b04b3f7082b521a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7db1c16f8243081dc8f53e8722391f102c38e0d3
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605756"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629120"
 ---
 # <a name="motion-controllers"></a>Controladores de movimiento
 
@@ -230,10 +230,10 @@ Consulte [solución de problemas de controlador de movimiento](https://docs.micr
 [Envíenos sus comentarios](give-us-feedback.md) en el centro de opiniones, usando la categoría "Mixed Reality -> entrada".
 
 ## <a name="see-also"></a>Vea también
-* [Los gestos y controladores de movimiento en Unity](gestures-and-motion-controllers-in-unity.md)
-* [Mirada, gestos y controladores de movimiento de DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Gestos y controladores de movimiento en Unity](gestures-and-motion-controllers-in-unity.md)
+* [Las manos y los controladores de movimiento de DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gestos](gestures.md)
-* [Entrada MR 213: Controladores de movimiento](mixed-reality-213.md)
+* [MR Input 213: controladores de movimiento](mixed-reality-213.md)
 * [Guía de entusiastas: El inicio de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
 * [Guía de entusiastas: Uso de juegos y aplicaciones en Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
 * [Cómo funciona el seguimiento por completo](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)

@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño
-ms.openlocfilehash: afebefddfd620b4697b86616e8ecc930b271dca2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: fabd47fef424186b826c410de725f805ff7005f5
+ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597567"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629065"
 ---
 # <a name="gestures"></a>Gestos
 
@@ -110,9 +110,9 @@ Hay tres cosas que debe considerar:
 * Se deben minimizar las consecuencias de los límites del marco de gesto de importantes. En general, esto significa que el resultado de un gesto debe ser detenido en el límite, pero no puede revertir. Por ejemplo, si un usuario está moviendo algún objeto holographic a través de una sala, movimiento debe detenerse cuando se supera el marco de movimiento, pero **no** devolverse al punto de partida. El usuario puede experimentar algunos frustración a continuación, pero puede entender más rápidamente los límites y no tenga que reiniciar sus acciones previstas completas cada vez.
 
 ## <a name="see-also"></a>Vea también
-* [Mirada destinadas a](gaze-targeting.md)
-* [Diseño de voz](voice-design.md)
-* [Entrada MR 211: Gesto](holograms-211.md)
-* [Los gestos y controladores de movimiento en Unity](gestures-and-motion-controllers-in-unity.md)
-* [Mirada, gestos y controladores de movimiento de DirectX](gaze,-gestures,-and-motion-controllers-in-directx.md)
+* [Selección de destinos de la mirada](gaze-targeting.md)
+* [Diseño de la voz](voice-design.md)
+* [MR Input 211: gesto](holograms-211.md)
+* [Gestos y controladores de movimiento en Unity](gestures-and-motion-controllers-in-unity.md)
+* [Las manos y los controladores de movimiento de DirectX](hands-and-motion-controllers-in-directx.md)
 * [Controladores de movimiento](motion-controllers.md)
