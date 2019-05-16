@@ -5,13 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: realidad mixta, unity, tutorial, hololens
-ms.openlocfilehash: 303ed17724ba8799490aa7bca7a60600f6e5349b
-ms.sourcegitcommit: a32f673814a6cd6ff00f936f448885788b3b882c
+ms.openlocfilehash: 8a2f388e842d521f991203916177e3dac15769eb
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64929602"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730849"
 ---
 # <a name="mr-learning-base-module---lunar-module-assembly-sample-experience"></a>Módulo de la Base de aprendizaje de MR - experiencia de ejemplo de ensamblado de módulo Lunar
 

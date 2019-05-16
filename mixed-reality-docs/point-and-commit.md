@@ -1,71 +1,57 @@
 ---
-title: Punto y confirmación
+title: Punto y la confirmación con manos
 description: Información general sobre el modelo de entrada de punto y confirmación
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 04/05/2019
 ms.topic: article
-keywords: Diseño de interacción, la realidad mixta
-ms.openlocfilehash: e0e9c97053734ac0125fce40be7ffe9afbd2dd68
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.localizationpriority: high
+keywords: Ahora, la realidad, interacción, diseño, hololens, manos, mixta elija y confirme
+ms.openlocfilehash: e69c8ff2091beff7d8fbbde4e6f24d909302290a
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581315"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730811"
 ---
-# <a name="point-and-commit"></a>Punto y confirmación
-Punto y confirmación es un modelo de entrada permite a los usuarios de destino, seleccionar y manipular contenido 2D y 3D objetos en una distancia. Esta técnica de interacción de "Extremo" es una experiencia interactiva del ombligo que realmente no tenía el ser humano durante sus interacciones diarias con el mundo real. Por ejemplo, en una película héroe, reescribible es capaz de llegando y manipular un objeto a través de las manos en una distancia mucho, pero humanos no pueden hacerlo en realidad. En Microsoft HoloLens (AR) y realidad mixta de Microsoft (VR), se ofrecen a los usuarios este poder mágica, interrumpir la restricción física del mundo real no solo para tener una experiencia agradable con contenido holográfica pero hacer más eficaz la interacción y eficaz.
+# <a name="point-and-commit-with-hands"></a>Punto y la confirmación con manos
+Punto y la confirmación con manos es un modelo de entrada que permite a los usuarios de destino, seleccionar y manipular objetos 3D y contenidos 2D en la distancia. Esta técnica de interacción de "extremo" es única para realidad mixta y no es un hombre de manera de forma natural intereact con el mundo real. Por ejemplo, en la película héroe *X hombres*, el carácter [reescribible](https://en.wikipedia.org/wiki/Magneto_(comics)) es capaz de llegando y manipular un objeto lejos en la distancia con las manos. No es algo que los seres humanos pueden hacer en realidad. En HoloLens (AR) y realidad mixta (VR), se ofrecen a los usuarios con esta eficacia mágica, interrumpir la restricción física del mundo real no solo para tener una experiencia agradable con contenido holográfica sino también para que la interacción más eficaz y eficiente.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
-<table>
-    <colgroup>
-    <col width="40%" />
-    <col width="20%" />
-    <col width="20%" />
-    <col width="20%" />
-    </colgroup>
-    <tr>
-        <td><strong>Modelo de entrada</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
-    </tr>
-     <tr>
-        <td>Punto y la confirmación (interacción mano lejano)</td>
-        <td>❌ No compatible</td>
-        <td>✔️ Recomendado</td>
-        <td>✔️ Recomendado</td>
-    </tr>
-</table>
-<br>
-Punto y la confirmación ha sido uno de los modelos de entrada principales en HoloLens 2, el uso de la mano articulada nuevo sistema de seguimiento. Este modelo de entrada también es el modelo de entrada principal en inmersivos mediante el uso de los controladores de movimiento. Punto y confirmación es el modelo de entrada que se recomienda para reemplazar el encabezado que mirar y validará en HoloLens (gen 1). 
+
+Modelo de entrada | [HoloLens (gen 1)](https://docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details) | HoloLens 2 | [Inmersivos](https://docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details) |
+| ---------| -----| ----- | ---------|
+Punto y la confirmación (interacción mano lejano) | ❌ No compatible | ✔️ Recomendado | ✔️ Recomendado
+
+Punto y confirmación, también conocido como manos ahora, es una de las nuevas características que utiliza el nuevo sistema de seguimiento de la mano articulado. Este modelo de entrada también es el modelo de entrada principal en inmersivos mediante el uso de los controladores de movimiento.
 
 ## <a name="hand-rays"></a>Rayos de mano
-En el 2 de HoloLens, creamos un rayo de mano filmar desde el centro de una mano. El rayo se trata como una extensión de la mano. Un cursor de la forma de anillo se adjunta al final del rayo que implique la ubicación donde cruza el rayo con un objeto hitted. El objeto que llega cursor recibirán gestural comandos de la mano. 
 
-El comando gestural muy básico se desencadena al usar el pulgar y el dedo índice para realizar el gesto de pulsar de aire. Mediante el uso de ray mano para que apunte y pulse para confirmar en el aire, los usuarios pueden activar un botón o un hipervínculo a un contenido web. Con los gestos compuestos más, los usuarios son capaces de explorar el contenido web y manipular objetos 3D en una distancia. También debe reaccionar el diseño visual del rayo de mano para que apunte y Estados de confirmación: <br>
-* En el estado señalador, el rayo es dash con líneas y el cursor se encuentra una forma de anillo.
-* en el estado de confirmación, el rayo se convierte en una línea sólida y reduce el cursor en un punto.<br><br>
-![](images/Hand-Rays-720px.jpg)<br>
+En HoloLens 2, hemos creado un rayo de mano que le envíe desde el centro de una mano. Este ray se trata como una extensión de la mano. Un cursor en forma de anillo se adjunta al final del rayo para indicar la ubicación donde cruza el rayo con un objeto de destino. El objeto que llega al cursor, a continuación, puede recibir comandos gestural de la mano.
+
+Este comando gestural básico se desencadena al usar el control thumb y dedo índice para realizar la acción de pulsar en el aire. Utilizando el rayo de mano para que apunte y pulse para confirmar en el aire, los usuarios pueden activar un botón o un hipervínculo a un contenido web. Con los gestos compuestos más, los usuarios son capaces de contenido web de explorar y manipular objetos 3D a distancia. El diseño visual del rayo mano también debe reaccionar a estos Estados de punto y confirmación, como se describe y se muestra a continuación: 
+
+* En el *señalando* de estado, el rayo es una línea de guiones y el cursor es una forma de anillo.
+* En el *confirmación* de estado, el rayo se convierte en una línea sólida y reduce el cursor en un punto.
+
+![](images/Hand-Rays-720px.jpg)
 
 ## <a name="transition-between-near-and-far"></a>Realizar una transición entre cerca y de extremo
-En lugar de usar gestos específicos, como la que apunta con el dedo índice para dirigir el rayo, diseñamos el rayo salir desde el centro de la palma, lanzar y reservar los dedos para manipulaciones gestural más cinco. Por lo tanto, HoloLens 2 admite exactamente el mismo conjunto de gestos de mano para la interacción del próximo y lejano. Aprendizaje adicional no es necesaria cuando los usuarios en tránsito desde cerca de lejos interacciones y viceversa. Los usuarios pueden usar el mismo gesto de arrastre para manipular objetos en las distancias diferentes. La invocación de los rayos es automático y en función de proximidad: <br>
-* Cuando un objeto está dentro de arm alcanzado distancia (aproximadamente 50 cm), los rayos están desactivados fomentar automáticamente para la interacción casi. 
-* Cuando el objeto es más lejos de 50 cm, están activados los rayos.
 
-Este mecanismo realiza la transición homogénea y sin problemas.<br>
-![](images/Transition-Between-Near-And-Far-720px.jpg)<br>
+En lugar de usar un gesto específico, como "que apunta con el dedo índice" para indicar el rayo, diseñamos el rayo procedentes de salida desde el centro de la palma, lanzar y reservar los cinco dedos para los gestos de manipulación inherente más, como alejar y tomar. Con este diseño, creamos un único modelo mental, compatibilidad con exactamente el mismo conjunto de gestos de mano para la interacción del próximo y lejano. Puede usar el mismo gesto de arrastre para manipular objetos en las distancias diferentes. La invocación de los rayos es automático y en función de proximidad:
+
+*  Cuando un objeto está dentro de arm alcanzado distancia (aproximadamente 50 cm), los rayos están desactivados fomentar automáticamente para la interacción casi.
+*  Cuando el objeto es más lejos de 50 cm, están activados los rayos. Debe ser la transición homogénea y sin problemas.
+
+![](images/Transition-Between-Near-And-Far-720px.jpg)
 
 ## <a name="2d-slate-interaction"></a>Interacción de pizarra 2D
-Una pizarra 2D es un contenedor holográfico hospedar contenido de la aplicación 2D, como explorador web. El concepto de diseño para el momento interactuar con una pizarra 2D es usar los rayos de mano para que apunte y pulse para confirmar en el aire.<br>
 
-Para interactuar con la Pizarra permite:<br>
+Una pizarra 2D es un contenedor holográfico hospedar contenido de la aplicación 2D, como explorador web. El concepto de diseño para el momento interactuar con una pizarra 2D es usar rayos de mano a tap aire y de destino que seleccione. Después de destino con un rayo de mano, los usuarios pueden pulse en el aire para desencadenar un hipervínculo o un botón. Puede usar por un lado para "pulsar y arrastrar el aire" para desplazarse hacia arriba y abajo un contenido Pizarra. El movimiento relativo del uso de dos manos para pulsar y arrastrar el aire puede aumentar y reducir el contenido de Pizarra.
 
-* Los usuarios pueden apuntar a un hipervínculo o un botón, a continuación, en el aire para activarlo. 
-* Los usuarios pueden usar por un lado para realizar un gesto de navegación para desplazarse arriba y abajo un contenido Pizarra. 
-* Los usuarios pueden usar dos manos a realizar gestos de navegación para aumentar y reducir el contenido de Pizarra.<br><br>
+Como destino el rayo disponible en los bordes y esquinas revela la prestación de manipulación más cercano. "Arrastre y arrastrar" la factibilidad de manipulación, los usuarios puede realizar uniforme de escalado a través de las prestaciones de esquina y puede redistribuir la Pizarra a través de las prestaciones de edge. Hacerlo y arrastre el holobar en la parte superior de la Pizarra 2D pueden mover la Pizarra toda los usuarios.
 
-![](images/2D-Slate-Interaction-Far-720px.jpg)<br>
+![](images/2D-Slate-Interaction-Far-720px.jpg)
 
 Para manipular la 2D Pizarra propio:<br>
 
@@ -76,9 +62,10 @@ Para manipular la 2D Pizarra propio:<br>
 <br>
 
 ## <a name="3d-object-manipulation"></a>Manipulación del objeto 3D
-En la manipulación directa, hay dos maneras para que los usuarios manipular objetos 3D, manipulación en función de prestación y Non-affordnace basado manipulación. En el modelo de punto y confirmación, los usuarios son capaces de conseguir exactamente las mismas tareas a través de los rayos de mano. No se necesita ningún aprendizaje adicional.<br>
 
-### <a name="affordance-based-manipulation"></a>Manipulación de prestación basado
+En la manipulación directa, hay dos maneras para que los usuarios manipular objetos 3D, manipulación de prestación y no prestación en función de manipulación. En el modelo de punto y confirmación, los usuarios son capaces de conseguir exactamente las mismas tareas a través de los rayos de mano. No se necesita ningún aprendizaje adicional.<br>
+
+### <a name="affordance-based-manipulation"></a>Manipulación de prestación
 Los usuarios usar rayos de mano para que apunte y mostrar el cuadro de límite y prestaciones de manipulación. Los usuarios pueden aplicar el gesto de manipulación en el cuadro de límite para mover todo el objeto, en la factibilidad de borde se va a girar y en la esquina prestaciones para escalar de manera uniforme. <br>
 
 ![](images/3D-Object-Manipulation-Far-720px.jpg) <br>
@@ -90,17 +77,21 @@ Los usuarios señalan con rayos de mano para mostrar el cuadro de límite, a con
 <br>
 
 ## <a name="instinctual-gesturers"></a>Gesturers instinctual
-El concepto de gestos instinctual para la confirmación y el punto está sincronizado con la para la manipulación directa. ¿Qué gestos supone que los usuarios a realizar en un objeto 3D se guían por el diseño de factibilidad de interfaz de usuario. Un punto de control pequeño podría motivar a los usuarios para alejar con el pulgar y el dedo índice, mientras que los usuarios a tomar con dedo 5 hace que un objeto grande.
+El concepto de gestos instinctual para la confirmación y el punto es similar a la de la manipulación directa. Los gestos se supone que los usuarios deben para realizar en un objeto 3D se le guiará por el diseño de factibilidad de interfaz de usuario. Por ejemplo, un punto de control pequeño podría motivar a los usuarios alejar con su pulgar y el dedo índice, mientras que un usuario podría desear tomar un objeto más grande de todos los dedos de 5.
 
 ![](images/Instinctual-Gestures-Far-720px.jpg)<br>
 
 ## <a name="symmetric-design-between-hands-and-6-dof-controller"></a>Diseño simétrica entre manos y 6 controlador GDL 
-El concepto del modelo de punto y confirmación para la interacción del extremo en primer lugar se crea y definido para el mixto realidad Portal (MRP), donde los usuarios llevar un auricular envolvente e interactúan con el objeto 3d a través de los controladores de movimiento. Solucionar los controladores de movimiento horizontal rayos para señalar y manipular objetos lejano. Hay botones en los controladores para confirmar más funcionalidades diferentes. Se aprovechan el modelo de interacción de rayos y adjúntelos en dos manos. Con este diseño simétrica, los usuarios que están familiarizados con MRP no necesitan aprender otro modelo de interacción para ahora señalando y manipulación durante la primera vez que usa HoloLen 2 y viceversa.    
+El concepto de punto y confirmación para la interacción del Lejano inicialmente se ha creado y definido para el Mixed Reality Portal (MRP), donde un usuario desempeña un auricular envolvente e interactúa con objetos 3D a través de los controladores de movimiento. Solucionar los controladores de movimiento horizontal rayos para señalar y manipular objetos lejano. Hay botones en los controladores para confirmar más acciones diferentes. Que aprovechan el modelo de interacción de rayos y ellos conectados a dos manos. Con este diseño simétrica, los usuarios que están familiarizados con MRP no necesitan aprender otro modelo de interacción para la manipulación y el momento que apunta al usar HoloLen 2 y viceversa.    
 
 ![](images/Symmetric-Design-For-Rays-720px.jpg)<br>
 
+## <a name="instinctual-gestures"></a>Gestos instinctual
+
+![](images/Instinctual-Gestures-Far-720px.jpg)
 
 ## <a name="see-also"></a>Vea también
-* [Mirada y confirmación](gaze-and-commit.md)
-* [Manipulación directa](direct-manipulation.md)
-* [Conceptos básicos de la interacción](interaction-fundamentals.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
+* [Manipulación directa con manos](direct-manipulation.md)
+* [Interacciones instintivas](interaction-fundamentals.md)
+

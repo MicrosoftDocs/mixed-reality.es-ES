@@ -5,13 +5,14 @@ author: sostel
 ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Seguimiento de los ojos, mixto en realidad, Input, ojo mirada
-ms.openlocfilehash: 75cbba9048b620e4b00492ad3f71315fabf86677
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2019
-ms.locfileid: "64581055"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730764"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Ojo de seguimiento en 2 HoloLens
 Permite un nivel completamente nuevo de contexto y la descripción humana dentro de la Holographic HoloLens 2 experiencia proporcionando a los desarrolladores la capacidad de uso de información sobre lo que están mirando los usuarios increíble. Esta página proporciona información general sobre cómo los desarrolladores pueden beneficiarse de seguimiento de ojo para varios casos de uso y lo que debe tener en cuenta cuando el diseño de interfaces de usuario basada en la mirada de ojos. 

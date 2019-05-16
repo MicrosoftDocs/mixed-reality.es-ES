@@ -1,17 +1,18 @@
 ---
-title: Mirada y confirmación
-description: Información general sobre el modelo de entrada de mirada y confirmación
+title: Mirada de encabezado y confirmación
+description: Información general sobre el modelo de entrada de mirada de encabezado y confirmación
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: Diseñar la realidad, mirada, mirada como destino, interacción, mixta
-ms.openlocfilehash: 7bce18853e46d71d963574b35c393e5a5dbf2cd0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873984"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730816"
 ---
 # <a name="head-gaze-and-commit"></a>Mirada de encabezado y confirmación
 Mirada de encabezado y confirmación es un modelo de entrada que implica el destino es un objeto con la dirección de la cabeza hacia adelante (encabezado de dirección), y actuar sobre ellos con una base de datos secundaria de entrada, como el gesto de mano, puntee en el aire o la voz del comando "Select". Se considera un modelo con manipulación indirecta, lo que significa que se usa para interactuar con el contenido que está más allá de brazos llegar a "ahora" de entrada.
@@ -53,14 +54,14 @@ Después de destino es un objeto o elemento de interfaz de usuario, el usuario p
 - Presione el botón 'A' en un Xbox Gamepad
 - Presione el botón 'A' en un controlador de Xbox adaptable
 
-### <a name="gaze-and-air-tap-gesture"></a>Mirada y aire gesto
+### <a name="head-gaze-and-air-tap-gesture"></a>Head mirada y aire gesto
 En el aire es un gesto de pulsar con la mano vertical. Para llevar a cabo aire, elevar el dedo índice a la posición de la lista, a continuación, acercar con el pulgar y elevar el dedo índice de copia de seguridad para liberar. En el 1 de HoloLens, en el aire es la entrada secundaria más comunes.
 
 ![Dedo en la posición de la lista y, a continuación, un movimiento puntear o hacer clic](images/readyandpress.jpg)<br>
 
 En el aire también está disponible en HoloLens 2, y se disminuyó de la versión original. Ahora se admiten casi todos los tipos de pinches, siempre que la mano sea vertical y explotación todavía. Esto facilita mucho más fácil para los usuarios obtener información y realice el gesto.  Este nuevo en el aire reemplaza al antiguo a través de la misma API, por lo que las aplicaciones existentes obtendrán automáticamente el nuevo comportamiento después de volver a compilar para HoloLens 2.
 
-### <a name="gaze-and-select-voice-command"></a>Mirada y "Select" comando de voz
+### <a name="head-gaze-and-select-voice-command"></a>Head mirada y "Select" comando de voz
 Comandos de voz es uno de los métodos de interacción principal en la realidad mixta. Proporciona un mecanismo de "Manos libres" muy eficaz para controlar el sistema. Hay un diseño diferente tipos de modelos de interacción de voz:
 
 - El comando genérico "Select", que permite para realizar una "click" accionamiento o confirmación como una entrada secundaria.
@@ -72,7 +73,7 @@ Comandos de voz es uno de los métodos de interacción principal en la realidad 
 Para obtener más información y una lista de comprenhesive de comandos disponibles y su uso, consulte nuestra [voz diseño](voice-design.md) orientación.
 
 
-### <a name="gaze-and-hololens-clicker"></a>Mirada y HoloLens Clicker
+### <a name="head-gaze-and-hololens-clicker"></a>Head mirada y HoloLens Clicker
 El HoloLens Clicker es el primer dispositivo periférico creado específicamente para HoloLens y se incluye con el 1 de HoloLens Development Edition. El HoloLens Clicker permite a un usuario haga clic con el movimiento de mano mínimo y como una entrada secundaria de confirmación. El clicker HoloLens se conecta a la 1 HoloLens o 2 con Bluetooth baja energía (BTLE).
 
 ![](images/hololens-clicker-500px.jpg)<br>
@@ -83,7 +84,7 @@ Encontrará más información e instrucciones para emparejar el dispositivo [aqu
 
 
 
-### <a name="gaze-and-xbox-wireless-controller"></a>Mirada y controlador inalámbrico Xbox
+### <a name="head-gaze-and-xbox-wireless-controller"></a>Head mirada y controlador inalámbrico Xbox
 El controlador de Xbox Wireless permite para realizar un accionamiento "click" como entrada mediante el botón secundario. El dispositivo se asigna a un conjunto predeterminado de las acciones que ayudan a navegar y controlar el sistema. Si desea personalizar el controlador, utilice el App Accesories Xbox para configurar el controlador de Xbox inalámbrica.
 
 ![](images/xboxcontroller.jpg)<br>
@@ -92,7 +93,7 @@ Controlador inalámbrico Xbox
 [Emparejamiento de un controlador Xbox con su PC](hardware-accessories.md#pairing-bluetooth-accessories)
 
 
-### <a name="gaze-and-xbox-adaptive-controller"></a>Controlador adaptable mirada y Xbox
+### <a name="head-gaze-and-xbox-adaptive-controller"></a>Controlador adaptable HEAD mirada y Xbox
 Ha diseñado principalmente para satisfacer las necesidades de jugadores con movilidad limitada, el controlador de Xbox adaptable es un centro unificado para dispositivos que le ayuda a hacer realidad mixta sea más accesible.
 
 El controlador de Xbox adaptable permite para realizar un accionamiento "haga clic en" como un elemento secundario de entrada mediante el botón. El dispositivo se asigna a un conjunto predeterminado de las acciones que ayudan a navegar y controlar el sistema. Si desea personalizar el controlador, utilice el App Accesories Xbox para configurar el controlador adaptable de Xbox.
@@ -110,16 +111,11 @@ Puertos de mando de Xbox adaptable
 <a href=https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller>Más información disponible en el sitio de Xbox</a>
 
 
-# <a name="device-support"></a>Compatibilidad con dispositivos
-Observación de encabezado y confirmación está disponible en todos los auriculares de realidad mixta. Es el modelo de entrada principal en HoloLens v1. Otros auriculares normalmente incluyen un mecanismo señalador basado en mano, como los controladores de movimiento o articula la mano de seguimiento. En estos dispositivos, aplicaciones preferible [punto y confirmación](point-and-commit.md) para las interacciones de extremo siempre que sea posible.
-
-Mirada ojo y confirmación está disponible en HoloLens 2, pero no es el modelo de entrada principal. Saltar a la sección "Instrucciones de diseño de ojo mirada" para obtener información sobre cuándo esto puede tener sentido para su aplicación.
-
-# <a name="head-gaze-design-guidelines"></a>Instrucciones de diseño que mirar HEAD
+# <a name="head-gaze-design-guidelines"></a>Instrucciones de diseño de Head mirada
 > [!NOTE]
 > Obtener información más específica de diseño que mirar [próximamente](index.md).
 
-## <a name="gaze-targeting"></a>Mirada destinadas a
+## <a name="head-gaze-targeting"></a>Head-mirada destinadas a
 Todas las interacciones se basan en la capacidad de un usuario para el elemento que desean interactuar, independientemente de la modalidad de entrada de destino. En Windows Mixed Reality, por lo general esto se hace mediante la mirada del usuario.
 Para que los usuarios puedan trabajar con una experiencia correctamente, debe alinear comprensión calculado del sistema de la intención del usuario y la intención del usuario real, como lo máximo posible. En la medida que el sistema interpreta las acciones del usuario previsto correctamente, aumenta la satisfacción y el rendimiento mejora.
 
@@ -142,7 +138,7 @@ Los usuarios a menudo producirá un error buscar elementos de interfaz de usuari
 ## <a name="improving-targeting-behaviors"></a>Mejora de los comportamientos de destinatarios
 Si intención del usuario para tener como destino algo puede ser determinado (o estrechamente de forma aproximada), puede ser muy útil aceptar intentos "near miss" en la interacción como si se destinen a correctamente. Hay una serie de métodos correctas que se pueden incorporar en las experiencias de realidad mixta:
 
-### <a name="gaze-stabilization-gravity-wells"></a>Mirada estabilización ("wells gravedad")
+### <a name="head-gaze-stabilization-gravity-wells"></a>Estabilización de Head mirada ("wells gravedad")
 Esto debe activarse la mayor parte o todo el tiempo. Esta técnica quita el a las vibraciones head/cuello natural que los usuarios pueden tener. También movimiento debido a los comportamientos de búsqueda de términos.
 
 ### <a name="closest-link-algorithms"></a>Algoritmos más cercano de vínculo
@@ -209,7 +205,7 @@ Hay tres cosas que debe considerar:
 
 ## <a name="see-also"></a>Vea también
 * [Manipulación directa](direct-manipulation.md)
-* [Punto y confirmación](point-and-commit.md)
+* [Señalar y confirmar](point-and-commit.md)
 * [Conceptos básicos de la interacción](interaction-fundamentals.md)
 * [Mirada y permanencia](gaze-targeting.md)
 * [Mirada y voz](voice-design.md)

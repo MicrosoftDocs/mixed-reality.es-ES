@@ -5,13 +5,14 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
+ms.localizationpriority: high
 keywords: del sistema de coordenadas, del sistema de coordenadas espacial, escala mundial, mundo, escala, posición, orientación, delimitador, delimitador espacial, bloqueado por el mundo, el mundo de bloqueo, persistencia, uso compartido
-ms.openlocfilehash: eb0fae7881f1b6517da57305ef2fa3cb1ed78648
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 16165194d040ad22f7885897eddcc65cf9dcaec3
+ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605785"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65730859"
 ---
 # <a name="spatial-anchors"></a>Delimitadores espaciales
 
@@ -74,8 +75,8 @@ Para delimitadores espacial de la nube, puede escalar el almacenamiento según s
 
 ## <a name="see-also"></a>Vea también
 * [Sistemas de coordenadas](coordinate-systems.md)
-* [Compartir experiencias en realidad mixta](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure delimitadores espaciales</a>
+* [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Persistencia en Unity](persistence-in-unity.md)
 * [Delimitadores espaciales en DirectX](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [Caso práctico: examinar los huecos en la realidad](case-study-looking-through-holes-in-your-reality.md)
