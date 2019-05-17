@@ -7,17 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar, manos cerca, HoloLens
-ms.openlocfilehash: e241e13a778de0889942a3643246e087a107db86
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
+ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730752"
+ms.locfileid: "65814004"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con manos
 La manipulación directa es un modelo de entrada que implica tocar hologramas directamente con las manos. La manipulación directa, el objetivo es que los objetos se comportan igual que en el mundo real. Botones que se pueden activar simplemente presionándolos, los objetos se pueden seleccionarlos contratiempos y contenido 2D se comporta como una pantalla táctil virtual.  Por este motivo, dirigir es fácil para los usuarios obtener información sobre la manipulación, así como de la diversión demasiado.  Se considera un "cerca de" modelo de entrada, lo que significa que está concebida para interactuar con el contenido que está dentro de brazos llegar.
 
-El 2 de HoloLens tiene un modelo de entrada de la manipulación directa que le permita tocar hologramas dircly con las manos. El objetivo con la manipulación directa es para que los objetos que se comportan igual que en el mundo real. Puede activar los botones, basta con presionar e incluso y recoger, captar y mover objetos. En estos casos, el contenido 2D se comporta como una pantalla táctil virtual.
+El 2 de HoloLens tiene un modelo de entrada de la manipulación directa que le permita tocar hologramas directamente con las manos. El objetivo con la manipulación directa es para que los objetos que se comportan igual que en el mundo real. Puede activar los botones, basta con presionar e incluso y recoger, captar y mover objetos. En estos casos, el contenido 2D se comporta como una pantalla táctil virtual.
 
 Dirigir es fácil para los usuarios obtener información sobre la manipulación y tiene demasiado divertidas. Se considera un "entrega cerca de" modelo de entrada, lo que significa que se usa para interactuar con el contenido que está dentro de un alcance.
 
