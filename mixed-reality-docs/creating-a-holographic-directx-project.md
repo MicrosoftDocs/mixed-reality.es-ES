@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, aplicación holográfica, nueva aplicación, aplicación de UWP, aplicación de la plantilla, hologramas, nuevo proyecto, tutorial, descarga, el código de ejemplo
-ms.openlocfilehash: 7d1ea0246cf823f74e68b4e67fbcfc275d081688
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: a7eac9d8056fe5f7bcc442d6441f71331fa96cf6
+ms.sourcegitcommit: 19c9bff21061d485821b61c9f3498daef8fa8235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605783"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65828125"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Creación de un proyecto de DirectX holográfico
 
@@ -33,18 +33,23 @@ Ahora está listo para crear la aplicación DirectX 11 Windows Mixed Reality. Te
 
 ## <a name="creating-a-uwp-project"></a>Creación de un proyecto UWP
 
-Una vez que se instalan las herramientas, a continuación, puede crear un proyecto de UWP de DirectX holográfico. Para crear un nuevo proyecto:
+Una vez el [se instalan herramientas](install-the-tools.md) , a continuación, puede crear un proyecto de UWP de DirectX holográfico.
+
+Para crear un nuevo proyecto:
 1. Iniciar **Visual Studio**.
 2. Desde el **archivo** menú, elija **New** y seleccione **proyecto** en el menú contextual. El **nuevo proyecto** abre el cuadro de diálogo.
 3. Expanda **instalado** a la izquierda y expanda el **Visual C++**  nodo de lenguaje.
 4. Navegue hasta la **Windows Universal > Holographic** nodo y seleccione **aplicación holográfica de 11 DirectX (Windows Universal) (C++/WinRT)**.
+   ![Captura de pantalla de la versión de DirectX 11 holográfica C++plantilla de proyecto de aplicación de WinRT UWP en Visual Studio](images/holographic-directx-app-cpp-new-project.png)<br>
+   *Holográfica DirectX 11 C++plantilla de proyecto de aplicación de WinRT UWP en Visual Studio*
    >[!IMPORTANT]
    >Asegúrese de que incluye el nombre de la plantilla de proyecto "(C++/WinRT)".  Si no, tiene una versión anterior de las plantillas de proyecto holográfica instaladas.  Para obtener las últimas plantillas de proyecto, [instalar el emulador de HoloLens más reciente](using-the-hololens-emulator.md).
 5. Rellene el **nombre** y **ubicación** cuadros de texto y haga clic o pulse **Aceptar**. Se crea el proyecto de aplicación holográfica.
-6. Para el desarrollo destinadas a solo 2 HoloLens, asegúrese de que el **versión de destino** y **versión mínima** se establecen en **Windows 10, versión 1903**.  Si desea usar también HoloLens (gen 1) o auriculares de realidad mixta de Windows desktop, puede establecer **versión mínima** a **Windows 10, versión 1809** en su lugar, aunque esto requerirá algunas <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank"> comprobaciones de versión adaptación</a> en el código al usar las nuevas características de HoloLens 2.
-
-![Captura de pantalla de la plantilla de proyecto de aplicación holográfica en Visual Studio](images/holographic-directx-app-cpp-new-project.png)<br>
-*Plantilla de proyecto de aplicación holográfica en Visual Studio*
+6. Para el desarrollo destinadas a solo 2 HoloLens, asegúrese de que el **versión de destino** y **versión mínima** se establecen en **Windows 10, versión 1903**.  Si desea usar también HoloLens (gen 1) o auriculares de realidad mixta de Windows desktop, puede establecer **versión mínima** a **Windows 10, versión 1809** en su lugar, aunque esto requerirá algunas <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank"> comprobaciones de versión adaptable</a> en el código al usar las nuevas características de HoloLens 2.
+   ![Captura de pantalla de configuración de Windows 10, versión 1903 como las versiones de destino y mínima](images/new-uwp-project.png)<br>
+   *Establecer **Windows 10, versión 1903** como las versiones de destino y mínima*
+   >[!IMPORTANT]
+   >Si no ve **Windows 10, versión 1903** como opción, no tiene el SDK de Windows 10 más recientes instalados.  Para obtener esta opción en aparecer, <a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">instalar la versión 10.0.18362.0 o posterior del SDK de Windows 10</a>.
 
 La plantilla genera un proyecto con <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, una proyección de las APIs de tiempo de ejecución de Windows que admite cualquier conforme a los estándares C ++ 17 del compilador C ++ 17 lenguaje.  El proyecto muestra cómo crear un cubo bloqueado por el mundo que ha colocado dos metros del usuario. El usuario puede [pulsar en el aire](gestures.md#air-tap) o presione un botón en el controlador para colocar el cubo en una posición diferente en el que se especifica por el usuario [que mirar](gaze.md). Puede modificar este proyecto para crear cualquier aplicación de realidad mixta.
 
@@ -151,9 +156,9 @@ Las actualizaciones de la aplicación de realidad mixta en un bucle de juego, qu
 El **representar** método `AppMain.cpp` toma el <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> y presenta el marco actual a cada cámara holográfica, según la aplicación actual y el estado de posición espacial.
 
 ## <a name="see-also"></a>Vea también
-* [Obtener un HolographicSpace](getting-a-holographicspace.md)
+* [Obtención de HolographicSpace](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
-* [Representación de DirectX](rendering-in-directx.md)
+* [Representación en DirectX](rendering-in-directx.md)
 * [Uso de Visual Studio para implementar y depurar](using-visual-studio.md)
 * [Uso del emulador HoloLens](using-the-hololens-emulator.md)
 * [Uso de XAML con aplicaciones de DirectX holográficas](using-xaml-with-holographic-directx-apps.md)
