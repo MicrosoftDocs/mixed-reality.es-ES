@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Azure, se enfrentan a mixed reality, academy, unity, tutorial, api, reconocimiento, vr envolventes, hololens,
 ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59605505"
@@ -112,11 +112,11 @@ Para usar el *Face API* service en Azure, deberá configurar una instancia del s
 
     6. También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.
 
-    7. Seleccione **crear *.**
+    7. Seleccione **crear*.**
 
         ![Crear servicio de api se enfrentan](images/AzureLabs-Lab4-03.png)
 
-5.  Una vez que ha hecho clic **crear *** tendrá que esperar para que se puede crear el servicio, esta operación puede tardar un minuto.
+5.  Una vez que ha hecho clic **crear*** tendrá que esperar para que se puede crear el servicio, esta operación puede tardar un minuto.
 
 6.  Una vez creada la instancia de servicio, aparecerá una notificación en el portal.
 

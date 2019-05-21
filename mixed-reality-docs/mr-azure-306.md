@@ -8,7 +8,7 @@ ms.topic: article
 keywords: realidad mixta, Azure, academy, unity, tutorial, api, streaming de media services, vídeo, 360, envolventes, vr
 ms.openlocfilehash: f6974ab6a72828a557649d5dc65b4e505a7484ff
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59599487"
@@ -96,7 +96,7 @@ Para usar el **servicio Azure Storage**, deberá crear y configurar un **cuenta 
 
     3.  Para **tipo de cuenta**, seleccione **almacenamiento (uso general v1)**.
 
-    4.  Para **rendimiento**, seleccione **estándar *.**
+    4.  Para **rendimiento**, seleccione **estándar*.**
 
     5.  Para **replicación** seleccione **almacenamiento con redundancia local (LRS)**.
 
@@ -226,7 +226,7 @@ Para usar los servicios de multimedia de Azure, deberá configurar una instancia
 
     ![El Portal de Azure](images/AzureLabs-Lab6-21.png)
 
-20. Podrá ver el vídeo junto con otro, que es de ** tipo de activo * MP4 de velocidad de bits múltiple ***.
+20. Podrá ver el vídeo junto con otro, que es de **tipo de activo*MP4 de velocidad de bits múltiple***.
 
     ![El Portal de Azure](images/AzureLabs-Lab6-22.png)
 
@@ -329,7 +329,7 @@ El siguiente es un conjunto típico de para el desarrollo con la realidad mixta 
 
 8.  Una vez realizados estos cambios, cierre el **configuración de compilación** ventana.
 
-9.  Guarde el proyecto **archivo* * Guardar proyecto **.
+9.  Guarde el proyecto **archivo* *Guardar proyecto**.
 
 
 
@@ -625,7 +625,7 @@ Para crear esta clase:
 
 1.  Vaya a la **Scripts** carpeta que creó anteriormente.
 
-2.  Haga clic en el **proyecto** Panel, **crear* * C\# Script **. Nombre de la secuencia de comandos **que mirar**.
+2.  Haga clic en el **proyecto** Panel, **crear* *C\# Script**. Nombre de la secuencia de comandos **que mirar**.
 
 3.  Haga doble clic en el nuevo ***que mirar*** script para abrirlo con **Visual Studio 2017.**
 
