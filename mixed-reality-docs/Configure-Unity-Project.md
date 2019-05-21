@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, mixto en realidad, desarrollo, introducción, nuevo proyecto
-ms.openlocfilehash: 4ee81eca25109da428d7b3addf59e102ddc5c5cf
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993539"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940744"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurar un nuevo proyecto de Unity para Windows Mixed Reality 
 
@@ -36,6 +36,9 @@ A continuación, es necesario informar a Unity que se debe crear la aplicación 
 4. En el **XR configuración** sección, compruebe el **admite la realidad Virtual** casilla de verificación para agregar el **dispositivos de realidad Virtual** lista.
 5. En el **XR configuración** grupo, confirme que **"Windows Mixed Reality"** aparece como un dispositivo compatible. (Esto puede aparecer como "Windows Holographic" en versiones anteriores de Unity)
 
+![Configuración de calidad de Unity](images/getting-started-unity-quality-settings.jpg)<br>
+*Configuración de Unity xr*
+
 Ahora puede hacer la aplicación básica representación holográfica y entrada espacial. Para ir más allá y aprovechar las ventajas de cierta funcionalidad, la aplicación debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones del manifiesto se pueden realizar en Unity, por lo que se incluyen en cada exportación proyecto posterior. La configuración se encuentran en **configuración del Reproductor > configuración de plataforma Universal de Windows > configuración de publicación > capacidades**. Las capacidades para habilitar las API de Unity usados para Mixed Reality aplicables son:
 
 |  Capacidad  |  API que requieren la capacidad | 
@@ -48,7 +51,7 @@ Ahora puede hacer la aplicación básica representación holográfica y entrada 
 
 **Configuración de calidad de Unity**
 
-![Configuración de calidad de Unity](images/unityqualitysettings-350px.png)<br>
+![Configuración de calidad de Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Configuración de calidad de Unity*
 
 HoloLens tiene una GPU de la clase mobile. Si la aplicación está destinada a HoloLens, querrá la configuración de calidad optimizada para rendimiento más rápido para asegurarse de que mantenemos la velocidad de fotogramas completa:

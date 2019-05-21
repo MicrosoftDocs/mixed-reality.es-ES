@@ -7,19 +7,15 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar, manos cerca, HoloLens
-ms.openlocfilehash: 5952d2ecb75f7addacffcec2776f34289abda6cf
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: 412d77a1d7446f82ddf43f051fdb149cb1fd559c
+ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65814004"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65940767"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con manos
 La manipulación directa es un modelo de entrada que implica tocar hologramas directamente con las manos. La manipulación directa, el objetivo es que los objetos se comportan igual que en el mundo real. Botones que se pueden activar simplemente presionándolos, los objetos se pueden seleccionarlos contratiempos y contenido 2D se comporta como una pantalla táctil virtual.  Por este motivo, dirigir es fácil para los usuarios obtener información sobre la manipulación, así como de la diversión demasiado.  Se considera un "cerca de" modelo de entrada, lo que significa que está concebida para interactuar con el contenido que está dentro de brazos llegar.
-
-El 2 de HoloLens tiene un modelo de entrada de la manipulación directa que le permita tocar hologramas directamente con las manos. El objetivo con la manipulación directa es para que los objetos que se comportan igual que en el mundo real. Puede activar los botones, basta con presionar e incluso y recoger, captar y mover objetos. En estos casos, el contenido 2D se comporta como una pantalla táctil virtual.
-
-Dirigir es fácil para los usuarios obtener información sobre la manipulación y tiene demasiado divertidas. Se considera un "entrega cerca de" modelo de entrada, lo que significa que se usa para interactuar con el contenido que está dentro de un alcance.
 
 Manipulación directa es la prestación de la base, lo que significa que es fácil de usar. No hay ningún gestos simbólicos a enseñar a los usuarios. Todas las interacciones se basan en un elemento visual que puede tocar ni tomar.
 
@@ -148,6 +144,6 @@ Al hacerlo, accidentalmente mover la mano a través de algunos botones holográf
 ## <a name="see-also"></a>Vea también
 
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Señalar y confirmar](point-and-commit.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 
