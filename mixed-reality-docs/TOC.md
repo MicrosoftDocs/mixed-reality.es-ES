@@ -24,6 +24,7 @@
 #### [Visualización de fotos](see-your-photos.md)
 #### [Ajuste del sensor](sensor-tuning.md)
 #### [Actualización de HoloLens](updating-hololens.md)
+#### [Uso compartido de dispositivos](device-sharing.md)
 #### [Guía de limpieza y ajuste de demostración de HoloLens](hololens-demo-guide.md)
 ### Cascos envolventes
 #### [Detalles del hardware de los cascos envolventes](immersive-headset-hardware-details.md)
@@ -160,6 +161,7 @@
 #### [Entrada desde teclado en Unity](keyboard-input-in-unity.md)
 ### Temas avanzados
 #### [Uso del espacio de nombres de Windows con las aplicaciones de Unity para HoloLens](using-the-windows-namespace-with-unity-apps-for-hololens.md)
+#### [Objetos nativos de realidad mixta en Unity](unity-xrdevice-advanced.md)
 #### [Uso de Vuforia con Unity](vuforia-development-overview.md)
 ### Documentos heredados (Unity 2017.4/HTK/MRTK v1)
 ## Unreal
