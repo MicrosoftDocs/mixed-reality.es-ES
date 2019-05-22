@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño
-ms.openlocfilehash: fabd47fef424186b826c410de725f805ff7005f5
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 52ba7070e2c9b5632d5978c70571fcf9cda3f499
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629065"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974886"
 ---
 # <a name="gestures"></a>Gestos
 
@@ -110,9 +110,9 @@ Hay tres cosas que debe considerar:
 * Se deben minimizar las consecuencias de los límites del marco de gesto de importantes. En general, esto significa que el resultado de un gesto debe ser detenido en el límite, pero no puede revertir. Por ejemplo, si un usuario está moviendo algún objeto holographic a través de una sala, movimiento debe detenerse cuando se supera el marco de movimiento, pero **no** devolverse al punto de partida. El usuario puede experimentar algunos frustración a continuación, pero puede entender más rápidamente los límites y no tenga que reiniciar sus acciones previstas completas cada vez.
 
 ## <a name="see-also"></a>Vea también
-* [Selección de destinos de la mirada](gaze-targeting.md)
+* [Control con la cabeza y permanencia](gaze-and-dwell.md)
 * [Diseño de la voz](voice-design.md)
 * [MR Input 211: gesto](holograms-211.md)
 * [Gestos y controladores de movimiento en Unity](gestures-and-motion-controllers-in-unity.md)
-* [Las manos y los controladores de movimiento de DirectX](hands-and-motion-controllers-in-directx.md)
+* [Manos y controladores de movimiento en DirectX](hands-and-motion-controllers-in-directx.md)
 * [Controladores de movimiento](motion-controllers.md)

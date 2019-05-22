@@ -6,12 +6,12 @@ ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Marco de HoloLens, Windows Mixed Reality, holographic, campo de visión
-ms.openlocfilehash: 6773bc03dea471c97d0c6006d2ab7853a5ef3669
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: c505eadbc16bb59143313aa62dd7c9d95384e0c8
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598788"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974913"
 ---
 # <a name="holographic-frame"></a>Marco holográfica
 
@@ -127,8 +127,8 @@ Como una experiencia realmente cautivadora, estos usuarios se les aconsejaba a u
 La representación realista rumores proporciona un punto focal eficaces, junto con técnicas sutiles para activar los rumores sobre hacia el usuario a sentir está allí, hablando a usted. Cuando el usuario se mueve sobre la experiencia, rumores desplazará hacia usted con un umbral antes de volver a un estado neutro, si el usuario se desplaza demasiado lejos más allá de su periferia. Si el usuario tiene el aspecto de rumores completamente (por ejemplo, para ver algo en otra parte de la escena), después, vuelve a rumores, will de posición direccional del Narrador una vez que vuelva a centrarse en el usuario. Técnicas así proporcionan una idea de inmersión eficaz y crear un punto focal dentro del marco holográfico, lo que reduce el movimiento excesivo y promover [comodidad](comfort.md).
 
 ## <a name="see-also"></a>Vea también
-* [Aspectos básicos de interacción](interaction-fundamentals.md)
+* [Interacciones instintivas](interaction-fundamentals.md)
 * [Comodidad](comfort.md)
 * [Escalar](scale.md)
-* [Mirada destinadas a](gaze-targeting.md)
-* [Estabilidad holograma](hologram-stability.md)
+* [Control con la cabeza y permanencia](gaze-and-dwell.md)
+* [Estabilidad de hologramas](hologram-stability.md)

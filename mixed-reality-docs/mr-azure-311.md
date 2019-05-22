@@ -8,7 +8,7 @@ ms.topic: article
 keywords: realidad mixta, Azure, academy, unity, tutorial, api, graph de microsoft, hololens, envolventes, vr
 ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59597658"
@@ -266,12 +266,12 @@ Es el primer script, deberá crear **MeetingsUI**, que es responsable del hosped
 
 Para crear esta clase:
 
-1.  Haga doble clic en el **activos** carpeta en el *Panel proyecto*, a continuación, seleccione **crear* > * carpeta **. Nombre de la carpeta **Scripts**.
+1.  Haga doble clic en el **activos** carpeta en el *Panel proyecto*, a continuación, seleccione **crear* > *carpeta**. Nombre de la carpeta **Scripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Abra el **Scripts** carpeta, dentro de esa carpeta, haga clic en, **crear* > * C\# Script **. Nombre de la secuencia de comandos **MeetingsUI.**
+2.  Abra el **Scripts** carpeta, dentro de esa carpeta, haga clic en, **crear* > *C\# Script**. Nombre de la secuencia de comandos **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -939,7 +939,7 @@ Para crear la etiqueta:
 
 Todo lo necesario para la sección de Unity de este proyecto ahora se completó, por lo que es el momento de crearla desde Unity.
 
-1.  Vaya a *configuración de compilación* (**archivo* > * compilar configuración **).
+1.  Vaya a *configuración de compilación* (**archivo* > *compilar configuración**).
 
     ![](images/AzureLabs-Lab311-33.png)
 

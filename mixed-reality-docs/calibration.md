@@ -6,18 +6,19 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: calibración, comodidad, los objetos visuales, calidad, ipd
-ms.openlocfilehash: 91af069bc4ae5e49d9eb9c529f0d0db7b1567fc8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 5f8e6aef1df0efe4c64c807e627f69c7949363f2
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605722"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974801"
 ---
-# <a name="calibration"></a>Calibración
-
-Calibrar la IPD (distancia interpupillary) puede mejorar la calidad de los objetos visuales. HoloLens y Windows Mixed Reality inmersivos ofrecen formas de personalizar IPD.
+# <a name="improve-visual-quality-and-comfort"></a>Mejorar la calidad visual y comodidad
+HoloLens, 2 de HoloLens y Windows Mixed Reality inmersivos ofrecen diferentes formas de mejorar la calidad de la experiencia visual. 
 
 ## <a name="hololens"></a>HoloLens
+
+Calibrar la IPD (distancia interpupillary) puede mejorar la calidad de los objetos visuales.
 
 ### <a name="during-setup"></a>Durante la instalación
 
@@ -54,10 +55,21 @@ Calibración se puede realizar en cualquier momento a través de la aplicación 
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-> [!NOTE]
-> Obtener información más específica de HoloLens 2 [próximamente](index.md#news-and-notes).
+### <a name="calibration"></a>Calibración 
 
-## <a name="immersive-headsets"></a>Inmersivos
+En HoloLens 2, se le pedirá a calibrar los objetos visuales durante la instalación del dispositivo. Se piden a los usuarios examinar el conjunto de destinos de fijación. Esto permite que el dispositivo ajustar la representación del usuario para asegurarse de hologramas posicionadas con precisión, experiencia de visualización de 3D más cómodo holograma y mejora la calidad de la pantalla. Todos los ajustes ocurrir sobre la marcha sin necesidad de ajuste manual. 
+
+### <a name="calibration-when-sharing-a-device"></a>Al compartir un dispositivo de calibración 
+
+Dispositivo Hololens 2 puede compartirse entre personas, sin necesidad de cada persona ir a través de la configuración del dispositivo. Hololens 2 solicitará al usuario a calibrar los objetos visuales cuando el dispositivo se coloca en el encabezado, si el usuario es nuevo en el dispositivo. Si el usuario ya ha calibrados objetos visuales en el dispositivo, para mostrar se ajustará a la perfección para la calidad y experiencia de visualización cómoda cuando el usuario coloca al dispositivo en el encabezado.  
+
+### <a name="launching-the-calibration-app-from-settings"></a>Iniciar la aplicación de calibración de configuración
+1. Usar el gesto de inicio para obtener al menú Inicio.
+2. Seleccione **+** para ver todas las aplicaciones si **configuración** no está anclado al inicio.
+3. Iniciar **configuración**.
+4. Vaya a **sistema** > **utilidades** y seleccione **calibración abierto**.
+
+## <a name="immersive-headsets"></a>Cascos envolventes
 
 Para cambiar IPD dentro de los auriculares, abra la aplicación de configuración y vaya a **la realidad mixta** > **mostrar auriculares** y mueva el control deslizante. Verá los cambios en tiempo real en los auriculares. Si conoce la IPD, quizás de una visita a la optometrista, puede escribirla directamente también.
 
@@ -66,4 +78,4 @@ También puede ajustar esta configuración, vaya a **configuración** > **la rea
 Si los auriculares no admiten la personalización de IPD, esta opción se deshabilitará.
 
 ## <a name="see-also"></a>Vea también
-* [Consideraciones sobre el entorno de HoloLens](environment-considerations-for-hololens.md)
+* [Consideraciones acerca del entorno en HoloLens](environment-considerations-for-hololens.md)

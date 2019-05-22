@@ -6,12 +6,12 @@ ms.author: jennyk
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar
-ms.openlocfilehash: 1ac4f06208a7574fced0a7e27e93469ec93bf6e0
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: bbacf9bc0039280b9944f2ad6616108d9ceae1cd
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873924"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974929"
 ---
 # <a name="gaze-and-dwell"></a>Mirada y permanencia
 Hay muchas maneras diferentes para confirmar una _confirmación_ , como la combinación mirada con _voz_ o _gestos de mano_.
@@ -99,5 +99,5 @@ Al determinar qué cercanas a elementos interactivos para dar el foco a, proporc
 
 ## <a name="see-also"></a>Vea también
 * [Gestos](gestures.md)
-* [Diseño de la voz](voice-design.md)
+* [Comandos de voz](voice-design.md)
 * [Cursores](cursors.md)

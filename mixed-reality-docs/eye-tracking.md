@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Seguimiento de los ojos, mixto en realidad, Input, ojo mirada
-ms.openlocfilehash: f61f813c702cbeaa03ddc50c6a1958af3566bc1c
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730764"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974766"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Ojo de seguimiento en 2 HoloLens
 Permite un nivel completamente nuevo de contexto y la descripción humana dentro de la Holographic HoloLens 2 experiencia proporcionando a los desarrolladores la capacidad de uso de información sobre lo que están mirando los usuarios increíble. Esta página proporciona información general sobre cómo los desarrolladores pueden beneficiarse de seguimiento de ojo para varios casos de uso y lo que debe tener en cuenta cuando el diseño de interfaces de usuario basada en la mirada de ojos. 
@@ -127,7 +127,7 @@ En el caso de un cursor, esto puede producir el efecto "eluden cursor" debido a 
 5. **Cuenta las imprecisiones:** Podemos distinguir dos tipos de las imprecisiones que son visibles para los usuarios: Desplazamiento y vibración. La manera más fácil a los desplazamientos de la dirección es proporcionar destinos lo suficientemente grandes para interactuar con (> 2° en ángulo visual – como referencia: la vista en miniatura es aproximadamente 2° en ángulo visual cuando estire el brazo (1)). Esto conduce a la siguiente orientación:
     - No fuerce a los usuarios seleccionar destinos diminutos: Investigación ha demostrado que si los destinos son lo suficientemente grandes (y el sistema está diseñado también), los usuarios describir la interacción como mágica y sin esfuerzo. Si los destinos se vuelven demasiado pequeños, los usuarios describen la experiencia como cansado y frustrante.
     
-# <a name="eye-gaze-design-guidelines-placeholder"></a>Instrucciones de diseño de ojo mirada (marcador de posición)
+# <a name="eye-gaze-design-guidelines"></a>Instrucciones de diseño de ojo mirada
 
 Con el 2 de HoloLens, tenemos la gran oportunidad para realizar mirada & confirmación más rápido y más cómodo con efecto de ojos mirada en lugar de mirada principal. Sin embargo, la mirada ojo se comporta de forma muy distinta a principal mirada en ciertos aspectos y, por tanto, incluye una serie de desafíos únicos. En instrucciones de diseño que mirar ojos, se resumen las ventajas y desafíos a tener en cuenta al usar el seguimiento de ojo como un medio de entrada en la aplicación holográfica. En esta sección, nos centramos en las consideraciones de diseño específicas para mirada ojo & confirmación. En primer lugar, los ojos mover increíblemente rápido y, por tanto, son una excelentes destino rápidamente en la vista. Esto hace que ojo que mirar ideal para una mirada rápida y confirmar acciones, especialmente cuando se combina con confirmaciones rápidas como un botón o pulsar en el aire press.
 
@@ -138,9 +138,8 @@ Se esfuerzan por lograr comentarios sutiles activable combinada: Lo que parece e
 Busque señales mirada y confirmar la sincronización: La sincronización de señales de entrada puede ser menor de un desafío para simple mirada & confirmación, por lo tanto, no se preocupe! Es algo a tener en cuenta en caso de que desea usar acciones de confirmación más complicadas aunque puede implicar a los comandos de voz larga o gestos de mano complicada. Imagine que mire diana y emitido un comando de voz largo. Tenga en cuenta el tiempo que necesita para hablar y el momento en que el sistema necesita para detectar lo que dicho, su mirada ojo normalmente larga cambió a algún nuevo destino de la escena. Por lo tanto, puede hacer que los usuarios tener en cuenta que es posible que deba seguir buscando en un destino hasta que se le ha reconocido el comando o controlar la entrada en una forma de determinar desde el principio del comando y lo que el usuario había estado viendo entonces.
 
 ## <a name="see-also"></a>Vea también
-* [Mirada y confirmación](gaze-and-commit.md)
-* [Mirada HEAD destinadas a](gaze-targeting.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Gestos](gestures.md)
-* [Diseño de la voz](voice-design.md)
+* [Comandos de voz](voice-design.md)
 * [Controladores de movimiento](motion-controllers.md)
 * [Comodidad](comfort.md)

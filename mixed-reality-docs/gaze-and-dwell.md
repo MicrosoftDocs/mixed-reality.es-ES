@@ -7,12 +7,12 @@ ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Diseñar la realidad, mirada, permanencia, interacción, mixta
-ms.openlocfilehash: 05457b35c13422c8aa6663bdf52a489a4f5afdaa
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: aa4713407f14e94c88e654ae6648c4949f98e580
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813993"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974865"
 ---
 # <a name="head-gaze-and-dwell"></a>Head mirada y permanencia
 
@@ -124,8 +124,8 @@ Algunas sugerencias para diseñar vistas de lista:
 * volver a usar el mismo patrón de tantas veces como sea posible para establecer la familiaridad de la experiencia del usuario
  
  ## <a name="see-also"></a>Vea también
-* [Manipulación directa](direct-manipulation.md)
-* [Señalar y confirmar](point-and-commit.md)
-* [Conceptos básicos de la interacción](interaction-fundamentals.md)
+* [Manipulación directa con las manos](direct-manipulation.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)
+* [Interacciones instintivas](interaction-fundamentals.md)
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Mirada y voz](voice-design.md)
+* [Comandos de voz](voice-design.md)

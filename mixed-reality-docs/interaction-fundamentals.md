@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar, hololens, MMR, multimodal
-ms.openlocfilehash: 771ebe44dc984c9d4550638bef405810d86b8d69
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730830"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974904"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instinctual
 
@@ -141,12 +141,13 @@ Si su experiencia requieren varios modelos de interacción, hemos visto que much
 
 ## <a name="see-also"></a>Vea también
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Manipulación directa](direct-manipulation.md)
-* [Señalar y confirmar](point-and-commit.md)
-* [Selección de destinos de la mirada](gaze-targeting.md)
+* [Control con la cabeza y permanencia](gaze-and-dwell.md)
+* [Manipulación directa con las manos](direct-manipulation.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)
 * [Gestos](gestures.md)
-* [Diseño de la voz](voice-design.md)
+* [Comandos de voz](voice-design.md)
 * [Controladores de movimiento](motion-controllers.md)
 * [Diseño de sonido espacial](spatial-sound-design.md)
 * [Diseño de asignaciones espaciales](spatial-mapping-design.md)
 * [Comodidad](comfort.md)
+

@@ -7,12 +7,12 @@ ms.date: 03/31/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Diseñar la realidad, mirada, mirada como destino, interacción, mixta
-ms.openlocfilehash: 95f2cef8c10ce3d0d2a218953613fef6f0a00362
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: a84465de3479bf3da2131b94dd522539cd7de6e9
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730816"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974874"
 ---
 # <a name="head-gaze-and-commit"></a>Mirada de encabezado y confirmación
 Mirada de encabezado y confirmación es un modelo de entrada que implica el destino es un objeto con la dirección de la cabeza hacia adelante (encabezado de dirección), y actuar sobre ellos con una base de datos secundaria de entrada, como el gesto de mano, puntee en el aire o la voz del comando "Select". Se considera un modelo con manipulación indirecta, lo que significa que se usa para interactuar con el contenido que está más allá de brazos llegar a "ahora" de entrada.
@@ -70,7 +70,7 @@ Comandos de voz es uno de los métodos de interacción principal en la realidad 
 - Interfaces de usuario de la conversación o entidades, como Cortana que tienen una capacidad de lenguaje Natural de inteligencia artificial.
 - Comandos personalizados
 
-Para obtener más información y una lista de comprenhesive de comandos disponibles y su uso, consulte nuestra [voz diseño](voice-design.md) orientación.
+Para obtener más información y una lista de comprenhesive de comandos disponibles y su uso, consulte nuestra [comandos de voz](voice-design.md) orientación.
 
 
 ### <a name="head-gaze-and-hololens-clicker"></a>Head mirada y HoloLens Clicker
@@ -204,11 +204,11 @@ Hay tres cosas que debe considerar:
 
 
 ## <a name="see-also"></a>Vea también
-* [Manipulación directa](direct-manipulation.md)
-* [Señalar y confirmar](point-and-commit.md)
-* [Conceptos básicos de la interacción](interaction-fundamentals.md)
-* [Mirada y permanencia](gaze-targeting.md)
-* [Mirada y voz](voice-design.md)
+* [Manipulación directa con las manos](direct-manipulation.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)
+* [Interacciones instintivas](interaction-fundamentals.md)
+* [Control con la cabeza y permanencia](gaze-and-dwell.md)
+* [Comandos de voz](voice-design.md)
 
 
 

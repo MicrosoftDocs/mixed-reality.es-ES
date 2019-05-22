@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Diseño, la realidad mixta reconfortantes, 2 de HoloLens, HoloLens (gen 1)
-ms.openlocfilehash: 3dac997923b3f2319cb97137c1bbd9a12c4126b1
-ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
+ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64993630"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974776"
 ---
 # <a name="comfort"></a>Comodidad
 
@@ -172,6 +172,6 @@ Cuando se esperan que los usuarios a mantener una mano que se genera durante la 
 ## <a name="see-also"></a>Vea también
 * [Gaze](gaze.md)
 * [Estabilidad de hologramas](hologram-stability.md)
-* [Conceptos básicos de la interacción](interaction-fundamentals.md)
+* [Interacciones instintivas](interaction-fundamentals.md)
 * [Marco holográfico](holographic-frame.md)
 * [Calibración](calibration.md)

@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar, manos cerca, HoloLens
-ms.openlocfilehash: 803157bb248a5541ed524ac4f828ccbba9d59ce1
-ms.sourcegitcommit: 82d4e5cf4ad46bfdc44d0606844e28c75b6e67ce
+ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730511"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974755"
 ---
 # <a name="direct-manipulation"></a>Manipulación directa
 
@@ -143,6 +143,6 @@ Por ejemplo, imagine que está leyendo a través de un texto (informativo) holog
 
 ## <a name="see-also"></a>Vea también
 
-* [Mirada y confirmación](gaze-and-commit.md)
-* [Señalar y confirmar](point-and-commit.md)
-* [Conceptos básicos de la interacción](interaction-fundamentals.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)
+* [Interacciones instintivas](interaction-fundamentals.md)

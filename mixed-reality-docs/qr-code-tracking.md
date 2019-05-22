@@ -6,12 +6,12 @@ ms.author: yoyoz
 ms.date: 11/06/2018
 ms.topic: article
 keywords: VR, lbe, entretenimiento basadas en la ubicación, vr arcade, código qr de arcade envolventes, qr,
-ms.openlocfilehash: b0f4480496c15f811979f76143acbd456d89e249
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: e6588552c0cfa8bffa19ac2be5c247c5f73dc19c
+ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605787"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65974899"
 ---
 # <a name="qr-code-tracking"></a>Seguimiento del código QR
 
@@ -176,7 +176,7 @@ El complemento QRTracking expone las API para seguimiento del código QR. Para u
 Puede encontrar un ejemplo de cómo usar la API de seguimiento QR en el Kit de herramientas de realidad mixta [sitio de GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Preview/QRTracker).
 
 MRTK ha implementado los scripts necesarios para simpilify el seguimiento del uso de QR. Todos los recursos necesarios para desarrollar QR realizar seguimiento de aplicaciones están en la carpeta "QRTracker". Hay dos escenas: el primero es un ejemplo simplemente para mostrar los detalles de los códigos QR cuando se detectan y el segundo ejemplo muestra cómo usar el sistema de coordenadas que se adjunta al código QR para mostrar hologramas.
-Hay un prefabricado "QRScanner" que agrega todos los scrips necesarias en segundo plano para utilizar QRCodes. El script QRCodeManager es una clase singileton que implementa la API de CódigoQR puede agregarlo a la escena. Las secuencias de comandos "AttachToQRCode" se utiliza para adjuntar hologramas a los sistemas de código QR coodridnate, esta secuencia de comandos se puede agregar a cualquiera de sus hologramas. El "SpatialGraphCoordinateSystem" muestra cómo usar el sistema de coordenadas CódigoQR. Estos scripts se pueden usar tal cual en escenas de su proyecto o puede escribir su propio directamente con el complemento como se describió anteriormente.
+Hay un prefabricado "QRScanner" que agrega todos los scripts necesarios para el segundo plano para utilizar QRCodes. La secuencia de comandos QRCodeManager es una clase singleton que implementa la API CódigoQR. Esto debe agregarse a la escena. La secuencia de comandos "AttachToQRCode" se utiliza para adjuntar hologramas para los sistemas de coordenadas del código QR, esta secuencia de comandos se puede agregar a cualquiera de sus hologramas. El "SpatialGraphCoordinateSystem" muestra cómo usar el sistema de coordenadas CódigoQR. Estos scripts se pueden usar como-está en el proyecto de segundo plano, o puede escribir su propio directamente con el complemento como se describió anteriormente.
 
 ### <a name="implementing-qr-code-tracking-in-unity-without-mrtk"></a>Implementar el seguimiento en Unity sin MRTK del código QR
 
