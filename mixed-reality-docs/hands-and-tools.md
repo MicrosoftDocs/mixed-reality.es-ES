@@ -6,12 +6,12 @@ ms.author: shengkait
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Diseñar la realidad, manos, los controladores de movimiento, interacción, mixta
-ms.openlocfilehash: b13efadd111ca970abe625221fb8045644822c37
-ms.sourcegitcommit: b5bad4eeb5cdd0c2a7b639442656c306e8b5853b
+ms.openlocfilehash: d0e54c71ab42a09f2f9c6063a85441b98e729af1
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65813979"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039166"
 ---
 # <a name="hands-and-motion-controllers"></a>Las manos y los controladores de movimiento
 ## <a name="scenarios"></a>Escenarios
@@ -38,7 +38,7 @@ Los controladores de movimiento son herramientas que amplían las capacidades f�
 
 ## <a name="see-also"></a>Vea también
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Manipulación directa (cerca de interacción de mano)](direct-manipulation.md)
-* [Punto y la confirmación (interacción de mano lejano)](point-and-commit.md)
+* [Control con la cabeza y permanencia](gaze-and-dwell.md)
+* [Manipulación directa con las manos](direct-manipulation.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)
 * [Manos libres](hands-free.md)
-* [Mirada y permanencia](gaze-targeting.md)
