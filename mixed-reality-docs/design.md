@@ -8,12 +8,12 @@ ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, diseño, interacción, estilo, Color, patrones de aplicaciones, controles, aplicaciones de ejemplo, el Kit de herramientas de realidad mixta, MRTK
-ms.openlocfilehash: 1a0c8c2f5fa6aac7c4f5b8f574cd617193e9d943
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
+ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730836"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66039212"
 ---
 # <a name="design-for-mixed-reality"></a>Diseño de realidad mixta
 
@@ -73,7 +73,7 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                             <a href="interaction-fundamentals.md">Interacciones instinctual</a>
                         </p>
                         <p>
-                            <a href="hands-and-tools.md">Las manos y controladores</a>
+                            <a href="hands-and-tools.md">Las manos y los controladores de movimiento</a>
                         </p>
                         <p>
                             <a href="hands-free.md">Hands-free</a>
