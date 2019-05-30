@@ -1,23 +1,25 @@
 ---
 title: Características comerciales
-description: Microsoft HoloLens Commercial Suite incluye características que facilitan a las empresas a administrar los dispositivos HoloLens.
-author: xerxesb85
-ms.author: xerxesb
-ms.date: 03/21/2018
+description: Microsoft HoloLens Commercial Suite incluye características que facilitan a las empresas a administrar los dispositivos HoloLens.  HoloLens 2 son equipt con las características comerciales de forma predeterminada.
+author: scooley
+ms.author: scooley
+ms.date: 05/23/2019
 ms.topic: article
 keywords: HoloLens, comerciales, características, mdm, administración de dispositivos móviles, de modo de pantalla completa
-ms.openlocfilehash: 5fd5c56983fb3e94376fac08c6e96510bccc0002
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4da540072fd32ac99692f0a13eb5852337c493bb
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605762"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270363"
 ---
 # <a name="commercial-features"></a>Características comerciales
 
-Microsoft HoloLens Commercial Suite incluye características que facilitan a las empresas a administrar los dispositivos HoloLens. Las características comerciales se incluyen en el sistema operativo de Windows, pero están habilitadas por una licencia. En casi todos los casos, la licencia está habilitada por la administración de dispositivos de Microsoft cuando HoloLens se inscripción en una organización. Póngase en contacto con su administrador de cuenta local de Microsoft para adquirir Commercial Suite de Microsoft HoloLens.
+Microsoft HoloLens Commercial Suite incluye características que facilitan a las empresas a administrar los dispositivos HoloLens.
 
-&nbsp;
+HoloLens incluida con dos opciones de licencia, la licencia de desarrollador y una licencia comercial.  Actualizar el liense desarrollador a una licencia comercial para desbloquear capabilitis comercial de HoloLens.  Póngase en contacto con su administrador de cuenta local de Microsoft para adquirir Commercial Suite de Microsoft HoloLens.
+
+**Novedades de HoloLens 2** -2 de HoloLens todo vienen con las características comerciales disponibles en todos los dispositivos.
 
 >[!VIDEO https://www.youtube.com/embed/tNd0e2CiAkE]
 
@@ -30,7 +32,7 @@ Microsoft HoloLens Commercial Suite incluye características que facilitan a las
 * **Administración de dispositivos móviles (MDM) para HoloLens.** El departamento de TI puede administrar varios dispositivos HoloLens simultáneamente con soluciones como Microsoft Intune. Podrás administrar la configuración, seleccionar qué aplicaciones instalar y establecer las opciones de configuración de seguridad adaptadas a las necesidades de su organización.
 
   ![Administración de dispositivos móviles en HoloLens proporciona administración de dispositivos de nivel de empresa en varios dispositivos.](images/201608-enterprisemanagement-400px.png)
-  
+   
 * **Windows Update para empresas.** Controla las actualizaciones del sistema operativo en dispositivos y soporte técnico para la rama de mantenimiento a largo plazo.
 * **Seguridad de los datos.** El cifrado de BitLocker está habilitado en HoloLens para proporcionar el mismo nivel de protección de seguridad como cualquier otro dispositivo de Windows.
 * **Acceso al trabajo.** Cualquier persona de su organización puede conectarse de forma remota a la red corporativa a través de una red privada virtual en un HoloLens. HoloLens también pueden tener acceso a redes Wi-Fi que requieran credenciales.
@@ -84,7 +86,7 @@ Microsoft HoloLens Commercial Suite incluye características que facilitan a las
 
 ## <a name="enabling-commercial-features"></a>Habilitar las características comerciales
 
-Las características comerciales, como Microsoft Store para empresas, modo de pantalla completa, y acceso Wi-Fi de empresa están configuradas por una organización Administrador de TI. El [centro de TI de Windows para HoloLens](https://technet.microsoft.com/itpro/hololens/index) proporciona instrucciones paso a paso para instalar aplicaciones desde Microsoft Store para empresas e inscripción de dispositivos.
+Las características comerciales, como Microsoft Store para empresas, modo de pantalla completa, y acceso Wi-Fi de empresa están configuradas por una organización Administrador de TI. El [centro de TI de Windows para HoloLens](https://docs.microsoft.com/hololens) proporciona instrucciones paso a paso para instalar aplicaciones desde Microsoft Store para empresas e inscripción de dispositivos.
 
 ## <a name="see-also"></a>Vea también
 * [IT Pro guía para HoloLens](https://technet.microsoft.com/itpro/hololens/index)

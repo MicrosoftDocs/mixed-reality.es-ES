@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar, hololens, MMR, multimodal
-ms.openlocfilehash: 9d0e639d7474c7e8728282acfa8d288cfeec7043
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d018179e20d26ee8b7b24bc74d7c1711bc788282
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974904"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270383"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instinctual
 
@@ -36,11 +36,11 @@ Piense en estos modelos de interacción como modelo mental del usuario para comp
 
 Cada uno de estos modelos de interacción es utilizable por derecho propio, eficaz y conveniente, y todos están optimizados para un conjunto de necesidades del cliente. Ver el gráfico a continuación, para escenarios, ejemplos y las ventajas de cada modelo de interacción.  
 
-**Modelo** | **[Las manos y herramientas](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-and-tools)** | **[Manos libres](https://docs.microsoft.com/en-us/windows/mixed-reality/hands-free)** | **[Mirada y confirmación](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-and-commit?)**
+**Modelo** | **[Las manos y los controladores de movimiento](hands-and-tools.md)** | **[Manos libres](hands-free.md)** | **[Mirada de encabezado y confirmación](gaze-and-commit.md)**
 |--------- | --------------| ------------| ---------|
 **Escenarios de ejemplo** | 3D experiencias espaciales, por ejemplo, espacial y un diseño, manipulación o simulación de contenido | Experiencias contextuales donde están ocupadas manos de un usuario, por ejemplo, en el trabajo de aprendizaje, mantenimiento| Click-through experiencias, por ejemplo, 3D presentaciones, demostraciones
-**Fit** | Muy bien para usuarios nuevos, voz wit acopladas, ocular a mirada principal o de seguimiento. Curva de aprendizaje reducida. Experiencia de usuario coherente a través de la mano de seguimiento y 6 controladores GDL. | Algunos de aprendizaje necesarios. Si las manos son pares disponible también con lenguaje natural y voz | Requiere recursos de aprendizaje en HMDs pero no en dispositivos móviles. Lo mejor para controladores accesible mejor para HoloLens (gen 1) |
-**Hardware** | HoloLens 2 inmersivos | HoloLens 2 HoloLens (gen 1) inmersivos | HoloLens 2 inmersivos | HoloLens 2 HoloLens (gen 1) inmersivos Mobile AR |
+**Fit** | Muy bien para usuarios nuevos, voz wit acopladas, ocular a mirada principal o de seguimiento. Curva de aprendizaje reducida. Experiencia de usuario coherente a través de la mano de seguimiento y 6 controladores GDL. | Algunos de aprendizaje necesarios. Si las manos son pares disponible también con lenguaje natural y voz | Requiere recursos de aprendizaje en HMDs pero no en dispositivos móviles. Recomendado para controladores accesible. Lo mejor para HoloLens (gen 1). |
+**Hardware** | HoloLens 2 <br>Cascos envolventes | HoloLens 2 <br>HoloLens (gen 1) <br>Cascos envolventes | HoloLens 2 <br>Cascos envolventes | HoloLens 2 <br>HoloLens (gen 1) <br>Cascos envolventes <br>Mobile AR |
 
 Información detallada para usar todas las entradas disponibles juntos sin problemas en cada modelo de interacción es en las páginas siguientes, así como las ilustraciones y vínculos a contenido de ejemplo de nuestra MRTK de Unity.
 
@@ -75,7 +75,7 @@ Estos son algunos ejemplos de cómo se optimizan factibilidad y comportamientos 
         <td><strong>¿Cómo se puede saber lo que hice?</strong></td>
     </tr>
     <tr>
-        <td><a href="hands-and-tools.md">Las manos y herramientas</a></td>
+        <td><a href="hands-and-tools.md">Controladores de movimiento y manos</a></td>
         <td>Veo una mano de malla, se ve una prestación de la yema del dedo o mano / rayos de controlador.</td>
         <td>Veo un rectángulo de selección aparecen cuando mi mano está cerca o identificadores grabbable.</td>
         <td>Puedo oír tonos audibles y ver animaciones en la captura y liberación.</td>

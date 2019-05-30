@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Comunicación remota de HoloLens, comunicación remota, holográfica
-ms.openlocfilehash: 16add6c72b594822cacbef6c92ce196ab9b13429
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 24213444686dd2e5dbda4016dd551a8ead8f305a
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605764"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270311"
 ---
 # <a name="holographic-remoting-player"></a>Reproductor de Remoting holográfica
 
@@ -19,8 +19,7 @@ El Reproductor holográfica de comunicación remota es una aplicación complemen
 
 El Reproductor de Remoting holográfica sólo puede utilizarse con aplicaciones de PC que están específicamente diseñadas para admitir la comunicación remota holográfica.
 
-> [!NOTE]
-> Obtener información más específica de HoloLens 2 [próximamente](index.md#news-and-notes).
+El Reproductor de Remoting holográfica está disponible para HoloLens y HoloLens 2.  Las aplicaciones de PC que admiten la comunicación remota holográfica con HoloLens deben actualizarse para admitir holográfica Remtoing con HoloLens 2.  Póngase en contacto con su proveedor de la aplicación si tiene preguntas sobre las versiones son compatibles.
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Conectar con el Reproductor de Remoting holográfica
 
@@ -48,10 +47,10 @@ Para medir la calidad de la conexión, por ejemplo **"Habilitar los diagnóstico
 Mientras se encuentra en la pantalla principal, puede decir **"Deshabilitar los diagnósticos"** para desactivar el diagnóstico.
 
 ## <a name="pc-system-requirements"></a>Requisitos del sistema del equipo
-* Su PC **debe** estar ejecutando Windows 10 Anniversary Update.
+* Su PC **debe** se ejecuta la actualización de aniversario de Windows 10 o versiones más recientes.
 * Se recomienda un GeForce GTX 970 o AMD Radeon R9 290 o mejor tarjeta gráfica.
 * Se recomienda que conectar el equipo a la red a través de ethernet para reducir el número de saltos inalámbrica.
 
 ## <a name="see-also"></a>Vea también
-* [Términos de licencia del software de comunicación remota holográfica](microsoft-holographic-remoting-software-license-terms.md)
+* [Términos de licencia del software de reproducción remota de holografías](microsoft-holographic-remoting-software-license-terms.md)
 * [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

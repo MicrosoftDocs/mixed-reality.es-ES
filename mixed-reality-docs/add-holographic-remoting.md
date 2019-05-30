@@ -6,17 +6,21 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, remoting holográfica, procesamiento remoto, red de representación, HoloLens, hologramas remotos
-ms.openlocfilehash: 4726c6af43fe1b89fc8298e459a1af9dfa5fc667
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 1e9567976bad1e2b72e95feca292bf3475893230
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605789"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270354"
 ---
 # <a name="add-holographic-remoting"></a>Agregar remoting holográfica
 
+## <a name="hololens-2"></a>HoloLens 2
+
 > [!NOTE]
 > Obtener información más específica de HoloLens 2 [próximamente](index.md#news-and-notes).
+
+Los desarrolladores de HoloLens utilizar Remoting holográfica deberá actualizar sus aplicaciones para que sean compatibles con HoloLens 2.  Esto requerirá una nueva versión del paquete NuGet de Remoting holográfica que aún no está disponible públicamente.  Si una aplicación con el paquete HoloLens NuGet intenta conectar con el Reproductor de Remoting holográfica en HoloLens 2, se producirá un error en la conexión.  Vea esta página para las actualizaciones una vez que el paquete NuGet de HoloLens 2 está disponible.
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Agregar remoting holographic a su escritorio o aplicación para UWP
 

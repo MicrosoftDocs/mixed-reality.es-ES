@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realidad mixta, unity, tutorial, hololens
-ms.openlocfilehash: 04ed2217c473c5649c1850fcc757d866e23b9b56
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
+ms.openlocfilehash: 6f05b2cecd388b1b2f13e7e5228bc90091eee3bd
+ms.sourcegitcommit: aba33a8ad1416f7598048ac35ae9ab1734bd5c37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65730894"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270400"
 ---
 # <a name="mr-learning-base-module---dynamic-content-placement-and-solvers"></a>Módulo de la Base de aprendizaje de MR - selección de ubicación de contenido dinámico y los algoritmos de resolución
 
@@ -48,7 +48,7 @@ El objetivo de este capítulo es mejorar la colección de botones que creamos an
 
 3. Para configurar la colección de botones para seguir el usuario, es necesario implementar los siguientes ajustes (consulte también la imagen siguiente):
 - En el script Orbital, establezca la lista desplegable "tipo de orientación" a "Sólo guiñada." Esto hace que, por lo que solo un eje del objeto gira manera el usuario.
-- Establece el desplazamiento local en 0 en todos los ejes. Establece el desplazamiento del mundo a x = 0, y = -0.1 y z = 0,6. Esto bloquea el movimiento del objeto tal que cuando el usuario cambia el alto, el objeto permanecerá en un alto fijo en el entorno físico, mientras sigue permitiendo que siguen al usuario cuando el usuario se mueve sobre el entorno. Estos valores se pueden ajustar para lograr una gama wade de comportamientos.
+- Establece el desplazamiento local en 0 en todos los ejes. Establece el desplazamiento del mundo a x = 0, y = -0.1 y z = 0,6. Esto bloquea el movimiento del objeto tal que cuando el usuario cambia el alto, el objeto permanecerá en un alto fijo en el entorno físico, mientras sigue permitiendo que siguen al usuario cuando el usuario se mueve sobre el entorno. Estos valores se pueden ajustar para lograr una amplia variedad de comportamientos.
 - Para un comportamiento de seguimiento mediante el cual los botones siguen únicamente la vista del usuario después de que el usuario activa su cabeza suficientemente, puede seleccionar la casilla "Use ángulo ejecución paso a paso para desplazamiento world" (tenga en cuenta: Este título puede aparecer truncado en algunas pantallas, como en la imagen siguiente.) Por ejemplo, para que el objeto siga el usuario sólo cada 90 grados, establecer igual a 4 (marcados con una flecha verde en el ejemplo a la izquierda) el número de pasos. 
 
 ![Lesson3 Chapter2 Step3im](images/Lesson3_chapter2_step3im.PNG)
