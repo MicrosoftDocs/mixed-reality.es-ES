@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: La realidad mixta, manos libres, que mirar, mirar como destino, interacción, diseño
-ms.openlocfilehash: 59a460a0c46ace7e633381019d29af54b1061695
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: 23b1def15c4ad900265fab2a2c8757cf96706fbc
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629018"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402340"
 ---
 # <a name="hands-free"></a>Manos libres
 
@@ -37,7 +37,7 @@ Uso de la voz para comando y control de que una interfaz puede no sólo permite 
 
 
 
-### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Head mirada y permanencia](gaze-and-dwell.md)
+### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Control con la cabeza y permanencia](gaze-and-dwell.md)
 
 En algunas situaciones en las manos libres, uso de la voz no es ideal o posible. Entornos de fábrica fuerte, privacidad o normas sociales pueden ser restricciones. El encabezado que mirar + profundizaré modelo permite al usuario navegar por la aplicación mediante el uso de su vector principal para que apunte al persistentes, o reposo en un botón se activarán después de una cierta cantidad de tiempo (normalmente aproximadamente 1 segundo o menos). 
 
@@ -96,5 +96,5 @@ Un modificador de modo es un componente indispensable, es importante que cuando 
 
 ## <a name="see-also"></a>Vea también
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Manipulación directa](direct-manipulation.md)
-* [Señalar y confirmar](point-and-commit.md)
+* [Manipulación directa con las manos](direct-manipulation.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)

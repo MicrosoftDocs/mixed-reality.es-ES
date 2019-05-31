@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar, manos cerca, HoloLens
-ms.openlocfilehash: a9e67f21587381dbc1090f89935eaa2b88630dae
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: bb44244a3cb932a56703f84ba129def5ee5f9b67
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974755"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402357"
 ---
 # <a name="direct-manipulation"></a>Manipulación directa
 
@@ -25,7 +25,7 @@ Manipulación directa es la prestación de la base, lo que significa que es fác
 
 | Modelo de entrada | [HoloLens (Gen 1)](https://review.docs.microsoft.com/en-us/windows/mixed-reality/hololens-hardware-details?branch=master) | HoloLens 2 |[Inmersivos](https://review.docs.microsoft.com/en-us/windows/mixed-reality/immersive-headset-hardware-details?branch=master)|
 |:-------- | :-------| :--------| :------------|
-| Manipulación directa | ❌ No compatible | ✔️ Recomendado | Una alternativa ➕ [elija y confirme](https://review.docs.microsoft.com/en-us/windows/mixed-reality/point-and-commit?branch=master) se recomienda.
+| Manipulación directa | ❌ No compatible | ✔️ Recomendado | ➕ Una alternativa, [elija y confirme con manos](point-and-commit.md) se recomienda.
 
 Manipulación directa es un modelo de entrada principal en HoloLens 2 y usa el nuevo sistema de seguimiento de la mano articulado. El modelo de entrada también está disponible en inmersivos mediante el uso de los controladores de movimiento, pero no se recomienda como medio principal de interacción fuera de la manipulación del objeto.  Manipluation directo no está disponible en HoloLens v1.
 

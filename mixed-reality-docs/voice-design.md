@@ -7,12 +7,12 @@ ms.date: 04/21/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, diseño, la interacción, voz
-ms.openlocfilehash: 084c1228d17c3e23b38d9b8918c13080598aea98
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
+ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039189"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402368"
 ---
 # <a name="voice-commanding"></a>Comandos de voz
 
@@ -25,7 +25,7 @@ Al utilizar los comandos de voz, mirada se utiliza normalmente como el destino m
 <tr>
 <th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
 </tr><tr>
-<td></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con auriculares adjuntadas)</td>
+<td>Comandos de voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con auriculares adjuntadas)</td>
 </tr>
 </table>
 
@@ -87,7 +87,7 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 ![Estados de comentarios de voz de cursor](images/voicefeedbackstates.png)<br>
 *Estados de comentarios de voz de cursor*
 
-## <a name="top-things-users-should-know-about-speech-on-windows-mixed-reality"></a>Los usuarios de las cosas superior deben conocer "voz" en Windows Mixed Reality
+## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Los usuarios de las cosas superior deben conocer "voz" en realidad mixta
 * Por ejemplo **"Select"** mientras selecciona como destino un botón (que puede utilizarlo desde cualquier lugar que hacer clic en un botón).
 * Puede decir el **nombre de etiqueta de un botón de barra de la aplicación** en algunas aplicaciones para realizar una acción. Por ejemplo, al examinar una aplicación, un usuario puede indicar que el comando "Remove" para quitar la aplicación desde el mundo (Esto ahorra tiempo tener que hacer clic en él con la mano).
 * Puede iniciar Cortana escucha diciendo: **"Hola Cortana".** Puede formular sus preguntas ("Hola Cortana, el alto es la torre Eiffel"), dígale que abrir una aplicación ("Hola Cortana, abra Netflix") o Dígale que aparezca el menú Inicio ("Hola Cortana, take me home") y mucho más.

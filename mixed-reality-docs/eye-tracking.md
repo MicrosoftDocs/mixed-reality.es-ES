@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Seguimiento de los ojos, mixto en realidad, Input, ojo mirada
-ms.openlocfilehash: 948d6ad36bfa3f7b179268a8e6241c9a2ce8e732
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: d41b9973ede323e842d7187becb1220ba9980a5d
+ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974766"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402350"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Ojo de seguimiento en 2 HoloLens
 Permite un nivel completamente nuevo de contexto y la descripción humana dentro de la Holographic HoloLens 2 experiencia proporcionando a los desarrolladores la capacidad de uso de información sobre lo que están mirando los usuarios increíble. Esta página proporciona información general sobre cómo los desarrolladores pueden beneficiarse de seguimiento de ojo para varios casos de uso y lo que debe tener en cuenta cuando el diseño de interfaces de usuario basada en la mirada de ojos. 
@@ -127,7 +127,7 @@ En el caso de un cursor, esto puede producir el efecto "eluden cursor" debido a 
 5. **Cuenta las imprecisiones:** Podemos distinguir dos tipos de las imprecisiones que son visibles para los usuarios: Desplazamiento y vibración. La manera más fácil a los desplazamientos de la dirección es proporcionar destinos lo suficientemente grandes para interactuar con (> 2° en ángulo visual – como referencia: la vista en miniatura es aproximadamente 2° en ángulo visual cuando estire el brazo (1)). Esto conduce a la siguiente orientación:
     - No fuerce a los usuarios seleccionar destinos diminutos: Investigación ha demostrado que si los destinos son lo suficientemente grandes (y el sistema está diseñado también), los usuarios describir la interacción como mágica y sin esfuerzo. Si los destinos se vuelven demasiado pequeños, los usuarios describen la experiencia como cansado y frustrante.
     
-# <a name="eye-gaze-design-guidelines"></a>Instrucciones de diseño de ojo mirada
+## <a name="eye-gaze-design-guidelines"></a>Instrucciones de diseño de ojo mirada
 
 Con el 2 de HoloLens, tenemos la gran oportunidad para realizar mirada & confirmación más rápido y más cómodo con efecto de ojos mirada en lugar de mirada principal. Sin embargo, la mirada ojo se comporta de forma muy distinta a principal mirada en ciertos aspectos y, por tanto, incluye una serie de desafíos únicos. En instrucciones de diseño que mirar ojos, se resumen las ventajas y desafíos a tener en cuenta al usar el seguimiento de ojo como un medio de entrada en la aplicación holográfica. En esta sección, nos centramos en las consideraciones de diseño específicas para mirada ojo & confirmación. En primer lugar, los ojos mover increíblemente rápido y, por tanto, son una excelentes destino rápidamente en la vista. Esto hace que ojo que mirar ideal para una mirada rápida y confirmar acciones, especialmente cuando se combina con confirmaciones rápidas como un botón o pulsar en el aire press.
 
