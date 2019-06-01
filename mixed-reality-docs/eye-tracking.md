@@ -7,15 +7,15 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Seguimiento de los ojos, mixto en realidad, Input, ojo mirada
-ms.openlocfilehash: d41b9973ede323e842d7187becb1220ba9980a5d
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
+ms.openlocfilehash: 7298a34a946f86aaf789cfe44ad971169fc8ece3
+ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402350"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453704"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Ojo de seguimiento en 2 HoloLens
-Permite un nivel completamente nuevo de contexto y la descripción humana dentro de la Holographic HoloLens 2 experiencia proporcionando a los desarrolladores la capacidad de uso de información sobre lo que están mirando los usuarios increíble. Esta página proporciona información general sobre cómo los desarrolladores pueden beneficiarse de seguimiento de ojo para varios casos de uso y lo que debe tener en cuenta cuando el diseño de interfaces de usuario basada en la mirada de ojos. 
+HoloLens 2 permite un nivel completamente nuevo de contexto y la descripción humana dentro de la experiencia holográfica proporcionando a los desarrolladores la capacidad de uso de información sobre lo que están mirando los usuarios increíble. Esta página proporciona información general sobre cómo los desarrolladores pueden beneficiarse de seguimiento de ojo para varios casos de uso y lo que debe tener en cuenta cuando el diseño de interfaces de usuario basada en la mirada de ojos. 
 
 ## <a name="use-cases"></a>Casos de uso
 Seguimiento de los ojos permiten que las aplicaciones realizar un seguimiento de dónde mira el usuario en tiempo real. Esta sección describen algunos de los posibles casos de uso y las interacciones novedosas que son posibles con los ojos de seguimiento en la realidad mixta.
@@ -126,20 +126,13 @@ En el caso de un cursor, esto puede producir el efecto "eluden cursor" debido a 
 
 5. **Cuenta las imprecisiones:** Podemos distinguir dos tipos de las imprecisiones que son visibles para los usuarios: Desplazamiento y vibración. La manera más fácil a los desplazamientos de la dirección es proporcionar destinos lo suficientemente grandes para interactuar con (> 2° en ángulo visual – como referencia: la vista en miniatura es aproximadamente 2° en ángulo visual cuando estire el brazo (1)). Esto conduce a la siguiente orientación:
     - No fuerce a los usuarios seleccionar destinos diminutos: Investigación ha demostrado que si los destinos son lo suficientemente grandes (y el sistema está diseñado también), los usuarios describir la interacción como mágica y sin esfuerzo. Si los destinos se vuelven demasiado pequeños, los usuarios describen la experiencia como cansado y frustrante.
-    
-## <a name="eye-gaze-design-guidelines"></a>Instrucciones de diseño de ojo mirada
-
-Con el 2 de HoloLens, tenemos la gran oportunidad para realizar mirada & confirmación más rápido y más cómodo con efecto de ojos mirada en lugar de mirada principal. Sin embargo, la mirada ojo se comporta de forma muy distinta a principal mirada en ciertos aspectos y, por tanto, incluye una serie de desafíos únicos. En instrucciones de diseño que mirar ojos, se resumen las ventajas y desafíos a tener en cuenta al usar el seguimiento de ojo como un medio de entrada en la aplicación holográfica. En esta sección, nos centramos en las consideraciones de diseño específicas para mirada ojo & confirmación. En primer lugar, los ojos mover increíblemente rápido y, por tanto, son una excelentes destino rápidamente en la vista. Esto hace que ojo que mirar ideal para una mirada rápida y confirmar acciones, especialmente cuando se combina con confirmaciones rápidas como un botón o pulsar en el aire press.
-
-No mostrar un cursor: Aunque es casi imposible interactuar sin un cursor cuando se usa el encabezado que mirar, el cursor se vuelve rápidamente que distraen y molestos cuando se usa la mirada de ojos. En lugar de depender de un cursor para informar al usuario detecta la actualmente buscar si rastreo ocular funciona y tiene correctamente en el destino, use sutiles visual resalta (más detalles a continuación).
-
-Se esfuerzan por lograr comentarios sutiles activable combinada: Lo que parece excelentes comentarios visuales para mirada principal puede dar lugar a experiencias terribles abrumadores mediante mirada ojos. Recuerde que los ojos son extremadamente rápidos, darting rápidamente entre los puntos en el campo de la vista. Cambios de resaltado repentino rápido (activar/desactivar) pueden dar lugar flickery comentarios cuando echando un vistazo. Por lo tanto, al proporcionar comentarios al mantener el mouse, se recomienda usar un área resaltada de mezcla sin problemas (y blended horizontal comparada ausente). Esto significa que al principio apenas observaría los comentarios en un destino. En el transcurso de 500-1000 ms el resaltado aumentaría en intensidad. Mientras que los usuarios inexpertos podrían seguir buscando en el destino para asegurarse de que el sistema ha determinado correctamente el destino centrado, usuarios expertos rápidamente podrían observación & se confirman sin esperar a que los comentarios son en su máxima intensidad. Además, también se recomienda usar una mezcla de salida cuando se atenúa, los comentarios al mantener el mouse. Investigación ha demostrado que los cambios rápidos de movimiento y el contraste son muy notables en su visión periférico (por lo tanto, el área de campo visual donde no desea). El fundido de salida no tiene que ser tan lenta como en blend. Esto solo es importante cuando disponga de contraste alto o cambios de color para el resaltado. Si los comentarios al mantener el mouse eran bastante sutil para empezar, probablemente no notará ninguna diferencia.
-
-Busque señales mirada y confirmar la sincronización: La sincronización de señales de entrada puede ser menor de un desafío para simple mirada & confirmación, por lo tanto, no se preocupe! Es algo a tener en cuenta en caso de que desea usar acciones de confirmación más complicadas aunque puede implicar a los comandos de voz larga o gestos de mano complicada. Imagine que mire diana y emitido un comando de voz largo. Tenga en cuenta el tiempo que necesita para hablar y el momento en que el sistema necesita para detectar lo que dicho, su mirada ojo normalmente larga cambió a algún nuevo destino de la escena. Por lo tanto, puede hacer que los usuarios tener en cuenta que es posible que deba seguir buscando en un destino hasta que se le ha reconocido el comando o controlar la entrada en una forma de determinar desde el principio del comando y lo que el usuario había estado viendo entonces.
+   
 
 ## <a name="see-also"></a>Vea también
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Gestos](gestures.md)
-* [Comandos de voz](voice-design.md)
+* [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
+* [Efecto de ojos mirada en Unity (Kit de herramientas de realidad mixta)](https://aka.ms/mrtk-eyes)
+* [Gestos de mano](gestures.md)
+* [Entrada de voz](voice-design.md)
 * [Controladores de movimiento](motion-controllers.md)
 * [Comodidad](comfort.md)
