@@ -165,7 +165,7 @@
 #### [Uso de Vuforia con Unity](vuforia-development-overview.md)
 ### Documentos heredados (Unity 2017.4/HTK/MRTK v1)
 ## Unreal
-### Unreal para HoloLens 2 (próximamente)
+### [Programa de acceso anticipado a Unreal for HoloLens 2](https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access)
 ## DirectX
 ### [Introducción al desarrollo de DirectX](directx-development-overview.md)
 ### Introducción
