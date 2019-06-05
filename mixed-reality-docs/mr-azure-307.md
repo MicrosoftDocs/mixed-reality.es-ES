@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: realidad mixta, Azure, academy, unity, tutorial, api, aprendizaje automático, ml studio de machine learning, envolventes, hololens, vr
-ms.openlocfilehash: 726a6cce91d46ad878f8502381d085fb979ac72a
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93263817df0fd809a09b32c1b34a636eab7026a1
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600278"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516038"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -91,9 +91,9 @@ Para usar la API del traductor de Azure, deberá configurar una instancia del se
 
     1.  Insertar un **nombre** para su cuenta, tenga en cuenta este campo sólo acepta números y letras minúsculas.
     2.  Para **modelo de implementación,** seleccione **Administrador de recursos**.
-    3.  Para **tipo de cuenta**, seleccione **almacenamiento (uso general v1)**.
+    3.  Para **tipo de cuenta**, seleccione **almacenamiento (uso general v1)** .
     4.  Para **rendimiento**, seleccione **estándar**.
-    5.  Para **replicación** seleccione **lectura-access--almacenamiento con redundancia geográfica (RA-GRS)**.
+    5.  Para **replicación** seleccione **lectura-access--almacenamiento con redundancia geográfica (RA-GRS)** .
     6.  Deje **se requiere transferencia segura** como **deshabilitado**.
     7.  Seleccione un **suscripción**.
     4. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación para una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un proyecto único (por ejemplo, por ejemplo, estos laboratorios) en un grupo de recursos comunes).
@@ -204,7 +204,7 @@ Esta tabla de ejemplo contiene 9998 entradas.
 
     3.  En el campo de texto, escriba **ProductsTableCSV.csv** como el nombre del conjunto de datos (aunque debería agregarse automáticamente).
 
-    4.  Mediante el menú desplegable de **tipo**, seleccione **archivo CSV genérico con un encabezado (.csv)**.
+    4.  Mediante el menú desplegable de **tipo**, seleccione **archivo CSV genérico con un encabezado (.csv)** .
 
     5.  Presione el "Tick" en la parte inferior derecha de la ventana de carga y su **Dataset** se cargará.
 
@@ -220,23 +220,23 @@ Para empezar a crear un experimento:
 
 2.  Se mostrará una página nueva con un experimento en blanco:
 
-3.  Desde el panel de la izquierda expanda **conjuntos de datos guardados* > * Mis conjuntos de datos ** y arrastre el **ProductsTableCSV** en el **lienzo de experimento**.
+3.  En el panel de la izquierda expanda **conjuntos de datos guardados* > *Mis conjuntos de datos** y arrastre el **ProductsTableCSV** en el **Lienzo del experimento**.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-16.png)
 
-4.  En el panel de la izquierda, expanda **transformación de datos** > **muestrear y dividir**. A continuación, arrastre el **dividir datos** en de elemento para el **lienzo de experimento**. El elemento de datos de la división dividirá el conjunto de datos en dos partes. Una parte usará para entrenar el algoritmo de aprendizaje automático. La segunda parte se utilizará para evaluar la precisión del algoritmo que genera.
+4.  En el panel de la izquierda, expanda **transformación de datos** > **muestrear y dividir**. A continuación, arrastre el **dividir datos** en de elemento para el **lienzo de experimento**. El elemento de datos de la división dividirá el conjunto de datos en dos partes. Una parte usará para entrenar el algoritmo de aprendizaje automático. La segunda parte se utilizará para evaluar la precisión del algoritmo que genera.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-17.png)
 
-5.  En el panel derecho (mientras que los datos de la división se selecciona el elemento en el lienzo), edite el **fracción de filas del primer conjunto de datos de salida** a **0,7**. Esto dividirá los datos en dos partes, la primera parte será un 70% de los datos y la segunda parte será el 30% restante. Para asegurarse de que los datos se dividen al azar, asegúrese de que el **división aleatoria** permanezca activada la casilla de verificación.
+5.  En el panel derecho (mientras que los datos de la división se selecciona el elemento en el lienzo), edite el **fracción de filas del primer conjunto de datos de salida** a **0,7**. Esto dividirá los datos en dos partes, la primera parte será un 70% de los datos y la segunda parte será el 30% restante. Para asegurarse de que los datos se dividen al azar, asegúrese de que el **división aleatoria** permanezca activada la casilla de verificación.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-18.png)
 
-6.  Arrastre una conexión de la base de la **ProductsTableCSV** elemento en el lienzo en la parte superior del elemento de datos de la división. Esto se conectará los elementos y enviar el **ProductsTableCSV** salida del conjunto de datos (los datos) a la entrada de datos de división.  
+6.  Arrastre una conexión de la base de la **ProductsTableCSV** elemento en el lienzo en la parte superior del elemento de datos de la división. Esto se conectará los elementos y enviar el **ProductsTableCSV** salida del conjunto de datos (los datos) a la entrada de datos de división.  
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-19.png)
 
-7.  En el **experimentos** del panel en el lado izquierdo, expanda **Machine Learning* > * Train **. Arrastre el **entrenar modelo ** elemento horizontalmente al lienzo del experimento. El lienzo debe ser igual a la siguiente.
+7.  En el **experimentos** del panel en el lado izquierdo, expanda **Machine Learning* > * "Train" **. Arrastre el **Train Model** elemento alejar en al lienzo del experimento. El lienzo debe ser igual a la siguiente.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-20.png)
 
@@ -244,31 +244,31 @@ Para empezar a crear un experimento:
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-21.png)
 
-9.  Seleccione el **Train Model** elemento en el lienzo y, en el **propiedades** panel (en el lado derecho de la ventana del explorador), haga clic la **iniciar el selector de columna**  botón.
+9.  Seleccione el **Train Model** elemento en el lienzo y, en el **propiedades** panel (en el lado derecho de la ventana del explorador), haga clic la **iniciar el selector de columna** botón.
 
 10. En el cuadro de texto escriba **producto** y, a continuación, presione **ENTRAR**, *producto* se establecerá como una columna para entrenar predicciones. A continuación, haga clic en el **graduación** en la esquina inferior derecha para cerrar el cuadro de diálogo de selección.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-22.png)
 
-11. Va a entrenar un **regresión logística Multiclase** para predecir la dirección de venta más **producto** según la hora del día y la fecha. Queda fuera del ámbito de este documento para explicar los detalles de los diferentes algoritmos proporcionados por Azure Machine Learning studio, sin embargo, puede encontrar más información en el [hoja de referencia rápida de algoritmos de Machine Learning](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
+11. Va a entrenar un **regresión logística Multiclase** para predecir la dirección de venta más **producto** según la hora del día y la fecha. Queda fuera del ámbito de este documento para explicar los detalles de los diferentes algoritmos proporcionados por Azure Machine Learning studio, sin embargo, puede encontrar más información en el [hoja de referencia rápida de algoritmos de Machine Learning](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
 
-12. En el panel de elementos de experimento de la izquierda, expanda ***Machine Learning* > *Initialize Model* > * clasificación ***y arrastre el **Multiclase Logística regresión ** en elemento de una sesión en el lienzo del experimento.
+12. En el panel de elementos de experimento de la izquierda, expanda ***Machine Learning* > *Initialize Model* > * *** clasificación y arrastre el **regresión logística Multiclase**  elemento de sesión en el lienzo del experimento.
 
 13. Conecte la salida, de la parte inferior de la **regresión logística Multiclase**, a la entrada de la parte superior izquierda de la **Train Model** elemento.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-23.png)
 
-14. En la lista de elementos de experimento en el panel de la izquierda, expanda **Machine Learning* > * puntuación**y arrastre el **elemento de modelo de puntuación ** sesión en el lienzo.
+14. En la lista de elementos de experimento en el panel de la izquierda, expanda **Machine Learning* > * puntuación ** y arrastre el **Score Model** elemento de sesión en el lienzo.
 
-15. Conecte la salida, de la parte inferior de la **Train Model**, a la entrada de la parte superior izquierda de la **Score Model**.
+15. Conecte la salida, de la parte inferior de la **Train Model**, a la entrada de la parte superior izquierda de la **Score Model**.
 
-16. Conecte la salida de la esquina inferior derecha de **dividir datos**, a la entrada de la parte superior derecha de la **Score Model* elemento *.
+16. Conecte la salida de la esquina inferior derecha de **dividir datos**, a la entrada de la parte superior derecha de la  **Score Model* elemento*.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-24.png)
 
-17. En la lista de **experimento** elementos en el panel de la izquierda, expanda ***Machine Learning* > * Evaluate ***y arrastre el **evaluar modelo ** elemento hasta el lienzo.
+17. En la lista de **experimento** elementos en el panel de la izquierda, expanda ***Machine Learning* > * *** Evaluate y arrastre el **Evaluate Model** elemento hasta el lienzo.
 
-18. Conecte la salida desde el **Score Model** a la entrada de la parte superior izquierda de la **Evaluate Model**.
+18. Conecte la salida desde el **Score Model** a la entrada de la parte superior izquierda de la **Evaluate Model**.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-25.png)
 
@@ -278,11 +278,11 @@ Para empezar a crear un experimento:
 
 20. Puede ver el **estado** del experimento en la parte superior derecha del lienzo. Espere unos instantes para el experimento finalice.
 
-    > Si tiene un conjunto de datos grande (reales) es probable que el experimento podría tardar horas en ejecutarse.
+    > Si tiene un conjunto de datos grande (reales) es probable que el experimento podría tardar horas en ejecutarse.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-27.png)
 
-21. Haga clic con el botón derecho en el **Evaluate Model** de elemento en el lienzo y de mantener el mouse del menú de contexto el mouse sobre **resultados de la evaluación**, a continuación, seleccione **visualizar**.
+21. Haga clic con el botón derecho en el **Evaluate Model** de elemento en el lienzo y de mantener el mouse del menú de contexto el mouse sobre **resultados de la evaluación**, a continuación, seleccione **visualizar**.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-28.png)
 
@@ -292,17 +292,17 @@ Para empezar a crear un experimento:
 
 23. Cerrar la **resultados**.
 
-24. Para usar el modelo recién entrenado de Machine Learning debe exponer como un **servicio Web**. Para ello, haga clic en el **Configurar servicio Web** menú de elemento en el menú en la parte inferior de la página y haga clic en **servicio Web predictivo**.
+24. Para usar el modelo recién entrenado de Machine Learning debe exponer como un **servicio Web**. Para ello, haga clic en el **Configurar servicio Web** menú de elemento en el menú en la parte inferior de la página y haga clic en **servicio Web predictivo**.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-30.png)
 
 25. Se creará una nueva pestaña y el modelo de entrenamiento se combina para crear el nuevo servicio web. 
 
-26. En el menú en la parte inferior de la página, haga clic en **guardar**, a continuación, haga clic en **ejecutar**. Verá el estado actualizado en la esquina superior derecha del lienzo del experimento.
+26. En el menú en la parte inferior de la página, haga clic en **guardar**, a continuación, haga clic en **ejecutar**. Verá el estado actualizado en la esquina superior derecha del lienzo del experimento.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-31.png)
 
-27. Una vez que haya terminado de ejecutarse, una **implementar servicio Web** botón aparecerá en la parte inferior de la página. Está listo para implementar el servicio web. Haga clic en **implementar servicio Web** (clásica) en el menú en la parte inferior de la página.
+27. Una vez que haya terminado de ejecutarse, una **implementar servicio Web** botón aparecerá en la parte inferior de la página. Está listo para implementar el servicio web. Haga clic en **implementar servicio Web** (clásica) en el menú en la parte inferior de la página.
 
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-32.png)
 
@@ -313,7 +313,7 @@ Para empezar a crear un experimento:
     ![Machine Learning Studio: El experimento](images/AzureLabs-Lab7-33.png)
 
     > [!NOTE] 
-    > Si hace clic en prueba en esta página, podrá escribir datos de entrada y ver la salida. Escriba el **día** y **hora**. Deje el **producto** entrada en blanco. A continuación, haga clic en el **confirmar** botón. La salida en la parte inferior de la página mostrará el JSON que representa la probabilidad de cada producto que se va a la opción.
+    > Si hace clic en prueba en esta página, podrá escribir datos de entrada y ver la salida. Escriba el **día** y **hora**. Deje el **producto** entrada en blanco. A continuación, haga clic en el **confirmar** botón. La salida en la parte inferior de la página mostrará el JSON que representa la probabilidad de cada producto que se va a la opción.
 
 29. Se abrirá una página web nueva, mostrar las instrucciones y algunos ejemplos sobre la estructura de solicitud requeridos por Machine Learning Studio. Copia el **URI de solicitud** muestra en esta página, en el Bloc de notas.
 
@@ -500,7 +500,7 @@ Como parte del paquete importado, se habrá ha dado esta clase, aunque es incomp
     ![Crear la clase ShelfKeeper](images/AzureLabs-Lab7-51.png)
 
     > [!IMPORTANT]
-    > Si la secuencia de comandos no tiene los destinos de referencia (es decir, *fecha (texto de la malla)*), basta con arrastrar los objetos correspondientes de la **jerarquía Panel**, en los campos de destino. Consulte más abajo para ver una explicación, si es necesario:
+    > Si la secuencia de comandos no tiene los destinos de referencia (es decir, *fecha (texto de la malla)* ), basta con arrastrar los objetos correspondientes de la **jerarquía Panel**, en los campos de destino. Consulte más abajo para ver una explicación, si es necesario:
     > 
     > 1.  Abra el **punto Spawn** matriz dentro de la **ShelfKeeper** script componente pulsando en él. Una subsección aparecerá llamada **tamaño**, lo que indica el tamaño de la matriz. Tipo **3** en el cuadro de texto junto a **tamaño** y presione **ENTRAR**, y se crearán tres ranuras debajo.
     > 2. Dentro de la **jerarquía** expandir la **tiempo mostrar** objeto (pulsando la flecha situada junto a él). A continuación, haga clic en el ***cámara principal*** desde el **jerarquía**, de modo que el **Inspector** muestra su información.
@@ -811,7 +811,7 @@ Para crear esta clase:
 
 14. Arrastre el **ProductPrediction** clase script desde el **Script** carpeta, en el **cámara principal** objeto.
 
-15. Guarde la escena y el proyecto **archivo** > ***Guardar escena* / *archivo***   >  **Guardar proyecto**.
+15. Guarde la escena y el proyecto **archivo** >  ***Guardar escena* / *archivo***   >  **Guardar proyecto**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Capítulo 10: Compile la solución UWP
 
