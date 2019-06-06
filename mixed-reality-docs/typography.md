@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, estilo, fuente, tipografía, interfaz de usuario, experiencia de usuario
-ms.openlocfilehash: b4bac35cbc412ec7102748350c2f5c1e236c2f7d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605365"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692372"
 ---
 # <a name="typography"></a>Tipografía
 
 Texto es un elemento importante para la entrega de información en su experiencia de aplicación. Tipografía en pantallas 2D, como el objetivo es tener claras y legibles. Con el aspecto tridimensional de realidad mixta, hay una oportunidad para influir en el texto y el usuario general experiencia de una manera incluso mayor.
 
-![Ejemplo de tipografía en HoloLens](images/640px-typography-hero2.jpg)<br>
+![Ejemplo de tipografía en HoloLens](images/typography-cover.png)<br>
 *Ejemplo de tipografía en HoloLens*
 
 Cuando hablamos sobre el tipo de 3D, tendemos a pensar extruido, volumétrico texto 3D. Excepto en algunos diseños de logotipo y algunas otras aplicaciones limitadas, texto extruido tiende a disminuir la legibilidad del texto. Aunque estamos diseñando las experiencias para 3D, usamos 2D para el tipo porque es más legible y fácil de leer.
@@ -33,7 +33,7 @@ Reglas tipográficas en mixed reality no son distintas de cualquier otro lugar. 
 Compilar contraste y jerarquía usando las ponderaciones y los tamaños de tipo diferente. Definir una rampa de tipos y que hay a continuación a lo largo de la experiencia de aplicación ofrecerá una experiencia de usuario excelente con jerarquía información coherente.
 
 ![Ejemplos de rampa de tipos](images/typography-ramp-1000px.jpg)<br>
-*Ejemplos de rampa de tipos*
+*Definir su rampa de tipos y seguirlo a lo largo de la experiencia de aplicación*
 
 ### <a name="limit-your-fonts"></a>Limitar las fuentes
 
@@ -52,42 +52,56 @@ En HoloLens, puesto que el hologramas se construyen con un sistema claro aditivo
 <br>
 
 
-![Se recomienda usar texto en blanco en un plato de back-oscuro o de color.](images/typography-whiteonblack2-1000px.jpg)
-
-Se recomienda usar texto en blanco en un plato de back-oscuro o de color.
-
+![Se recomienda usar texto en blanco en un plato de back-oscuro o de color. ](images/typography-whiteonblack2-1000px.jpg)
+ *Ejemplos de texto en blanco en un plato de back-oscuro o de color.*
 <br>
-
-
-![Ejemplos de texto en negro](images/640px-typography-textcolors.jpg)
 
 Para usar texto oscuro, debe usar un plato de back-brillante para que sea legible. En los sistemas de color aditivos, negro se muestra como transparente. Esto significa que no podrá ver el texto negro sin un color hacer una copia de la placa.
 
-<br>
+![Ejemplos de texto en negro](images/typography-whiteonblack.png)
+<br>*Ejemplos de blanco en back y negro en texto en blanco*
 
 
 ![Ejemplos de texto en negro](images/640px-typography-blackonwhite.jpg)
-
-Puede encontrar ejemplos de texto en negro en aplicaciones para UWP, como la configuración o Store.
+<br>*Ejemplos de texto de color negro en las aplicaciones del sistema - Store y configuración*
 
 ## <a name="recommended-font-size"></a>Tamaño de fuente recomendado
 
-![Dos medidores es la distancia óptima para mostrar texto.](images/typography-distance-1000px.jpg)
+Como puede esperar, los tamaños de tipo que se usan en un equipo o un dispositivo de tableta gráfica (normalmente entre 12 – 32pt) busque bastante pequeños a una distancia de 2 metros. Depende de las características de cada fuente, pero en general son los requisitos mínimos de visualización de ángulo y el alto de fuente para mejorar la legibilidad en torno a 0.35°-0.4°/12.21-13.97mm según nuestros estudios de investigación de usuario. Se trata de 35 40pt con el factor de escala descrito anteriormente. 
 
-Dos medidores es la distancia óptima para mostrar texto.
+Para la interacción casi en 0.45m(45cm), ángulo de visión de la fuente legible mínimo y el alto son 0,4 °-0,5 ° / mediana empresa 3.14 – 3.9. 9-12 pt se trata con el factor de escala descrito anteriormente.
 
-Puesto que la realidad mixta implica profundidad tridimensional, no resulta siempre fácil comunicarse el tamaño de la fuente. Para mayor comodidad del usuario, dos medidores es la distancia óptima para colocar hologramas. Podemos usar esta distancia como punto de partida para buscar el tamaño de fuente óptimo.
+![NEAR y far intervalo interacción](images/typography-distance-1000px.jpg)
+*intervalo lejos y contenido en cerca de la interacción*
 
-Como puede esperar, los tamaños de tipo que se usan en un equipo o un dispositivo de tableta gráfica (normalmente entre 12 – 32pt) busque bastante pequeños a una distancia de 2 metros. Depende de las características de cada fuente, pero en general, el tamaño de tipo mínima recomendada para mejorar la legibilidad sin vibración trazo es aproximadamente 30pt. Si se supone que la aplicación para se puede usar en una distancia de más de cerca, podrían usar los tamaños más pequeños de tipo. **El tamaño de punto se basa en el Unity 3D de malla de texto y texto de la interfaz de usuario. Para las métricas detalladas y factores de escala, consulte [texto en Unity](text-in-unity.md).**
+### <a name="the-minimum-legible-font-size"></a>El tamaño mínimo de fuente legible
+| distancia | Ángulo de visión | Alto del texto | Tamaño de fuente ** |
+|---------|---------|---------|---------|
+| 45cm (distancia manipulación directa) | 0.4°-0.5° | 3.14 – 3.9 mm | 8.9–11.13pt |
+| 2m | 0.35°-0.4° | 12.21 – 13.97 mm | 34.63-39.58pt |
+
+
+### <a name="the-comfortably-legible-font-size"></a>El tamaño de fuente cómodamente legibles
+| distancia | Ángulo de visión | Alto del texto | Tamaño de fuente ** |
+|---------|---------|---------|---------|
+| 45cm (distancia manipulación directa) | 0.65°-0.8° | 5.1-6.3 mm | 14.47-17.8pt |
+| 2m | 0.6°-0.75° | 20,9-26,2 mm | 59.4-74.2pt |
+
+
+Segoe UI (la fuente predeterminada para Windows) funciona bien en la mayoría de los casos. Sin embargo, evite usar light o semi familias de fuentes de luz en tamaño pequeño, puesto que se vibran finos trazos verticales y reducirá la legibilidad. Las fuentes modernas con suficiente grosor del trazo funcionan bien. Por ejemplo, Helvetica y Arial buscar magníficos y son muy legibles en HoloLens con pesos normales o en negrita.
+
+** Para obtener más información acerca del cálculo de tamaño de texto en Unity, consulte la página [texto en Unity](text-in-unity.md)
+
+![Ángulo de visión](images/Text_In_Unity_ViewingAngle.jpg)
+*ver alto de distancia, angulares y texto*
 
 ## <a name="resources"></a>Recursos
 * [Fuentes de Segoe](http://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)
 * [Fuente de HoloLens](http://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)
 
 ![La fuente de HoloLens le ofrece los glifos de símbolos utilizados en Windows Mixed Reality](images/300px-hololensmdl2symbols.jpg)
-
-La fuente de HoloLens le ofrece los glifos de símbolos utilizados en Windows Mixed Reality.
+<br>*La fuente de HoloLens le ofrece los glifos de símbolos utilizados en Windows Mixed Reality.*
 
 ## <a name="see-also"></a>Vea también
-* [Texto en Unity](http://holodocsfuture/index.php?title=Text_in_Unity&action=edit&redlink=1)
-* [Color, claro y materiales](color,-light-and-materials.md)
+* [Texto en Unity](text-in-unity.md)
+* [Color, luz y materiales](color,-light-and-materials.md)
