@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: criterios de calidad de la aplicación, la realidad mixta mixto de aplicación de realidad
-ms.openlocfilehash: 756bc148f290aa3406c9ac8bb7003d463c62772c
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: dfa1390190fad8d84982171dfbcfa101b20501dc
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974747"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750318"
 ---
 # <a name="app-quality-criteria"></a>Criterios de calidad de la aplicación
 
@@ -30,11 +30,21 @@ Velocidad de fotogramas es el primer pilar de comodidad de holograma estabilidad
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -83,11 +93,21 @@ Hologramas estables aumentará la facilidad de uso y believability de la aplicac
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>❌</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -135,11 +155,21 @@ Desajustes de hologramas con objetos físicos (si está diseñado para colocarse
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>❌</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -189,11 +219,21 @@ Control de los desarrolladores de aplicaciones donde convergen los ojos de los u
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>❌</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -236,11 +276,21 @@ Independientemente de la zona de visualización de los problemas de comodidad, e
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -269,11 +319,21 @@ En Windows Mixed Reality, el motor de audio proporciona el componente de la expe
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -318,11 +378,21 @@ Experiencias de usuario bien diseñada pueden crear y mantener un contexto útil
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>❌</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -364,11 +434,21 @@ Hologramas deben reaccionar ante el usuario coloque en aproximadamente la misma 
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -417,11 +497,21 @@ Claridad de interacción de entrada es fundamental para la facilidad de uso de u
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -487,11 +577,21 @@ Un botón ha sido una metáfora utilizada para desencadenar un evento en el mund
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -532,11 +632,21 @@ Las aplicaciones que requieren datos de asignación espacial se basan en el disp
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>❌</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -577,11 +687,21 @@ En una aplicación de realidad mixta, el contenido puede estar fuera del campo d
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad
@@ -610,11 +730,21 @@ Un control de progreso proporciona información al usuario sobre el hecho de que
 ### <a name="device-impact"></a>Impacto de dispositivo
 
 <table>
-<tr>
-<th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td></td>
+    </tr>
 </table>
 
 ### <a name="quality-criteria"></a>Criterios de calidad

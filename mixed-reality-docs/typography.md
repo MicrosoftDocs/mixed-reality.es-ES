@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, estilo, fuente, tipografía, interfaz de usuario, experiencia de usuario
-ms.openlocfilehash: debf125a7f82ac79fe3ad776ba9c8c0b69396848
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 6371aa9b12b61d12acdaaae5f7730ff2ae9757f0
+ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692372"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66750335"
 ---
 # <a name="typography"></a>Tipografía
 
@@ -67,9 +67,9 @@ Para usar texto oscuro, debe usar un plato de back-brillante para que sea legibl
 
 ## <a name="recommended-font-size"></a>Tamaño de fuente recomendado
 
-Como puede esperar, los tamaños de tipo que se usan en un equipo o un dispositivo de tableta gráfica (normalmente entre 12 – 32pt) busque bastante pequeños a una distancia de 2 metros. Depende de las características de cada fuente, pero en general son los requisitos mínimos de visualización de ángulo y el alto de fuente para mejorar la legibilidad en torno a 0.35°-0.4°/12.21-13.97mm según nuestros estudios de investigación de usuario. Se trata de 35 40pt con el factor de escala descrito anteriormente. 
+Como puede esperar, los tamaños de tipo que se usan en un equipo o un dispositivo de tableta gráfica (normalmente entre 12 – 32pt) busque bastante pequeños a una distancia de 2 metros. Depende de las características de cada fuente, pero en general son los requisitos mínimos de visualización de ángulo y el alto de fuente para mejorar la legibilidad en torno a 0.35°-0.4°/12.21-13.97mm según nuestros estudios de investigación de usuario. Se trata de 35 40pt con el factor de escala que se introdujo en [texto en Unity](text-in-unity.md) página. 
 
-Para la interacción casi en 0.45m(45cm), ángulo de visión de la fuente legible mínimo y el alto son 0,4 °-0,5 ° / mediana empresa 3.14 – 3.9. 9-12 pt se trata con el factor de escala descrito anteriormente.
+Para la interacción casi en 0.45m(45cm), ángulo de visión de la fuente legible mínimo y el alto son 0,4 °-0,5 ° / mediana empresa 3.14 – 3.9. Se trata de 9-12 pt con el factor de escala que se introdujo en [texto en Unity](text-in-unity.md).
 
 ![NEAR y far intervalo interacción](images/typography-distance-1000px.jpg)
 *intervalo lejos y contenido en cerca de la interacción*
