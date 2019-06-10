@@ -6,19 +6,19 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, controles, diseño
-ms.openlocfilehash: 88ab0359d5083d43d5d6312ef1185f67ca0caa7d
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7c3bbd82ec909b5a2e3c81f122366be564934f4d
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813891"
 ---
 # <a name="object-collection"></a>Colección de objetos
 
-Colección de objetos es un control de diseño que le permite disponer de una matriz de objetos en una forma 3D predefinida. Admite cuatro estilos de superficie diferentes - **plano, cilindro, esfera** y **dispersión**. Puede ajustar el radio y el tamaño de los objetos y el espacio entre ellos. Colección de objetos es compatible con cualquier objeto desde Unity - 2D y 3D. En el  **[Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ObjectCollection.md)**, hemos creado el script de Unity y [escena ejemplo](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Scenes/ObjectCollectionExample.unity) que le ayudará a crear una colección de objetos.
+Colección de objetos es un control de diseño que le permite disponer de una matriz de objetos en una forma 3D predefinida. Admite diversos estilos de superficie - **plano, cilindro, esfera** y **radial**. Puede ajustar el radio y el tamaño de los objetos y el espacio entre ellos. Colección de objetos es compatible con cualquier objeto desde Unity - 2D y 3D. En el  **[Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , hemos creado el script de Unity y ejemplos que le ayudarán a crean una colección de objetos.
 
 ![Colección de objetos usado en la tabla periódico de la aplicación de elementos](images/640px-objectcollection-hero-640px.jpg)<br>
-*Colección de objetos usado en la tabla periódico de la aplicación de ejemplo de elementos*
+*Ejemplos del uso de la colección de objetos*
 
 ## <a name="object-collection-examples"></a>Ejemplos de la colección de objetos
 
@@ -41,8 +41,9 @@ También puede usar imágenes en 2D con la colección de objetos. Los ejemplos s
 ![Un ejemplo de imágenes en 2D con la colección de objetos](images/640px-layout-3dobjects-3.jpg)
 
 ![Un ejemplo de imágenes en 2D con la colección de objetos](images/640px-layout-2dimages.jpg)<br>
-*Ejemplos de imágenes en 2D con la colección de objetos*
+*Ejemplos del uso de colección de objetos con imágenes en 2D*
 
 ## <a name="see-also"></a>Vea también
-* [Secuencias de comandos y prefabricados para la colección de objetos en el Kit de herramientas de realidad mixta en GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/UX)
-* [Objeto interactuable](interactable-object.md)
+* [Secuencias de comandos y prefabricados para la colección de objetos en el Kit de herramientas de realidad mixta en GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+* [Objeto con el que se puede interactuar](interactable-object.md)
+* [Cuadro de límite](app-bar-and-bounding-box.md)

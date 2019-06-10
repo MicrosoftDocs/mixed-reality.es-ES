@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, la interfaz de usuario, experiencia de usuario
-ms.openlocfilehash: 9edddc7800f0d7334d1ceba97b9a06fd6d4580ac
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: d62d86c690233f351b6c156c66eba33cb2687ea6
+ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605356"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66813730"
 ---
 # <a name="displaying-progress"></a>Mostrar progreso
 
 Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga. Esto puede significar que el usuario no puede interactuar con la aplicación cuando el indicador de progreso está visible y también puede indicar el tiempo de espera aproximado, según el indicador que usa.
 
-![Ejemplo de anillo de progreso en HoloLens](images/640px-progress-hero.jpg)<br>
+![Ejemplo de anillo de progreso en HoloLens](images/HoloLens2_Loader.gif)<br>
 *Ejemplo de anillo de progreso en HoloLens*
 
 ## <a name="types-of-progress"></a>Tipos de progreso
@@ -47,7 +47,8 @@ Puede agregar a la personalidad de la aplicación y la identidad de marca person
 * Siempre es bueno proporcionar información de estado sobre lo que sucede al usuario. El recurso prefabricado de progreso proporciona varios estilos visuales, incluidos el progreso de tipo de anillo estándar de Windows para proporcionar el estado. También puede usar una malla personalizada con una animación si desea que el estilo de su progreso para alinearse con la marca de la aplicación.
 
 ## <a name="see-also"></a>Vea también
-* [Secuencias de comandos y prefabricados para el progreso en el Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/UX/Readme/README_ProgressExample.md)
-* [Objeto interactuable](interactable-object.md)
+* [Scripts de progreso y prefabricados en el Kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
+* [Cuadro de límite](app-bar-and-bounding-box.md)
+* [Objeto con el que se puede interactuar](interactable-object.md)
 * [Colección de objetos](object-collection.md)
-* [Vallas publicitarias y tag-along](billboarding-and-tag-along.md)
+* [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
