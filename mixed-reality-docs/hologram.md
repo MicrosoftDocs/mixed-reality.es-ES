@@ -6,12 +6,12 @@ ms.author: befolsom
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción
-ms.openlocfilehash: 5a6cc4df764b1f92f6bea2d7d6e6effe2164e4d6
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 714b08db23aa641252291aebe89fa3059c209a6f
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597837"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829782"
 ---
 # <a name="what-is-a-hologram"></a>¿Qué es un holograma?
 
@@ -24,11 +24,24 @@ HoloLens le permite crear **hologramas**, realizan los objetos de luz y sonido q
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td> Hologramas</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Hologramas</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="a-hologram-is-made-of-light-and-sound"></a>Se realiza un holograma de luz y sonido
@@ -86,4 +99,4 @@ Como desarrollador holográfico, tiene la posibilidad de interrumpir su creativi
 
 ## <a name="see-also"></a>Vea también
 * [Sonido espacial](spatial-sound.md)
-* [Color, claro y materiales](color,-light-and-materials.md)
+* [Color, luz y materiales](color,-light-and-materials.md)
