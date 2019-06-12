@@ -119,7 +119,7 @@
 ### [Objeto con el que se puede interactuar](interactable-object.md)
 ### [Colección de objetos](object-collection.md)
 ### [Indicación del progreso](progress.md)
-### [Barra de la aplicación y cuadro delimitador](app-bar-and-bounding-box.md)
+### [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
 ## Diseño para la página principal de la realidad mixta
 ### [Guía de diseño del iniciador de aplicaciones 3D](3d-app-launcher-design-guidance.md)
 ### [Creación de modelos 3D para su uso en el hogar](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)

@@ -8,7 +8,7 @@ ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción
 ms.openlocfilehash: 5a6cc4df764b1f92f6bea2d7d6e6effe2164e4d6
 ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59597837"
@@ -50,7 +50,7 @@ Cuando haya una ubicación concreta en la que desea un holograma, puede [colocar
 Algunos hologramas seguir al usuario en su lugar. Estos hologramas tag-along se posicionan en relación con el usuario, independientemente de donde guían. Incluso puede poner un holograma con usted durante un tiempo y, a continuación, colóquelo en la pared cuando esté en otra habitación.
 
 **Procedimientos recomendados**
-* Algunos escenarios pueden solicitar que hologramas permanecen fácilmente reconocible o visible a lo largo de la experiencia. Hay dos enfoques de alto nivel para este tipo de colocación. Vamos a llamar a **"bloqueada para mostrar"** y **"bloqueada cuerpo"**.
+* Algunos escenarios pueden solicitar que hologramas permanecen fácilmente reconocible o visible a lo largo de la experiencia. Hay dos enfoques de alto nivel para este tipo de colocación. Vamos a llamar a **"bloqueada para mostrar"** y **"bloqueada cuerpo"** .
    * Bloqueado para mostrar el contenido es por posición "bloqueado" a la pantalla del dispositivo. Esto es complicado para una serie de motivos, incluidos una sensación natural de "clingyness" que hace que muchos usuarios frustrados y desean "shake off". En general, muchos diseñadores han encontrado lo mejor evitar el contenido de pantalla de bloqueo.
    * El enfoque bloqueado por el cuerpo es mucho más condonable. Cuerpo de bloqueo es cuando un holograma está anclado al cuerpo del usuario o vector mirada, pero se coloca en el espacio 3d alrededor del usuario. Muchas experiencias han adoptado un comportamiento de bloqueo de cuerpo, donde el holograma "sigue" la mirada a los usuarios, lo que permite al usuario girar su cuerpo y desplazarse por el espacio sin perder el holograma. Incorpora un retraso ayuda a que el movimiento holograma resultar más natural. Por ejemplo, alguna interfaz de usuario de que el sistema operativo de Windows Holographic core usa una variación en el cuerpo de bloqueo que sigue a la mirada del usuario con un retraso suave, tipo elástico mientras el usuario activa su cabeza.
 * Coloque el holograma a una distancia de visualización cómoda normalmente aproximadamente un 1-2 metros del encabezado.

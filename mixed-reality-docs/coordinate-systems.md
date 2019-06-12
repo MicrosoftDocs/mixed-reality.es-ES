@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: del sistema de coordenadas, del sistema de coordenadas espacial, sólo orientación, sentado a escala, escala permanente, sala de escala, escala mundial, colocada de 360 grados, permanente, sala, mundo, escala, posición, orientación, inmóvil, adjunta, fase, delimitador, delimitador espacial, bloqueado por el mundo, mundo de bloqueo, bloqueada por el cuerpo, cuerpo de bloqueo, los límites indicados, persistencia, compartir, seguimiento de la pérdida, en la nube delimitador espacial
-ms.openlocfilehash: fc76a30895a85ab5ca8396540a82965cc35c494e
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605793"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829862"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
@@ -24,19 +24,48 @@ En su núcleo, mixto en lugar de las aplicaciones de realidad [hologramas](holog
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stationary-frame-of-reference">Marco estático de referencia</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#attached-frame-of-reference">Marco de referencia adjunta</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#stage-frame-of-reference">Fase de marco de referencia</a></td><td style="text-align: center;"> No se admite aún</td><td style="text-align: center;"> No se admite aún</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="coordinate-systems.md#spatial-anchors">Delimitadores espaciales</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
-</tr><tr>
-<td> <a href="spatial-mapping.md">Asignación espacial</a></td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="40%" />
+    <col width="20%" />
+    <col width="20%" />
+    <col width="20%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td><a href="coordinate-systems.md#stationary-frame-of-reference">Marco estático de referencia</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#attached-frame-of-reference">Marco de referencia adjunta</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#stage-frame-of-reference">Fase de marco de referencia</a></td>
+        <td>No se admite aún</td>
+        <td>No se admite aún</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="coordinate-systems.md#spatial-anchors">Delimitadores espaciales</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
+    <tr>
+        <td><a href="spatial-mapping.md">Asignación espacial</a></td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Escalas de experiencia de realidad mixta
@@ -194,9 +223,9 @@ A veces, una casa o en otro espacio puede tener dos áreas idénticas. Por ejemp
 
 ## <a name="see-also"></a>Vea también
 * [Presentación de 2017 GDC en sistemas de coordenadas espaciales y representación holográfica](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
-* [Sistemas de coordenadas en Unity](coordinate-systems-in-unity.md)
-* [Sistemas de coordenadas en DirectX](coordinate-systems-in-directx.md)
+* [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)
+* [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)
 * [Delimitadores espaciales](spatial-anchors.md)
-* [Compartir experiencias en realidad mixta](shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure delimitadores espaciales</a>
+* [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Caso práctico: examinar los huecos en la realidad](case-study-looking-through-holes-in-your-reality.md)

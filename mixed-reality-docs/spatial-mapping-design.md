@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Asignación de Windows Mixed Reality, diseño, espacial, HoloLens, surface reconstrucción, malla
-ms.openlocfilehash: d2ddcbf9458769a60cd3ed2871c5f3405c75f10c
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597887"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829959"
 ---
 # <a name="spatial-mapping-design"></a>Diseño de la asignación espacial
 
@@ -20,11 +20,21 @@ Un uso eficaz de asignación espacial dentro de HoloLens requiere una considerac
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td> Asignación espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Diseño de la asignación espacial</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="why-is-spatial-mapping-important"></a>¿Por qué es importante la asignación espacial?
@@ -196,6 +206,6 @@ Estos son algunos ejemplos de diferentes tipos de procesamiento de la malla que 
 * Es una buena idea para realizar pruebas con usuarios reales (y lo ideal es que no sean dirigidos), porque no pueden usar el HoloLens o la aplicación en exactamente del mismo modo que lo hace. De hecho, podría sorprenderle comportamiento cómo divergente popular, pueden ser el conocimiento y las suposiciones!
 
 ## <a name="see-also"></a>Vea también
-* [Visualización de análisis de sala](room-scan-visualization.md)
-* [Diseño espacial de sonido](spatial-sound-design.md)
+* [Visualización de la exploración de la sala](room-scan-visualization.md)
+* [Diseño de sonido espacial](spatial-sound-design.md)
 * [Persistencia en Unity](persistence-in-unity.md)

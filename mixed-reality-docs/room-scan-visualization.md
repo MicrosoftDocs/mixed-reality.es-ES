@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, patrones de aplicaciones, diseño, HoloLens, examen de sala, espacial de asignación, superficie reconstrucción, Live mesh
-ms.openlocfilehash: 8ffde9d476e25016f986321377dce8125ee3a596
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605693"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829914"
 ---
 # <a name="room-scan-visualization"></a>Visualización de análisis de sala
 
@@ -27,11 +27,21 @@ Tenga en cuenta que en todos estos casos se almacenan los datos reales recopilad
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td> Visualización de análisis de sala</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Visualización de análisis de sala</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 
@@ -83,6 +93,6 @@ Algunas aplicaciones pueden confiar en continúa analizando para actualizar los 
 Un buen caso de este método es uno donde se esperan hologramas para interactuar con el movimiento de objetos, por ejemplo, un automóvil holográfico que las unidades en el suelo pueden toparse con una puerta dependiendo de si es abierto o cerrado correctamente.
 
 ## <a name="see-also"></a>Vea también
-* [Diseño de la asignación espacial](spatial-mapping-design.md)
+* [Diseño de asignaciones espaciales](spatial-mapping-design.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
-* [Diseño espacial de sonido](spatial-sound-design.md)
+* [Diseño de sonido espacial](spatial-sound-design.md)

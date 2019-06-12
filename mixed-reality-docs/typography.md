@@ -3,15 +3,15 @@ title: Tipografía
 description: Texto es un elemento importante para la entrega de información en su experiencia de aplicación.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, estilo, fuente, tipografía, interfaz de usuario, experiencia de usuario
-ms.openlocfilehash: 6371aa9b12b61d12acdaaae5f7730ff2ae9757f0
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: cc8e25e9cd7ba41bed179328fe7198e935e65d76
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750335"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830015"
 ---
 # <a name="typography"></a>Tipografía
 

@@ -1,17 +1,17 @@
 ---
-title: Barra de la aplicación y el rectángulo de selección
+title: Barra de la aplicación y de cuadro de límite
 description: La barra de la aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestra en la parte inferior de los límites de un holograma.
 author: radicalad
 ms.author: adlinv
-ms.date: 03/21/2018
+ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barra, cuadro de límite de aplicaciones
-ms.openlocfilehash: ab472e1c988e6bdfb0a69d90e90280082b3db759
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: d289be31129324c6ff419b69dbce52bd8f62eb64
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813861"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829682"
 ---
 # <a name="bounding-box-and-app-bar"></a>Barra de la aplicación y de cuadro de límite
 ![Rectángulo de selección es la interfaz estándar para la manipulación del objeto en la realidad mixta.](images/640px-boundingbox-hero.jpg)<br>

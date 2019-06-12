@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: representación, holograma
-ms.openlocfilehash: 9d87af1b445bc6f730dd02bd7bd7f3aefe7f53db
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 5271e94521b99e76998c2cbb43475a5f3f847917
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605728"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829901"
 ---
 # <a name="rendering"></a>Representación
 
@@ -20,11 +20,24 @@ Representación holográfica permite a la aplicación dibujar un holograma en un
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"><a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td>nombre de artículo</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Representación</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="holographic-rendering"></a>Representación holográfica
@@ -84,5 +97,5 @@ Al representar médicos RM o volúmenes en 3D, de ingeniería [representación v
 
 
 ## <a name="see-also"></a>Vea también
-* [Estabilidad holograma](hologram-stability.md)
-* [Representación de DirectX](rendering-in-directx.md)
+* [Estabilidad de hologramas](hologram-stability.md)
+* [Representación en DirectX](rendering-in-directx.md)

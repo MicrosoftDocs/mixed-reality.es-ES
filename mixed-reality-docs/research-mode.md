@@ -6,12 +6,12 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: modo de investigación, cv, rs4, visión de equipo, la investigación, HoloLens
-ms.openlocfilehash: 5feda021bd6a1a90fd98c751b1cea768eed980af
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597508"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829934"
 ---
 # <a name="hololens-research-mode"></a>Modo de investigación de HoloLens
 
@@ -29,11 +29,21 @@ Modo de investigación es una nueva funcionalidad de HoloLens que proporciona ac
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td> Modo de investigación</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Modo de investigación</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="before-using-research-mode"></a>Antes de usar el modo de investigación
@@ -72,4 +82,4 @@ Consulte la [issue tracker de](https://github.com/Microsoft/HololensForCV/issues
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Repositorio de HoloLensForCV GitHub](https://github.com/Microsoft/HoloLensForCV)
-* [Uso de la Windows Device Portal](using-the-windows-device-portal.md)
+* [Uso del Portal de dispositivos Windows](using-the-windows-device-portal.md)

@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: sonido espacial, el sonido envolvente, audio 3d, audio de sonido, espacial 3d
-ms.openlocfilehash: ccb236a8b53e757ba632a1c7c6cb2d4f07735910
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600837"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829917"
 ---
 # <a name="spatial-sound"></a>Sonido espacial
 
@@ -26,13 +26,24 @@ Aunque hologramas solo pueden aparecer visualmente que señala la mirada del usu
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-
-<td> Sonido espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con auriculares)</td>
-
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Sonido espacial</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (con auriculares)</td>
+    </tr>
 </table>
 
 ## <a name="simulating-the-perceived-location-and-distance-of-sounds"></a>Simulación de la ubicación percibido y la distancia de sonidos
@@ -62,4 +73,4 @@ Motor de sonido espacial de Windows solo admite una velocidad de muestreo 48 k p
 * [MR 220 espacial](holograms-220.md)
 * [Sonido espacial en Unity](spatial-sound-in-unity.md)
 * [Sonido espacial en DirectX](spatial-sound-in-directx.md)
-* [Diseño espacial de sonido](spatial-sound-design.md)
+* [Diseño de sonido espacial](spatial-sound-design.md)

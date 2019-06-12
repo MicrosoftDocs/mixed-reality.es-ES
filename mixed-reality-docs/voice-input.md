@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: ggv, voz, cortana, voz, de entrada
-ms.openlocfilehash: 7fb5618c13ff1ed446241f744b598cfe2484ea45
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e21310b940e4a4c3019f61edea695b452e74ab62
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605712"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829949"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -26,11 +26,24 @@ Entrada de voz está basado el [mismo motor](https://msdn.microsoft.com/library/
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td> Entrada de voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con micrófono)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Entrada de voz</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (con micrófono)</td>
+    </tr>
 </table>
 
 ## <a name="the-select-command"></a>El comando "select"
@@ -114,4 +127,4 @@ La versión de Windows Mixed Reality Developer Edition 2017, la lógica de admin
 ## <a name="see-also"></a>Vea también
 * [Entrada de voz en DirectX](voice-input-in-directx.md)
 * [Entrada de voz en Unity](voice-input-in-unity.md)
-* [Entrada MR 212: Voz](holograms-212.md)
+* [MR Input 212: voz](holograms-212.md)

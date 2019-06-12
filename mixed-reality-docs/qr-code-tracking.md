@@ -6,12 +6,12 @@ ms.author: yoyoz
 ms.date: 11/06/2018
 ms.topic: article
 keywords: VR, lbe, entretenimiento basadas en la ubicación, vr arcade, código qr de arcade envolventes, qr,
-ms.openlocfilehash: e6588552c0cfa8bffa19ac2be5c247c5f73dc19c
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: 465056cf645a8b9dc9e0e2d3f9dacf887df67c52
+ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974899"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66829983"
 ---
 # <a name="qr-code-tracking"></a>Seguimiento del código QR
 
@@ -23,11 +23,21 @@ Seguimiento del código QR está implementado en el controlador Windows Mixed Re
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
-</tr><tr>
-<td> Seguimiento del código QR</td><td style="text-align: center;"></td><td style="text-align: center;">✔️</td>
-</tr>
+    <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+    </tr>
+     <tr>
+        <td>Seguimiento del código QR</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
 </table>
 
 ## <a name="enabling-and-disabling-qr-code-tracking-for-your-headset"></a>Seguimiento de los auriculares de código de activación y desactivación de QR
