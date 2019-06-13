@@ -1,27 +1,27 @@
 ---
 layout: LandingPage
 title: Diseño
-description: Esta guía es creada por Microsoft diseñadores, desarrolladores, administradores de programas y los investigadores, cuyo trabajo abarca holográficas dispositivos (por ejemplo, HoloLens) y envolventes (por ejemplo, los auriculares Acer y HP Windows Mixed Reality). Por lo tanto, considere la posibilidad de este trabajo como un conjunto de temas 'cómo diseñar para las pantallas de Windows montada head'.
+description: Microsoft ha creado esta guía para diseñadores, desarrolladores, administradores de programas e investigadores, cuyo trabajo abarca dispositivos holográficos (por ejemplo, HoloLens) y envolventes (por ejemplo, los cascos Windows Mixed Reality de Acer y HP). Por lo tanto, considera este trabajo como un conjunto de temas sobre "cómo diseñar para los cascos de realidad virtual de Windows".
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, diseño, interacción, estilo, Color, patrones de aplicaciones, controles, aplicaciones de ejemplo, el Kit de herramientas de realidad mixta, MRTK
+keywords: Windows Mixed Reality, design, Interaction, Style, Color, app patterns, controls, sample apps, Mixed Reality Toolkit, MRTK
 ms.openlocfilehash: 88de9008dbea6cce3b980bbbe3d0f45b7818e7c9
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66039212"
 ---
-# <a name="design-for-mixed-reality"></a>Diseño de realidad mixta
+# <a name="design-for-mixed-reality"></a>Diseño para realidad mixta
 
-![Diseño de realidad mixta](images/Bicycle-Leschi10.gif)
+![Diseño para realidad mixta](images/Bicycle-Leschi10.gif)
 
-Esta guía es creada por Microsoft diseñadores, desarrolladores, administradores de programas y los investigadores, cuyo trabajo abarca holográficas dispositivos (por ejemplo, HoloLens) y envolventes (por ejemplo, los auriculares Acer y HP Windows Mixed Reality). Por lo tanto, considere la posibilidad de este trabajo como un conjunto de temas 'cómo diseñar para las pantallas de Windows montada head'.
+Microsoft ha creado esta guía para diseñadores, desarrolladores, administradores de programas e investigadores, cuyo trabajo abarca dispositivos holográficos (por ejemplo, HoloLens) y envolventes (por ejemplo, los cascos Windows Mixed Reality de Acer y HP). Por lo tanto, considera este trabajo como un conjunto de temas sobre "cómo diseñar para los cascos de realidad virtual de Windows".
 
-## <a name="article-categories"></a>Categorías de artículo
+## <a name="article-categories"></a>Categorías de los artículos
 
 <ul class="panelContent cardsF">
     <li>
@@ -34,7 +34,7 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Empezar a trabajar con el diseño</h3>
+                        <h3>Introducción al diseño</h3>
                         <p>
                             <a href="mixed-reality.md">¿Qué es la realidad mixta?</a>
                         </p>
@@ -45,7 +45,7 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                             <a href="case-study-my-first-year-on-the-hololens-design-team.md">Mi primer año en el equipo de diseño</a>
                         </p>
                         <p>
-                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Expandir el proceso de diseño de realidad mixta</a>
+                            <a href="case-study-expanding-the-design-process-for-mixed-reality.md">Expansión del proceso de diseño para la realidad mixta</a>
                         </p>
                         <p>
                             <a href="case-study-the-pursuit-of-more-personal-computing.md">La búsqueda de informática más personal</a>
@@ -70,16 +70,16 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                             <a href="comfort.md">Comodidad</a>
                         </p>
             <p>
-                            <a href="interaction-fundamentals.md">Interacciones instinctual</a>
+                            <a href="interaction-fundamentals.md">Interacciones instintivas</a>
                         </p>
                         <p>
                             <a href="hands-and-tools.md">Las manos y los controladores de movimiento</a>
                         </p>
                         <p>
-                            <a href="hands-free.md">Hands-free</a>
+                            <a href="hands-free.md">Manos libres</a>
                         </p>
                          <p>
-                            <a href="gaze-and-commit.md">Mirada de encabezado y confirmación</a>
+                            <a href="gaze-and-commit.md">Mirada con la cabeza y confirmación</a>
                         </p>
                     </div>
                 </div>
@@ -98,10 +98,10 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                     <div class="cardText">
                         <h3>Estilo</h3>
                         <p>
-                            <a href="color,-light-and-materials.md">Color, claro y materiales</a>
+                            <a href="color,-light-and-materials.md">Color, luz y materiales</a>
                         </p>
                          <p>
-                            <a href="spatial-sound-design.md">Diseño espacial de sonido</a>
+                            <a href="spatial-sound-design.md">Diseño de sonido espacial</a>
                         </p>
                         <p>
                             <a href="typography.md">Tipografía</a>
@@ -129,13 +129,13 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                             <a href="types-of-mixed-reality-apps.md">Tipos de aplicaciones de realidad mixta</a>
                         </p>
                         <p>
-                            <a href="room-scan-visualization.md">Visualización de análisis de sala</a>
+                            <a href="room-scan-visualization.md">Visualización de examen de la sala</a>
                         </p>
                         <p>
                             <a href="cursors.md">Cursores</a>
                         </p>
                         <p>
-                            <a href="billboarding-and-tag-along.md">Vallas publicitarias y tag-along</a>
+                            <a href="billboarding-and-tag-along.md">Etiquetado y vista frontal continua</a>
                         </p>
                     </div>
                 </div>
@@ -163,10 +163,10 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
                             <a href="object-collection.md">Colección de objetos</a>
                         </p>
                         <p>
-                            <a href="progress.md">Mostrar progreso</a>
+                            <a href="progress.md">Visualización del progreso</a>
                         </p>
                         <p>
-                            <a href="app-bar-and-bounding-box.md">Barra de la aplicación y el rectángulo de selección</a>
+                            <a href="app-bar-and-bounding-box.md">Barra de la aplicación y rectángulo de selección</a>
                         </p>
                     </div>
                 </div>
@@ -176,9 +176,9 @@ Esta guía es creada por Microsoft diseñadores, desarrolladores, administradore
 </ul>
 
 
-## <a name="sample-apps"></a>Aplicaciones de muestra
+## <a name="sample-apps"></a>Aplicaciones de ejemplo
 
-Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equipo.
+Crea experiencias inmejorables a partir de ejemplos diseñados y creados por nuestro equipo.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
@@ -194,7 +194,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
                         </div>
                         <div class="cardText">
                             <h3>Tabla periódica de los elementos</h3>
-                            <p>Obtenga información sobre cómo diseñar una matriz de objetos en el espacio 3D con distintos tipos de superficie mediante una colección de objetos.</p>
+                            <p>Aprende cómo diseñar una matriz de objetos en el espacio 3D con distintos tipos de superficie mediante una colección de objetos.</p>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
                         </div>
                         <div class="cardText">
                             <h3>Módulo lunar</h3>
-                            <p>Aprenda a ampliar los gestos de base de HoloLens con seguimiento manos y la entrada del controlador de Xbox.</p>
+                            <p>Aprenda cómo ampliar los gestos de base de HoloLens con seguimiento a dos manos y la entrada del controlador de Xbox.</p>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
         </a>
     </li>
     <li>
-        <a href="galaxy-explorer.md" title="Explorador de Galaxy" data-linktype="absolute-path">
+        <a href="galaxy-explorer.md" title="Explorador de la galaxia" data-linktype="absolute-path">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -232,7 +232,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
                         </div>
                         <div class="cardText">
                             <h3>Explorador de la galaxia</h3>
-                            <p>El proyecto del explorador de Galaxy está listo. Compartir sus ideas con la Comunidad, elige una aplicación, vista un equipo de compilación y ahora se puede obtener el código fuente.</p>
+                            <p>El proyecto del explorador de la galaxia está preparado. Has compartido tus ideas con la comunidad, elegiste una aplicación, viste a un equipo compilarla y ahora puedes obtener el código fuente.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Kit de herramientas de realidad mixta - Unity" data-linktype="absolute-path">
+    <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" title="Mixed Reality Toolkit - Unity" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -258,7 +258,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Kit de herramientas de realidad mixta - Unity</h3>
+                        <h3>Mixed Reality Toolkit - Unity</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -267,7 +267,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
       </a>  
     </li>
     <li>
-    <a href="https://github.com/Microsoft/MixedRealityToolkit" title="Kit de herramientas de realidad mixta" data-linktype="absolute-path">
+    <a href="https://github.com/Microsoft/MixedRealityToolkit" title="Mixed Reality Toolkit" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -277,7 +277,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Kit de herramientas de realidad mixta</h3>
+                        <h3>Mixed Reality Toolkit</h3>
                         <p> </p>
                     </div>
                 </div>
@@ -330,7 +330,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
 
 <ul id="cardtypes-D" class="cardsD panelContent" style="display: flex; margin-top: 0px;">
     <li>
-    <a href="http://fluent.microsoft.com" title="Sistema Fluent Design" data-linktype="absolute-path">
+    <a href="http://fluent.microsoft.com" title="Fluent Design System" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -368,7 +368,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
       </a>  
     </li>   
         <li>
-    <a href="https://developer.microsoft.com/windows/apps/design" title="Diseño de aplicación universal Windows Platform (UWP)" data-linktype="absolute-path">
+    <a href="https://developer.microsoft.com/windows/apps/design" title="Diseño de aplicaciones para la Plataforma universal de Windows (UWP)" data-linktype="absolute-path">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -378,7 +378,7 @@ Crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equip
                         </div>
                     </div>                    
             <div class="cardText">
-                        <h3>Diseño de aplicación universal Windows Platform (UWP)</h3>
+                        <h3>Diseño de aplicaciones para la Plataforma universal de Windows (UWP)</h3>
                         <p> </p>
                     </div>
                 </div>

@@ -1,23 +1,23 @@
 ---
 layout: LandingPage
 title: Desarrollo
-description: Documentación para desarrolladores de realidad mixta para HoloLens e inmersivos.
+description: Documentación para desarrolladores de realidad mixta para HoloLens y cascos envolventes.
 author: grbury
 ms.author: grbury
 ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: La realidad mixta, desarrollar, desarrollo, HoloLens, unity, directx
+keywords: Mixed Reality, develop, development, HoloLens, unity, directx
 ms.openlocfilehash: 8833d2d692f2082c939bcfc3bb55e5d159e8c9ac
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "65974819"
 ---
 # <a name="development-launchpad"></a>Launchpad de desarrollo
 
-## <a name="article-categories"></a>Categorías de artículo
+## <a name="article-categories"></a>Categorías de los artículos
 
 
 <ul class="panelContent cardsF">
@@ -36,10 +36,10 @@ ms.locfileid: "65974819"
                             <a href="mixed-reality.md">¿Qué es la realidad mixta?</a>
                         </p>
                         <p>
-                            <a href="install-the-tools.md">Instalar las herramientas</a>
+                            <a href="install-the-tools.md">Instalación de las herramientas</a>
                         </p>
                         <p>
-                            <a href="mrlearning-base-ch1.md">MR de aprendizaje: HoloLens 2 y MRTK v2</a>
+                            <a href="mrlearning-base-ch1.md">Aprendizaje de MR: HoloLens 2 y MRTK v2</a>
                         </p>
                     </div>
                 </div>
@@ -58,13 +58,13 @@ ms.locfileid: "65974819"
                     <div class="cardText">
                         <h3>Dispositivos</h3>
                           <p>
-                            <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
+                            <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
                         </p>
                         <p>
-                            <a href="hololens-hardware-details.md">HoloLens (gen 1)</a>
+                            <a href="hololens-hardware-details.md">HoloLens (1ª generación)</a>
                         </p>
                         <p>
-                            <a href="immersive-headset-hardware-details.md">Inmersivos</a>
+                            <a href="immersive-headset-hardware-details.md">Cascos envolventes</a>
                         </p>
                     </div>
                 </div>
@@ -83,10 +83,10 @@ ms.locfileid: "65974819"
                     <div class="cardText">
                         <h3>Servicios</h3>
                         <p>
-                            <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure delimitadores espaciales</a>
+                            <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
                         </p>
                         <p>
-                            <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank">Speech Services</a>
+                            <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank">Servicios de voz</a>
                         </p>
                         <p>
                             <a href="https://docs.microsoft.com/azure/cognitive-services/computer-vision/" target="_blank">Servicios de visión</a>
@@ -114,7 +114,7 @@ ms.locfileid: "65974819"
                             <a href="directx-development-overview.md">Motor personalizado (DirectX)</a>
                         </p>
                         <p>
-¡Unreal - próximamente!
+Unreal - ¡próximamente!
                         </p>                
                     </div>
                 </div>
@@ -133,13 +133,13 @@ ms.locfileid: "65974819"
                     <div class="cardText">
                         <h3>Guías de migración</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Actualizar aplicaciones en HoloLens 2<br>de HoloLens (gen 1)</a>
+                            <a href="mrtk-porting-guide.md">Actualización de aplicaciones en HoloLens 2<br>de HoloLens (1ª generación)</a>
                         </p>
                         <p>
-                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Kit de herramientas de realidad mixta (MRTK)<br>Guía de migración de API</a>
+                            <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Mixed Reality Toolkit (MRTK)<br>Guía de migración de API</a>
                         </p>
                         <p>
-                            <a href="porting-guides.md">Aplicaciones envolventes auriculares</a>
+                            <a href="porting-guides.md">Aplicaciones de cascos envolventes</a>
                         </p>
                     </div>
                 </div>
@@ -156,15 +156,15 @@ ms.locfileid: "65974819"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Fundamentos de desarrollo</h3>
+                        <h3>Conceptos básicos de desarrollo</h3>
                         <p>
-                            <a href="Interaction-fundamentals.md">Interacciones instinctual</a>
+                            <a href="Interaction-fundamentals.md">Interacciones instintivas</a>
                         </p>
                         <p>
                             <a href="rendering.md">Representación holográfica</a>
                         </p>
                          <p>
-                            <a href="testing-your-app-on-hololens.md">Las pruebas</a>
+                            <a href="testing-your-app-on-hololens.md">Pruebas</a>
                         </p>                    
                     </div>
                 </div>
@@ -173,25 +173,25 @@ ms.locfileid: "65974819"
     </li>    
 </ul>
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
-Aplicaciones de realidad mixta se crean con el [Universal Windows Platform](https://dev.windows.com/getstarted). Todas las aplicaciones de realidad mixta son aplicaciones de Windows Universal, y se pueden realizar todas las aplicaciones de Windows Universal para ejecutarse en dispositivos Windows Mixed Reality. Con Windows 10 y estar familiarizado con las herramientas de software intermedio como Unity, puede empezar a compilar experiencias de realidad mixta hoy.
+Las aplicaciones de realidad mixta se compilan con la [plataforma universal de Windows](https://dev.windows.com/getstarted). Todas las aplicaciones de realidad mixta son aplicaciones universales de Windows y se pueden ejecutar en dispositivos de Windows Mixed Reality. Con Windows 10 y si estás familiarizado con las herramientas de middleware como Unity, puedes empezar a crear experiencias de realidad mixta hoy.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/A784OdX8xzI]
 
-## <a name="basics-of-mixed-reality-development"></a>Aspectos básicos del desarrollo de realidad mixta
+## <a name="basics-of-mixed-reality-development"></a>Conceptos básicos del desarrollo de realidad mixta
 
-[La realidad mixta](mixed-reality.md) experiencias están habilitadas por nuevas características de Windows para ver una descripción del entorno. Estas permiten a los desarrolladores colocar un [holograma](hologram.md) en el mundo real, y permitir a los usuarios desplazarse por los mundos digitales recorriendo sobre literalmente. 
+Las experiencias de [realidad mixta](mixed-reality.md) están habilitadas por nuevas características de Windows para el reconocimiento del entorno. Estas permiten a los desarrolladores colocar un [holograma](hologram.md) en el mundo real y a los usuarios desplazarse por los mundos digitales literalmente caminando. 
 
-Estos son los bloques de creación fundamentales para el desarrollo de realidad mixta:
+Estos son los bloques de compilación principales para el desarrollo de la realidad mixta:
 
 <table>
 <tr>
-<th style="width:175px">Entrada</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
+<th style="width:175px">Entrada</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (1ª generación)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td> <a href="gaze.md">Mirada HEAD</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="gaze.md">Mirada con la cabeza</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="gaze.md">Mirada con ojo</a></td><td></td><td style="text-align: center;">✔️</td><td></td>
 </tr><tr>
@@ -201,13 +201,13 @@ Estos son los bloques de creación fundamentales para el desarrollo de realidad 
 </tr><tr>
 <td> <a href="voice-input.md">Voz</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<td> <a href="hardware-accessories.md">Gamepad</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="hardware-accessories.md">Controlador para juegos</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="motion-controllers.md">Controladores de movimiento</a></td><td></td><td></td><td style="text-align: center;">✔️</td>
 </tr><tr>
-<th style="width:175px">Percepción y las características espaciales</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (gen 1)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
+<th style="width:175px">Percepción y características espaciales</th><th style="width:125px; text-align: center;"><a href="hololens-hardware-details.md">HoloLens (1ª generación)</a></th><th style="width:125px; text-align: center;">HoloLens 2</a></th><th style="width:125px; text-align: center;"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td> <a href="coordinate-systems.md">Coordenadas universales</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
+<td> <a href="coordinate-systems.md">Coordenadas del mundo</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
 <td> <a href="spatial-sound.md">Sonido espacial</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td>
 </tr><tr>
@@ -217,22 +217,22 @@ Estos son los bloques de creación fundamentales para el desarrollo de realidad 
 
 
 
-El modelo de interacción básica para [HoloLens](hololens-hardware-details.md) es [que mirar](gaze.md), [gesto](gestures.md), y [voz](voice-input.md), que a veces se conoce como *GGV* . [Inmersivos Windows Mixed Reality](immersive-headset-hardware-details.md) también use mirada y voz, pero el intercambio [motion controladores](motion-controllers.md) para los gestos.
+El modelo de interacción básica para [HoloLens](hololens-hardware-details.md) es [mirada](gaze.md), [gesto](gestures.md) y [voz](voice-input.md), que a veces se conoce como *GGV*. Los [cascos envolventes de Windows Mixed Reality](immersive-headset-hardware-details.md) también usan la mirada y la voz, pero utilizan [controladores de movimiento](motion-controllers.md) en lugar de gestos.
 
-Todos mixto realidad la ventaja de los dispositivos en el ecosistema de entrada disponible para Windows, incluido el mouse, teclado, configuración de los controles y mucho más. Con HoloLens, [accesorios de hardware](hardware-accessories.md) están conectados a través de Bluetooth. Con inmersivos, Accesorios conexión con el equipo host a través de Bluetooth, USB y otros protocolos admitidos.
+Todos los dispositivos de realidad mixta aprovechan el ecosistema de entradas disponible para Windows, incluido el mouse, el teclado, controladores para juegos, etc. Con HoloLens, los [accesorios de hardware](hardware-accessories.md) se conectan a través de Bluetooth. Con cascos envolventes, los accesorios se conectan al equipo host a través de Bluetooth, USB y otros protocolos admitidos.
 
-Las características de comprensión del entorno como [coordenadas](coordinate-systems.md), [sonido espacial](spatial-sound.md), y [asignación espacial](spatial-mapping.md) proporcionan las capacidades necesarias para combinar la realidad. Asignación espacial es exclusivo de HoloLens y permite hologramas interactuar con el usuario y el mundo físico en torno a ellas. Sistemas de coordenadas permiten el desplazamiento del usuario influir en movimiento en el mundo digital.
+Las características de reconocimiento del entorno como [coordenadas](coordinate-systems.md), [sonido espacial](spatial-sound.md) y [asignación espacial](spatial-mapping.md) proporcionan las funcionalidades necesarias para combinar la realidad. La asignación espacial es exclusiva de HoloLens, y permite que los hologramas interactúen con el usuario y el mundo físico en torno a él. Los sistemas de coordenadas permiten que el movimiento del usuario afecte al movimiento en el mundo digital.
 
-Hologramas se realizan de la luz y sonido, que se basan en [representación](rendering.md). Descripción de la experiencia de selección de ubicación y de persistencia, como se muestra en el [Windows Mixed Reality doméstica](navigating-the-windows-mixed-reality-home.md) (a veces denominado el "shell") es una excelente manera de corriente electrostática en la experiencia del usuario.
+Los hologramas están hechos de luz y sonido, y se basan en la [representación](rendering.md). Entender la experiencia de selección de ubicación y de persistencia, tal como se muestra en la [página principal de Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md) (a veces denominada el "shell"), es una excelente manera de afianzarte en la experiencia del usuario.
 
 ## <a name="tools-for-developing-for-mixed-reality"></a>Herramientas para desarrollar la realidad mixta
 
-Las herramientas que utilice dependerá de la [estilo de aplicación](app-views.md) desea compilar.
-* [Aplicaciones con una vista 2D](building-2d-apps.md) Aproveche las herramientas para compilar aplicaciones de la plataforma Universal de Windows adecuado para entornos como tabletas, PC y Windows Phone. Estas aplicaciones tienen experiencia como 2D proyecciones que se colocan en el inicio de Windows Mixed Reality y pueden funcionar en varios tipos de dispositivo (incluyendo phone y PC).
-* Las aplicaciones envolventes y holográficas necesitan herramientas diseñadas para aprovechar las ventajas de las API de Windows Mixed Reality. Nos [recomienda usar Unity](unity-development-overview.md) para compilar aplicaciones de realidad mixta. Los desarrolladores interesados en crear su propio motor pueden [utilizar DirectX y otras API de Windows](directx-development-overview.md).
+Las herramientas que utilices dependerán del [estilo de aplicación](app-views.md) que desees compilar.
+* [Las aplicaciones con una vista 2D](building-2d-apps.md) aprovechan las herramientas para compilar aplicaciones de la plataforma universal de Windows adecuadas para entornos como Windows Phone, PC y tabletas. Estas aplicaciones se experimentan como proyecciones 2D que se colocan en la página principal de Windows Mixed Reality y pueden funcionar en varios tipos de dispositivo (incluidos el teléfono y el PC).
+* Las aplicaciones envolventes y holográficas necesitan herramientas diseñadas para aprovechar las ventajas de las API de Windows Mixed Reality. [Recomendamos el uso de Unity](unity-development-overview.md) para compilar aplicaciones de realidad mixta. Los desarrolladores interesados en compilar su propio motor pueden [utilizar DirectX y otras API de Windows](directx-development-overview.md).
 
-Independientemente del tipo de aplicación que está compilando, estas herramientas facilitarán su experiencia de desarrollo de aplicaciones:
-* [Visual Studio y el SDK de Windows](using-visual-studio.md)
+Independientemente del tipo de aplicación que estés compilando, estas herramientas facilitarán tu experiencia en el desarrollo de aplicaciones:
+* [Visual Studio y Windows SDK](using-visual-studio.md)
 * [Portal de dispositivos Windows](using-the-windows-device-portal.md)
 * [Emulador de HoloLens](using-the-hololens-emulator.md)
 * [Simulador de Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)
