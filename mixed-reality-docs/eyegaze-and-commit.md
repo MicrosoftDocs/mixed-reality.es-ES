@@ -1,43 +1,43 @@
 ---
-title: Mirada y confirmación
-description: Información general sobre el modelo de entrada de mirada y confirmación
+title: Mirada con los ojos y confirmación
+description: Introducción al modelo de entrada de mirada con los ojos y confirmación
 author: sostel
 ms.author: sostel
 ms.date: 05/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Seguimiento de los ojos, mixto en realidad, entrada, ojo mirada, destinadas a ojos, HoloLens 2, selección basada en el efecto de ojos
+keywords: Seguimiento de los ojos, Mixed Reality, Entrada, Mirada con los ojos, Enfoque con los ojos, HoloLens 2, Selección basada en la mirada con los ojos
 ms.openlocfilehash: 9cc27f24e1275223f33becd1ff0ec6bdf5b43a57
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66455091"
 ---
-# <a name="eye-gaze-and-commit"></a>Mirada y confirmación
-Con el 2 de HoloLens, tenemos la gran oportunidad para realizar mirada & confirmación más rápido y más cómodo con efecto de ojos mirada en lugar de mirada principal. Esto permite ampliar el común [mirada de encabezado y confirmación](gaze-and-commit.md) modelo de interacción: 
-1. Solo hay que buscar en un destino y 
-2. Para confirmar su intención de seleccionar el destino, realice una base de datos secundaria explícita de entrada como de r:  
-   - Gesto (por ejemplo, un aire pulse)
-   - Presionar el botón (por ejemplo, en un teclado Bluetooth o clicker)
-   - Comando de voz (p. ej., "Select")
-   - Reposo (es decir, el usuario simplemente mantiene mirando el destino para seleccionar)
+# <a name="eye-gaze-and-commit"></a>Mirada con los ojos y confirmación
+Con HoloLens 2 se nos presenta la gran oportunidad de mirar y confirmar de manera más rápida y cómoda mediante la mirada con los ojos en lugar de la mirada con la cabeza. Esto permite ampliar el modelo de interacción habitual de [mirada con la cabeza y confirmación](gaze-and-commit.md): 
+1. Solo tienes que buscar el destino y 
+2. Para confirmar tu intención de seleccionar el destino, realiza una entrada explícita secundaria como:  
+   - Un gesto con la mano (por ejemplo, pulsar en el aire)
+   - Presionar un botón (por ejemplo, en un teclado Bluetooth o un dispositivo de clic)
+   - Un comando de voz (por ejemplo, "Seleccionar")
+   - Manteniendo la mirada (es decir, el usuario simplemente se mantiene mirando al destino para seleccionarlo)
 
-Sin embargo, la mirada ojo se comporta de forma muy distinta a principal mirada en ciertos aspectos y, por tanto, incluye una serie de desafíos únicos. En el [directrices de diseño que mirar ojo](eye-tracking.md), se resumen las ventajas generales y los desafíos a tener en cuenta al usar ocular seguimiento como una entrada en la aplicación holográfica. En esta sección, nos centramos en las consideraciones de diseño específicas para mirada & confirmación.
-En primer lugar, los ojos mover increíblemente rápido y, por tanto, son una excelentes destino rápidamente en la vista. Esto hace que ojo que mirar ideal para acciones de mirada y confirmación rápidas, especialmente cuando se combina con confirmaciones rápidas como un botón o pulsar en el aire press.
+No obstante, la mirada con los ojos se comporta de manera muy diferente a la mirada con la cabeza en determinados aspectos y, por tanto, presenta una serie de desafíos específicos. En las [Directrices para el diseño de mirada con los ojos](eye-tracking.md), se resumen las ventajas generales y los desafíos a tener en cuenta al usar el seguimiento de los ojos como modelo de entrada en la aplicación holográfica. En esta sección, vamos a centrarnos en las consideraciones de diseño específicas de la función de mirada con los ojos y confirmación.
+En primer lugar, los ojos se mueven a una velocidad increíblemente rápida y, por tanto, son estupendos para fijar rápidamente un destino en la vista. Esto hace que la mirada con los ojos resulte idónea para realizar acciones de mirada y confirmación especialmente cuando se combina con confirmaciones rápidas mediante una pulsación en el aire o presión de un botón.
    
-A continuación, nos referiremos a instrucciones de diseño cuando utiliza ojo que mirar para este tipo de interacción y se describen las diferencias entre head y ocular mirada que debe tener en cuenta.
+A continuación, se abordarán las directrices de diseño a la hora de emplear la mirada con los ojos para este tipo de interacción y se analizarán las diferencias que debe tener en cuenta entre la mirada con los ojos y la mirada con la cabeza.
 
-## <a name="design-guidelines-for-eye-gaze-and-commit"></a>Instrucciones para la confirmación y la mirada de diseño
+## <a name="design-guidelines-for-eye-gaze-and-commit"></a>Directrices de diseño para la mirada con los ojos y la confirmación
 
-**No mostrar un cursor**: Aunque es casi imposible interactuar sin un cursor cuando se usa el encabezado que mirar, el cursor se vuelve rápidamente que distraen y molestos cuando se usa la mirada de ojos. En lugar de depender de un cursor para informar al usuario detecta la actualmente buscar si rastreo ocular funciona y tiene correctamente en el destino, use sutiles visual resalta (más detalles a continuación).
+**No aparece ningún cursor**: Aunque es casi imposible interactuar sin un cursor cuando se usa la mirada con la cabeza, este resulta molesto cuando se usa la mirada con los ojos. En lugar de confiar en un cursor para avisar al usuario de si el seguimiento con la mirada funciona y ha detectado correctamente el destino al que se está mirando actualmente, usa otros resaltes visuales más sutiles (más información a continuación).
 
-**Para enviar comentarios al mantener el mouse combinada sutiles se esfuerzan por**: Lo que parece excelentes comentarios visuales para mirada principal puede dar lugar a experiencias terribles abrumadores mediante mirada ojos. Recuerde que los ojos son extremadamente rápidos, darting rápidamente entre los puntos en el campo de la vista. Cambios de resaltado repentino rápido (activar/desactivar) pueden dar lugar flickery comentarios cuando echando un vistazo. Por lo tanto, al proporcionar comentarios al mantener el mouse, se recomienda usar un área resaltada de mezcla sin problemas (y blended horizontal comparada ausente). Esto significa que al principio apenas observaría los comentarios en un destino. En el transcurso de 500-1000 ms el resaltado aumentaría en intensidad. Mientras que los usuarios inexpertos podrían seguir buscando en el destino para asegurarse de que el sistema ha determinado correctamente el destino centrado, usuarios expertos rápidamente podrían observación & se confirman sin esperar a que los comentarios son en su máxima intensidad. Además, también se recomienda usar una mezcla de salida cuando se atenúa, los comentarios al mantener el mouse. Investigación ha demostrado que los cambios rápidos de movimiento y el contraste son muy notables en su visión periférico (por lo tanto, el área de campo visual donde no desea). El fundido de salida no tiene que ser tan lenta como en blend. Esto solo es importante cuando disponga de contraste alto o cambios de color para el resaltado. Si los comentarios al mantener el mouse eran bastante sutil para empezar, probablemente no notará ninguna diferencia.
+**Busca señales más sutiles de la información sobre el gesto de mantener pulsado**: La información visual que puede parecer estupenda para la mirada con la cabeza puede resultar en experiencias muy negativas en la mirada con los ojos. Recuerda que los ojos son extremadamente rápidos y capaces de fijar la mirada rápidamente en muchos puntos del campo de visión. Los cambios súbitos y rápidos de resaltado (activación o desactivación) pueden provocar un parpadeo al mirar alrededor. Por lo tanto, para proporcionar información sobre el gesto de mantener pulsado, es recomendable utilizar un resaltado con fundido de entrada suave (o fundido de salida al dejar de mirar). Esto significa que al principio apenas te darías cuenta de la información al mirar a un destino. En el transcurso de 500-1000 ms el resaltado aumentaría en intensidad. Aunque puede que los usuarios inexpertos mantengan la mirada en el destino para asegurarse de que el sistema ha determinado correctamente el destino enfocado, los usuarios expertos miran y confirman rápidamente sin necesidad de esperar a que los comentarios alcancen su mayor intensidad. Además, también se recomienda usar un fundido de salida que atenúe la información al mantener el puntero. La investigación ha demostrado que los movimientos rápidos y los cambios de contraste son muy notorios en la visión periférica (es decir, el área del campo visual a la que no estás mirando directamente). El fundido de salida no tiene que ser tan lento como el de entrada. Esto solo es importante si dispones de cambios rápidos de contraste o color en el resaltado. Si la información sobre el gesto de mantener pulsado es lo suficientemente sutil para empezar, posiblemente no observarás ninguna diferencia.
 
-**Busque señales mirada y confirmar la sincronización**: La sincronización de señales de entrada puede ser menor de un desafío para simple mirada & confirmación, por lo tanto, no se preocupe! Es algo a tener en cuenta en caso de que desea usar acciones de confirmación más complicadas aunque puede implicar a los comandos de voz larga o gestos de mano complicada. Imagine que mire diana y emitido un comando de voz largo. Tenga en cuenta el tiempo que necesita para hablar y el momento en que el sistema necesita para detectar lo que dicho, su mirada ojo normalmente larga cambió a algún nuevo destino de la escena. Por lo tanto, puede hacer que los usuarios tener en cuenta que es posible que deba seguir buscando en un destino hasta que se le ha reconocido el comando o controlar la entrada en una forma de determinar desde el principio del comando y lo que el usuario había estado viendo entonces.
+**Busca señales de sincronización de la mirada y confirmación**: La sincronización de las señales de entrada es un desafío menor para la mirada con los ojos y la confirmación sencillas, así que, no te preocupes. Es algo a tener en cuenta en caso de que desees usar acciones de confirmación más complicadas aunque puede que eso implique comandos de voz largos o complicados gestos con las manos. Imagina que miras a un destino y dices un comando de voz largo. Teniendo en cuenta el tiempo necesario para pronunciar el comando y el tiempo que tarda el sistema en detectar lo que has dicho, la mirada con los ojos se habrá dirigido a un nuevo destino del escenario. Por tanto, debes explicar a los usuarios que deben fijar la mirada en un destino hasta que se haya reconocido el comando o controlar la entrada de forma que se determine el comienzo del comando y lo que el usuario había estado mirando en ese momento.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Gestos de mano](gestures.md)
+* [Gestos con la mano](gestures.md)
 * [Entrada de voz](voice-design.md)
 * [Controladores de movimiento](motion-controllers.md)
