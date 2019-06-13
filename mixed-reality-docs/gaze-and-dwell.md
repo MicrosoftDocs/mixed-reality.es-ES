@@ -1,26 +1,26 @@
 ---
-title: Head mirada y permanencia
-description: Información general sobre el modelo de entrada de mirada de head y permanencia
+title: Mirada con la cabeza y permanencia
+description: Introducción al modelo de entrada de mirada con la cabeza y permanencia
 author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Diseñar la realidad, mirada, permanencia, interacción, mixta
-ms.openlocfilehash: ae4688da791fd3afb7be66069049bbe51102dd7e
-ms.sourcegitcommit: 8d6e5723283c03f984f1fafef81afa5aab5d04bc
-ms.translationtype: MT
+keywords: Mixed Reality, gaze, dwell, interaction, design
+ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
+ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039199"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66516013"
 ---
-# <a name="head-gaze-and-dwell"></a>Head mirada y permanencia
+# <a name="head-gaze-and-dwell"></a>Mirada con la cabeza y permanencia
 
-Cuando las manos están ocupadas con herramientas y los elementos, gestos pueden ser tedioso o imposible. Comandos de voz, como los gestos, pueden ser poco confiables en determinados contextos, por ejemplo en condiciones excesivamente altos. Además, uso de voz a los equipos de control no es universalmente comunes, pero sin duda está ganando vapor! Head mirada y permanencia ofrece el mecanismo más familiar y fácil de patrón para trabajar en pantalla de datos y manos libres en HoloLens. Además, head-mirada y permanencia es 100% confiable independientemente de las restricciones de interferencias ni silencio de ruido en el entorno operativo.
+Si tienes las manos ocupadas con herramientas y piezas, hacer gestos puede ser engorroso o imposible. Los comandos de voz, al igual que los gestos, pueden ser poco fiables en determinados contextos, por ejemplo en condiciones de ruido excesivamente alto. Además, aún no se ha generalizado el uso de la voz para controlar equipos, aunque claramente está ganando popularidad. El mecanismo de mirada con la cabeza y permanencia es el más conocido y fácil de dominar para trabajar con visualización frontal y manos libres en HoloLens. Además, el modelo de mirada con la cabeza y permanencia es completamente fiable, independientemente de las interferencias de ruido o las restricciones de silencio del entorno operativo.
 
 ## <a name="scenarios"></a>Escenarios
 
-Head mirada y permanencia resulta muy útil en escenarios donde las manos de una persona están ocupadas con otras tareas y voz no es 100% fiable o disponibles debido a restricciones del entorno o sociales. Un buen ejemplo es una persona con un HoloLens para superponer la información de referencia durante la reparación de un motor de automóvil. Las manos están ocupadas con herramientas o que admite su cuerpo, según inclínese hacia el compartimiento del motor. El espacio de garaje es alto, con la constante trabajar intensamente y zumbidos de herramientas, dificultando los comandos de voz. Head mirada y permanencia permite a la persona en el HoloLens para navegar con confianza su material de referencia sin interupting su flujo de trabajo. 
+El modelo de mirada con la cabeza y permanencia destaca en escenarios en los que una persona tiene las manos ocupadas con otras tareas y el control por voz no está disponible o no resulta totalmente fiable debido a restricciones ambientales o sociales. Un buen ejemplo sería el de una persona que lleva un dispositivo HoloLens para ver superpuesta información de referencia mientras repara el motor de un automóvil. Puede tener ocupadas las manos con herramientas o usarlas para sostenerse al reclinarse sobre el compartimento del motor. En la zona del garaje hay mucho ruido, con los constantes golpes y zumbidos de las herramientas, lo que dificulta el uso de comandos de voz. El modelo de mirada con la cabeza y permanencia permite que la persona que lleva el dispositivo HoloLens se desplace sin problema por el material de referencia sin interrumpir su flujo de trabajo. 
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -33,12 +33,12 @@ Head mirada y permanencia resulta muy útil en escenarios donde las manos de una
     </colgroup>
     <tr>
         <td><strong>Modelo de entrada</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª generación)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
-        <td>Head mirada y permanencia</td>
+        <td>Mirada con la cabeza y permanencia</td>
         <td>✔️ Recomendado</td>
         <td>✔️ Recomendado</td>
         <td>✔️ Recomendado</td>
@@ -47,83 +47,83 @@ Head mirada y permanencia resulta muy útil en escenarios donde las manos de una
 
 ## <a name="goals"></a>Objetivos
 
-Proporcionan un mecanismo para interacciones totalmente en manos libres, sin utilizar la voz.
+Proporcionar un mecanismo para interacciones totalmente con manos libres, sin utilizar la voz.
 
 ## <a name="design-principles"></a>Principios de diseño
 
-1. Evitar "Observación como un arma"
+1. Evitar miradas a discreción
 
-    Head mirada y permanencia requiere comentarios visuales para ser intuitivo, pero pueden provocar la ansiedad demasiada comentarios. Los comentarios deben ayudan a los usuarios saber lo tiene como destino, pero la selección automática no lo contra su intención. Leer texto, iconos y etiquetas, requiere una consideración adicional para proporcionar un espacio de la persona para absorber la información antes de seleccionar.
+    El modelo de mirada con la cabeza y permanencia requiere información visual para ser intuitivo, pero demasiada información puede resultar estresante. La información debe ayudar al usuario a saber qué está mirando, pero no seleccionar ese elemento automáticamente contra la voluntad del usuario. La lectura de texto, iconos y etiquetas requiere una consideración especial para dar tiempo al usuario a absorber la información antes de seleccionar.
     
-2. Buscar la velocidad de Rubiales
+2. Buscar una velocidad adecuada
     
-    Interacciones de permanencia pueden tener temporizadores diferentes según el impacto de navegación: funciones utilizadas con más frecuencia generalmente se beneficiarán de tiempos más rápidos de relleno, mientras que las funciones más daños consecuenciales pueden beneficiarse de tiempos más largos de relleno. Cuando se usa un efecto de relleno para mostrar estos temporizadores, curvas de animación del color de relleno positivamente pueden influir en una sensación de tiempos más rápidos de relleno. Deben tener en cuenta consideraciones para habilitar la Decisión del usuario de fast/medium/lento invalidaciones de velocidad de relleno.
+    Las interacciones de permanencia pueden tener distintos temporizadores, en función del impacto de la navegación. Para las funciones frecuentes, suele ser mejor un tiempo de relleno más rápido, mientras que para las funciones relevantes suele resultar mejor un tiempo de relleno más prolongado. Si se usa un efecto de relleno para mostrar estos temporizadores, las curvas de animación del color de relleno pueden influir positivamente para transmitir una sensación de tiempo de relleno más rápido. Debe prestarse especial atención para permitir al usuario decidir si cambiar a velocidad de relleno rápida, media o lenta.
     
-3. Diga definitivamente a efecto yo-yo
+3. Evitar el efecto yo-yo
 
-    El efecto de yo-yo es un patrón incómodo de movimiento que puede surgir cuando la colocación de controles de contenido y head mirada y permanencia fuerza a personas que revisen constantemente y reducir verticalmente varias veces. Por ejemplo, una barra de navegación de la lista con el botón principal mirada y permanencia en la parte inferior provoca un bucle de - vistazo abajo profundizaré, buscar en los resultados, busque hacia abajo para profundizaré, etcetera. Este patrón resultante no resulta cómodo y debe evitarse mediante la colocación de controles de navegación en una ubicación centralizada que requiere menos atrás y adelante. Selección de ubicación de los botones de permanencia en relación con sus efectos se vuelve importante para su comodidad.
+    El efecto yo-yo es un patrón incómodo de movimiento de la cabeza que puede surgir cuando la ubicación del contenido y los controles de mirada con la cabeza y permanencia obligan al usuario a mirar hacia arriba y hacia abajo constantemente. Por ejemplo, al navegar por una lista con el botón de mirada con la cabeza y permanencia en la parte inferior, se provoca un bucle de mirada hacia abajo para la permanencia, mirada hacia arriba para ver los resultados, mirada hacia abajo para la permanencia, etc. Este patrón resultante es incómodo y debe evitarse mediante la colocación de controles de navegación en una ubicación centralizada que requiera menos movimientos de un lado a otro. La ubicación de los botones de permanencia en relación con sus efectos resulta importante para la comodidad.
 
-## <a name="ux-guidelines-and-best-practices"></a>Directrices de experiencia de usuario y procedimientos recomendados
+## <a name="ux-guidelines-and-best-practices"></a>Directrices y procedimientos recomendados para la experiencia del usuario
 
 ### <a name="target-sizes"></a>Tamaños de los destinos
-  Para que sea fácilmente accesible, head mirada profundizaré destinos deben ser suficientemente grande como para el destino comforatably y mantenga stabily head de uno en el destino para el tiempo prescrito. Se recomienda un tamaño de destino mínimo de 2 grados para lograr la experiencia resulte más cómoda. 
+  Para que los objetivos de mirada con la cabeza y permanencia sean fácilmente accesibles, deben ser lo suficientemente grandes como para poder enfocarlos cómodamente y mantener estable la cabeza sobre el objetivo durante el tiempo necesario. Se recomienda un tamaño de objetivo mínimo de 2 grados para lograr la experiencia más cómoda posible. 
 
 ### <a name="visual-feedback"></a>Información visual
 
-Al utilizar un relleno radial para representar el temporizador de permanencia, inicie desde el centro del botón. Una respuesta coherente es menos confusa que todas las direcciones diferentes en los botones diferentes. 
+Al utilizar un relleno radial para representar el temporizador de permanencia, empieza desde el centro del botón. Una respuesta coherente es menos confusa que si cada botón tiene una dirección distinta. 
 
-  * Esta regla puede interrumpirse aunque interacciones direccionales (p. ej., nav arriba/abajo/izquierda/derecha, etcetera.). Por ejemplo, Microsoft Dynamics 365 guías hace una excepción en la siguiente y atrás ha dejado rellenos derechos.
-  * Considere la posibilidad de invertir radial relleno desde fuera, para escenarios como si activa o desactiva un botón de cierre. Inversa sensación de pulsar un botón es un práctico patrón visual para mantener. 
+  * No obstante, esta regla puede romperse para las interacciones direccionales (por ejemplo, navegar hacia arriba/abajo/izquierda/derecha, etc.). Por ejemplo, Microsoft Dynamics 365 Guides hace una excepción para los botones SIGUIENTE/ATRÁS, que son rellenos de izquierda y derecha.
+  * Considera la posibilidad de invertir un relleno radial desde fuera, para escenarios como desactivar un botón. La sensación inversa a pulsar un botón es un patrón visual que resulta útil mantener. 
 
-### <a name="progressive-disclosure"></a>Revelación progresiva
+### <a name="progressive-disclosure"></a>Muestra progresiva
 
-Revelación progresiva significa que solo se muestran toda la información que es relevante en cada etapa de una interacción. De permanencia, que significa que el destino de permanencia se revela en resaltado (por ejemplo, en un control de lista).
+La muestra progresiva significa que solo se muestran los detalles pertinentes en cada etapa de una interacción. En el caso de la permanencia, esto significa que el objetivo de permanencia se muestra resaltado (por ejemplo, en un control de lista).
 
- ### <a name="oversized-targets"></a>Destinos demasiado grandes
-Región de permanencia puede ser mayor que el icono inactivo que resulte más fácil de usar, al igual que el botón Atrás en las guías de Microsoft Dynamics 365.
+ ### <a name="oversized-targets"></a>Objetivos demasiado grandes
+La región de permanencia puede ser mayor que el icono inactivo para que resulte más fácil de usar, al igual que el botón Atrás en Microsoft Dynamics 365 Guides.
 
-### <a name="prevent-flickering-with-delayed-feedback"></a>Evitar el parpadeo con comentarios retrasada
-Use un breve retraso antes de iniciar los comentarios visuales para evitar el parpadeo cuando alguien se desplaza sobre un destino de permanencia.
-* Para botones inteacted con frecuencia, mantenga el retraso breve para que la aplicación se siente reactiva.
-* Para los botones que se va a interactuar con infrequenctly un retraso más largo puede ser approprate para evitar la interfaz se siente twitchy.
+### <a name="prevent-flickering-with-delayed-feedback"></a>Evitar el parpadeo con información retrasada
+Utiliza un breve retraso antes de iniciar la información visual para evitar el parpadeo cuando un usuario pase sobre un objetivo de permanencia.
+* Para botones accionados con frecuencia, usa un retraso muy breve para que la aplicación dé sensación de reaccionar rápido.
+* En el caso de los botones que se accionan con menos frecuencia, un retraso más prolongado puede ser adecuado para evitar que la interfaz parezca dar tirones.
 
 ## <a name="ui-patterns"></a>Patrones de la interfaz de usuario
 
 ### <a name="high-frequency-buttons"></a>Botones de alta frecuencia
-![Microsoft Dynamics 365 guías siguiente botón](images/GuideNextButton.png "Microsoft Dynamics 365 guías siguiente botón") botones de alta frecuencia son que se usan con frecuencia en toda una aplicación. Un buen ejemplo de estos son los botones siguiente y atrás en las guías de Microsoft Dynamics 365.
+![Botón Siguiente de Microsoft Dynamics 365 Guides](images/GuideNextButton.png "Botón Siguiente de Microsoft Dynamics 365 Guides") Los botones de alta frecuencia son aquellos que se usan habitualmente en una aplicación. Un buen ejemplo son los botones Siguiente y Atrás de Microsoft Dynamics 365 Guides.
 
-Botones de alta frecuencia deben...
-* ser botones más grandes, sea más fáciles seleccionar con head mirada
-* Manténgase cerca de la altura del ojo para evitar agotar ergonómico.
+Los botones de alta frecuencia deben...
+* ser botones más grandes, más fáciles de seleccionar con la mirada con la cabeza;
+* permanecer cerca de la altura de los ojos para evitar el agotamiento ergonómico.
 
 ### <a name="low-frequency-buttons"></a>Botones de baja frecuencia
-Botones de baja frecuencia son que no son interactúe con él como con regularidad a lo largo de la aplicación. Un buen ejemplo podría ser un botón para acceder al menú de configuración o un botón para borrar todo el trabajo.
+Los botones de baja frecuencia son aquellos que no se accionan en la aplicación con demasiada frecuencia. Un buen ejemplo podría ser un botón para acceder al menú de configuración o un botón para borrar todo el trabajo.
 
-* Intente mantener estos botones interfiera rutas head mirada frecuentes para evitar la activación accidental. 
+* Intenta mantener estos botones apartados de las rutas frecuentes de la mirada con la cabeza para evitar activarlos accidentalmente. 
 
 ### <a name="confirmations"></a>Confirmaciones
-![Cuadro de diálogo de confirmación de Microsoft Dynamics 365 guías](images/GuidesConfirmation.png "cuadro de diálogo de confirmación de las guías de Microsoft Dynamics 365")
+![Cuadro de diálogo de confirmación de Microsoft Dynamics 365 Guides](images/GuidesConfirmation.png "Cuadro de diálogo de confirmación de Microsoft Dynamics 365 Guides")
 
-Cuando una acción tiene un impacto significativo, como a cobrar dinero, eliminando el trabajo o iniciar un proceso largo, resulta útil confirmar que una persona diseñada para seleccionar un botón. Head mirada y permanencia hay interfaces de usuario son algunos patrones y consideraciones para los cuadros de diálogo de confirmación:
+Cuando una acción tiene un impacto significativo, como cobrar dinero, eliminar trabajo o iniciar un proceso largo, resulta útil confirmar que el usuario realmente quiere seleccionar ese botón. En las interfaces de usuario de mirada con la cabeza y permanencia, deben tenerse en cuenta algunos aspectos para los cuadros de diálogo:
 
-  * Mostrar resaltado de la selección en el botón principal.
-  * Revelar permanencia destino al mismo tiempo que resalte de la selección.
-  * Para el botón secundario, revele el destino de permanencia en la cabeza mirada.
+  * Muestra el resaltado de la selección en el botón principal.
+  * Muestra el objetivo de permanencia al mismo tiempo que el resaltado de selección.
+  * Para el botón secundario, muestra el objetivo de permanencia al mirar con la cabeza.
         
 ### <a name="toggle-buttons"></a>Botones de alternancia
-Botones de alternancia requieren cierta lógica matizado funcione correctamente. Cuando una persona dwells en un botón de alternancia y activos, necesitan para salir del botón y, a continuación, volver para reiniciar la lógica de permanencia. Es importante que los botones que se puedan alternar tienen una clara activo frente a estado inactivo. 
+Los botones de alternancia requieren una lógica matizada para que funcionen correctamente. Cuando una persona permanece sobre un botón de alternancia y lo activa, debe salir del botón y, a continuación, volver para reiniciar la lógica de permanencia. Es importante que se distinga claramente el estado activo del inactivo de los botones de alternancia. 
 
 ### <a name="list-views"></a>Vistas de lista
-![Diálogo de confirmación de Microsoft Dynamics 365 guías](images/GuidesListView.png "diálogo de confirmación de Microsoft Dynamics 365 guías") presentan un desafío particular para head mirada de vistas de lista y profundizaré entrada. Gente necesita ser capaz de analizar el contenido sin la sensación de deba tiptoe en torno a los destinos de permanencia. 
+![Cuadro de diálogo de confirmación de Microsoft Dynamics 365 Guides](images/GuidesListView.png "Microsoft Dynamics 365 Guides Confirmation Dialog") Las vistas de lista presentan un desafío particular para la entrada de mirada con la cabeza y permanencia. Los usuarios deben poder recorrer el contenido sin la sensación de tener que ir pasando de puntillas por los distintos objetivos de permanencia. 
 
-Algunas sugerencias para diseñar vistas de lista:
-* tiene toda la fila resaltar cuando gazed de cabeza, pero no comienza la permanencia a menos que sea head mirada en el destino de permanencia específico.
-* Mostrar solo el destino de permanencia cuando se resalta la fila para reducir el ruido visual.
-* ser claro y coherente con la posición de los destinos de permanencia.
-* No se muestran que todos profundizaré destinos al mismo tiempo para evitar la interfaz de usuario repetitivo
-* volver a usar el mismo patrón de tantas veces como sea posible para establecer la familiaridad de la experiencia del usuario
+A continuación se indican algunos consejos para diseñar vistas de lista:
+* Haz que toda la fila se resalte al mirarla con la cabeza, pero no inicies la permanencia hasta que la mirada con la cabeza se sitúe en el objetivo de permanencia específico.
+* Muestra el objetivo de permanencia solo cuando se resalte la fila para reducir el ruido visual.
+* Sé claro y coherente con la posición de los objetivos de permanencia.
+* No muestres todos los objetivos de permanencia al mismo tiempo para evitar que la interfaz de usuario resulte repetitiva.
+* Vuelve a usar el mismo patrón siempre que sea posible para que la experiencia del usuario resulte familiar.
  
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 * [Manipulación directa con las manos](direct-manipulation.md)
 * [Apuntar y confirmar con las manos](point-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)

@@ -1,147 +1,147 @@
 ---
-title: Módulo de la Base de aprendizaje de MR - experiencia de ejemplo de ensamblado de módulo Lunar
-description: En esta lección, combinamos varios conceptos aprendidos lecciones anteriores para crear una experiencia única de ejemplo.
+title: 'Módulo base de aprendizaje de Mixed Reality: Experiencia de ejemplo de ensamblado del objeto Lunar Module'
+description: En esta lección, vamos a agrupar varios conceptos aprendidos de lecciones anteriores para crear una experiencia de ejemplo.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: realidad mixta, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens
 ms.openlocfilehash: 8a2f388e842d521f991203916177e3dac15769eb
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "65730849"
 ---
-# <a name="mr-learning-base-module---lunar-module-assembly-sample-experience"></a>Módulo de la Base de aprendizaje de MR - experiencia de ejemplo de ensamblado de módulo Lunar
+# <a name="mr-learning-base-module---lunar-module-assembly-sample-experience"></a>Módulo base de aprendizaje de Mixed Reality: Experiencia de ejemplo de ensamblado del objeto Lunar Module
 
-En esta lección, combinamos varios conceptos aprendidos lecciones anteriores para crear una experiencia única de ejemplo. Se creará una aplicación de ensamblado de módulo lunar mediante el cual un usuario deberá usar manos sometidas a seguimiento para recoger las partes del módulo lunar e intenta ensamblar un módulo lunar. Para activar o desactivar las sugerencias de colocación, restablecer nuestra experiencia y para iniciar nuestro módulo lunar en el espacio se usará botones pressable! En el futuro tutoriales, seguiremos se basan en esta experiencia, incluidos eficaz multiusuario casos de uso que aprovecha Azure espacial delimitadores para la alineación espacial.
+En esta lección, vamos a agrupar varios conceptos aprendidos de lecciones anteriores para crear una experiencia de ejemplo. Crearemos una aplicación de ensamblado del módulo lunar en la que el usuario tendrá que usar las manos con seguimiento para recoger las piezas del módulo lunar e intentar ensamblarlo. Para activar o desactivar las sugerencias de colocación, restablecer nuestra experiencia y para lanzar nuestro módulo lunar al espacio se usarán botones presionables. En futuros tutoriales, continuaremos creando sobre esta experiencia, incluidos casos de uso multiusuario que aprovechan Azure Spatial Anchors para la alineación espacial.
 
 ## <a name="objectives"></a>Objetivos
 
-- Combinar varios conceptos de las lecciones anteriores para crear una experiencia única
-- Obtenga información sobre cómo activar o desactivar los objetos
-- Desencadenar eventos complejos mediante los botones pressable
-- Usar cuerpo rígido física y fuerza
-- Explore el uso de información sobre herramientas
+- Agrupar varios conceptos de lecciones anteriores para crear una experiencia única
+- Obtener información sobre cómo activar o desactivar los objetos
+- Desencadenar eventos complejos mediante los botones presionables
+- Usar la física y la fuerza de los cuerpos rígidos
+- Explorar el uso de la información sobre herramientas
 
 ## <a name="instructions"></a>Instrucciones
 
-### <a name="configuring-the-lunar-module"></a>Configuración del módulo Lunar
+### <a name="configuring-the-lunar-module"></a>Configuración del módulo lunar
 
-En este capítulo, se recibirá una introducción a los distintos componentes necesarios para crear nuestra experiencia de ejemplo.
+En este capítulo, se nos introducirá a los distintos componentes necesarios para crear nuestra experiencia de ejemplo.
 
-1. Agregar el ensamblado de módulo lunar prefabricado verá a la escena de la Base. Para ello, en la ficha de proyecto, busque "Rocket Launcher_Tutorial." También puede encontrar el recurso prefabricado de activos > BaseModuleAssets > prefabricados. Es posible que vea dos prefabricados del iniciador de rocket; uno con el nombre "tutorial" y otro con el nombre "completan". Arrastre el recurso prefabricado "Rocket Launcher_Tutorial" a la escena de la Base. No dude en colocar la colocación del prefabricado verá en la escena.
-   Nota: El recurso prefabricado "Rocket Launcher_Complete" es el iniciador completado, proporcionado como referencia. 
+1. Agrega el objeto prefabricado del ensamblado del módulo lunar a la escena base. Para ello, en la pestaña del proyecto, busca "Rocket Launcher_Tutorial". También puedes buscar el objeto prefabricado en Assets > BaseModuleAssets > Prefabs (Recursos>RecursosDeMóduloBase>Objetos prefabricados). Puedes ver dos objetos prefabricados de lanzacohetes: uno con el nombre "tutorial" y otro con el nombre "completo". Arrastra el objeto prefabricado "Rocket Launcher_Tutorial" a la escena base. No dudes en situar la colocación del objeto prefabricado en tu escena.
+   Nota: El objeto prefabricado "Rocket Launcher_Complete" es la lanzadera completada, que se proporciona como referencia. 
 
-![Lesson6 Chapter1 Step1im](images/Lesson6_Chapter1_step1im.PNG)
+![Imagen de la lección 6, capítulo 1, paso 1](images/Lesson6_Chapter1_step1im.PNG)
 
-Si se expanda el objeto de juego "Rocket Launcher_Tutorial" en la jerarquía y expandir el objeto "Módulo Lunar", verá varios objetos secundarios que tienen un material denominado "de rayos x." El material de "rayos x" permite que un color ligeramente translúcido que se usará como sugerencias de selección de ubicación para el usuario. 
+Si expandes el objeto de juego "Rocket Launcher_Tutorial" en tu jerarquía y expandes aún más el objeto "Lunar Module", verás varios objetos secundarios que tienen un material llamado "x-ray". El material "x-ray" permite un color ligeramente translúcido que se usará como sugerencia de colocación para el usuario. 
 
-![Lesson6 Chapter1 Noteaim](images/Lesson6_Chapter1_noteaim.PNG) hay cinco partes al módulo lunar que el usuario que va a interactuar con, como se muestra en la imagen siguiente:
+![Imagen de la lección 6, capítulo 1, nota a](images/Lesson6_Chapter1_noteaim.PNG) Hay cinco partes del módulo lunar con las que el usuario va a interactuar, como se muestra en la siguiente imagen:
 
-1.  El alojamiento de viajero
+1.  El alojamiento del vehículo lunar
 2.  El depósito de combustible
-3.  La celda de energía
-4.  El Portal de acoplamiento 
+3.  La célula de energía
+4.  El portal de acoplamiento 
 5.  El sensor externo
 
-![Lesson6 Chapter1 Notebim](images/Lesson6_Chapter1_notebim.PNG)
+![Imagen de la lección 6, capítulo 1, nota b](images/Lesson6_Chapter1_notebim.PNG)
 
-> Nota: Los nombres de objeto de juego que ve en la jerarquía escena base no corresponden a los nombres de los objetos de la escena.
+> Nota: Los nombres de los objetos del juego que se ven en la jerarquía de la escena base no se corresponden con los nombres de los objetos de la escena.
 
-Paso 2: Agregar un origen de audio para el módulo lunar. Asegúrese de que el módulo lunar está seleccionado en la jerarquía escena base y haga clic en "Agregar el componente". Busque "Origen de Audio" y agregarlo al objeto. Déjelo en blanco por ahora. Se usará para reproducir el sonido de inicio más adelante.
- ![Lesson6 Chapter1 Step2im](images/Lesson6_Chapter1_step2im.PNG) paso 3: Agregue el script "activar o desactivar sugerencias de selección de ubicación". Haga clic en "Agregar componente" y busque "Activar o desactivar sugerencias de selección de ubicación". Se trata de un script personalizado que le permite activar y desactivar las sugerencias translúcidas (objetos con el material de rayos x) se ha mencionado anteriormente. 
-![Lesson6 Chapter1 Step3im](images/Lesson6_Chapter1_step3im.PNG) paso 4: Como tenemos 5 objetos, escriba "5" para el tamaño de la matriz de objeto de juego. Debería ver aparecer 5 nuevos elementos. 
+Paso 2: Agrega un origen de audio al módulo lunar. Asegúrate de que el módulo lunar esté seleccionado en la jerarquía de la escena base y haz clic en "Add Component" (Agregar componente). Busca "Audio Source" (Origen de audio) y agrégalo al objeto. Déjalo en blanco por ahora. Se usará para reproducir el sonido del lanzamiento más adelante.
+ ![Imagen de la lección 6, capítulo 1, paso 2](images/Lesson6_Chapter1_step2im.PNG) Paso 3: Agrega el script "Toggle placement hints" (Activar o desactivar sugerencias de colocación). Haz clic en "Add Component" (Agregar componente) y busca "Toggle placement hints" (Activar o desactivar sugerencias de colocación). Se trata de un script personalizado que te permite activar y desactivar las sugerencias translúcidas (objetos con el material de rayos x) se han mencionado antes. 
+![Imagen de la lección 6, capítulo 1, paso 3](images/Lesson6_Chapter1_step3im.PNG) Paso 4: Como tenemos cinco objetos, escribe "5" para el tamaño de la matriz de los objetos del juego. Deberías ver aparecer cinco nuevos elementos. 
 
-![Lesson6 Chapter1 Step4bim](images/Lesson6_Chapter1_step4bim.PNG)
+![Imagen de la lección 6, capítulo 1, paso 4](images/Lesson6_Chapter1_step4bim.PNG)
 
-Arrastre cada uno de los objetos translúcidos en los cuadros que dicen "None (objeto de juego)." Arrastre los siguientes objetos del módulo lunar en su escena base: 
+Arrastra cada uno de los objetos translúcidos a los cuadros que dicen "None (Game Object)" (Ninguno [Objeto del juego]). Arrastra los siguientes objetos del módulo lunar a tu escena base: 
 
-• Mochila
+• Backpack
 
-•   GasTank
+• GasTank
 
 • Topleftbody
 
-• Nariz
+• Nose
 
-•   LeftTwirler
+• LeftTwirler
 
- ![Lesson6 Chapter1 Step4aim](images/Lesson6_Chapter1_step4aim.PNG)
+ ![Imagen de la lección 6, capítulo 1, paso 4](images/Lesson6_Chapter1_step4aim.PNG)
 
-Ahora está configurado el script "activar o desactivar las sugerencias de selección de ubicación". Esto nos permitirá activar y desactivar la las sugerencias.
+Ahora ya está configurado el script "Toggle placement hints" (Activar o desactivar sugerencias de colocación). Esto nos permitirá activar y desactivar las sugerencias.
 
-Paso 5: Agregue el script "iniciar el módulo lunar". Haga clic en el botón "Agregar componente", busque "módulo lunar de lanzamiento" y selecciónelo. Esta secuencia de comandos será responsable de iniciar el módulo lunar. Cuando se presiona un botón configurado, se agregará una fuerza hacia arriba al componente de un cuerpo rígido del módulo lunar y hará que el módulo iniciar hacia arriba. Si está en el interior, el módulo lunar puede bloquearse en la malla de límite superior. Pero si está en el exterior, se vuele a espacio indefinidamente. 
+Paso 5: Agrega el script "Launch lunar module" (Lanzar el módulo lunar). Haz clic en el botón "Add Component" (Agregar componente), busca "Launch lunar module" (Lanzar módulo lunar) y selecciónalo. Este script será responsable de lanzar el módulo lunar. Cuando presionamos un botón configurado, se agregará una fuerza ascendente al componente de un cuerpo rígido del módulo lunar y hará que el módulo se impulse hacia arriba. Si estás en el interior, el módulo lunar puede chocar con la malla del techo. Pero si estás en el exterior, volará al espacio indefinidamente. 
 
-![Lesson6 Chapter1 Step5im](images/Lesson6_Chapter1_step5im.PNG)
+![Imagen de la lección 6, capítulo 1, paso 5](images/Lesson6_Chapter1_step5im.PNG)
 
-Paso 6: Ajustar el valor para que el módulo lunar se Volar seguridad correctamente. Pruebe con un valor de 0,01. Deje en blanco el campo "Rb". RB significa un cuerpo rígido, y este campo se rellenará automáticamente en tiempo de ejecución.
+Paso 6: Ajusta el impulso de modo que el módulo lunar vuele hacia arriba con elegancia. Prueba con un valor de 0,01. Deja en blanco el campo "Rb". RB significa "cuerpo rígido" y este campo se rellenará automáticamente durante el tiempo de ejecución.
 
-![Lesson6 Chapter1 Step6im](images/Lesson6_Chapter1_step6im.PNG)
+![Imagen de la lección 6, capítulo 1, paso 6](images/Lesson6_Chapter1_step6im.PNG)
 
-### <a name="lunar-module-parts-overview"></a>Información general sobre elementos de módulo lunar
-El objeto de módulo Lunar partes primario es la colección de los objetos que interactúa con el usuario. Los nombres de objeto de juego (con escena con la etiqueta nombres en paretheses) se proporcionan en la lista siguiente:
+### <a name="lunar-module-parts-overview"></a>Introducción a la piezas del módulo lunar
+El objeto primario de las piezas del módulo lunar es la colección de objetos con los que interactuará el usuario. Los nombres de los objetos del juego (con los nombres de las escenas etiquetados entre paréntesis) se indican en la siguiente lista:
 
-- Mochila (depósito de combustible)
-- GasTank (celda de energía)
-- TopLeftBody (Rover revestimiento)
-- Nariz (acoplamiento Portal)
+- Backpack (Depósito de combustible)
+- GasTank (Célula de energía)
+- TopLeftBody (Alojamiento del vehículo lunar)
+- Nose (Portal de acoplamiento)
 - LeftTwirler (Sensor externo)
 
-Tenga en cuenta que cada uno de estos objetos tiene el controlador de manipulación, como se describe en la lección 4. Con el controlador de manipulación, los usuarios pueden tomar y manipular el objeto. Tenga en cuenta también que la configuración de "tipo de manipulación pasar dos" se establece en "mover y girar". Esto solo permite al usuario mover el objeto y no cambiar su tamaño, que es la funcionalidad deseada para una aplicación de ensamblado.
-Además, manipulación de lejos está desactivada para permitir solo la interacción directa de partes del módulo.
+Ten en cuenta que cada uno de estos objetos tiene un controlador de manipulación, tal como se vio en la lección 4. Con el controlador de manipulación, los usuarios pueden agarrar y manipular el objeto. Ten en cuenta también que la configuración de "Two handed manipulation type" (Manipulación con dos manos) se establece en "Move and rotate" (Mover y girar). Esto solo permite al usuario mover el objeto y no cambiar su tamaño, que es la funcionalidad deseada para una aplicación de ensamblado.
+Además, la manipulación remota no se controla para permitir solo la interacción directa de las piezas del módulo.
 
-![Lesson6 Chapter2im](images/Lesson6_Chapter2im.PNG)
+![Imagen de la lección 6, capítulo 2](images/Lesson6_Chapter2im.PNG)
 
-El script de demostración de ensamblado parte (mostrado arriba) es el script que administra los objetos que se va a colocar en el módulo lunar por el usuario. 
+El script de demostración del ensamblado de piezas (que se muestra arriba) es el script que administra los objetos que el usuario debe colocar en el módulo lunar. 
 
-El campo "Contexto de objeto" es la transformación que está seleccionado (n el caso de la imagen anterior, el depósito de combustible/mochila) con el objeto que se pueda conectar a. 
+El campo "Object To Place" (Objeto para colocar) es la transformación que se selecciona (en el caso de la imagen de arriba, la mochila o depósito de combustible) con el objeto al que se puede conectar. 
 
-La configuración "Cerca de la distancia" y "Ahora distancia" es responsable de determinar la proximidad a la que se ajustarán en su lugar partes o liberarse. Por ejemplo, necesitaría 0,1 unidades fuera del módulo lunar para colocarla en el depósito de combustible/mochila. La "ahora"distancia establece la ubicación donde el objeto debe ser desasocie el módulo lunar. En este caso, la mano del usuario debe tomar el depósito de combustible/mochila y tire de él 0,2 unidades fuera del módulo lunar para quitarlo de ajuste de vuelta en su lugar.
+Los valores "Near Distance" (Distancia cercana) y "Far Distance" (Distancia lejana) son responsables de determinar la proximidad a las piezas que se van a acoplar o soltar. Por ejemplo, la mochila o depósito de combustible tendría que estar a 0,1 unidades del módulo lunar para que se acople en su sitio. El valor de "Far Distance" (Distancia lejana) establece la ubicación donde el objeto debe estar para separarse del módulo lunar. En este caso, la mano del usuario debe sujetar la mochila o depósito de combustible y alejarla 0,2 unidades del módulo lunar para evitar que vuelva a acoplarse en su lugar.
 
-El "objeto de sugerencia de herramienta" es la etiqueta de sugerencia de la herramienta de la escena. Cuando los objetos están ajustados en su lugar, se deshabilitará la etiqueta. 
+La opción "Tool Tip Object" (Objeto de información sobre herramientas) es la etiqueta de información sobre las herramientas de la escena. Cuando los objetos están acoplados en su lugar, se deshabilitará la etiqueta. 
 
-El origen de Audio se muestrear automáticamente. 
+La opción "Audio Source" (Origen de audio) se selecciona automáticamente. 
 
-### <a name="placement-hints-buttons"></a>Selección de ubicación de las sugerencias de botones
-En [lección 2](mrlearning-base-ch2.md), ha aprendido a realizar y configurar botones para realizar acciones como cambiar el color de un elemento o que se reproduzca un sonido cuando se inserta. Seguimos usar esos principios ya configuramos nuestro botones de alternar las sugerencias de ubicación. 
+### <a name="placement-hints-buttons"></a>Botones de sugerencias de colocación
+En la [lección 2](mrlearning-base-ch2.md), has aprendido a colocar y configurar botones para hacer cosas como cambiar el color de un elemento o hacer que se reproduzca un sonido cuando se pulsa. Seguiremos utilizando estos principios a medida que configuramos nuestros botones para alternar las sugerencias de colocación. 
 
-El objetivo es nuestro botón configurar para que cada vez que el usuario presiona el botón de la sugerencia de colocación, cambiará la visibilidad de las sugerencias de colocación translúcido. 
+El objetivo es configurar nuestro botón para que cada vez que el usuario pulse el botón de sugerencia de colocación, cambie la visibilidad de las sugerencias de colocación translúcidas. 
 
-Paso 1: Mueva el módulo Lunar a la ranura vacía "" tiempo de ejecución solo en el panel del inspector mientras está seleccionado el objeto de sugerencias de selección de ubicación de la jerarquía escena base. 
- ![Lesson6 capítulo 3 Step1im](images/Lesson6_Chapter3_step1im.PNG) paso 2: Ahora haga clic en la lista desplegable, donde no dice, "ninguna función". Vaya a "TogglePlacementHints" y, en ese menú Seleccionar "ToggleGameObjects ()." ToggleGameObjects() alternará las sugerencias de colocación, activar y desactivar para que estén visible o invisible cada vez que se presiona el botón.
- ![Lesson6 capítulo 3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
+Paso 1: Mueve el módulo lunar al recuadro vacío "Runtime only" (Solo en tiempo de ejecución) en el panel de inspección mientras el objeto Placement Hints (Sugerencias de colocación) está seleccionado en la jerarquía de la escena base. 
+ ![Imagen de la lección 6, capítulo 3, paso 1](images/Lesson6_Chapter3_step1im.PNG) Paso 2: Ahora haz clic en la lista desplegable, donde dice "No function" (Ninguna función). Desplázate hacia abajo a "TogglePlacementHints" y, debajo de ese menú, selecciona "ToggleGameObjects ()". ToggleGameObjects() activará y desactivará las sugerencias de colocación para que estén visibles o no cada vez que se presiona el botón.
+ ![Imagen de la lección 6, capítulo 3, paso 2](images/Lesson6_Chapter3_step2im.PNG)
 
-### <a name="configuring-the-reset-button"></a>Configurar el botón Restablecer
+### <a name="configuring-the-reset-button"></a>Configuración del botón Reset (Restablecer)
 
-Habrá situaciones en las que el usuario realiza un error, o inicia accidentalmente que el objeto inmediatamente, o simplemente desea la experiencia de rest. El botón Restablecer agregará la capacidad de reiniciar la experiencia. 
+Habrá situaciones en las que el usuario comete un error o expulsa accidentalmente un objeto, o simplemente quiere restablecer la experiencia. El botón Reset (Restablecer) agregará la capacidad de reiniciar la experiencia. 
 
-Paso 1: Seleccione el botón Restablecer. En la escena base, se llama "ResetRoundButton." 
+Paso 1: Selecciona el botón Reset (Restablecer). En la escena base, se llama "ResetRoundButton". 
 
-Paso 2: Arrastre el módulo de lunar desde la jerarquía escena base en la ranura vacía en el "botón presionado" del panel del inspector.
- ![Lesson6 Capítulo4 Step2im](images/Lesson6_Chapter4_step2im.PNG)
+Paso 2: Arrastra el módulo lunar desde la jerarquía de la escena base hasta el recuadro vacío debajo de "Button pressed" (Botón presionado) en el panel del inspector.
+ ![Imagen de la lección 6, capítulo 4, paso 2](images/Lesson6_Chapter4_step2im.PNG)
 
-Paso 3: Seleccione el menú desplegable que no dice, "ninguna función" y mantenga el mouse sobre "LaunchLunarModule." Ahora, seleccione "resetModule ()."
+Paso 3: Selecciona el menú desplegable que indica "No function" (Ninguna función) y mantén el puntero en "LaunchLunarModule". Ahora, selecciona "resetModule ()".
 
-![Lesson6 Capítulo4 Step3im](images/Lesson6_Chapter4_step3im.PNG)
+![Imagen de la lección 6, capítulo 4, paso 3](images/Lesson6_Chapter4_step3im.PNG)
 
-> Nota: Observará que, de forma predeterminada, el "GameObject.BroadcastMessage" está configurado para "ResetPlacement". Esto difunde un mensaje denominado "ResetPlacement" para cada objeto secundario de RocketLauncher_Tutorial. Cualquier objeto que tiene un método para "ResetPlacement()" responderá a ese mensaje mediante el restablecimiento de su posición. 
+> Nota: Observarás que, de manera predeterminada, el objeto "GameObject.BroadcastMessage" está configurado en "ResetPlacement". Esto difundirá un mensaje llamado "ResetPlacement" para cada objeto secundario de RocketLauncher_Tutorial. Cualquier objeto que tenga un método para "ResetPlacement()" responderá a ese mensaje restableciendo su posición. 
 
-### <a name="launching-the-lunar-module"></a>Iniciar el módulo Lunar
-Este capítulo se va a configurar el botón de inicio. Esto permitirá al usuario que presione el botón e iniciar el módulo Lunar en espacio.
+### <a name="launching-the-lunar-module"></a>Lanzamiento del módulo lunar
+En este capítulo vamos a configurar el botón de lanzamiento. Esto permitirá al usuario pulsar el botón y lanzar el módulo lunar al espacio.
 
-Paso 1: Seleccione el botón de inicio (en la escena base se denomina "LaunchRoundButton"). Arrastre el módulo de Lunar a la ranura vacía en "End tocar" en el panel del inspector.
- ![Lesson6 Chapter5 Step1im](images/Lesson6_Chapter5_step1im.PNG) paso 2: Seleccione el menú desplegable que no dice, "ninguna función". Mantenga el mouse sobre "LaunchLunarModule" y seleccione "StopThruster ()." Esto controlará cuánto empuje el usuario desea dar al módulo Lunar. 
- ![Lesson6 Chapter5 Step2im](images/Lesson6_Chapter5_step2im.PNG) paso 3: En "ButtonPressed()", agregue el módulo Lunar (hacer clic, suspensión y arrastrar) a la ranura vacía. 
+Paso 1: Selecciona el botón de lanzamiento (en la escena base se denomina "LaunchRoundButton"). Arrastra el módulo lunar al recuadro vacío en "Touch End" (Tocar terminar) en el panel del inspector.
+ ![Imagen de la lección 6, capítulo 5, paso 1](images/Lesson6_Chapter5_step1im.PNG) Paso 2: Selecciona el menú desplegable que indica "No Function" (Ninguna función). Mantén el puntero en "LaunchLunarModule" y selecciona "StopThruster ()". Esto controlará cuánto impulso quiere dar el usuario al módulo lunar. 
+ ![Imagen de la lección 6, capítulo 5, paso 2](images/Lesson6_Chapter5_step2im.PNG) Paso 3: En "ButtonPressed()", agrega el módulo lunar (haz clic, mantén y arrastra) al recuadro vacío. 
 
-Paso 4: Haga clic en el menú desplegable que no dice, "ninguna función" y mantenga el mouse sobre "LaunchLunarModule" y seleccione "StartThruster ()." 
- ![Lesson6 Chapter5 Step4im](images/Lesson6_Chapter5_step4im.PNG) paso 5: Agregar música al módulo Lunar para que cuando el cohete despega, se reproducirá la música. Para ello, arrastre el módulo de Lunar a la siguiente ranura vacía en el "Botón Pressed()".
+Paso 4: Haz clic en el menú desplegable que indica "No function" (Ninguna función) y mantén el puntero en "LaunchLunarModule" y selecciona "StartThruster ()". 
+ ![Imagen de la lección 6, capítulo 5, paso 4](images/Lesson6_Chapter5_step4im.PNG) Paso 5: Agrega música al módulo lunar para que cuando el cohete despegue, se reproducirá la música. Para ello, arrastra el módulo lunar al siguiente recuadro vacío en "ButtonPressed()".
 
-Paso 6: Seleccione el menú desplegable que no dice, "ninguna función" y mantenga el mouse sobre "AudioSource" y seleccione "PlayOneShot (AudioClip)". No dude en explorar la variedad de sonidos que se incluye con el MRTK. En este ejemplo, vamos a ceñirnos a "MRTK_Gem."
- ![Lesson6 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
+Paso 6: Selecciona el menú desplegable que dice "No function" (Ninguna función), mantén el puntero en "AudioSource" y, a continuación, selecciona "PlayOneShot (AudioClip)". No dudes en explorar la variedad de sonidos que se incluyen con MRTK. En este ejemplo, vamos a ceñirnos a "MRTK_Gem".
+ ![Imagen de la lección 6, capítulo 5, paso 6](images/Lesson6_Chapter5_step6im.PNG)
 
 
 ### <a name="congratulations"></a>Enhorabuena 
-¡Esta aplicación se ha configurado totalmente! Ahora cuando presiona play, puede totalmente ensamblar el módulo Lunar, activar o desactivar las sugerencias, inicie el módulo Lunar y restablecerla para hacerlo nuevamente.
+¡Ya has configurado totalmente esta aplicación! Ahora, al presionar el botón de reproducir, puedes ensamblar completamente el módulo lunar, activar o desactivar las sugerencias, lanzar el módulo lunar y restablecerlo para hacerlo todo de nuevo.

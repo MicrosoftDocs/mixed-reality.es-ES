@@ -6,133 +6,133 @@ ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Seguimiento de los ojos, mixto en realidad, Input, ojo mirada
+keywords: Eye Tracking, Mixed Reality, Input, Eye Gaze
 ms.openlocfilehash: 7298a34a946f86aaf789cfe44ad971169fc8ece3
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66453704"
 ---
-# <a name="eye-tracking-on-hololens-2"></a>Ojo de seguimiento en 2 HoloLens
-HoloLens 2 permite un nivel completamente nuevo de contexto y la descripción humana dentro de la experiencia holográfica proporcionando a los desarrolladores la capacidad de uso de información sobre lo que están mirando los usuarios increíble. Esta página proporciona información general sobre cómo los desarrolladores pueden beneficiarse de seguimiento de ojo para varios casos de uso y lo que debe tener en cuenta cuando el diseño de interfaces de usuario basada en la mirada de ojos. 
+# <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
+HoloLens 2 ofrece un nivel completamente nuevo de conocimiento del contexto y del comportamiento humano dentro de la experiencia holográfica al proporcionar a los desarrolladores la increíble capacidad de usar información sobre lo que están mirando los usuarios. Esta página proporciona información general sobre cómo pueden aprovechar los desarrolladores el seguimiento de los ojos para varios casos de uso y qué debe tenerse en cuenta al diseñar interfaces de usuario basadas en la mirada con los ojos. 
 
 ## <a name="use-cases"></a>Casos de uso
-Seguimiento de los ojos permiten que las aplicaciones realizar un seguimiento de dónde mira el usuario en tiempo real. Esta sección describen algunos de los posibles casos de uso y las interacciones novedosas que son posibles con los ojos de seguimiento en la realidad mixta.
-Antes de comenzar, a continuación se mencionará el [Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) varias veces, ya que proporciona varios ejemplos interesantes y eficaces para usar el seguimiento de ojo como destino admitidos por el ojo rápido y sin esfuerzo las selecciones y desplazarse automáticamente a través de texto en función de donde se examina el usuario. 
+El seguimiento de los ojos permite a las aplicaciones realizar un seguimiento de dónde mira el usuario en tiempo real. En esta sección se describen algunos de los posibles casos de uso y las interacciones novedosas que son posibles mediante el seguimiento de los ojos en la realidad mixta.
+Antes de comenzar, a continuación se mencionará [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) varias veces, ya que proporciona varios ejemplos interesantes y eficaces para usar el seguimiento de los ojos, como la selección rápida y sin esfuerzo de objetivos mediante los ojos y el desplazamiento automático por texto en función de dónde mira el usuario. 
 
 ### <a name="user-intent"></a>Intención del usuario    
-Información acerca de dónde se examina un usuario proporciona una potente **contexto para otras entradas**, como voz, manos y controladores.
-Esto puede usarse para varias tareas.
-Por ejemplo, esto puede oscilar entre rápidamente y sin esfuerzo **destinadas a** a través de la escena con solo mirar un holograma y que dice "select" (consulte también [mirada de encabezado y confirmación](gaze-and-commit.md)) o diciendo "poner esto...", a continuación, consultando hasta donde desee colocar el holograma y decir "... There". Ejemplos para esto pueden encontrarse en [Kit de herramientas de realidad mixta - selección de destino compatible con el efecto de ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) y [Kit de herramientas realidad mixta - posicionamiento de destino compatible con el efecto de ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+La información acerca de dónde mira un usuario proporciona un potente **contexto para otras entradas**, como las de voz, manos y controlador.
+Esta información puede utilizarse para varias tareas.
+Por ejemplo, puede servir para **enfocar** rápidamente y sin esfuerzo objetivos por la escena solo con mirar un holograma y decir "Seleccionar" (consulta también [Mirada con la cabeza y confirmación](gaze-and-commit.md)) o para decir "Coloca esto..." y, a continuación, mirar al lugar donde deseas colocar el holograma y decir "...ahí". Puedes consultar varios ejemplos en [Mixed Reality Toolkit: Selección de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) y [Mixed Reality Toolkit: Posicionamiento de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
 
-Puede incluir un ejemplo adicional de la intención del usuario con la información sobre lo que examine los usuarios para mejorar la interacción con los agentes virtuales embodied y hologramas interactivos. Por ejemplo, los agentes virtuales pueden adaptar las opciones disponibles y su comportamiento según actualmente ve contenido. 
+Otro ejemplo relacionado con la intención del usuario es usar la información sobre lo que mira el usuario para mejorar la interacción con agentes virtuales integrados y hologramas interactivos. Por ejemplo, los agentes virtuales pueden adaptar las opciones disponibles y su comportamiento según el contenido visualizado en cada momento. 
 
 ### <a name="implicit-actions"></a>Acciones implícitas
-La categoría de acciones implícitas está estrechamente relacionado con intención del usuario.
-La idea es que hologramas o elementos de la interfaz de usuario reaccionan de manera un poco instinctual que puede no incluso sentir interactúa con el sistema en absoluto, sino más bien que el sistema y el usuario están sincronizadas. Por ejemplo, es un ejemplo inmensamente correcto **desplazamiento automático basados en ojo-mirada**. La idea es tan sencillo: El usuario lee un texto y solo puede dejen de leer. El texto se mueve hacia arriba gradualmente mantener a los usuarios en su flujo de lectura. Un aspecto clave es que la velocidad de desplazamiento se adapta a la velocidad de lectura del usuario.
-Otro ejemplo es **compatible con la vista de zoom y panorámica** para que el usuario puede parecer un profundizar exactamente hacia lo que se centra en. Activando el zoom y controlar la velocidad de zoom pueden controlarse a través de voz o pasar la entrada que es importante acerca de cómo proporcionar la sensación de control y evitar sobrecargar el usuario (hablaremos acerca de estas instrucciones de diseño con más detalle a continuación). Una vez que el zoom activo, el usuario puede, a continuación, suavemente seguir, por ejemplo, el curso de una calle para explorar su vecindario simplemente con su mirada ojos.
-Ejemplos de demostración para estos tipos de interacciones que pueden encontrarse en el [Kit de herramientas de realidad mixta - compatible con el efecto de ojos navegación](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html) ejemplo.
+La categoría de acciones implícitas está estrechamente relacionada con la intención del usuario.
+La idea es que los hologramas o los elementos de la interfaz de usuario reaccionen de manera prácticamente instintiva, de modo que casi no parezca que el usuario interactúa con el sistema, sino que el sistema y el usuario están sincronizados. Un ejemplo muy eficaz es el del **desplazamiento automático basado en la mirada con los ojos**. La idea es muy sencilla: El usuario lee un texto y puede seguir leyendo. El texto se mueve hacia arriba gradualmente para que el usuario pueda seguir leyendo. Un aspecto clave es que la velocidad de desplazamiento se adapta a la velocidad de lectura del usuario.
+Otro ejemplo es el **zoom y el desplazamiento lateral con los ojos** que hace que el usuario sienta que se dirige exactamente hacia donde enfoca. La activación del zoom y el control de su velocidad pueden realizarse con la voz o manualmente, lo que resulta importante para transmitir una sensación de control y evitar abrumar al usuario (más adelante se describen con más detalle estas directrices de diseño). Tras acercar la imagen con el zoom, el usuario puede seguir de manera fluida, por ejemplo, el curso de una calle para explorar su vecindario simplemente mirando con los ojos.
+Puedes consultar ejemplos de demostración de estos tipos de interacciones en el ejemplo [Mixed Reality Toolkit - Navegación con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html).
 
-Usos adicionales para _acciones implícitas_ pueden incluir:
-- **Notificaciones inteligentes:** ¿Alguna vez obtener le molesta notificaciones emergentes derecha donde que se centraban? Teniendo en cuenta que un usuario actualmente está prestando atención a, puede que sea mejor! Mostrar notificaciones de desplazamiento desde donde el usuario está observando actualmente para limitar las distracciones y descartarlas automáticamente una vez terminado de leer. 
-- **El lector atento hologramas:** Hologramas que reaccionan sutilmente cuando está examinando. Esto puede oscilar entre elementos de interfaz de usuario ligeramente resplandecientes, una flor floración lentamente a una mascota virtual inicial tener en cuenta o intenta evitar su mirada ojo después un observe fijamente prolongado. Esto puede proporcionar una idea interesante de la conectividad y la satisfacción del cliente en la aplicación.
+A continuación, se indican algunos otros casos de uso para _acciones implícitas_:
+- **Notificaciones inteligentes:** ¿Te molesta que aparezcan notificaciones justo donde estabas mirando? La experiencia puede mejorar si se tiene en cuenta dónde está centrando el usuario su atención en cada momento. Muestra notificaciones desplazadas de donde está mirando actualmente el usuario para limitar las distracciones y ciérralas automáticamente una vez leídas. 
+- **Hologramas atentos:** Hologramas que reaccionan sutilmente cuando se les mira. Pueden ser elementos de la interfaz de usuario que brillan ligeramente, una flor que se abre lentamente o una mascota virtual que te devuelve la mirada o evita el contacto visual tras mirarla durante un tiempo. Esto puede proporcionar una interesante sensación de conectividad y satisfacción en la aplicación.
 
-### <a name="attention-tracking"></a>Atención de seguimiento   
-Información acerca de dónde mirar a los usuarios es una herramienta increíblemente eficaz para evaluar la facilidad de uso de diseños y a identificar los problemas de flujos de trabajo eficaces. En este momento, seguimiento de análisis y visualización de los ojos ya son una práctica común en varias áreas de la aplicación. Con el 2 de HoloLens, proporcionamos una nueva dimensión a este conocimiento como hologramas 3D pueden colocarse en contextos del mundo real y evalúa junto con. El [Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) se proporcionan ejemplos básicos para el registro y cargar datos de seguimiento de los ojos y cómo visualizarlos.
+### <a name="attention-tracking"></a>Seguimiento de la atención   
+La información acerca de dónde miran los usuarios es una herramienta increíblemente eficaz para evaluar la utilidad de diseños e identificar problemas en flujos de trabajo eficientes. Actualmente, los análisis y la visualización con seguimiento de los ojos ya son una práctica habitual en varias áreas de aplicación. Con HoloLens 2, proporcionamos una nueva dimensión de este conocimiento, ya que es posible situar hologramas 3D en contextos reales y evaluarlos en esas situaciones. [Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) proporciona ejemplos básicos para el registro y la carga de datos de seguimiento de los ojos y cómo visualizarlos.
 
-Otras aplicaciones en esta área pueden incluir: 
--   **Visualización de mirada ojo remoto:** Visualizar lo que los colaboradores remotos están mirando, por ejemplo, asegúrese de si las instrucciones se entiende y seguidas correctamente.
--   **Estudios de investigación de usuario:** Atención de seguimiento puede usarse para explorar la manera Inexperto frente a los usuarios expertos visualmente analizar contenido o su coordinación de ojo de mano para tareas complejas (por ejemplo, para el análisis de datos médicos o al usar máquinas).
--   **Supervisión del rendimiento y simulaciones de formación:** Practique y optimizar la ejecución de tareas mediante la identificación de cuellos de botella más eficazmente en el flujo de ejecución.
--   **Diseñar las evaluaciones, anuncio y la investigación de mercado:** Seguimiento de los ojos es una herramienta común para la investigación de mercado evaluar los diseños de producto y el sitio Web.
+Algunas aplicaciones en esta área son las siguientes: 
+-   **Visualización de mirada con los ojos remota:** Visualiza lo que están mirando colaboradores remotos para, por ejemplo, asegurarte de que las instrucciones se entienden y siguen correctamente.
+-   **Estudios de investigación con usuarios:** El seguimiento de la atención puede usarse para comparar la manera en que los usuarios inexpertos y los expertos analizan visualmente contenido o su coordinación ojo-mano en tareas complejas (por ejemplo, al analizar datos médicos o al manejar maquinaria).
+-   **Entrenamiento de simulaciones y supervisión del rendimiento:** Practica y optimiza la ejecución de tareas mediante una identificación de cuellos de botella más eficaz en el flujo de ejecución.
+-   **Evaluaciones de diseño, publicidad y estudios de mercado:** El seguimiento de los ojos es una herramienta común en estudios de mercado para evaluar los diseños de productos y sitios web.
 
 ### <a name="additional-use-cases"></a>Casos de uso adicionales
-- **Juegos:** ¿Quisiera tienen superpoderes? ¡Esta es su oportunidad! Levitate hologramas por que comience en ellos. Solucionar láser vigas de sus ojos. ¡Convierta los enemigos en piedra o inmovilizó! Use su visión de rayos x para explorar los edificios. Su imaginación es el límite.  
+- **Videojuegos:** ¿Alguna vez has deseado tener superpoderes? Esta es tu oportunidad. Haz que los hologramas leviten con solo mirarlos. Dispara rayos láser con los ojos. Congela a tus enemigos o conviértelos en piedra. Usa tu visión de rayos X para explorar edificios. El límite es tu imaginación.  
 
-- **Avatares expresivos:** Efecto de ojos SIDA en avatares 3D más expresivos de seguimiento utilizando la fecha de seguimiento de los ojos en vivo para animar los ojos de avatar para indicar lo que el usuario está viendo en este momento. También se agrega más expresividad agregando guiños y parpadea. 
+- **Avatares expresivos:** El seguimiento de los ojos ayuda a conseguir avatares 3D más expresivos mediante el uso de datos de seguimiento de ojos en vivo para animar los ojos del avatar de forma que indiquen lo que el usuario está mirando actualmente. Además, aporta más expresividad mediante guiños y parpadeos. 
 
-- **Entrada de texto:** Seguimiento de los ojos pueden utilizarse como una alternativa interesante para la entrada de texto de bajo esfuerzo especialmente cuando las manos o voz no son convenientes para usar. 
-
-
-## <a name="eye-tracking-api"></a>API de seguimiento de ojo
-Antes de entrar en detalles sobre las directrices de diseño específicas para la interacción de mirada, que queremos brevemente las funcionalidades que ofrece el Rastreador de ojo de HoloLens 2. El [API de seguimiento de ojo](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) es accesible a través: `Windows.Perception.People.EyesPose`. Proporciona un rayo de mirada única ojo (origen de mirada y dirección) a los desarrolladores.
-El Rastreador de ojo proporciona los datos en sobre _30 FPS_.
-La mirada de ojo de predicción se encuentra dentro de la entidad emisora de certificados. 1.0-1,5 grados en ángulo visual en torno a los datos reales visto destino. Como se esperan que las imprecisiones ligeras, debe planear un margen alrededor de este valor de límite inferior. Trataremos esto más a continuación. Para el seguimiento para que funcione con precisión de los ojos, cada usuario es necesario recorrer en iteración un ojo calibración de usuario de seguimiento. 
-
-![Tamaño de destino óptimo a distancia de medidor 2](images/gazetargeting-size-1000px.jpg)<br>
-*Tamaño de destino óptimo a distancia de medidor 2*
+- **Entrada de texto:** El seguimiento de los ojos puede ser una alternativa interesante para introducir texto sin esfuerzo, especialmente cuando no es práctico usar la voz o las manos. 
 
 
-## <a name="eye-gaze-design-guidelines"></a>Instrucciones de diseño de ojo mirada
-Creación de una interacción que aprovecha las ventajas de rápido movimiento ojo como destino puede ser complicado. En esta sección, se resumen las principales ventajas y desafíos a tener en cuenta al diseñar la aplicación. 
+## <a name="eye-tracking-api"></a>API de seguimiento de los ojos
+Antes de entrar en detalles sobre las directrices de diseño específicas para la interacción de mirada con los ojos, expondremos brevemente las funcionalidades que ofrece el seguidor de ojos de HoloLens 2. La [API de seguimiento de los ojos](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) es accesible mediante: `Windows.Perception.People.EyesPose`. Proporciona un único haz de mirada con los ojos (origen y dirección de la mirada) a los desarrolladores.
+El seguidor de ojos proporciona datos a _30 FPS_ aproximadamente.
+La mirada con los ojos prevista se encuentra a entre 1 y 1,5 grados aproximadamente en ángulo visual en torno al objetivo enfocado. Caben esperar pequeñas imprecisiones, por lo que debe dejarse algo de margen para este valor límite inferior. Más adelante se tratará este aspecto en detalle. Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. 
 
-### <a name="benefits-of-eye-gaze-input"></a>Ventajas de la entrada de mirada ojo
-- **Sugerir de alta velocidad.** Músculo es el músculo reaccionando más rápido en nuestro cuerpo. 
-
-- **Esfuerzo bajo.** Prácticamente ningún movimientos físicos son necesarios. 
-
-- **Implícito.** Información acerca de los movimientos de ojo de un usuario a menudo se describen los usuarios como "cuenta de lectura", permite que el sistema sepa qué destino utilizar los planes de usuario para ponerse en contacto con. 
-
-- **Canal de entrada alternativo.** Mirada ojo puede proporcionar una entrada auxiliar eficaz para la mano y voz entrada creación en años de experiencia de los usuarios según su coordinación de ojo de mano.
-
-- **Atención Visual.** Otra ventaja importante es la posibilidad de deducir qué un usuario está prestando atención a. Esto puede ayudar a en varias áreas de la aplicación que abarcan desde más evaluar eficazmente diseños diferentes para ayudar en las Interfaces de usuario más inteligentes y mejorado sociales indicaciones para la comunicación remota.
-
-En pocas palabras, mediante mirada ojo como entrada potencialmente ofrece una señal contextual rápida y sin esfuerzo - esto es especialmente eficaz en combinación con otras entradas como *voz* y *manual* como entrada para Confirme que la intención del usuario.
+![Tamaño de objetivo óptimo a una distancia de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
+*Tamaño de objetivo óptimo a una distancia de 2 metros*
 
 
-### <a name="challenges-of-eye-gaze-as-an-input"></a>Desafíos del ojo que mirar como entrada
-Una gran cantidad de energía, conlleva una gran cantidad de responsabilidad: Aunque mirada ojo se puede usar para crear experiencias de usuario mágica sentir como un héroe, también es importante saber lo que no es bueno para la cuenta para este adecuadamente. En la siguiente tabla, se describen algunos *desafíos* a tener en cuenta y cómo abordarlos cuando se trabaja con la entrada de mirada ojos: 
+## <a name="eye-gaze-design-guidelines"></a>Directrices para el diseño de mirada con los ojos
+La creación de una interacción que aproveche el enfoque de los ojos en rápido movimiento puede ser complicada. En esta sección, se resumen las principales ventajas y desafíos que tener en cuenta al diseñar la aplicación. 
 
-- **Su mirada ojo está "siempre activado"** el momento de abrir tapas de sus ojos, los ojos iniciar fixating cosas en su entorno. Reacción a cada aspecto marca y emitir accidentalmente potencialmente acciones porque se ve algo para resultaría demasiado tiempo en una experiencia terrible!
-Es por esta razón se recomienda combinar el efecto de ojos mirada con un *comandos de voz*, *entregar gesto*, *clic de botón* o extendido permanencia para desencadenar la selección de un destino.
-Esta solución también admite un modo en que el usuario puede buscar libremente en torno a sin la sensación de desencadenar involuntariamente algo abrumador. Este problema también debe tenerse en cuenta al diseñar los comentarios visuales y auditivos cuando simplemente mirar un destino.
-No sobrecargar el usuario con los efectos inmediatos de emergente o mantenga el mouse sonidos. Matiz es clave. Trataremos algunas prácticas recomendadas para esto aún más, a continuación al hablar sobre recomendaciones de diseño.
+### <a name="benefits-of-eye-gaze-input"></a>Ventajas de la entrada mediante mirada con los ojos
+- **Señalización a alta velocidad.** El músculo ocular es el que más rápido reacciona en el cuerpo humano. 
 
-- **Observación frente a control** suponga que desea alinear una fotografía en su muro de forma precisa. Examine sus bordes y sus alrededores para ver si también alinea. Ahora imagine cómo podría hacerlo cuando desee utilizar su mirada ojo como entrada para mover la imagen al mismo tiempo. Difícil, ¿no? Esto describe el rol de doble de mirada ojo cuando sea necesario tanto para la entrada y el control. 
+- **Poco esfuerzo.** Prácticamente no se necesita ningún movimiento físico. 
 
-- **Deje esta opción antes de hacer clic:** Selecciones de destino rápido, investigaciones han demostrado que mirada de ojo de un usuario puede pasar antes de concluir un clic manual (por ejemplo, un airtap). Por lo tanto, se debe prestar especial atención a la sincronización de la señal de ojo rápida mirada con entrada de control más lenta (por ejemplo, voz, manos, controlador).
+- **Implícito.** La información sobre los movimientos oculares de un usuario permite al sistema saber con qué objetivo planea interactuar el usuario, lo que suele describirse como "leer la mente". 
 
-- **Destinos pequeños:** ¿Sabe lo que se siente al intentar leer el texto que simplemente es un poco demasiado pequeño para leer cómodamente? ¿Esta sensación agotar sus ojos que hacerle sentir cansados y gastados out porque intenta reajustar los ojos centrarse mejor?
-Se trata de una sensación que puede invocar en los usuarios cuando se le obliga a seleccionar destinos demasiado pequeños en la aplicación con los ojos destinatarios.
-Para el diseño, para crear una experiencia agradable y cómoda para los usuarios, se recomienda que los destinos deben ser al menos 2° en ángulo visual, preferiblemente mayor.
+- **Canal de entrada alternativo.** La mirada con los ojos puede ofrecer una entrada eficaz alternativa a las entradas con la mano y con la voz, respaldada por años de experiencia de usuarios basada en su coordinación ojo-mano.
 
-- **Desiguales movimientos de ojo mirada** los ojos realizan movimientos rápidos de fijación a fijación. Si observa las rutas de acceso de análisis de movimientos de ojo grabado, puede ver que parecen desiguales. Los ojos mover rápidamente y en saltos espontáneos en comparación con *mirada principal* o *entregar movimientos*.  
+- **Atención visual.** Otra ventaja importante es la posibilidad de deducir a qué presta atención un usuario. Esto puede resultar útil en varias áreas de aplicación, como para evaluar más eficazmente diseños diferentes o para crear interfaces de usuario más inteligentes y mejorar indicaciones sociales para comunicación remota.
 
-- **Seguimiento de la confiabilidad:** Seguimiento de la precisión de los ojos pueden degradar un poco en cambiar la luz como sus ojos ajustar a las nuevas condiciones.
-Aunque esto no debería necesariamente afectar al diseño de su aplicación, como la precisión debe estar dentro de la limitación de 2° mencionada anteriormente. Puede significar que el usuario tiene que ejecutar otro calibración. 
+En pocas palabras, el uso de la mirada con los ojos como entrada ofrece potencialmente una señal contextual rápida y sin esfuerzo. Esto es especialmente eficaz en combinación con otras entradas, como la de *voz* y la *manual*, para confirmar la intención del usuario.
+
+
+### <a name="challenges-of-eye-gaze-as-an-input"></a>Desafíos de la mirada con los ojos como entrada
+Un gran poder conlleva una gran responsabilidad: Aunque la mirada con los ojos puede usarse para crear experiencias mágicas en las que el usuario puede sentirse como un superhéroe, también es importante saber en qué casos no resulta tan eficaz para tener esto en cuenta cuando corresponda. A continuación, se describen algunos *desafíos* que tener en cuenta y cómo abordarlos al trabajar con la entrada mediante mirada con los ojos: 
+
+- **La mirada con los ojos "siempre está activada".** En el momento en el que abres los párpados, los ojos comienzan a fijar cosas por el entorno. Si se reacciona a cada cosa que miras, con la posibilidad de que se desencadenen acciones por error porque has mantenido la mirada sobre algo demasiado tiempo, la experiencia resultaría terrible.
+Por esta razón, se recomienda combinar la mirada con los ojos con un *comando de voz*, un *gesto con la mano*, un *clic de botón* o con permanencia prolongada para desencadenar la selección de un objetivo.
+Esta solución también admite un modo en que el usuario puede mirar libremente sin la abrumadora sensación de desencadenar involuntariamente algo. Esta cuestión también debe tenerse en cuenta al diseñar la información visual y auditiva que se recibe con solo mirar a un objetivo.
+No debe sobrecargarse al usuario con efectos emergentes inmediatos o sonidos al pasar sobre los elementos. La clave es la sutileza. Más adelante, en las recomendaciones de diseño, se describen algunos de los procedimientos recomendados para esto.
+
+- **Observación frente a control.** Supón que deseas alinear una fotografía con la pared de forma precisa. Miras los bordes y la zona circundante para ver si está bien alineada. Ahora imagina cómo podrías hacerlo si al mismo tiempo quieres utilizar la mirada con los ojos como entrada para mover la imagen. Difícil, ¿verdad? Esto describe la doble función de la mirada con los ojos cuando se necesita como entrada y como control. 
+
+- **Salir antes de hacer clic:** Los estudios han demostrado que, para selecciones de objetivos rápidas, la mirada con los ojos del usuario puede desplazarse antes de concluir un clic manual (por ejemplo, al pulsar en el aire). Por lo tanto, se debe prestar especial atención a la sincronización de la señal de la mirada con los ojos rápida con la entrada de un control más lento (por ejemplo, una entrada de voz, manos o controlador).
+
+- **Objetivos pequeños:** Piensa en la sensación al intentar leer texto que es demasiado pequeño para leerse cómodamente. Es una sensación estresante para los ojos, que provoca agotamiento al intentar reajustar los ojos para enfocar mejor.
+Esta misma sensación es la que puedes hacer sentir a los usuarios si los obligas a seleccionar objetivos demasiado pequeños en la aplicación mediante la mirada con los ojos.
+Al diseñar la aplicación, para crear una experiencia agradable y cómoda para los usuarios, se recomienda que los objetivos sean al menos de 2° en ángulo visual, o preferiblemente mayores.
+
+- **Movimientos de mirada con los ojos irregulares.** Los ojos realizan movimientos rápidos al pasar de fijarse en un elemento a fijarse en otro. Si observas las trayectorias de movimientos registrados de ojos, podrás ver que son irregulares. Los ojos se mueven rápidamente y a saltos espontáneos en comparación con la *mirada con la cabeza* o los *movimientos manuales*.  
+
+- **Confiabilidad del seguimiento:** La precisión del seguimiento de los ojos puede verse mermada con los cambios de luz, al ajustarse los ojos a las nuevas condiciones.
+Aunque esto no debe necesariamente afectar al diseño de tu aplicación, ya que la precisión debe oscilar dentro de la limitación de 2° mencionada anteriormente, sí puede significar que el usuario tenga que realizar otra calibración. 
 
 
 ### <a name="design-recommendations"></a>Recomendaciones de diseño
-En la siguiente tabla, se enumeran las recomendaciones de diseño específicas en función de las ventajas que se describe y desafíos para el ojo que mirar entrada:
+A continuación, se enumeran las recomendaciones de diseño específicas en función de las ventajas y desafíos descritos para la entrada mediante mirada con los ojos:
 
-1. **Mirada ojo! = mirada Head:**
-    - **Tenga en cuenta si rápidas ojo desiguales movimientos ajustan su tarea de entrada:** Aunque nuestro movimientos rápidos e irregulares de ojos son excelentes seleccionar rápidamente los destinos a través de nuestro campo de visión, es menos aplicable para las tareas que requieren smooth trayectorias de entrada (por ejemplo, para dibujar o redes de cerco anotaciones). En este caso, debe preferirse mano o head apunta.
+1. **La mirada con los ojos no es lo mismo que la mirada con la cabeza:**
+    - **Ten en cuenta si los movimientos rápidos e irregulares de los ojos funcionan bien para la tarea de entrada:** Aunque los movimientos rápidos e irregulares de los ojos son excelentes para seleccionar rápidamente objetivos en nuestro campo de visión, son menos eficaces para tareas que requieren trayectorias de entrada suaves (por ejemplo, para dibujar o rodear anotaciones con un círculo). En este caso, es preferible apuntar con la mano o con la cabeza.
   
-    - **Evite asociar algo directamente a la mirada de ojo del usuario (por ejemplo, un control deslizante o cursor).**
-En el caso de un cursor, esto puede producir el efecto "eluden cursor" debido a la ligeros desplazamientos de la señal de mirada ojo proyectado. En el caso de un control deslizante, entra en conflicto con el rol de doble de controlar el control deslizante con los ojos también desean comprobar si el objeto está en la ubicación correcta. En pocas palabras, los usuarios pueden rápidamente sentirse abrumado y distrae, especialmente si la señal es imprecisa para ese usuario. 
+    - **Evita asociar elementos directamente a la mirada con los ojos del usuario (por ejemplo, un control deslizante o un cursor).**
+En el caso de un cursor, esto podría provocar un efecto de fuga del cursor, debido a ligeros desplazamientos en la señal de la mirada con los ojos proyectada. En el caso de un control deslizante, surge un conflicto con la doble función de controlar el control deslizante con los ojos mientras también se desea comprobar que el objeto se encuentra en la ubicación correcta. En pocas palabras, un usuario puede rápidamente sentirse abrumado y distraerse, especialmente si la señal es imprecisa para ese usuario. 
   
-2. **Combinar mirada ojo con otras entradas:** La integración de ojo de seguimiento con otras entradas, como los gestos de mano, los comandos de voz o presionar el botón, tiene varias ventajas:
-    - **Permitir la observación de forma gratuita:** Dado que el rol principal de los ojos es observar nuestro entorno, es importante para permitir que los usuarios buscar sin activar cualquiera (visuales, auditivas,...) comentarios o acciones. 
-    La combinación de ET con otro control de entrada permite para la transición sin problemas entre los modos de control de entrada y observación ET.
+2. **Combina la mirada con los ojos con otras entradas:** La integración del seguimiento de los ojos con otras entradas, como gestos manuales, comandos de voz o la pulsación de un botón, tiene varias ventajas:
+    - **Permitir la observación libre:** Dado que la función principal de los ojos es observar nuestro entorno, es importante permitir mirar a los usuarios sin activar acciones o información (visual, auditiva, etc.). 
+    La combinación del seguimiento de ojos con otro control de entrada permite una transición fluida entre los modos de control de entrada y de observación con seguimiento de ojos.
   
-    - **Proveedor de contexto eficaces:** Utilizando la información acerca de que el usuario está viendo durante la puesta en circulación un comando de voz o permite realizar un gesto de mano sin esfuerzo canalizar la entrada en el campo de visión. Algunos ejemplos son: "De manera no existe" rápidamente con fluidez y seleccione simplemente mirar un destino y un destino para colocar un holograma a través de la escena. 
+    - **Proveedor de contexto eficaz:** Al usar información acerca de dónde mira el usuario mientras se pronuncia un comando de voz o se realiza un gesto con la mano, es posible canalizar sin esfuerzo la entrada por el campo de visión. Algunos ejemplos son: “Coloca eso ahí” para seleccionar y situar de manera rápida y fluida un holograma en la escena con solo mirar un objetivo y un destino. 
 
-    - **Es necesario para la sincronización de las entradas multimodales (problema de "dejar antes de hacer clic"):** Combinación rápida ojo movimientos más complejos entradas adicionales (por ejemplo, los comandos de voz larga o gestos de mano) soporta el riesgo de continuar con su mirada ojo antes de finalizar el comando de entrada adicional. Por lo tanto, si crea sus propios controles de entrada (por ejemplo, gestos de mano personalizado), asegúrese de que inicien sesión desde el principio de esta duración de entrada o aproximado para correlacionarlos con lo que un usuario tenía centra en acertar en el pasado.
+    - **Necesidad de sincronizar entradas multimodales (problema de “salir antes de hacer clic”):** La combinación de rápidos movimientos oculares con entradas adicionales más complejas (por ejemplo, comandos de voz prolongados o gestos con la mano) conlleva el riesgo de desviar la mirada con los ojos antes de finalizar el comando de entrada adicional. Por lo tanto, si creas tus propios controles de entrada (por ejemplo, gestos con la mano personalizados), asegúrate de registrar el comienzo de esta entrada o la duración aproximada para relacionarla con el elemento en el que se había fijado el usuario en el pasado.
     
-3. **Comentarios sutiles para entrada de seguimiento de los ojos:** Es útil proporcionar comentarios si un destino es examinado (para indicar que el sistema funciona según lo previsto) pero debe mantenerse sutil. Esto puede incluir la lentitud de fusión de entrada/salida información destacada de visual o realizar otros comportamientos sutiles de destino, como movimientos lentos (por ejemplo, incrementando el destino ligeramente) para indicar que el sistema detectó correctamente que el usuario está viendo un destino, sin embargo, innecesariamente interrumpir el flujo de trabajo del usuario actual. 
+3. **Información sutil para la entrada de seguimiento de los ojos:** Es útil proporcionar información al mirar un objetivo (para indicar que el sistema funciona según lo previsto) pero debe ser sutil. Esta puede ser información visual destacada que aparece o desaparece lentamente u otros comportamientos sutiles según el objetivo, como movimientos lentos (por ejemplo, aumentar ligeramente el tamaño del objetivo) para indicar que el sistema ha detectado correctamente que el usuario está mirando a un objetivo, sin interrumpir innecesariamente el flujo de trabajo actual del usuario. 
 
-4. **Evitar aplicar movimientos ojo no naturales como entrada:** No fuerce a los usuarios realizar movimientos de ojo específico (gestos mirada) para desencadenar acciones en la aplicación.
+4. **Evita entradas que obliguen a realizar movimientos forzados con los ojos:** No obligues a los usuarios a realizar movimientos con los ojos específicos (gestos de mirada) para desencadenar acciones en la aplicación.
 
-5. **Cuenta las imprecisiones:** Podemos distinguir dos tipos de las imprecisiones que son visibles para los usuarios: Desplazamiento y vibración. La manera más fácil a los desplazamientos de la dirección es proporcionar destinos lo suficientemente grandes para interactuar con (> 2° en ángulo visual – como referencia: la vista en miniatura es aproximadamente 2° en ángulo visual cuando estire el brazo (1)). Esto conduce a la siguiente orientación:
-    - No fuerce a los usuarios seleccionar destinos diminutos: Investigación ha demostrado que si los destinos son lo suficientemente grandes (y el sistema está diseñado también), los usuarios describir la interacción como mágica y sin esfuerzo. Si los destinos se vuelven demasiado pequeños, los usuarios describen la experiencia como cansado y frustrante.
+5. **Ten en cuenta las imprecisiones:** Podemos distinguir dos tipos de imprecisiones que son visibles para los usuarios: El desplazamiento y las sacudidas. La manera más sencilla de solucionar los desplazamientos es proporcionar objetivos suficientemente grandes para interactuar con ellos (más de 2° en ángulo visual; como referencia: la miniatura es de aproximadamente 2° en ángulo visual al estirar el brazo (1)). Esto conduce a la siguiente pauta:
+    - No obligues a los usuarios a seleccionar objetivos demasiado pequeños: Hay estudios que han demostrado que si los objetivos son lo suficientemente grandes (y el sistema está correctamente diseñado), los usuarios afirman que la interacción resulta mágica y no requiere esfuerzo. Si los objetivos son demasiado pequeños, los usuarios describen la experiencia como agotadora y frustrante.
    
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
-* [Efecto de ojos mirada en Unity (Kit de herramientas de realidad mixta)](https://aka.ms/mrtk-eyes)
-* [Gestos de mano](gestures.md)
+* [Mirada con los ojos en Unity (Mixed Reality Toolkit)](https://aka.ms/mrtk-eyes)
+* [Gestos con la mano](gestures.md)
 * [Entrada de voz](voice-design.md)
 * [Controladores de movimiento](motion-controllers.md)
 * [Comodidad](comfort.md)

@@ -1,82 +1,82 @@
 ---
 title: Delimitadores espaciales
-description: Procedimientos recomendados para usar delimitadores espaciales para representar hologramas estables.
+description: Procedimientos recomendados de uso de delimitadores espaciales para representar hologramas estables.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: del sistema de coordenadas, del sistema de coordenadas espacial, escala mundial, mundo, escala, posición, orientación, delimitador, delimitador espacial, bloqueado por el mundo, el mundo de bloqueo, persistencia, uso compartido
+keywords: coordinate system, spatial coordinate system, world-scale, world, scale, position, orientation, anchor, spatial anchor, world-locked, world-locking, persistence, sharing
 ms.openlocfilehash: 16165194d040ad22f7885897eddcc65cf9dcaec3
-ms.sourcegitcommit: 1c0fbee8fa887525af6ed92174edc42c05b25f90
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "65730859"
 ---
 # <a name="spatial-anchors"></a>Delimitadores espaciales
 
-Un anclaje espacial representa un punto importante en el mundo que el sistema debe realizar un seguimiento de con el tiempo. Cada delimitador tiene un [del sistema de coordenadas](coordinate-systems.md) que ajusta según sea necesario, en relación con otros delimitadores o coloque marcos de referencia, con el fin de garantizar que permanezcan con precisión en hologramas anclados.  Representar un holograma en sistema de coordenadas de un delimitador le proporciona la posición más precisos para esa holograma en un momento dado. Esto incluye a costa de pequeños ajustes con el tiempo a la posición del holograma, como el sistema continuamente cambiará en su lugar en relación con el mundo real.
+Un delimitador espacial representa un punto importante en el mundo del cual el sistema debe realizar un seguimiento a lo largo del tiempo. Cada delimitador tiene un [sistema de coordenadas](coordinate-systems.md) que se ajusta según sea necesario en función de otros delimitadores o marcos de referencia para garantizar que los hologramas delimitados permanecen exactamente en su sitio.  Representar un holograma en un sistema de coordenadas de un delimitador proporciona la posición más precisa de ese holograma en cualquier momento. Esto supone tener que realizar pequeños ajustes con el tiempo en la posición del holograma, ya que el sistema lo devuelve continuamente a su posición con relación al mundo real.
 
-También puede conservar y compartir los anclajes espaciales entre sesiones de aplicación y en todos los dispositivos:
-* Guardando delimitadores espaciales locales en el disco y carga de nuevo más tarde, la aplicación puede analizar la misma ubicación en el mundo real en varias sesiones de aplicación en un único dispositivo HoloLens.
-* Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure espacial delimitadores</a> para crear un anclaje en la nube, la aplicación puede compartir un anclaje espacial entre varios HoloLens, dispositivos iOS y Android. Al tener cada dispositivo representar un holograma utilizando el mismo delimitador espacial, todos los usuarios verán el holograma aparecen en el mismo lugar en el mundo real.  Esto permite experiencias compartidas en tiempo real.
-* También puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure espacial delimitadores</a> para la persistencia holograma asincrónica a través de dispositivos Android, iOS y HoloLens.  Al compartir un anclaje espacial en la nube duraderas, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes entre sí al mismo tiempo.
+También permite conservar y compartir los delimitadores espaciales en sesiones de aplicación y en todos los dispositivos:
+* Al guardar los delimitadores espaciales locales en el disco y volverlos a cargar más tarde, la aplicación puede detectar la misma ubicación en el mundo real en varias sesiones de aplicación en un único dispositivo HoloLens.
+* Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para crear un delimitador en la nube, la aplicación puede compartir un delimitador espacial entre varios dispositivos HoloLens, iOS y Android. Con la representación de un holograma mediante el mismo delimitador espacial en cada dispositivo, los usuarios verán el holograma aparecer en el mismo lugar en el mundo real.  Esto permite compartir experiencias en tiempo real.
+* También se puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para la persistencia de hologramas asincrónicos en dispositivos Android, iOS y HoloLens.  Al compartir un delimitador espacial en la nube duradera, varios dispositivos pueden observar el mismo holograma persistente a lo largo del tiempo, aunque los dispositivos no estén presentes juntos simultáneamente.
 
-Para experiencias de escala permanente o sala de escala para auriculares escritorio anclado a red que permanecerán dentro de un diámetro de 5 metros, generalmente sólo se pueden usar el [fase marco de referencia](coordinate-systems.md#stage-frame-of-reference) en lugar de los anclajes de espaciales, que proporciona un único sistema de coordenadas en el que se va a representar todo el contenido. Sin embargo, si la aplicación se va a permitir que los usuarios consultar más allá de 5 metros en HoloLens, quizás funcionando a lo largo de toda una planta de un edificio, necesitará espaciales delimitadores para mantener estable de contenido.
+Cuando se permanezca de pie o en una sala con auriculares de escritorio conectados que vayan a permanecer en un diámetro de 5 metros, generalmente basta con usar el [marco del escenario de referencia](coordinate-systems.md#stage-frame-of-reference) en lugar de delimitadores espaciales, siempre que proporcione un sistema de coordenadas donde representar el contenido. Sin embargo, si la aplicación va a permitir que los usuarios se alejen más de 5 metros de HoloLens, como en toda una planta de un edificio, necesitará delimitadores espaciales para mantener el contenido estable.
 
-Mientras que los anclajes espaciales son excelentes para hologramas que deben permanecer fijos en el mundo, una vez que se coloca un delimitador, no se puede mover. Existen alternativas a los delimitadores que son más apropiadas para hologramas dinámicos que se deben etiquetar junto con el usuario. Es mejor colocar hologramas dinámicas mediante un marco estático de referencia (la base de las coordenadas del mundo de Unity) o un marco de referencia adjunta.
+Aunque los delimitadores espaciales son estupendos para los hologramas que deben permanecer fijos en el mundo, una vez colocados, no se pueden mover. Para los hologramas dinámicos que deben etiquetarse junto con el usuario existen otras alternativas adecuadas. Es mejor colocar hologramas dinámicos mediante un marco estático de referencia (la base de las coordenadas del mundo de Unity) o un marco de referencia adjunto.
 
 ## <a name="best-practices"></a>Procedimiento recomendado
 
-Estas directrices de anclaje espacial le ayudarán a representar hologramas estables que realizar un seguimiento preciso del mundo real.
+Estas directrices de delimitación espacial te ayudarán a representar hologramas estables que realizan un seguimiento preciso del mundo real.
 
-### <a name="create-spatial-anchors-where-users-place-them"></a>Crear delimitadores espaciales donde los usuarios colocarlos
+### <a name="create-spatial-anchors-where-users-place-them"></a>Crear delimitadores espaciales donde los usuarios los colocan
 
-La mayoría de los casos, los usuarios deben ser las explícitamente colocar delimitadores espaciales.
+En la mayoría de los casos, los usuarios deben ser los que coloquen los delimitadores espaciales explícitamente.
 
-Por ejemplo, en HoloLens, una aplicación puede forman una intersección con el usuario [que mirar](gaze.md) de trazado de rayos con el [asignación espacial](spatial-mapping.md) malla para permitir al usuario decidir dónde colocar un holograma. Cuando el usuario puntea para colocar ese holograma, cree un anclaje espacial en el punto de intersección y, a continuación, coloque el holograma en el origen del sistema de coordenadas del anclaje.
+Por ejemplo, en HoloLens, una aplicación forma una intersección con la [mirada](gaze.md) del usuario con la malla de [asignación espacial](spatial-mapping.md) para que este pueda decidir dónde colocar un holograma. Cuando el usuario puntea para colocar ese holograma, debes crear un delimitador espacial en la intersección y colocar el holograma en el origen del sistema de coordenadas del delimitador.
 
-Delimitadores espaciales locales son fáciles y eficaces para crear y el sistema consolidarán sus datos internos si varios delimitadores pueden compartir sus datos de sensor subyacente. Normalmente, debe crear un nuevo anclaje de espacial local para cada holograma que un usuario coloca explícitamente, excepto en los casos descritos a continuación, como grupos rígidos de hologramas.
+Los delimitadores espaciales locales se crean de manera sencilla y eficaz, y el sistema consolidará sus datos internos en caso de que varios delimitadores compartan datos de sensor subyacentes. En general debes crear un delimitador espacial local para cada holograma que un usuario coloque explícitamente, excepto en los casos descritos a continuación, como los grupos rígidos de hologramas.
 
-### <a name="always-render-anchored-holograms-within-3-meters-of-their-anchor"></a>Procesar siempre hologramas delimitados dentro de 3 metros de su delimitador
+### <a name="always-render-anchored-holograms-within-3-meters-of-their-anchor"></a>Procesar siempre hologramas delimitados en un radio de 3 metros a partir del delimitador
 
-Delimitadores espaciales estabilización su sistema de coordenadas cerca de origen del anclaje. Si representa más de 3 metros desde ese origen hologramas, esos hologramas pueden experimentar errores de posicionales apreciables en proporción a su distancia desde ese origen debido a efectos de la palanca arm. Esto funciona si el usuario es el acrónimo casi el delimitador, puesto que el holograma está lejos del usuario, lo que significa que el error de la holograma distante angular será pequeño. Sin embargo, si el usuario dirige a esa holograma distante, a continuación, será grande en su visión, hacer que los efectos de la palanca arm desde el origen de anclaje lejana bastante obvio.
+Los delimitadores espaciales estabilizan su sistema de coordenadas cerca del origen del delimitador. Si representas hologramas a más de 3 metros del origen, pueden experimentar errores de posición apreciables en proporción a su distancia desde el origen debido al efecto palanca. Esto funciona si el usuario permanece cerca del delimitador, ya que el holograma está también lejos del usuario, lo que significa que el error angular del holograma será reducido. Sin embargo, si el usuario se acerca al holograma, se agrandará a la vista y el efecto palanca del origen lejano del delimitador será bastante evidente.
 
-### <a name="group-holograms-that-should-form-a-rigid-cluster"></a>Hologramas de grupo que deben formar un clúster rígido
+### <a name="group-holograms-that-should-form-a-rigid-cluster"></a>Agrupar los hologramas que deban formar un clúster rígido
 
-Hologramas varios pueden compartir el mismo delimitador espacial si la aplicación espera que esas hologramas mantener relaciones fijas entre sí.
+Varios hologramas pueden compartir el mismo delimitador espacial si la aplicación espera que conserven una relación fija entre ellos.
 
-Por ejemplo, si está animando un sistema solar holográfico en una sala, es mejor asociar todos los objetos del sistema solar a un único delimitador en el centro, por lo que se muevan sin problemas entre sí. En este caso, es el sistema solar como un todo que está anclado, aunque sus partes componentes son mover dinámicamente en el delimitador.
+Por ejemplo, si vas a animar un sistema solar holográfico en una sala, es mejor unir todos los objetos de este en un delimitador en el centro de manera que se muevan despacio en relación los unos con los otros. En este caso, el sistema solar es como un todo delimitado, aunque sus componentes se muevan dinámicamente alrededor del delimitador.
 
-La clave observación para mantener la estabilidad holograma es seguir la regla de 3 metros de longitud anterior.
+El elemento clave para mantener la estabilidad del holograma es seguir la anterior regla de los 3 metros.
 
-### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>Representar hologramas altamente dinámicos mediante el marco estático de referencia en lugar de un anclaje espacial local
+### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>Representar hologramas muy dinámicos mediante el marco estático de referencia en lugar de usar un delimitador espacial local
 
-Si tiene un holograma altamente dinámico, como un carácter de caminar alrededor de la sala o una interfaz de usuario flotante que sigue a lo largo de la pared cerca del usuario, es mejor omitir delimitadores espaciales locales y procesar esos hologramas directamente en el sistema de coordenadas proporcionado por el [</C0>marcoestáticodereferencia<spanclass="notranslate">](coordinate-systems.md#stationary-frame-of-reference) (es decir, en Unity, lograr esto colocando hologramas directamente en coordenadas universales sin un WorldAnchor).</span> Hologramas en un marco estático de referencia pueden experimentar desfase cuando el usuario está lejos de ser el holograma, pero esto es menos probable que sean evidentes para hologramas dinámicas: el holograma es mover constantemente de todos modos, o su movimiento mantiene constantemente cerca del usuario , donde se minimizará el desfase.
+Si tienes un holograma muy dinámico, como un personaje que pasea por la sala o una IU flotante que sigue al usuario por la pared, lo mejor es pasar de los delimitadores espaciales locales y representar los hologramas directamente en el sistema de coordenadas del [marco estático de referencia](coordinate-systems.md#stationary-frame-of-reference) (por ejemplo, en Unity, esto se consigue al colocar los hologramas directamente en coordenadas reales sin WorldAnchor). Los hologramas en un marco estático de referencia pueden experimentar desfase cuando el usuario está lejos estos, pero se notará menos con los dinámicos: o bien, el holograma se mueve constantemente de todas formas, o bien, su movimiento lo mantiene cerca del usuario y el desfase es mínimo.
 
-Un caso interesante de hologramas dinámicos es un objeto que se anima desde un sistema de coordenadas anclado a otro. Por ejemplo, podría tener dos castillos 10 metros, y cada uno en su propio delimitador espacial, con un castillo desencadenando una bala de cañón en el castillo otro. En este momento que se desencadena la bala de cañón, se puede representar en la ubicación adecuada en el marco estático de referencia, con el fin de coincidir con el cañón en sistema de coordenadas anclado del castillo primer. A continuación, puede seguir su trayectoria en el marco estático de referencia que desaparecerá 10 metros a través del aire. Como el bala de cañón alcanza lo otro castillo, decide mover en el castillo segundo anclado para permitir cálculos con cuerpos rígidos de que castle física del sistema de coordenadas.
+Un caso interesante de hologramas dinámicos es un objeto animado desde un sistema de coordenadas delimitado a otro. Por ejemplo, podrías tener dos castillos a una distancia de 10 metros entre sí, cada uno con su propio delimitador espacial, y que uno le disparara un cañonazo al otro. Al disparar el cañón, puedes representarlo en la ubicación correcta en el marco estático de referencia de manera que coincida con el cañón del sistema de coordenadas delimitado del primer castillo. Después, seguirá su trayectoria de 10 metros por el aire en el marco estático de referencia. Cuando la bala alcance el otro castillo, puedes elegir moverla al sistema de coordenadas delimitado del segundo castillo para permitir cálculos físicos con los cuerpos rígidos de allí.
 
-Si va a compartir un holograma altamente dinámico en todos los dispositivos, deberá elegir algún delimitador espacial de la nube para que actúe como su elemento primario, como estático marcos de referencia no se pueden compartir entre dispositivos.  Sin embargo, en este caso, debe asegurarse de que ya sea el holograma dinámico o los dispositivos de visualización permanecen dentro de radius de 3 metros del anclaje, para garantizar que el holograma aparece estable en todos los dispositivos.
+Si vas a compartir un holograma muy dinámico entre dispositivos, deberás elegir algún delimitador espacial de la nube para que actúe como elemento primario, ya que los marcos estáticos de referencia no se pueden compartir entre dispositivos.  Sin embargo, en este caso,para garantizar que el holograma aparece estable en todos los dispositivos, debes asegurarte de que el holograma dinámico o los dispositivos que lo vean permanecen en el radio de 3 metros del delimitador.
 
 ### <a name="avoid-creating-a-grid-of-spatial-anchors"></a>Evitar la creación de una cuadrícula de delimitadores espaciales
 
-Es posible que vea tentado a que la aplicación se coloque una cuadrícula normal de delimitadores espaciales cuando el usuario, realizar la transición objetos dinámicos de anclaje anclaje a medida que se mueven. Sin embargo, esto implica una gran cantidad de administración para su aplicación, sin la ventaja de los datos del sensor profundo que el propio sistema mantiene internamente. En estos casos, normalmente obtendrá mejores resultados con menos esfuerzo colocando sus hologramas en el marco estático de referencia, como se describe en la sección anterior.
+Quizá te gustaría que la aplicación desplegara una cuadrícula normal de delimitadores espaciales según el usuario deambula para mover los objetos dinámicos de un delimitador a otro a su paso. Sin embargo, esto implica un gran trabajo de administración para la aplicación y se perdería la ventaja de los datos de sensor detallados que el sistema mantiene internamente. En estos casos se suelen obtener mejores resultados con menor esfuerzo si se colocan los hologramas en el marco estático de referencia, tal y como se describe en la sección anterior.
 
-Al colocar previamente un conjunto de delimitadores espacial de la nube en torno a un espacio estático, considere la posibilidad de colocar los delimitadores espaciales en las ubicaciones de la claves hologramas se encontrará con el usuario por el principio anterior, en lugar de crear una cuadrícula de delimitadores arbitraria.  Esto garantiza que obtendrá máxima estabilidad para esos hologramas claves.
+Al colocar previamente un conjunto de delimitadores espaciales de la nube en torno a un espacio estático, debes considerar la posibilidad de colocarlos en las posiciones de los hologramas clave que el usuario se encontrará según el principio anterior, en lugar de crear una cuadrícula de delimitadores arbitraria.  Esto garantiza la máxima estabilidad de esos hologramas clave.
 
-### <a name="release-local-spatial-anchors-you-no-longer-need"></a>Versión locales delimitadores espaciales que ya no necesita
+### <a name="release-local-spatial-anchors-you-no-longer-need"></a>Liberar los delimitadores espaciales locales que ya no se necesitan
 
-Mientras un anclaje espacial local está activo, el sistema dará prioridad a mantener en torno a los datos de sensor que está a punto de anclaje. Si ya no usa un delimitador espacial, stop, obtener acceso a su sistema de coordenadas. Esto permitirá que los datos de sensor subyacentes va a quitar según sea necesario.
+Mientras un delimitador espacial local esté activo, el sistema dará prioridad a mantener los datos de sensor circundantes. Si ya no usas un delimitador espacial, deja de acceder a su sistema de coordenadas para que los datos de sensor subyacentes se eliminen según proceda.
 
-Esto es especialmente importante para delimitadores locales que se haya guardado en el almacén de anclaje espacial. Los datos del sensor detrás de estos delimitadores se mantienen en torno a permanentemente para permitir que la aplicación buscar en futuras sesiones de aplicación, lo que reducirán el espacio disponible para realizar el seguimiento de otros delimitadores de anclaje. Conservar solo los delimitadores locales que deba buscar de nuevo en futuras sesiones y quitarlos de la tienda cuando ya no son significativos para el usuario.
+Esto es especialmente importante para los delimitadores locales que hayas guardado en el almacén de delimitadores espaciales. Los datos de sensor en los que se basan estos delimitadores se mantendrán permanentemente para que la aplicación encuentre el delimitador en futuras sesiones de la aplicación y así reducir el espacio necesario para el seguimiento de otros delimitadores. Conserva solo los delimitadores locales que necesites encontrar en futuras sesiones y elimínalos del almacén cuando ya no tengan sentido para el usuario.
 
-Para delimitadores espacial de la nube, puede escalar el almacenamiento según su escenario requiere.  Puede almacenar tantos delimitadores de la nube según sea necesario y liberarlas solo cuando sepa que los usuarios no necesitarán buscar hologramas en dicho delimitador nuevo.
+Para los delimitadores espaciales en la nube, el almacenamiento puede escalar según las necesidades del escenario.  Puedes almacenar tantos delimitadores en la nube como necesites y eliminarlos solo cuando sepas que los usuarios ya no los necesitarán para ubicar hologramas en ese delimitador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Persistencia en Unity](persistence-in-unity.md)
 * [Delimitadores espaciales en DirectX](coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
-* [Caso práctico: examinar los huecos en la realidad](case-study-looking-through-holes-in-your-reality.md)
+* [Case study - Looking through holes in your reality](case-study-looking-through-holes-in-your-reality.md) (Caso práctico: mirar por un agujero en tu realidad)

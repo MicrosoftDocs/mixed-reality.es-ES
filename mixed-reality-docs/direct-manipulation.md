@@ -1,147 +1,147 @@
 ---
-title: Manipulación directa con manos
-description: Información general sobre el modelo de entrada de la manipulación directa
+title: Manipulación directa con las manos
+description: Introducción al modelo de entrada mediante manipulación directa
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Mixto en realidad, mirada, mirada como destino, interacción, diseñar, manos cerca, HoloLens
+keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
 ms.openlocfilehash: 6e3512eab4070680c48ee8e95240a17e9925822f
-ms.sourcegitcommit: 5b4292ef786447549c0199003e041ca48bb454cd
-ms.translationtype: MT
+ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/05/2019
 ms.locfileid: "66402393"
 ---
-# <a name="direct-manipulation-with-hands"></a>Manipulación directa con manos
-La manipulación directa es un modelo de entrada que implica tocar hologramas directamente con las manos. La manipulación directa, el objetivo es que los objetos se comportan igual que en el mundo real. Botones que se pueden activar simplemente presionándolos, los objetos se pueden seleccionarlos contratiempos y contenido 2D se comporta como una pantalla táctil virtual.  Por este motivo, dirigir es fácil para los usuarios obtener información sobre la manipulación, así como de la diversión demasiado.  Se considera un "cerca de" modelo de entrada, lo que significa que está concebida para interactuar con el contenido que está dentro de brazos llegar.
+# <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
+La manipulación directa es un modelo de entrada de datos que implica tocar hologramas directamente con las manos. El objetivo de la manipulación directa es que los objetos se comporten exactamente igual que lo hacen en el mundo real. Para activar los botones no hay más que presionarlos, para elegir los objetos no hay más que agarrarlos y el contenido 2D se comporta como una pantalla táctil virtual.  Por eso a los usuarios les resulta muy fácil y divertido aprender la manipulación directa.  Se considera un modelo de entrada "cercano", lo que significa que se usa con preferencia para interactuar con contenido que está al alcance de los brazos.
 
-Manipulación directa es la prestación de la base, lo que significa que es fácil de usar. No hay ningún gestos simbólicos a enseñar a los usuarios. Todas las interacciones se basan en un elemento visual que puede tocar ni tomar.
+La manipulación directa utiliza prestaciones, lo que significa que es fácil de usar. No hay que enseñar ningún gesto simbólico a los usuarios. Todas las interacciones se crean en torno a un elemento visual que se puede tocar o agarrar.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 
-| Modelo de entrada | [HoloLens (gen 1)](hololens-hardware-details.md) | HoloLens 2 |[Inmersivos](immersive-headset-hardware-details.md)|
+| Modelo de entrada | [HoloLens (1ª generación)](hololens-hardware-details.md) | HoloLens 2 |[Cascos envolventes](immersive-headset-hardware-details.md)|
 |:-------- | :-------| :--------| :------------|
-| Manipulación directa con manos | ❌ No compatible | ✔️ Recomendado | ➕ Una alternativa, [elija y confirme con manos](point-and-commit.md) se recomienda.
+| Manipulación directa con las manos | ❌ No se admite | ✔️ Se recomienda | ➕ Una alternativa, se recomienda [apuntar y confirmar con las manos](point-and-commit.md).
 
-Manipulación directa es un modelo de entrada principal en HoloLens 2 y usa el nuevo sistema de seguimiento de la mano articulado. El modelo de entrada también está disponible en inmersivos mediante el uso de los controladores de movimiento, pero no se recomienda como medio principal de interacción fuera de la manipulación del objeto.  Dirigir manipluation no está disponible en HoloLens (gen 1).
+La manipulación directa es un modelo de entrada principal de HoloLens 2 y usa el nuevo sistema articulado de seguimiento de la mano. El modelo de entrada también está disponible en los cascos envolventes mediante el uso de controladores de movimiento, pero no se recomienda como medio principal de interacción fuera de la manipulación de objetos.  La manipulación directa no está disponible en HoloLens (1ª generación).
 
 
-## <a name="collidable-fingertip"></a>Yema collidable
+## <a name="collidable-fingertip"></a>Dedo de colisión
 
-En HoloLens 2, se reconoce manos real del usuario y se interpretan como modelos de esqueleto mano izquierda y derecha. Para implementar la idea de tocar hologramas directamente con las manos, idealmente, 5 colisionadores se podrían conectar a 5 alcance de cada modelo de esqueleto de la mano. Sin embargo, en la práctica, debido a la falta de comentarios al tacto, 10 alcance collidable provocó colisiones inesperadas e impredecibles con hologramas. 
+En HoloLens 2, se reconocen las manos reales del usuario y se interpretan como modelos óseos de las manos derecha e izquierda. Para aplicar la idea de tocar los hologramas directamente con las manos, lo ideal sería poder acoplar un colisionador a cada dedo del modelo óseo de cada mano. Sin embargo, en la práctica, dada a la falta de información procedente del tacto, diez dedos de colisión provocaron colisiones inesperadas e impredecibles con los hologramas. 
 
-Por lo tanto, se recomienda para poner solo un colisionador en cada dedo índice. El alcance del índice collidable todavía puede actuar como puntos de toque activa para los gestos de toque diverso que implican otro dedo, por ejemplo, presione un dedo 1, 1-dedo tap, presione un dedo 2 y 5 dedo press, tal como se muestra en la imagen siguiente.
+De ahí que se sugiera colocar solo un colisionador en cada dedo índice. Los dedos índice de colisión se pueden seguir usando como puntos táctiles activos para diversos gestos táctiles que implican otros dedos, como por ejemplo, presionar con un dedo, pulsar con un dedo, presionar con dos dedos y presionar con cinco dedos, como se muestra en la imagen siguiente.
 
-![Imagen de la yema del dedo collidable](images/Collidable-Fingertip-720px.jpg)
+![Imagen de dedo de colisión](images/Collidable-Fingertip-720px.jpg)
 
-### <a name="sphere-collider"></a>Colisionador esfera
+### <a name="sphere-collider"></a>Colisionador esférico
 
-En lugar de una forma genérica aleatoria, se recomienda usar un colisionador esfera y para representar visualmente para proporcionar indicaciones mejores para dirigirse a casi. Diámetro de la esfera debe coincidir con el grosor del dedo índice para aumentar la precisión de toque. Será fácil recuperar la variable de grosor dedo mediante una llamada a la API de mano.
+En lugar de una forma genérica aleatoria, se recomienda usar un colisionador esférico y representarlo visualmente para proporcionar indicaciones mejores para los objetivos cercanos. Para aumentar la precisión del toque, el diámetro de la esfera debe coincidir con el grosor del dedo índice. Será fácil recuperar la variable de grosor del dedo, solo es preciso llamar a la API de mano.
 
-### <a name="fingertip-cursor"></a>Cursor de la yema del dedo
+### <a name="fingertip-cursor"></a>Cursor de dedo
 
-Además de representar una esfera de la yema del dedo índice collidable, hemos creado una solución avanzada, cursor yema, para lograr una mejor experiencia orientado a cerca de interactivamente. Es un cursor en forma de anillo asociado en la yema del dedo índice. Según la proximidad, dinámicamente reacciona a un destino en términos de orientación y el tamaño como se detalla a continuación:
+Además de representar una esfera de colisión en el dedo índice, hemos creado una solución avanzada, el cursor de dedo, para llegar mejor a objetivos cercanos de forma interactiva. Es un cursor en forma de anillo acoplado al dedo índice. En función de la proximidad, reacciona dinámicamente a un destino en términos de orientación y tamaño como se detalla a continuación:
 
-* Cuando se mueve un dedo índice hacia un holograma, el cursor siempre es parecido a la superficie del holograma y gradualmente reduce su tamaño.
-* Tan pronto como el dedo toque la superficie, el cursor se reduce en un punto y emite un evento de toque.
+* Cuando un dedo índice se mueve hacia un holograma, el cursor está siempre paralelo a la superficie del holograma y su tamaño se reduce gradualmente en consecuencia.
+* En cuanto el dedo toca la superficie, el tamaño del cursor se reduce hasta convertirse en un punto y emite un evento de toque.
 
-Con la información interactiva, los usuarios puedan lograr alta precisión cerca de destinatarios de tareas, como desencadenar un hipervínculo en el contenido web o al presionar un botón, como se muestra a continuación. 
+Con la información interactiva, los usuarios pueden realizar tareas en objetivos cercanos de forma muy precisa, como desencadenar un hipervínculo en contenido web o presionar un botón, como se muestra a continuación. 
 
-![Imagen del cursor yema del dedo](images/Fingertip-Cursor-720px.jpg)
+![Imagen de cursor de dedo](images/Fingertip-Cursor-720px.jpg)
 
-## <a name="bounding-box-with-proximity-shader"></a>Cuadro de límite con el sombreador de proximidad
+## <a name="bounding-box-with-proximity-shader"></a>Rectángulo de selección con sombreador de proximidad
 
-Holograma de sí mismo también requiere la capacidad de proporcionar comentarios visuales y de audio para compensar la falta de comentarios al tacto. Para eso, generamos el concepto de un rectángulo con el sombreador de proximidad. Un cuadro de límite es una superficie mínima volumétrica que rodea a un objeto 3D. El rectángulo tiene un mecanismo de representación interactiva denominado a sombreador de proximidad. Se comporta el sombreador de proximidad:
+El propio holograma también requiere la capacidad de proporcionar información visual y sonora para compensar la falta de información táctil. Con ese fin generamos el concepto de rectángulo de selección con sombreador de proximidad. Un rectángulo de selección es un área volumétrica mínima que rodea a un objeto 3D. El rectángulo de selección tiene un mecanismo de representación interactivo denominado sombreador de proximidad. Así es como se comporta el sombreador de proximidad:
 
-* Cuando el dedo índice está dentro del intervalo, se convierte un foco yema del dedo en la superficie del cuadro de límite.
-* Cuando se aproxime la yema del dedo a la superficie, destacados condensa según corresponda.
-* Tan pronto como la yema del dedo toque la superficie, todo el rectángulo de selección cambia el color o generar un efecto visual para reflejar el estado de toque.
-* Mientras tanto, se puede activar un efecto de sonido para mejorar los comentarios de visual táctil.
+* Cuando el dedo índice está dentro del alcance, se proyecta un foco con forma de dedo en la superficie del rectángulo de selección.
+* Cuando el dedo se acerca a la superficie, el foco se condensa en consecuencia.
+* En cuanto el dedo toca la superficie, todo el rectángulo de selección cambia de color o se genera un efecto visual que refleje dicho estado.
+* Además, se puede activar un efecto de sonido que mejore la información visual del toque.
 
-![Cuadro de límite con la imagen del sombreador de proximidad](images/Bounding-Box-With-Proximity-Shader-720px.jpg)
+![Imagen de rectángulo de selección con sombreador de proximidad](images/Bounding-Box-With-Proximity-Shader-720px.jpg)
 
-## <a name="pressable-button"></a>Botón pressable
+## <a name="pressable-button"></a>Botón presionable
 
-Con el dedo collidable, los usuarios ahora están listos para interactuar con el componente holográfico muy fundamental de la interfaz de usuario, botón pressable. Un botón pressable es un holográfica adaptada de presionar el dedo directa. Nuevamente, debido a la falta de comentarios al tacto, un botón pressable proporciona dos mecanismos para abordar problemas relacionados con comentarios al tacto.
+Con el dedo de colisión, los usuarios ya están listos para interactuar con el componente fundamental de la interfaz de usuario holográfica, el botón que se puede pulsar. Un botón presionable es un botón holográfico adaptado a la presión directa del dedo. Una vez más, debido a la falta de información táctil, el botón presionable cuenta con un par de mecanismos para abordar los problemas relacionados con la información táctil.
 
-* El primer mecanismo es un rectángulo con el sombreador de proximidad, detallado en la sección anterior. Sirve para proporcionar un mejor sentido de proximidad a los usuarios enfocar y asegúrese de contacto con un botón.
-* La segunda es la depresión. Crea sensación de prensa, después de un dedo pone en contacto con el botón. El mecanismo es que el botón se mueve estrechamente con el dedo en el eje de profundidad. El botón puede activarse cuando alcanza una profundidad designada (al presionar) o se sale de la profundidad (en lanzamiento) después de pasar a través de él.
-* El efecto de sonido se debe agregar para mejorar los comentarios, cuando se activa el botón.
+* El primer mecanismo es un rectángulo de selección con sombreador de proximidad, del que se ha proporcionado la información pertinente en la sección anterior. Sirve para mejorar la sensación de proximidad a los usuarios a la hora de acercarse y entrar en contacto con un botón.
+* El segundo es la pulsación. Crea sensación de pulsación después de un dedo entra en contacto con el botón. El mecanismo es que el botón se mueve estrechamente junto con el dedo por el eje de profundidad. El botón se puede desencadenar cuando se alcanza una profundidad designada (al presionar) o se sale de dicha profundidad (al soltar) después de atravesarlo.
+* El efecto de sonido se debe agregar para mejorar la información, cuando se desencadena el botón.
 
-![Imagen del botón pressable](images/Pressable-Button-720px.jpg)
+![Imagen de botón presionable](images/Pressable-Button-720px.jpg)
 
-## <a name="2d-slate-interaction"></a>Interacción de pizarra 2D
+## <a name="2d-slate-interaction"></a>Interacción con una tableta táctil 2D
 
-Una pizarra 2D es un contenedor holográfico hospedar contenido de la aplicación 2D, como explorador web. El concepto de diseño para interactuar con una pizarra 2D a través de la manipulación directa es aprovechar el modelo mental de interactuar con una pantalla táctil físico.
+Una tableta táctil 2D es un contenedor holográfico que hospeda contenido de aplicaciones 2D, como un explorador web. El concepto de diseño para interactuar con una tableta táctil 2D mediante la manipulación directa es aprovechar el modelo mental de interactuar con una pantalla táctil física.
 
-Para interactuar con el contacto Pizarra:
+Para interactuar con el contacto de la tableta táctil:
 
-* Utilice un dedo índice presionar un botón o un hipervínculo.
-* Utilice un dedo índice desplazar una pizarra contenido hacia arriba y abajo.
-* Los usuarios usar dos dedos de índice para aumentar y reducir el contenido de pizarra según movimiento relativo de los dedos.
+* Utiliza el dedo índice para presionar un botón o un hipervínculo.
+* Utiliza el dedo índice para desplazar el contenido de la tableta táctil hacia arriba y abajo.
+* Los usuarios utilizan los dos dedos índice para acercar y alejar el contenido de la tableta táctil, en función del movimiento relativo de los dedos.
 
-![Imagen de pizarra 2D](images/2D-Slate-Interaction-720px.jpg)
+![Imagen de tableta táctil 2D](images/2D-Slate-Interaction-720px.jpg)
 
-Para manipular la 2D Pizarra propio:
+Para manipular la propia tableta táctil 2D:
 
-* Aborde las manos hacia las esquinas y bordes para revelar la factibilidad de manipulación más cercano.
-* Agarre la factibilidad de manipulación y realizar un escalado uniforme a través de las prestaciones de la esquina y reflujo a través de las prestaciones de edge.
-* Arrastre el holobar en la parte superior de la Pizarra 2D, lo que le permite mover la Pizarra toda.
+* Acerca las manos a las esquinas y bordes para mostrar las prestaciones de manipulación más cercanas.
+* Agarra las prestaciones de manipulación y realiza un escalado uniforme mediante las prestaciones de la esquina y el reflujo mediante las prestaciones del borde.
+* Arrastra la barra holográfica de la parte superior de la tableta táctil 2D para mover toda la tableta táctil.
 
-![Imagen de pizarra manipulación](images/Manipulate-2d-slate-720px.jpg)
+![Imagen de manipulación de la tableta táctil](images/Manipulate-2d-slate-720px.jpg)
 
-## <a name="3d-object-manipulation"></a>Manipulación del objeto 3D
+## <a name="3d-object-manipulation"></a>Manipulación de objetos 3D
 
-HoloLens 2 permite que permite a los usuarios habilitan sus manos dirigir manipular objetos 3D hologramphic aplicando un cuadro de límite para cada objeto 3D. El cuadro de límite proporciona una mejor percepción de profundidad a través de su sombras de proximidad. Con el cuadro de límite, hay dos enfoques de diseño para la manipulación del objeto 3D.
+HoloLens 2 permite a los usuarios habilitar sus manos para la manipulación directa de objetos holográficos 3D mediante la aplicación de un rectángulo de selección a cada objeto 3D. El rectángulo de selección proporciona una mejor percepción de la profundidad gracias a su sombreador de proximidad. Con el rectángulo de selección, hay dos enfoques de diseño para la manipulación de objetos 3D.
 
-### <a name="affordance-based-manipulation"></a>Manipulación de prestación
+### <a name="affordance-based-manipulation"></a>Manipulación con prestaciones
 
-Esto le permite manipular el objeto 3D a través de un cuadro de límite y la factibilidad de manipulación alrededor de ella. Tan pronto como parte de un usuario está a punto de un objeto 3D, se revelan el cuadro de límite y la prestación más cercano. Los usuarios pueden tomar el cuadro de límite para mover todo el objeto, la factibilidad de borde se va a girar y las prestaciones de la esquina para escalar de manera uniforme.
+Te permite manipular el objeto 3D a través de un rectángulo de selección y las prestaciones de manipulación que hay a su alrededor. En cuanto la mano de un usuario esté cerca de un objeto 3D, se mostrarán el rectángulo de selección y la prestación más cercana. Los usuarios pueden agarrar el rectángulo de selección para mover todo el objeto, las prestaciones del borde para girarlo y las prestaciones de la esquina para escalarlo de forma uniforme.
 
-![Imagen de manipulación del objeto 3D](images/3D-Object-Manipulation-720px.jpg)
+![Imagen de manipulación de objetos 3D](images/3D-Object-Manipulation-720px.jpg)
 
-### <a name="non-affordance-based-manipulation"></a>No prestación en función de manipulación
+### <a name="non-affordance-based-manipulation"></a>Manipulación sin prestaciones
 
-En este mecanismo, no se asocia ninguna prestación en el cuadro de límite. Los usuarios pueden revelar sólo el rectángulo de selección y luego interactuar directamente con él. Si el cuadro de límite se obtiene con una mano, la traslación y rotación del objeto se asocian a movimiento y la orientación de la mano. Cuando el objeto se obtiene con dos manos, los usuarios pueden trasladar, escalar y girarlo según los movimientos relativos de dos manos.
+En este mecanismo, no hay prestaciones conectadas al rectángulo de selección. Los usuarios solo pueden mostrar el rectángulo de selección e interactuar directamente con él. Si el rectángulo de selección se agarra con una mano, la traslación y rotación del objeto se asocian con el movimiento y la orientación de la mano. Cuando el objeto se agarra con dos manos, los usuarios pueden trasladarlo, escalarlo y girarlo en función de los movimientos relativos de las dos manos.
 
-Manipulación concreta requiere la precisión, se recomienda que use **manipulación de prestación**, ya que proporciona un alto nivel de granularidad. Para la manipulación flexible, le recomendamos que usa **manipulación no prestación** es porque permite que las experiencias de instantáneas y divertidas.
+La manipulación específica requiere precisión, por lo que es aconsejable usar la **manipulación con prestaciones**, ya que proporciona un alto nivel de granularidad. Para la manipulación flexible, se recomienda usar la **manipulación sin prestaciones**, ya que permite experiencias instantáneas y divertidas.
 
-## <a name="instinctual-gestures"></a>Gestos instinctual
+## <a name="instinctual-gestures"></a>Gestos instintivos
 
-Con HoloLens (gen 1), se enseñan los usuarios un par gestos predefinidos, como Bloom y puntee en el aire. Para HoloLens 2, no pedimos a los usuarios que memorizar los gestos simbólicos. Todos los gestos de usuario necesarios, los usuarios deben interactuar con hologramas y el contenido, son instinctual. Es la forma de lograr gesto instinctual guiar a los usuarios para llevar a cabo movimientos con el diseño de prestaciones de la interfaz de usuario.
+Con HoloLens (1ª generación), enseñamos a los usuarios un par gestos predefinidos, como eclosionar y pulsar en el aire. En el caso de HoloLens 2, no pedimos a los usuarios que memoricen gestos simbólicos. Todos los gestos que los usuarios necesitan para interactuar con los hologramas y el contenido son instintivos. Para lograr gestos instintivos guía a los usuarios para que realicen los gestos mediante el diseño de prestaciones de la interfaz de usuario.
 
-Por ejemplo, si le animamos a que arrastre un objeto o un punto de control con pinch dos dedos, el objeto o el punto de control debe ser pequeño. Si queremos realizar cinco grab del dedo, el objeto o el punto de control debería ser relativamente grande. Al igual que los botones, un botón pequeño limitaría usuarios, haga clic con un solo dedo, mientras que un botón enorme insto a los usuarios presionen con sus palmas.
+Por ejemplo, si te animamos a arrastrar un objeto o un punto de control acercando dos dedos, tanto el objeto como el punto de control deben ser pequeño. Si queremos que el agarre lo realices con cinco dedos, el objeto o el punto de control debería ser relativamente grande. Al igual que los botones, un botón pequeño limitaría a los usuarios a presionarlo con un solo dedo, mientras que un botón enorme instaría a los usuarios a presionarlo con las palmas de las manos.
 
 ![](images/Instinctual-Gestures-720px.jpg)
 
-## <a name="symmetric-design-between-hands-and-6-dof-controllers"></a>Diseño simétrica entre manos y controladores GDL 6
+## <a name="symmetric-design-between-hands-and-6-dof-controllers"></a>Diseño simétrico entre las manos y 6 controladores DoF
 
-Es posible que haya observado que ahora hay parallels interacción que podemos dibujar entre manos en los controladores VR AR y movimiento. Las dos entradas pueden usarse para desencadenar manipulaciones en sus respectivos entornos. En el 2 de HoloLens, hacerlo y arrastre las manos de un works corta distancia mucho en la misma manera que el botón de agarre hace en los controladores de movimiento en WMR. Esto proporciona a los usuarios con la familiaridad de la interacción entre las dos plataformas y puede resultar útil si alguna vez decide portar tu aplicación de uno a otro.
+Es posible que hayas observado que ahora hay paralelos de interacción que podemos dibujar en AR y controladores de movimiento en VR. Las dos entradas pueden usarse para desencadenar manipulaciones directas en sus respectivos entornos. En HoloLens 2, la realización de las operaciones de agarrar y arrastrar con las manos a corta distancia funciona de forma muy parecida a como lo hace el botón de agarrar en los controladores de movimiento en WMR. Esto proporciona a los usuarios familiaridad en la interacción entre las dos plataformas y resulta muy útil si alguna vez decides portar una aplicación de una plataforma a la otra.
 
-## <a name="optimize-with-eye-tracking"></a>Optimizar el seguimiento de los ojos
+## <a name="optimize-with-eye-tracking"></a>Optimización con el seguimiento de los ojos
 
-Si funciona según lo previsto, pero puede volverse rápidamente también frustrante si no se puede mover la mano en cualquier parte ya sin desencadenar involuntariamente un holograma, puede sentirse mágica manipulación directa.
-Seguimiento de los ojos potencialmente pueden ayudar a identificar mejor lo que es la intención del usuario.
+Si funciona según lo previsto, la manipulación directa puede parecer mágica, pero también puede resultar frustrante si no se puede mover la mano a ningún lugar sin desencadenar involuntariamente un holograma.
+El seguimiento de los ojos puede ayudar a identificar mejor la intención del usuario.
 
-* **When**: Reducir falsamente desencadenar una respuesta de manipulación. Permite entender mejor lo que un usuario esté implicado actualmente con seguimiento de los ojos.
-Por ejemplo, imagine que está leyendo a través de un texto (informativo) holográfica al alcanzar otra vez para obtener la herramienta de trabajo reales.
+* **Cuándo**: se reduce falsamente, lo que desencadena una respuesta de manipulación. El seguimiento de los ojos permite saber mejor lo que hace un usuario en cada momento.
+Por ejemplo, imagina que estás leyendo un texto (con instrucciones) de una holografía cuando te dispones a agarrar tu herramienta del mundo real.
 
-Al hacerlo, accidentalmente mover la mano a través de algunos botones holográfica interactivos que incluso no vio antes (por ejemplo, era incluso fuera campo de visión del usuario en el (FOV)).
+Al hacerlo, accidentalmente mueves la mano por unos botones holográficos interactivos que no te habías percatado de que estaban ahí (hasta es posible que estuvieran fuera del campo de visión del usuario).
 
-  Para hacer el cuento corto: Si el usuario no ha visto un holograma durante un tiempo, pero se ha detectado un evento táctil o entender para él, es probable que el usuario realmente indebida interactuar con ese holograma.
+  Un resumen: si el usuario lleva un tiempo sin mirar un holograma, pero se ha detectado un evento de tocar o agarrar para él, es probable que el usuario no tuviera realmente intención de interactuar con el holograma.
 
-* **Cuál**:  Aparte de direccionamiento activaciones positivas falsas, otro ejemplo incluye la identificación de mejor qué hologramas para captar o echar un vistazo que no puede ser el punto de intersección precisa claro desde su perspectiva sobre todo si se colocan varias hologramas cerca de cada uno Otro.
+* **Cuál**:  además de solucionar activaciones positivas falsas, otro ejemplo incluye una mejor identificación de qué hologramas agarrar o usar, ya que es posible que el punto de intersección preciso no esté claro desde tu perspectiva, sobre todo si hay varios hologramas colocados unos cerca de otros.
 
-  Mientras que realizar un seguimiento de ojos en HoloLens 2 tiene una limitación determinada acerca de cómo con precisión puede determinar ocular a mirada, esto todavía puede ser muy útil para casi interacciones debido a la disparidad de profundidad al interactuar con la mano de entrada.  Esto significa que a veces es difícil determinar si la mano es detrás o delante un holograma precisamente por ejemplo a tomar un widget de manipulación.
+  Aunque en HoloLens 2 el seguimiento de los ojos tiene cierta limitación en la precisión con la que puede determinar la mirada con los ojos, puede resultar muy útil para las interacciones próximas debido a la disparidad de profundidad al interactuar con la entrada a mano.  Esto significa que a veces es difícil determinar si la mano está detrás o delante de un holograma, por ejemplo, para agarrar con precisión un widget de manipulación.
 
-* **Dónde**: Información de uso sobre lo que un usuario está viendo con quick - produce los gestos. Tome un holograma y aproximadamente lo meter hacia su destino previsto.  
+* **A dónde**: usa información acerca de lo que mira un usuario con gestos que se realizan rápidamente. Agarra un holograma y tíralo hacia su destino previsto.  
 
-    Aunque esto es posible que a veces funciona perfectamente, rápidamente realizar gestos de mano puede dar lugar destinos muy imprecisos. Esto es donde rastreo ocular podría ayudar a al inclinar la mano producir vector de vuelta a la posición deseada.
+    Aunque es posible que a veces esto funcione bien, la realización rápida de gestos con la mano puede dar lugar destinos muy imprecisos. Aquí es donde el seguimiento de los ojos puede ayudar para inclinar el vector que se lanza con la mano a la posición deseada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Apuntar y confirmar con las manos](point-and-commit.md)
