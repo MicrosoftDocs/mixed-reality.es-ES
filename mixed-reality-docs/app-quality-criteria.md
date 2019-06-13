@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: criterios de calidad de la aplicación, la realidad mixta mixto de aplicación de realidad
-ms.openlocfilehash: dfa1390190fad8d84982171dfbcfa101b20501dc
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750318"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024493"
 ---
 # <a name="app-quality-criteria"></a>Criterios de calidad de la aplicación
 
@@ -618,7 +618,7 @@ Un botón ha sido una metáfora utilizada para desencadenar un evento en el mund
 
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Texto en Unity](text-in-unity.md)
-* [Barra de la aplicación y cuadro delimitador](app-bar-and-bounding-box.md)
+* [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
 * [Comandos de voz](voice-design.md)
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales

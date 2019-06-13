@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, en realidad Virtual, VR, MR, Home, entornos personalizados, lugares, casa cliff, skyloft, usuario, crear
-ms.openlocfilehash: 8f5a3a1bdf5728260b0b7717c74a50f3356ca04a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
-ms.translationtype: HT
+ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829641"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024532"
 ---
 # <a name="add-custom-home-environments"></a>Agregar entornos de inicio personalizados
 
@@ -150,6 +150,5 @@ La ubicación de generación predeterminada se encuentra en 0,0,0 en el entorno.
 Cuando se crea el entorno personalizado, va a utilizar una simulación de representación acústica que no coincide con el espacio físico que ha creado. Sonido pueden proceder de las instrucciones incorrectas y puede parecer atenuarse. 
 
 ## <a name="see-also"></a>Vea también
-* [Navegar por las ventanas mixto realidad principal](#navigating-the-windows-mixed-reality-home.md)
 * [Windows mixto realidad conversor de recurso (en GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

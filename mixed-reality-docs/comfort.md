@@ -6,12 +6,12 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Diseño, la realidad mixta reconfortantes, 2 de HoloLens, HoloLens (gen 1)
-ms.openlocfilehash: 8dea3765f01a6a82fccc002d1cd5c7c9c77d0980
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
+ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974776"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024443"
 ---
 # <a name="comfort"></a>Comodidad
 
@@ -126,6 +126,8 @@ En primera persona-juego de disparos en videogames, muestra Heads-Up (arvense) p
 Mejorar la legibilidad óptima de texto puede ayudar a reducir fatiga visual y mantener la comodidad del usuario, especialmente en escenarios que requieren los usuarios puedan leer mientras se encuentra en un HMD o aplicaciones. Depende de legibilidad del texto en una variedad de factores incluyen diversas propiedades de presentación (por ejemplo, densidad de píxeles, brillo, contraste) lente propiedades (por ejemplo, aberración cromática) y las propiedades de fuente del texto (por ejemplo, la fuente específica características como el peso, espaciado, serifs, etc., color de fuente, color de fondo).  
 
 En general, se recomienda probar las aplicaciones específicas para mejorar la legibilidad y realizar los tamaños de fuente tan grande que sea viable para su comodidad. A continuación se ofrecen instrucciones generales como punto de partida para el desarrollo. Tenga en cuenta que se notifiquen todos los tamaños de fuente en grados de [ángulo visual](https://en.wikipedia.org/wiki/Visual_angle) en lugar de tamaños específicos de físicos, que ofrece información orientativa para cualquier distancia dentro de la zona de colocación holograma óptimo porque tiene en cuenta el tamaño de la texto y la distancia aparece en el Visor. 
+
+Consulte [tipografía](typography.md) y [texto en Unity](text-in-unity.md) páginas para obtener más instrucciones.
 
 ### <a name="guidance-for-holographic-devices"></a>Guía para dispositivos holográficas
 
