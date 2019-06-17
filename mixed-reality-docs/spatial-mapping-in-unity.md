@@ -1,17 +1,17 @@
 ---
 title: Asignación espacial en Unity
 description: Representación y chocar con la geometría del mundo real que le rodea en Unity.
-author: thetuvix
-ms.author: alexturn
+author: davidkline-ms
+ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, asignación espacial, representador, colisionador, malla, el análisis, componente
-ms.openlocfilehash: f938f5921cb2c06342a9ebcd376d690c10584df9
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148649"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
@@ -455,9 +455,9 @@ El archivo dll de la descripción almacena internamente el playspace como una cu
 Para obtener más información sobre el uso de la asignación espacial con el Kit de herramientas de realidad mixta v2, consulte el <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">sección reconocimiento espacial</a> de los documentos MRTK.
 
 ## <a name="see-also"></a>Vea también
-* [MR 230 espacial: Asignación espacial](holograms-230.md)
+* [MR Spatial 230: asignación espacial](holograms-230.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
-* [Sistemas de coordenadas en Unity](coordinate-systems-in-unity.md)
+* [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
 * <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a>
 * <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a>

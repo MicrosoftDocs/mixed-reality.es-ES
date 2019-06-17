@@ -3,15 +3,15 @@ title: Objeto interactuable
 description: Un botón ha sido una metáfora utilizada para desencadenar un evento en el mundo abstracto 2D. En el mundo tridimensional de realidad mixta, no tenemos que limitarse a este mundo de abstracción ya.
 author: cre8ivepark
 ms.author: jennyk
-ms.date: 02/24/2019
+ms.date: 06/06/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, experiencia de usuario
-ms.openlocfilehash: eea7eff6c591a9319b920936ce2be511cecb7496
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: b0397e00763f70e4caf55a84b6541085e56fafd4
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148731"
 ---
 # <a name="interactable-object"></a>Objeto interactuable
 
@@ -84,20 +84,51 @@ Para los objetos interactuable, es importante admitir opciones alternativas de i
 
 <img src="images/640px-interactibleobject-voicecommand.jpg" alt="Tooltip for the voice command" title="Información sobre herramientas para el comando de voz" width="350"><br/>*Información sobre herramientas para el comando de voz*
 
+## <a name="sizing"></a>Ajuste de tamaño
+Para asegurarse de que todos los objetos interactuable pueden fácilmente han tocado mediante los usuarios le sugerimos lo que garantiza el interactuable cumple un tamaño mínimo (suele medido en ángulo de grados visual) según la distancia que se encuentra el usuario. Ángulo de grados visual se basa en la distancia entre el usuario y el objeto y permanece constante, mientras que puede cambiar el tamaño físico de destino como la distancia de los cambios de usuario. Para determinar el tamaño físico necesario de un objeto basado en la distancia desde un seguro y el grado ángulo visual pruebe a usar una calculadora como: http://elvers.us/perception/visualAngle/
+
+A continuación se muestran las recomendaciones de tamaño mínimo de contenido interactuable
+
+### <a name="target-size-for-direct-hand-interaction"></a>Tamaño de destino para la interacción directa de mano
+| distancia | Ángulo de visión | Tamaño |
+|---------|---------|---------|
+| 45cm  | No menor que 2° | 1.6 1,6 cm |
+
+![Tamaño de destino para la interacción directa de mano](images/TargetSizingNear.jpg)<br>
+*Tamaño de destino para la interacción directa de mano*
+
+Al crear botones para la interacción directa, se recomienda es de un tamaño mínimo de cm de 3,2 x 3.2 para asegurarse de que existe espacio suficiente para contener un icono y potencialmente algún texto **
+
+| distancia | Tamaño mínimo |
+|---------|---------|
+| 45cm  | 3.2 x 3.2 cm |
+
+![Tamaño de destino para los botones](images/TargetSizingButtons.png)<br>
+*Tamaño de destino para los botones*
+
+
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Tamaño de ray mano del destino o interacción que mirar
+| distancia | Ángulo de visión | Tamaño |
+|---------|---------|---------|
+| 2m  | No menor que 1° | 3.5 3,5 cm |
+
+![Tamaño de ray mano del destino o interacción que mirar](images/TargetSizingFar.jpg)<br>
+*Tamaño de ray mano del destino o interacción que mirar*
+
 ## <a name="creating-interactable-object-with-mixed-reality-toolkit-mrtk"></a>Crear objeto interactuable con el Kit de herramientas de realidad mixta (MRTK)
 
 En el  **[Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede encontrar la serie de scripts de Unity y prefabricados que le ayudarán a crean objetos interactuable. Puede usarlas para crear objetos responder a distintos tipos de Estados de interacción de entrada.
 
-* **[Interactuable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)**
-* **[Botón](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)**
-* **[Escena de ejemplos de interacción de mano](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)**
+* [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html)
+* [Button](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* [Escena de ejemplos de interacción de mano](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
 
 Sombreador estándar del MixedRealityToolkit proporciona varias opciones, como **luz proximidad** que le ayudará a crear señales de audio y visuales.
-* **[Sombreador MRTK estándar](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)**
+* [Sombreador MRTK estándar](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Documentation/README_MRTKStandardShader.md)
 
 
 ## <a name="see-also"></a>Vea también
 
-* **[Cuadro de límite](app-bar-and-bounding-box.md)**
-* **[Colección de objetos](object-collection.md)**
-* **[Vallas publicitarias y tag-along](billboarding-and-tag-along.md)**
+* [cuadro de límite](app-bar-and-bounding-box.md)
+* [Colección de objetos](object-collection.md)
+* [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)

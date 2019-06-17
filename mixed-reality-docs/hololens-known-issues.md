@@ -6,20 +6,37 @@ ms.author: mazeller
 ms.date: 04/1/2019
 ms.topic: article
 keywords: solución de problemas, problema conocido, ayuda
-ms.openlocfilehash: a92ab52c899de44f9c5c8c86ebb6f9cd8433d395
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 2423c7292e453d97461c299e8bddfa063a29d3cd
+ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148694"
 ---
 # <a name="hololens-known-issues"></a>Problemas conocidos de HoloLens
 
 Esta es la lista actual de los problemas conocidos para desarrolladores que afectan a HoloLens. Busque aquí si observa un comportamiento extraño. Esta lista se mantendrán actualizada como se detectan nuevos problemas o se notifican o como problemas se solucionarán en futuras actualizaciones de software de HoloLens.
 
+## <a name="unable-to-connect-and-deploy-to-hololens-through-visual-studio"></a>No se puede conectar e implementar en HoloLens a través de Visual Studio
+
+>[!NOTE]
+>Última actualización: 14/6 a las 6 P.M. - emitir investigándose.
+
+Los equipos de HoloLens y Visual Studio se está investigando un problema que puede impedir que los usuarios se implementa en el dispositivo HoloLens a través de Visual Studio.
+ 
+Durante la fase de implementación, los usuarios notificar el siguiente mensaje de error, a pesar de los dispositivos HoloLens y máquina de desarrollador tener *modo de programador* habilitado:
+
+*DEP0100: Asegúrese de que ese dispositivo de destino tiene habilitado el modo de programador. No se pudo obtener una licencia de desarrollador en <device IP> debido al error 80004005.*
+ 
+**Solución**: 
+ 
+Los usuarios informan que restablecer el dispositivo resuelve el problema, pero no podemos garantizar que esto funcione en todos los casos. Puede encontrar instrucciones para restablecer el dispositivo [aquí](https://support.microsoft.com/en-us/help/13452/hololens-restart-reset-or-recover-hololens).
+ 
+Le proporcionaremos una actualización tan pronto como el problema es la causa de raíz. 
+
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemas de inicio de la Microsoft Store y aplicaciones en HoloLens
 
->[!IMPORTANT]
+>[!NOTE]
 >Última actualización: 4/2, @ 10 A.M. - problema resuelto. 
 
 Puede experimentar problemas al intentar iniciar la Microsoft Store y aplicaciones en HoloLens. Nos hemos determinado que el problema se produce cuando las actualizaciones de aplicaciones en segundo plano implementan una versión más reciente de los paquetes de framework en secuencias específicas, mientras que uno o varios de sus aplicaciones dependientes siguen en ejecución. En este caso, una actualización de aplicaciones automáticas entregada una nueva versión de .NET Native Framework (versión 10.0.25531 a 10.0.27413) provocó las aplicaciones que se ejecutan incorrectamente una actualización para todas las aplicaciones en ejecución el consumo de la versión anterior de framework.  El flujo de actualización de marco de trabajo es como sigue:-
@@ -74,7 +91,7 @@ Se recomienda usar un teclado Bluetooth para escribir las contraseñas largas.
 
 ## <a name="visual-studio"></a>Programa para la mejora
 * Consulte [instalar las herramientas de](install-the-tools.md) para la versión más actualizada de Visual Studio que se recomienda para el desarrollo de HoloLens.
-* Al implementar una aplicación desde Visual Studio en su HoloLens, verá el error: **No se puede realizar la operación solicitada en un archivo con una sección asignada por el usuario abierta. (Excepción de HRESULT: 0x800704C8)**. Si esto ocurre, vuelva a intentarlo y generalmente se realizará correctamente la implementación.
+* Al implementar una aplicación desde Visual Studio en su HoloLens, verá el error: **No se puede realizar la operación solicitada en un archivo con una sección asignada por el usuario abierta. (Excepción de HRESULT: 0x800704C8)** . Si esto ocurre, vuelva a intentarlo y generalmente se realizará correctamente la implementación.
 
 ## <a name="emulator"></a>Emulador
 * No todas las aplicaciones en la Microsoft Store son compatibles con el emulador. Por ejemplo, no son puede jugar en el emulador Conker Young y fragmentos.
