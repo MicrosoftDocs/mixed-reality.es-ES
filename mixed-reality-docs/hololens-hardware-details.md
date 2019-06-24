@@ -6,14 +6,14 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, componentes, sensores, tecnología, tecnología, anulación, desmontaje,
-ms.openlocfilehash: ddbce274a0573ab72e1ff7b523b6ac4b8fbb6ba2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 56b10fa9751c626578c697cd370347482a121b2a
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605690"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326203"
 ---
-# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (gen 1) los detalles de hardware
+# <a name="hololens-1st-gen-hardware-details"></a>HoloLens (Gen 1) los detalles de hardware
 
 ![Microsoft HoloLens](images/see-through-400px.jpg)
 
@@ -21,7 +21,7 @@ Microsoft HoloLens es equipo holográfica totalmente sin restricción primero de
 
 ## <a name="how-to-get-microsoft-hololens"></a>Cómo obtener Microsoft HoloLens
 
-Microsoft HoloLens está disponible para su compra como un tanto una Development Edition y una configuración de Commercial Suite (que incluye una garantía y las funciones empresariales para la administración de dispositivos y la seguridad se ha agregado). Si está en Norteamérica, también, puede alquilar HoloLens a través de un asociado.
+Microsoft HoloLens está disponible para su compra como un tanto una Development Edition y agregado de una configuración de Commercial Suite que incluye una garantía y enterprise de características de administración de dispositivos y la seguridad. Si está en Norteamérica, también, puede alquilar HoloLens a través de un asociado.
 
 [Haga clic aquí para obtener más detalles en comprar o alquilar Microsoft HoloLens](https://www.microsoft.com/hololens/buy).
 
@@ -78,11 +78,11 @@ Microsoft HoloLens está disponible para su compra como un tanto una Development
 * Unidad de procesamiento holográfica personalizada de Microsoft (HPU 1.0)
 
 ### <a name="weight"></a>Grosor
-* 579g
+* 579 g
 
 ### <a name="memory"></a>Memoria
-* Flash de 64GB
-* 2GB DE RAM
+* Flash de 64 GB
+* RAM de 2 GB
 
 ### <a name="whats-in-the-box"></a>Novedades en el cuadro
 * HoloLens Development Edition

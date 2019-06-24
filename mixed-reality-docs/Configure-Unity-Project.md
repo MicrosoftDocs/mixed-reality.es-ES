@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, mixto en realidad, desarrollo, introducción, nuevo proyecto
-ms.openlocfilehash: aad38474781fd78425d48034877122d36d9e3e93
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
+ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940744"
+ms.lasthandoff: 06/22/2019
+ms.locfileid: "67326092"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurar un nuevo proyecto de Unity para Windows Mixed Reality 
 
@@ -21,7 +21,7 @@ Si desea crear un nuevo proyecto de Unity sin importar el Kit de herramientas de
 
 ## <a name="per-project-settings"></a>Configuración por proyecto
 
-Para tener como destino Windows Mixed Reality, primero debe configurar su proyecto de Unity para exportar como una aplicación plataforma Universal de Windows:
+Para tener como destino Windows Mixed Reality, primero debe configurar su proyecto de Unity para exportar como una aplicación plataforma Universal de Windows: 
 1. Seleccione **archivo > configuración de compilación...**
 2. Seleccione **Universal Windows Platform** en la plataforma de lista y haga clic en **Cambiar plataforma**
 3. Establecer **SDK** a **10 Universal**
