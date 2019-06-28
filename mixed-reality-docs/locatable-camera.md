@@ -5,13 +5,13 @@ author: cdedmonds
 ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
-keywords: cámara, hololens, cámara de color, frontal accesibles desde
-ms.openlocfilehash: f661fc82fbeab9a870e8ccf7044c9bb375bed7e3
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+keywords: cámara, hololens, cámara de color, frontales, hololens, 2, cv, computer vision o estimación, marcadores, código qr, qr, fotos, vídeo
+ms.openlocfilehash: e4e7fce50ec2865650b6b7cbafa59af8819d220c
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326290"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415258"
 ---
 # <a name="locatable-camera"></a>Cámara localizable
 
@@ -21,7 +21,7 @@ HoloLens incluyen una cámara de mundo orientado montada en la parte frontal del
 
 ### <a name="hololens-first-generation"></a>HoloLens (primera generación)
 
-* Cámara de fotografías y vídeo (PV) enfoque fijo, con el balance de blanco automático, exposición automática y canalización de procesamiento de imagen completa
+* Cámara de fotografías y vídeo (PV) enfoque fijo con balance de blanco automático, exposición automática y la canalización de procesamiento de imagen completa.
 * LED de privacidad en blanco accesible desde el mundo se iluminará cada vez que la cámara está activa
 * La cámara admite los siguientes modos (todos los modos son relación de aspecto 16:9) en fps 5, 15, 20, 24 y 30:
 
@@ -35,20 +35,32 @@ HoloLens incluyen una cámara de mundo orientado montada en la parte frontal del
 
 ### <a name="hololens-2"></a>HoloLens 2
 
-* Cámara de fotografías y vídeo (PV) enfoque automático, con el balance de blanco automático, exposición automática y canalización de procesamiento de imagen completa
-* LED de privacidad en blanco accesible desde el mundo se iluminará cada vez que la cámara está activa
-* La cámara admite los siguientes modos (todos los modos de vídeo son relación de aspecto 16:9):
+* Cámara de fotografías y vídeo (PV) enfoque automático con balance de blanco automático, exposición automática y la canalización de procesamiento de imagen completa.
+* LED de privacidad en blanco accesible desde el mundo se iluminará cada vez que la cámara está activa.
+* HoloLens 2 admite los perfiles de la cámara. Obtenga información sobre cómo [detectar y seleccionar las capacidades de cámara](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/camera-profiles).
+* La cámara admite los siguientes perfiles y las resoluciones (todos los modos de vídeo son relación de aspecto 16:9):
+  
+  | Perfil                                         | Vídeo     | Vista previa   | Todavía     | Velocidades de fotogramas | Campo horizontal de visión (FOV-H) | Uso sugerido                             |
+  |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
+  | Heredado, BalancedVideoAndPhoto 0, 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64.69                            | Grabación de vídeo de alta calidad                |
+  | Heredado, BalancedVideoAndPhoto 0, 100             |           |           | 3904x2196 |             | 64.69                            | Captura de fotografías de alta calidad                  |
+  | BalancedVideoAndPhoto,120                       | 1952x1100 | 1952x1100 | 1952x1100 | 15,30       | 64.69                            | Escenarios de larga duración                     |
+  | BalancedVideoAndPhoto,120                       | 1504x846  | 1504x846  |           | 15,30       | 64.69                            | Escenarios de larga duración                     |
+  | VideoConferencing,100                           | 1952x1100 | 1952x1100 | 1952x1100 | 15,30,60    | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100                           | 1504x846  | 1504x846  |           | 5,15,30,60  | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 1920x1080 | 1920x1080 | 1920x1080 | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 1280x720  | 1280x720  | 1280x720  | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 1128x635  |           |           | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 960 x 540   |           |           | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 760x428   |           |           | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 640x360   |           |           | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 500x282   |           |           | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
+  | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 424x240   |           |           | 15,30       | 64.69                            | Videoconferencia, escenarios de larga duración |
 
-  >[!NOTE]
-  >Estos modos están sujetos a cambios antes de la disponibilidad general de HoloLens 2.
-
-  |  Vídeo  |  Vista previa  |  Todavía  |  Velocidades de fotogramas  |  Campo horizontal de visión (FOV-H) |  Uso sugerido | 
-  |----------|----------|----------|----------|----------|----------|
-  |  1920x1080 |  1920x1080 |  N/D |  30, 15 fps  |  54deg  |  (modo predeterminado con estabilización de vídeo) | 
-  |  N/D |  N/D |  3904X2196 |  N/D  |  64deg |  Imagen fija de mayor resolución | 
-  |  2272x1278 |  2272x1278 |  N/D |  30, 15 fps  |  64deg |  Resolución de sobrebarrido (relleno) antes de estabilización de vídeo | 
-  |  1952x1100 |  1952x1100 |  1952x1100  |  30, 15 fps  |  64deg |  Transmisión de alta calidad | 
-  |  1280x720 |  1280x720 |  N/D |  30, 15, fps 5  |  64deg |  Modo de baja energía o resolución de transmisión por secuencias y las tareas de procesamiento de imágenes | 
+>[!NOTE]
+>Los clientes pueden aprovechar [mixto captura realidad](mixed-reality-capture.md) vídeos o fotografías de la aplicación, que incluyen hologramas y estabilización de vídeo.
+>
+>Como desarrollador, existen consideraciones que debe tener en cuenta al crear la aplicación si desea buscar tan eficaz como sea posible al contenido de captura de un cliente. También puede habilitar (y personalizar) captura la realidad mixta de directamente dentro de la aplicación. Obtenga más información en [mixto captura realidad para los desarrolladores](mixed-reality-capture-for-developers.md).
 
 ## <a name="locating-the-device-camera-in-the-world"></a>Localización de la cámara del dispositivo en el mundo
 

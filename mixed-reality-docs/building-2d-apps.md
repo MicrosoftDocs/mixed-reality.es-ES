@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Aplicación 2D, UWP, la aplicación sin formato, HoloLens, envolventes auriculares con micrófono, modelo de aplicación, realizar una copia de botón, barra de la aplicación, PPP, resolución de escalado
-ms.openlocfilehash: 35a2e7774a79e35893821467f7e9ef8c004efa20
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602187"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414222"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Actualización de aplicaciones UWP 2D de realidad mixta
 
@@ -147,7 +147,7 @@ Vistas de 2D se representan con una barra de la aplicación por encima de su con
 
 **Título:** muestra el *displayname* del icono asociado a la instancia de aplicación
 
-**Botón Atrás:** provoca la *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* evento cuando se presiona. Visibilidad del botón Atrás se controla mediante  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)*.
+**Botón Atrás:** provoca la *[BackRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* evento cuando se presiona. Visibilidad del botón Atrás se controla mediante  *[SystemNavigationManager.AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* .
 
 ![Aplicación de interfaz de usuario de la barra en la vista de la aplicación 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *Aplicación de interfaz de usuario de la barra en la vista de la aplicación 2D*
@@ -180,6 +180,6 @@ Una vez que la aplicación está en funcionamiento, empaquetar la aplicación a 
 * [Gaze](gaze.md)
 * [Gesto](gestures.md)
 * [Controladores de movimiento](motion-controllers.md)
-* [Voz](voice-input.md)
-* [Envío de una aplicación a la Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
+* [Entrada de voz](voice-input.md)
+* [Envío de aplicaciones a Microsoft Store](submitting-an-app-to-the-microsoft-store.md)
 * [Uso del emulador HoloLens](using-the-hololens-emulator.md)

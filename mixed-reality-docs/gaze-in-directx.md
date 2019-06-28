@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: mirada, mirada principal, head de seguimiento, seguimiento de los ojos, directx, entrada, hologramas
-ms.openlocfilehash: ac72c5305527ed2d68945aeb32051cf2246a736e
-ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
+ms.openlocfilehash: edf20a621178d76bfc97477f9f9b2eca200f1318
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66453741"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414407"
 ---
 # <a name="head-and-eye-gaze-input-in-directx"></a>Entrada de DirectX que mirar HEAD y ocular
 
@@ -149,7 +149,7 @@ Sin embargo, para la entrada que se enruta a través de la SpatialInteractionMan
 
 ## <a name="see-also"></a>Vea también
 * [Modelo de entrada principal mirada y confirmación](gaze-and-commit.md)
-* [Ojo de seguimiento en 2 HoloLens](eye-tracking.md)
+* [Mirada en HoloLens 2](eye-tracking.md)
 * [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)
 * [Entrada de voz en DirectX](voice-input-in-directx.md)
 * [Manos y controladores de movimiento en DirectX](hands-and-motion-controllers-in-directx.md)

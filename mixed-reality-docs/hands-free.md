@@ -6,12 +6,12 @@ ms.author: liamar
 ms.date: 04/20/2019
 ms.topic: article
 keywords: La realidad mixta, manos libres, que mirar, mirar como destino, interacción, diseño
-ms.openlocfilehash: 4d21fa10eabb446565bddebccdbde5e2e7bcc72a
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 7942192f644a7133335f089cfaaccfaebdd9292e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326153"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414394"
 ---
 # <a name="hands-free"></a>Manos libres
 
@@ -39,10 +39,10 @@ Uso de la voz para comando y control de que una interfaz puede no sólo permite 
 
 ### <a name="head-gaze-and-dwellgaze-and-dwellmd"></a>[Control con la cabeza y permanencia](gaze-and-dwell.md)
 
-En algunas situaciones en las manos libres, uso de la voz no es ideal o posible. Entornos de fábrica fuerte, privacidad o normas sociales pueden ser restricciones. El encabezado que mirar + profundizaré modelo permite al usuario navegar por la aplicación mediante el uso de su vector principal para que apunte al persistentes, o reposo en un botón se activarán después de una cierta cantidad de tiempo, tpically aproximadamente 1 segundo o es así. 
+En algunas situaciones en las manos libres, uso de la voz no es ideal o posible. Entornos de fábrica fuerte, privacidad o normas sociales pueden ser restricciones. El encabezado que mirar + profundizaré modelo permite al usuario navegar por la aplicación mediante el uso de su vector principal para que apunte al persistentes, o reposo en un botón se activarán después de una cierta cantidad de tiempo, normalmente aproximadamente 1 segundo o lo. 
 
 
-## <a name="transitioning-in-and-out-of-hands-freey"></a>Transición dentro y fuera de las manos freey
+## <a name="transitioning-in-and-out-of-hands-free"></a>Transición dentro y fuera de manos libres
 
 Para estos escenarios, liberar las manos de interactuar con hologramas para navegación y comandos puede ser desde un requisito absoluto a la aplicación,-to-end, para una mayor comodidad en la que el usuario puede realizar dentro y fuera de la transición a cualquiera de funcionamiento hora. 
 
@@ -54,7 +54,7 @@ Si el usuario de destino debe ser capaz de cambiar de manos a manos libres a su 
 Por ejemplo, si el usuario está en la fábrica, siguiendo una referencia de vídeo en su Hololens y decide recoger una llave inglesa para empezar a trabajar, más probable es que podría empezar a trabajar en manos libres sin tener que dejar la llave inglesa que presionar un botón. Debería poder llamar a una sesión de voz con un comando de voz, profundizaré en una interfaz de usuario ya visible para comenzar la permanencia o decir que la palabra "select".
 
 El usuario debe tener la capacidad de: 
-* Cambiar a manos libres al manos libres
+* Cambiar a manos libres mientras manos libres
 * Cambiar a manos con sus manos
 * Cambiar al controlador mediante un controlador 
 
@@ -96,5 +96,5 @@ Un modificador de modo es muy interesante, es importante que cuando producen est
 
 ## <a name="see-also"></a>Vea también
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Manipulación directa](direct-manipulation.md)
-* [Señalar y confirmar](point-and-commit.md)
+* [Manipulación directa con las manos](direct-manipulation.md)
+* [Apuntar y confirmar con las manos](point-and-commit.md)

@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, introducción, instrucciones
-ms.openlocfilehash: 6173f7cd2bcc4280f86f8f5ecaae1e90e01b62a0
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326124"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414159"
 ---
 # <a name="about-this-design-guidance"></a>Acerca de esta guía de diseño
 
@@ -33,7 +33,7 @@ Le presentamos una introducción rápida de cómo se organiza esta guía de dise
 * **[Empezar a trabajar con diseño](mixed-reality.md)**  : lea nuestras ideas de alto nivel y comprender los principios se siguen.
 * **[Interacciones instinctual](interaction-fundamentals.md)**  -Obtenga información sobre la entrada, los comandos, navegación y otros conceptos básicos de interacción para diseñar sus aplicaciones.
 * **[Estilo](typography.md)**  -hacer que la aplicación agradable con color, movimiento y tipografía.
-* **[Patrones de aplicaciones](types-of-mixed-reality-apps.md)**  -Obtenga información sobre cómo app; ications pueden abarcar escenarios en entornos reales y envolventes.
+* **[Patrones de aplicaciones](types-of-mixed-reality-apps.md)**  -Obtenga información sobre cómo las aplicaciones pueden abarcar escenarios en entornos reales y envolventes.
 * **[Controles](interactable-object.md)**  -usar controles y patrones como bloques de creación para crear su propia experiencia de aplicación.
 * **[Aplicaciones de ejemplo](design.md#sample-apps)**  -crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equipo.
 * **[Herramientas y recursos de diseño](design.md#design-tools)**  -ponga en marcha su proyecto con las herramientas y plantillas de diseño.

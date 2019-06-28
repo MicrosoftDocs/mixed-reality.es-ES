@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Mixed reality, mirada, interacción, diseñar
-ms.openlocfilehash: e0c1a925f6faeb37ec35e511cef36f9c06672c8a
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 7e65d26d3e9edabbd01d35a887ffc8622a3c6337
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829741"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67414367"
 ---
 # <a name="gaze"></a>Mirada
 
@@ -37,9 +37,9 @@ En HoloLens (gen 1), por lo general deben derivar las interacciones de sus desti
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (gen 1)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Inmersivos</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
         <td>Mirada HEAD</td>
@@ -84,5 +84,5 @@ Una vez que el usuario destina un holograma o un objeto del mundo real mediante 
 * [MR Input 210: Mirada HEAD](holograms-210.md)
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
 * [Mirada HEAD en Unity](gaze-in-unity.md)
-* [Ojo de seguimiento en 2 HoloLens](eye-tracking.md)
+* [Mirada en HoloLens 2](eye-tracking.md)
 * [Efecto de ojos mirada en Unity mediante el Kit de herramientas de realidad mixta](https://aka.ms/mrtk-eyes)

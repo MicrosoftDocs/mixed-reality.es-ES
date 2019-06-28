@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, la configuración, la realidad mixta
-ms.openlocfilehash: c8b5598fa702954ca14b9b013e44ed38cf6075c2
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148668"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415449"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -160,5 +160,5 @@ Las capacidades para habilitar las API utilizadas para las aplicaciones holográ
 
 ## <a name="see-also"></a>Vea también
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
-* [Rendimiento Understaing para Mixed Reality](understanding-performance-for-mixed-reality.md)
+* [Análisis de rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
 * [Recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md)
