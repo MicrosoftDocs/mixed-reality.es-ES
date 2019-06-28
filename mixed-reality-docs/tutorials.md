@@ -7,18 +7,18 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, tutorial
-ms.openlocfilehash: b94f1be256d3373deb5f177be0ee9bc0c8be3180
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64874057"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415399"
 ---
 # <a name="tutorials-and-sample-apps"></a>Aplicaciones de ejemplo y tutoriales
 
 Actualmente, todos nuestros tutoriales y aplicaciones de ejemplo están en función de Unity.  Como hemos desarrollar contenido para otras plataformas y los motores, encontrará bajo el encabezado correspondiente en la tabla de contenido.
 
-## <a name="mr-learning-modules"></a>Módulos de aprendizaje MR
+## <a name="mr-learning-modules"></a>Módulos de aprendizaje de MR
 
 Los módulos de aprendizaje MR están diseñados para ayudar a los desarrolladores aprender técnicas y prácticas recomendadas para desarrollar aplicaciones de realidad mixta.  Los módulos iniciales para HoloLens 2 e implementan Mixed Reality Toolkit 2.0 (MRTK 2.0).
 * El módulo básico está diseñado para mostrar cómo configurar su proyecto con MRTK, así como implementar la interfaz de usuario, la asignación espacial e interacciones básicas y avanzadas de desarrolladores
@@ -253,7 +253,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriales de realidad mixta y servicios de Azure
 
-Estos tutoriales independientes son excelentes para aprender a implementar los diferentes servicios de Azure en su proyecto de Unity.  Estos tutoriales se basan en cualquier HoloLens (Gen 1) o nuestro Inmersivos, pero las lecciones sobre el uso de los servicios deben transferirse a casi cualquier dispositivo.
+Estos tutoriales independientes son excelentes para aprender a implementar los diferentes servicios de Azure en su proyecto de Unity.  Estos tutoriales se basan en cualquier HoloLens (gen 1) o nuestro Inmersivos, pero las lecciones sobre el uso de los servicios deben transferirse a casi cualquier dispositivo.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
