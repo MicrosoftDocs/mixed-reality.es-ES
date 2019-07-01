@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de inicio, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto
-ms.openlocfilehash: 810d9846fd217cd1acb3ae0060c11f5c9173191e
-ms.sourcegitcommit: c6b59f532a9c5818d9b25c355a174a231f5fa943
+ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
+ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66813746"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67415396"
 ---
 # <a name="mixed-reality-documentation"></a>Documentación sobre Mixed Reality
 
@@ -147,11 +147,11 @@ Mixed Reality mezcla contenido real y virtual en entornos híbridos donde coexis
 
 [![HoloLens 2](images/hololens2.jpg)](https://www.microsoft.com/hololens/hardware)
 
-[HoloLens 2](https://www.microsoft.com/hololens/hardware) ofrece la experiencia de realidad mixta más cómoda y envolvente disponible hoy en día, con soluciones que son líderes en el sector y que proporcionan valor en cuestión de minutos y, todo ello, respaldado por la confiabilidad, seguridad y escalabilidad de los servicios de nube y de inteligencia artificial de Microsoft. La edición [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) le ayuda a poner en marcha sus planes de realidad mixta con una oferta que combina HoloLens 2 con evaluaciones gratuitas del software de Unity y créditos de Azure para servicios en la nube.
+[HoloLens 2](https://www.microsoft.com/hololens/hardware) ofrece la experiencia de realidad mixta más cómoda y envolvente disponible hoy en día, con soluciones que son líderes en el sector y que proporcionan valor en cuestión de minutos. Todo ello, respaldado por la confiabilidad, seguridad y escalabilidad de los servicios de nube y de inteligencia artificial de Microsoft. La edición [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) le ayuda a poner en marcha sus planes de realidad mixta con una oferta que combina HoloLens 2 con evaluaciones gratuitas del software de Unity y créditos de Azure para servicios en la nube.
 
 <h2>Noticias y notas</h2>
 
-<h3>Abril de 2019</h3>
+<h3>junio de 2019</h3>
 
 Como prometimos, nos complace poner a su disposición más ventajas de realidad mixta. Estamos deseando recibir sus comentarios y nos gustaría invitarle a que se [uniera a la conversación](https://holodevelopersslack.azurewebsites.net/) sobre los temas que le gustaría que se trataran, las personas a las que le gustaría escuchar, los tutoriales o guías de procedimientos que necesitaría, etc. Puede ponerse en contacto con nosotros a través de [Twitter](https://twitter.com/MxdRealityDev) y [unirse a nuestro programa de desarrollo](https://aka.ms/iwantmr) para recibir actualizaciones directas sobre nuevos documentos, herramientas, eventos, etc. Permanezca atento, todavía quedan muchas novedades.
 
@@ -162,7 +162,7 @@ Como prometimos, nos complace poner a su disposición más ventajas de realidad 
 <tr>
 <td><b>Guías de migración</b> <br>1. HoloToolKit (HTK)/Mixed Reality Toolkit (MRTK) a MRTK versión 2
 <br>2. HoloLens (primera generación) a HoloLens 2 (x86 a ARM, recomendaciones de interacción y diseño)
-</td></td><td>De marzo a mayo de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Preparación de la aplicación existente para HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit a las API MRTK</a></td>
+</td></td><td>De marzo a mayo de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Preparación de una aplicación existente para HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit a las API MRTK</a></td>
 </tr>
 <tr>
 <td>Módulos mensuales para desarrolladores en código abierto (tutoriales y aplicaciones de ejemplo)</td><td>De marzo a junio de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1>Módulo de base de aprendizaje de MR</a></td>
@@ -183,4 +183,4 @@ Como prometimos, nos complace poner a su disposición más ventajas de realidad 
 
 
 >[!IMPORTANT]
->Todos los materiales de desarrollo de Mixed Reality que se proporcionan en este sitio son únicamente para consulta. La aplicación, el uso de esta y su efecto en los usuarios finales es responsabilidad exclusivamente suya como desarrollador de la aplicación. Esto incluye la garantía de que la aplicación no causará molestias, lesiones ni ningún otro daño a un usuario final y la inclusión de las declinaciones de responsabilidad y advertencias adecuadas. Deberá en todo momento dar los pasos apropiados en el desarrollo y publicación de la aplicación para asegurarse de que esta es segura, y cumplir con todas las obligaciones que se indican en el [acuerdo para desarrolladores de aplicaciones con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>Todos los materiales de desarrollo de realidad mixta que se proporcionan en este sitio son únicamente para consulta. La aplicación, el uso de esta y su efecto en los usuarios finales es responsabilidad exclusivamente suya como desarrollador de la aplicación. Esto incluye la garantía de que la aplicación no causará molestias, lesiones ni ningún otro daño a un usuario final y la inclusión de las declinaciones de responsabilidad y advertencias adecuadas. Deberá en todo momento dar los pasos apropiados en el desarrollo y publicación de la aplicación para asegurarse de que esta es segura, y cumplir con todas las obligaciones que se indican en el [acuerdo para desarrolladores de aplicaciones con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
