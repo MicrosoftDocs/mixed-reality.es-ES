@@ -6,22 +6,22 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: c120d22f955d366042bbcb9ac73eaa4f13dc20e9
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fcca828fa228894e0e60986c6c7fd0053b210357
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415269"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523236"
 ---
-# <a name="getting-started-with-azure-spatial-anchors-on-hololens-2"></a>Introducción a Azure delimitadores espaciales en HoloLens 2
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a Azure espacial delimitadores
 
-Este es el segundo módulo del Tutorial 2 HoloLens. Antes de comenzar, asegúrese de que todos los de la [requisitos previos](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) se completan. Si no ha completado la primera, [módulo Base](mrlearning-base.md) aún, se recomienda que complete primero ese módulo. Si está comenzando desde un nuevo proyecto de Unity, siga los pasos de creación del proyecto nuevo en el [módulo Base](mrlearning-base.md). 
+Le damos la bienvenida al módulo de segundo de los tutoriales de HoloLens 2. Antes de comenzar, asegúrese de que todos los de la [requisitos previos](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) se completan. Si no ha completado la primera, [módulo Base](mrlearning-base.md) aún, se recomienda que complete primero ese módulo. Si está comenzando desde un nuevo proyecto de Unity, siga los pasos de creación del proyecto nuevo en el [módulo Base](mrlearning-base.md). 
 
 ## <a name="objectives"></a>Objetivos
 
-* Conozca los aspectos básicos del desarrollo con Azure anclajes espaciales con el 2 de HoloLens
+* Conozca los aspectos básicos del desarrollo con Azure anclajes espaciales con HoloLens 2
 
-* Crear, cargar y descargar delimitadores espaciales
+* Crear, cargar y descargar los anclajes espaciales
 
   
 
@@ -40,7 +40,7 @@ Antes de comenzar, descargue e importe los siguientes recursos:
 
 > Nota: Vea el paso 5 para obtener instrucciones específicas sobre cómo importar delimitadores espacial de Azure, paso 6 para obtener instrucciones específicas sobre el módulo MR Base paquete de recursos y los pasos 3 a 4 para obtener instrucciones específicas en el Kit de herramientas de realidad mixta (MRKT).
 
-1. Cree una nueva escena en el proyecto. A la derecha, haga clic en la carpeta de la escena, haga clic en "Crear", a continuación, en escena. Nombre de la nueva escena ASALearningmodule.
+1. Cree una nueva escena en el proyecto. A la derecha, haga clic en la carpeta de la escena, haga clic en crear y, después, en escena. Nombre de la nueva escena ASALearningmodule.
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
@@ -49,7 +49,7 @@ Antes de comenzar, descargue e importe los siguientes recursos:
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> Nota: Verá un ventana emergente que dice, "Elija un archivo para el Kit de herramientas de realidad mixta". Al hacer clic en Aceptar, se accede al paso 4.
+> Nota: Verá un mensaje emergente que dice, debe elegir un archivo para el Kit de herramientas de realidad mixta. Al hacer clic en Aceptar, se accede al paso 4.
 
 4. Al elegir un archivo para el MRTK, seleccione DefaultMixedRealityToolkitConfigurationProfile.
 
@@ -153,7 +153,7 @@ Ahora que la escena está configurada para demostrar los conceptos básicos de A
 
 7. Antes de compilar en el dispositivo, comprueba que el dispositivo está en modo de desarrollador. Si es la primera vez que estás realizando una implementación en HoloLens 2, Visual Studio puede pedirte que emparejes HoloLens 2 con un PIN. Siga [estas instrucciones](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si tiene que habilitar el modo de programador o emparejarse con Visual Studio.
 
-8. Configurar Visual Studio para compilar el 2 de HoloLens seleccionando la configuración de lanzamiento y la arquitectura de "RM".
+8. Configurar Visual Studio para compilar el 2 de HoloLens seleccionando la configuración de lanzamiento, así como la arquitectura de Resource Manager.
     ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
    
 9. El último paso es crear en el dispositivo seleccionando Depurar > Iniciar sin depurar. Seleccione Iniciar sin depurar, hace que la aplicación iniciar inmediatamente en el dispositivo en una información de depuración de compilación correcta ithout que aparecen en Visual Studio. Esto también significa que puedes desconectar el cable USB mientras la aplicación se ejecuta en HoloLens 2 sin detener la aplicación. También puede seleccionar compilación > implementar la solución para implementar en el dispositivo sin necesidad de la aplicación se inicie automáticamente.
@@ -176,9 +176,9 @@ Ahora que la escena está configurada para demostrar los conceptos básicos de A
     
     7. Inicie sesión de Azure delimitadores espacial.
     
-    8. Buscar aachors espacial de Azure. 
+    8. Busque Azure delimitadores espaciales. 
     
-    e debe volver a la ubicación original, colóquelo al crear el delimitador).
+    e debe volver a la ubicación original, colóquelo al crear el delimitador.
     9. Eliminar Azure delimitador espacial.
     
     10. Detener sesión de Azure.
@@ -198,7 +198,7 @@ En las secciones anteriores, ha aprendido los aspectos básicos de Azure espacia
    > Nota: Hay una variedad de flujos de experiencia de usuario para cambiar la posición de experiencias, incluido el uso de un botón para alternar un cuadro de límite que rodea a la experiencia, el uso de un objeto colocaban (por ejemplo, el cubo que se usa en este paso) el uso de la posición y giro gizmos y mucho más.
 
 ## <a name="congratulations"></a>Enhorabuena
-En esta lección, ha aprendido los aspectos básicos de Azure espacial delimitadores. Este esson proporciona varios botones que le permiten explorar los distintos pasos necesarios para iniciar y detener una sesión de Azure y crear, cargar y descargar los anclajes de azure en un único dispositivo. En la siguiente lección, aprenderemos cómo guardar los identificadores de delimitador de Azure en el 2 de HoloLens para la recuperación, incluso después de que se reinicie la aplicación. Durante la serie, también aprenderá cómo transferir los identificadores de delimitador entre varios dispositivos para lograr la alineación espacial y obtenga información acerca de varios usuarios compartida las sesiones (próximamente como parte del módulo de uso compartido).
+En este tutorial, ha aprendido los aspectos básicos de Azure espacial delimitadores. Este esson proporciona varios botones que le permiten explorar los distintos pasos necesarios para iniciar y detener una sesión de Azure y crear, cargar y descargar los anclajes de azure en un único dispositivo. En la siguiente lección, aprenderemos cómo guardar los identificadores de delimitador de Azure en el 2 de HoloLens para la recuperación, incluso después de que se reinicie la aplicación. Durante la serie, también aprenderá cómo transferir los identificadores de delimitador entre varios dispositivos para lograr la alineación espacial y obtenga información acerca de varios usuarios compartida las sesiones, próximamente como parte del tutorial de uso compartido.
 
 [Siguiente lección: Lección 2 de ASA](mrlearning-asa-ch2.md)
 

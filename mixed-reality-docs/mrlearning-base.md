@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: d4220527a7de8e596f2825fd9d199d536510b972
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 389a23129d4dfc5819cdc45d071b678e3792089d
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148625"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523153"
 ---
-# <a name="mr-learning-base-module-overview--objectives"></a>Información general del módulo MR Learning Base & de objetivos
+# <a name="1-overview-and-objectives"></a>1. Información general y objetivos
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -43,6 +43,6 @@ ms.locfileid: "67148625"
 ### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con el valor correcto [herramientas instaladas](install-the-tools.md)
-* 10\.0.18362.0 del SDK de Windows 10 o posterior
+* 10.0.18362.0 del SDK de Windows 10 o posterior
 * Básica C# capacidad de programación.
 * Un dispositivo HoloLens 2 [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode).

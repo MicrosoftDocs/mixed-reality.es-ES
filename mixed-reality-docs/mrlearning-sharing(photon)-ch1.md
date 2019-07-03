@@ -6,20 +6,20 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: f612fa89db1a3f5ed34f6e0bb7062b53780f09b8
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 80cefb36ec1944ec6f537aafcbf4b63f7f812d26
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416126"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523292"
 ---
-# <a name="setting-up-photon"></a>Configurar Photon
+#  <a name="setting-up-photon-unity-networking"></a>Configurar redes de Unity Photon
 
-En esta lección, aprenderemos cómo prepararse para la creación de una experiencia compartida importando Photon Unity a redes (juego de palabras) en el proyecto de Unity. Photon es una de varias opciones de red disponibles para los desarrolladores de realidad mixta para crear experiencias compartidas. Se obtendrá información sobre cómo crear una cuenta de Photon, importar Photon y crear un servidor local opcional.
+En este tutorial, se obtenga información sobre cómo prepararse para la creación de una experiencia compartida importando Photon Unity a redes (juego de palabras) en el proyecto de Unity. Photon es una de varias opciones de red disponibles para los desarrolladores de realidad mixta para crear experiencias compartidas. Se obtendrá información sobre cómo crear una cuenta de Photon, importar Photon y crear un servidor local opcional.
 
 Objetivos:
 
-* Aprenda a crear la cuenta de Photon
+* Obtenga información sobre cómo crear una cuenta de Photon
 
 * Obtenga información sobre cómo buscar e importar Unity Photon a redes
 
@@ -38,11 +38,11 @@ Objetivos:
 
 ![Module3Chapter1step6im](images/module3chapter1step6im.PNG)
 
-2. Crear un identificador de aplicación, haga clic en el botón "crear una nueva aplicación".
+2. Crear un identificador de aplicación, haga clic en crear un botón de nueva aplicación.
 
 ![Module3Chapter1step7aim](images/module3chapter1step7aim.PNG)
 
-3. Seleccione "Juego de palabras Photon" en el menú desplegable bajo "tipo photon". A continuación, asígnele un nombre, en este ejemplo, se lo denominó "HoloLensPhotonProject." Una vez finalizado, haga clic en el botón "Crear".
+3. Seleccione el juego de palabras Photon en el menú desplegable bajo tipo Photon. A continuación, asígnele un nombre. En este ejemplo, se lo denominó HoloLensPhotonProject. Una vez finalizado, haga clic en el botón Crear.
 
 ![Module3Chapter1step7bim](images/module3chapter1step7bim.PNG)
 
@@ -50,20 +50,20 @@ Objetivos:
 
 ![Module3Chapter1step8im](images/module3chapter1step8im.PNG)
 
-5. Cree un nuevo proyecto de unity y asígnele el nombre "HLSharingProject." Para obtener instrucciones sobre cómo crear un nuevo proyecto de Unity, consulte [sección "Crear proyecto de Unity" de la Base del módulo](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
+5. Cree un nuevo proyecto de unity y asígnele el nombre HLSharingProject. Para obtener instrucciones sobre cómo crear un nuevo proyecto de Unity, consulte [sección "Crear proyecto de Unity" de la Base del módulo](https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1#create-new-unity-project). 
 
-6. Cuando se cargue el proyecto, haga clic en la pestaña "almacén de activos", tal como se muestra en la imagen siguiente. A continuación, en el cuadro de búsqueda resaltado en la imagen siguiente, escriba en "Juego de palabras" y seleccione el recurso "Juego de palabras 2 - Photon libre" de los resultados de búsqueda. 
+6. Cuando se cargue el proyecto, haga clic en la pestaña activos Store, como se muestra en la imagen siguiente. A continuación, en el cuadro de búsqueda resaltado en la imagen siguiente, escriba en el juego de palabras y seleccione el 2 de juego de palabras Photon - FRE"recurso de los resultados de búsqueda. 
 
 ![Module3Chapter1step10im](images/module3chapter1step10im.PNG)
 
-7. Descargue e importe este activo al presionar los botones "Descargar" y "Import".
+7. Descargue e importe este activo al presionar los botones de la descarga e importación.
 
 ![Module3Chapter1step11im](images/module3chapter1step11im.PNG)
 
-8. Cuando Photon se haya completado el proceso de importación, aparecerá el Asistente de juego de palabras. Tome el identificador de aplicación (que debe estar en el Portapapeles) del paso 4 y péguelo en el cuadro de AppID y presione el botón "Setup Project". 
+8. Cuando Photon se haya completado el proceso de importación, aparece el Asistente de juego de palabras. Tome el identificador de aplicación (que debe estar en el Portapapeles) del paso 4 y péguelo en el cuadro de AppID y presione el botón del proyecto de instalación. 
 ![module3chapter1step12im](images/module3chapter1step12im.PNG)
 
-9. Después de agregar correctamente el AppID, vaya a "Photon"->"PhotonUnityNetworking" -> "Recursos" -> "PhotonServerSettings" en los activos. Seleccione la opción "Servidor de nombres de uso" y establezca la región fija a "nosotros" o la región del servicio photon.
+9. Después de agregar correctamente el AppID, vaya a Photon -> PhotonUnityNetworking -> recursos -> PhotonServerSettings en activos. Seleccione la opción de servidor de nombres de uso y establezca la zona fija para nosotros o yourPphoton servicio de región.
 
    ![module3chapter1step13im](images/module3chapter1step13im.PNG)
 
@@ -71,5 +71,5 @@ Objetivos:
 
 Correctamente ha creado una cuenta de Photon, configurar un servidor local de Photon e importan el juego de palabras en Unity. El siguiente paso es configurar el proyecto y, a continuación, permitir las conexiones con otros usuarios para que varios usuarios puedan ver su trabajo. 
 
-[Siguiente lección: Sharing(Photon) lección 2](mrlearning-sharing(photon)-ch2.md)
+[Tutorial siguiente: Cómo prepararse para el desarrollo de Unity](mrlearning-sharing(photon)-ch2.md)
 

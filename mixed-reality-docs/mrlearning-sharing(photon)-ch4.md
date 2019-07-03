@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b729de818dfa21df8fbce782a24a611a365ac795
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 2a4ea599fd4887f30589c2d839be305d3dc8d1bd
+ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465222"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67523194"
 ---
-# <a name="synchronizing-shared-object-movements"></a>Sincronizar los movimientos de objeto compartidas
+# <a name="4-sharing-object-movements-with-multiple-users"></a>4. Uso compartido de los movimientos de objetos con varios usuarios
 
-En esta lección, se obtenga información sobre cómo compartir los movimientos de objetos para que puedan colaborar juntos y ver los demás interacciones todos los participantes de una sesión compartida. En esta lección se basa en el Lunar iniciador que se compiló como parte de la [Base módulo tutoriales](mrlearning-base.md).
+En este Tutorial, se obtenga información sobre cómo compartir los movimientos de objetos para que puedan colaborar juntos y ver los demás interacciones todos los participantes de una sesión compartida. En esta lección se basa en el Lunar iniciador que se compiló como parte de la [Base módulo tutoriales](mrlearning-base.md).
 
 Objetivos:
 
@@ -26,7 +26,7 @@ Objetivos:
 ### <a name="instructions"></a>Instrucciones
 
 
-1. Guarde la escena de la lección anterior (Control + S). Puede asignarle el nombre HLSharedProjectMainPart4.unity para que resulte más fácil encontrar cuando lo necesite.
+1. Guarde la escena de la lección anterior (Control + S). Puede asignarle el nombre, HLSharedProjectMainPart4.unity, para que resulte más fácil encontrar cuando lo necesite.
 
 2. En la ventana de proyecto, en los recursos -> carpeta de Scripts, haga doble clic en GenericNetSync para abrirlo en Visual Studio o que alguna vez code editor que está utilizando.  ![](images/module3chapter4updatestep2.png)
 
