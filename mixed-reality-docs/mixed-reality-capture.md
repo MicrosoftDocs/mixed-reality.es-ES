@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 10/02/2018
 ms.topic: article
 keywords: MRC, mixto captura realidad, fotos, vídeo, cámara, captura, uso, secuencia, streaming en vivo, demostración
-ms.openlocfilehash: 18a80083bd25974905874c6c2ec0de87dc7424ab
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 7af60682f78f624e6b41ded88c8a77e70d40194c
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605587"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694489"
 ---
 # <a name="mixed-reality-capture"></a>Captura de realidad mixta
 
@@ -21,9 +21,11 @@ Casos de uso para la captura de realidad mixta ir más allá de compartir vídeo
 
 ## <a name="live-streaming-from-hololens"></a>Live streaming de HoloLens
 
-El [Windows 10 de octubre de 2018 Update](release-notes-october-2018.md) agrega compatibilidad con Miracast a HoloLens. Seleccione el **Connect** situado en la parte inferior del menú Inicio para que aparezca un selector para los adaptadores y dispositivos habilitados para Miracast. Seleccione el dispositivo a la que desea iniciar el streaming. Cuando haya terminado, seleccione el **desconexión** situado en la parte inferior del menú Inicio.  **Conectar** y **desconexión** también están disponibles en el menú Acciones rápidas. 
+El [Windows 10 de octubre de 2018 Update](release-notes-october-2018.md) agrega compatibilidad con Miracast a HoloLens. Seleccione el **Connect** situado en la parte inferior del menú Inicio para que aparezca un selector para los adaptadores y dispositivos habilitados para Miracast. Seleccione el dispositivo a la que desea iniciar el streaming. Cuando haya terminado, seleccione el **desconexión** situado en la parte inferior del menú Inicio.  **Conectar** y **desconexión** también están disponibles en el menú Acciones rápidas.
 
-El [Windows Device Portal](using-the-windows-device-portal.md) expone live streaming opciones para dispositivos que están en modo de programador.
+El [Windows Device Portal](using-the-windows-device-portal.md) y [aplicación complementaria de Microsoft HoloLens](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) exponen las opciones para dispositivos que están en modo de programador de streaming en vivo.
+
+[Dynamics 365 remoto Assist](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) admite el streaming en vivo de HoloLens a los empleados en ubicaciones remotas.
 
 ## <a name="taking-mixed-reality-captures"></a>Captura de tomar la realidad mixta
 
@@ -48,7 +50,7 @@ Hay varias maneras de iniciar una captura de realidad mixta:
 
 ### <a name="limitations-of-mixed-reality-capture"></a>Limitaciones de la captura de realidad mixta
 
-En HoloLens, el sistema limita la tasa de procesamiento a 30Hz. Esto crea algún espacio disponible para MRC para ejecutarse por lo que la aplicación no necesita mantener una reserva de presupuesto constante y también coincide con la velocidad de fotogramas de vídeo registro MRC de 30fps.
+En HoloLens, el sistema limita la tasa de procesamiento a 30Hz. Esto crea algún espacio disponible para MRC para ejecutarse por lo que la aplicación no necesita mantener una reserva de presupuesto constante y también coincide con la velocidad de fotogramas de vídeo registro MRC de (hasta) 30fps.
 
 Vídeos de tener una longitud máxima de cinco minutos.
 
@@ -60,8 +62,17 @@ Captura de realidad mixta de comandos de voz de Cortana y herramientas del menú
 
 |  Tipo  |  Formato  |  Extensión  |  Resolución  |  Audio | 
 |----------|----------|----------|----------|----------|
-|  Foto  |  [JPEG](https://en.wikipedia.org/wiki/JPEG)  |  .jpg  |  1408x792px (HoloLens) 1920 x 1080 px (inmersivos) |  N/D | 
-|  Vídeo  |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)  |  .mp4  |  1408x792px 1632x918px (HoloLens) (inmersivos) |  48kHz estéreo | 
+|  Foto  |  [JPEG](https://en.wikipedia.org/wiki/JPEG)  |  .jpg  |  3904x2196px (HoloLens 2)<br> 1408x792px (HoloLens)<br> 1920 x 1080 px (inmersivos) |  N/D | 
+|  Vídeo  |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4)  |  .mp4  |  1920 x 1080 px a 30fps (HoloLens 2)<br> 1216x684px a 24fps (HoloLens)<br> 1632x918px a 30fps (inmersivos) |  48kHz estéreo | 
+
+>[!NOTE]
+>La resolución de las fotos y vídeos puede ser menor si la cámara de vídeo y fotos ya está en uso por otra aplicación, al streaming en vivo, o cuando hay pocos recursos del sistema.
+
+### <a name="video-stabilization"></a>Estabilización de vídeo
+
+De forma predeterminada:
+* Estabilización de vídeo con latencia cero se aplica cuando está activada la transmisión por secuencias a través de Miracast.
+* Estabilización de vídeo de latencia se aplica a vídeos capturados mediante la cámara integrada de MRC la interfaz de usuario, los comandos de voz de Cortana y Windows Device Portal.
 
 ## <a name="viewing-mixed-reality-captures"></a>Captura de la visualización de realidad mixta
 
@@ -77,6 +88,6 @@ Si instala el [aplicación OneDrive](https://www.microsoft.com/p/onedrive/9wzdnc
 ## <a name="see-also"></a>Vea también
 * [Vista del espectador](spectator-view.md)
 * [Cámara localizable](locatable-camera.md)
-* [Mixto captura realidad para desarrolladores](mixed-reality-capture-for-developers.md)
-* [Vea las fotos](see-your-photos.md)
-* [Uso de la Windows Device Portal](using-the-windows-device-portal.md)
+* [Captura de realidad mixta para desarrolladores](mixed-reality-capture-for-developers.md)
+* [Visualización de fotos](see-your-photos.md)
+* [Uso del Portal de dispositivos Windows](using-the-windows-device-portal.md)

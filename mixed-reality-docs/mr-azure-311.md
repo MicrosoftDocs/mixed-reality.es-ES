@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: realidad mixta, Azure, academy, unity, tutorial, api, graph de microsoft, hololens, envolventes, vr
-ms.openlocfilehash: 98fe2c872f332a21fff3af6751ae555968073a24
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597658"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694524"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -37,7 +37,7 @@ En la aplicación, es depende de usted sobre cómo se integrará los resultados 
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> El Sr. y 311 de Azure: Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
@@ -123,15 +123,15 @@ El siguiente es un conjunto típico de para el desarrollo con la realidad mixta 
 
     ![](images/AzureLabs-Lab311-10.png)
 
-3.  Con Unity abierto, es conveniente comprobar el valor predeterminado **Script Editor** está establecido en **Visual Studio**. Vaya a **Editar > Preferencias** y, a continuación, en la ventana nueva, vaya a **herramientas externas**. Cambio **External Script Editor** a **de Visual Studio 2017**. Cerrar la **preferencias** ventana.
+3.  Con Unity abierto, es conveniente comprobar el valor predeterminado **Script Editor** está establecido en **Visual Studio**. Vaya a **editar** > **preferencias** y, a continuación, en la ventana nueva, vaya a **herramientas externas**. Cambio **External Script Editor** a **de Visual Studio 2017**. Cerrar la **preferencias** ventana.
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  Vaya a **archivo > configuración de compilación** y seleccione **Universal Windows Platform**, a continuación, haga clic en el **Cambiar plataforma** botón para aplicar la selección.
+4.  Vaya a **archivo** > **configuración de compilación** y seleccione **Universal Windows Platform**, a continuación, haga clic en el **Cambiar plataforma** botón para aplicar la selección.
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  Mientras sigue en **archivo > configuración de compilación**, asegúrese de que:
+5.  Mientras sigue en **archivo** > **configuración de compilación**, asegúrese de que:
 
     1. **Dispositivo de destino** está establecido en **HoloLens**
     2. **Tipo de compilación** está establecido en **D3D**
@@ -187,7 +187,7 @@ El siguiente es un conjunto típico de para el desarrollo con la realidad mixta 
 
 9.  Cerrar la *configuración de compilación* ventana.
 
-10.  Guarde la escena y el proyecto (**archivo > Guardar ESCENAS / archivo > Guardar proyecto**).
+10.  Guarde la escena y el proyecto (**archivo** > **guardar ESCENAS / archivo** > **Guardar proyecto**).
 
 ## <a name="chapter-3---import-libraries-in-unity"></a>Capítulo 3: las bibliotecas de importación en Unity
 
@@ -205,7 +205,7 @@ Si desea obtener más información acerca de cómo agregar archivos DLL personal
 
 Para importar el paquete:
 
-1.  Agregar el paquete de Unity para Unity mediante el **activos* > *Importar paquete* > *paquete personalizado** opción de menú. Seleccione el paquete que acaba de descargar.
+1.  Agregar el paquete de Unity para Unity mediante el **activos** > **Importar paquete** > **paquete personalizado** opción de menú. Seleccione el paquete que acaba de descargar.
 
 2.  En el **Importar paquete de Unity** cuadro que aparece hacia arriba, asegúrese de todo el contenido en (e incluido) **complementos** está seleccionada.
 
@@ -266,12 +266,12 @@ Es el primer script, deberá crear **MeetingsUI**, que es responsable del hosped
 
 Para crear esta clase:
 
-1.  Haga doble clic en el **activos** carpeta en el *Panel proyecto*, a continuación, seleccione **crear* > *carpeta**. Nombre de la carpeta **Scripts**.
+1.  Haga doble clic en el **activos** carpeta en el *Panel proyecto*, a continuación, seleccione **crear** > **carpeta**. Nombre de la carpeta **Scripts**.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Abra el **Scripts** carpeta, dentro de esa carpeta, haga clic en, **crear* > *C\# Script**. Nombre de la secuencia de comandos **MeetingsUI.**
+2.  Abra el **Scripts** carpeta, dentro de esa carpeta, haga clic en, **crear**  >   **C# Script**. Nombre de la secuencia de comandos **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -477,7 +477,7 @@ Para crear esta clase:
     > [!NOTE]
     > Cambiar el **appId** valor sea el **Id. de aplicación** que haya anotado en  **[capítulo 1](#chapter-1---create-your-app-in-the-application-registration-portal), paso 4**. Este valor debe ser el mismo que se muestra en el **Portal de registro de aplicación,** en la página de registro de aplicación.
 
-8.  Dentro de la **Graph** de clases, agregue los métodos **SignInAsync()** y **AquireTokenAsync()**, que le solicitará al usuario que inserte las credenciales de inicio de sesión.
+8.  Dentro de la **Graph** de clases, agregue los métodos **SignInAsync()** y **AquireTokenAsync()** , que le solicitará al usuario que inserte las credenciales de inicio de sesión.
 
     ```csharp
         /// <summary>
@@ -548,9 +548,9 @@ Para crear esta clase:
 
 9.  Agregue los dos métodos siguientes:
 
-    1.  **BuildTodayCalendarEndpoint()**, que basa el URI que especifica el día y el intervalo de tiempo, en el que se recuperan las reuniones programadas.
+    1.  **BuildTodayCalendarEndpoint()** , que basa el URI que especifica el día y el intervalo de tiempo, en el que se recuperan las reuniones programadas.
 
-    2.  **ListMeetingsAsync()**, que solicita las reuniones programadas de *Microsoft Graph*.
+    2.  **ListMeetingsAsync()** , que solicita las reuniones programadas de *Microsoft Graph*.
 
     ```csharp
         /// <summary>
@@ -628,7 +628,7 @@ Para crear la secuencia de comandos:
 
 3.  Haga doble clic en el script para abrirlo con Visual Studio.
 
-4.  Cambiar el código de espacios de nombres para que coincida con lo siguiente, además de agregar el '**\[System.Serializable\]**' etiqueta anterior su **GazeInput** clase, para que pueda serializarse:
+4.  Cambiar el código de espacios de nombres para que coincida con lo siguiente, además de agregar el ' **\[System.Serializable\]** ' etiqueta anterior su **GazeInput** clase, para que pueda serializarse:
 
     ```csharp
     using UnityEngine;

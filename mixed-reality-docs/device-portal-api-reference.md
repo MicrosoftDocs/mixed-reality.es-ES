@@ -6,12 +6,12 @@ ms.author: JLyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, Windows Device Portal, API
-ms.openlocfilehash: 507ab98734adea80d0aad41d99124e3d91846f28
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605372"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694436"
 ---
 # <a name="device-portal-api-reference"></a>Referencia de la API del portal de dispositivos
 
@@ -278,17 +278,6 @@ Detener la grabación actual. Grabación se devolverá como un archivo.
 
 ## <a name="mixed-reality-capture"></a>Captura de realidad mixta
 
-**/API/holographic/MRC/File (eliminar)**
-
-Elimina una grabación desde el dispositivo de realidad mixta.
-
-Parámetros
-* nombre de archivo: El nombre, hex64 codificada del archivo para eliminar
-
-**/API/holographic/MRC/Settings (GET)**
-
-Obtiene el valor predeterminado la realidad mixta configuración de capture
-
 **/API/holographic/MRC/File (GET)**
 
 Descarga un archivo de realidad mixta desde el dispositivo. Op uso = parámetro de consulta de stream para streaming.
@@ -297,6 +286,38 @@ Parámetros
 * nombre de archivo: El nombre, hex64 codificada del archivo de vídeo para obtener
 * op : stream
 
+**/API/holographic/MRC/File (eliminar)**
+
+Elimina una grabación desde el dispositivo de realidad mixta.
+
+Parámetros
+* nombre de archivo: El nombre, hex64 codificada del archivo para eliminar
+
+**/API/holographic/MRC/Files (GET)**
+
+Devuelve la lista de archivos de realidad mixta almacenados en el dispositivo
+
+**/API/holographic/MRC/Photo (POST)**
+
+Toma una fotografía de realidad mixta y crea un archivo en el dispositivo
+
+Parámetros
+* Holo: capturar hologramas: true o false (valor predeterminado es false)
+* PV: cámara captura PV: true o false (valor predeterminado es false)
+* RenderFromCamera: Render (sólo 2 HoloLens) desde la perspectiva de la cámara de vídeo y fotos: true o false (valor predeterminado es true)
+
+**/API/holographic/MRC/Settings (GET)**
+
+Obtiene el valor predeterminado la realidad mixta configuración de capture
+
+**/API/holographic/MRC/Settings (POST)**
+
+Establece el valor predeterminado la realidad mixta ajustes de captura.  Algunas de estas opciones se aplican a la foto MRC y la captura de vídeo del sistema.
+
+**/API/holographic/MRC/Status (GET)**
+
+Obtiene el estado de la realidad mixta registran (está ejecutando, detenido)
+
 **/API/holographic/MRC/Thumbnail (GET)**
 
 Obtiene la imagen en miniatura para el archivo especificado.
@@ -304,81 +325,56 @@ Obtiene la imagen en miniatura para el archivo especificado.
 Parámetros
 * filename: El nombre, hex64 codificada del archivo para el que se solicita la miniatura
 
-**/API/holographic/MRC/Status (GET)**
-
-Obtiene el estado de la realidad mixta registran (está ejecutando, detenido)
-
-**/API/holographic/MRC/Files (GET)**
-
-Devuelve la lista de archivos de realidad mixta almacenados en el dispositivo
-
-**/API/holographic/MRC/Settings (POST)**
-
-Establece el valor predeterminado la realidad mixta configuración de capture
-
 **/api/holographic/mrc/video/control/start (POST)**
 
 Se inicia una grabación de realidad mixta
 
 Parámetros
-* Holo: capturar hologramas: true o false
-* PV: cámara captura PV: true o false
-* MIC: captura de micrófono: true o false
-* bucle invertido: capturar audio de la aplicación: true o false
+* Holo: capturar hologramas: true o false (valor predeterminado es false)
+* PV: cámara captura PV: true o false (valor predeterminado es false)
+* MIC: captura de micrófono: true o false (valor predeterminado es false)
+* bucle invertido: capturar audio de la aplicación: true o false (valor predeterminado es false)
+* RenderFromCamera: Render (sólo 2 HoloLens) desde la perspectiva de la cámara de vídeo y fotos: true o false (valor predeterminado es true)
+* Vstab: Estabilización de vídeo (sólo en HoloLens 2) habilite: true o false (valor predeterminado es true)
+* vstabbuffer: Latencia de búfer de estabilización de vídeo (sólo 2 HoloLens): entre 0 y 30 fotogramas (valor predeterminado es 15 fotogramas)
 
 **/api/holographic/mrc/video/control/stop (POST)**
 
 Se detiene la actual mixto grabación realidad
 
-**/API/holographic/MRC/Photo (POST)**
+## <a name="mixed-reality-streaming"></a>Realidad mixta de transmisión por secuencias
 
-Toma una fotografía de realidad mixta y crea un archivo en el dispositivo
+HoloLens es compatible con la vista previa activa de la realidad mixta mediante descarga fragmentada de un mp4 fragmentado.
 
-Parámetros
+Secuencias de realidad mixta comparten el mismo conjunto de parámetros para controlar lo que se captura:
 * Holo: capturar hologramas: true o false
 * PV: cámara captura PV: true o false
+* MIC: captura de micrófono: true o false
+* bucle invertido: capturar audio de la aplicación: true o false
 
-Realidad mixta de transmisión por secuencias
+Si no se especifica ninguno de ellos: se capturarán hologramas, la cámara de fotografías y vídeo y audio de la aplicación<br>
+Si se especifica alguna: false predeterminado será el parámetro no especificado
+
+Parámetros opcionales (sólo 2 HoloLens)
+* RenderFromCamera: representar desde la perspectiva de la cámara de vídeo y fotos: true o false (valor predeterminado es true)
+* Vstab,: habilitar la estabilización de vídeo: true o false (valor predeterminado es false)
+* vstabbuffer: latencia de búfer de estabilización de vídeo: entre 0 y 30 fotogramas (valor predeterminado es 15 fotogramas)
 
 **/api/holographic/stream/live.mp4 (GET)**
 
-Inicia una descarga fragmentada de un archivo mp4 fragmentado
-
-Parámetros
-* Holo: capturar hologramas: true o false
-* PV: cámara captura PV: true o false
-* MIC: captura de micrófono: true o false
-* bucle invertido: capturar audio de la aplicación: true o false
+Una secuencia de 5Mbit 1280x720p 30fps.
 
 **/api/holographic/stream/live_high.mp4 (GET)**
 
-Inicia una descarga fragmentada de un archivo mp4 fragmentado
-
-Parámetros
-* Holo: capturar hologramas: true o false
-* PV: cámara captura PV: true o false
-* MIC: captura de micrófono: true o false
-* bucle invertido: capturar audio de la aplicación: true o false
-
-**/api/holographic/stream/live_low.mp4 (GET)**
-
-Inicia una descarga fragmentada de un archivo mp4 fragmentado
-
-Parámetros
-* Holo: capturar hologramas: true o false
-* PV: cámara captura PV: true o false
-* MIC: captura de micrófono: true o false
-* bucle invertido: capturar audio de la aplicación: true o false
+Una secuencia de 5Mbit 1280x720p 30fps.
 
 **/API/holographic/Stream/live_med.mp4 (GET)**
 
-Inicia una descarga fragmentada de un archivo mp4 fragmentado
+Una secuencia de 30fps 2.5Mbit 854x480p.
 
-Parámetros
-* Holo: capturar hologramas: true o false
-* PV: cámara captura PV: true o false
-* MIC: captura de micrófono: true o false
-* bucle invertido: capturar audio de la aplicación: true o false
+**/api/holographic/stream/live_low.mp4 (GET)**
+
+Una secuencia de 15fps 0.6Mbit 428x240p.
 
 ## <a name="networking"></a>Funciones de red
 
@@ -532,5 +528,5 @@ Devolver datos
 * Durante el inicio, se devuelve el estado de sesión WPR.
 
 ## <a name="see-also"></a>Vea también
-* [Uso de la Windows Device Portal](using-the-windows-device-portal.md)
+* [Uso del Portal de dispositivos Windows](using-the-windows-device-portal.md)
 * [Núcleo de Portal de dispositivo (UWP) de referencia de API](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

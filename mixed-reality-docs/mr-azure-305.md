@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: realidad mixta, Azure, academy, unity, tutorial, api, funciones, almacenamiento, hololens, vr envolvente,
-ms.openlocfilehash: a828c7f0ac3016462f5c7e874545bf50a2db6771
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
-ms.translationtype: HT
+ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598298"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694556"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -42,7 +42,7 @@ En la aplicación, es depende de usted sobre cómo se integrará los resultados 
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>El Sr. y Azure 305: Funciones y almacenamiento</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -97,11 +97,11 @@ Para usar el **servicio Azure Storage**, deberá crear y configurar un **cuenta 
 
     2.  Para *modelo de implementación*, seleccione **Administrador de recursos**.
 
-    3.  Para *tipo de cuenta*, seleccione **almacenamiento (uso general v1)**.
+    3.  Para *tipo de cuenta*, seleccione **almacenamiento (uso general v1)** .
 
     4.  Determinar la *ubicación* para el grupo de recursos (si está creando un nuevo grupo de recursos). La ubicación sería lo ideal es que en la región donde desea ejecutar la aplicación. Algunos recursos de Azure solo están disponibles en determinadas regiones.
 
-    5.  Para *replicación* seleccione **lectura-access--almacenamiento con redundancia geográfica (RA-GRS)**.
+    5.  Para *replicación* seleccione **lectura-access--almacenamiento con redundancia geográfica (RA-GRS)** .
 
     6.  Para *rendimiento*, seleccione **estándar**.
 
@@ -250,15 +250,15 @@ Configurar y probar los auriculares de realidad mixta envolventes.
 
     ![Asigne un nombre nuevo proyecto de unity](images/AzureLabs-Lab5-18.png)
 
-3.  Con Unity abierto, es conveniente comprobar el valor predeterminado **Script Editor** está establecido en **Visual Studio**. Vaya a **editar* > *preferencias** y, a continuación, en la ventana nueva, vaya a **herramientas externas**. Cambio **External Script Editor** a **de Visual Studio 2017**. Cerrar la **preferencias** ventana.
+3.  Con Unity abierto, es conveniente comprobar el valor predeterminado **Script Editor** está establecido en **Visual Studio**. Vaya a **editar** > **preferencias** y, a continuación, en la ventana nueva, vaya a **herramientas externas**. Cambio **External Script Editor** a **de Visual Studio 2017**. Cerrar la **preferencias** ventana.
 
     ![conjunto de visual studio como editor de script](images/AzureLabs-Lab5-19.png)
 
-4.  A continuación, vaya a **archivo > configuración de compilación** y cambiar la plataforma a **Universal Windows Platform**, haciendo clic en el **Cambiar plataforma** botón.
+4.  A continuación, vaya a **archivo** > **configuración de compilación** y cambiar la plataforma a **Universal Windows Platform**, haciendo clic en el **Cambiar plataforma**  botón.
 
     ![cambiar la plataforma a uwp](images/AzureLabs-Lab5-20.png)
 
-5.  Vaya a **archivo > configuración de compilación** y asegúrese de que:
+5.  Vaya a **archivo** > **configuración de compilación** y asegúrese de que:
 
     1. **Dispositivo de destino** está establecido en **cualquier dispositivo**.
 
@@ -318,7 +318,7 @@ Configurar y probar los auriculares de realidad mixta envolventes.
 
 10.  Cierre la ventana de configuración de compilación.
 
-11. Guarde la escena y el proyecto (**archivo > Guardar ESCENA / archivo > Guardar proyecto**).
+11. Guarde la escena y el proyecto (**archivo** > **guardar ESCENA / archivo** > **Guardar proyecto**).
 
 ## <a name="chapter-4---setup-main-camera"></a>Capítulo 4: configuración de cámara principal
 
@@ -421,7 +421,7 @@ Configurar y probar los auriculares de realidad mixta envolventes.
 
 6.  A continuación creará un **texto 3D** objeto para proporcionar comentarios sobre el estado del servicio de Azure.
 
-    Haga clic con el botón derecho en el **GazeButton** en la jerarquía del nuevo Panel y agregar un **objeto 3D > texto 3D** objeto como un *secundarios*.
+    Haga clic con el botón derecho en el **GazeButton** en la jerarquía del nuevo Panel y agregar un **objeto 3D** > **texto 3D** objeto como un *secundarios*.
 
     ![Crear nuevo objeto de texto 3D](images/AzureLabs-Lab5-42.png)
 
@@ -467,9 +467,9 @@ Actualmente hay un problema conocido en Unity que requiere complementos volver a
 
 Para importar el SDK en su propio proyecto, asegúrese de que ha descargado la versión más reciente ['.unitypackage' desde GitHub](https://aka.ms/azstorage-unitysdk). A continuación, haga lo siguiente:
 
-1.  Agregar el **.unitypackage** a Unity de un archivo utilizando el **activos > Importar paquete > paquete personalizado** opción de menú.
+1.  Agregar el **.unitypackage** a Unity de un archivo utilizando el **activos** > **Importar paquete** > **paquete personalizado**opción de menú.
 
-2.  En el **Importar paquete de Unity** cuadro que aparece, puede seleccionar todo el contenido **complemento* > *Storage**. Desactive todo lo demás, ya no es necesaria para este curso.
+2.  En el **Importar paquete de Unity** cuadro que aparece, puede seleccionar todo el contenido **complemento** > **almacenamiento**. Desactive todo lo demás, ya no es necesaria para este curso.
 
     ![Importar paquete](images/AzureLabs-Lab5-45.png)
 
@@ -519,7 +519,7 @@ El *AzureServices* clase será responsable de:
 
 Para crear esta clase:
 
-1.  Haga clic en el *activos* carpeta, que se encuentra en el Panel de proyecto **crear > carpeta**. Nombre de la carpeta **Scripts**.
+1.  Haga clic en el *activos* carpeta, que se encuentra en el Panel de proyecto **crear** > **carpeta**. Nombre de la carpeta **Scripts**.
 
     ![Crear nueva carpeta](images/AzureLabs-Lab5-50.png)
 
@@ -527,7 +527,7 @@ Para crear esta clase:
 
 2.  Haga doble clic en la carpeta que acaba de crear para abrirlo.
 
-3.  Haga clic en la carpeta, **crear > C# Script**. Llame al script *AzureServices*.
+3.  Haga clic en la carpeta, **crear**  >   **C# Script**. Llame al script *AzureServices*.
 
 4.  Haga doble clic en el nuevo *AzureServices* clase para abrirlo con *Visual Studio*.
 
@@ -637,7 +637,7 @@ Para crear esta clase:
     ```
 
     > [!IMPORTANT]
-    > Se rellenará en el código de *CallAzureFunctionForNextShape()* en un [capítulo futuras](#chapter-10---completing-the-AzureServices-class).
+    > Se rellenará en el código de *CallAzureFunctionForNextShape()* en un [capítulo futuras](#chapter-10---completing-the-azureservices-class).
 
 9.  Eliminar el *Update()* método puesto que esta clase no lo usará.
 
@@ -657,7 +657,7 @@ Para crear esta clase:
 
 1.  Vaya a la **Scripts** carpeta que creó anteriormente.
 
-2.  Haga clic en la carpeta, **crear > C# Script**. Llame al script *ShapeFactory*.
+2.  Haga clic en la carpeta, **crear**  >   **C# Script**. Llame al script *ShapeFactory*.
 
 3.  Haga doble clic en el nuevo *ShapeFactory* script para abrirlo con *Visual Studio*.
 
@@ -767,7 +767,7 @@ Para crear esta clase:
 
 1.  Vaya a la **Scripts** carpeta que creó anteriormente.
 
-2.  Haga clic en el Panel proyecto, **crear > C# Script**. Llame al script *que mirar*.
+2.  Haga clic en el Panel proyecto, **crear**  >   **C# Script**. Llame al script *que mirar*.
 
 3.  Haga doble clic en el nuevo *que mirar* script para abrirlo con *Visual Studio.*
 
@@ -1033,7 +1033,7 @@ Para crear esta clase:
 
 Con los demás scripts en su lugar, es posible *completa* el *AzureServices* clase. Esto se conseguirá mediante:
 
-1.  Agregar un nuevo método denominado *CreateCloudIdentityAsync()*, para establecer las variables de autenticación necesarias para la comunicación con Azure.
+1.  Agregar un nuevo método denominado *CreateCloudIdentityAsync()* , para establecer las variables de autenticación necesarias para la comunicación con Azure.
 
     > Este método también comprobará la existencia de un archivo almacenado anteriormente que contiene la lista de la forma.
     >
@@ -1106,7 +1106,7 @@ Con los demás scripts en su lugar, es posible *completa* el *AzureServices* cla
         }
     ```
 
-3.  Rellene el código para el método *CallAzureFunctionForNextShape()*. Va a usar creado previamente *Azure Function App* para solicitar un índice de la forma. Una vez que se recibe la nueva forma, este método enviará la forma para el *ShapeFactory* clase para crear la nueva forma de la escena. Utilice el código siguiente para completar el cuerpo de *CallAzureFunctionForNextShape()*.
+3.  Rellene el código para el método *CallAzureFunctionForNextShape()* . Va a usar creado previamente *Azure Function App* para solicitar un índice de la forma. Una vez que se recibe la nueva forma, este método enviará la forma para el *ShapeFactory* clase para crear la nueva forma de la escena. Utilice el código siguiente para completar el cuerpo de *CallAzureFunctionForNextShape()* .
 
     ```csharp
         /// <summary>
@@ -1197,7 +1197,7 @@ Con los demás scripts en su lugar, es posible *completa* el *AzureServices* cla
 
 Para comenzar el proceso de compilación:
 
-1.  Vaya a **archivo > configuración de compilación**.
+1.  Vaya a **archivo** > **configuración de compilación**.
 
     ![Compilar la aplicación](images/AzureLabs-Lab5-54.png)
 
@@ -1218,8 +1218,8 @@ Para implementar la aplicación:
 3.  En el **configuración de la solución** seleccione **depurar**.
 
     > Para el Microsoft HoloLens, quizá le resulte más fácil establecer esto en *máquina remota*, de modo que no están atados a su equipo. Sin embargo, necesitará también hacer lo siguiente:
-    > - Conocer el **dirección IP** de su HoloLens, que se encuentra dentro de la *configuración > red e Internet > Wi-Fi > Opciones avanzadas*; IPv4 es la dirección que debe usar. 
-    > - Asegúrese de **modo de programador** es **en**; se encuentra en *configuración > actualización y seguridad > para los desarrolladores*.
+    > - Conocer el **dirección IP** de su HoloLens, que se encuentra dentro de la **configuración** > **red e Internet**  >   **Wi-Fi** > **opciones avanzadas**; IPv4 es la dirección que debe usar. 
+    > - Asegúrese de **modo de programador** es **en**; se encuentra en **configuración** > **actualización y seguridad**  >  **Para los desarrolladores**.
 
     ![Implementar solución](images/AzureLabs-Lab5-55.png)
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: realidad mixta, Azure, academy, unity, tutorial, api, información de la aplicación, hololens, envolventes, vr
-ms.openlocfilehash: 838dbe38724d29f4c5987e2f6ac7a07231015c82
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: e14a32f9a38e3e8f3054d19310782f7c2d4784a1
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605718"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694569"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -38,7 +38,7 @@ Este curso le mostrará cómo obtener los resultados desde el servicio de Applic
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> El Sr. y Azure 309: Información de la aplicación</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -207,7 +207,7 @@ El siguiente es un conjunto típico de para el desarrollo con la realidad mixta 
 
     1.  En el **otra configuración** pestaña:
 
-        1.  **Scripting** **en tiempo de ejecución versión** debe ser **Experimental (.NET 4.6 equivalente)**, que desencadenará una necesidad de reiniciar el Editor.
+        1.  **Scripting** **en tiempo de ejecución versión** debe ser **Experimental (.NET 4.6 equivalente)** , que desencadenará una necesidad de reiniciar el Editor.
 
         2.  **Scripting de back-end** debe ser **.NET**
 
@@ -225,11 +225,11 @@ El siguiente es un conjunto típico de para el desarrollo con la realidad mixta 
 
         ![Configurar el proyecto de Unity](images/AzureLabs-Lab309-21.png)
 
-9.  En **configuración de compilación**, **Unity C\# proyectos** ya no está atenuada; Marque la casilla situada junto a esto.
+9.  En **configuración de compilación**, **Unity C# proyectos** ya no está atenuada; Marque la casilla situada junto a esto.
 
 10.  Cierre la ventana de configuración de compilación.
 
-11.  Guarde la escena y el proyecto (**archivo > Guardar ESCENA / archivo > Guardar proyecto**).
+11.  Guarde la escena y el proyecto (**archivo** > **guardar ESCENA / archivo** > **Guardar proyecto**).
 
 
 ## <a name="chapter-3---import-the-unity-package"></a>Capítulo 3: importar el paquete de Unity
@@ -275,7 +275,7 @@ Para importar Application Insights en su propio proyecto, asegúrese de que haya
 
 En este capítulo configurará la cámara y los controles para permitir al usuario ver y mover de la escena.
 
-1.  Haga doble clic en un área vacía en el Panel de la jerarquía, a continuación, en **crear > vacío**.
+1.  Haga doble clic en un área vacía en el Panel de la jerarquía, a continuación, en **crear** > **vacía**.
 
     ![Configuración de la cámara y los controles de usuario](images/AzureLabs-Lab309-26.png)
 
@@ -377,11 +377,11 @@ Es el primer script, deberá crear **ApplicationInsightsTracker**, que es respon
 
 Para crear esta clase:
 
-1.  Haga clic en el *Panel del proyecto*, a continuación, **crear > carpeta**. Nombre de la carpeta **Scripts**.
+1.  Haga clic en el *Panel del proyecto*, a continuación, **crear** > **carpeta**. Nombre de la carpeta **Scripts**.
 
     ![Crear la clase ApplicationInsightsTracker](images/AzureLabs-Lab309-46.png)  ![Crear la clase ApplicationInsightsTracker](images/AzureLabs-Lab309-47.png)
 
-2.  Con el **Scripts** carpeta creada, haga doble clic en él para abrirlo. A continuación, dentro de esa carpeta, con el botón secundario, **crear > C\# Script**. Nombre de la secuencia de comandos **ApplicationInsightsTracker**.
+2.  Con el **Scripts** carpeta creada, haga doble clic en él para abrirlo. A continuación, dentro de esa carpeta, con el botón secundario, **crear**  >   **C# Script**. Nombre de la secuencia de comandos **ApplicationInsightsTracker**.
 
 3.  Haga doble clic en el nuevo **ApplicationInsightsTracker** script para abrirlo con **Visual Studio**.
 
@@ -505,7 +505,7 @@ Es el script siguiente para crear el **que mirar** secuencia de comandos. Este s
 
 1.  Haga doble clic en el **Scripts** carpeta para abrirla.
 
-2.  Haga clic en el **Scripts** carpeta, haga clic en **crear** > **C\# Script**. Nombre de la secuencia de comandos **que mirar**.
+2.  Haga clic en el **Scripts** carpeta, haga clic en **crear**  >   **C# Script**. Nombre de la secuencia de comandos **que mirar**.
 
 3.  Haga doble clic en el script para abrirlo con Visual Studio.
 
@@ -699,7 +699,7 @@ Para crear la secuencia de comandos:
 
 1.  Haga doble clic en el **Scripts** carpeta para abrirla.
 
-2.  Haga clic en el **Scripts** carpeta, haga clic en **crear** **C\# > Script**. Nombre de la secuencia de comandos **ObjectTrigger**.
+2.  Haga clic en el **Scripts** carpeta, haga clic en **crear**  >   **C# Script**. Nombre de la secuencia de comandos **ObjectTrigger**.
 
 3.  Haga doble clic en el script para abrirlo con Visual Studio. Reemplace el código existente con lo siguiente:
 
@@ -771,7 +771,7 @@ Para crear la secuencia de comandos:
 
 1.  Haga doble clic en el **Scripts** carpeta para abrirla.
 
-2.  Haga clic en el **Scripts** carpeta, haga clic en **crear** **C\# > Script**. Nombre de la secuencia de comandos **DataFromAnalytics**.
+2.  Haga clic en el **Scripts** carpeta, haga clic en **crear**  >   **C# Script**. Nombre de la secuencia de comandos **DataFromAnalytics**.
 
 3.  Haga doble clic en el script para abrirlo con Visual Studio.
 
@@ -825,7 +825,7 @@ Para crear la secuencia de comandos:
         }
     ```
 
-6.  Dentro de la **DataFromAnalytics** class, justo después de la **Start()** método, agregue el siguiente método denominado **FetchAnalytics()**. Este método es responsable de rellenar la lista de pares clave / valor, con un *GameObject* y un número de recuento de eventos de marcador de posición. A continuación, se inicializa el **GetWebRequest()** corrutina. La estructura de consulta de la llamada a *Application Insights* puede encontrarse dentro de este método también, como el *dirección URL de consulta* punto de conexión.
+6.  Dentro de la **DataFromAnalytics** class, justo después de la **Start()** método, agregue el siguiente método denominado **FetchAnalytics()** . Este método es responsable de rellenar la lista de pares clave / valor, con un *GameObject* y un número de recuento de eventos de marcador de posición. A continuación, se inicializa el **GetWebRequest()** corrutina. La estructura de consulta de la llamada a *Application Insights* puede encontrarse dentro de este método también, como el *dirección URL de consulta* punto de conexión.
 
     ```csharp
         private void FetchAnalytics()
@@ -857,7 +857,7 @@ Para crear la secuencia de comandos:
         }
     ```
 
-7.  Justo debajo de la **FetchAnalytics()** método, agregue un método llamado **GetWebRequest()**, que devuelve un *IEnumerator*. Este método es responsable de que solicita el número de veces que un evento, que se corresponde con un valor concreto *GameObject*, se ha llamado dentro de *Application Insights*. Cuando se hayan devuelto todas las consultas enviadas, el **DetermineWinner()** se llama al método.
+7.  Justo debajo de la **FetchAnalytics()** método, agregue un método llamado **GetWebRequest()** , que devuelve un *IEnumerator*. Este método es responsable de que solicita el número de veces que un evento, que se corresponde con un valor concreto *GameObject*, se ha llamado dentro de *Application Insights*. Cuando se hayan devuelto todas las consultas enviadas, el **DetermineWinner()** se llama al método.
 
     ```csharp
         /// <summary>
@@ -923,7 +923,7 @@ Para crear la secuencia de comandos:
         }
     ```
 
-8.  El siguiente método es **DetermineWinner()**, que ordena la lista de *GameObject* y *Int* pares, según el mayor número de eventos. A continuación, cambia el color de dicho material *GameObject* a *verde* (como comentarios para que tenga el número más alto). Esto muestra un mensaje con los resultados del análisis.
+8.  El siguiente método es **DetermineWinner()** , que ordena la lista de *GameObject* y *Int* pares, según el mayor número de eventos. A continuación, cambia el color de dicho material *GameObject* a *verde* (como comentarios para que tenga el número más alto). Esto muestra un mensaje con los resultados del análisis.
 
     ```csharp
         /// <summary>
@@ -1000,7 +1000,7 @@ Para crear la secuencia de comandos:
 
 1.  Haga doble clic en el **Scripts** carpeta para abrirla.
 
-2.  Haga clic en el **Scripts** carpeta, haga clic en **crear** > **C\# Script**. Nombre de la secuencia de comandos **movimiento**.
+2.  Haga clic en el **Scripts** carpeta, haga clic en **crear**  >   **C# Script**. Nombre de la secuencia de comandos **movimiento**.
 
 3.  Haga doble clic en el script para abrirlo con *Visual Studio*.
 
@@ -1205,7 +1205,7 @@ En este capítulo tiene que colocar el **movimiento** de script en el **cámara 
 
 Todo lo necesario para la sección de Unity de este proyecto ahora se completó, por lo que es el momento de crearla desde Unity.
 
-1.  Vaya a **configuración de compilación**, **(archivo > configuración de compilación...)** .
+1.  Vaya a **configuración de compilación**, (**archivo** > **configuración de compilación**).
 
 2.  Desde el **configuración de compilación** ventana, haga clic en **compilar**.
 

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: realidad mixta, Azure, academy, edge, iot edge, tutorial, api, notificaciones, funciones, tablas, envolventes, hololens, vr, iot, máquina virtual, ubuntu, python
-ms.openlocfilehash: 1ab7c48ac3cff1cb2283cadb171098af9e148628
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
+ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597568"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694598"
 ---
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
@@ -49,7 +49,7 @@ Este curso le mostrará cómo configurar y usar el servicio IoT Hub y, a continu
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> El Sr. y Azure 313: Servicio IoT Hub</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -91,7 +91,7 @@ Para obtener ayuda sobre optimización Sensor, siga este [vínculo al artículo 
 3. Configurar su **Máquina Virtual Ubuntu** mediante **Hyper-V**. Los siguientes recursos le ayudará con el proceso.
     1.  En primer lugar, siga este vínculo para [Descargue el archivo ISO (Xenial Xerus) LTS de Ubuntu 16.04.4](http://au.releases.ubuntu.com/16.04/). Seleccione el **imagen de escritorio de PC (AMD64) de 64 bits**.
     2.  Asegúrese de que **Hyper-V** está habilitada en el equipo de Windows 10. Puede seguir este vínculo para obtener instrucciones sobre [instalar y habilitar Hyper-V en Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
-    3.  Inicie Hyper-V y crear una nueva VM de Ubuntu. Puede seguir este vínculo para ver un [guía paso a paso sobre cómo crear una máquina virtual con Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Cuando se solicita a **"Instalar un sistema operativo desde un archivo de imagen de arranque"**, seleccione el **ISO de Ubuntu** tiene descarga anterior.
+    3.  Inicie Hyper-V y crear una nueva VM de Ubuntu. Puede seguir este vínculo para ver un [guía paso a paso sobre cómo crear una máquina virtual con Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine). Cuando se solicita a **"Instalar un sistema operativo desde un archivo de imagen de arranque"** , seleccione el **ISO de Ubuntu** tiene descarga anterior.
 
     > [!NOTE]
     > Uso de **creación rápida de Hyper-V** no se recomienda.  
@@ -271,7 +271,7 @@ Ahora puede pasar a la configuración del dispositivo **con el sistema operativo
 
 1.  Abra el **Ubuntu Terminal**y use el siguiente comando para instalar **pip**:
 
-    > [! Sugerencia] puede abrir *Terminal* muy fácilmente a través del uso el método abreviado de teclado: **Ctrl + Alt + T**.
+    > [!Sugerencia] puede abrir *Terminal* muy fácilmente a través del uso el método abreviado de teclado: **Ctrl + Alt + T**.
 
     ```bash
         sudo apt-get install python-pip
@@ -320,7 +320,7 @@ Ahora puede pasar a la configuración del dispositivo **con el sistema operativo
 
     1.  Use las teclas de flecha del teclado para desplazarse hacia abajo (deberá desplazarse un poco hacia abajo), para llegar a la línea que contiene ":
 
-        "**\<AGREGUE AQUÍ LA CADENA DE CONEXIÓN DE DISPOSITIVO &GT;**".
+        " **\<AGREGUE AQUÍ LA CADENA DE CONEXIÓN DE DISPOSITIVO >** ".
 
     2. Sustituya la línea, **incluidos los corchetes**, con el **Device Connection String** haya anotado anteriormente.
 
@@ -370,7 +370,7 @@ Ahora puede pasar a la configuración del dispositivo **con el sistema operativo
 
 4. Una vez que se instalan las extensiones, cierre y vuelva a abrir VS Code.
 
-5. Con VS Code, abra una vez más, vaya a **Ver > terminal integrado**.
+5. Con VS Code, abra una vez más, vaya a **vista** > **terminal integrado**.
 
 6. Ahora instalará **Cookiecutter**. En el terminal, ejecute el siguiente comando de bash:
 
@@ -390,7 +390,7 @@ Ahora puede pasar a la configuración del dispositivo **con el sistema operativo
 
 En este momento, deberá crear el contenedor, con el módulo, se inserte en el *Container Registry*. Una vez que haya insertado el contenedor, usará el *centro de IoT Edge* servicio implementarlo en el dispositivo, que se está ejecutando el *en tiempo de ejecución de IoT Edge*.
 
-1. En VS Code, haga clic en **Vista > Paleta de comandos**.
+1. En VS Code, haga clic en **vista** > **paleta de comandos**.
 
 2. En la paleta, buscar y ejecutar **Azure IoT Edge: Nueva solución de Iot Edge**.
 
@@ -404,7 +404,7 @@ En este momento, deberá crear el contenedor, con el módulo, se inserte en el *
 
 7. Observará un pregenerados *repositorio de imágenes de Docker* dirección aparecerá en la paleta. Tendrá el siguiente aspecto:
 
-    **localhost: 5000 /, el nombre del módulo -**. 
+    **localhost: 5000 /, el nombre del módulo -** . 
 
 8. Eliminar **localhost: 5000**y en su lugar de insertar el *Container Registry* **servidor de inicio de sesión** dirección, que anotó al crear el **contenedor Servicio de registro** ([en el paso 8 de capítulo 2](#chapter-2---the-container-registry-service)). Presione el **ENTRAR** clave, para confirmar la dirección.
 
@@ -744,7 +744,7 @@ A continuación, creará el *imágenes* carpeta, utilizada por el script de pyth
 
 ## <a name="chapter-9---package-the-solution-as-a-container"></a>Capítulo 9 - paquete de la solución como un contenedor
 
-1.  Ahora está listo para "paquete" los archivos como un contenedor y los insertará en sus **Azure Container Registry**. Dentro de VS Code, abra el *Terminal integrado* (**Ver > Terminal integrado / CTRL + '**) y utilice la siguiente línea para iniciar sesión en **Docker** (sustituya los valores de la comando con las credenciales de su **Azure Container Registry (ACR)**):
+1.  Ahora está listo para "paquete" los archivos como un contenedor y los insertará en sus **Azure Container Registry**. Dentro de VS Code, abra el *Terminal integrado* (**vista** > **Terminal integrado** o **Ctrl** + **\`** ) y utilice la siguiente línea para iniciar sesión en **Docker** (sustituya los valores del comando con las credenciales de su **Azure Container Registry (ACR)** ):
 
     ```bash
         docker login -u <ACR username> -p <ACR password> <ACR login server>
@@ -856,11 +856,11 @@ Desplácese hasta el Portal de Azure, donde creará un servicio de tablas de Azu
 
     2. Para **modelo de implementación**, haga clic en **Administrador de recursos**.
 
-    3. Para **tipo de cuenta**, mediante el menú desplegable, haga clic en **almacenamiento (uso general v1)**.
+    3. Para **tipo de cuenta**, mediante el menú desplegable, haga clic en **almacenamiento (uso general v1)** .
 
     4. Haga clic en un adecuado **ubicación**.
     
-    5. Para el **replicación** menú desplegable, haga clic en **lectura-access--almacenamiento con redundancia geográfica (RA-GRS)**.
+    5. Para el **replicación** menú desplegable, haga clic en **lectura-access--almacenamiento con redundancia geográfica (RA-GRS)** .
 
     6. Para **rendimiento**, haga clic en **estándar**.
 
@@ -916,7 +916,7 @@ Ahora que su **Table Service** cuenta de almacenamiento ha sido el programa de i
 
 1. Abra **Visual Studio** (**no** código de Visual Studio).
 
-2. En el menú, haga clic en **Ver > Cloud Explorer**.
+2. En el menú, haga clic en **vista** > **Cloud Explorer**.
 
     ![Abra cloud explorer](images/AzureLabs-Lab313-45.png)
 
@@ -1047,7 +1047,7 @@ En primer lugar, deberá crear un archivo que permitirá que la función de Azur
 
     ![función personalizada](images/AzureLabs-Lab313-59.png)
 
-13. Desplácese hacia abajo en la página siguiente, hasta que encuentre **IoT Hub (centro de eventos)**, a continuación, haga clic en él.
+13. Desplácese hacia abajo en la página siguiente, hasta que encuentre **IoT Hub (centro de eventos)** , a continuación, haga clic en él.
 
     ![función personalizada](images/AzureLabs-Lab313-60.png)
 
