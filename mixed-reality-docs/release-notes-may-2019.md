@@ -3,19 +3,19 @@ title: Notas de la versión - mayo de 2019
 description: Notas de la versión de Windows Mixed Reality para Windows 10 pueden actualizar 2019 (también conocido como 1 de 19H).
 author: mattzmsft
 ms.author: mazeller
-ms.date: 05/02/2019
+ms.date: 07/11/2019
 ms.topic: article
 keywords: release notes, versión, windows 10, compilación, 19h 1, sistema operativo, mayo de 2019
-ms.openlocfilehash: b688065fdcd37c9e49c877c957760a5433f44e08
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: fe2532429842a2acd7868349a8df19214e9ae155
+ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523368"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843304"
 ---
 # <a name="release-notes---may-2019"></a>Notas de la versión - mayo de 2019
 
-El **Windows 10 puede actualizar 2019** (también conocido como 1 de 19 H) incluye nuevas características de Windows Mixed Reality inmersivos conectados a PC. 
+El **Windows 10 puede actualizar 2019** (también conocido como 1 de 19 H) incluye características nuevas para auriculares de Windows Mixed Reality (VR), como la capacidad de iniciar las aplicaciones de Win32 en la realidad mixta principal. HoloLens (gen 1) es en a largo plazo de mantenimiento (LTS), con el mantenimiento de actualizaciones se publican mensualmente.
 
 Para actualizar a la versión más reciente en inmersivos (VR) PC para Windows Mixed Reality, abra el **configuración** aplicación, vaya a **actualización y seguridad**, a continuación, seleccione el **buscar actualizaciones** botón. En un equipo con Windows 10, puede instalar manualmente Windows 10 de mayo de 2019 actualizar mediante el [herramienta de creación de Windows media](https://www.microsoft.com/software-download/windows10).
 
@@ -40,9 +40,13 @@ Para iniciar una aplicación de Win32 en Windows Mixed Reality, aparezca el Pane
 #### <a name="please-help-us-improve"></a>Ayúdenos a mejorar!
 Buscamos continuamente para mejorar la compatibilidad.  Si encuentra su aplicación favorita de Win32 clásico no se comporta correctamente en el Windows Mixed Reality, envíe sus comentarios a través de nuestro [centro comentarios](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
 
+## <a name="hololens-1st-gen-long-term-servicing"></a>HoloLens (gen 1) mantenimiento de largo plazo
+
+HoloLens (gen 1) está entrando en estado de mantenimiento a largo plazo (LTS). Las actualizaciones futuras se centran en correcciones de seguridad y el problema, manteniendo la paridad de características con el [la versión de Windows 10 de octubre de 2018](release-notes-october-2018.md) para HoloLens (también conocido como RS5). 
+
 ## <a name="provide-feedback-and-report-issues"></a>Proporcionar comentarios e informe de problemas
 
-Use la [aplicación Centro de opiniones en los equipos Windows 10](give-us-feedback.md) para proporcionar comentarios e informe de problemas. Mediante el centro de comentarios asegura que toda la información de diagnóstico necesarios se incluyen para ayudar a nuestros ingenieros de depurar y resolver el problema rápidamente.
+Use la [aplicación Centro de opiniones en los equipos Windows 10](give-us-feedback.md) o el dispositivo HoloLens para proporcionar comentarios e informe de problemas. Mediante el centro de comentarios asegura que toda la información de diagnóstico necesarios se incluyen para ayudar a nuestros ingenieros de depurar y resolver el problema rápidamente.
 
 >[!NOTE]
 >No olvide acepte el mensaje que pregunta si desea que el centro de opiniones para tener acceso a la carpeta documentos (seleccione **Sí** cuando se le solicite).
@@ -50,7 +54,7 @@ Use la [aplicación Centro de opiniones en los equipos Windows 10](give-us-feedb
 ## <a name="prior-release-notes"></a>Notas de la versión anterior
 
 * [Notas de la versión - mayo de 2019](release-notes-may-2019.md)
-* [Notas de la versión - octubre de 2018](release-notes-october-2018.md)
+* [Notas de la versión (octubre de 2018)](release-notes-october-2018.md)
 * [Notas de la versión (abril de 2018)](release-notes-april-2018.md)
 * [Notas de la versión (octubre de 2017)](release-notes-october-2017.md)
 * [Notas de la versión (agosto de 2016)](release-notes-august-2016.md)

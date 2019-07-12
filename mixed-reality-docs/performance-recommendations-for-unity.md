@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, cpu, gpu, representación, recolección de elementos, hololens
-ms.openlocfilehash: 37eac566a0315009330ac7fee96edd82348d6ba3
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.openlocfilehash: b0821f07184bff8630f6b6af0d0fc461f6fcd133
+ms.sourcegitcommit: 8f3ff9738397d9b9fdf4703b14b89d416f0186a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605746"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843333"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendaciones de rendimiento para Unity
 
@@ -72,8 +72,9 @@ public class ExampleClass : MonoBehaviour
 }
 ```
 
->[!NOTE] Evitar GetComponent(string) <br/>
-> Cuando se usa  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)*, hay una serie de sobrecargas diferentes. Es importante usar siempre las implementaciones en función del tipo y nunca la sobrecarga de búsqueda basada en cadena. Búsqueda por la cadena de la escena es significativamente más costosa que la búsqueda por tipo. <br/>
+>[!NOTE] 
+> Evitar GetComponent(string) <br/>
+> Cuando se usa  *[GetComponent()](https://docs.unity3d.com/ScriptReference/GameObject.GetComponent.html)* , hay una serie de sobrecargas diferentes. Es importante usar siempre las implementaciones en función del tipo y nunca la sobrecarga de búsqueda basada en cadena. Búsqueda por la cadena de la escena es significativamente más costosa que la búsqueda por tipo. <br/>
 > (Bueno) Componente GetComponent (tipo) <br/>
 > (Bueno) T GetComponent\<T >) <br/>
 > (Incorrecto) Componente GetComponent(string) > <br/>
@@ -225,22 +226,20 @@ Además, es preferible generalmente para combinar las mallas en un GameObject do
 
 ## <a name="gpu-performance-recommendations"></a>Recomendaciones de rendimiento de GPU
 
-Obtenga más información sobre [optimización de la representación de gráficos en Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games)
+Obtenga más información sobre [optimización de la representación de gráficos en Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games) 
 
-#### <a name="reduce-poly-count"></a>Reducir el número de poli
+### <a name="optimize-depth-buffer-sharing"></a>Optimizar el uso compartido de búfer de profundidad
+
+Por lo general se recomienda habilitar **uso compartido de búfer de profundidad** en **configuración del Reproductor XR** para optimizar el [estabilidad holograma](Hologram-stability.md). Cuando se habilita en función de profundidad de la etapa tardía reprojection con esta configuración no obstante, se recomienda seleccionar **formato profundidad de 16 bits** en lugar de **formato de 24 bits profundidad**. Usará los búferes de profundidad de 16 bits reduce drásticamente el ancho de banda (y, por tanto, de energía) asociado con el tráfico de búfer de profundidad. Esto puede ser una ventaja de gran potencia, pero solo es aplicable para las experiencias con un intervalo de profundidad pequeña como [luchas z](https://en.wikipedia.org/wiki/Z-fighting) es más probable que ocurra con 16 bits a 24 bits. Para evitar estos artefactos, modifique los planos de recorte cerca o lejos de la [cámara Unity](https://docs.unity3d.com/Manual/class-Camera.html) para tener en cuenta la precisión inferior. Para las aplicaciones basadas en HoloLens, un plano de recorte lejano de 50 millones en lugar del predeterminado de Unity 1000 m generalmente puede eliminar cualquier luchas z.
+
+### <a name="reduce-poly-count"></a>Reducir el número de poli
 
 Normalmente se reduce el número de polígonos, ya sea por
 1) Quitar objetos de una escena
 2) Diezmado activos lo que reduce el número de polígonos de una malla determinada
 3) Implementar un [System de nivel de detalle (LOD)](https://docs.unity3d.com/Manual/LevelOfDetail.html) en la aplicación que procesa lejos estén los objetos con la versión de polígono de inferior de la misma geometría
 
-#### <a name="limit-overdraw"></a>Límite de sobredibujo
-
-En Unity, uno puede mostrar el sobredibujo para su escena, alternando el [ **dibujar menú modo de** ](https://docs.unity3d.com/Manual/ViewModes.html) en la esquina superior izquierda de la **vista de escena** y seleccionando **Sobredibujo** .
-
-Por lo general, el sobredibujo se puede mitigar mediante el sacrificio de objetos antes de tiempo antes de enviarlos a la GPU. Unity proporciona detalles sobre cómo implementar [oclusión de caras traseras](https://docs.unity3d.com/Manual/OcclusionCulling.html) para su motor.
-
-#### <a name="understanding-shaders-in-unity"></a>Sombreadores de descripción en Unity
+### <a name="understanding-shaders-in-unity"></a>Sombreadores de descripción en Unity
 
 Una sencilla aproximación para comparar a los sombreadores en el rendimiento es identificar el número promedio de operaciones cada que se ejecuta en tiempo de ejecución. Esto puede hacerse fácilmente en Unity.
 
@@ -255,11 +254,29 @@ Una sencilla aproximación para comparar a los sombreadores en el rendimiento es
 
     ![Operaciones estándar de sombreador de Unity](images/unity-standard-shader-compilation.png)
 
-##### <a name="unity-standard-shader-alternatives"></a>Alternativas de estándar de sombreador de Unity
+#### <a name="optmize-pixel-shaders"></a>Sombreadores de píxeles de optimización
 
-En lugar de una representación basada en físicamente (PBR) u otro sombreador de alta calidad, examine el uso de un mayor rendimiento y el sombreador más barato. [Mixto realidad Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona un [sombreador estándar](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/MixedRealityStandard.shader) que se ha optimizado para los proyectos de realidad mixta.
+Examina los resultados de la estadística compilados utilizando el método anterior, el [fragmento sombreador](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) generalmente se ejecutarán más operaciones que el [sombreador de vértices](https://en.wikipedia.org/wiki/Shader#Vertex_shaders) por término medio. Se ejecuta el sombreador de fragmentos, también conocido como el sombreador de píxeles por píxel en la pantalla mientras el sombreador de vértices es sólo ejecutada por vértice de todas las mallas se dibuja en la pantalla de salida. 
+
+Por lo tanto, no sólo los sombreadores de fragmento es necesario obtener más instrucciones aparte de los sombreadores de vértices debido a todos los cálculos de iluminación, sombreadores fragmento casi siempre se ejecutan en un conjunto de datos mayor. Por ejemplo, si la salida de pantalla es de 2k por imagen de 2 k, a continuación, puede obtener el sombreador de fragmento ejecuta 2 000 * 2, 4,000,000 = 000 veces. Si la representación de dos ojos, este número se duplica puesto que hay dos pantallas. Si una aplicación de realidad mixta tiene varias pasadas, pantalla completa posprocesamiento efectos o representar varias mallas al mismo píxel, este número aumentará drásticamente. 
+
+Por lo tanto, lo que reduce el número de operaciones en el sombreador de fragmento puede generalmente proporcionan mucho mayores mejoras de rendimiento a través de las optimizaciones del sombreador de vértices.
+
+#### <a name="unity-standard-shader-alternatives"></a>Alternativas de estándar de sombreador de Unity
+
+En lugar de una representación basada en físicamente (PBR) u otro sombreador de alta calidad, examine el uso de un mayor rendimiento y el sombreador más barato. El [Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona el [sombreador estándar MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) que se ha optimizado para los proyectos de realidad mixta.
 
 Unity también proporciona un apagado, vértice iluminado, sombras simplificada difuso y otras opciones que son significativamente más rápido si se compara con el sombreador de Unity estándar. Consulte [uso y rendimiento de sombreadores integrados](https://docs.unity3d.com/Manual/shader-Performance.html) para obtener más información.
+
+#### <a name="shader-preloading"></a>Carga previa del sombreador
+
+Use *sombreador precargar* y otros trucos para optimizar [tiempo de carga de sombreador](http://docs.unity3d.com/Manual/OptimizingShaderLoadTime.html). En concreto, la carga previa del sombreador significa, no verá las complicaciones debido a la compilación del sombreador en tiempo de ejecución.
+
+### <a name="limit-overdraw"></a>Límite de sobredibujo
+
+En Unity, uno puede mostrar el sobredibujo para su escena, alternando el [ **dibujar menú modo de** ](https://docs.unity3d.com/Manual/ViewModes.html) en la esquina superior izquierda de la **vista de escena** y seleccionando **Sobredibujo** .
+
+Por lo general, el sobredibujo se puede mitigar mediante el sacrificio de objetos antes de tiempo antes de enviarlos a la GPU. Unity proporciona detalles sobre cómo implementar [oclusión de caras traseras](https://docs.unity3d.com/Manual/OcclusionCulling.html) para su motor.
 
 ## <a name="memory-recommendations"></a>Recomendaciones de memoria
 
