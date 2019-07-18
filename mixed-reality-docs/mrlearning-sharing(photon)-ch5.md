@@ -1,56 +1,57 @@
 ---
-title: Uso compartido de módulo para HoloLens 2 de aprendizaje de MR
-description: Realice este curso para aprender a implementar varios usuarios experiencias compartidas dentro de una aplicación de HoloLens 2.
+title: Módulo de uso compartido de aprendizaje MR para HoloLens 2
+description: Complete este curso para aprender a implementar experiencias compartidas multiusuario en una aplicación de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 2a16d318c6d749bcbf6ed9db0d6cd2228a6ea06e
-ms.sourcegitcommit: 78e21e887bf4357c96c9ab2164559d610e8c041e
+ms.openlocfilehash: 1ae880208e79e2e045bd5e7298db260b7f0b2232
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67465200"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293624"
 ---
-# <a name="azure-spatial-anchors-and-shared-experiences"></a>Azure delimitadores espacial y experiencias compartidas
+# <a name="azure-spatial-anchors-and-shared-experiences"></a>Anclajes espaciales y experiencias compartidas de Azure
 
-En esta lección, se obtenga información sobre cómo integrar Azure espacial delimitadores (ASA) en nuestra experiencia compartida. ASA permite varios dispositivos colocados para tener una referencia común si su entorno físico es experiencias virtual delimitador forma que todos los participantes ven objetos en el mismo lugar físico.
+En esta lección, aprenderá a integrar anclajes espaciales de Azure (ASA) en nuestra experiencia compartida. ASA permite que varios dispositivos colocalizados tengan una referencia común si su entorno físico va a delimitar experiencias virtuales de forma que todos los participantes vean objetos en la misma ubicación física.
 
-Antes de continuar con esta lección, necesitaremos completar el módulo de aprendizaje de ASA que cubrirá sus aspectos básicos, cuenta de Azure y creación de recursos y otros bloques de edificios fundamentales que son necesarios antes de que podemos integrar ASA en nuestra experiencia compartido ASA.
+Antes de continuar con esta lección, es necesario completar el módulo de aprendizaje de ASA, que tratará los conceptos básicos de ASA, la creación de cuentas y recursos de Azure y otros bloques de edificios fundamentales necesarios antes de que podamos integrar ASA en nuestra experiencia compartida.
 
-Objetivos:
+Objetivos
 
-- Integrar ASA en una experiencia compartida para la alineación de varios dispositivo
-- Conozca los aspectos básicos del funcionamiento de ASA en el contexto de una experiencia local compartido
+- Integre ASA en una experiencia compartida para la alineación de varios dispositivos.
+- Conozca los aspectos básicos de cómo funciona ASA en el contexto de una experiencia compartida local.
 
 ### <a name="instructions"></a>Instrucciones
 
-1. Guarde el proyecto de la lección anterior (CTRL + S) y asígnele el nombre "HLSharedProjectMainPart5.unity" para que resulte más fácil encontrar cuando necesite de nuevo.
+1. Guarde el proyecto de la lección anterior (control + S) y asígnele el nombre "HLSharedProjectMainPart5. Unity" para que sea más fácil de encontrar cuando lo necesite de nuevo.
 
-2. Seleccione el recurso prefabricado de TableAnchor debajo del objeto primario de MixedRealityPlayspace y elimínelo.
+2. Seleccione TableAnchor recurso prefabricado bajo el objeto primario MixedRealityPlayspace y elimínelo.
 
 ![Module3Chapter5tep2im](images/module3chapter5step2im.PNG)
 
-
-
-3.  En la vista del proyecto vaya a recursos -> recursos -> prefabricados y arrastre el prefabricado TableAnchor encima del objeto SharedPlayground convertirlo en un elemento secundario.
-4.  Expanda el objeto primario de MixedRealityPlayspace, el objeto TableAnchor y así el objeto de botones. 
+3.  En la vista de proyecto, vaya a activos-> Resources-> Prefabs y arrastre el recurso prefabricado TableAnchor sobre el objeto SharedPlayground para convertirlo en un elemento secundario.
+4.  Expanda el objeto primario MixedRealityPlayspace, el objeto TableAnchor y expanda también el objeto botones. 
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Ahora en la jerarquía, seleccione ShareAzureAnchorButton y mover su atención en el panel de Inaspector. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente y seleccione AnchorModuleScript y haga clic en ShareAnchorNetework().
+4. Ahora, en la jerarquía, seleccione ShareAzureAnchorButton y desplace su atención al panel inestable. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente y seleccione AnchorModuleScript y haga clic en ShareAnchorNetework ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Seleccione GetAzureAnchorButton (consulte el paso 4), y mover la atención de nuevo en el panel del Inspector. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente, AnchorModuleScript y haga clic en GetSharedAnchorNetwork() y seleccione Guardar.
+5. Seleccione GetAzureAnchorButton (consulte el paso 4) y vuelva a llamar al panel Inspector. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente y seleccione AnchorModuleScript, y haga clic en GetSharedAnchorNetwork () y en guardar.
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
+6. Para probar el módulo de uso compartido, haga clic en el botón "iniciar sesión de Azure ASA", que iniciará la sesión de anclajes espaciales de Azure y, después, cree el anclaje de Azure haciendo clic en el botón "crear anclaje de Azure" y espere unos minutos para que se cree el delimitador de Azure. Una vez creado el delimitador de Azure, haga clic en el botón "compartir el anclaje de Azure" para compartir el delimitador de Azure creado desde HoloLens.
 
+7. Para recibir el delimitador de Azure compartido en otro HoloLens, haga clic en "iniciar sesión de Azure ASA" para empezar a trabajar en la sesión de ASA actual y haga clic en el botón "obtener el anclaje de Azure" para obtener el anclaje compartido de Azure desde el otro HoloLens.
 
+   > Nota: Todos los detalles de las acciones correspondientes en los botones individuales se mostrarán en la ventana Depurar.
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En esta lección ha aprendido a integrar eficaz nuevos espacial delimitadores de Azure para alinear dispositivos colocados en una experiencia compartido! En esta lección también se concluye el módulo de uso compartido. Hemos aprendido cómo configurar una nueva cuenta Photon, integrar Photon y juego de palabras en una nueva aplicación de Unity, configurar los avatares y objetos compartidos y, por último, Alinear a varios participantes con ASA. 
+En esta lección ha aprendido a integrar los nuevos delimitadores espaciales de Azure para alinear dispositivos colocalizados en una experiencia compartida. En esta lección también se concluye el módulo de uso compartido. Hemos aprendido a configurar una nueva cuenta de Photon, a integrar Photon y BURDO en una nueva aplicación de Unity, a configurar avatares y objetos compartidos, y, por último, a alinear varios participantes con ASA. 
 

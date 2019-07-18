@@ -1,88 +1,85 @@
 ---
-title: Módulo de ASA de aprendizaje de MR Azure delimitador espaciales en HoloLens 2
+title: MR Learning ASA Module Azure Spatial delimitador de HoloLens 2
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: f8a52660fe05b6ed4508321ed246b8e299b75bca
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: 80367ed818168c1d642fadbd7316d3d6481dd2a9
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523334"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293800"
 ---
-# <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Guardar, recuperar y compartir los anclajes espacial de Azure
+# <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Guardar, recuperar y compartir anclajes espaciales de Azure
 
-En este tutorial, se obtendrá información sobre cómo guardar nuestro delimitadores espacial de Azure en varias sesiones de aplicación guardando nuestra información de anclaje en el disco del 2 de HoloLens. También aprenderá cómo compartir esta información de anclaje para otros dispositivos para la alineación de un delimitador de varios dispositivos.
+En este tutorial, veremos cómo guardar los anclajes espaciales de Azure en varias sesiones de la aplicación. para ello, guardamos la información de delimitador en el disco de HoloLens 2. También aprenderá a compartir esta información de delimitador en otros dispositivos para una alineación de delimitador de varios dispositivos.
 
 ## <a name="objectives"></a>Objetivos
 
-* Obtenga información sobre cómo guardar y recuperar información espacial delimitador de Azure desde el disco local de HoloLens 2, para la persistencia entre sesiones de aplicación
+* Obtenga información sobre cómo guardar y recuperar información del delimitador espacial de Azure desde el disco local de HoloLens 2 para la persistencia entre sesiones de aplicación
 
-* Obtenga información sobre cómo compartir información de Azure espacial delimitador entre los usuarios en un escenario de varios dispositivo
-
-  
+* Aprenda a compartir información de delimitador espacial de Azure entre usuarios en un escenario de varios dispositivos
 
 ## <a name="instructions"></a>Instrucciones
 
-### <a name="persist-azure-anchors-between-app-sessions---save-anchor-id-to-disk"></a>Conservar delimitadores de Azure entre sesiones de aplicación: identificador de delimitador en el disco de almacenamiento
+### <a name="persist-azure-anchors-between-app-sessions---save-anchor-id-to-disk"></a>Persistencia de los delimitadores de Azure entre sesiones de aplicación: guardar el ID. de delimitador en el disco
 
-1. Buscar y agregar el recurso prefabricado SaveAnchorToDisk a la escena. Estos incluyen dos botones, un botón para guardar los identificadores de delimitador de Azure disponibles en el disco 2 de HoloLens y otro para recuperar los identificadores desde el disco.
+1. Busque y agregue SaveAnchorToDisk recurso prefabricado a su escena. Estos incluyen dos botones, un botón para guardar cualquier identificador de delimitador de Azure disponible en el disco de HoloLens 2 y otro para recuperar los identificadores del disco.
 
-   ![module2chapter2step1im](images/module2chapter2step1im.PNG)
+![module2chapter2step1im](images/module2chapter2step1im.PNG)
 
-2. Configure cada botón según las instrucciones siguientes
-   - Para el botón denominado SaveToDisk, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método SaveAzureAnchorIDToDisk() del componente de ASAmoduleScript ParentAnchor del objeto.
+2. Configure cada botón según las instrucciones siguientes.
+
+   - En el caso del botón denominado SaveToDisk, cree un nuevo evento bajo el desencadenador de eventos presionado del botón, así como el desencadenador de evento al hacer clic. Arrastre el objeto ParentAnchor al campo vacío y asigne el método SaveAzureAnchorIDToDisk () desde el componente ASAmoduleScript del objeto ParentAnchor.
    
-     > Nota: algunos de los botones pueden aparecer la superposición de los otros botones de la escena. No dude en ajustar la posición del botón.
-   
+     > Nota: algunos de los botones pueden aparecer superpuestos con los demás botones de la escena. No dude en ajustar la posición del botón.
 
-  ![module2chapter2step2aim](images/module2chapter2step2aim.PNG)
+![module2chapter2step2aim](images/module2chapter2step2aim.PNG)
 
 ![module2chapter2step2aim](images/module2chapter2step2bim.PNG)
 
 ![module2chapter2step2aim](images/module2chapter2step2cim.PNG)
 
-   - Para el botón denominado GetFromDisk, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método LoadAzureAnchorIDsFromDisk() del componente de ASAmoduleScript ParentAnchor del objeto.
 
-3. Siga las instrucciones de Tutoiral 1 para compilar la aplicación actualizada en el dispositivo. Después de presionar el botón Crear anclaje de Azure, como hizo en la lección anterior, ahora puede guardar el identificador de delimitador de Azure en el disco presionando el botón Guardar en disco.
+   - En el caso del botón denominado GetFromDisk, cree un nuevo evento bajo el desencadenador de eventos presionado del botón, así como el desencadenador de evento al hacer clic. Arrastre el objeto ParentAnchor al campo vacío y asigne el método LoadAzureAnchorIDsFromDisk () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-4. Reinicie la aplicación, iniciar la sesión de Azure, presione un identificador de delimitador de carga y después presione Buscar el delimitador de Azure para buscar el delimitador asociado con el identificador se guardan en el disco. Toda la escena ahora debe ajustarse a su posición, en la ubicación que ha guardado el delimitador anteriormente!
+3. Siga las instrucciones de tutoiral 1 para compilar la aplicación actualizada en el dispositivo. Después de presionar el botón crear anclaje de Azure, como hizo en la lección anterior, puede guardar el identificador de delimitador de Azure en el disco presionando el botón Guardar en el disco.
 
-### <a name="share-azure-anchors-between-multiple-devices"></a>Compartir los anclajes de Azure entre varios dispositivos
+4. Reinicie la aplicación, inicie la sesión de Azure, presione cargar identificador de delimitador y, a continuación, presione buscar delimitador de Azure para ubicar el delimitador asociado con el ID. que hemos guardado en el disco. La escena completa ahora debe ajustarse a la posición, en la ubicación en la que guardó el delimitador previamente.
 
-En esta sección, se obtendrá información sobre cómo compartir el identificador de delimitador de Azure entre varios dispositivos. Esto permitirá que varios dispositivos consultar Azure para el mismo identificador de delimitador, que permite que nuestra hologramas anclados y escenas espacialmente estén alineados. Alineación espacial (ver la mismas hologramas en la misma ubicación física entre varios dispositivos) es clave para local experiencias compartidas en el 2 de HoloLens. Hay muchas maneras para transferir información relativa a los identificadores de azure entre dispositivos, incluidos los métodos describen en las experiencias compartidas Azure espacial delimitadores tutoriales (TODO: Agregar vínculo.) Este ejemplo utiliza un servicio web simple para cargar y descargar los identificadores de delimitador entre dispositivos.
+### <a name="share-azure-anchors-between-multiple-devices"></a>Compartir anclajes de Azure entre varios dispositivos
 
-1. Agregue el recurso prefabricado de ShareAnchor en su jerarquía. Este recurso prefabricado agrega dos nuevos botones a la escena; uno para cargar información de Id. de anclaje y otro para descargar información de Id. de anclaje. 
+En esta sección, aprenderá a compartir el identificador de delimitador de Azure entre varios dispositivos. Esto permitirá que varios dispositivos consulten Azure para el mismo identificador de delimitador, lo que permite alinear espacialmente los hologramas y las escenas anclados. La alineación espacial (ver los mismos hologramas en la misma ubicación física entre varios dispositivos) es fundamental para las experiencias compartidas locales en HoloLens 2. Hay muchas maneras de transferir información relacionada con los identificadores de Azure entre dispositivos, incluidos los métodos descritos en los tutoriales de experiencias compartidas de los delimitadores espaciales de Azure (TODO: Agregar vínculo). En este ejemplo se usa un servicio web simple para cargar y descargar los ID. de delimitador entre dispositivos.
 
-   ![module2chapter2step5im](images/module2chapter2step5im.PNG)
+1. Agregue el recurso prefabricado ShareAnchor en la jerarquía. Este recurso prefabricado agrega dos nuevos botones a la escena. uno para cargar información de identificador de delimitador y otro para descargar información de identificador de delimitador. 
 
-2. Configure cada botón según las instrucciones siguientes
+![module2chapter2step5im](images/module2chapter2step5im.PNG)
 
-   - Para el botón denominado SendSharedAnchor, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método ShareAnchor() del componente de ASAmoduleScript ParentAnchor del objeto.
+2. Configure cada botón según las instrucciones siguientes.
 
-     ![module2chapter2step6aim](images/module2chapter2step6aim.PNG)
+   - En el caso del botón denominado, SendSharedAnchor, cree un nuevo evento bajo el desencadenador de eventos presionado de botón, así como el desencadenador de evento on click. Arrastre el objeto ParentAnchor al campo vacío y asigne el método ShareAnchor () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-     ![module2chapter2step6bim](images/module2chapter2step6bim.PNG)
+![module2chapter2step6aim](images/module2chapter2step6aim.PNG)
 
-     
+![module2chapter2step6bim](images/module2chapter2step6bim.PNG)
 
-   - Para el botón denominado GetSharedAnchor, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método GetSharedAzureAnchor() del componente de ASAmoduleScript ParentAnchor del objeto.
+   - En el caso del botón denominado, GetSharedAnchor, cree un nuevo evento bajo el desencadenador de eventos presionado de botón, así como el desencadenador de evento on click. Arrastre el objeto ParentAnchor al campo vacío y asigne el método GetSharedAzureAnchor () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-3. Siga las instrucciones de [Tutorial 1](mrlearning-base-ch1.md). Para compilar la aplicación actualizada en el dispositivo. Después de presionar el botón Crear anclaje de Azure, como hizo en la lección anterior, es posible que ahora comparten el identificador de delimitador de Azure a otros dispositivos presionando el botón compartir a otro dispositivo.
+3. Siga las instrucciones del [tutorial 1](mrlearning-base-ch1.md). para compilar la aplicación actualizada en el dispositivo. Después de presionar el botón crear anclaje de Azure, como hizo en la lección anterior, ahora puede compartir el identificador de delimitador de Azure con otros dispositivos si presiona el botón compartir en otro dispositivo.
 
-   > Nota: Seleccione el delimitador de elemento primario y desplácese hacia abajo hasta la secuencia de comandos de delimitador de elemento primario. Asegúrese de que el pin de uso compartido público es exclusivo, por lo que cuando lo comparte, sabrá que es suyo que va a compartir. Puede haber miles de usuarios que comparten sus delimitadores de Azure, por lo que esto le permitirá asegurarse de que comparta los delimitadores de Azure correctos.
+   > Nota: Seleccione el delimitador primario y desplácese hacia abajo hasta el script de delimitador primario. Asegúrese de que el PIN de uso compartido público sea único, de modo que cuando lo comparta, sepa que es suyo que está compartiendo. Podría haber miles de usuarios compartiendo sus delimitadores de Azure, por lo que hacerlo le permitirá asegurarse de que comparte los delimitadores de Azure correctos.
 
-4. Si tiene otro dispositivo HoloLens 2, inicie la aplicación y, a continuación, iniciar la sesión de Azure. Presione el botón obtener identificador de delimitador compartido y, a continuación, presione el botón Buscar el delimitador de Azure para buscar el delimitador asociado con el identificador se guardan en el disco. Toda la escena ahora debe ajustarse a su posición, en donde se colocó en el otro dispositivo HoloLens 2. Si tiene sólo un 2 de HoloLens, es posible que todavía probar la funcionalidad mediante el reinicio de la aplicación, iniciar la sesión de Azure y, a continuación, presione el botón "Obtener el identificador de delimitador compartido" y, a continuación, presione el botón Buscar el delimitador de Azure para buscar el delimitador asociado con el Id. que se guardan en el disco. Toda la escena ahora debe ajustarse a su posición, en la ubicación que ha guardado el delimitador anteriormente!
+4. Si tiene otro dispositivo HoloLens 2, inicie la aplicación y, a continuación, inicie la sesión de Azure. Presione el botón obtener identificador de delimitador compartido y, a continuación, presione el botón buscar delimitador de Azure para ubicar el delimitador asociado con el ID. que hemos guardado en el disco. La escena completa ahora debe ajustarse a la posición, en el lugar donde se colocó en el otro dispositivo HoloLens 2. Si solo tiene un HoloLens 2, puede probar la funcionalidad reiniciando la aplicación, iniciando la sesión de Azure y, a continuación, presione el botón de botón "obtener identificador de delimitador compartido" y, a continuación, presione el botón buscar delimitador de Azure para buscar el delimitador asociado al IDENTIFICADOR que hemos guardado en el disco. La escena completa ahora debe ajustarse a la posición, en la ubicación en la que guardó el delimitador previamente.
 
 ## <a name="congratulations"></a>Enhorabuena
-En esta lección ha aprendido cómo conservar los delimitadores espacial de Azure entre sesiones de aplicación y los reinicios de aplicación mediante el ahorro del identificador de delimitador espacial de Azure en el disco local en HoloLens 2. También ha aprendido cómo compartir Azure espacial delimitadores entre varios dispositivos para una experiencia básica holograma multiusuario, estática compartida.
+En esta lección ha aprendido a conservar los anclajes espaciales de Azure entre las sesiones de aplicación y los reinicios de aplicación al guardar el identificador de delimitador espacial de Azure en el disco local en HoloLens 2. También aprendió a compartir anclajes espaciales de Azure entre varios dispositivos para una experiencia de uso compartido de hologramas estáticos y multiusuario.
 
-Aprendemos cómo implementar Azure espacial delimitadores como parte de una experiencia totalmente interactiva de compartido local durante la última lección del módulo de uso compartido. Una experiencia de uso compartido local puede incluir funcionalidad como identificadores de objeto 3D sincronizado posición, rotación y escala, para cada usuario y compartir los Estados de la aplicación. Delimitadores espacial Azure mejora estos escenarios compartidos proporcionando cada participante con un delimitador común que permite que todos los usuarios ver objetos virtuales en la misma ubicación física. Esto es cierto en una variedad de plataformas de dispositivos, incluidos los dispositivos HoloLens, iOS y Android. Para obtener información sobre cómo desarrollar una experiencia compartida, completar todas las lecciones del módulo de recursos compartidos.
+Aprendemos a implementar anclajes espaciales de Azure como parte de una experiencia compartida local totalmente interactiva durante la lección final del módulo de uso compartido. Una experiencia de uso compartido local puede incluir funciones como la posición del objeto en 3D sincronizado, la rotación y la escala, los identificadores de cada usuario y los Estados de la aplicación compartida. Los delimitadores espaciales de Azure mejoran estos escenarios compartidos proporcionando a cada participante un delimitador común que permite a todos los usuarios ver los objetos virtuales en la misma ubicación física. Esto es cierto en una variedad de plataformas de dispositivos, incluidos los dispositivos HoloLens, Android e iOS. Para obtener información sobre cómo desarrollar una experiencia compartida, complete todas las lecciones del módulo de uso compartido.
 
-En la lección siguiente, se obtendrá información sobre cómo proporcionar comentarios en tiempo real a los usuarios. Esta información incluirá información sobre la creación de anclaje, la calidad de comprensión del entorno y el estado de la sesión de Azure. Sin comentarios, los usuarios que no sepa si un delimitador ha sido correctamente la carga en Azure, si la calidad del entorno es suficiente para la creación de delimitador o el estado actual.
+En la lección siguiente, aprenderá a proporcionar a los usuarios comentarios en tiempo real. Estos comentarios incluirán información sobre la creación del delimitador, la calidad de la comprensión del entorno y el estado de la sesión de Azure. Sin comentarios, es posible que los usuarios no sepan si un delimitador se ha cargado correctamente en Azure, si la calidad del entorno es suficiente para la creación del delimitador o el estado actual.
 
-[Siguiente lección: Tutorial ASA 3](mrlearning-asa-ch3.md)
+[Siguiente lección: Tutorial de ASA 3](mrlearning-asa-ch3.md)
 

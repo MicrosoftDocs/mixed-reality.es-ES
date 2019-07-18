@@ -1,204 +1,203 @@
 ---
-title: Módulo de ASA de aprendizaje de MR Azure delimitador espaciales en HoloLens 2
+title: MR Learning ASA Module Azure Spatial delimitador de HoloLens 2
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: fcca828fa228894e0e60986c6c7fd0053b210357
-ms.sourcegitcommit: cf9f8ebbca0301e9d277853771ff6e47701ba1c1
+ms.openlocfilehash: 690ece3a02aeefd598db18baa66de3ddabfa43eb
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67523236"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293821"
 ---
-# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a Azure espacial delimitadores
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a los delimitadores espaciales de Azure
 
-Le damos la bienvenida al módulo de segundo de los tutoriales de HoloLens 2. Antes de comenzar, asegúrese de que todos los de la [requisitos previos](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) se completan. Si no ha completado la primera, [módulo Base](mrlearning-base.md) aún, se recomienda que complete primero ese módulo. Si está comenzando desde un nuevo proyecto de Unity, siga los pasos de creación del proyecto nuevo en el [módulo Base](mrlearning-base.md). 
+Este es el segundo módulo de los tutoriales de HoloLens 2. Antes de empezar, asegúrese de que se hayan completado todos los [requisitos previos](https://docs.microsoft.com/en-us/azure/spatial-anchors/quickstarts/get-started-unity-hololens) . Si aún no ha completado el primer [módulo base](mrlearning-base.md) , se recomienda que complete primero ese módulo. Si va a comenzar desde un nuevo proyecto de Unity, siga los pasos de creación del nuevo proyecto en el [módulo base](mrlearning-base.md). 
 
 ## <a name="objectives"></a>Objetivos
 
-* Conozca los aspectos básicos del desarrollo con Azure anclajes espaciales con HoloLens 2
+* Conozca los aspectos básicos del desarrollo con los anclajes espaciales de Azure con HoloLens 2
 
-* Crear, cargar y descargar los anclajes espaciales
-
-  
+* Crear, cargar y descargar anclajes espaciales
 
 ## <a name="instructions"></a>Instrucciones
 
-### <a name="downloading-and-importing-assets"></a>Descarga e importación de activos
+### <a name="downloading-and-importing-assets"></a>Descarga e importación de recursos
 Antes de comenzar, descargue e importe los siguientes recursos:
 
 [Azure Spatial Anchors](https://github.com/azure/azure-spatial-anchors-samples/releases)
 
-[Módulo Base MR paquete de recursos](https://github.com/microsoft/mixedrealitylearning/releases/tag/v1.1)
+[Paquete de recursos del módulo base MR](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2)
 
-[Paquete de recursos de módulo ASA](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_B2)
+[Módulo de recursos del módulo ASA](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.1)
 
-[Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)
+[Kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/)
 
-> Nota: Vea el paso 5 para obtener instrucciones específicas sobre cómo importar delimitadores espacial de Azure, paso 6 para obtener instrucciones específicas sobre el módulo MR Base paquete de recursos y los pasos 3 a 4 para obtener instrucciones específicas en el Kit de herramientas de realidad mixta (MRKT).
+> Nota: Consulte el paso 5 para obtener instrucciones específicas sobre cómo importar los anclajes espaciales de Azure, el paso 6 para obtener instrucciones específicas sobre el módulo de recursos del módulo base MR y los pasos del 3 al 4 para obtener instrucciones específicas sobre el kit de herramientas de la realidad mixta (MRKT).
 
-1. Cree una nueva escena en el proyecto. A la derecha, haga clic en la carpeta de la escena, haga clic en crear y, después, en escena. Nombre de la nueva escena ASALearningmodule.
+1. Cree una nueva escena en el proyecto. Haga clic con el botón derecho en la carpeta de la escena, haga clic en crear y luego en escena. Asigne a la nueva escena el nombre ASALearningmodule.
 
 ![module2chapter1step1im](images/module2chapter1step1im.PNG)
 
-2. Haga doble clic en ASALearningmodule para ver algunos elementos predefinidos aparecen junto con la nueva escena. 
+2. Haga doble clic en ASALearningmodule para ver que aparecen algunos elementos predefinidos junto con la nueva escena. 
 3. Configure la escena para el desarrollo de realidad mixta. 
 
 ![module2chapter1step3im](images/module2chapter1step3im.PNG)
 
-> Nota: Verá un mensaje emergente que dice, debe elegir un archivo para el Kit de herramientas de realidad mixta. Al hacer clic en Aceptar, se accede al paso 4.
+> Nota: Verá un mensaje emergente que indica que debe elegir un archivo para el kit de herramientas de realidad mixta. Al hacer clic en aceptar, aparecerá el paso 4.
 
-4. Al elegir un archivo para el MRTK, seleccione DefaultMixedRealityToolkitConfigurationProfile.
+4. Al elegir un archivo para MRTK, seleccione, DefaultMixedRealityToolkitConfigurationProfile.
 
-   > Nota: Si tiene su propio perfil de configuración, no dude usarlo en su lugar.
+> Nota: Si tiene su propio perfil de configuración, no dude en usarlo en su lugar.
 
 ![module2chapter1step4im](images/module2chapter1step4im.PNG)
 
-Ahora la escena está configurada para realidad mixta. Asegúrese de guardar la escena (hacer esto con uno de los controles o comando + S o haga clic en el archivo, a continuación, haga clic en Guardar en). 
+Ahora la escena está configurada para la realidad mixta. Asegúrese de guardar la escena (haga esto con control/comando + S o haga clic en archivo y, a continuación, haga clic en guardar). 
 
-5. Importar el [Azure delimitadores espaciales](https://github.com/azure/azure-spatial-anchors-samples/releases). Para poder usar delimitadores espaciales, debe importar este recurso. Haga clic en el vínculo anterior y haga clic con el botón derecho en AzureSpatialAnchors.unitypackage. Haga clic en Guardar destino como y guárdelo en su equipo. 
+5. Importe los delimitadores espaciales de [Azure](https://github.com/azure/azure-spatial-anchors-samples/releases). Para usar delimitadores espaciales, debe importar este recurso. Haga clic en el vínculo anterior y haga clic con el botón derecho en AzureSpatialAnchors. unitypackage Tools. Haga clic en Guardar destino como y guárdelo en el equipo. 
 
-   ![module2chapter1step5aim](images/module2chapter1step5aim.PNG)
+![module2chapter1step5aim](images/module2chapter1step5aim.PNG)
 
-   Después de guardarla, vaya a Unity, haga clic en los activos, dejan de funcionar al paquete de importación. A continuación, haga clic en el paquete personalizado... Se abrirán los archivos del equipo. Cuando realice, encontrar donde guardó el paquete Azure espacial delimitadores y selecciónelo. A continuación, haga clic en Abrir.
+Una vez que se haya guardado, vuelva a Unity, haga clic en activos y luego en importar paquete. A continuación, haga clic en paquete personalizado... Se abrirán los archivos del equipo. Cuando lo haga, busque el lugar en el que guardó el paquete de anclajes espaciales de Azure y selecciónelo. A continuación, haga clic en abrir.
 
-   ![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
+![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
 
-   Un elemento emergente aparece providingg una lista de herramientas y la configuración que le pide que lo que se debe importar. Seleccione ***todas*** de las opciones disponibles, a continuación, haga clic en Importar.
+Aparece una ventana emergente, providingg una lista de herramientas y valores de configuración, y preguntándole qué desea importar. Seleccione ***todas*** las opciones disponibles y, a continuación, haga clic en importar.
 
-   ![module2chapter1step5cim](images/module2chapter1step5cim.PNG)
+![module2chapter1step5cim](images/module2chapter1step5cim.PNG)
 
-   > Nota: Tenga paciencia, tardará unos minutos en Importar. 
+> Nota: Sea paciente, tardará unos minutos en realizar la importación. 
 
-   6. Importación [módulo MR Base activo Pack](https://github.com/microsoft/mixedrealitylearning/releases/tag/v1.1) siguiente. Mucho al igual que el paso 5, haga clic en el vínculo anterior. A continuación, haga clic con el botón secundario del mouse en BasemoduleAssetsV1 1.unitypackag y haga clic en Guardar destino como y guardarlo en el equipo.
+6. Importe [Mr paquete de recursos del módulo https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2) base] siguiente. Al igual que el paso 5, haga clic en el vínculo anterior. A continuación, haga clic con el botón secundario en BasemoduleAssetsV1 1. unitypackag y haga clic en Guardar destino como y guárdelo en el equipo.
 
-   ![module2chapter1step6aim](images/module2chapter1step6aim.PNG)
+![module2chapter1step6aim](images/module2chapter1step6aim.PNG)
 
-   > Sugerencia: Guarde todos estos recursos en la misma carpeta para que sean más fáciles de encontrar y tener acceso a. Mantiene todo bien y organizada.
+> Sugerencia: Guarde todos estos recursos en la misma carpeta para que sean más fáciles de encontrar y de tener acceso a. Mantiene todo bien y organizado.
 
-   Igual que el paso 5, volver atrás a Unity, haga clic en los recursos y mantenga el mouse sobre el paquete de importación. Haga clic en el paquete personalizado... Los archivos del equipo volverá a aparecer. Vaya a donde guardó el paquete de recursos del módulo de Base. y selecciónelo. Haga clic en Abrir.
+Al igual que el paso 5, vuelva a Unity, haga clic en activos y mantenga el mouse sobre el paquete de importación. Haga clic en paquete personalizado... Los archivos del equipo volverán a aparecer. Vaya a la ubicación en la que almacenó el módulo de recursos del módulo base. y selecciónelo. Haga clic en Abrir.
 
-   ![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
+![module2chapter1step5bim](images/module2chapter1step5bim.PNG)
 
-   > Nota: Puede haber más activos necesarios más adelante en este módulo. Siga estos pasos para importar los recursos mencionados a partir de ese momento. 
-                                                                                                                                                                                                                    
-7. Importar la confirmación del módulo ASA mediante el mismo enfoque que importar los paquetes anteriores.
+> Nota: Es posible que se necesiten más recursos más adelante en este módulo. Siga estos pasos para importar los recursos mencionados a partir de este punto. 
+
+7. Importe el [paquete de módulo de asa](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.1) con el mismo enfoque que la importación de los paquetes anteriores.
 
 ### <a name="configuring-your-scene"></a>Configuración de la escena
 
-En esta sección, agregaremos prefabricados y secuencias de comandos en la escena para crear una serie de botones que se muestran los aspectos básicos de cómo se comportan los delimitadores locales y Azure espacial anclajes en una aplicación.
+En esta sección, agregaremos Prefabs y scripts a la escena para crear una serie de botones que muestran los aspectos básicos de cómo se comportan los delimitadores locales y los delimitadores espaciales de Azure en una aplicación.
 
-7. En la ficha de proyecto, debajo de la carpeta de recursos, haga clic en ASAmoduleAssets. Una vez seleccionado, verá dos prefabricados: ButtonParent y ParentAnchor.
+8. En la pestaña proyecto, debajo de la carpeta activos, haga clic en ASAmoduleAssets. Una vez seleccionado, verá dos Prefabs: ButtonParent y ParentAnchor.
 
 ![module2chapter1step7im](images/module2chapter1step7im.PNG)
 
-8. Arrastre ambos prefabricados a la escena. 
+9. Arrastre ambos Prefabs a la escena. 
 
 ![module2chapter1step8im](images/module2chapter1step8im.PNG)
 
-9. Haga doble clic en el delimitador de elemento primario para seleccionarlo. Es posible que deba ajustar la vista para ver toda la escena. Ajuste la escena según sea necesario.
+10. Haga doble clic en el delimitador primario para seleccionarlo. Es posible que necesite ajustar la vista para ver toda la escena. Ajuste la escena según sea necesario.
 
-    Familiarícese con el recurso prefabricado ParentAnchor. Actualmente, el objeto de juego con nombre, ParentAnchor, es un cubo de color para fines de demostración. Finalmente, hemos ', ll ocultar el cubo y coloque el contenido como un elemento secundario de la ParentAnchor. Este recurso prefabricado incluye la secuencia de comandos AzureSpatialAnchorsDemoWrapper.cs (incluido con el SDK de ASA) y el script ASAmoduleScript.cs, incluido como parte de este módulo para el objeto ParentAnchor. 
+Familiarícese con el recurso prefabricado de ParentAnchor. Actualmente, el objeto de juego denominado, ParentAnchor, es un cubo de color con fines de demostración. Finalmente, se oculta el cubo y se coloca el contenido como un elemento secundario de ParentAnchor. Este recurso prefabricado incluye el script AzureSpatialAnchorsDemoWrapper.cs (incluido con el SDK de ASA) y el script ASAmoduleScript.cs, incluido como parte de este módulo en el objeto ParentAnchor. 
 
-10. Configurar los botones. En el prefabricado verá ParentAnchor, tenga en cuenta varios botones con la etiqueta. Estos botones se crean desde prefabricados de PressableButton del MRTK. Más información sobre cómo crear botones Pressable desde el [módulo Base](mrlearning-base-ch2.md). Para cada botón, agregue un evento que se desencadena cuando el usuario presiona o selecciona el botón de acuerdo con la siguiente lista. 
+11. Configurar botones. En ButtonParent recurso prefabricado, observe varios botones con etiqueta. Estos botones se crean a partir del Prefabs de PressableButton de MRTK. Obtenga más información sobre cómo crear botones que se pueda presionar desde el [módulo base](mrlearning-base-ch2.md). Para cada botón, agregue un evento que se desencadenará cuando el usuario presione o seleccione el botón según la lista siguiente. 
 
-- Para el botón denominado StartAzureSession, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método StartAzureSession() del componente de ASAmoduleScript ParentAnchor del objeto.
+- En el caso del botón denominado, StartAzureSession, cree un nuevo evento bajo el desencadenador de eventos presionado de botón, así como el desencadenador de evento on click. Arrastre el objeto ParentAnchor al campo vacío y asigne el método StartAzureSession () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-  ![module2chapter1step10aim](images/module2chapter1step10aim.PNG)
+![module2chapter1step10aim](images/module2chapter1step10aim.PNG)
 
-  ![module2chapter1step10bim](images/module2chapter1step10bim.PNG)
+![module2chapter1step10bim](images/module2chapter1step10bim.PNG)
 
-  ![module2chapter1step10cim](images/module2chapter1step10fim.PNG)
+![module2chapter1step10cim](images/module2chapter1step10fim.PNG)
 
-- Para el nombre del botón, StopAzureSession, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método StopAzureSession() del componente de ASAmoduleScript ParentAnchor del objeto.
+- En el nombre del botón, StopAzureSession, cree un nuevo evento bajo el desencadenador de eventos presionado del botón, así como el desencadenador de evento al hacer clic. Arrastre el objeto ParentAnchor al campo vacío y asigne el método StopAzureSession () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-- Para el botón denominado CreateAnchor, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método CreateAzureAnchor() del componente de ASAmoduleScript ParentAnchor del objeto.
+- En el caso del botón denominado, CreateAnchor, cree un nuevo evento bajo el desencadenador de eventos presionado de botón, así como el desencadenador de evento on click. Arrastre el objeto ParentAnchor al campo vacío y asigne el método CreateAzureAnchor () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-- Desencadenador de eventos para el botón denominado inicio busca para delimitador, crear un nuevo evento en el botón de presionar", así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método FindAzureAnchor() del componente de ASAmoduleScript ParentAnchor del objeto.
+- En el caso del botón denominado, empiece a buscar delimitadores, cree un nuevo evento en el desencadenador de evento Button Presse, así como el desencadenador de evento on click. Arrastre el objeto ParentAnchor al campo vacío y asigne el método FindAzureAnchor () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-- Para el botón denominado DeleteAzureAnchor, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método DeleteAzureAnchor() del componente de ASAmoduleScript ParentAnchor del objeto.
+- En el caso del botón denominado, DeleteAzureAnchor, cree un nuevo evento bajo el desencadenador de eventos presionado de botón, así como el desencadenador de evento on click. Arrastre el objeto ParentAnchor al campo vacío y asigne el método DeleteAzureAnchor () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-- Para el botón de anclaje con nombre, eliminar Local, cree un nuevo evento en el desencadenador de eventos de botón presionado, así como el desencadenador de eventos en haga clic en. Arrastre el objeto ParentAnchor en el campo vacío y asignar el método RemoveLocalAnchor() del componente de ASAmoduleScript ParentAnchor del objeto.
+- En el caso del botón denominado, elimine el delimitador local, cree un nuevo evento en el desencadenador de eventos presionado del botón, así como el desencadenador de evento al hacer clic. Arrastre el objeto ParentAnchor al campo vacío y asigne el método RemoveLocalAnchor () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-### <a name="build-and-demonstrate-base-application"></a>Generar y mostrar la aplicación de Base
+### <a name="build-and-demonstrate-base-application"></a>Compilar y demostrar la aplicación base
 
-Ahora que la escena está configurada para demostrar los conceptos básicos de Azure espacial delimitadores, compilará y demostrar el comportamiento básico de Azure espacial delimitadores. 
+Ahora que la escena está configurada para mostrar los aspectos básicos de los anclajes espaciales de Azure, crearemos y mostraremos el comportamiento básico de los delimitadores espaciales de Azure. 
 
 1. Si has cerrado la ventana Build Settings (Configuración de compilación) de las secciones anteriores, abre de nuevo la ventana de configuración de compilación en File>Build Settings (Archivo>Configuración de compilación).
-    ![Lesson1Chapter5Step1](images/Lesson1Chapter5Step1.JPG)
+![Lesson1Chapter5Step1](images/Lesson1Chapter5Step1.JPG)
 
-2. Asegúrese de la escena que desea probar está en segundo plano en la lista de compilación haciendo clic en el botón Agregar escenas abierto.
+2. Asegúrese de que la escena que desea probar está en la lista de escenas de la compilación haciendo clic en el botón Agregar escenas abiertas.
 
 3. Presiona el botón Build (Compilar) para comenzar el proceso de compilación.
-    ![Lesson1Chapter5Step3](images/Lesson1Chapter5Step3.JPG)
+![Lesson1Chapter5Step3](images/Lesson1Chapter5Step3.JPG)
 
-4. Crea y asigna un nombre a una nueva carpeta para la aplicación. En la imagen siguiente, se creó una carpeta con el nombre de la aplicación para que contenga la aplicación. Haga clic en seleccionar la carpeta para empezar a crear la carpeta recién creada. Una vez finalizada la compilación, puede cerrar la configuración de compilación"ventana de Unity. 
-    ![Lesson1Chapter5Step4](images/Lesson1Chapter5Step4.JPG)
+4. Crea y asigna un nombre a una nueva carpeta para la aplicación. En la imagen siguiente, se creó una carpeta con el nombre app que contiene la aplicación. Haga clic en Seleccionar carpeta para empezar a compilar en la carpeta que acaba de crear. Una vez completada la compilación, puede cerrar la ventana de configuración de compilación en Unity. 
+![Lesson1Chapter5Step4](images/Lesson1Chapter5Step4.JPG)
 
-  > Nota: Si se produce un error en la compilación, intenta volver a compilar o reinicia Unity y vuelve a compilar. Si ves un error como "Error: Error CS0246 = "XX" no se encontró el nombre de espacio de nombres o tipo (¿falta un uso de la directiva o una referencia de ensamblado?). Es posible que deba instalar [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) 
+  > Nota: Si se produce un error en la compilación, intenta volver a compilar o reinicia Unity y vuelve a compilar. Si ves un error como "Error: CS0246 = no se encontró el escriba o el nombre de espacio de nombres "XX" (¿falta una directiva using o una referencia de ensamblado?). Es posible que tenga que instalar el [SDK de Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) 
   >
 
-5. Una vez finalizada la compilación, abre la carpeta recién creada que contiene los archivos de la aplicación que acabas de crear. Haga doble clic en la solución de the"MixedRealityBase.sln o el nombre correspondiente. Si usa un nombre alternativo para el proyecto para abrir el archivo de solución en Visual Studio.
+5. Una vez finalizada la compilación, abre la carpeta recién creada que contiene los archivos de la aplicación que acabas de crear. Haga doble clic en la solución "MixedRealityBase. sln" o en el nombre correspondiente. Si ha usado un nombre alternativo para el proyecto para abrir el archivo de solución en Visual Studio.
 
-  > Nota: Asegúrese de abrir la carpeta recién creada (es decir, la carpeta aplicación, si sigue las convenciones de nomenclatura de los pasos anteriores porque habrá un archivo .sln con el mismo nombre fuera de esa carpeta que no debe confundirse con el archivo .sln dentro de la carpeta de compilación. 
+  > Nota: Asegúrese de abrir la carpeta recién creada (es decir, la carpeta de la aplicación, si sigue las convenciones de nomenclatura de los pasos anteriores porque habrá un archivo. sln con el mismo nombre fuera de esa carpeta que no debe confundirse con el archivo. sln dentro de la carpeta de compilación. 
 
 ![Lesson1Chapter5Step5](images/Lesson1Chapter5Step5.JPG)
 
-  > Nota: Si Visual Studio le pide que instale los nuevos componentes, dedique un momento para asegurarse de que todos los componentes de requisitos previos están instalados en lo más específico [la página "Instalar las herramientas"](install-the-tools.md) 
+> Nota: Si Visual Studio le pide que instale nuevos componentes, dedique un momento a asegurarse de que todos los componentes necesarios se instalan como específicos en [la página "instalar las herramientas"](install-the-tools.md) . 
 
-6. Conecta HoloLens 2 a tu equipo con el cable USB. Aunque estas instrucciones de la lección se suponen que va a implementar una prueba con un dispositivo HoloLens 2, también puede optar por implementar en el [emulador de HoloLens 2](using-the-hololens-emulator.md) o elegir crear un [paquete de aplicación de instalación de prueba](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>)
+6. Conecta HoloLens 2 a tu equipo con el cable USB. Aunque estas instrucciones de la lección suponen que va a implementar una prueba con un dispositivo HoloLens 2, también puede optar por implementarla en el emulador de [hololens 2](using-the-hololens-emulator.md) o elegir crear un [paquete de aplicación para la instalación de prueba](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>) .
 
-7. Antes de compilar en el dispositivo, comprueba que el dispositivo está en modo de desarrollador. Si es la primera vez que estás realizando una implementación en HoloLens 2, Visual Studio puede pedirte que emparejes HoloLens 2 con un PIN. Siga [estas instrucciones](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si tiene que habilitar el modo de programador o emparejarse con Visual Studio.
+7. Antes de compilar en el dispositivo, comprueba que el dispositivo está en modo de desarrollador. Si es la primera vez que estás realizando una implementación en HoloLens 2, Visual Studio puede pedirte que emparejes HoloLens 2 con un PIN. Siga [estas instrucciones](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si necesita habilitar el modo de desarrollador o emparejar con Visual Studio.
 
-8. Configurar Visual Studio para compilar el 2 de HoloLens seleccionando la configuración de lanzamiento, así como la arquitectura de Resource Manager.
-    ![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
+8. Configure Visual Studio para compilar en HoloLens 2 seleccionando la configuración de lanzamiento y la arquitectura de RM.
+![Lesson1Chapter5Step8](images/Lesson1Chapter5Step8.JPG)
    
-9. El último paso es crear en el dispositivo seleccionando Depurar > Iniciar sin depurar. Seleccione Iniciar sin depurar, hace que la aplicación iniciar inmediatamente en el dispositivo en una información de depuración de compilación correcta ithout que aparecen en Visual Studio. Esto también significa que puedes desconectar el cable USB mientras la aplicación se ejecuta en HoloLens 2 sin detener la aplicación. También puede seleccionar compilación > implementar la solución para implementar en el dispositivo sin necesidad de la aplicación se inicie automáticamente.
-    ![Lesson1Chapter5Step9](images/Lesson1Chapter5Step9.JPG)
+9. El paso final consiste en compilar en el dispositivo seleccionando Depurar > iniciar sin depurar. Al seleccionar iniciar sin depurar, la aplicación se inicia inmediatamente en el dispositivo tras una compilación correcta ithout información de depuración que aparece en Visual Studio. Esto también significa que puedes desconectar el cable USB mientras la aplicación se ejecuta en HoloLens 2 sin detener la aplicación. También puede seleccionar compilar > implementar solución para implementar en el dispositivo sin que la aplicación se inicie automáticamente.
+![Lesson1Chapter5Step9](images/Lesson1Chapter5Step9.JPG)
+   
+10. Sigue las instrucciones. Cuando la aplicación se esté ejecutando en el dispositivo, siga las instrucciones que aparecen en pantalla. Presione los botones de la escena correspondientes a los pasos siguientes.
+
+![module2chapter1step10eim](images/module2chapter1step10eim.PNG)
     
-10. siga las instrucciones. Cuando la aplicación se está ejecutando en el dispositivo, siga la pantalla instrucciones. Presione los botones de escenas correspondientes a los pasos siguientes.
-    
-    ![module2chapter1step10eim](images/module2chapter1step10eim.PNG)
-    
-    1. Inicie la sesión de delimitadores espacial.
+    1. Inicie la sesión de delimitadores espaciales.
     
     2. Mueva el cubo a una ubicación diferente.
     
-    3. Guarde los delimitadores Azure espaciales en la ubicación del cubo.
+    3. Guarde los anclajes espaciales de Azure en la ubicación del cubo.
     
-    4. Detener la sesión de Azure delimitadores espacial.
+    4. Detenga la sesión de anclajes espaciales de Azure.
     
-    5. Quite el delimitador en el cubo para permitir que el usuario mueva el cubo local.
+    5. Quite el delimitador local del cubo para permitir que el usuario mueva el cubo.
+    
     6. Mueva el cubo en otro lugar.
     
-    7. Inicie sesión de Azure delimitadores espacial.
+    7. Inicie la sesión de anclajes espaciales de Azure.
     
-    8. Busque Azure delimitadores espaciales. 
+    8. Busque los anclajes espaciales de Azure. 
+    Debe volver al lugar original donde lo colocó al crear el delimitador.
     
-    e debe volver a la ubicación original, colóquelo al crear el delimitador.
-    9. Eliminar Azure delimitador espacial.
+    9. Elimine el delimitador espacial de Azure.
     
-    10. Detener sesión de Azure.
+    10. Detenga la sesión de Azure.
 
-### <a name="anchoring-an-experience"></a>Delimitación de una experiencia
+### <a name="anchoring-an-experience"></a>Delimitar una experiencia
 
-En las secciones anteriores, ha aprendido los aspectos básicos de Azure espacial delimitadores. Hemos usado para representar y visualizar el objeto primario del juego con el delimitador que se adjunta un cubo. En esta sección, obtendrá información sobre cómo anclar una experiencia completa colocando como elemento secundario del objeto ParentAnchor. En este ejemplo, usamos el módulo lunar aplicación de demostración de ensamblado que se creó durante la [módulo básico lección 6](mrlearning-base-ch6.md).
+En las secciones anteriores, ha aprendido los aspectos básicos de los delimitadores espaciales de Azure. Hemos usado un cubo para representar y visualizar el objeto de juego primario con el delimitador adjunto. En esta sección, aprenderá a anclar una experiencia completa colocándolo como un elemento secundario del objeto ParentAnchor. En este ejemplo, usamos la aplicación de demostración del ensamblado del módulo lunar que se creó durante la [Lección 6 del módulo base](mrlearning-base-ch6.md).
 
-1. Busque el módulo Lunar ensamblado completa prefabricado y arrástrelo a la jerarquía como un elemento secundario de la gameobject AnchorParent tal como se muestra en la imagen siguiente.
+1. Busque el ensamblado del módulo lunar completo recurso prefabricado y arrástrelo a la jerarquía como elemento secundario de AnchorParent GameObject, tal como se muestra en la imagen siguiente.
 
-   ![module2chapter1step11](images/module2chapter1step11im.PNG)
+![module2chapter1step11](images/module2chapter1step11im.PNG)
 
-2. Experiencia de posición el ensamblado de módulo para que el cubo aún se expone como se muestra en la imagen siguiente. En la aplicación, los usuarios pueden cambiar la posición de toda la experiencia moviendo el cubo. 
+2. Coloque la experiencia del ensamblado del módulo para que el cubo siga expuesto como se muestra en la imagen siguiente. En la aplicación, los usuarios pueden cambiar la posición de toda la experiencia moviendo el cubo. 
 
-   ![module2chapter1step12im](images/module2chapter1step12im.PNG)
+![module2chapter1step12im](images/module2chapter1step12im.PNG)
 
-   > Nota: Hay una variedad de flujos de experiencia de usuario para cambiar la posición de experiencias, incluido el uso de un botón para alternar un cuadro de límite que rodea a la experiencia, el uso de un objeto colocaban (por ejemplo, el cubo que se usa en este paso) el uso de la posición y giro gizmos y mucho más.
+> Nota: Hay una variedad de flujos de experiencia del usuario para cambiar la posición de las experiencias, incluido el uso de un botón para alternar un cuadro de límite que rodea la experiencia, el uso de un objeto de cambio de posición (como el cubo que se usa en este paso), el uso de la posición y la rotación Gizmos y mucho más.
 
 ## <a name="congratulations"></a>Enhorabuena
-En este tutorial, ha aprendido los aspectos básicos de Azure espacial delimitadores. Este esson proporciona varios botones que le permiten explorar los distintos pasos necesarios para iniciar y detener una sesión de Azure y crear, cargar y descargar los anclajes de azure en un único dispositivo. En la siguiente lección, aprenderemos cómo guardar los identificadores de delimitador de Azure en el 2 de HoloLens para la recuperación, incluso después de que se reinicie la aplicación. Durante la serie, también aprenderá cómo transferir los identificadores de delimitador entre varios dispositivos para lograr la alineación espacial y obtenga información acerca de varios usuarios compartida las sesiones, próximamente como parte del tutorial de uso compartido.
+En este tutorial, ha aprendido los aspectos básicos de los delimitadores espaciales de Azure. Esta Esso le proporcionó varios botones que le permiten explorar los distintos pasos necesarios para iniciar y detener una sesión de Azure, y crear, cargar y descargar los delimitadores de Azure en un único dispositivo. En la lección siguiente, aprenderá a guardar los identificadores de delimitador de Azure en HoloLens 2 para su recuperación, incluso después de reiniciar la aplicación. Durante la serie, también aprenderá a transferir los ID. de delimitador entre varios dispositivos para lograr la alineación espacial y a obtener información sobre las sesiones compartidas de varios usuarios, próximamente como parte del tutorial de uso compartido.
 
-[Siguiente lección: Lección 2 de ASA](mrlearning-asa-ch2.md)
+[Siguiente lección: ASA, Lección 2](mrlearning-asa-ch2.md)
 

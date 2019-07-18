@@ -1,88 +1,77 @@
 ---
-title: Módulo de ASA de aprendizaje de MR Azure delimitador espaciales en HoloLens 2
+title: MR Learning ASA Module Azure Spatial delimitador de HoloLens 2
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 4aabb4a35efebdd893cbb248365e534abd60f684
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: c6e902710eebe205b9e944b1bf95a9ddd3bd9044
+ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67327567"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68293804"
 ---
-# <a name="displaying-azure-spatial-anchor-feedback"></a>Visualización de comentarios de Azure delimitador espacial
+# <a name="displaying-azure-spatial-anchor-feedback"></a>Visualización de los comentarios del delimitador espacial de Azure
 
-En esta lección, aprenderá acerca de cómo proporcionar a los usuarios con sus comentarios sobre la detección de anclaje, eventos y el estado cuando se usa Azure espacial delimitadores.
+En esta lección, aprenderá a proporcionar a los usuarios comentarios sobre la detección de delimitadores, los eventos y el estado al usar delimitadores espaciales de Azure.
 
-Objetivos:
+Objetivos
 
-* Obtenga información sobre cómo configurar un panel de interfaz de usuario que se muestra información importante acerca de la sesión actual de ASA
+* Obtenga información sobre cómo configurar un panel de interfaz de usuario que muestre información importante sobre la sesión actual de ASA.
 
-* Conocer y explorar elementos de comentarios que el SDK de ASA pone a disposición de los usuarios
-
-  
+* Comprenda y explore los elementos de comentarios que el SDK de ASA pone a disposición de los usuarios
 
 ## <a name="instructions"></a>Instrucciones
 
-### <a name="set-up-asa-feedback-ui-panel"></a>Configurar el Panel de interfaz de usuario de comentarios ASA
+### <a name="set-up-asa-feedback-ui-panel"></a>Configuración del panel de interfaz de usuario de comentarios de ASA
 
-1. En esta lección, no vamos a usar el "SaveAnchorToDisk" y "ShareAnchor" botones así que seleccione ambos botones y desactive la casilla de verificación en el panel del inspector (como se muestra a continuación) para ocultar estos botones.
+1. En esta lección, no vamos a usar los botones "SaveAnchorToDisk" y "ShareAnchor", por lo que debe seleccionar ambos botones y desactivar la casilla en el panel Inspector (como se muestra a continuación) para ocultar estos botones.
    
 
 ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
-2. A continuación, cree el panel de la instrucción. Iniciar haciendo clic en el botón "instructions", mantenga el mouse sobre el "objeto 3D" y seleccione "textmeshpro-text".
+2. A continuación, cree el panel de instrucciones. Para empezar, haga clic con el botón derecho en el botón "instrucciones", mantenga el mouse sobre "objeto 3D" y seleccione "textmeshpro-Text".
 
-   
+![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
-   ![module2chapter3step2im](images/module2chapter3step2im.PNG)
-
-   3. Ajustar la escala y la posición del texto para que haga coincidir con las instrucciones de la escena. Asegúrese también de que la alineación de todo el texto está centrada. A continuación, elimine el texto de ejemplo del editor de texto, como se muestra en la imagen siguiente.
-
+3. Ajuste la escala y la posición del texto para que coincida con las instrucciones de la escena. Además, asegúrese de que la alineación para todo el texto está centrada. A continuación, elimine el texto de ejemplo del editor de texto, tal como se muestra en la imagen siguiente.
 
 ![module2chapter3step3im](images/module2chapter3step3im.PNG)
 
-4. Cambie el nombre del objeto TextMeshPro a "FeedbackPanel."
+4. Cambie el nombre del objeto TextMeshPro a "FeedbackPanel".
    
-   ![module2chapter3step4im](images/module2chapter3step4im.PNG)
-   
-5. En el panel proyecto, seleccione "activos" y haga clic en, seleccione "mostrar en el explorador."
+
+![module2chapter3step4im](images/module2chapter3step4im.PNG)
+
+5. En el panel Proyecto, seleccione "recursos" y haga clic con el botón secundario y, a continuación, seleccione "Mostrar en el explorador".
    
 
 ![module2chapter3step4im](images/module2chapter3step5im.PNG)
 
-Ahora, haga clic en [aquí](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) descargar los archivos necesarios en los próximos pasos.
+Ahora, haga clic [aquí](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) para descargar los archivos necesarios en los pasos siguientes.
 
-6. Una vez que se abre el explorador, seleccione la carpeta assets y, después, en la carpeta "ASAmodulesAssets" y copie el script de comentarios de delimitador y los archivos de script del módulo de anclaje en la carpeta. 
-   
+6. Una vez que se abra el explorador, seleccione la carpeta Assets, la carpeta "ASAmodulesAssets" y copie los archivos de script del módulo de delimitador y los de la carpeta. 
 
 ![module2chapter3step5im](images/module2chapter3step6im.PNG)
 
-> Nota: Si recibe un mensaje emergente que pregunta si desea sobrescribir la antigua o mantener la antigua, asegúrese de seleccionar sobrescritura.
+> Nota: Si aparece un mensaje emergente que le pregunta si desea sobrescribir el antiguo o conservar el antiguo, asegúrese de que selecciona sobrescribir.
 
-7. Ahora, vuelva a la carpeta Assets. A continuación, vaya a la carpeta "AzureSpatialAnchorsPlugin", a continuación, la carpeta de ejemplos y, finalmente, en la carpeta de scripts y copie el contenedor de demostración de Azure espacial anclajes en dicha carpeta. 
-   
+7. Ahora vuelva a la carpeta assets. A continuación, vaya a la carpeta "AzureSpatialAnchorsPlugin", a continuación, a la carpeta Examples y, por último, a la carpeta scripts, y copie el contenedor de demostración de delimitadores espaciales de Azure en esa carpeta. 
 
 ![module2chapter3step8im](images/module2chapter3step7im.PNG)
 
-8. Ahora que se cargan los archivos, asegúrese de que el texto "feedbackpanel" está seleccionado, en la jerarquía ASA_feedback y haga clic en "agregar el componente" y agregue el script de comentarios de anclaje, búsquelo y selecciónelo cuando aparezca. 
-   
-   
+8. Ahora que los archivos se han cargado, asegúrese de que el texto "feedbackpanel" está seleccionado, en la jerarquía de ASA_feedback y haga clic en "Agregar componente" y agregue el script de comentarios de delimitador. para ello, búsquelo y selecciónelo cuando aparezca. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
-9. Arrastre el objeto de texto "feedbackPanel" de la jerarquía de ASA_Feedback a la ranura vacía debajo de la secuencia de comandos tal como se muestra en la figura siguiente. 
-   
+9. Arrastre el objeto de texto "feedbackPanel" desde la jerarquía de ASA_Feedback hasta la ranura vacía situada debajo del script, tal como se muestra en la figura siguiente. 
 
 ![module2chapter3step9im](images/module2chapter3step9im.PNG)
 
-   
-
 ## <a name="congratulations"></a>Enhorabuena
 
-En esta lección hemos aprendido a crear un panel de interfaz de usuario para mostrar el estado actual de la experiencia de anclaje espacial de Azure para proporcionar el usuario con comentarios en tiempo real.
+En esta lección se ha aprendido cómo crear un panel de interfaz de usuario para mostrar el estado actual de la experiencia de anclaje espacial de Azure para proporcionar a los usuarios comentarios en tiempo real.
 
 
