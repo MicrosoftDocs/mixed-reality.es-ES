@@ -93,7 +93,7 @@ También se pueden ocluyeron hologramas en objetos del mundo real. Por ejemplo, 
 
 ## <a name="a-hologram-is-whatever-you-dream-up"></a>Un holograma es todo lo que imaginar
 
-Como desarrollador holográfico, tiene la posibilidad de interrumpir su creatividad, las pantallas 2D y en el mundo que le rodea. ¿Qué le compilar? **
+Como desarrollador holográfico, tiene la posibilidad de interrumpir su creatividad, las pantallas 2D y en el mundo que le rodea. ¿Qué *le* compilar?
 
 ![Holográfica mundial imaginaria salón](images/designoverview.jpg)
 

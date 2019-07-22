@@ -939,7 +939,7 @@ Para crear la etiqueta:
 
 Todo lo necesario para la sección de Unity de este proyecto ahora se completó, por lo que es el momento de crearla desde Unity.
 
-1.  Vaya a *configuración de compilación* (**archivo* > *compilar configuración**).
+1.  Vaya a *configuración de compilación* (**archivo* >* compilar configuración**).
 
     ![](images/AzureLabs-Lab311-33.png)
 
