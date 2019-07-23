@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Spectator ver, iPhone, iOS, iPad, OpenCV, cámara, ARKit, HoloLens, Mixed Reality, MixedRealityToolkit, Demo, registro
-ms.openlocfilehash: 02088d7b218a25c72f2eb98ae24c85a90e6e5b86
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293605"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387668"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Vista de Spectator para HoloLens y HoloLens 2
 
@@ -20,7 +20,7 @@ ms.locfileid: "68293605"
 ## <a name="overview"></a>Información general
 
 Cuando se utiliza HoloLens, a menudo se olvida de que una persona que no la tiene en no puede experimentar las maravillas que podemos. Spectator vista permite a otros usuarios ver en una pantalla 2D lo que ve un usuario de HoloLens en su mundo.
-Spectator View ofrece un enfoque rápido y asequible para grabar hologramas en HD con dispositivos móviles. También ofrece una grabación de calidad profesional de hologramas con cámaras DSLR.
+Spectator View ofrece un enfoque rápido y asequible para grabar hologramas en HD con dispositivos móviles. También ofrece una grabación de calidad profesional de hologramas con cámaras de vídeo.
 
 ## <a name="key-resources"></a>Recursos clave
 
@@ -28,7 +28,7 @@ Spectator View ofrece un enfoque rápido y asequible para grabar hologramas en H
 * [**Arquitectura**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
 * [**Assembl**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 * [**Instrucciones para la configuración de dispositivos móviles**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**Instrucciones de configuración de DSLR**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.DSLR.md)
+* [**Instrucciones de configuración de la cámara de vídeo**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
 
 ## <a name="use-cases"></a>Casos de uso
 * Puede grabar una experiencia de realidad mixta mediante un dispositivo iPhone o Android. Grabe en HD completo y aplique suavizado de contorno a hologramas e incluso sombras. Es una forma rentable y rápida de capturar vídeo de hologramas.
@@ -48,15 +48,15 @@ Hoja compartida para que pueda guardar vídeo, enviarlo por correo electrónico 
 
 En la tabla siguiente se muestran la funcionalidad de la vista Spectator y sus capacidades. Elija la opción que mejor se adapte a sus necesidades de grabación de vídeo:
 
-|                                      | Móvil                  |                    Cámara DSLR              |
+|                                      | Móvil                  |                    Cámara de vídeo              |
 |--------------------------------------|:-----------------------:|:-------------------------------------------:|
-| Calidad HD                           |         HD completo         |        Filmando la calidad profesional (según lo determinado por DSLR)      |
+| Calidad HD                           |         HD completo         |        Filmadora de calidad profesional (según lo determinado por la cámara de vídeo)      |
 | Movimiento de cámara sencillo                 |            ✔            |                      ✔                      |
 | Vista de terceros                    |            ✔            |                      ✔                      |
 | Se puede transmitir a pantallas           |            ✔            |                      ✔                      |
 | Portable                             |            ✔            |                                             |
 | Inalámbrico                             |            ✔            |                                             |
-| Hardware necesario adicional         |     Teléfono Android, iPhone    | HoloLens + plataforma + trípode + DSLR + PC + Unity |
+| Hardware necesario adicional         |     Teléfono Android, iPhone    | HoloLens + plataforma + trípode + cámara de vídeo + PC + Unity |
 | Inversión en hardware                  |           Bajo            |                     Alto                    |
 | Multiplataforma                       |           Android, iOS   |                                             |
 | Contenido sincronizado                 |            ✔            |                      ✔                      |
