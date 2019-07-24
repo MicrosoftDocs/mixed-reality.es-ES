@@ -1,11 +1,11 @@
 ---
-title: Documentación de Empaquetador de datos espaciales de realidad mixta
-description: Documentación para usar Mixed Reality Empaquetador de datos espaciales
+title: Documentación del Empaquetador de datos espaciales de realidad mixta
+description: Documentación para usar el Empaquetador de datos espaciales de realidad mixta
 author: alfred-msft
 ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
-keywords: lbe, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
 ms.openlocfilehash: 7ad1159af9eecd3ca3622dd25cc1f49fb0b1700a
 ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
@@ -13,45 +13,45 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/20/2019
 ms.locfileid: "65942111"
 ---
-# <a name="mixed-reality-spatial-data-packager-documentation"></a><span data-ttu-id="d22fb-104">Documentación de Empaquetador de datos espaciales de realidad mixta</span><span class="sxs-lookup"><span data-stu-id="d22fb-104">Mixed Reality Spatial Data Packager Documentation</span></span>
+# <a name="mixed-reality-spatial-data-packager-documentation"></a><span data-ttu-id="a4c9f-104">Documentación del Empaquetador de datos espaciales de realidad mixta</span><span class="sxs-lookup"><span data-stu-id="a4c9f-104">Mixed Reality Spatial Data Packager Documentation</span></span>
 
 >[!NOTE]
-> <span data-ttu-id="d22fb-105">Esta herramienta y su funcionamiento se ofrecen como-es.</span><span class="sxs-lookup"><span data-stu-id="d22fb-105">This tool and its operation are offered as-is.</span></span> <span data-ttu-id="d22fb-106">Se está sujeta a cambios sin aviso y pueden no ser compatible con futuras Windows o Windows Mixed Reality HMD libera.</span><span class="sxs-lookup"><span data-stu-id="d22fb-106">It is subject to change without any notice and may not be compatible with future Windows or Windows Mixed Reality HMD releases.</span></span>
+> <span data-ttu-id="a4c9f-105">Esta herramienta y su operación se ofrecen tal cual.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-105">This tool and its operation are offered as-is.</span></span> <span data-ttu-id="a4c9f-106">Está sujeto a cambios sin previo aviso y es posible que no sea compatible con las futuras versiones de HMD de Windows o Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-106">It is subject to change without any notice and may not be compatible with future Windows or Windows Mixed Reality HMD releases.</span></span>
 
-## <a name="download"></a><span data-ttu-id="d22fb-107">Descargar</span><span class="sxs-lookup"><span data-stu-id="d22fb-107">Download</span></span>
- <span data-ttu-id="d22fb-108">Descargar [MixedRealitySpatialDataPackager aquí](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)</span><span class="sxs-lookup"><span data-stu-id="d22fb-108">Download [MixedRealitySpatialDataPackager here](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)</span></span>
+## <a name="download"></a><span data-ttu-id="a4c9f-107">Descargar</span><span class="sxs-lookup"><span data-stu-id="a4c9f-107">Download</span></span>
+ <span data-ttu-id="a4c9f-108">Descargar [MixedRealitySpatialDataPackager aquí](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)</span><span class="sxs-lookup"><span data-stu-id="a4c9f-108">Download [MixedRealitySpatialDataPackager here](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)</span></span>
 
-## <a name="quickstart"></a><span data-ttu-id="d22fb-109">Guía de inicio rápido</span><span class="sxs-lookup"><span data-stu-id="d22fb-109">Quickstart</span></span>
+## <a name="quickstart"></a><span data-ttu-id="a4c9f-109">Guía de inicio rápido</span><span class="sxs-lookup"><span data-stu-id="a4c9f-109">Quickstart</span></span>
 
-<span data-ttu-id="d22fb-110">La herramienta Mixed Reality Empaquetador de datos espaciales copia los datos espaciales de una aplicación de destino de un PC a otro a través de un paso dos exportación e importación de proceso.</span><span class="sxs-lookup"><span data-stu-id="d22fb-110">The Mixed Reality Spatial Data Packager tool copies the spatial data of a target app from one PC to another through a two step export and import process.</span></span> <span data-ttu-id="d22fb-111">La herramienta debe ejecutarse con privilegios de administrador y elimina los datos espaciales existentes en la importación.</span><span class="sxs-lookup"><span data-stu-id="d22fb-111">The tool must be run with administrator privileges and deletes the existing spatial data on import.</span></span> <span data-ttu-id="d22fb-112">Exportación no altera los datos espaciales existentes.</span><span class="sxs-lookup"><span data-stu-id="d22fb-112">Export leaves the existing spatial data intact.</span></span>
+<span data-ttu-id="a4c9f-110">La herramienta de empaquetado de datos espaciales de realidad mixta copia los datos espaciales de una aplicación de destino de un equipo a otro a través de un proceso de exportación e importación de dos pasos.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-110">The Mixed Reality Spatial Data Packager tool copies the spatial data of a target app from one PC to another through a two step export and import process.</span></span> <span data-ttu-id="a4c9f-111">La herramienta debe ejecutarse con privilegios de administrador y elimina los datos espaciales existentes al importar.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-111">The tool must be run with administrator privileges and deletes the existing spatial data on import.</span></span> <span data-ttu-id="a4c9f-112">La exportación deja intactos los datos espaciales existentes.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-112">Export leaves the existing spatial data intact.</span></span>
 
-<span data-ttu-id="d22fb-113">Limitaciones y requisitos clave:</span><span class="sxs-lookup"><span data-stu-id="d22fb-113">Key requirements and limitations:</span></span>
+<span data-ttu-id="a4c9f-113">Requisitos y limitaciones clave:</span><span class="sxs-lookup"><span data-stu-id="a4c9f-113">Key requirements and limitations:</span></span>
 
-1. <span data-ttu-id="d22fb-114">Se debe ejecutar la herramienta con privilegios de administrador</span><span class="sxs-lookup"><span data-stu-id="d22fb-114">Tool must be run with administrator privileges</span></span> 
-2. <span data-ttu-id="d22fb-115">Es posible que deba reiniciar PC si el Portal de realidad mixta es inestable después de ejecutar la herramienta</span><span class="sxs-lookup"><span data-stu-id="d22fb-115">You may have to restart PC if Mixed Reality Portal is unstable after running the tool</span></span>
-3. <span data-ttu-id="d22fb-116">No se ejecutará la herramienta al encontrar errores de coincidencia de versión de los datos espaciales o incompatibilidades</span><span class="sxs-lookup"><span data-stu-id="d22fb-116">Tool will not run when encountering spatial data version mismatches or incompatibilities</span></span>
-4. <span data-ttu-id="d22fb-117">Herramienta, borrará los datos espaciales existentes en la importación</span><span class="sxs-lookup"><span data-stu-id="d22fb-117">Tool will erase existing spatial data on import</span></span>
-5. <span data-ttu-id="d22fb-118">Si el proceso de importación se produce un error anterior no se puede restaurar datos a menos que se ha hecho backup exportando previamente</span><span class="sxs-lookup"><span data-stu-id="d22fb-118">If import process fails previous data cannot be restored unless it has been backed up by exporting previously</span></span>
-6. <span data-ttu-id="d22fb-119">Calidad de la funcionalidad de importación contingente en modo "Solo lectura" para los datos espaciales del mapa</span><span class="sxs-lookup"><span data-stu-id="d22fb-119">Quality of import functionality contingent on “Read-Only” mode for spatial map data</span></span>
+1. <span data-ttu-id="a4c9f-114">La herramienta debe ejecutarse con privilegios de administrador</span><span class="sxs-lookup"><span data-stu-id="a4c9f-114">Tool must be run with administrator privileges</span></span> 
+2. <span data-ttu-id="a4c9f-115">Es posible que tenga que reiniciar el equipo si el portal de realidad mixta es inestable después de ejecutar la herramienta</span><span class="sxs-lookup"><span data-stu-id="a4c9f-115">You may have to restart PC if Mixed Reality Portal is unstable after running the tool</span></span>
+3. <span data-ttu-id="a4c9f-116">La herramienta no se ejecutará al encontrar incompatibilidades o incompatibilidades de la versión de datos espaciales</span><span class="sxs-lookup"><span data-stu-id="a4c9f-116">Tool will not run when encountering spatial data version mismatches or incompatibilities</span></span>
+4. <span data-ttu-id="a4c9f-117">La herramienta borrará los datos espaciales existentes al importar</span><span class="sxs-lookup"><span data-stu-id="a4c9f-117">Tool will erase existing spatial data on import</span></span>
+5. <span data-ttu-id="a4c9f-118">Si se produce un error en el proceso de importación, los datos anteriores no se pueden restaurar a menos que se haya realizado la copia de seguridad mediante la exportación anterior</span><span class="sxs-lookup"><span data-stu-id="a4c9f-118">If import process fails previous data cannot be restored unless it has been backed up by exporting previously</span></span>
+6. <span data-ttu-id="a4c9f-119">Calidad de la funcionalidad de importación condicionada en el modo de "solo lectura" para los datos de mapa espacial</span><span class="sxs-lookup"><span data-stu-id="a4c9f-119">Quality of import functionality contingent on “Read-Only” mode for spatial map data</span></span>
 ***
 
-## <a name="mapping-best-practices"></a><span data-ttu-id="d22fb-120">Asignación de procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="d22fb-120">Mapping Best Practices</span></span>
+## <a name="mapping-best-practices"></a><span data-ttu-id="a4c9f-120">Procedimientos recomendados de asignación</span><span class="sxs-lookup"><span data-stu-id="a4c9f-120">Mapping Best Practices</span></span>
 
-1. <span data-ttu-id="d22fb-121">Borrar asignaciones existentes desde el Panel de Control (configuración -> Mixed Reality -> entorno -> entorno borrar datos)</span><span class="sxs-lookup"><span data-stu-id="d22fb-121">Clear existing maps from the Control Panel (Settings -> Mixed Reality -> Environment -> Clear environment data)</span></span>
-2. <span data-ttu-id="d22fb-122">Asegúrese de iluminación suficiente para seguimiento buena y si ejecuta el modo Mapa bloqueado intenta mantener la misma iluminación</span><span class="sxs-lookup"><span data-stu-id="d22fb-122">Ensure sufficient lighting for good tracking and if running locked map mode try to maintain the same lighting</span></span>
-3. <span data-ttu-id="d22fb-123">Cuando sea posible mantener el intervalo dinámico de iluminación baja, ya que evita las áreas de iluminación alta junto a áreas con sombra oscuras</span><span class="sxs-lookup"><span data-stu-id="d22fb-123">When possible keep the lighting dynamic range low by avoiding areas of high illumination next to dark, shadowed areas</span></span>
-4. <span data-ttu-id="d22fb-124">Minimizar en blanco, superficies textureless, por ejemplo, colocan una gama de diferentes Pósteres paredes blancas</span><span class="sxs-lookup"><span data-stu-id="d22fb-124">Minimize blank, textureless surfaces e.g. place a range of different posters on white walls</span></span>
-5. <span data-ttu-id="d22fb-125">Asignar el espacio sin objetos dinámicos en la escena, como mover usuarios</span><span class="sxs-lookup"><span data-stu-id="d22fb-125">Map the space without dynamic objects in the scene such as moving people</span></span>
-6. <span data-ttu-id="d22fb-126">Bloquear el mapa en la importación (disponible a través de Insider Preview)</span><span class="sxs-lookup"><span data-stu-id="d22fb-126">Lock the map on import (available via Insider Preview)</span></span>
-7. <span data-ttu-id="d22fb-127">Desbloquear la asignación y volver a examinar el entorno cuando se degrada el seguimiento de la calidad y hay cambios en el entorno (iluminación o cambios en el diseño de objeto)</span><span class="sxs-lookup"><span data-stu-id="d22fb-127">Unlock the map and rescan the enviornment when tracking quality degrades and/or there are changes in the environment (lighting or changes in object layout)</span></span>
+1. <span data-ttu-id="a4c9f-121">Borrar asignaciones existentes en el panel de control (Configuración-> entorno mixto de realidad >-> Borrar datos de entorno)</span><span class="sxs-lookup"><span data-stu-id="a4c9f-121">Clear existing maps from the Control Panel (Settings -> Mixed Reality -> Environment -> Clear environment data)</span></span>
+2. <span data-ttu-id="a4c9f-122">Asegúrese de que haya suficiente iluminación para un buen seguimiento y si la ejecución del modo de mapa bloqueado intente mantener la misma iluminación</span><span class="sxs-lookup"><span data-stu-id="a4c9f-122">Ensure sufficient lighting for good tracking and if running locked map mode try to maintain the same lighting</span></span>
+3. <span data-ttu-id="a4c9f-123">Cuando sea posible, mantenga el intervalo dinámico de iluminación bajo evitando áreas de iluminación alta junto a áreas oscuras y sombreadas.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-123">When possible keep the lighting dynamic range low by avoiding areas of high illumination next to dark, shadowed areas</span></span>
+4. <span data-ttu-id="a4c9f-124">Minimizar las superficies en blanco y sin texturas, por ejemplo, colocar un intervalo de pósters distintos en las paredes blancas</span><span class="sxs-lookup"><span data-stu-id="a4c9f-124">Minimize blank, textureless surfaces e.g. place a range of different posters on white walls</span></span>
+5. <span data-ttu-id="a4c9f-125">Asignar el espacio sin objetos dinámicos en la escena, como mover personas</span><span class="sxs-lookup"><span data-stu-id="a4c9f-125">Map the space without dynamic objects in the scene such as moving people</span></span>
+6. <span data-ttu-id="a4c9f-126">Bloquear el mapa al importar (disponible a través de Insider Preview)</span><span class="sxs-lookup"><span data-stu-id="a4c9f-126">Lock the map on import (available via Insider Preview)</span></span>
+7. <span data-ttu-id="a4c9f-127">Desbloquee el mapa y vuelva a examinar el entorno cuando el seguimiento de la calidad sea degradado o haya cambios en el entorno (iluminación o cambios en el diseño de objetos)</span><span class="sxs-lookup"><span data-stu-id="a4c9f-127">Unlock the map and rescan the enviornment when tracking quality degrades and/or there are changes in the environment (lighting or changes in object layout)</span></span>
 ***
 
-## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a><span data-ttu-id="d22fb-128">Empaquetador de datos espaciales de realidad mixta ejecución con el Script complementario</span><span class="sxs-lookup"><span data-stu-id="d22fb-128">Running Mixed Reality Spatial Data Packager with Companion Script</span></span>
+## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a><span data-ttu-id="a4c9f-128">Ejecución de un empaquetador de datos espaciales de realidad mixta con un script complementario</span><span class="sxs-lookup"><span data-stu-id="a4c9f-128">Running Mixed Reality Spatial Data Packager with Companion Script</span></span>
 
-<span data-ttu-id="d22fb-129">Hemos proporcionado MRSpatialPackagerHelperScript.ps1 que se ejecuta al Empaquetador de mapa de las herramientas.</span><span class="sxs-lookup"><span data-stu-id="d22fb-129">We have provided MRSpatialPackagerHelperScript.ps1 that runs the map packager the tools.</span></span> 
+<span data-ttu-id="a4c9f-129">Hemos proporcionado MRSpatialPackagerHelperScript. PS1 que ejecuta el paquete de asignación de las herramientas.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-129">We have provided MRSpatialPackagerHelperScript.ps1 that runs the map packager the tools.</span></span> 
 
 
-<span data-ttu-id="d22fb-130">Los parámetros del script se definen a continuación:</span><span class="sxs-lookup"><span data-stu-id="d22fb-130">The script parameters are defined below:</span></span>
+<span data-ttu-id="a4c9f-130">Los parámetros de script se definen a continuación:</span><span class="sxs-lookup"><span data-stu-id="a4c9f-130">The script parameters are defined below:</span></span>
 
 ```
 -AppName <String>
@@ -78,9 +78,9 @@ ms.locfileid: "65942111"
     Path to MixedRealitySpatialDataPackager.exe, default value is current directory
 ```
 
-### <a name="powershell-script-example-usage-and-output"></a><span data-ttu-id="d22fb-131">Salida y el uso de ejemplo de Script de Powershell</span><span class="sxs-lookup"><span data-stu-id="d22fb-131">Powershell Script Example Usage and Output</span></span>
+### <a name="powershell-script-example-usage-and-output"></a><span data-ttu-id="a4c9f-131">Ejemplo de script de PowerShell uso y salida</span><span class="sxs-lookup"><span data-stu-id="a4c9f-131">Powershell Script Example Usage and Output</span></span>
 
-<span data-ttu-id="d22fb-132">.\MRSpatialPackagerHelperScript.ps1 - AppName holoshell - nombre de usuario administrador-modo de exportación - MapxPath D:\temp\ LockMap - 0</span><span class="sxs-lookup"><span data-stu-id="d22fb-132">.\MRSpatialPackagerHelperScript.ps1 -AppName holoshell -UserName Administrator -Mode export -MapxPath D:\temp\ -LockMap 0</span></span>
+<span data-ttu-id="a4c9f-132">.\MRSpatialPackagerHelperScript.ps1-AppName holoshell-nombredeusuario administrador-Mode Export-MapxPath D:\temp\-LockMap 0</span><span class="sxs-lookup"><span data-stu-id="a4c9f-132">.\MRSpatialPackagerHelperScript.ps1 -AppName holoshell -UserName Administrator -Mode export -MapxPath D:\temp\ -LockMap 0</span></span>
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
@@ -113,36 +113,36 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a><span data-ttu-id="d22fb-133">Cómo exportar mediante MixedRealityPackager.exe</span><span class="sxs-lookup"><span data-stu-id="d22fb-133">How to Export using MixedRealityPackager.exe</span></span>
+### <a name="how-to-export-using-mixedrealitypackagerexe"></a><span data-ttu-id="a4c9f-133">Cómo exportar con MixedRealityPackager. exe</span><span class="sxs-lookup"><span data-stu-id="a4c9f-133">How to Export using MixedRealityPackager.exe</span></span>
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
-<span data-ttu-id="d22fb-134">Exportar mapas de dispositivo genera dos archivos: mapx het.mapx y sa.mapx.</span><span class="sxs-lookup"><span data-stu-id="d22fb-134">Exporting maps off device generates two mapx files, het.mapx and sa.mapx.</span></span> <span data-ttu-id="d22fb-135">Durante el proceso de exportación se quitan todos los delimitadores espaciales excepto para la aplicación especificada y los límites creados por el usuario (si existe).</span><span class="sxs-lookup"><span data-stu-id="d22fb-135">During the export process all spatial anchors are removed except for the specified app and the user-created boundary (if it exists).</span></span> <span data-ttu-id="d22fb-136">El nombre de familia del paquete de origen debe coincidir con una aplicación existente instalada o se producirá un error en el archivo exe.</span><span class="sxs-lookup"><span data-stu-id="d22fb-136">The source package family name must match an existing installed app or the exe will fail.</span></span>
+<span data-ttu-id="a4c9f-134">La exportación de mapas fuera del dispositivo genera dos archivos MAPX, Het. MAPX y SA. MAPX.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-134">Exporting maps off device generates two mapx files, het.mapx and sa.mapx.</span></span> <span data-ttu-id="a4c9f-135">Durante el proceso de exportación, se quitan todos los delimitadores espaciales, a excepción de la aplicación especificada y el límite creado por el usuario (si existe).</span><span class="sxs-lookup"><span data-stu-id="a4c9f-135">During the export process all spatial anchors are removed except for the specified app and the user-created boundary (if it exists).</span></span> <span data-ttu-id="a4c9f-136">El nombre de familia del paquete de origen debe coincidir con una aplicación instalada existente o se producirá un error en el archivo exe.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-136">The source package family name must match an existing installed app or the exe will fail.</span></span>
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a><span data-ttu-id="d22fb-137">Cómo importar mediante MixedRealityPackager.exe</span><span class="sxs-lookup"><span data-stu-id="d22fb-137">How to Import using MixedRealityPackager.exe</span></span>
+### <a name="how-to-import-using-mixedrealitypackagerexe"></a><span data-ttu-id="a4c9f-137">Cómo importar mediante MixedRealityPackager. exe</span><span class="sxs-lookup"><span data-stu-id="a4c9f-137">How to Import using MixedRealityPackager.exe</span></span>
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
-<span data-ttu-id="d22fb-138">Importación elimina los datos espaciales existentes y lo reemplaza con los datos del directorio especificado.</span><span class="sxs-lookup"><span data-stu-id="d22fb-138">Import deletes the existing spatial data and replaces it with the data from the specified directory.</span></span> <span data-ttu-id="d22fb-139">La entrada de nombre de la aplicación especifica el nombre del paquete de la aplicación de destino que al igual que los anclajes espaciales se debe importar para y el SID del usuario de destino Especifica el usuario que debe tener acceso a los delimitadores espaciales importados.</span><span class="sxs-lookup"><span data-stu-id="d22fb-139">The app name input specifies the package name of the target app that like the spatial anchors should be imported for and the target user SID specifies the user that should have access to the imported spatial anchors.</span></span> <span data-ttu-id="d22fb-140">El nombre de familia de paquete de destino y el SID de usuario deben coincidir con los valores existentes en el equipo o se producirá un error en el archivo exe.</span><span class="sxs-lookup"><span data-stu-id="d22fb-140">The target package family name and user SIDs must match existing values on the PC or the exe will fail.</span></span>
+<span data-ttu-id="a4c9f-138">La importación elimina los datos espaciales existentes y los reemplaza con los datos del directorio especificado.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-138">Import deletes the existing spatial data and replaces it with the data from the specified directory.</span></span> <span data-ttu-id="a4c9f-139">La entrada del nombre de la aplicación especifica el nombre del paquete de la aplicación de destino que se debe importar para y el SID del usuario de destino especifica el usuario que debe tener acceso a los delimitadores espaciales importados.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-139">The app name input specifies the package name of the target app that like the spatial anchors should be imported for and the target user SID specifies the user that should have access to the imported spatial anchors.</span></span> <span data-ttu-id="a4c9f-140">El nombre de familia y los SID de usuario del paquete de destino deben coincidir con los valores existentes en el equipo o se producirá un error en el archivo exe.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-140">The target package family name and user SIDs must match existing values on the PC or the exe will fail.</span></span>
 
 
 ***
-## <a name="error-messages"></a><span data-ttu-id="d22fb-141">Mensajes de error</span><span class="sxs-lookup"><span data-stu-id="d22fb-141">Error Messages</span></span>
-<span data-ttu-id="d22fb-142">Además los mensajes de error por debajo de los errores también irá acompañados de un valor HRESULT</span><span class="sxs-lookup"><span data-stu-id="d22fb-142">In addition the error messages below failures will also be accompanied with an HRESULT</span></span>
+## <a name="error-messages"></a><span data-ttu-id="a4c9f-141">Mensajes de error</span><span class="sxs-lookup"><span data-stu-id="a4c9f-141">Error Messages</span></span>
+<span data-ttu-id="a4c9f-142">Además, los mensajes de error siguientes también irán acompañados de un valor HRESULT.</span><span class="sxs-lookup"><span data-stu-id="a4c9f-142">In addition the error messages below failures will also be accompanied with an HRESULT</span></span>
 
-### <a name="if-there-was-an-error-invalid-arguments"></a><span data-ttu-id="d22fb-143">Si se produjo un error de argumentos no válidos</span><span class="sxs-lookup"><span data-stu-id="d22fb-143">If there was an error invalid arguments</span></span>
+### <a name="if-there-was-an-error-invalid-arguments"></a><span data-ttu-id="a4c9f-143">Si se produjo un error argumentos no válidos</span><span class="sxs-lookup"><span data-stu-id="a4c9f-143">If there was an error invalid arguments</span></span>
 ```
 Invalid command line parameters
 ```
 
-### <a name="if-the-executable-was-not-run-in-administrator-mode"></a><span data-ttu-id="d22fb-144">Si el archivo ejecutable no se ejecutó en modo de administrador</span><span class="sxs-lookup"><span data-stu-id="d22fb-144">If the executable was not run in administrator mode</span></span>
+### <a name="if-the-executable-was-not-run-in-administrator-mode"></a><span data-ttu-id="a4c9f-144">Si el ejecutable no se ejecutó en modo de administrador</span><span class="sxs-lookup"><span data-stu-id="a4c9f-144">If the executable was not run in administrator mode</span></span>
 ```
 1. Unable to determine elevation privileges 
 2. Please run with administrator privileges 
 ```
 
-### <a name="if-there-was-an-error-enabling-or-disabling-the-driver"></a><span data-ttu-id="d22fb-145">Si se produjo un error al habilitar o deshabilitar el controlador</span><span class="sxs-lookup"><span data-stu-id="d22fb-145">If there was an error enabling or disabling the driver</span></span>
+### <a name="if-there-was-an-error-enabling-or-disabling-the-driver"></a><span data-ttu-id="a4c9f-145">Si se produjo un error al habilitar o deshabilitar el controlador</span><span class="sxs-lookup"><span data-stu-id="a4c9f-145">If there was an error enabling or disabling the driver</span></span>
 ```
 1. Could not find the specified driver with class GUID {d612553d-06b1-49ca-8938-e39ef80eb16f}
 2. Could not find the device instance ID for specified driver with class GUID {d612553d-06b1-49ca-8938-e39ef80eb16f}
@@ -150,31 +150,31 @@ Invalid command line parameters
 4. Failed to enable/disable driver
 ```
 
-### <a name="if-there-was-an-error-validating-the-spatial-database-version"></a><span data-ttu-id="d22fb-146">Si se ha producido un error al validar la versión de la base de datos espaciales</span><span class="sxs-lookup"><span data-stu-id="d22fb-146">If there was an error validating the spatial database version</span></span>
+### <a name="if-there-was-an-error-validating-the-spatial-database-version"></a><span data-ttu-id="a4c9f-146">Si se produjo un error al validar la versión de la base de datos espacial</span><span class="sxs-lookup"><span data-stu-id="a4c9f-146">If there was an error validating the spatial database version</span></span>
 ```
 1. Could not read database version
 2. This tool is not compatible with the current driver version of Windows Mixed Reality and/or the spatial data provided to replace the existing spatial data is an invalid version.
 3. No spatial data is present on the current device please connect your Mixed Reality device to initialize spatial data. If the problem persists please restart your PC.
 ```
 
-### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a><span data-ttu-id="d22fb-147">Si se ha producido un error al validar el nombre de familia de paquete proporcionado para la aplicación de importación y exportación de destino</span><span class="sxs-lookup"><span data-stu-id="d22fb-147">If there was an error validating the package family name provided for target import/export app</span></span>
+### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a><span data-ttu-id="a4c9f-147">Si se produjo un error al validar el nombre de familia del paquete proporcionado para la aplicación de importación y exportación de destino</span><span class="sxs-lookup"><span data-stu-id="a4c9f-147">If there was an error validating the package family name provided for target import/export app</span></span>
 ```
 The package family name does not correspond to an installed app
 ```
 
-### <a name="if-there-was-an-error-validating-the-user-sid"></a><span data-ttu-id="d22fb-148">Si se ha producido un error al validar el SID del usuario</span><span class="sxs-lookup"><span data-stu-id="d22fb-148">If there was an error validating the user SID</span></span>
+### <a name="if-there-was-an-error-validating-the-user-sid"></a><span data-ttu-id="a4c9f-148">Si se produjo un error al validar el SID del usuario</span><span class="sxs-lookup"><span data-stu-id="a4c9f-148">If there was an error validating the user SID</span></span>
 ```
 Failed to find local user for passed in user SID
 ```
 
-### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a><span data-ttu-id="d22fb-149">Si se ha producido un error en el destino o el origen de datos espaciales archivos relacionados</span><span class="sxs-lookup"><span data-stu-id="d22fb-149">If there was an error related to the destination or source spatial data files</span></span>
+### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a><span data-ttu-id="a4c9f-149">Si se produjo un error relacionado con los archivos de datos espaciales de origen o de destino</span><span class="sxs-lookup"><span data-stu-id="a4c9f-149">If there was an error related to the destination or source spatial data files</span></span>
 ```
 1. Folder path to space store files doesn't exist 
 2. het.mapx or sa.mapx file doesn't exist in <PATH> for import
 3. Unable to create directory at <PATH> for export
 ```
 
-### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a><span data-ttu-id="d22fb-150">Si se produjo un error relacionado con iniciar y detener el espectro/SharedRealitySvc</span><span class="sxs-lookup"><span data-stu-id="d22fb-150">If there was an error related to starting and stoping Spectrum/SharedRealitySvc</span></span>
+### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a><span data-ttu-id="a4c9f-150">Si se produjo un error relacionado con el inicio y la detención del espectro/SharedRealitySvc</span><span class="sxs-lookup"><span data-stu-id="a4c9f-150">If there was an error related to starting and stoping Spectrum/SharedRealitySvc</span></span>
 ```
 1. Unable to open service manager <SERVICE>
 2. Timed out trying to start/stop <SERVICE>

@@ -1,11 +1,11 @@
 ---
-title: El Sr. y Azure 305 - funciones y almacenamiento
-description: Realice este curso para obtener información sobre cómo implementar el almacenamiento de Azure y las funciones dentro de una aplicación de realidad mixta.
+title: 'MR y Azure 305: funciones y almacenamiento'
+description: Complete este curso para aprender a implementar Azure Storage y funciones en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: realidad mixta, Azure, academy, unity, tutorial, api, funciones, almacenamiento, hololens, vr envolvente,
+keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, funciones, almacenamiento, hololens, envolventes, VR
 ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
 ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
 ms.translationtype: MT
@@ -14,197 +14,197 @@ ms.lasthandoff: 07/09/2019
 ms.locfileid: "67694556"
 ---
 >[!NOTE]
-><span data-ttu-id="45390-104">Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.</span><span class="sxs-lookup"><span data-stu-id="45390-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="45390-105">Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.</span><span class="sxs-lookup"><span data-stu-id="45390-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="45390-106">Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.</span><span class="sxs-lookup"><span data-stu-id="45390-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="45390-107">Se mantendrán para seguir trabajando en los dispositivos compatibles.</span><span class="sxs-lookup"><span data-stu-id="45390-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="45390-108">Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="45390-108">There will be a new series of tutorials that will be posted in the future that will demonstrate how to develop for HoloLens 2.</span></span>  <span data-ttu-id="45390-109">Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.</span><span class="sxs-lookup"><span data-stu-id="45390-109">This notice will be updated with a link to those tutorials when they are posted.</span></span>
+><span data-ttu-id="2feb8-104">Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-104">The Mixed Reality Academy tutorials were designed with HoloLens (1st gen) and Mixed Reality Immersive Headsets in mind.</span></span>  <span data-ttu-id="2feb8-105">Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.</span><span class="sxs-lookup"><span data-stu-id="2feb8-105">As such, we feel it is important to leave these tutorials in place for developers who are still looking for guidance in developing for those devices.</span></span>  <span data-ttu-id="2feb8-106">Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="2feb8-106">These tutorials will **_not_** be updated with the latest toolsets or interactions being used for HoloLens 2.</span></span>  <span data-ttu-id="2feb8-107">Se mantendrán para seguir trabajando en los dispositivos compatibles.</span><span class="sxs-lookup"><span data-stu-id="2feb8-107">They will be maintained to continue working on the supported devices.</span></span> <span data-ttu-id="2feb8-108">Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="2feb8-108">There will be a new series of tutorials that will be posted in the future that will demonstrate how to develop for HoloLens 2.</span></span>  <span data-ttu-id="2feb8-109">Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.</span><span class="sxs-lookup"><span data-stu-id="2feb8-109">This notice will be updated with a link to those tutorials when they are posted.</span></span>
 
 <br> 
 
-# <a name="mr-and-azure-305-functions-and-storage"></a><span data-ttu-id="45390-110">El Sr. y Azure 305: Funciones y almacenamiento</span><span class="sxs-lookup"><span data-stu-id="45390-110">MR and Azure 305: Functions and storage</span></span>
+# <a name="mr-and-azure-305-functions-and-storage"></a><span data-ttu-id="2feb8-110">MR y Azure 305: Funciones y almacenamiento</span><span class="sxs-lookup"><span data-stu-id="2feb8-110">MR and Azure 305: Functions and storage</span></span>
 
-![final producto-inicio](images/AzureLabs-Lab5-00.png)
+![Inicio del producto final](images/AzureLabs-Lab5-00.png)
 
-<span data-ttu-id="45390-112">En este curso, obtendrá información sobre cómo crear y usar Azure Functions y almacenar los datos con un recurso de almacenamiento de Azure, dentro de una aplicación de realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="45390-112">In this course, you will learn how to create and use Azure Functions and store data with an Azure Storage resource, within a mixed reality application.</span></span>
+<span data-ttu-id="2feb8-112">En este curso, aprenderá a crear y usar Azure Functions y almacenar datos con un recurso Azure Storage, dentro de una aplicación de realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="2feb8-112">In this course, you will learn how to create and use Azure Functions and store data with an Azure Storage resource, within a mixed reality application.</span></span>
 
-<span data-ttu-id="45390-113">*Las funciones de Azure* es un servicio de Microsoft, que permite a los desarrolladores ejecutar pequeños fragmentos de código, "funciones", en Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-113">*Azure Functions* is a Microsoft service, which allows developers to run small pieces of code, 'functions', in Azure.</span></span> <span data-ttu-id="45390-114">Esto proporciona una manera para delegar el trabajo a la nube, en lugar de la aplicación local, lo que puede tener muchas ventajas.</span><span class="sxs-lookup"><span data-stu-id="45390-114">This provides a way to delegate work to the cloud, rather than your local application, which can have many benefits.</span></span> <span data-ttu-id="45390-115">*Las funciones de Azure* admite varios lenguajes de desarrollo, incluidos C\#, F\#, Node.js, Java y PHP.</span><span class="sxs-lookup"><span data-stu-id="45390-115">*Azure Functions* supports several development languages, including C\#, F\#, Node.js, Java, and PHP.</span></span> <span data-ttu-id="45390-116">Para obtener más información, visite la [artículo de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).</span><span class="sxs-lookup"><span data-stu-id="45390-116">For more information, visit the [Azure Functions article](https://docs.microsoft.com/azure/azure-functions/functions-overview).</span></span>
+<span data-ttu-id="2feb8-113">*Azure Functions* es un servicio de Microsoft, que permite a los desarrolladores ejecutar pequeños fragmentos de código, "funciones", en Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-113">*Azure Functions* is a Microsoft service, which allows developers to run small pieces of code, 'functions', in Azure.</span></span> <span data-ttu-id="2feb8-114">Esto proporciona una manera de delegar el trabajo en la nube, en lugar de la aplicación local, que puede tener muchas ventajas.</span><span class="sxs-lookup"><span data-stu-id="2feb8-114">This provides a way to delegate work to the cloud, rather than your local application, which can have many benefits.</span></span> <span data-ttu-id="2feb8-115">*Azure Functions* admite varios lenguajes de desarrollo,\#como C\#, F, node. js, Java y php.</span><span class="sxs-lookup"><span data-stu-id="2feb8-115">*Azure Functions* supports several development languages, including C\#, F\#, Node.js, Java, and PHP.</span></span> <span data-ttu-id="2feb8-116">Para obtener más información, visite el [artículo Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).</span><span class="sxs-lookup"><span data-stu-id="2feb8-116">For more information, visit the [Azure Functions article](https://docs.microsoft.com/azure/azure-functions/functions-overview).</span></span>
 
-<span data-ttu-id="45390-117">*Almacenamiento de Azure* es un servicio de nube de Microsoft, lo que permite a los desarrolladores almacenar datos, con el seguro que será altamente disponible, seguro, duradero, escalable y redundante.</span><span class="sxs-lookup"><span data-stu-id="45390-117">*Azure Storage* is a Microsoft cloud service, which allows developers to store data, with the insurance that it will be highly available, secure, durable, scalable, and redundant.</span></span> <span data-ttu-id="45390-118">Esto significa que Microsoft controlará todas mantenimiento y los problemas críticos por usted.</span><span class="sxs-lookup"><span data-stu-id="45390-118">This means Microsoft will handle all maintenance, and critical problems for you.</span></span> <span data-ttu-id="45390-119">Para obtener más información, visite la [artículo de Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).</span><span class="sxs-lookup"><span data-stu-id="45390-119">For more information, visit the [Azure Storage article](https://docs.microsoft.com/azure/storage/common/storage-introduction).</span></span>
+<span data-ttu-id="2feb8-117">*Azure Storage* es un servicio en la nube de Microsoft, que permite a los desarrolladores almacenar datos, con el seguro de que estará altamente disponible, seguro, duradero, escalable y redundante.</span><span class="sxs-lookup"><span data-stu-id="2feb8-117">*Azure Storage* is a Microsoft cloud service, which allows developers to store data, with the insurance that it will be highly available, secure, durable, scalable, and redundant.</span></span> <span data-ttu-id="2feb8-118">Esto significa que Microsoft administrará todo el mantenimiento y los problemas críticos.</span><span class="sxs-lookup"><span data-stu-id="2feb8-118">This means Microsoft will handle all maintenance, and critical problems for you.</span></span> <span data-ttu-id="2feb8-119">Para obtener más información, visite el [artículo Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).</span><span class="sxs-lookup"><span data-stu-id="2feb8-119">For more information, visit the [Azure Storage article](https://docs.microsoft.com/azure/storage/common/storage-introduction).</span></span>
 
-<span data-ttu-id="45390-120">Una vez completado este curso, tendrá una aplicación de envolventes auriculares de realidad mixta que podrá hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="45390-120">Having completed this course, you will have a mixed reality immersive headset application which will be able to do the following:</span></span>
+<span data-ttu-id="2feb8-120">Una vez finalizado este curso, tendrá una aplicación de auriculares con un casco de realidad mixta que podrá hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="2feb8-120">Having completed this course, you will have a mixed reality immersive headset application which will be able to do the following:</span></span>
 
-1.  <span data-ttu-id="45390-121">Permitir que el usuario que mirar en torno a una escena.</span><span class="sxs-lookup"><span data-stu-id="45390-121">Allow the user to gaze around a scene.</span></span>
-2.  <span data-ttu-id="45390-122">Desencadenar la creación de objetos cuando el usuario gazes en 3D "button".</span><span class="sxs-lookup"><span data-stu-id="45390-122">Trigger the spawning of objects when the user gazes at a 3D 'button'.</span></span>
-3.  <span data-ttu-id="45390-123">Elegirá los objetos generados por una función de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-123">The spawned objects will be chosen by an Azure Function.</span></span>
-4.  <span data-ttu-id="45390-124">Como cada objeto se genera, la aplicación almacenará el tipo de objeto en un *Azure File*, que se encuentra en *Azure Storage*.</span><span class="sxs-lookup"><span data-stu-id="45390-124">As each object is spawned, the application will store the object type in an *Azure File*, located in *Azure Storage*.</span></span>
-5.  <span data-ttu-id="45390-125">Al cargar una segunda vez, el *Azure File* datos se recuperan y se usa para reproducir las acciones de generación de la instancia anterior de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="45390-125">Upon loading a second time, the *Azure File* data will be retrieved, and used to replay the spawning actions from the previous instance of the application.</span></span>
+1.  <span data-ttu-id="2feb8-121">Permite al usuario mirarse en una escena.</span><span class="sxs-lookup"><span data-stu-id="2feb8-121">Allow the user to gaze around a scene.</span></span>
+2.  <span data-ttu-id="2feb8-122">Desencadenar la generación de objetos cuando el usuario mira en un "botón" 3D.</span><span class="sxs-lookup"><span data-stu-id="2feb8-122">Trigger the spawning of objects when the user gazes at a 3D 'button'.</span></span>
+3.  <span data-ttu-id="2feb8-123">Los objetos generados serán elegidos por una función de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-123">The spawned objects will be chosen by an Azure Function.</span></span>
+4.  <span data-ttu-id="2feb8-124">A medida que se genera cada objeto, la aplicación almacenará el tipo de objeto en un *archivo de Azure*, que se encuentra en *Azure Storage*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-124">As each object is spawned, the application will store the object type in an *Azure File*, located in *Azure Storage*.</span></span>
+5.  <span data-ttu-id="2feb8-125">Tras la carga por segunda vez, los datos del *archivo de Azure* se recuperarán y se usarán para reproducir las acciones de generación de la instancia anterior de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-125">Upon loading a second time, the *Azure File* data will be retrieved, and used to replay the spawning actions from the previous instance of the application.</span></span>
 
-<span data-ttu-id="45390-126">En la aplicación, es depende de usted sobre cómo se integrará los resultados con el diseño.</span><span class="sxs-lookup"><span data-stu-id="45390-126">In your application, it is up to you as to how you will integrate the results with your design.</span></span> <span data-ttu-id="45390-127">Este curso está diseñado para mostrarle cómo integrar un servicio de Azure con el proyecto de Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-127">This course is designed to teach you how to integrate an Azure Service with your Unity Project.</span></span> <span data-ttu-id="45390-128">Es su trabajo consiste en usar los conocimientos que obtendrá de este curso para mejorar su aplicación de realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="45390-128">It is your job to use the knowledge you gain from this course to enhance your mixed reality Application.</span></span>
+<span data-ttu-id="2feb8-126">En su aplicación, depende del modo en que va a integrar los resultados con el diseño.</span><span class="sxs-lookup"><span data-stu-id="2feb8-126">In your application, it is up to you as to how you will integrate the results with your design.</span></span> <span data-ttu-id="2feb8-127">Este curso está diseñado para enseñarle a integrar un servicio de Azure con su proyecto de Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-127">This course is designed to teach you how to integrate an Azure Service with your Unity Project.</span></span> <span data-ttu-id="2feb8-128">Es su trabajo usar el conocimiento que obtiene de este curso para mejorar su aplicación de realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="2feb8-128">It is your job to use the knowledge you gain from this course to enhance your mixed reality Application.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="45390-129">Compatibilidad con dispositivos</span><span class="sxs-lookup"><span data-stu-id="45390-129">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="2feb8-129">Compatibilidad con dispositivos</span><span class="sxs-lookup"><span data-stu-id="2feb8-129">Device support</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="45390-130">Curso</span><span class="sxs-lookup"><span data-stu-id="45390-130">Course</span></span></th><th style="width:150px"> <span data-ttu-id="45390-131"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="45390-131"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="45390-132"><a href="immersive-headset-hardware-details.md">Cascos envolventes</a></span><span class="sxs-lookup"><span data-stu-id="45390-132"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
+<th><span data-ttu-id="2feb8-130">Recurso</span><span class="sxs-lookup"><span data-stu-id="2feb8-130">Course</span></span></th><th style="width:150px"> <span data-ttu-id="2feb8-131"><a href="hololens-hardware-details.md">HoloLens</a></span><span class="sxs-lookup"><span data-stu-id="2feb8-131"><a href="hololens-hardware-details.md">HoloLens</a></span></span></th><th style="width:150px"> <span data-ttu-id="2feb8-132"><a href="immersive-headset-hardware-details.md">Cascos envolventes</a></span><span class="sxs-lookup"><span data-stu-id="2feb8-132"><a href="immersive-headset-hardware-details.md">Immersive headsets</a></span></span></th>
 </tr><tr>
-<td><span data-ttu-id="45390-133">El Sr. y Azure 305: Funciones y almacenamiento</span><span class="sxs-lookup"><span data-stu-id="45390-133">MR and Azure 305: Functions and storage</span></span></td><td style="text-align: center;"> <span data-ttu-id="45390-134">✔️</span><span class="sxs-lookup"><span data-stu-id="45390-134">✔️</span></span></td><td style="text-align: center;"> <span data-ttu-id="45390-135">✔️</span><span class="sxs-lookup"><span data-stu-id="45390-135">✔️</span></span></td>
+<td><span data-ttu-id="2feb8-133">MR y Azure 305: Funciones y almacenamiento</span><span class="sxs-lookup"><span data-stu-id="2feb8-133">MR and Azure 305: Functions and storage</span></span></td><td style="text-align: center;"> <span data-ttu-id="2feb8-134">✔️</span><span class="sxs-lookup"><span data-stu-id="2feb8-134">✔️</span></span></td><td style="text-align: center;"> <span data-ttu-id="2feb8-135">✔️</span><span class="sxs-lookup"><span data-stu-id="2feb8-135">✔️</span></span></td>
 </tr>
 </table>
 
 > [!NOTE]
-> <span data-ttu-id="45390-136">Aunque este curso se centra principalmente en inmersivos (VR) Windows Mixed Reality, también puede aplicar lo aprendido en este curso de Microsoft HoloLens.</span><span class="sxs-lookup"><span data-stu-id="45390-136">While this course primarily focuses on Windows Mixed Reality immersive (VR) headsets, you can also apply what you learn in this course to Microsoft HoloLens.</span></span> <span data-ttu-id="45390-137">Como seguir el curso, verá notas en cualquier cambio que deberá emplear para admitir HoloLens.</span><span class="sxs-lookup"><span data-stu-id="45390-137">As you follow along with the course, you will see notes on any changes you might need to employ to support HoloLens.</span></span>
+> <span data-ttu-id="2feb8-136">Aunque este curso se centra principalmente en los auriculares de Windows Mixed Reality inmersivo (VR), también puede aplicar lo que aprenda en este curso a Microsoft HoloLens.</span><span class="sxs-lookup"><span data-stu-id="2feb8-136">While this course primarily focuses on Windows Mixed Reality immersive (VR) headsets, you can also apply what you learn in this course to Microsoft HoloLens.</span></span> <span data-ttu-id="2feb8-137">A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir HoloLens.</span><span class="sxs-lookup"><span data-stu-id="2feb8-137">As you follow along with the course, you will see notes on any changes you might need to employ to support HoloLens.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="45390-138">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="45390-138">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="2feb8-138">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="2feb8-138">Prerequisites</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="45390-139">Este tutorial está diseñado para los desarrolladores con experiencia básica con Unity y C#.</span><span class="sxs-lookup"><span data-stu-id="45390-139">This tutorial is designed for developers who have basic experience with Unity and C#.</span></span> <span data-ttu-id="45390-140">También Ten en cuenta que los requisitos previos y las instrucciones escritas en este documento representan lo que se ha probado y comprobado en el momento de redactar (mayo de 2018).</span><span class="sxs-lookup"><span data-stu-id="45390-140">Please also be aware that the prerequisites and written instructions within this document represent what has been tested and verified at the time of writing (May 2018).</span></span> <span data-ttu-id="45390-141">Es libre de usar el software más reciente, como se muestra en el [instalar las herramientas de](install-the-tools.md) artículo, aunque no se debe suponer que la información de este curso perfectamente coincida con lo que encontrará en el software más reciente que se indica a continuación .</span><span class="sxs-lookup"><span data-stu-id="45390-141">You are free to use the latest software, as listed within the [install the tools](install-the-tools.md) article, though it should not be assumed that the information in this course will perfectly match what you'll find in newer software than what's listed below.</span></span>
+> <span data-ttu-id="2feb8-139">Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#.</span><span class="sxs-lookup"><span data-stu-id="2feb8-139">This tutorial is designed for developers who have basic experience with Unity and C#.</span></span> <span data-ttu-id="2feb8-140">Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo).</span><span class="sxs-lookup"><span data-stu-id="2feb8-140">Please also be aware that the prerequisites and written instructions within this document represent what has been tested and verified at the time of writing (May 2018).</span></span> <span data-ttu-id="2feb8-141">Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-141">You are free to use the latest software, as listed within the [install the tools](install-the-tools.md) article, though it should not be assumed that the information in this course will perfectly match what you'll find in newer software than what's listed below.</span></span>
 
-<span data-ttu-id="45390-142">Se recomiendan el siguiente hardware y software para este curso:</span><span class="sxs-lookup"><span data-stu-id="45390-142">We recommend the following hardware and software for this course:</span></span>
+<span data-ttu-id="2feb8-142">Se recomienda el siguiente hardware y software para este curso:</span><span class="sxs-lookup"><span data-stu-id="2feb8-142">We recommend the following hardware and software for this course:</span></span>
 
-- <span data-ttu-id="45390-143">Un equipo de desarrollo, [compatible con Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) para desarrollo de auriculares envolvente (VR)</span><span class="sxs-lookup"><span data-stu-id="45390-143">A development PC, [compatible with Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) for immersive (VR) headset development</span></span>
-- [<span data-ttu-id="45390-144">Windows 10 Fall Creators Update (o posterior) con el modo de desarrollador habilitado</span><span class="sxs-lookup"><span data-stu-id="45390-144">Windows 10 Fall Creators Update (or later) with Developer mode enabled</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="45390-145">El SDK más reciente de Windows 10</span><span class="sxs-lookup"><span data-stu-id="45390-145">The latest Windows 10 SDK</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="45390-146">Unity 2017.4</span><span class="sxs-lookup"><span data-stu-id="45390-146">Unity 2017.4</span></span>](install-the-tools.md#installation-checklist)
-- [<span data-ttu-id="45390-147">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="45390-147">Visual Studio 2017</span></span>](install-the-tools.md#installation-checklist)
-- <span data-ttu-id="45390-148">Un [auriculares de Windows Mixed Reality envolventes (VR)](immersive-headset-hardware-details.md) o [Microsoft HoloLens](hololens-hardware-details.md) con el modo de desarrollador habilitado</span><span class="sxs-lookup"><span data-stu-id="45390-148">A [Windows Mixed Reality immersive (VR) headset](immersive-headset-hardware-details.md) or [Microsoft HoloLens](hololens-hardware-details.md) with Developer mode enabled</span></span>
-- <span data-ttu-id="45390-149">Una suscripción a una cuenta de Azure para crear recursos de Azure</span><span class="sxs-lookup"><span data-stu-id="45390-149">A subscription to an Azure account for creating Azure resources</span></span>
-- <span data-ttu-id="45390-150">Acceso a Internet para la recuperación de datos e instalación de Azure</span><span class="sxs-lookup"><span data-stu-id="45390-150">Internet access for Azure setup and data retrieval</span></span>
+- <span data-ttu-id="2feb8-143">Un equipo de desarrollo, [compatible con Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) para el desarrollo de auriculares envolvente (VR)</span><span class="sxs-lookup"><span data-stu-id="2feb8-143">A development PC, [compatible with Windows Mixed Reality](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines) for immersive (VR) headset development</span></span>
+- [<span data-ttu-id="2feb8-144">Windows 10 Fall Creators Update (o posterior) con el modo de desarrollador habilitado</span><span class="sxs-lookup"><span data-stu-id="2feb8-144">Windows 10 Fall Creators Update (or later) with Developer mode enabled</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="2feb8-145">El SDK de Windows 10 más reciente</span><span class="sxs-lookup"><span data-stu-id="2feb8-145">The latest Windows 10 SDK</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="2feb8-146">Unity 2017,4</span><span class="sxs-lookup"><span data-stu-id="2feb8-146">Unity 2017.4</span></span>](install-the-tools.md#installation-checklist)
+- [<span data-ttu-id="2feb8-147">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="2feb8-147">Visual Studio 2017</span></span>](install-the-tools.md#installation-checklist)
+- <span data-ttu-id="2feb8-148">Un [auricular de Windows Mixed Reality inmersivo (VR)](immersive-headset-hardware-details.md) o [Microsoft HoloLens](hololens-hardware-details.md) con el modo de desarrollador habilitado</span><span class="sxs-lookup"><span data-stu-id="2feb8-148">A [Windows Mixed Reality immersive (VR) headset](immersive-headset-hardware-details.md) or [Microsoft HoloLens](hololens-hardware-details.md) with Developer mode enabled</span></span>
+- <span data-ttu-id="2feb8-149">Una suscripción a una cuenta de Azure para crear recursos de Azure</span><span class="sxs-lookup"><span data-stu-id="2feb8-149">A subscription to an Azure account for creating Azure resources</span></span>
+- <span data-ttu-id="2feb8-150">Acceso a Internet para la configuración de Azure y la recuperación de datos</span><span class="sxs-lookup"><span data-stu-id="2feb8-150">Internet access for Azure setup and data retrieval</span></span>
 
-## <a name="before-you-start"></a><span data-ttu-id="45390-151">Antes de empezar</span><span class="sxs-lookup"><span data-stu-id="45390-151">Before you start</span></span>
+## <a name="before-you-start"></a><span data-ttu-id="2feb8-151">Antes de comenzar</span><span class="sxs-lookup"><span data-stu-id="2feb8-151">Before you start</span></span>
 
-<span data-ttu-id="45390-152">Para evitar problemas de creación de este proyecto, se recomienda encarecidamente que cree el proyecto se ha mencionado en este tutorial en una carpeta raíz o cerca de la raíz (rutas de acceso de carpeta largo pueden causar problemas en tiempo de compilación).</span><span class="sxs-lookup"><span data-stu-id="45390-152">To avoid encountering issues building this project, it is strongly suggested that you create the project mentioned in this tutorial in a root or near-root folder (long folder paths can cause issues at build-time).</span></span>
+<span data-ttu-id="2feb8-152">Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).</span><span class="sxs-lookup"><span data-stu-id="2feb8-152">To avoid encountering issues building this project, it is strongly suggested that you create the project mentioned in this tutorial in a root or near-root folder (long folder paths can cause issues at build-time).</span></span>
 
-## <a name="chapter-1---the-azure-portal"></a><span data-ttu-id="45390-153">Capítulo 1: el Portal de Azure</span><span class="sxs-lookup"><span data-stu-id="45390-153">Chapter 1 - The Azure Portal</span></span>
+## <a name="chapter-1---the-azure-portal"></a><span data-ttu-id="2feb8-153">Capítulo 1: Azure portal</span><span class="sxs-lookup"><span data-stu-id="2feb8-153">Chapter 1 - The Azure Portal</span></span>
 
-<span data-ttu-id="45390-154">Para usar el **servicio Azure Storage**, deberá crear y configurar un **cuenta de almacenamiento** en Azure portal.</span><span class="sxs-lookup"><span data-stu-id="45390-154">To use the **Azure Storage Service**, you will need to create and configure a **Storage Account** in the Azure portal.</span></span>
+<span data-ttu-id="2feb8-154">Para usar el **servicio Azure Storage**, debe crear y configurar una **cuenta de almacenamiento** en el Azure portal.</span><span class="sxs-lookup"><span data-stu-id="2feb8-154">To use the **Azure Storage Service**, you will need to create and configure a **Storage Account** in the Azure portal.</span></span>
 
-1.  <span data-ttu-id="45390-155">Inicie sesión en el [Portal Azure](https://portal.azure.com).</span><span class="sxs-lookup"><span data-stu-id="45390-155">Log in to the  [Azure Portal](https://portal.azure.com).</span></span>
-
-    > [!NOTE]
-    > <span data-ttu-id="45390-156">Si no dispone de una cuenta de Azure, deberá crear uno.</span><span class="sxs-lookup"><span data-stu-id="45390-156">If you do not already have an Azure account, you will need to create one.</span></span> <span data-ttu-id="45390-157">Si está siguiendo este tutorial en una situación de aula o laboratorio, pida el instructor o uno de los a los supervisores de ayuda para instalar la nueva cuenta.</span><span class="sxs-lookup"><span data-stu-id="45390-157">If you are following this tutorial in a classroom or lab situation, ask your instructor or one of the proctors for help setting up your new account.</span></span>
-
-2.  <span data-ttu-id="45390-158">Una vez que haya iniciado sesión, haga clic en **New** en la esquina superior izquierda esquina y busque *cuenta de almacenamiento*y haga clic en **ENTRAR**.</span><span class="sxs-lookup"><span data-stu-id="45390-158">Once you are logged in, click on **New** in the top left corner, and search for *Storage account*, and click **Enter**.</span></span>
-
-    ![búsqueda de almacenamiento de Azure](images/AzureLabs-Lab5-01.png)
+1.  <span data-ttu-id="2feb8-155">Inicie sesión en el [portal de Azure](https://portal.azure.com).</span><span class="sxs-lookup"><span data-stu-id="2feb8-155">Log in to the  [Azure Portal](https://portal.azure.com).</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="45390-160">La palabra **New** se han reemplazado con **crear un recurso**, en los portales más reciente.</span><span class="sxs-lookup"><span data-stu-id="45390-160">The word **New** may have been replaced with **Create a resource**, in newer portals.</span></span>
+    > <span data-ttu-id="2feb8-156">Si aún no tiene una cuenta de Azure, tendrá que crear una.</span><span class="sxs-lookup"><span data-stu-id="2feb8-156">If you do not already have an Azure account, you will need to create one.</span></span> <span data-ttu-id="2feb8-157">Si sigue este tutorial en una situación de aula o de laboratorio, pregunte al instructor o a uno de los Proctors para obtener ayuda para configurar la nueva cuenta.</span><span class="sxs-lookup"><span data-stu-id="2feb8-157">If you are following this tutorial in a classroom or lab situation, ask your instructor or one of the proctors for help setting up your new account.</span></span>
 
-3.  <span data-ttu-id="45390-161">La nueva página proporcionará una descripción de la *cuenta de Azure Storage* service.</span><span class="sxs-lookup"><span data-stu-id="45390-161">The new page will provide a description of the *Azure Storage account* service.</span></span> <span data-ttu-id="45390-162">En la parte inferior izquierda de este símbolo del sistema, seleccione el **crear** botón para crear una asociación con este servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-162">At the bottom left of this prompt, select the **Create** button, to create an association with this service.</span></span>
+2.  <span data-ttu-id="2feb8-158">Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda, busque la *cuenta de almacenamiento*y haga clic en **entrar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-158">Once you are logged in, click on **New** in the top left corner, and search for *Storage account*, and click **Enter**.</span></span>
 
-    ![Crear servicio](images/AzureLabs-Lab5-02.png)
+    ![búsqueda de Azure Storage](images/AzureLabs-Lab5-01.png)
 
-4.  <span data-ttu-id="45390-164">Una vez que ha hecho clic **crear**:</span><span class="sxs-lookup"><span data-stu-id="45390-164">Once you have clicked on **Create**:</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="2feb8-160">Es posible que la palabra **nuevo** se haya reemplazado por **crear un recurso**, en portales más recientes.</span><span class="sxs-lookup"><span data-stu-id="2feb8-160">The word **New** may have been replaced with **Create a resource**, in newer portals.</span></span>
 
-    1.  <span data-ttu-id="45390-165">Insertar un *nombre* para su cuenta, tenga en cuenta este campo sólo acepta números y letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="45390-165">Insert a *Name* for your account, be aware this field only accepts numbers, and lowercase letters.</span></span>
+3.  <span data-ttu-id="2feb8-161">La nueva página proporcionará una descripción del servicio de *cuenta de Azure Storage* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-161">The new page will provide a description of the *Azure Storage account* service.</span></span> <span data-ttu-id="2feb8-162">En la parte inferior izquierda de este mensaje, seleccione el botón **crear** para crear una asociación con este servicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-162">At the bottom left of this prompt, select the **Create** button, to create an association with this service.</span></span>
 
-    2.  <span data-ttu-id="45390-166">Para *modelo de implementación*, seleccione **Administrador de recursos**.</span><span class="sxs-lookup"><span data-stu-id="45390-166">For *Deployment model*, select **Resource manager**.</span></span>
+    ![crear servicio](images/AzureLabs-Lab5-02.png)
 
-    3.  <span data-ttu-id="45390-167">Para *tipo de cuenta*, seleccione **almacenamiento (uso general v1)** .</span><span class="sxs-lookup"><span data-stu-id="45390-167">For *Account kind*, select **Storage (general purpose v1)**.</span></span>
+4.  <span data-ttu-id="2feb8-164">Una vez que haya hecho clic en **crear**:</span><span class="sxs-lookup"><span data-stu-id="2feb8-164">Once you have clicked on **Create**:</span></span>
 
-    4.  <span data-ttu-id="45390-168">Determinar la *ubicación* para el grupo de recursos (si está creando un nuevo grupo de recursos).</span><span class="sxs-lookup"><span data-stu-id="45390-168">Determine the *Location* for your resource group (if you are creating a new Resource Group).</span></span> <span data-ttu-id="45390-169">La ubicación sería lo ideal es que en la región donde desea ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="45390-169">The location would ideally be in the region where the application would run.</span></span> <span data-ttu-id="45390-170">Algunos recursos de Azure solo están disponibles en determinadas regiones.</span><span class="sxs-lookup"><span data-stu-id="45390-170">Some Azure assets are only available in certain regions.</span></span>
+    1.  <span data-ttu-id="2feb8-165">Inserte un *nombre* para la cuenta. tenga en cuenta que este campo solo acepta números y letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="2feb8-165">Insert a *Name* for your account, be aware this field only accepts numbers, and lowercase letters.</span></span>
 
-    5.  <span data-ttu-id="45390-171">Para *replicación* seleccione **lectura-access--almacenamiento con redundancia geográfica (RA-GRS)** .</span><span class="sxs-lookup"><span data-stu-id="45390-171">For *Replication* select **Read-access-geo-redundant storage (RA-GRS)**.</span></span>
+    2.  <span data-ttu-id="2feb8-166">En *modelo de implementación*, seleccione **Resource Manager**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-166">For *Deployment model*, select **Resource manager**.</span></span>
 
-    6.  <span data-ttu-id="45390-172">Para *rendimiento*, seleccione **estándar**.</span><span class="sxs-lookup"><span data-stu-id="45390-172">For *Performance*, select **Standard**.</span></span>
+    3.  <span data-ttu-id="2feb8-167">En *tipo de cuenta*, seleccione **almacenamiento (uso general V1)** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-167">For *Account kind*, select **Storage (general purpose v1)**.</span></span>
 
-    7.  <span data-ttu-id="45390-173">Deje *se requiere transferencia segura* como **deshabilitado**.</span><span class="sxs-lookup"><span data-stu-id="45390-173">Leave *Secure transfer required* as **Disabled**.</span></span>
+    4.  <span data-ttu-id="2feb8-168">Determine la *Ubicación* del grupo de recursos (si va a crear un nuevo grupo de recursos).</span><span class="sxs-lookup"><span data-stu-id="2feb8-168">Determine the *Location* for your resource group (if you are creating a new Resource Group).</span></span> <span data-ttu-id="2feb8-169">Idealmente, la ubicación estará en la región donde se ejecutará la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-169">The location would ideally be in the region where the application would run.</span></span> <span data-ttu-id="2feb8-170">Algunos recursos de Azure solo están disponibles en determinadas regiones.</span><span class="sxs-lookup"><span data-stu-id="2feb8-170">Some Azure assets are only available in certain regions.</span></span>
 
-    8.  <span data-ttu-id="45390-174">Seleccione un *suscripción*.</span><span class="sxs-lookup"><span data-stu-id="45390-174">Select a *Subscription*.</span></span>
+    5.  <span data-ttu-id="2feb8-171">En *replicación* , seleccione **almacenamiento con redundancia geográfica con acceso de lectura (RA-grs)** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-171">For *Replication* select **Read-access-geo-redundant storage (RA-GRS)**.</span></span>
 
-    9. <span data-ttu-id="45390-175">Elija un *grupo de recursos* o cree uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="45390-175">Choose a *Resource Group* or create a new one.</span></span> <span data-ttu-id="45390-176">Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación para una colección de recursos de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-176">A resource group provides a way to monitor, control access, provision and manage billing for a collection of Azure assets.</span></span> <span data-ttu-id="45390-177">Se recomienda mantener todos los servicios de Azure asociados a un proyecto único (por ejemplo, por ejemplo, estos laboratorios) en un grupo de recursos comunes).</span><span class="sxs-lookup"><span data-stu-id="45390-177">It is recommended to keep all the Azure services associated with a single project (e.g. such as these labs) under a common resource group).</span></span> 
+    6.  <span data-ttu-id="2feb8-172">En *rendimiento*, seleccione **estándar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-172">For *Performance*, select **Standard**.</span></span>
 
-        > <span data-ttu-id="45390-178">Si desea leer más acerca de los grupos de recursos de Azure, inicie [visite el artículo del grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span><span class="sxs-lookup"><span data-stu-id="45390-178">If you wish to read more about Azure Resource Groups, please [visit the resource group article](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span></span>
+    7.  <span data-ttu-id="2feb8-173">Deje la *transferencia segura requerida* como deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="2feb8-173">Leave *Secure transfer required* as **Disabled**.</span></span>
 
-    10. <span data-ttu-id="45390-179">También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-179">You will also need to confirm that you have understood the Terms and Conditions applied to this Service.</span></span>
+    8.  <span data-ttu-id="2feb8-174">Seleccione una *suscripción*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-174">Select a *Subscription*.</span></span>
 
-    11. <span data-ttu-id="45390-180">Selecciona **Crear**.</span><span class="sxs-lookup"><span data-stu-id="45390-180">Select **Create**.</span></span>
+    9. <span data-ttu-id="2feb8-175">Elija un *grupo de recursos* o cree uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="2feb8-175">Choose a *Resource Group* or create a new one.</span></span> <span data-ttu-id="2feb8-176">Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-176">A resource group provides a way to monitor, control access, provision and manage billing for a collection of Azure assets.</span></span> <span data-ttu-id="2feb8-177">Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común).</span><span class="sxs-lookup"><span data-stu-id="2feb8-177">It is recommended to keep all the Azure services associated with a single project (e.g. such as these labs) under a common resource group).</span></span> 
 
-        ![información de entrada de servicio](images/AzureLabs-Lab5-03.png)
+        > <span data-ttu-id="2feb8-178">Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span><span class="sxs-lookup"><span data-stu-id="2feb8-178">If you wish to read more about Azure Resource Groups, please [visit the resource group article](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span></span>
 
-5.  <span data-ttu-id="45390-182">Una vez que ha hecho clic **crear**, tendrá que esperar para que se puede crear el servicio, esta operación puede tardar un minuto.</span><span class="sxs-lookup"><span data-stu-id="45390-182">Once you have clicked on **Create**, you will have to wait for the service to be created, this might take a minute.</span></span>
+    10. <span data-ttu-id="2feb8-179">También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-179">You will also need to confirm that you have understood the Terms and Conditions applied to this Service.</span></span>
 
-6.  <span data-ttu-id="45390-183">Una vez creada la instancia de servicio, aparecerá una notificación en el portal.</span><span class="sxs-lookup"><span data-stu-id="45390-183">A notification will appear in the portal once the Service instance is created.</span></span>
+    11. <span data-ttu-id="2feb8-180">Seleccione **Crear**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-180">Select **Create**.</span></span>
 
-    ![nueva notificación en azure portal](images/AzureLabs-Lab5-04.png)
+        ![información del servicio de entrada](images/AzureLabs-Lab5-03.png)
 
-7.  <span data-ttu-id="45390-185">Haga clic en las notificaciones para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-185">Click on the notifications to explore your new Service instance.</span></span>
+5.  <span data-ttu-id="2feb8-182">Una vez que haya hecho clic en **crear**, tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.</span><span class="sxs-lookup"><span data-stu-id="2feb8-182">Once you have clicked on **Create**, you will have to wait for the service to be created, this might take a minute.</span></span>
+
+6.  <span data-ttu-id="2feb8-183">Una vez que se crea la instancia de servicio, aparecerá una notificación en el portal.</span><span class="sxs-lookup"><span data-stu-id="2feb8-183">A notification will appear in the portal once the Service instance is created.</span></span>
+
+    ![nueva notificación en Azure portal](images/AzureLabs-Lab5-04.png)
+
+7.  <span data-ttu-id="2feb8-185">Haga clic en las notificaciones para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-185">Click on the notifications to explore your new Service instance.</span></span>
 
     ![Ir al recurso](images/AzureLabs-Lab5-05.png)
 
-8.  <span data-ttu-id="45390-187">Haga clic en el **ir al recurso** botón en la notificación para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-187">Click the **Go to resource** button in the notification to explore your new Service instance.</span></span> <span data-ttu-id="45390-188">Se le dirigirá a la nueva *cuenta de almacenamiento* instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-188">You will be taken to your new *Storage account* service instance.</span></span>
+8.  <span data-ttu-id="2feb8-187">Haga clic en el botón **ir a recurso** de la notificación para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-187">Click the **Go to resource** button in the notification to explore your new Service instance.</span></span> <span data-ttu-id="2feb8-188">Se le dirigirá a la nueva instancia de servicio de la *cuenta de almacenamiento* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-188">You will be taken to your new *Storage account* service instance.</span></span>
 
     ![teclas de acceso](images/AzureLabs-Lab5-06.png)
 
-9.  <span data-ttu-id="45390-190">Haga clic en *claves de acceso*para revelar los puntos de conexión para este servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="45390-190">Click *Access keys*, to reveal the endpoints for this cloud service.</span></span> <span data-ttu-id="45390-191">Usar *el Bloc de notas* o similar, para copiar una de las claves para su uso posterior.</span><span class="sxs-lookup"><span data-stu-id="45390-191">Use *Notepad* or similar, to copy one of your keys for use later.</span></span> <span data-ttu-id="45390-192">Además, tenga en cuenta la *cadena de conexión* valor, tal como se usará en el *AzureServices* (clase), que creará más adelante.</span><span class="sxs-lookup"><span data-stu-id="45390-192">Also, note the *Connection string* value, as it will be used in the *AzureServices* class, which you will create later.</span></span>
+9.  <span data-ttu-id="2feb8-190">Haga clic en *claves de acceso*para mostrar los puntos de conexión de este servicio en la nube.</span><span class="sxs-lookup"><span data-stu-id="2feb8-190">Click *Access keys*, to reveal the endpoints for this cloud service.</span></span> <span data-ttu-id="2feb8-191">Use *el Bloc de notas* o similar para copiar una de las claves para usarla más adelante.</span><span class="sxs-lookup"><span data-stu-id="2feb8-191">Use *Notepad* or similar, to copy one of your keys for use later.</span></span> <span data-ttu-id="2feb8-192">Además, tenga en cuenta el valor de la *cadena de conexión* , ya que se usará en la clase *AzureServices* , que se creará más adelante.</span><span class="sxs-lookup"><span data-stu-id="2feb8-192">Also, note the *Connection string* value, as it will be used in the *AzureServices* class, which you will create later.</span></span>
 
-    ![Copie la cadena de conexión](images/AzureLabs-Lab5-07.png)
+    ![copiar cadena de conexión](images/AzureLabs-Lab5-07.png)
 
-## <a name="chapter-2---setting-up-an-azure-function"></a><span data-ttu-id="45390-194">Capítulo 2: configurar una función de Azure</span><span class="sxs-lookup"><span data-stu-id="45390-194">Chapter 2 - Setting up an Azure Function</span></span>
+## <a name="chapter-2---setting-up-an-azure-function"></a><span data-ttu-id="2feb8-194">Capítulo 2: configuración de una función de Azure</span><span class="sxs-lookup"><span data-stu-id="2feb8-194">Chapter 2 - Setting up an Azure Function</span></span>
 
-<span data-ttu-id="45390-195">Ahora escribirá un **Azure** **función** en el servicio de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-195">You will now write an **Azure** **Function** in the Azure Service.</span></span>
+<span data-ttu-id="2feb8-195">Ahora escribirá una **función** de **Azure** en el servicio de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-195">You will now write an **Azure** **Function** in the Azure Service.</span></span>
 
-<span data-ttu-id="45390-196">Puede usar un **Azure Function** para casi todo lo que haría con una función clásica en el código, la diferencia es que cualquier aplicación que disponga de credenciales para tener acceso a su cuenta de Azure puede tener acceso a esta función hacer.</span><span class="sxs-lookup"><span data-stu-id="45390-196">You can use an **Azure Function** to do nearly anything that you would do with a classic function in your code, the difference being that this function can be accessed by any application that has credentials to access your Azure Account.</span></span>
+<span data-ttu-id="2feb8-196">Puede usar una **función de Azure** para hacer prácticamente todo lo que haría con una función clásica en el código, la diferencia es que cualquier aplicación que tenga credenciales para acceder a la cuenta de Azure puede tener acceso a esta función.</span><span class="sxs-lookup"><span data-stu-id="2feb8-196">You can use an **Azure Function** to do nearly anything that you would do with a classic function in your code, the difference being that this function can be accessed by any application that has credentials to access your Azure Account.</span></span>
 
-<span data-ttu-id="45390-197">Para crear una función de Azure:</span><span class="sxs-lookup"><span data-stu-id="45390-197">To create an Azure Function:</span></span>
+<span data-ttu-id="2feb8-197">Para crear una función de Azure:</span><span class="sxs-lookup"><span data-stu-id="2feb8-197">To create an Azure Function:</span></span>
 
-1.  <span data-ttu-id="45390-198">Desde su *Portal de Azure*, haga clic en **New** en la esquina superior izquierda esquina y busque *Function App*y haga clic en **ENTRAR**.</span><span class="sxs-lookup"><span data-stu-id="45390-198">From your *Azure Portal*, click on **New** in the top left corner, and search for *Function App*, and click **Enter**.</span></span>
+1.  <span data-ttu-id="2feb8-198">En *Azure portal*, haga clic en **nuevo** en la esquina superior izquierda y busque *function App*y haga clic en **entrar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-198">From your *Azure Portal*, click on **New** in the top left corner, and search for *Function App*, and click **Enter**.</span></span>
 
-    ![Crear aplicación de función](images/AzureLabs-Lab5-08.png)
+    ![creación de una aplicación de función](images/AzureLabs-Lab5-08.png)
 
     > [!NOTE]
-    > <span data-ttu-id="45390-200">La palabra **New** se han reemplazado con **crear un recurso**, en los portales más reciente.</span><span class="sxs-lookup"><span data-stu-id="45390-200">The word **New** may have been replaced with **Create a resource**, in newer portals.</span></span>
+    > <span data-ttu-id="2feb8-200">Es posible que la palabra **nuevo** se haya reemplazado por **crear un recurso**, en portales más recientes.</span><span class="sxs-lookup"><span data-stu-id="2feb8-200">The word **New** may have been replaced with **Create a resource**, in newer portals.</span></span>
 
-2.  <span data-ttu-id="45390-201">La nueva página proporcionará una descripción de la *Azure Function App* service.</span><span class="sxs-lookup"><span data-stu-id="45390-201">The new page will provide a description of the *Azure Function App* service.</span></span> <span data-ttu-id="45390-202">En la parte inferior izquierda de este símbolo del sistema, seleccione el **crear** botón para crear una asociación con este servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-202">At the bottom left of this prompt, select the **Create** button, to create an association with this service.</span></span>
+2.  <span data-ttu-id="2feb8-201">La nueva página proporcionará una descripción del servicio *Azure function App* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-201">The new page will provide a description of the *Azure Function App* service.</span></span> <span data-ttu-id="2feb8-202">En la parte inferior izquierda de este mensaje, seleccione el botón **crear** para crear una asociación con este servicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-202">At the bottom left of this prompt, select the **Create** button, to create an association with this service.</span></span>
 
     ![información de la aplicación de función](images/AzureLabs-Lab5-09.png)
 
-3.  <span data-ttu-id="45390-204">Una vez que ha hecho clic **crear**:</span><span class="sxs-lookup"><span data-stu-id="45390-204">Once you have clicked on **Create**:</span></span>
+3.  <span data-ttu-id="2feb8-204">Una vez que haya hecho clic en **crear**:</span><span class="sxs-lookup"><span data-stu-id="2feb8-204">Once you have clicked on **Create**:</span></span>
 
-    1.  <span data-ttu-id="45390-205">Proporcione un *nombre de la aplicación*.</span><span class="sxs-lookup"><span data-stu-id="45390-205">Provide an *App name*.</span></span> <span data-ttu-id="45390-206">Solo letras y números se pueden emplear (ya sea en mayúsculas o minúsculas se permite).</span><span class="sxs-lookup"><span data-stu-id="45390-206">Only letters and numbers can be used here (either upper or lower case is allowed).</span></span>
+    1.  <span data-ttu-id="2feb8-205">Proporcione un *nombre de aplicación*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-205">Provide an *App name*.</span></span> <span data-ttu-id="2feb8-206">Aquí solo se pueden usar letras y números (en mayúsculas o minúsculas).</span><span class="sxs-lookup"><span data-stu-id="2feb8-206">Only letters and numbers can be used here (either upper or lower case is allowed).</span></span>
 
-    2.  <span data-ttu-id="45390-207">Seleccione la *suscripción*.</span><span class="sxs-lookup"><span data-stu-id="45390-207">Select your preferred *Subscription*.</span></span>
+    2.  <span data-ttu-id="2feb8-207">Seleccione su *suscripción*preferida.</span><span class="sxs-lookup"><span data-stu-id="2feb8-207">Select your preferred *Subscription*.</span></span>
 
-    3. <span data-ttu-id="45390-208">Elija un *grupo de recursos* o cree uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="45390-208">Choose a *Resource Group* or create a new one.</span></span> <span data-ttu-id="45390-209">Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación para una colección de recursos de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-209">A resource group provides a way to monitor, control access, provision and manage billing for a collection of Azure assets.</span></span> <span data-ttu-id="45390-210">Se recomienda mantener todos los servicios de Azure asociados a un proyecto único (por ejemplo, por ejemplo, estos laboratorios) en un grupo de recursos comunes).</span><span class="sxs-lookup"><span data-stu-id="45390-210">It is recommended to keep all the Azure services associated with a single project (e.g. such as these labs) under a common resource group).</span></span> 
+    3. <span data-ttu-id="2feb8-208">Elija un *grupo de recursos* o cree uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="2feb8-208">Choose a *Resource Group* or create a new one.</span></span> <span data-ttu-id="2feb8-209">Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-209">A resource group provides a way to monitor, control access, provision and manage billing for a collection of Azure assets.</span></span> <span data-ttu-id="2feb8-210">Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común).</span><span class="sxs-lookup"><span data-stu-id="2feb8-210">It is recommended to keep all the Azure services associated with a single project (e.g. such as these labs) under a common resource group).</span></span> 
 
-        > <span data-ttu-id="45390-211">Si desea leer más acerca de los grupos de recursos de Azure, inicie [visite el artículo del grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span><span class="sxs-lookup"><span data-stu-id="45390-211">If you wish to read more about Azure Resource Groups, please [visit the resource group article](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span></span>
+        > <span data-ttu-id="2feb8-211">Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span><span class="sxs-lookup"><span data-stu-id="2feb8-211">If you wish to read more about Azure Resource Groups, please [visit the resource group article](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).</span></span>
 
-    4.  <span data-ttu-id="45390-212">Para este ejercicio, seleccione *Windows* como los elegidos **OS**.</span><span class="sxs-lookup"><span data-stu-id="45390-212">For this exercise, select *Windows* as the chosen **OS**.</span></span>
+    4.  <span data-ttu-id="2feb8-212">Para este ejercicio, seleccione *Windows* como el **sistema operativo**elegido.</span><span class="sxs-lookup"><span data-stu-id="2feb8-212">For this exercise, select *Windows* as the chosen **OS**.</span></span>
 
-    5.  <span data-ttu-id="45390-213">Seleccione *Plan de consumo* para el **Plan de hospedaje**.</span><span class="sxs-lookup"><span data-stu-id="45390-213">Select *Consumption Plan* for the **Hosting Plan**.</span></span>
+    5.  <span data-ttu-id="2feb8-213">Seleccione *plan de consumo* para el **plan de hospedaje**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-213">Select *Consumption Plan* for the **Hosting Plan**.</span></span>
 
-    6.  <span data-ttu-id="45390-214">Determinar la *ubicación* para el grupo de recursos (si está creando un nuevo grupo de recursos).</span><span class="sxs-lookup"><span data-stu-id="45390-214">Determine the *Location* for your resource group (if you are creating a new Resource Group).</span></span> <span data-ttu-id="45390-215">La ubicación sería lo ideal es que en la región donde desea ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="45390-215">The location would ideally be in the region where the application would run.</span></span> <span data-ttu-id="45390-216">Algunos recursos de Azure solo están disponibles en determinadas regiones.</span><span class="sxs-lookup"><span data-stu-id="45390-216">Some Azure assets are only available in certain regions.</span></span> <span data-ttu-id="45390-217">Para obtener un rendimiento óptimo, seleccione la misma región que la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="45390-217">For optimal performance, select the same region as the storage account.</span></span>
+    6.  <span data-ttu-id="2feb8-214">Determine la *Ubicación* del grupo de recursos (si va a crear un nuevo grupo de recursos).</span><span class="sxs-lookup"><span data-stu-id="2feb8-214">Determine the *Location* for your resource group (if you are creating a new Resource Group).</span></span> <span data-ttu-id="2feb8-215">Idealmente, la ubicación estará en la región donde se ejecutará la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-215">The location would ideally be in the region where the application would run.</span></span> <span data-ttu-id="2feb8-216">Algunos recursos de Azure solo están disponibles en determinadas regiones.</span><span class="sxs-lookup"><span data-stu-id="2feb8-216">Some Azure assets are only available in certain regions.</span></span> <span data-ttu-id="2feb8-217">Para obtener un rendimiento óptimo, seleccione la misma región que la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="2feb8-217">For optimal performance, select the same region as the storage account.</span></span>
 
-    7.  <span data-ttu-id="45390-218">Para *almacenamiento*, seleccione **usar existente**, y, a continuación, mediante el menú desplegable, encontrar el almacenamiento creado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="45390-218">For *Storage*, select **Use existing**, and then using the dropdown menu, find your previously created storage.</span></span>
+    7.  <span data-ttu-id="2feb8-218">En *almacenamiento*, seleccione **usar existente**y, a continuación, use el menú desplegable para buscar el almacenamiento creado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-218">For *Storage*, select **Use existing**, and then using the dropdown menu, find your previously created storage.</span></span>
 
-    8.  <span data-ttu-id="45390-219">Deje *Application Insights* desactivado para este ejercicio.</span><span class="sxs-lookup"><span data-stu-id="45390-219">Leave *Application Insights* off for this exercise.</span></span>
+    8.  <span data-ttu-id="2feb8-219">Deje *Application Insights* desactivado para este ejercicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-219">Leave *Application Insights* off for this exercise.</span></span>
 
         ![detalles de la aplicación de función de entrada](images/AzureLabs-Lab5-10.png)
 
-4.  <span data-ttu-id="45390-221">Haga clic en el botón **Crear**.</span><span class="sxs-lookup"><span data-stu-id="45390-221">Click the **Create** button.</span></span>
+4.  <span data-ttu-id="2feb8-221">Haga clic en el botón **Crear**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-221">Click the **Create** button.</span></span>
 
-5.  <span data-ttu-id="45390-222">Una vez que ha hecho clic **crear**, tendrá que esperar para que se puede crear el servicio, esta operación puede tardar un minuto.</span><span class="sxs-lookup"><span data-stu-id="45390-222">Once you have clicked on **Create**, you will have to wait for the service to be created, this might take a minute.</span></span>
+5.  <span data-ttu-id="2feb8-222">Una vez que haya hecho clic en **crear**, tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.</span><span class="sxs-lookup"><span data-stu-id="2feb8-222">Once you have clicked on **Create**, you will have to wait for the service to be created, this might take a minute.</span></span>
 
-6.  <span data-ttu-id="45390-223">Una vez creada la instancia de servicio, aparecerá una notificación en el portal.</span><span class="sxs-lookup"><span data-stu-id="45390-223">A notification will appear in the portal once the Service instance is created.</span></span>
+6.  <span data-ttu-id="2feb8-223">Una vez que se crea la instancia de servicio, aparecerá una notificación en el portal.</span><span class="sxs-lookup"><span data-stu-id="2feb8-223">A notification will appear in the portal once the Service instance is created.</span></span>
 
-    ![nueva notificación en azure portal](images/AzureLabs-Lab5-11.png)
+    ![nueva notificación de Azure portal](images/AzureLabs-Lab5-11.png)
 
-7.  <span data-ttu-id="45390-225">Haga clic en las notificaciones para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-225">Click on the notifications to explore your new Service instance.</span></span> 
+7.  <span data-ttu-id="2feb8-225">Haga clic en las notificaciones para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-225">Click on the notifications to explore your new Service instance.</span></span> 
 
-    ![Vaya a la aplicación de función de recursos](images/AzureLabs-Lab5-12.png)
+    ![vaya a la aplicación de función de recursos](images/AzureLabs-Lab5-12.png)
 
-8.  <span data-ttu-id="45390-227">Haga clic en el **ir al recurso** botón en la notificación para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-227">Click the **Go to resource** button in the notification to explore your new Service instance.</span></span> <span data-ttu-id="45390-228">Se le dirigirá a la nueva *Function App* instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="45390-228">You will be taken to your new *Function App* service instance.</span></span>
+8.  <span data-ttu-id="2feb8-227">Haga clic en el botón **ir a recurso** de la notificación para explorar la nueva instancia de servicio.</span><span class="sxs-lookup"><span data-stu-id="2feb8-227">Click the **Go to resource** button in the notification to explore your new Service instance.</span></span> <span data-ttu-id="2feb8-228">Se le dirigirá a la nueva instancia de servicio de *function App* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-228">You will be taken to your new *Function App* service instance.</span></span>
 
-9.  <span data-ttu-id="45390-229">En el *Function App* panel, mantenga el mouse sobre *funciones*, se encuentra en el panel de la izquierda y, a continuación, haga clic en el **+ (signo más)** símbolos.</span><span class="sxs-lookup"><span data-stu-id="45390-229">On the *Function App* dashboard, hover your mouse over *Functions*, found within the panel on the left, and then click the **+ (plus)** symbol.</span></span>
+9.  <span data-ttu-id="2feb8-229">En el panel de *function App* , mantenga el mouse sobre *las funciones*, que se encuentran dentro del panel de la izquierda y, a continuación, haga clic en el símbolo **+ (más)** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-229">On the *Function App* dashboard, hover your mouse over *Functions*, found within the panel on the left, and then click the **+ (plus)** symbol.</span></span>
 
-    ![Crear una nueva función](images/AzureLabs-Lab5-13.png)
+    ![crear nueva función](images/AzureLabs-Lab5-13.png)
 
-10. <span data-ttu-id="45390-231">En la página siguiente, asegúrese de **Webhook y API** está seleccionada y para *elegir un idioma,* seleccione **CSharp**, ya que será el idioma utilizado para este tutorial.</span><span class="sxs-lookup"><span data-stu-id="45390-231">On the next page, ensure **Webhook + API** is selected, and for *Choose a language,* select **CSharp**, as this will be the language used for this tutorial.</span></span> <span data-ttu-id="45390-232">Por último, haga clic en el **crear esta función** botón.</span><span class="sxs-lookup"><span data-stu-id="45390-232">Lastly, click the **Create this function** button.</span></span>
+10. <span data-ttu-id="2feb8-231">En la página siguiente, asegúrese de que se ha seleccionado **webhook + API** y, para *elegir un idioma,* seleccione **CSharp**, ya que este será el idioma usado para este tutorial.</span><span class="sxs-lookup"><span data-stu-id="2feb8-231">On the next page, ensure **Webhook + API** is selected, and for *Choose a language,* select **CSharp**, as this will be the language used for this tutorial.</span></span> <span data-ttu-id="2feb8-232">Por último, haga clic en el botón **crear esta función** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-232">Lastly, click the **Create this function** button.</span></span>
 
-    ![Seleccione web gancho csharp](images/AzureLabs-Lab5-14.png)
+    ![seleccionar CSharp de webhook](images/AzureLabs-Lab5-14.png)
 
-11. <span data-ttu-id="45390-234">Debería ir al código de página (run.csx), si no, haga clic en la función recién creada en la lista de funciones dentro del panel de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="45390-234">You should be taken to the code page (run.csx), if not though, click on the newly created Function in the Functions list within the panel on the left.</span></span>
+11. <span data-ttu-id="2feb8-234">Debe ir a la página de códigos (Run. CSX); si no es así, haga clic en la función recién creada en la lista de funciones dentro del panel de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="2feb8-234">You should be taken to the code page (run.csx), if not though, click on the newly created Function in the Functions list within the panel on the left.</span></span>
 
-    ![Abra la nueva función](images/AzureLabs-Lab5-15.png)
+    ![abrir nueva función](images/AzureLabs-Lab5-15.png)
 
-12. <span data-ttu-id="45390-236">Copie el código siguiente en la función.</span><span class="sxs-lookup"><span data-stu-id="45390-236">Copy the following code into your function.</span></span> <span data-ttu-id="45390-237">Esta función simplemente devolverá un entero aleatorio entre 0 y 2, cuando se llama.</span><span class="sxs-lookup"><span data-stu-id="45390-237">This function will simply return a random integer between 0 and 2 when called.</span></span> <span data-ttu-id="45390-238">No preocuparse por el código existente, no dude en pegue encima de él.</span><span class="sxs-lookup"><span data-stu-id="45390-238">Do not worry about the existing code, feel free to paste over the top of it.</span></span>
+12. <span data-ttu-id="2feb8-236">Copie el código siguiente en la función.</span><span class="sxs-lookup"><span data-stu-id="2feb8-236">Copy the following code into your function.</span></span> <span data-ttu-id="2feb8-237">Esta función simplemente devolverá un entero aleatorio entre 0 y 2 cuando se llame a.</span><span class="sxs-lookup"><span data-stu-id="2feb8-237">This function will simply return a random integer between 0 and 2 when called.</span></span> <span data-ttu-id="2feb8-238">No se preocupe por el código existente, no dude en pegarlo encima de la parte superior.</span><span class="sxs-lookup"><span data-stu-id="2feb8-238">Do not worry about the existing code, feel free to paste over the top of it.</span></span>
 
     ```csharp
         using System.Net;
@@ -223,315 +223,315 @@ ms.locfileid: "67694556"
         }
     ```
 
-13. <span data-ttu-id="45390-239">Selecciona **Guardar**.</span><span class="sxs-lookup"><span data-stu-id="45390-239">Select **Save**.</span></span>
+13. <span data-ttu-id="2feb8-239">Seleccione **Guardar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-239">Select **Save**.</span></span>
 
-14. <span data-ttu-id="45390-240">El resultado debería parecerse a la imagen siguiente.</span><span class="sxs-lookup"><span data-stu-id="45390-240">The result should look like the image below.</span></span>
+14. <span data-ttu-id="2feb8-240">El resultado debería ser similar a la imagen siguiente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-240">The result should look like the image below.</span></span>
 
-15. <span data-ttu-id="45390-241">Haga clic en **obtener la dirección URL de función** y tome nota de la *extremo* muestra.</span><span class="sxs-lookup"><span data-stu-id="45390-241">Click on **Get function URL** and take note of the *endpoint* displayed.</span></span> <span data-ttu-id="45390-242">Debe insertar en el *AzureServices* clase que creará más adelante en este curso.</span><span class="sxs-lookup"><span data-stu-id="45390-242">You will need to insert it into the *AzureServices* class that you will create later in this course.</span></span>
+15. <span data-ttu-id="2feb8-241">Haga clic en **obtener la dirección URL** de la función y tome nota del *punto de conexión* mostrado.</span><span class="sxs-lookup"><span data-stu-id="2feb8-241">Click on **Get function URL** and take note of the *endpoint* displayed.</span></span> <span data-ttu-id="2feb8-242">Tendrá que insertarlo en la clase *AzureServices* que creará más adelante en este curso.</span><span class="sxs-lookup"><span data-stu-id="2feb8-242">You will need to insert it into the *AzureServices* class that you will create later in this course.</span></span>
 
-    ![obtener punto de conexión de función](images/AzureLabs-Lab5-16.png)
+    ![obtener extremo de función](images/AzureLabs-Lab5-16.png)
 
-    ![obtener punto de conexión de función](images/AzureLabs-Lab5-16-5.png)
+    ![obtener extremo de función](images/AzureLabs-Lab5-16-5.png)
 
-## <a name="chapter-3---setting-up-the-unity-project"></a><span data-ttu-id="45390-245">Capítulo 3: configurar el proyecto de Unity</span><span class="sxs-lookup"><span data-stu-id="45390-245">Chapter 3 - Setting up the Unity project</span></span>
+## <a name="chapter-3---setting-up-the-unity-project"></a><span data-ttu-id="2feb8-245">Capítulo 3: configuración del proyecto de Unity</span><span class="sxs-lookup"><span data-stu-id="2feb8-245">Chapter 3 - Setting up the Unity project</span></span>
 
-<span data-ttu-id="45390-246">El siguiente es un conjunto típico de para el desarrollo con la realidad mixta y por lo tanto, es una buena plantilla para otros proyectos.</span><span class="sxs-lookup"><span data-stu-id="45390-246">The following is a typical set up for developing with Mixed Reality, and as such, is a good template for other projects.</span></span>
+<span data-ttu-id="2feb8-246">Lo siguiente es una configuración típica para desarrollar con la realidad mixta y, como tal, es una buena plantilla para otros proyectos.</span><span class="sxs-lookup"><span data-stu-id="2feb8-246">The following is a typical set up for developing with Mixed Reality, and as such, is a good template for other projects.</span></span>
 
-<span data-ttu-id="45390-247">Configurar y probar los auriculares de realidad mixta envolventes.</span><span class="sxs-lookup"><span data-stu-id="45390-247">Set up and test your mixed reality immersive headset.</span></span>
+<span data-ttu-id="2feb8-247">Configure y pruebe sus auriculares de la realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="2feb8-247">Set up and test your mixed reality immersive headset.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="45390-248">Podrá **no** requieren controladores de movimiento de este curso.</span><span class="sxs-lookup"><span data-stu-id="45390-248">You will **not** require Motion Controllers for this course.</span></span> <span data-ttu-id="45390-249">Si necesita admite la configuración de los auriculares envolventes, [visite la realidad mixta configurar artículo](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).</span><span class="sxs-lookup"><span data-stu-id="45390-249">If you need support setting up the immersive headset, please [visit the mixed reality set up article](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).</span></span>
+> <span data-ttu-id="2feb8-248">**No** necesitará controladores de movimiento para este curso.</span><span class="sxs-lookup"><span data-stu-id="2feb8-248">You will **not** require Motion Controllers for this course.</span></span> <span data-ttu-id="2feb8-249">Si necesita ayuda para configurar el casco inmersivo, [visite el artículo sobre la](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)configuración de la realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="2feb8-249">If you need support setting up the immersive headset, please [visit the mixed reality set up article](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality).</span></span>
 
-1.  <span data-ttu-id="45390-250">Abra Unity y haga clic en **New**.</span><span class="sxs-lookup"><span data-stu-id="45390-250">Open Unity and click **New**.</span></span>
+1.  <span data-ttu-id="2feb8-250">Abra Unity y haga clic en **nuevo**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-250">Open Unity and click **New**.</span></span>
 
-    ![Crear nuevo proyecto de unity](images/AzureLabs-Lab5-17.png)
+    ![crear nuevo proyecto de Unity](images/AzureLabs-Lab5-17.png)
 
-2.  <span data-ttu-id="45390-252">Ahora deberá proporcionar un nombre de proyecto de Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-252">You will now need to provide a Unity Project name.</span></span> <span data-ttu-id="45390-253">Insertar **MR_Azure_Functions**.</span><span class="sxs-lookup"><span data-stu-id="45390-253">Insert **MR_Azure_Functions**.</span></span> <span data-ttu-id="45390-254">Asegúrese de que el tipo de proyecto se establece en **3D**.</span><span class="sxs-lookup"><span data-stu-id="45390-254">Make sure the project type is set to **3D**.</span></span> <span data-ttu-id="45390-255">Establecer el *ubicación* a algún lugar adecuado para usted (Recuerde, es mejor cuanto más se acerque a los directorios raíz).</span><span class="sxs-lookup"><span data-stu-id="45390-255">Set the *Location* to somewhere appropriate for you (remember, closer to root directories is better).</span></span> <span data-ttu-id="45390-256">A continuación, haga clic en **crear un proyecto**.</span><span class="sxs-lookup"><span data-stu-id="45390-256">Then, click **Create project**.</span></span>
+2.  <span data-ttu-id="2feb8-252">Ahora tendrá que proporcionar un nombre de proyecto de Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-252">You will now need to provide a Unity Project name.</span></span> <span data-ttu-id="2feb8-253">Inserte **MR_Azure_Functions**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-253">Insert **MR_Azure_Functions**.</span></span> <span data-ttu-id="2feb8-254">Asegúrese de que el tipo de proyecto está establecido en **3D**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-254">Make sure the project type is set to **3D**.</span></span> <span data-ttu-id="2feb8-255">Establezca la *Ubicación* en algún lugar adecuado para usted (Recuerde que, más cerca de los directorios raíz es mejor).</span><span class="sxs-lookup"><span data-stu-id="2feb8-255">Set the *Location* to somewhere appropriate for you (remember, closer to root directories is better).</span></span> <span data-ttu-id="2feb8-256">A continuación, haga clic en **crear proyecto**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-256">Then, click **Create project**.</span></span>
 
-    ![Asigne un nombre nuevo proyecto de unity](images/AzureLabs-Lab5-18.png)
+    ![asignar un nombre al nuevo proyecto de Unity](images/AzureLabs-Lab5-18.png)
 
-3.  <span data-ttu-id="45390-258">Con Unity abierto, es conveniente comprobar el valor predeterminado **Script Editor** está establecido en **Visual Studio**.</span><span class="sxs-lookup"><span data-stu-id="45390-258">With Unity open, it is worth checking the default **Script Editor** is set to **Visual Studio**.</span></span> <span data-ttu-id="45390-259">Vaya a **editar** > **preferencias** y, a continuación, en la ventana nueva, vaya a **herramientas externas**.</span><span class="sxs-lookup"><span data-stu-id="45390-259">Go to **Edit** > **Preferences** and then from the new window, navigate to **External Tools**.</span></span> <span data-ttu-id="45390-260">Cambio **External Script Editor** a **de Visual Studio 2017**.</span><span class="sxs-lookup"><span data-stu-id="45390-260">Change **External Script Editor** to **Visual Studio 2017**.</span></span> <span data-ttu-id="45390-261">Cerrar la **preferencias** ventana.</span><span class="sxs-lookup"><span data-stu-id="45390-261">Close the **Preferences** window.</span></span>
+3.  <span data-ttu-id="2feb8-258">Con Unity abierto, merece la pena comprobar que el **Editor** de scripts predeterminado está establecido en **Visual Studio**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-258">With Unity open, it is worth checking the default **Script Editor** is set to **Visual Studio**.</span></span> <span data-ttu-id="2feb8-259">Vaya a **Editar** > **preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-259">Go to **Edit** > **Preferences** and then from the new window, navigate to **External Tools**.</span></span> <span data-ttu-id="2feb8-260">Cambie el **Editor de script externo** a **Visual Studio 2017**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-260">Change **External Script Editor** to **Visual Studio 2017**.</span></span> <span data-ttu-id="2feb8-261">Cierre la ventana **preferencias** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-261">Close the **Preferences** window.</span></span>
 
-    ![conjunto de visual studio como editor de script](images/AzureLabs-Lab5-19.png)
+    ![establecer Visual Studio como editor de scripts](images/AzureLabs-Lab5-19.png)
 
-4.  <span data-ttu-id="45390-263">A continuación, vaya a **archivo** > **configuración de compilación** y cambiar la plataforma a **Universal Windows Platform**, haciendo clic en el **Cambiar plataforma**  botón.</span><span class="sxs-lookup"><span data-stu-id="45390-263">Next, go to **File** > **Build Settings** and switch the platform to **Universal Windows Platform**, by clicking on the **Switch Platform** button.</span></span>
+4.  <span data-ttu-id="2feb8-263">A continuación, vaya a**configuración de compilación** de **archivos** > y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-263">Next, go to **File** > **Build Settings** and switch the platform to **Universal Windows Platform**, by clicking on the **Switch Platform** button.</span></span>
 
-    ![cambiar la plataforma a uwp](images/AzureLabs-Lab5-20.png)
+    ![cambiar la plataforma a UWP](images/AzureLabs-Lab5-20.png)
 
-5.  <span data-ttu-id="45390-265">Vaya a **archivo** > **configuración de compilación** y asegúrese de que:</span><span class="sxs-lookup"><span data-stu-id="45390-265">Go to **File** > **Build Settings** and make sure that:</span></span>
+5.  <span data-ttu-id="2feb8-265">Vaya a**configuración de compilación** de **archivos** > y asegúrese de que:</span><span class="sxs-lookup"><span data-stu-id="2feb8-265">Go to **File** > **Build Settings** and make sure that:</span></span>
 
-    1. <span data-ttu-id="45390-266">**Dispositivo de destino** está establecido en **cualquier dispositivo**.</span><span class="sxs-lookup"><span data-stu-id="45390-266">**Target Device** is set to **Any Device**.</span></span>
+    1. <span data-ttu-id="2feb8-266">El **dispositivo de destino** se establece en **cualquier dispositivo**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-266">**Target Device** is set to **Any Device**.</span></span>
 
-        > <span data-ttu-id="45390-267">Para Microsoft HoloLens, establezca **dispositivo de destino** a *HoloLens*.</span><span class="sxs-lookup"><span data-stu-id="45390-267">For Microsoft HoloLens, set **Target Device** to *HoloLens*.</span></span>
+        > <span data-ttu-id="2feb8-267">Para Microsoft HoloLens, establezca el **dispositivo de destino** en *hololens*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-267">For Microsoft HoloLens, set **Target Device** to *HoloLens*.</span></span>
 
-    2. <span data-ttu-id="45390-268">**Tipo de compilación** está establecido en **D3D**</span><span class="sxs-lookup"><span data-stu-id="45390-268">**Build Type** is set to **D3D**</span></span>
+    2. <span data-ttu-id="2feb8-268">El **tipo de compilación** se establece en **D3D**</span><span class="sxs-lookup"><span data-stu-id="2feb8-268">**Build Type** is set to **D3D**</span></span>
 
-    3. <span data-ttu-id="45390-269">**SDK** está establecido en **instalada más reciente**</span><span class="sxs-lookup"><span data-stu-id="45390-269">**SDK** is set to **Latest installed**</span></span>
+    3. <span data-ttu-id="2feb8-269">**SDK** está establecido en la **versión más reciente instalada**</span><span class="sxs-lookup"><span data-stu-id="2feb8-269">**SDK** is set to **Latest installed**</span></span>
 
-    4. <span data-ttu-id="45390-270">**Versión de Visual Studio** está establecido en **instalada más reciente**</span><span class="sxs-lookup"><span data-stu-id="45390-270">**Visual Studio Version** is set to **Latest installed**</span></span>
+    4. <span data-ttu-id="2feb8-270">La **versión de Visual Studio** está establecida en la **más reciente instalada**</span><span class="sxs-lookup"><span data-stu-id="2feb8-270">**Visual Studio Version** is set to **Latest installed**</span></span>
 
-    5. <span data-ttu-id="45390-271">**Compilar y ejecutar** está establecido en **máquina Local**</span><span class="sxs-lookup"><span data-stu-id="45390-271">**Build and Run** is set to **Local Machine**</span></span>
+    5. <span data-ttu-id="2feb8-271">**Compilar y ejecutar** está establecido en **equipo local**</span><span class="sxs-lookup"><span data-stu-id="2feb8-271">**Build and Run** is set to **Local Machine**</span></span>
 
-    6. <span data-ttu-id="45390-272">Guarde la escena y agregarlo a la compilación.</span><span class="sxs-lookup"><span data-stu-id="45390-272">Save the scene and add it to the build.</span></span>
+    6. <span data-ttu-id="2feb8-272">Guarde la escena y agréguela a la compilación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-272">Save the scene and add it to the build.</span></span>
 
-        1.  <span data-ttu-id="45390-273">Hacer esto seleccionando **agregar escenas abierto**.</span><span class="sxs-lookup"><span data-stu-id="45390-273">Do this by selecting **Add Open Scenes**.</span></span> <span data-ttu-id="45390-274">Aparecerá el guardado de la ventana.</span><span class="sxs-lookup"><span data-stu-id="45390-274">A save window will appear.</span></span>
+        1.  <span data-ttu-id="2feb8-273">Para ello, seleccione **Agregar escenas abiertas**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-273">Do this by selecting **Add Open Scenes**.</span></span> <span data-ttu-id="2feb8-274">Aparecerá una ventana de guardar.</span><span class="sxs-lookup"><span data-stu-id="2feb8-274">A save window will appear.</span></span>
 
-            ![Agregar escenas abiertos](images/AzureLabs-Lab5-21.png)
+            ![agregar escenas abiertas](images/AzureLabs-Lab5-21.png)
 
-        2.  <span data-ttu-id="45390-276">Cree una nueva carpeta de esto y cualquier futuro, escena, a continuación, seleccione el **nueva carpeta** botón para crear una nueva carpeta y asígnele el nombre **escenas**.</span><span class="sxs-lookup"><span data-stu-id="45390-276">Create a new folder for this, and any future, scene, then select the **New folder** button, to create a new folder, name it **Scenes**.</span></span>
+        2.  <span data-ttu-id="2feb8-276">Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre Scenes.</span><span class="sxs-lookup"><span data-stu-id="2feb8-276">Create a new folder for this, and any future, scene, then select the **New folder** button, to create a new folder, name it **Scenes**.</span></span>
 
-            ![Crear carpeta de segundo plano](images/AzureLabs-Lab5-22.png)
+            ![crear carpeta de escenas](images/AzureLabs-Lab5-22.png)
 
-        3.  <span data-ttu-id="45390-278">Abra el recién creado **escenas** carpeta y, a continuación, en el **nombre de archivo:** campo de texto, escriba **FunctionsScene**, a continuación, presione **guardar**.</span><span class="sxs-lookup"><span data-stu-id="45390-278">Open your newly created **Scenes** folder, and then in the **File name:** text field, type **FunctionsScene**, then press **Save**.</span></span>
+        3.  <span data-ttu-id="2feb8-278">Abra la carpeta Scenes recién creada y, a continuación, en el campo **nombre de archivo:** , escriba **FunctionsScene**y, a continuación, presione **Guardar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-278">Open your newly created **Scenes** folder, and then in the **File name:** text field, type **FunctionsScene**, then press **Save**.</span></span>
 
-            ![Guardar escena de funciones](images/AzureLabs-Lab5-23.png)
+            ![escena de Save Functions](images/AzureLabs-Lab5-23.png)
 
-6.  <span data-ttu-id="45390-280">El resto de la configuración, en **configuración de compilación**, debe dejarse como predeterminada por ahora.</span><span class="sxs-lookup"><span data-stu-id="45390-280">The remaining settings, in **Build Settings**, should be left as default for now.</span></span>
+6.  <span data-ttu-id="2feb8-280">El resto de la configuración, en la **configuración de compilación**, debe dejarse como predeterminada por ahora.</span><span class="sxs-lookup"><span data-stu-id="2feb8-280">The remaining settings, in **Build Settings**, should be left as default for now.</span></span>
 
-    ![Guardar escena de funciones](images/AzureLabs-Lab5-24.png)
+    ![escena de Save Functions](images/AzureLabs-Lab5-24.png)
 
-7.  <span data-ttu-id="45390-282">En el *configuración de compilación* ventana, haga clic en el **configuración del Reproductor** botón, se abrirá el panel relacionado en el espacio donde el *Inspector* se encuentra.</span><span class="sxs-lookup"><span data-stu-id="45390-282">In the *Build Settings* window, click on the **Player Settings** button, this will open the related panel in the space where the *Inspector* is located.</span></span>
+7.  <span data-ttu-id="2feb8-282">En la ventana *configuración de compilación* , haga clic en el botón Configuración del **reproductor** ; se abrirá el panel relacionado en el espacio donde se encuentra el *Inspector* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-282">In the *Build Settings* window, click on the **Player Settings** button, this will open the related panel in the space where the *Inspector* is located.</span></span>
 
-    ![configuración del Reproductor en inspector](images/AzureLabs-Lab5-25.png)
+    ![configuración del reproductor en el inspector](images/AzureLabs-Lab5-25.png)
 
-8.  <span data-ttu-id="45390-284">En este panel, es necesario comprobar algunas opciones de configuración:</span><span class="sxs-lookup"><span data-stu-id="45390-284">In this panel, a few settings need to be verified:</span></span>
+8.  <span data-ttu-id="2feb8-284">En este panel, deben comprobarse algunas opciones de configuración:</span><span class="sxs-lookup"><span data-stu-id="2feb8-284">In this panel, a few settings need to be verified:</span></span>
 
-    1.  <span data-ttu-id="45390-285">En el **otra configuración** pestaña:</span><span class="sxs-lookup"><span data-stu-id="45390-285">In the **Other Settings** tab:</span></span>
+    1.  <span data-ttu-id="2feb8-285">En la pestaña **otros valores** :</span><span class="sxs-lookup"><span data-stu-id="2feb8-285">In the **Other Settings** tab:</span></span>
 
-        1.  <span data-ttu-id="45390-286">**Versión en tiempo de ejecución de secuencias de comandos** debe ser **Experimental** (.NET 4.6 equivalente), que desencadenará una necesidad de reiniciar el Editor.</span><span class="sxs-lookup"><span data-stu-id="45390-286">**Scripting Runtime Version** should be **Experimental** (.NET 4.6 Equivalent), which will trigger a need to restart the Editor.</span></span>
-        2.  <span data-ttu-id="45390-287">**Scripting de back-end** debe ser **.NET**</span><span class="sxs-lookup"><span data-stu-id="45390-287">**Scripting Backend** should be **.NET**</span></span>
-        3.  <span data-ttu-id="45390-288">**Nivel de compatibilidad de API** debe ser **.NET 4.6**</span><span class="sxs-lookup"><span data-stu-id="45390-288">**API Compatibility Level** should be **.NET 4.6**</span></span>
+        1.  <span data-ttu-id="2feb8-286">La **versión de scripting en tiempo de ejecución** debe ser **Experimental** (.net 4,6 equivalente), lo que desencadenará una necesidad de reiniciar el editor.</span><span class="sxs-lookup"><span data-stu-id="2feb8-286">**Scripting Runtime Version** should be **Experimental** (.NET 4.6 Equivalent), which will trigger a need to restart the Editor.</span></span>
+        2.  <span data-ttu-id="2feb8-287">El **back-end** de scripting debe ser **.net**</span><span class="sxs-lookup"><span data-stu-id="2feb8-287">**Scripting Backend** should be **.NET**</span></span>
+        3.  <span data-ttu-id="2feb8-288">El **nivel de compatibilidad de API** debe ser **.net 4,6**</span><span class="sxs-lookup"><span data-stu-id="2feb8-288">**API Compatibility Level** should be **.NET 4.6**</span></span>
 
-    2.  <span data-ttu-id="45390-289">Dentro de la **configuración de publicación** ficha **capacidades**, consulte:</span><span class="sxs-lookup"><span data-stu-id="45390-289">Within the **Publishing Settings** tab, under **Capabilities**, check:</span></span>
+    2.  <span data-ttu-id="2feb8-289">En la pestaña **configuración de publicación** , en **capacidades**, seleccione:</span><span class="sxs-lookup"><span data-stu-id="2feb8-289">Within the **Publishing Settings** tab, under **Capabilities**, check:</span></span>
         
-        -  <span data-ttu-id="45390-290">**InternetClient**</span><span class="sxs-lookup"><span data-stu-id="45390-290">**InternetClient**</span></span>
+        -  <span data-ttu-id="2feb8-290">**InternetClient**</span><span class="sxs-lookup"><span data-stu-id="2feb8-290">**InternetClient**</span></span>
 
-            ![conjunto de capacidades](images/AzureLabs-Lab5-26.png)
+            ![establecer capacidades](images/AzureLabs-Lab5-26.png)
 
-    3.  <span data-ttu-id="45390-292">Más abajo el panel, en **XR configuración** (bajo **configuración de publicación**), graduación **admite la realidad Virtual**, asegúrese de que el **Windows Mixed Reality SDK** se agrega.</span><span class="sxs-lookup"><span data-stu-id="45390-292">Further down the panel, in **XR Settings** (found below **Publishing Settings**), tick **Virtual Reality Supported**, make sure the **Windows Mixed Reality SDK** is added.</span></span>
+    3.  <span data-ttu-id="2feb8-292">Más abajo en el panel, en la **configuración de XR** (se encuentra debajo de **configuración de publicación**), tick **Virtual Reality compatible**, asegúrese de que se agrega el **SDK de Windows Mixed Reality** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-292">Further down the panel, in **XR Settings** (found below **Publishing Settings**), tick **Virtual Reality Supported**, make sure the **Windows Mixed Reality SDK** is added.</span></span>
 
-        ![configuración del conjunto de XR](images/AzureLabs-Lab5-27.png)
+        ![establecer la configuración de XR](images/AzureLabs-Lab5-27.png)
 
-9.  <span data-ttu-id="45390-294">En *configuración de compilación* *Unity C# proyectos* ya no está atenuada; Marque la casilla situada junto a esto.</span><span class="sxs-lookup"><span data-stu-id="45390-294">Back in *Build Settings* *Unity C# Projects* is no longer greyed out; tick the checkbox next to this.</span></span>
+9.  <span data-ttu-id="2feb8-294">De nuevo en la *configuración de compilación* , los *proyectos de Unity C#*  ya no están atenuados; Marque la casilla situada junto a este.</span><span class="sxs-lookup"><span data-stu-id="2feb8-294">Back in *Build Settings* *Unity C# Projects* is no longer greyed out; tick the checkbox next to this.</span></span>
 
-    ![proyectos de c# graduación](images/AzureLabs-Lab5-28.png)
+    ![proyectos de c# de tick](images/AzureLabs-Lab5-28.png)
 
-10.  <span data-ttu-id="45390-296">Cierre la ventana de configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="45390-296">Close the Build Settings window.</span></span>
+10.  <span data-ttu-id="2feb8-296">Cierre la ventana Configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-296">Close the Build Settings window.</span></span>
 
-11. <span data-ttu-id="45390-297">Guarde la escena y el proyecto (**archivo** > **guardar ESCENA / archivo** > **Guardar proyecto**).</span><span class="sxs-lookup"><span data-stu-id="45390-297">Save your Scene and Project (**FILE** > **SAVE SCENE / FILE** > **SAVE PROJECT**).</span></span>
+11. <span data-ttu-id="2feb8-297">Guarde la escena y el proyecto (**archivo** > **Guardar escena/archivo** > **Guardar proyecto**).</span><span class="sxs-lookup"><span data-stu-id="2feb8-297">Save your Scene and Project (**FILE** > **SAVE SCENE / FILE** > **SAVE PROJECT**).</span></span>
 
-## <a name="chapter-4---setup-main-camera"></a><span data-ttu-id="45390-298">Capítulo 4: configuración de cámara principal</span><span class="sxs-lookup"><span data-stu-id="45390-298">Chapter 4 - Setup Main Camera</span></span>
+## <a name="chapter-4---setup-main-camera"></a><span data-ttu-id="2feb8-298">Capítulo 4: configuración de la cámara principal</span><span class="sxs-lookup"><span data-stu-id="2feb8-298">Chapter 4 - Setup Main Camera</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="45390-299">Si desea omitir la *configurar Unity* componentes de este curso y continuar directamente en código, no dude en [descargar este .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)e importarlo en el proyecto como un [personalizado Paquete](https://docs.unity3d.com/Manual/AssetPackages.html).</span><span class="sxs-lookup"><span data-stu-id="45390-299">If you wish to skip the *Unity Set up* components of this course, and continue straight into code, feel free to [download this .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage), and import it into your project as a [Custom Package](https://docs.unity3d.com/Manual/AssetPackages.html).</span></span> <span data-ttu-id="45390-300">Esto también contendrá los archivos DLL en el capítulo siguiente.</span><span class="sxs-lookup"><span data-stu-id="45390-300">This will also contain the DLLs from the next Chapter.</span></span> <span data-ttu-id="45390-301">Después de la importación, continuar desde [capítulo 7](#chapter-7---create-the-azureservices-class).</span><span class="sxs-lookup"><span data-stu-id="45390-301">After import, continue from [Chapter 7](#chapter-7---create-the-azureservices-class).</span></span> 
+> <span data-ttu-id="2feb8-299">Si desea omitir los componentes de *configuración de Unity* de este curso y continuar directamente en el código, no dude en [Descargar este. unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage)e importarlo en el proyecto como un [paquete personalizado](https://docs.unity3d.com/Manual/AssetPackages.html).</span><span class="sxs-lookup"><span data-stu-id="2feb8-299">If you wish to skip the *Unity Set up* components of this course, and continue straight into code, feel free to [download this .unitypackage](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20305%20-%20Functions%20and%20storage/Azure-MR-305.unitypackage), and import it into your project as a [Custom Package](https://docs.unity3d.com/Manual/AssetPackages.html).</span></span> <span data-ttu-id="2feb8-300">También contendrá los archivos DLL del siguiente capítulo.</span><span class="sxs-lookup"><span data-stu-id="2feb8-300">This will also contain the DLLs from the next Chapter.</span></span> <span data-ttu-id="2feb8-301">Después de la importación, continúe en el [capítulo 7](#chapter-7---create-the-azureservices-class).</span><span class="sxs-lookup"><span data-stu-id="2feb8-301">After import, continue from [Chapter 7](#chapter-7---create-the-azureservices-class).</span></span> 
 
-1.  <span data-ttu-id="45390-302">En el *jerarquía Panel*, encontrará un objeto denominado **cámara principal**, este objeto representa el punto de vista de "head" una vez que esté "dentro" de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="45390-302">In the *Hierarchy Panel*, you will find an object called **Main Camera**, this object represents your "head" point of view once you are "inside" your application.</span></span>
+1.  <span data-ttu-id="2feb8-302">En el *Panel jerarquía*, encontrará un objeto denominado **cámara principal**, este objeto representa el punto de vista "principal" una vez que está "dentro" de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-302">In the *Hierarchy Panel*, you will find an object called **Main Camera**, this object represents your "head" point of view once you are "inside" your application.</span></span>
 
-2.  <span data-ttu-id="45390-303">Con el panel de Unity delante de usted, seleccione el **Main cámara GameObject**.</span><span class="sxs-lookup"><span data-stu-id="45390-303">With the Unity Dashboard in front of you, select the **Main Camera GameObject**.</span></span> <span data-ttu-id="45390-304">Observará que el *Panel Inspector* (generalmente se encuentra a la derecha, en el panel) mostrará los distintos componentes de la que *GameObject*, con *transformar* en la parte superior, seguido por *cámara*y algunos otros componentes.</span><span class="sxs-lookup"><span data-stu-id="45390-304">You will notice that the *Inspector Panel* (generally found to the right, within the Dashboard) will show the various components of that *GameObject*, with *Transform* at the top, followed by *Camera*, and some other components.</span></span> <span data-ttu-id="45390-305">Deberá restablecer la transformación de la cámara principal, por lo que está colocado correctamente.</span><span class="sxs-lookup"><span data-stu-id="45390-305">You will need to reset the Transform of the Main Camera, so it is positioned correctly.</span></span>
+2.  <span data-ttu-id="2feb8-303">Con el panel de Unity delante de usted, seleccione la **cámara principal GameObject**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-303">With the Unity Dashboard in front of you, select the **Main Camera GameObject**.</span></span> <span data-ttu-id="2feb8-304">Observará que el *panel Inspector* (generalmente situado a la derecha, dentro del panel) mostrará los distintos componentes de ese *GameObject*, con la *transformación* en la parte superior, la *cámara*y otros componentes.</span><span class="sxs-lookup"><span data-stu-id="2feb8-304">You will notice that the *Inspector Panel* (generally found to the right, within the Dashboard) will show the various components of that *GameObject*, with *Transform* at the top, followed by *Camera*, and some other components.</span></span> <span data-ttu-id="2feb8-305">Tendrá que restablecer la transformación de la cámara principal, de modo que esté colocada correctamente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-305">You will need to reset the Transform of the Main Camera, so it is positioned correctly.</span></span>
 
-3.  <span data-ttu-id="45390-306">Para ello, seleccione el **engranaje** icono situado junto a la cámara *transformar* componente y, a continuación, seleccione **restablecer**.</span><span class="sxs-lookup"><span data-stu-id="45390-306">To do this, select the **Gear** icon next to the Camera's *Transform* component, and select **Reset**.</span></span>
+3.  <span data-ttu-id="2feb8-306">Para ello, seleccione el icono de **engranaje** situado junto al componente de *transformación* de la cámara y seleccione **restablecer**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-306">To do this, select the **Gear** icon next to the Camera's *Transform* component, and select **Reset**.</span></span>
 
-    ![Restablecer transformación](images/AzureLabs-Lab5-29.png)
+    ![restablecer transformación](images/AzureLabs-Lab5-29.png)
 
-4.  <span data-ttu-id="45390-308">A continuación, actualice el **transformar** componente tenga el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="45390-308">Then update the **Transform** component to look like:</span></span>
+4.  <span data-ttu-id="2feb8-308">A continuación, actualice el componente de **transformación** para que tenga el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="2feb8-308">Then update the **Transform** component to look like:</span></span>
 
-    |         |    <span data-ttu-id="45390-309">TRANSFORMACIÓN - POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="45390-309">TRANSFORM - POSITION</span></span>   |       |
+    |         |    <span data-ttu-id="2feb8-309">TRANSFORMACIÓN: POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="2feb8-309">TRANSFORM - POSITION</span></span>   |       |
     | :-----: | :-----------------------: | :----:|
-    | <span data-ttu-id="45390-310">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-310">**X**</span></span>   | <span data-ttu-id="45390-311">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-311">**Y**</span></span>                     | <span data-ttu-id="45390-312">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-312">**Z**</span></span> |
-    | <span data-ttu-id="45390-313">0</span><span class="sxs-lookup"><span data-stu-id="45390-313">0</span></span>       | <span data-ttu-id="45390-314">1</span><span class="sxs-lookup"><span data-stu-id="45390-314">1</span></span>                         | <span data-ttu-id="45390-315">0</span><span class="sxs-lookup"><span data-stu-id="45390-315">0</span></span>     |    
+    | <span data-ttu-id="2feb8-310">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-310">**X**</span></span>   | <span data-ttu-id="2feb8-311">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-311">**Y**</span></span>                     | <span data-ttu-id="2feb8-312">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-312">**Z**</span></span> |
+    | <span data-ttu-id="2feb8-313">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-313">0</span></span>       | <span data-ttu-id="2feb8-314">1</span><span class="sxs-lookup"><span data-stu-id="2feb8-314">1</span></span>                         | <span data-ttu-id="2feb8-315">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-315">0</span></span>     |    
 
-    |       | <span data-ttu-id="45390-316">-TRANSFORMACIÓN DE GIRO</span><span class="sxs-lookup"><span data-stu-id="45390-316">TRANSFORM - ROTATION</span></span> |       |
+    |       | <span data-ttu-id="2feb8-316">TRANSFORMACIÓN-GIRO</span><span class="sxs-lookup"><span data-stu-id="2feb8-316">TRANSFORM - ROTATION</span></span> |       |
     | :---: | :------------------: | :----:|
-    | <span data-ttu-id="45390-317">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-317">**X**</span></span> | <span data-ttu-id="45390-318">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-318">**Y**</span></span>                | <span data-ttu-id="45390-319">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-319">**Z**</span></span> |
-    | <span data-ttu-id="45390-320">0</span><span class="sxs-lookup"><span data-stu-id="45390-320">0</span></span>     | <span data-ttu-id="45390-321">0</span><span class="sxs-lookup"><span data-stu-id="45390-321">0</span></span>                    | <span data-ttu-id="45390-322">0</span><span class="sxs-lookup"><span data-stu-id="45390-322">0</span></span>     |
+    | <span data-ttu-id="2feb8-317">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-317">**X**</span></span> | <span data-ttu-id="2feb8-318">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-318">**Y**</span></span>                | <span data-ttu-id="2feb8-319">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-319">**Z**</span></span> |
+    | <span data-ttu-id="2feb8-320">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-320">0</span></span>     | <span data-ttu-id="2feb8-321">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-321">0</span></span>                    | <span data-ttu-id="2feb8-322">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-322">0</span></span>     |
 
-    |       | <span data-ttu-id="45390-323">TRANSFORMACIÓN - ESCALADO</span><span class="sxs-lookup"><span data-stu-id="45390-323">TRANSFORM - SCALE</span></span> |       |
+    |       | <span data-ttu-id="2feb8-323">TRANSFORMACIÓN DE ESCALA</span><span class="sxs-lookup"><span data-stu-id="2feb8-323">TRANSFORM - SCALE</span></span> |       |
     | :---: | :---------------: | :---: |
-    | <span data-ttu-id="45390-324">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-324">**X**</span></span> | <span data-ttu-id="45390-325">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-325">**Y**</span></span>             | <span data-ttu-id="45390-326">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-326">**Z**</span></span> |
-    | <span data-ttu-id="45390-327">1</span><span class="sxs-lookup"><span data-stu-id="45390-327">1</span></span>     | <span data-ttu-id="45390-328">1</span><span class="sxs-lookup"><span data-stu-id="45390-328">1</span></span>                 | <span data-ttu-id="45390-329">1</span><span class="sxs-lookup"><span data-stu-id="45390-329">1</span></span>     |
+    | <span data-ttu-id="2feb8-324">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-324">**X**</span></span> | <span data-ttu-id="2feb8-325">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-325">**Y**</span></span>             | <span data-ttu-id="2feb8-326">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-326">**Z**</span></span> |
+    | <span data-ttu-id="2feb8-327">1</span><span class="sxs-lookup"><span data-stu-id="2feb8-327">1</span></span>     | <span data-ttu-id="2feb8-328">1</span><span class="sxs-lookup"><span data-stu-id="2feb8-328">1</span></span>                 | <span data-ttu-id="2feb8-329">1</span><span class="sxs-lookup"><span data-stu-id="2feb8-329">1</span></span>     |
 
-    ![conjunto de transformación de cámara](images/AzureLabs-Lab5-30.png)
+    ![establecer transformación de cámara](images/AzureLabs-Lab5-30.png)
 
-## <a name="chapter-5---setting-up-the-unity-scene"></a><span data-ttu-id="45390-331">Capítulo 5: configuración de la escena de Unity</span><span class="sxs-lookup"><span data-stu-id="45390-331">Chapter 5 - Setting up the Unity scene</span></span>
+## <a name="chapter-5---setting-up-the-unity-scene"></a><span data-ttu-id="2feb8-331">Capítulo 5: configuración de la escena de Unity</span><span class="sxs-lookup"><span data-stu-id="2feb8-331">Chapter 5 - Setting up the Unity scene</span></span>
 
-1.  <span data-ttu-id="45390-332">Haga clic en un área vacía de la *jerarquía Panel*, en **objeto 3D**, agregue un **plano**.</span><span class="sxs-lookup"><span data-stu-id="45390-332">Right-click in an empty area of the *Hierarchy Panel*, under **3D  Object**, add a **Plane**.</span></span>
+1.  <span data-ttu-id="2feb8-332">Haga clic con el botón secundario en un área vacía del *Panel*de jerarquías, en **objeto 3D**, agregar un **plano**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-332">Right-click in an empty area of the *Hierarchy Panel*, under **3D  Object**, add a **Plane**.</span></span>
 
-    ![Crear nuevo plano](images/AzureLabs-Lab5-31.png)
+    ![crear nuevo plano](images/AzureLabs-Lab5-31.png)
 
-2.  <span data-ttu-id="45390-334">Con el **plano** objeto seleccionado, cambie los parámetros siguientes en el *Panel Inspector*:</span><span class="sxs-lookup"><span data-stu-id="45390-334">With the **Plane** object selected, change the following parameters in the *Inspector Panel*:</span></span>
+2.  <span data-ttu-id="2feb8-334">Con el objeto de **plano** seleccionado, cambie los siguientes parámetros en el *panel del inspector*:</span><span class="sxs-lookup"><span data-stu-id="2feb8-334">With the **Plane** object selected, change the following parameters in the *Inspector Panel*:</span></span>
 
-    |       | <span data-ttu-id="45390-335">TRANSFORMACIÓN - POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="45390-335">TRANSFORM - POSITION</span></span> |       |
+    |       | <span data-ttu-id="2feb8-335">TRANSFORMACIÓN: POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="2feb8-335">TRANSFORM - POSITION</span></span> |       |
     | :---: | :------------------: | :---: |
-    | <span data-ttu-id="45390-336">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-336">**X**</span></span> | <span data-ttu-id="45390-337">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-337">**Y**</span></span>                | <span data-ttu-id="45390-338">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-338">**Z**</span></span> |
-    | <span data-ttu-id="45390-339">0</span><span class="sxs-lookup"><span data-stu-id="45390-339">0</span></span>     | <span data-ttu-id="45390-340">0</span><span class="sxs-lookup"><span data-stu-id="45390-340">0</span></span>                    | <span data-ttu-id="45390-341">4</span><span class="sxs-lookup"><span data-stu-id="45390-341">4</span></span>     |
+    | <span data-ttu-id="2feb8-336">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-336">**X**</span></span> | <span data-ttu-id="2feb8-337">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-337">**Y**</span></span>                | <span data-ttu-id="2feb8-338">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-338">**Z**</span></span> |
+    | <span data-ttu-id="2feb8-339">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-339">0</span></span>     | <span data-ttu-id="2feb8-340">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-340">0</span></span>                    | <span data-ttu-id="2feb8-341">4</span><span class="sxs-lookup"><span data-stu-id="2feb8-341">4</span></span>     |
 
-    |       | <span data-ttu-id="45390-342">TRANSFORMACIÓN - ESCALADO</span><span class="sxs-lookup"><span data-stu-id="45390-342">TRANSFORM - SCALE</span></span> |       |
+    |       | <span data-ttu-id="2feb8-342">TRANSFORMACIÓN DE ESCALA</span><span class="sxs-lookup"><span data-stu-id="2feb8-342">TRANSFORM - SCALE</span></span> |       |
     | :---: | :---------------: | :---: |
-    | <span data-ttu-id="45390-343">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-343">**X**</span></span> | <span data-ttu-id="45390-344">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-344">**Y**</span></span>             | <span data-ttu-id="45390-345">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-345">**Z**</span></span> |
-    | <span data-ttu-id="45390-346">10</span><span class="sxs-lookup"><span data-stu-id="45390-346">10</span></span>    | <span data-ttu-id="45390-347">1</span><span class="sxs-lookup"><span data-stu-id="45390-347">1</span></span>                 | <span data-ttu-id="45390-348">10</span><span class="sxs-lookup"><span data-stu-id="45390-348">10</span></span>    |
+    | <span data-ttu-id="2feb8-343">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-343">**X**</span></span> | <span data-ttu-id="2feb8-344">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-344">**Y**</span></span>             | <span data-ttu-id="2feb8-345">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-345">**Z**</span></span> |
+    | <span data-ttu-id="2feb8-346">10</span><span class="sxs-lookup"><span data-stu-id="2feb8-346">10</span></span>    | <span data-ttu-id="2feb8-347">1</span><span class="sxs-lookup"><span data-stu-id="2feb8-347">1</span></span>                 | <span data-ttu-id="2feb8-348">10</span><span class="sxs-lookup"><span data-stu-id="2feb8-348">10</span></span>    |
 
-    ![posición del conjunto plano y la escala](images/AzureLabs-Lab5-32.png)
+    ![establecer la posición y la escala del plano](images/AzureLabs-Lab5-32.png)
 
-    ![vista de la escena del plano](images/AzureLabs-Lab5-33.png)
+    ![vista de escena de plano](images/AzureLabs-Lab5-33.png)
 
-3.  <span data-ttu-id="45390-351">Haga clic en un área vacía de la *jerarquía Panel*, en **objeto 3D**, agregue un **cubo**.</span><span class="sxs-lookup"><span data-stu-id="45390-351">Right-click in an empty area of the *Hierarchy Panel*, under **3D Object**, add a **Cube**.</span></span>
+3.  <span data-ttu-id="2feb8-351">Haga clic con el botón secundario en un área vacía del *Panel jerarquía*, en **objeto 3D**, agregar un **cubo**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-351">Right-click in an empty area of the *Hierarchy Panel*, under **3D Object**, add a **Cube**.</span></span>
 
-    1.  <span data-ttu-id="45390-352">Cambiar el nombre del cubo a **GazeButton** (con el cubo seleccionado, pulse 'F2').</span><span class="sxs-lookup"><span data-stu-id="45390-352">Rename the Cube to **GazeButton** (with the Cube selected, press 'F2').</span></span>
+    1.  <span data-ttu-id="2feb8-352">Cambie el nombre del cubo a **GazeButton** (con el cubo seleccionado, presione ' F2 ').</span><span class="sxs-lookup"><span data-stu-id="2feb8-352">Rename the Cube to **GazeButton** (with the Cube selected, press 'F2').</span></span>
 
-    2.  <span data-ttu-id="45390-353">Cambiar los parámetros siguientes en el *Panel Inspector*:</span><span class="sxs-lookup"><span data-stu-id="45390-353">Change the following parameters in the *Inspector Panel*:</span></span>
+    2.  <span data-ttu-id="2feb8-353">Cambie los parámetros siguientes en el *panel Inspector*:</span><span class="sxs-lookup"><span data-stu-id="2feb8-353">Change the following parameters in the *Inspector Panel*:</span></span>
 
-        |       | <span data-ttu-id="45390-354">TRANSFORMACIÓN - POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="45390-354">TRANSFORM - POSITION</span></span> |       |
+        |       | <span data-ttu-id="2feb8-354">TRANSFORMACIÓN: POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="2feb8-354">TRANSFORM - POSITION</span></span> |       |
         | :---: | :------------------: |:-----:|
-        | <span data-ttu-id="45390-355">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-355">**X**</span></span> | <span data-ttu-id="45390-356">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-356">**Y**</span></span>                | <span data-ttu-id="45390-357">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-357">**Z**</span></span> |
-        | <span data-ttu-id="45390-358">0</span><span class="sxs-lookup"><span data-stu-id="45390-358">0</span></span>     | <span data-ttu-id="45390-359">3</span><span class="sxs-lookup"><span data-stu-id="45390-359">3</span></span>                    | <span data-ttu-id="45390-360">5</span><span class="sxs-lookup"><span data-stu-id="45390-360">5</span></span>     |
+        | <span data-ttu-id="2feb8-355">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-355">**X**</span></span> | <span data-ttu-id="2feb8-356">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-356">**Y**</span></span>                | <span data-ttu-id="2feb8-357">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-357">**Z**</span></span> |
+        | <span data-ttu-id="2feb8-358">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-358">0</span></span>     | <span data-ttu-id="2feb8-359">3</span><span class="sxs-lookup"><span data-stu-id="2feb8-359">3</span></span>                    | <span data-ttu-id="2feb8-360">5</span><span class="sxs-lookup"><span data-stu-id="2feb8-360">5</span></span>     |
 
 
-        ![conjunto mirada botón transformación](images/AzureLabs-Lab5-34.png)
+        ![establecer transformación de botón de mira](images/AzureLabs-Lab5-34.png)
 
-        ![vista de escena de botón que mirar](images/AzureLabs-Lab5-35.png)
+        ![vista de escena de botón de mira](images/AzureLabs-Lab5-35.png)
 
-    3.  <span data-ttu-id="45390-363">Haga clic en el **etiqueta** botón desplegable y haga clic en **Agregar etiqueta** para abrir el *etiquetas & panel Capas*.</span><span class="sxs-lookup"><span data-stu-id="45390-363">Click on the **Tag** drop-down button and click on **Add Tag** to open the *Tags & Layers Pane*.</span></span>
+    3.  <span data-ttu-id="2feb8-363">Haga clic en el botón desplegable **etiqueta** y haga clic en **Agregar etiqueta** para abrir el *panel Etiquetas & capas*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-363">Click on the **Tag** drop-down button and click on **Add Tag** to open the *Tags & Layers Pane*.</span></span>
 
         ![Agregar nueva etiqueta](images/AzureLabs-Lab5-36.png)
 
-        ![Seleccione más](images/AzureLabs-Lab5-37.png)
+        ![seleccionar más](images/AzureLabs-Lab5-37.png)
 
-    4.  <span data-ttu-id="45390-366">Seleccione el **+ (signo más)** botón y en el *nuevo nombre de la etiqueta* , introduzca **GazeButton**y presione **guardar**.</span><span class="sxs-lookup"><span data-stu-id="45390-366">Select the **+ (plus)** button, and in the *New Tag Name* field, enter **GazeButton**, and press **Save**.</span></span>
+    4.  <span data-ttu-id="2feb8-366">Seleccione el botón **+ (más)** y, en el campo *nuevo nombre de etiqueta* , escriba **GazeButton**y presione **Guardar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-366">Select the **+ (plus)** button, and in the *New Tag Name* field, enter **GazeButton**, and press **Save**.</span></span>
 
-        ![nueva etiqueta de nombre](images/AzureLabs-Lab5-38.png)
+        ![nombre nueva etiqueta](images/AzureLabs-Lab5-38.png)
 
-    5.  <span data-ttu-id="45390-368">Haga clic en el **GazeButton** objeto en el *jerarquía Panel*y en el *Panel Inspector*, asignar recién creado **GazeButton** etiqueta.</span><span class="sxs-lookup"><span data-stu-id="45390-368">Click on the **GazeButton** object in the *Hierarchy Panel*, and in the *Inspector Panel*, assign the newly created **GazeButton** tag.</span></span>
+    5.  <span data-ttu-id="2feb8-368">Haga clic en el objeto **GazeButton** en el *Panel jerarquía*y, en el *panel Inspector*, asigne la etiqueta **GazeButton** recién creada.</span><span class="sxs-lookup"><span data-stu-id="2feb8-368">Click on the **GazeButton** object in the *Hierarchy Panel*, and in the *Inspector Panel*, assign the newly created **GazeButton** tag.</span></span>
 
-        ![mirada botón asignar la nueva etiqueta](images/AzureLabs-Lab5-39.png)
+        ![asignar botón de mira la nueva etiqueta](images/AzureLabs-Lab5-39.png)
 
-4.  <span data-ttu-id="45390-370">Haga doble clic en el **GazeButton** objeto, en el *jerarquía Panel*y agregue un **GameObject vacío** (que se agregará como un *secundarios* objeto).</span><span class="sxs-lookup"><span data-stu-id="45390-370">Right-click on the **GazeButton** object, in the *Hierarchy Panel*, and add an **Empty GameObject** (which will be added as a *child* object).</span></span>
+4.  <span data-ttu-id="2feb8-370">Haga clic con el botón derecho en el objeto **GazeButton** , en el *Panel jerarquía*, y agregue un **GameObject vacío** (que se agregará como un objeto *secundario* ).</span><span class="sxs-lookup"><span data-stu-id="2feb8-370">Right-click on the **GazeButton** object, in the *Hierarchy Panel*, and add an **Empty GameObject** (which will be added as a *child* object).</span></span>
 
-5.  <span data-ttu-id="45390-371">Seleccione el nuevo objeto y cámbielo por **ShapeSpawnPoint**.</span><span class="sxs-lookup"><span data-stu-id="45390-371">Select the new object and rename it **ShapeSpawnPoint**.</span></span>
+5.  <span data-ttu-id="2feb8-371">Seleccione el nuevo objeto y cambie su nombre a **ShapeSpawnPoint**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-371">Select the new object and rename it **ShapeSpawnPoint**.</span></span>
 
-    1.  <span data-ttu-id="45390-372">Cambiar los parámetros siguientes en el *Panel Inspector*:</span><span class="sxs-lookup"><span data-stu-id="45390-372">Change the following parameters in the *Inspector Panel*:</span></span>
+    1.  <span data-ttu-id="2feb8-372">Cambie los parámetros siguientes en el *panel Inspector*:</span><span class="sxs-lookup"><span data-stu-id="2feb8-372">Change the following parameters in the *Inspector Panel*:</span></span>
 
-        |       | <span data-ttu-id="45390-373">TRANSFORMACIÓN - POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="45390-373">TRANSFORM - POSITION</span></span> |       |
+        |       | <span data-ttu-id="2feb8-373">TRANSFORMACIÓN: POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="2feb8-373">TRANSFORM - POSITION</span></span> |       |
         | :---: | :------------------: |:----: |
-        | <span data-ttu-id="45390-374">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-374">**X**</span></span> |<span data-ttu-id="45390-375">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-375">**Y**</span></span>                 | <span data-ttu-id="45390-376">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-376">**Z**</span></span> |
-        | <span data-ttu-id="45390-377">0</span><span class="sxs-lookup"><span data-stu-id="45390-377">0</span></span>     | <span data-ttu-id="45390-378">-1</span><span class="sxs-lookup"><span data-stu-id="45390-378">-1</span></span>                   | <span data-ttu-id="45390-379">0</span><span class="sxs-lookup"><span data-stu-id="45390-379">0</span></span>     |
+        | <span data-ttu-id="2feb8-374">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-374">**X**</span></span> |<span data-ttu-id="2feb8-375">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-375">**Y**</span></span>                 | <span data-ttu-id="2feb8-376">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-376">**Z**</span></span> |
+        | <span data-ttu-id="2feb8-377">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-377">0</span></span>     | <span data-ttu-id="2feb8-378">-1</span><span class="sxs-lookup"><span data-stu-id="2feb8-378">-1</span></span>                   | <span data-ttu-id="2feb8-379">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-379">0</span></span>     |
 
-        ![transformación de punto de actualización de forma spawn](images/AzureLabs-Lab5-40.png)
+        ![transformación actualizar punto de generación de forma](images/AzureLabs-Lab5-40.png)
 
-        ![vista de escena de forma spawn punto](images/AzureLabs-Lab5-41.png)
+        ![vista de escena de punto de generación de formas](images/AzureLabs-Lab5-41.png)
 
-6.  <span data-ttu-id="45390-382">A continuación creará un **texto 3D** objeto para proporcionar comentarios sobre el estado del servicio de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-382">Next you will create a **3D Text** object to provide feedback on the status of the Azure service.</span></span>
+6.  <span data-ttu-id="2feb8-382">A continuación, creará un objeto de **texto 3D** para proporcionar comentarios sobre el estado del servicio de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-382">Next you will create a **3D Text** object to provide feedback on the status of the Azure service.</span></span>
 
-    <span data-ttu-id="45390-383">Haga clic con el botón derecho en el **GazeButton** en la jerarquía del nuevo Panel y agregar un **objeto 3D** > **texto 3D** objeto como un *secundarios*.</span><span class="sxs-lookup"><span data-stu-id="45390-383">Right click on the **GazeButton** in the Hierarchy Panel again and add a **3D Object** > **3D Text** object as a *child*.</span></span>
+    <span data-ttu-id="2feb8-383">Vuelva a hacer clic con el botón derecho en **GazeButton** en el panel jerarquía y agregue un objeto **3D** > de**texto 3D** de objeto como *elemento secundario*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-383">Right click on the **GazeButton** in the Hierarchy Panel again and add a **3D Object** > **3D Text** object as a *child*.</span></span>
 
-    ![Crear nuevo objeto de texto 3D](images/AzureLabs-Lab5-42.png)
+    ![crear nuevo objeto de texto 3D](images/AzureLabs-Lab5-42.png)
 
-7.  <span data-ttu-id="45390-385">Cambiar el nombre de la **texto 3D** objeto **AzureStatusText**.</span><span class="sxs-lookup"><span data-stu-id="45390-385">Rename the **3D Text** object to **AzureStatusText**.</span></span>
+7.  <span data-ttu-id="2feb8-385">Cambie el nombre del objeto de **texto 3D** a **AzureStatusText**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-385">Rename the **3D Text** object to **AzureStatusText**.</span></span>
 
-8.  <span data-ttu-id="45390-386">Cambiar el **AzureStatusText** objeto transformación como sigue:</span><span class="sxs-lookup"><span data-stu-id="45390-386">Change the **AzureStatusText** object Transform as follows:</span></span>
+8.  <span data-ttu-id="2feb8-386">Cambie la transformación del objeto **AzureStatusText** de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="2feb8-386">Change the **AzureStatusText** object Transform as follows:</span></span>
 
-    |       | <span data-ttu-id="45390-387">TRANSFORMACIÓN - POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="45390-387">TRANSFORM - POSITION</span></span> |       |
+    |       | <span data-ttu-id="2feb8-387">TRANSFORMACIÓN: POSICIÓN</span><span class="sxs-lookup"><span data-stu-id="2feb8-387">TRANSFORM - POSITION</span></span> |       |
     | :---: | :------------------: | :---: |
-    | <span data-ttu-id="45390-388">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-388">**X**</span></span> | <span data-ttu-id="45390-389">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-389">**Y**</span></span>                | <span data-ttu-id="45390-390">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-390">**Z**</span></span> |
-    | <span data-ttu-id="45390-391">0</span><span class="sxs-lookup"><span data-stu-id="45390-391">0</span></span>     | <span data-ttu-id="45390-392">0</span><span class="sxs-lookup"><span data-stu-id="45390-392">0</span></span>                    | <span data-ttu-id="45390-393">-0.6</span><span class="sxs-lookup"><span data-stu-id="45390-393">-0.6</span></span>  |
+    | <span data-ttu-id="2feb8-388">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-388">**X**</span></span> | <span data-ttu-id="2feb8-389">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-389">**Y**</span></span>                | <span data-ttu-id="2feb8-390">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-390">**Z**</span></span> |
+    | <span data-ttu-id="2feb8-391">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-391">0</span></span>     | <span data-ttu-id="2feb8-392">0</span><span class="sxs-lookup"><span data-stu-id="2feb8-392">0</span></span>                    | <span data-ttu-id="2feb8-393">-0,6</span><span class="sxs-lookup"><span data-stu-id="2feb8-393">-0.6</span></span>  |
 
-    |       | <span data-ttu-id="45390-394">TRANSFORMACIÓN - ESCALADO</span><span class="sxs-lookup"><span data-stu-id="45390-394">TRANSFORM - SCALE</span></span> |       |
+    |       | <span data-ttu-id="2feb8-394">TRANSFORMACIÓN DE ESCALA</span><span class="sxs-lookup"><span data-stu-id="2feb8-394">TRANSFORM - SCALE</span></span> |       |
     | :---: | :---------------: | :---: |
-    | <span data-ttu-id="45390-395">**X**</span><span class="sxs-lookup"><span data-stu-id="45390-395">**X**</span></span> | <span data-ttu-id="45390-396">**Y**</span><span class="sxs-lookup"><span data-stu-id="45390-396">**Y**</span></span>             | <span data-ttu-id="45390-397">**Z**</span><span class="sxs-lookup"><span data-stu-id="45390-397">**Z**</span></span> |
-    | <span data-ttu-id="45390-398">0.1</span><span class="sxs-lookup"><span data-stu-id="45390-398">0.1</span></span>   | <span data-ttu-id="45390-399">0.1</span><span class="sxs-lookup"><span data-stu-id="45390-399">0.1</span></span>               | <span data-ttu-id="45390-400">0.1</span><span class="sxs-lookup"><span data-stu-id="45390-400">0.1</span></span>   |
+    | <span data-ttu-id="2feb8-395">**X**</span><span class="sxs-lookup"><span data-stu-id="2feb8-395">**X**</span></span> | <span data-ttu-id="2feb8-396">**SÍ**</span><span class="sxs-lookup"><span data-stu-id="2feb8-396">**Y**</span></span>             | <span data-ttu-id="2feb8-397">**Z**</span><span class="sxs-lookup"><span data-stu-id="2feb8-397">**Z**</span></span> |
+    | <span data-ttu-id="2feb8-398">0,1</span><span class="sxs-lookup"><span data-stu-id="2feb8-398">0.1</span></span>   | <span data-ttu-id="2feb8-399">0,1</span><span class="sxs-lookup"><span data-stu-id="2feb8-399">0.1</span></span>               | <span data-ttu-id="2feb8-400">0,1</span><span class="sxs-lookup"><span data-stu-id="2feb8-400">0.1</span></span>   |
 
 
     > [!NOTE]
-    > <span data-ttu-id="45390-401">No se preocupe si parece estar fuera del centro, como esto se corregirá cuando el debajo del texto de la malla se actualiza el componente.</span><span class="sxs-lookup"><span data-stu-id="45390-401">Do not worry if it appears to be off-centre, as this will be fixed when the below Text Mesh component is updated.</span></span>
+    > <span data-ttu-id="2feb8-401">No se preocupe si parece estar fuera del centro, ya que se solucionará cuando se actualice el componente de malla de texto siguiente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-401">Do not worry if it appears to be off-centre, as this will be fixed when the below Text Mesh component is updated.</span></span>
 
-9.  <span data-ttu-id="45390-402">Cambiar el **texto de la malla** componente para que coincida con el a continuación:</span><span class="sxs-lookup"><span data-stu-id="45390-402">Change the **Text Mesh** component to match the below:</span></span>
+9.  <span data-ttu-id="2feb8-402">Cambie el componente de **malla de texto** para que coincida con el siguiente:</span><span class="sxs-lookup"><span data-stu-id="2feb8-402">Change the **Text Mesh** component to match the below:</span></span>
 
-    ![componente de malla de conjunto de texto](images/AzureLabs-Lab5-43.png)
+    ![establecer componente de malla de texto](images/AzureLabs-Lab5-43.png)
 
     > [!TIP]
-    > <span data-ttu-id="45390-404">Aquí, el color seleccionado es de color hexadecimal: **000000FF**, aunque no dude en Elija su propio, solo tiene que comprobar es legible.</span><span class="sxs-lookup"><span data-stu-id="45390-404">The selected color here is Hex color: **000000FF**, though feel free to choose your own, just ensure it is readable.</span></span>
+    > <span data-ttu-id="2feb8-404">El color seleccionado aquí es color Hex: **000000FF**, sin embargo, no dude en elegir el suyo propio, solo tiene que asegurarse de que es legible.</span><span class="sxs-lookup"><span data-stu-id="2feb8-404">The selected color here is Hex color: **000000FF**, though feel free to choose your own, just ensure it is readable.</span></span>
 
-10. <span data-ttu-id="45390-405">La estructura del Panel de la jerarquía debe ser ahora similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="45390-405">Your Hierarchy Panel structure should now look like this:</span></span>
+10. <span data-ttu-id="2feb8-405">La estructura del panel de jerarquías debería tener ahora el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="2feb8-405">Your Hierarchy Panel structure should now look like this:</span></span>
 
-    ![texto de la malla en la vista de escena](images/AzureLabs-Lab5-43b.png)
+    ![malla de texto en la vista de escenas](images/AzureLabs-Lab5-43b.png)
 
-10. <span data-ttu-id="45390-407">La escena ahora un aspecto similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="45390-407">Your scene should now look like this:</span></span>
+10. <span data-ttu-id="2feb8-407">La escena debe tener ahora el siguiente aspecto:</span><span class="sxs-lookup"><span data-stu-id="2feb8-407">Your scene should now look like this:</span></span>
 
-    ![texto de la malla en la vista de escena](images/AzureLabs-Lab5-44.png)
+    ![malla de texto en la vista de escenas](images/AzureLabs-Lab5-44.png)
 
 
-## <a name="chapter-6---import-azure-storage-for-unity"></a><span data-ttu-id="45390-409">Capítulo 6: importar el almacenamiento de Azure para Unity</span><span class="sxs-lookup"><span data-stu-id="45390-409">Chapter 6 - Import Azure Storage for Unity</span></span>
+## <a name="chapter-6---import-azure-storage-for-unity"></a><span data-ttu-id="2feb8-409">Capítulo 6: importar Azure Storage para Unity</span><span class="sxs-lookup"><span data-stu-id="2feb8-409">Chapter 6 - Import Azure Storage for Unity</span></span>
 
-<span data-ttu-id="45390-410">Va a usar Azure Storage para Unity (que a su vez aprovecha el .net SDK de Azure).</span><span class="sxs-lookup"><span data-stu-id="45390-410">You will be using Azure Storage for Unity (which itself leverages the .Net SDK for Azure).</span></span> <span data-ttu-id="45390-411">Puede leer más sobre esto en el [el almacenamiento de Azure para el artículo de Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity).</span><span class="sxs-lookup"><span data-stu-id="45390-411">You can read more about this at the [Azure Storage for Unity article](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity).</span></span>
+<span data-ttu-id="2feb8-410">Usará Azure Storage para Unity (que a su vez usa el SDK de .net para Azure).</span><span class="sxs-lookup"><span data-stu-id="2feb8-410">You will be using Azure Storage for Unity (which itself leverages the .Net SDK for Azure).</span></span> <span data-ttu-id="2feb8-411">Puede leer más sobre esto en el [artículo Azure Storage para Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity).</span><span class="sxs-lookup"><span data-stu-id="2feb8-411">You can read more about this at the [Azure Storage for Unity article](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity).</span></span>
 
-<span data-ttu-id="45390-412">Actualmente hay un problema conocido en Unity que requiere complementos volver a configurar tras la importación.</span><span class="sxs-lookup"><span data-stu-id="45390-412">There is currently a known issue in Unity which requires plugins to be reconfigured after import.</span></span> <span data-ttu-id="45390-413">Estos pasos (4-7 en esta sección) ya no será necesarios una vez que se ha resuelto el error.</span><span class="sxs-lookup"><span data-stu-id="45390-413">These steps (4 - 7 in this section) will no longer be required after the bug has been resolved.</span></span>
+<span data-ttu-id="2feb8-412">Actualmente hay un problema conocido en Unity que requiere que los complementos se vuelvan a configurar después de la importación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-412">There is currently a known issue in Unity which requires plugins to be reconfigured after import.</span></span> <span data-ttu-id="2feb8-413">Estos pasos (4-7 en esta sección) ya no serán necesarios una vez resuelto el error.</span><span class="sxs-lookup"><span data-stu-id="2feb8-413">These steps (4 - 7 in this section) will no longer be required after the bug has been resolved.</span></span>
 
-<span data-ttu-id="45390-414">Para importar el SDK en su propio proyecto, asegúrese de que ha descargado la versión más reciente ['.unitypackage' desde GitHub](https://aka.ms/azstorage-unitysdk).</span><span class="sxs-lookup"><span data-stu-id="45390-414">To import the SDK into your own project, make sure you have downloaded the latest ['.unitypackage' from GitHub](https://aka.ms/azstorage-unitysdk).</span></span> <span data-ttu-id="45390-415">A continuación, haga lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="45390-415">Then, do the following:</span></span>
+<span data-ttu-id="2feb8-414">Para importar el SDK en su propio proyecto, asegúrese de que ha descargado el [". unitypackage Tools" más reciente de github](https://aka.ms/azstorage-unitysdk).</span><span class="sxs-lookup"><span data-stu-id="2feb8-414">To import the SDK into your own project, make sure you have downloaded the latest ['.unitypackage' from GitHub](https://aka.ms/azstorage-unitysdk).</span></span> <span data-ttu-id="2feb8-415">A continuación, haga lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="2feb8-415">Then, do the following:</span></span>
 
-1.  <span data-ttu-id="45390-416">Agregar el **.unitypackage** a Unity de un archivo utilizando el **activos** > **Importar paquete** > **paquete personalizado**opción de menú.</span><span class="sxs-lookup"><span data-stu-id="45390-416">Add the **.unitypackage** file to Unity by using the **Assets** > **Import Package** > **Custom Package** menu option.</span></span>
+1.  <span data-ttu-id="2feb8-416">Agregue el **archivo. unitypackage Tools** a Unity mediante la opción de menú de**paquete personalizado** de**importación** > de **recursos** > .</span><span class="sxs-lookup"><span data-stu-id="2feb8-416">Add the **.unitypackage** file to Unity by using the **Assets** > **Import Package** > **Custom Package** menu option.</span></span>
 
-2.  <span data-ttu-id="45390-417">En el **Importar paquete de Unity** cuadro que aparece, puede seleccionar todo el contenido **complemento** > **almacenamiento**.</span><span class="sxs-lookup"><span data-stu-id="45390-417">In the **Import Unity Package** box that pops up, you can select everything under **Plugin** > **Storage**.</span></span> <span data-ttu-id="45390-418">Desactive todo lo demás, ya no es necesaria para este curso.</span><span class="sxs-lookup"><span data-stu-id="45390-418">Uncheck everything else, as it is not needed for this course.</span></span>
+2.  <span data-ttu-id="2feb8-417">En el cuadro **importar paquete Unity** que aparece, puede seleccionar todo en**almacenamiento**de **Complementos** > .</span><span class="sxs-lookup"><span data-stu-id="2feb8-417">In the **Import Unity Package** box that pops up, you can select everything under **Plugin** > **Storage**.</span></span> <span data-ttu-id="2feb8-418">Desactive todo lo demás, ya que no es necesario para este curso.</span><span class="sxs-lookup"><span data-stu-id="2feb8-418">Uncheck everything else, as it is not needed for this course.</span></span>
 
-    ![Importar paquete](images/AzureLabs-Lab5-45.png)
+    ![importar a paquete](images/AzureLabs-Lab5-45.png)
 
-3.  <span data-ttu-id="45390-420">Haga clic en el **importación** para agregar los elementos al proyecto.</span><span class="sxs-lookup"><span data-stu-id="45390-420">Click the **Import** button to add the items to your project.</span></span>
+3.  <span data-ttu-id="2feb8-420">Haga clic en el botón **importar** para agregar los elementos al proyecto.</span><span class="sxs-lookup"><span data-stu-id="2feb8-420">Click the **Import** button to add the items to your project.</span></span>
 
-4.  <span data-ttu-id="45390-421">Vaya a la *almacenamiento* carpeta bajo *complementos*, en la vista del proyecto y seleccione los siguientes complementos *sólo*:</span><span class="sxs-lookup"><span data-stu-id="45390-421">Go to the *Storage* folder under *Plugins*, in the Project view, and select the following plugins *only*:</span></span>
+4.  <span data-ttu-id="2feb8-421">Vaya a la carpeta *Storage* en *Complementos*, en la vista proyecto, y seleccione *solo*los siguientes complementos:</span><span class="sxs-lookup"><span data-stu-id="2feb8-421">Go to the *Storage* folder under *Plugins*, in the Project view, and select the following plugins *only*:</span></span>
 
-    -   <span data-ttu-id="45390-422">Microsoft.Data.Edm</span><span class="sxs-lookup"><span data-stu-id="45390-422">Microsoft.Data.Edm</span></span>
-    -   <span data-ttu-id="45390-423">Microsoft.Data.OData</span><span class="sxs-lookup"><span data-stu-id="45390-423">Microsoft.Data.OData</span></span>
-    -   <span data-ttu-id="45390-424">Microsoft.WindowsAzure.Storage</span><span class="sxs-lookup"><span data-stu-id="45390-424">Microsoft.WindowsAzure.Storage</span></span>
-    -   <span data-ttu-id="45390-425">Newtonsoft.Json</span><span class="sxs-lookup"><span data-stu-id="45390-425">Newtonsoft.Json</span></span>
-    -   <span data-ttu-id="45390-426">System.Spatial</span><span class="sxs-lookup"><span data-stu-id="45390-426">System.Spatial</span></span>
+    -   <span data-ttu-id="2feb8-422">Microsoft.Data.Edm</span><span class="sxs-lookup"><span data-stu-id="2feb8-422">Microsoft.Data.Edm</span></span>
+    -   <span data-ttu-id="2feb8-423">Microsoft.Data.OData</span><span class="sxs-lookup"><span data-stu-id="2feb8-423">Microsoft.Data.OData</span></span>
+    -   <span data-ttu-id="2feb8-424">Microsoft. WindowsAzure. Storage</span><span class="sxs-lookup"><span data-stu-id="2feb8-424">Microsoft.WindowsAzure.Storage</span></span>
+    -   <span data-ttu-id="2feb8-425">Newtonsoft.Json</span><span class="sxs-lookup"><span data-stu-id="2feb8-425">Newtonsoft.Json</span></span>
+    -   <span data-ttu-id="2feb8-426">System. espacial</span><span class="sxs-lookup"><span data-stu-id="2feb8-426">System.Spatial</span></span>
 
-        ![Desactive cualquier plataforma](images/AzureLabs-Lab5-46.png)
+        ![desactive cualquier plataforma](images/AzureLabs-Lab5-46.png)
 
-5.  <span data-ttu-id="45390-428">Con *estos complementos específicos* seleccionado, **desactive** *cualquier plataforma* y **desactive** *WSAPlayer* a continuación, haga clic en **aplicar**.</span><span class="sxs-lookup"><span data-stu-id="45390-428">With *these specific plugins* selected, **uncheck** *Any Platform* and **uncheck** *WSAPlayer* then click **Apply**.</span></span>
+5.  <span data-ttu-id="2feb8-428">Con *estos complementos específicos* seleccionados, **desactive** *cualquier plataforma* y **desactive** *WSAPlayer* y haga clic en **aplicar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-428">With *these specific plugins* selected, **uncheck** *Any Platform* and **uncheck** *WSAPlayer* then click **Apply**.</span></span>
 
-    ![se aplican a archivos DLL de plataforma](images/AzureLabs-Lab5-47.png)
-
-    > [!NOTE]
-    > <span data-ttu-id="45390-430">Vamos a marcar estos complementos determinados para su uso en el Editor de Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-430">We are marking these particular plugins to only be used in the Unity Editor.</span></span> <span data-ttu-id="45390-431">Esto es porque hay diferentes versiones de los complementos mismos en la carpeta WSA que se utilizará después de que el proyecto se exporta desde Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-431">This is because there are different versions of the same plugins in the WSA folder that will be used after the project is exported from Unity.</span></span>
-
-6.  <span data-ttu-id="45390-432">En el *almacenamiento* carpeta de complemento, solo seleccione:</span><span class="sxs-lookup"><span data-stu-id="45390-432">In the *Storage* plugin folder, select only:</span></span>
-
-    -   <span data-ttu-id="45390-433">Microsoft.Data.Services.Client</span><span class="sxs-lookup"><span data-stu-id="45390-433">Microsoft.Data.Services.Client</span></span>
-
-        ![No procesar conjunto para archivos DLL](images/AzureLabs-Lab5-48.png)
-
-7.  <span data-ttu-id="45390-435">Compruebe el **proceso no** cuadro bajo *configuración de plataforma* y haga clic en **aplicar**.</span><span class="sxs-lookup"><span data-stu-id="45390-435">Check the **Don't Process** box under *Platform Settings* and click **Apply**.</span></span>
-
-    ![no aplicar ningún procesamiento](images/AzureLabs-Lab5-49.png)
+    ![aplicar dll de plataforma](images/AzureLabs-Lab5-47.png)
 
     > [!NOTE]
-    > <span data-ttu-id="45390-437">Vamos a marcar este complemento "No procesar" porque la revisión del ensamblado de Unity tiene dificultades para procesar este complemento.</span><span class="sxs-lookup"><span data-stu-id="45390-437">We are marking this plugin "Don't process" because the Unity assembly patcher has difficulty processing this plugin.</span></span> <span data-ttu-id="45390-438">El complemento seguirá funcionando aunque no se ha procesado.</span><span class="sxs-lookup"><span data-stu-id="45390-438">The plugin will still work even though it is not processed.</span></span>
+    > <span data-ttu-id="2feb8-430">Estamos marcando estos complementos concretos para usarlos solo en el editor de Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-430">We are marking these particular plugins to only be used in the Unity Editor.</span></span> <span data-ttu-id="2feb8-431">Esto se debe a que hay diferentes versiones de los mismos complementos en la carpeta WSA que se usarán después de exportar el proyecto desde Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-431">This is because there are different versions of the same plugins in the WSA folder that will be used after the project is exported from Unity.</span></span>
 
-## <a name="chapter-7---create-the-azureservices-class"></a><span data-ttu-id="45390-439">Capítulo 7: crear la clase AzureServices</span><span class="sxs-lookup"><span data-stu-id="45390-439">Chapter 7 - Create the AzureServices class</span></span>
+6.  <span data-ttu-id="2feb8-432">En la carpeta del complemento de *almacenamiento* , seleccione solo:</span><span class="sxs-lookup"><span data-stu-id="2feb8-432">In the *Storage* plugin folder, select only:</span></span>
 
-<span data-ttu-id="45390-440">Es la primera clase que se va a crear el *AzureServices* clase.</span><span class="sxs-lookup"><span data-stu-id="45390-440">The first class you are going to create is the *AzureServices* class.</span></span>
+    -   <span data-ttu-id="2feb8-433">Microsoft. Data. Services. Client</span><span class="sxs-lookup"><span data-stu-id="2feb8-433">Microsoft.Data.Services.Client</span></span>
 
-<span data-ttu-id="45390-441">El *AzureServices* clase será responsable de:</span><span class="sxs-lookup"><span data-stu-id="45390-441">The *AzureServices* class will be responsible for:</span></span>
+        ![establecer no procesar para archivos dll](images/AzureLabs-Lab5-48.png)
 
--   <span data-ttu-id="45390-442">Almacenar las credenciales de cuenta de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-442">Storing Azure Account credentials.</span></span>
+7.  <span data-ttu-id="2feb8-435">Active la casilla **no procesar** en *configuración de plataforma* y haga clic en **aplicar**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-435">Check the **Don't Process** box under *Platform Settings* and click **Apply**.</span></span>
 
--   <span data-ttu-id="45390-443">Una llamada a la función de la aplicación de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-443">Calling your Azure App Function.</span></span>
+    ![no aplicar procesamiento](images/AzureLabs-Lab5-49.png)
 
--   <span data-ttu-id="45390-444">La carga y descarga del archivo de datos en la nube de Azure Storage.</span><span class="sxs-lookup"><span data-stu-id="45390-444">The upload and download of the data file in your Azure Cloud Storage.</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="2feb8-437">Estamos marcando este complemento como "no procesar" porque el parche de ensamblado de Unity tiene dificultades para procesar este complemento.</span><span class="sxs-lookup"><span data-stu-id="2feb8-437">We are marking this plugin "Don't process" because the Unity assembly patcher has difficulty processing this plugin.</span></span> <span data-ttu-id="2feb8-438">El complemento seguirá funcionando aunque no se haya procesado.</span><span class="sxs-lookup"><span data-stu-id="2feb8-438">The plugin will still work even though it is not processed.</span></span>
 
-<span data-ttu-id="45390-445">Para crear esta clase:</span><span class="sxs-lookup"><span data-stu-id="45390-445">To create this Class:</span></span>
+## <a name="chapter-7---create-the-azureservices-class"></a><span data-ttu-id="2feb8-439">Capítulo 7: creación de la clase AzureServices</span><span class="sxs-lookup"><span data-stu-id="2feb8-439">Chapter 7 - Create the AzureServices class</span></span>
 
-1.  <span data-ttu-id="45390-446">Haga clic en el *activos* carpeta, que se encuentra en el Panel de proyecto **crear** > **carpeta**.</span><span class="sxs-lookup"><span data-stu-id="45390-446">Right-click in the *Asset* Folder, located in the Project Panel, **Create** > **Folder**.</span></span> <span data-ttu-id="45390-447">Nombre de la carpeta **Scripts**.</span><span class="sxs-lookup"><span data-stu-id="45390-447">Name the folder **Scripts**.</span></span>
+<span data-ttu-id="2feb8-440">La primera clase que va a crear es la clase *AzureServices* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-440">The first class you are going to create is the *AzureServices* class.</span></span>
 
-    ![Crear nueva carpeta](images/AzureLabs-Lab5-50.png)
+<span data-ttu-id="2feb8-441">La clase *AzureServices* se encargará de:</span><span class="sxs-lookup"><span data-stu-id="2feb8-441">The *AzureServices* class will be responsible for:</span></span>
 
-    ![Llame a la carpeta - secuencias de comandos](images/AzureLabs-Lab5-51.png)
+-   <span data-ttu-id="2feb8-442">Almacenamiento de las credenciales de la cuenta de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-442">Storing Azure Account credentials.</span></span>
 
-2.  <span data-ttu-id="45390-450">Haga doble clic en la carpeta que acaba de crear para abrirlo.</span><span class="sxs-lookup"><span data-stu-id="45390-450">Double click on the folder just created, to open it.</span></span>
+-   <span data-ttu-id="2feb8-443">Llamar a la función App de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-443">Calling your Azure App Function.</span></span>
 
-3.  <span data-ttu-id="45390-451">Haga clic en la carpeta, **crear**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="45390-451">Right-click inside the folder, **Create** > **C# Script**.</span></span> <span data-ttu-id="45390-452">Llame al script *AzureServices*.</span><span class="sxs-lookup"><span data-stu-id="45390-452">Call the script *AzureServices*.</span></span>
+-   <span data-ttu-id="2feb8-444">La carga y descarga del archivo de datos en el almacenamiento en la nube de Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-444">The upload and download of the data file in your Azure Cloud Storage.</span></span>
 
-4.  <span data-ttu-id="45390-453">Haga doble clic en el nuevo *AzureServices* clase para abrirlo con *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="45390-453">Double click on the new *AzureServices* class to open it with *Visual Studio*.</span></span>
+<span data-ttu-id="2feb8-445">Para crear esta clase:</span><span class="sxs-lookup"><span data-stu-id="2feb8-445">To create this Class:</span></span>
 
-5.  <span data-ttu-id="45390-454">Agregue los siguientes espacios de nombres al principio de la *AzureServices*:</span><span class="sxs-lookup"><span data-stu-id="45390-454">Add the following namespaces to the top of the *AzureServices*:</span></span>
+1.  <span data-ttu-id="2feb8-446">Haga clic con el botón derecho en la carpeta de *recursos* , que se encuentra en el panel Proyecto, **crear** > **carpeta**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-446">Right-click in the *Asset* Folder, located in the Project Panel, **Create** > **Folder**.</span></span> <span data-ttu-id="2feb8-447">Asigne a la carpeta el nombre scripts.</span><span class="sxs-lookup"><span data-stu-id="2feb8-447">Name the folder **Scripts**.</span></span>
+
+    ![crear nueva carpeta](images/AzureLabs-Lab5-50.png)
+
+    ![carpeta de llamadas: scripts](images/AzureLabs-Lab5-51.png)
+
+2.  <span data-ttu-id="2feb8-450">Haga doble clic en la carpeta que acaba de crear para abrirla.</span><span class="sxs-lookup"><span data-stu-id="2feb8-450">Double click on the folder just created, to open it.</span></span>
+
+3.  <span data-ttu-id="2feb8-451">Haga clic con el botón derecho dentro de la carpeta, **crear**  >   **C# script**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-451">Right-click inside the folder, **Create** > **C# Script**.</span></span> <span data-ttu-id="2feb8-452">Llame al script *AzureServices*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-452">Call the script *AzureServices*.</span></span>
+
+4.  <span data-ttu-id="2feb8-453">Haga doble clic en la nueva clase *AzureServices* para abrirla con *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-453">Double click on the new *AzureServices* class to open it with *Visual Studio*.</span></span>
+
+5.  <span data-ttu-id="2feb8-454">Agregue los siguientes espacios de nombres en la parte superior de *AzureServices*:</span><span class="sxs-lookup"><span data-stu-id="2feb8-454">Add the following namespaces to the top of the *AzureServices*:</span></span>
 
     ```csharp
         using System;
@@ -543,7 +543,7 @@ ms.locfileid: "67694556"
         using System.Net;
     ```
 
-6.  <span data-ttu-id="45390-455">Agregue los siguientes campos de Inspector dentro de la *AzureServices* clase:</span><span class="sxs-lookup"><span data-stu-id="45390-455">Add the following Inspector Fields inside the *AzureServices* class:</span></span>
+6.  <span data-ttu-id="2feb8-455">Agregue los siguientes campos de inspector dentro de la clase *AzureServices* :</span><span class="sxs-lookup"><span data-stu-id="2feb8-455">Add the following Inspector Fields inside the *AzureServices* class:</span></span>
 
     ```csharp
         /// <summary>
@@ -557,7 +557,7 @@ ms.locfileid: "67694556"
         public TextMesh azureStatusText;
     ```
 
-7.  <span data-ttu-id="45390-456">A continuación, agregue las siguientes variables de miembro dentro de la *AzureServices* clase:</span><span class="sxs-lookup"><span data-stu-id="45390-456">Then add the following member variables inside the *AzureServices* class:</span></span>
+7.  <span data-ttu-id="2feb8-456">A continuación, agregue las siguientes variables de miembro dentro de la clase *AzureServices* :</span><span class="sxs-lookup"><span data-stu-id="2feb8-456">Then add the following member variables inside the *AzureServices* class:</span></span>
 
     ```csharp
         /// <summary>
@@ -610,9 +610,9 @@ ms.locfileid: "67694556"
     ```
 
     > [!IMPORTANT]
-    > <span data-ttu-id="45390-457">Asegúrese de reemplazar el *extremo* y *cadena de conexión* valores con los valores de almacenamiento de Azure, se encuentran en el Portal de Azure</span><span class="sxs-lookup"><span data-stu-id="45390-457">Make sure you replace the *endpoint* and *connection string* values with the values from your Azure storage, found in the Azure Portal</span></span>
+    > <span data-ttu-id="2feb8-457">Asegúrese de reemplazar los valores de *punto* de conexión y de *cadena de conexión* con los valores de Azure Storage, que se encuentran en Azure portal.</span><span class="sxs-lookup"><span data-stu-id="2feb8-457">Make sure you replace the *endpoint* and *connection string* values with the values from your Azure storage, found in the Azure Portal</span></span>
 
-8.  <span data-ttu-id="45390-458">El código para *Awake()* y *Start()* métodos ahora debe agregarse.</span><span class="sxs-lookup"><span data-stu-id="45390-458">Code for *Awake()* and *Start()* methods now needs to be added.</span></span> <span data-ttu-id="45390-459">Estos métodos se llamará cuando se inicializa la clase:</span><span class="sxs-lookup"><span data-stu-id="45390-459">These methods will be called when the class initializes:</span></span>
+8.  <span data-ttu-id="2feb8-458">Ahora es necesario agregar el código para los métodos *activo ()* e *Inicio ()* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-458">Code for *Awake()* and *Start()* methods now needs to be added.</span></span> <span data-ttu-id="2feb8-459">Se llamará a estos métodos cuando se inicialice la clase:</span><span class="sxs-lookup"><span data-stu-id="2feb8-459">These methods will be called when the class initializes:</span></span>
 
     ```csharp
         private void Awake()
@@ -637,38 +637,38 @@ ms.locfileid: "67694556"
     ```
 
     > [!IMPORTANT]
-    > <span data-ttu-id="45390-460">Se rellenará en el código de *CallAzureFunctionForNextShape()* en un [capítulo futuras](#chapter-10---completing-the-azureservices-class).</span><span class="sxs-lookup"><span data-stu-id="45390-460">We will fill in the code for *CallAzureFunctionForNextShape()* in a [future Chapter](#chapter-10---completing-the-azureservices-class).</span></span>
+    > <span data-ttu-id="2feb8-460">En un [capítulo futuro](#chapter-10---completing-the-azureservices-class), rellenaremos el código para *CallAzureFunctionForNextShape ()* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-460">We will fill in the code for *CallAzureFunctionForNextShape()* in a [future Chapter](#chapter-10---completing-the-azureservices-class).</span></span>
 
-9.  <span data-ttu-id="45390-461">Eliminar el *Update()* método puesto que esta clase no lo usará.</span><span class="sxs-lookup"><span data-stu-id="45390-461">Delete the *Update()* method since this class will not use it.</span></span>
+9.  <span data-ttu-id="2feb8-461">Elimine el método *Update ()* , ya que esta clase no lo usará.</span><span class="sxs-lookup"><span data-stu-id="2feb8-461">Delete the *Update()* method since this class will not use it.</span></span>
 
-10. <span data-ttu-id="45390-462">Guarde los cambios en Visual Studio y, a continuación, volver a Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-462">Save your changes in Visual Studio, and then return to Unity.</span></span>
+10. <span data-ttu-id="2feb8-462">Guarde los cambios en Visual Studio y vuelva a Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-462">Save your changes in Visual Studio, and then return to Unity.</span></span>
 
-11. <span data-ttu-id="45390-463">Haga clic y arrastre el *AzureServices* clase a partir de la carpeta Scripts en el objeto de cámara principal en el *jerarquía Panel*.</span><span class="sxs-lookup"><span data-stu-id="45390-463">Click and drag the *AzureServices* class from the Scripts folder to the Main Camera object in the *Hierarchy Panel*.</span></span>
+11. <span data-ttu-id="2feb8-463">Haga clic y arrastre la clase *AzureServices* desde la carpeta scripts hasta el objeto cámara principal en el *Panel jerarquía*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-463">Click and drag the *AzureServices* class from the Scripts folder to the Main Camera object in the *Hierarchy Panel*.</span></span>
 
-12. <span data-ttu-id="45390-464">Seleccione la cámara principal, a continuación, tomar el **AzureStatusText** objeto secundario debajo de la **GazeButton** objeto y colóquelo dentro de la **AzureStatusText** un destino de referencia campo en el *Inspector*, para proporcionar la referencia a la *AzureServices* secuencia de comandos.</span><span class="sxs-lookup"><span data-stu-id="45390-464">Select the Main Camera, then grab the **AzureStatusText** child object from beneath the **GazeButton** object, and place it within the **AzureStatusText** reference target field, in the *Inspector*, to provide the reference to the *AzureServices* script.</span></span>
+12. <span data-ttu-id="2feb8-464">Seleccione la cámara principal, después arrastre el objeto secundario **AzureStatusText** de debajo del objeto **GazeButton** y colóquelo en el campo destino de referencia **AzureStatusText** , en el *Inspector*, para proporcionar la referencia al  *Script AzureServices* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-464">Select the Main Camera, then grab the **AzureStatusText** child object from beneath the **GazeButton** object, and place it within the **AzureStatusText** reference target field, in the *Inspector*, to provide the reference to the *AzureServices* script.</span></span>
 
-    ![Asigne el destino de referencia de texto de estado de azure](images/AzureLabs-Lab5-52.png)
+    ![asignar destino de referencia de texto de estado de Azure](images/AzureLabs-Lab5-52.png)
 
-## <a name="chapter-8---create-the-shapefactory-class"></a><span data-ttu-id="45390-466">Capítulo 8: crear la clase ShapeFactory</span><span class="sxs-lookup"><span data-stu-id="45390-466">Chapter 8 - Create the ShapeFactory class</span></span>
+## <a name="chapter-8---create-the-shapefactory-class"></a><span data-ttu-id="2feb8-466">Capítulo 8: creación de la clase ShapeFactory</span><span class="sxs-lookup"><span data-stu-id="2feb8-466">Chapter 8 - Create the ShapeFactory class</span></span>
 
-<span data-ttu-id="45390-467">El script siguiente para crear, es el *ShapeFactory* clase.</span><span class="sxs-lookup"><span data-stu-id="45390-467">The next script to create, is the *ShapeFactory* class.</span></span> <span data-ttu-id="45390-468">El rol de esta clase es crear una nueva forma, cuando se solicita y mantener un historial de las formas que creó en un *lista del historial de forma*.</span><span class="sxs-lookup"><span data-stu-id="45390-468">The role of this class is to create a new shape, when requested, and keep a history of the shapes created in a *Shape History List*.</span></span> <span data-ttu-id="45390-469">Cada vez que se crea una forma, el *lista del historial de forma* se actualiza en el *AzureService* clase y, a continuación, se almacenan en su *Azure Storage*.</span><span class="sxs-lookup"><span data-stu-id="45390-469">Every time a shape is created, the *Shape History list* is updated in the *AzureService* class, and then stored in your *Azure Storage*.</span></span> <span data-ttu-id="45390-470">Cuando se inicia la aplicación, si se encuentra un archivo almacenado en su *Azure Storage*, *lista del historial de forma* se recupera y reproduce, con el **texto 3D** que proporciona el objeto Si la forma generada es de almacenamiento o nuevo.</span><span class="sxs-lookup"><span data-stu-id="45390-470">When the application starts, if a stored file is found in your *Azure Storage*, the *Shape History list* is retrieved and replayed, with the **3D Text** object providing whether the generated shape is from storage, or new.</span></span>
+<span data-ttu-id="2feb8-467">El siguiente script que se va a crear es la clase *ShapeFactory* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-467">The next script to create, is the *ShapeFactory* class.</span></span> <span data-ttu-id="2feb8-468">El rol de esta clase es crear una nueva forma, cuando se solicita, y mantener un historial de las formas creadas en una *lista de historial de formas*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-468">The role of this class is to create a new shape, when requested, and keep a history of the shapes created in a *Shape History List*.</span></span> <span data-ttu-id="2feb8-469">Cada vez que se crea una forma, se actualiza la *lista de historial de formas* en la clase *AzureService* y, a continuación, se almacena en el *Azure Storage*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-469">Every time a shape is created, the *Shape History list* is updated in the *AzureService* class, and then stored in your *Azure Storage*.</span></span> <span data-ttu-id="2feb8-470">Cuando se inicia la aplicación, si se encuentra un archivo almacenado en el *Azure Storage*, se recupera y se vuelve a reproducir la *lista de historial de formas* , con el objeto de **texto 3D** que proporciona si la forma generada es de almacenamiento o nueva.</span><span class="sxs-lookup"><span data-stu-id="2feb8-470">When the application starts, if a stored file is found in your *Azure Storage*, the *Shape History list* is retrieved and replayed, with the **3D Text** object providing whether the generated shape is from storage, or new.</span></span>
 
-<span data-ttu-id="45390-471">Para crear esta clase:</span><span class="sxs-lookup"><span data-stu-id="45390-471">To create this class:</span></span>
+<span data-ttu-id="2feb8-471">Para crear esta clase:</span><span class="sxs-lookup"><span data-stu-id="2feb8-471">To create this class:</span></span>
 
-1.  <span data-ttu-id="45390-472">Vaya a la **Scripts** carpeta que creó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="45390-472">Go to the **Scripts** folder you created previously.</span></span>
+1.  <span data-ttu-id="2feb8-472">Vaya a la  carpeta scripts que creó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-472">Go to the **Scripts** folder you created previously.</span></span>
 
-2.  <span data-ttu-id="45390-473">Haga clic en la carpeta, **crear**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="45390-473">Right-click inside the folder, **Create** > **C# Script**.</span></span> <span data-ttu-id="45390-474">Llame al script *ShapeFactory*.</span><span class="sxs-lookup"><span data-stu-id="45390-474">Call the script *ShapeFactory*.</span></span>
+2.  <span data-ttu-id="2feb8-473">Haga clic con el botón derecho dentro de la carpeta, **crear**  >   **C# script**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-473">Right-click inside the folder, **Create** > **C# Script**.</span></span> <span data-ttu-id="2feb8-474">Llame al script *ShapeFactory*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-474">Call the script *ShapeFactory*.</span></span>
 
-3.  <span data-ttu-id="45390-475">Haga doble clic en el nuevo *ShapeFactory* script para abrirlo con *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="45390-475">Double click on the new *ShapeFactory* script to open it with *Visual Studio*.</span></span>
+3.  <span data-ttu-id="2feb8-475">Haga doble clic en el nuevo script *ShapeFactory* para abrirlo con *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-475">Double click on the new *ShapeFactory* script to open it with *Visual Studio*.</span></span>
 
-4.  <span data-ttu-id="45390-476">Asegúrese del *ShapeFactory* clase incluye los espacios de nombres siguientes:</span><span class="sxs-lookup"><span data-stu-id="45390-476">Ensure the *ShapeFactory* class includes the following namespaces:</span></span>
+4.  <span data-ttu-id="2feb8-476">Asegúrese de que la clase *ShapeFactory* incluye los siguientes espacios de nombres:</span><span class="sxs-lookup"><span data-stu-id="2feb8-476">Ensure the *ShapeFactory* class includes the following namespaces:</span></span>
 
     ```csharp
         using System.Collections.Generic;
         using UnityEngine;
     ```
 
-5.  <span data-ttu-id="45390-477">Agregue las variables que se muestra a continuación para el *ShapeFactory* clase y reemplazar el *Start()* y *Awake()* funciones con los siguientes:</span><span class="sxs-lookup"><span data-stu-id="45390-477">Add the variables shown below to the *ShapeFactory* class, and replace the *Start()* and *Awake()* functions with those below:</span></span>
+5.  <span data-ttu-id="2feb8-477">Agregue las variables que se muestran a continuación a la clase *ShapeFactory* y reemplace las funciones *Start ()* y Activate *()* con las siguientes:</span><span class="sxs-lookup"><span data-stu-id="2feb8-477">Add the variables shown below to the *ShapeFactory* class, and replace the *Start()* and *Awake()* functions with those below:</span></span>
 
     ```csharp
         /// <summary>
@@ -705,7 +705,7 @@ ms.locfileid: "67694556"
         }
     ```
 
-6.  <span data-ttu-id="45390-478">El *CreateShape()* método genera las formas de primitivas, según el proporcionado *entero* parámetro.</span><span class="sxs-lookup"><span data-stu-id="45390-478">The *CreateShape()* method generates the primitive shapes, based upon the provided *integer* parameter.</span></span> <span data-ttu-id="45390-479">El parámetro booleano se utiliza para especificar si es la forma actualmente creada desde el almacenamiento nuevo.</span><span class="sxs-lookup"><span data-stu-id="45390-479">The Boolean parameter is used to specify whether the currently created shape is from storage, or new.</span></span> <span data-ttu-id="45390-480">Coloque el código siguiente en su *ShapeFactory* (clase), a continuación de los métodos anteriores:</span><span class="sxs-lookup"><span data-stu-id="45390-480">Place the following code in your *ShapeFactory* class, below the previous methods:</span></span>
+6.  <span data-ttu-id="2feb8-478">El método *CreateShape ()* genera las formas primitivas, basándose en el parámetro de *entero* proporcionado.</span><span class="sxs-lookup"><span data-stu-id="2feb8-478">The *CreateShape()* method generates the primitive shapes, based upon the provided *integer* parameter.</span></span> <span data-ttu-id="2feb8-479">El parámetro booleano se usa para especificar si la forma creada actualmente es de almacenamiento o nueva.</span><span class="sxs-lookup"><span data-stu-id="2feb8-479">The Boolean parameter is used to specify whether the currently created shape is from storage, or new.</span></span> <span data-ttu-id="2feb8-480">Coloque el código siguiente en la clase *ShapeFactory* , debajo de los métodos anteriores:</span><span class="sxs-lookup"><span data-stu-id="2feb8-480">Place the following code in your *ShapeFactory* class, below the previous methods:</span></span>
 
     ```csharp
         /// <summary>
@@ -749,35 +749,35 @@ ms.locfileid: "67694556"
         }
     ```
 
-7.  <span data-ttu-id="45390-481">Asegúrese de guardar los cambios en Visual Studio antes de volver a Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-481">Be sure to save your changes in Visual Studio before returning to Unity.</span></span>
+7.  <span data-ttu-id="2feb8-481">Asegúrese de guardar los cambios en Visual Studio antes de volver a Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-481">Be sure to save your changes in Visual Studio before returning to Unity.</span></span>
 
-8.  <span data-ttu-id="45390-482">Atrás en el Editor de Unity, haga clic y arrastre el *ShapeFactory* clase desde el **Scripts** carpeta a la **cámara principal** objeto en el *jerarquía Panel*.</span><span class="sxs-lookup"><span data-stu-id="45390-482">Back in the Unity Editor, click and drag the *ShapeFactory* class from the **Scripts** folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span>
+8.  <span data-ttu-id="2feb8-482">De nuevo en el editor de Unity, haga clic y arrastre la clase *ShapeFactory* desde la carpeta **scripts** hasta el objeto **cámara principal** en el *Panel jerarquía*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-482">Back in the Unity Editor, click and drag the *ShapeFactory* class from the **Scripts** folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span>
 
-9. <span data-ttu-id="45390-483">Con la cámara principal seleccionado, observará el *ShapeFactory* falta un componente de script el *punto Spawn* referencia.</span><span class="sxs-lookup"><span data-stu-id="45390-483">With the Main Camera selected you will notice the *ShapeFactory* script component is missing the *Spawn Point* reference.</span></span> <span data-ttu-id="45390-484">Para corregirlo, arrastre el **ShapeSpawnPoint** objeto desde el *jerarquía Panel* a la **Spawn punto** un destino de referencia.</span><span class="sxs-lookup"><span data-stu-id="45390-484">To fix it, drag the **ShapeSpawnPoint** object from the *Hierarchy Panel* to the **Spawn Point** reference target.</span></span>
+9. <span data-ttu-id="2feb8-483">Con la cámara principal seleccionada, observará que en el componente de script *ShapeFactory* falta la referencia de *punto de generación* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-483">With the Main Camera selected you will notice the *ShapeFactory* script component is missing the *Spawn Point* reference.</span></span> <span data-ttu-id="2feb8-484">Para corregirlo, arrastre el objeto **ShapeSpawnPoint** desde el *Panel jerarquía* hasta el destino de referencia de **punto de generación** .</span><span class="sxs-lookup"><span data-stu-id="2feb8-484">To fix it, drag the **ShapeSpawnPoint** object from the *Hierarchy Panel* to the **Spawn Point** reference target.</span></span>
 
-    ![destino de la referencia de conjunto de forma factory](images/AzureLabs-Lab5-53.png)
+    ![establecer destino de referencia de generador de formas](images/AzureLabs-Lab5-53.png)
 
-## <a name="chapter-9---create-the-gaze-class"></a><span data-ttu-id="45390-486">Capítulo 9: crear la clase de mirada</span><span class="sxs-lookup"><span data-stu-id="45390-486">Chapter 9 - Create the Gaze class</span></span>
+## <a name="chapter-9---create-the-gaze-class"></a><span data-ttu-id="2feb8-486">Capítulo 9: creación de la clase fijamente</span><span class="sxs-lookup"><span data-stu-id="2feb8-486">Chapter 9 - Create the Gaze class</span></span>
 
-<span data-ttu-id="45390-487">Es el último script, deberá crear el *que mirar* clase.</span><span class="sxs-lookup"><span data-stu-id="45390-487">The last script you need to create is the *Gaze* class.</span></span>
+<span data-ttu-id="2feb8-487">El último script que necesita crear es la clase *mira* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-487">The last script you need to create is the *Gaze* class.</span></span>
 
-<span data-ttu-id="45390-488">Esta clase es responsable de crear un **Raycast** que se proyectará hacia delante de la cámara principal, para detectar el objeto que está mirando el usuario.</span><span class="sxs-lookup"><span data-stu-id="45390-488">This class is responsible for creating a **Raycast** that will be projected forward from the Main Camera, to detect which object the user is looking at.</span></span> <span data-ttu-id="45390-489">En este caso, necesitará el Raycast identificar si el usuario está viendo la **GazeButton** de objetos de la escena y desencadenar un comportamiento.</span><span class="sxs-lookup"><span data-stu-id="45390-489">In this case, the Raycast will need to identify if the user is looking at the **GazeButton** object in the scene and trigger a behavior.</span></span>
+<span data-ttu-id="2feb8-488">Esta clase es responsable de crear un **Raycast** que se proyectará hacia delante desde la cámara principal, para detectar qué objeto está examinando el usuario.</span><span class="sxs-lookup"><span data-stu-id="2feb8-488">This class is responsible for creating a **Raycast** that will be projected forward from the Main Camera, to detect which object the user is looking at.</span></span> <span data-ttu-id="2feb8-489">En este caso, Raycast deberá identificar si el usuario mira el objeto **GazeButton** en la escena y desencadena un comportamiento.</span><span class="sxs-lookup"><span data-stu-id="2feb8-489">In this case, the Raycast will need to identify if the user is looking at the **GazeButton** object in the scene and trigger a behavior.</span></span>
 
-<span data-ttu-id="45390-490">Para crear esta clase:</span><span class="sxs-lookup"><span data-stu-id="45390-490">To create this Class:</span></span>
+<span data-ttu-id="2feb8-490">Para crear esta clase:</span><span class="sxs-lookup"><span data-stu-id="2feb8-490">To create this Class:</span></span>
 
-1.  <span data-ttu-id="45390-491">Vaya a la **Scripts** carpeta que creó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="45390-491">Go to the **Scripts** folder you created previously.</span></span>
+1.  <span data-ttu-id="2feb8-491">Vaya a la  carpeta scripts que creó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-491">Go to the **Scripts** folder you created previously.</span></span>
 
-2.  <span data-ttu-id="45390-492">Haga clic en el Panel proyecto, **crear**  >   **C# Script**.</span><span class="sxs-lookup"><span data-stu-id="45390-492">Right-click in the Project Panel, **Create** > **C# Script**.</span></span> <span data-ttu-id="45390-493">Llame al script *que mirar*.</span><span class="sxs-lookup"><span data-stu-id="45390-493">Call the script *Gaze*.</span></span>
+2.  <span data-ttu-id="2feb8-492">Haga clic con el botón derecho en el panel Proyecto, **crear**  >   **C# script**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-492">Right-click in the Project Panel, **Create** > **C# Script**.</span></span> <span data-ttu-id="2feb8-493">Llame al script *fijamente*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-493">Call the script *Gaze*.</span></span>
 
-3.  <span data-ttu-id="45390-494">Haga doble clic en el nuevo *que mirar* script para abrirlo con *Visual Studio.*</span><span class="sxs-lookup"><span data-stu-id="45390-494">Double click on the new *Gaze* script to open it with *Visual Studio.*</span></span>
+3.  <span data-ttu-id="2feb8-494">Haga doble clic en el  nuevo script de miraciones para abrirlo con *Visual Studio.*</span><span class="sxs-lookup"><span data-stu-id="2feb8-494">Double click on the new *Gaze* script to open it with *Visual Studio.*</span></span>
 
-4.  <span data-ttu-id="45390-495">Asegúrese de que el espacio de nombres siguiente se incluye en la parte superior de la secuencia de comandos:</span><span class="sxs-lookup"><span data-stu-id="45390-495">Ensure the following namespace is included at the top of the script:</span></span>
+4.  <span data-ttu-id="2feb8-495">Asegúrese de que el siguiente espacio de nombres se incluye en la parte superior del script:</span><span class="sxs-lookup"><span data-stu-id="2feb8-495">Ensure the following namespace is included at the top of the script:</span></span>
 
     ```csharp
         using UnityEngine;
     ```
 
-5.  <span data-ttu-id="45390-496">A continuación, agregue las siguientes variables dentro de la *que mirar* clase:</span><span class="sxs-lookup"><span data-stu-id="45390-496">Then add the following variables inside the *Gaze* class:</span></span>
+5.  <span data-ttu-id="2feb8-496">Después, agregue las siguientes variables dentro  de la clase mirate:</span><span class="sxs-lookup"><span data-stu-id="2feb8-496">Then add the following variables inside the *Gaze* class:</span></span>
 
     ```csharp
         /// <summary>
@@ -863,9 +863,9 @@ ms.locfileid: "67694556"
     ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="45390-497">Algunas de estas variables podrán modificarse en el *Editor*.</span><span class="sxs-lookup"><span data-stu-id="45390-497">Some of these variables will be able to be edited in the *Editor*.</span></span>
+> <span data-ttu-id="2feb8-497">Algunas de estas variables se podrán editar en el *Editor*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-497">Some of these variables will be able to be edited in the *Editor*.</span></span>
 
-6.  <span data-ttu-id="45390-498">El código para el *Awake()* y *Start()* métodos ahora debe agregarse.</span><span class="sxs-lookup"><span data-stu-id="45390-498">Code for the *Awake()* and *Start()* methods now needs to be added.</span></span>
+6.  <span data-ttu-id="2feb8-498">Ahora es necesario agregar el código para los métodos *activo ()* e *Inicio ()* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-498">Code for the *Awake()* and *Start()* methods now needs to be added.</span></span>
 
     ```csharp
         /// <summary>
@@ -887,7 +887,7 @@ ms.locfileid: "67694556"
         }
     ```
 
-7.  <span data-ttu-id="45390-499">Agregue el código siguiente, que se creará un objeto de cursor al iniciarse, junto con el *Update()* método, que se ejecutará el método Raycast, junto con que se va a donde se alterna el valor booleano GazeEnabled:</span><span class="sxs-lookup"><span data-stu-id="45390-499">Add the following code, which will create a cursor object at start, along with the *Update()* method, which will run the Raycast method, along with being where the GazeEnabled boolean is toggled:</span></span>
+7.  <span data-ttu-id="2feb8-499">Agregue el código siguiente, que creará un objeto cursor en el inicio, junto con el método *Update ()* , que ejecutará el método Raycast, junto con el lugar donde se alterna el valor booleano GazeEnabled:</span><span class="sxs-lookup"><span data-stu-id="2feb8-499">Add the following code, which will create a cursor object at start, along with the *Update()* method, which will run the Raycast method, along with being where the GazeEnabled boolean is toggled:</span></span>
 
     ```csharp
         /// <summary>
@@ -931,7 +931,7 @@ ms.locfileid: "67694556"
         }
     ```
 
-8. <span data-ttu-id="45390-500">A continuación agregue el *UpdateRaycast()* método, lo que un Raycast del proyecto y detectar el posicionamiento de destino.</span><span class="sxs-lookup"><span data-stu-id="45390-500">Next add the *UpdateRaycast()* method, which will project a Raycast and detect the hit target.</span></span>
+8. <span data-ttu-id="2feb8-500">A continuación, agregue el método *UpdateRaycast ()* , que proyectará un Raycast y detectará el destino de la visita.</span><span class="sxs-lookup"><span data-stu-id="2feb8-500">Next add the *UpdateRaycast()* method, which will project a Raycast and detect the hit target.</span></span>
 
     ```csharp
         private void UpdateRaycast()
@@ -1004,7 +1004,7 @@ ms.locfileid: "67694556"
         }
     ```
 
-9. <span data-ttu-id="45390-501">Por último, agregue el *ResetFocusedObject()* método, que cambiará el GazeButton objetos color actual, que indica si se está creando una nueva forma o no.</span><span class="sxs-lookup"><span data-stu-id="45390-501">Lastly, add the *ResetFocusedObject()* method, which will toggle the GazeButton objects current color, indicating whether it is creating a new shape or not.</span></span>
+9. <span data-ttu-id="2feb8-501">Por último, agregue el método *ResetFocusedObject ()* , que cambiará el color actual de los objetos GazeButton, lo que indicará si está creando una nueva forma o no.</span><span class="sxs-lookup"><span data-stu-id="2feb8-501">Lastly, add the *ResetFocusedObject()* method, which will toggle the GazeButton objects current color, indicating whether it is creating a new shape or not.</span></span>
 
     ```csharp
         /// <summary>
@@ -1025,21 +1025,21 @@ ms.locfileid: "67694556"
         }
     ```
 
-10.  <span data-ttu-id="45390-502">Guarde los cambios en Visual Studio antes de volver a Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-502">Save your changes in Visual Studio before returning to Unity.</span></span>
+10.  <span data-ttu-id="2feb8-502">Guarde los cambios en Visual Studio antes de volver a Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-502">Save your changes in Visual Studio before returning to Unity.</span></span>
 
-11.  <span data-ttu-id="45390-503">Haga clic y arrastre el *que mirar* clase a partir de la carpeta Scripts para la **cámara principal** objeto en el *jerarquía Panel*.</span><span class="sxs-lookup"><span data-stu-id="45390-503">Click and drag the *Gaze* class from the Scripts folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span>
+11.  <span data-ttu-id="2feb8-503">Haga clic y arrastre la clase *mira* desde la carpeta scripts hasta el objeto **cámara principal** en el *Panel jerarquía*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-503">Click and drag the *Gaze* class from the Scripts folder to the **Main Camera** object in the *Hierarchy Panel*.</span></span>
 
-## <a name="chapter-10---completing-the-azureservices-class"></a><span data-ttu-id="45390-504">Capítulo 10: finalización de la clase AzureServices</span><span class="sxs-lookup"><span data-stu-id="45390-504">Chapter 10 - Completing the AzureServices class</span></span>
+## <a name="chapter-10---completing-the-azureservices-class"></a><span data-ttu-id="2feb8-504">Capítulo 10: completar la clase AzureServices</span><span class="sxs-lookup"><span data-stu-id="2feb8-504">Chapter 10 - Completing the AzureServices class</span></span>
 
-<span data-ttu-id="45390-505">Con los demás scripts en su lugar, es posible *completa* el *AzureServices* clase.</span><span class="sxs-lookup"><span data-stu-id="45390-505">With the other scripts in place, it is now possible to *complete* the *AzureServices* class.</span></span> <span data-ttu-id="45390-506">Esto se conseguirá mediante:</span><span class="sxs-lookup"><span data-stu-id="45390-506">This will be achieved through:</span></span>
+<span data-ttu-id="2feb8-505">Con los demás scripts en su lugar, ahora es posible *completar* la clase *AzureServices* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-505">With the other scripts in place, it is now possible to *complete* the *AzureServices* class.</span></span> <span data-ttu-id="2feb8-506">Esto se logra mediante:</span><span class="sxs-lookup"><span data-stu-id="2feb8-506">This will be achieved through:</span></span>
 
-1.  <span data-ttu-id="45390-507">Agregar un nuevo método denominado *CreateCloudIdentityAsync()* , para establecer las variables de autenticación necesarias para la comunicación con Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-507">Adding a new method named *CreateCloudIdentityAsync()*, to set up the authentication variables needed for communicating with Azure.</span></span>
+1.  <span data-ttu-id="2feb8-507">Agregar un nuevo método denominado *CreateCloudIdentityAsync ()* para configurar las variables de autenticación necesarias para comunicarse con Azure.</span><span class="sxs-lookup"><span data-stu-id="2feb8-507">Adding a new method named *CreateCloudIdentityAsync()*, to set up the authentication variables needed for communicating with Azure.</span></span>
 
-    > <span data-ttu-id="45390-508">Este método también comprobará la existencia de un archivo almacenado anteriormente que contiene la lista de la forma.</span><span class="sxs-lookup"><span data-stu-id="45390-508">This method will also check for the existence of a previously stored File containing the Shape List.</span></span>
+    > <span data-ttu-id="2feb8-508">Este método también comprobará la existencia de un archivo previamente almacenado que contenga la lista de formas.</span><span class="sxs-lookup"><span data-stu-id="2feb8-508">This method will also check for the existence of a previously stored File containing the Shape List.</span></span>
     >
-    > <span data-ttu-id="45390-509">**Si se encuentra el archivo**, deshabilitará el usuario *que mirar*y desencadenar la creación de formas, según el patrón de formas, tal como está almacenado en el **archivos de Azure Storage**.</span><span class="sxs-lookup"><span data-stu-id="45390-509">**If the file is found**, it will disable the user *Gaze*, and trigger Shape creation, according to the pattern of shapes, as stored in the **Azure Storage file**.</span></span> <span data-ttu-id="45390-510">El usuario puede ver esto, como el **texto de la malla** proporcionará mostrar 'Storage' o 'New', dependiendo del origen de las formas.</span><span class="sxs-lookup"><span data-stu-id="45390-510">The user can see this, as the **Text Mesh** will provide display 'Storage' or 'New', depending on the shapes origin.</span></span>
+    > <span data-ttu-id="2feb8-509">**Si se encuentra el archivo**, se deshabilitará el *usuario y*se desencadenará la creación de la forma, según el patrón de formas, tal como se almacena en el **archivo de Azure Storage**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-509">**If the file is found**, it will disable the user *Gaze*, and trigger Shape creation, according to the pattern of shapes, as stored in the **Azure Storage file**.</span></span> <span data-ttu-id="2feb8-510">El usuario puede ver esto, ya que la **malla de texto** proporcionará la pantalla "almacenamiento" o "nuevo", según el origen de las formas.</span><span class="sxs-lookup"><span data-stu-id="2feb8-510">The user can see this, as the **Text Mesh** will provide display 'Storage' or 'New', depending on the shapes origin.</span></span>
     >
-    > <span data-ttu-id="45390-511">**Si se encuentra ningún archivo**, se habilitará la *que mirar*, permitir que el usuario crear formas al observar la **GazeButton** objeto en la escena.</span><span class="sxs-lookup"><span data-stu-id="45390-511">**If no file is found**, it will enable the *Gaze*, enabling the user to create shapes when looking at the **GazeButton** object in the scene.</span></span>
+    > <span data-ttu-id="2feb8-511">**Si no se encuentra ningún archivo**, se habilitará la *mirada*, lo que permite al usuario crear formas al mirar el objeto **GazeButton** de la escena.</span><span class="sxs-lookup"><span data-stu-id="2feb8-511">**If no file is found**, it will enable the *Gaze*, enabling the user to create shapes when looking at the **GazeButton** object in the scene.</span></span>
 
     ```csharp
         /// <summary>
@@ -1088,7 +1088,7 @@ ms.locfileid: "67694556"
         }
     ```
 
-2.  <span data-ttu-id="45390-512">Es el siguiente fragmento de código desde el *Start()* método; en la que se realizará una llamada a la *CreateCloudIdentityAsync()* método.</span><span class="sxs-lookup"><span data-stu-id="45390-512">The next code snippet is from within the *Start()* method; wherein a call will be made to the *CreateCloudIdentityAsync()* method.</span></span> <span data-ttu-id="45390-513">No dude en Copiar a través de su actual *Start()* método, con la siguiente:</span><span class="sxs-lookup"><span data-stu-id="45390-513">Feel free to copy over your current *Start()* method, with the below:</span></span>
+2.  <span data-ttu-id="2feb8-512">El siguiente fragmento de código se encuentra dentro del método *Start ()* ; donde se realizará una llamada al método *CreateCloudIdentityAsync ()* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-512">The next code snippet is from within the *Start()* method; wherein a call will be made to the *CreateCloudIdentityAsync()* method.</span></span> <span data-ttu-id="2feb8-513">No dude en copiar sobre el método *Start ()* actual, con lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="2feb8-513">Feel free to copy over your current *Start()* method, with the below:</span></span>
 
     ```csharp
         private void Start()
@@ -1106,7 +1106,7 @@ ms.locfileid: "67694556"
         }
     ```
 
-3.  <span data-ttu-id="45390-514">Rellene el código para el método *CallAzureFunctionForNextShape()* .</span><span class="sxs-lookup"><span data-stu-id="45390-514">Fill in the code for the method *CallAzureFunctionForNextShape()*.</span></span> <span data-ttu-id="45390-515">Va a usar creado previamente *Azure Function App* para solicitar un índice de la forma.</span><span class="sxs-lookup"><span data-stu-id="45390-515">You will use the previously created *Azure Function App* to request a shape index.</span></span> <span data-ttu-id="45390-516">Una vez que se recibe la nueva forma, este método enviará la forma para el *ShapeFactory* clase para crear la nueva forma de la escena.</span><span class="sxs-lookup"><span data-stu-id="45390-516">Once the new shape is received, this method will send the shape to the *ShapeFactory* class to create the new shape in the scene.</span></span> <span data-ttu-id="45390-517">Utilice el código siguiente para completar el cuerpo de *CallAzureFunctionForNextShape()* .</span><span class="sxs-lookup"><span data-stu-id="45390-517">Use the code below to complete the body of *CallAzureFunctionForNextShape()*.</span></span>
+3.  <span data-ttu-id="2feb8-514">Rellene el código para el método *CallAzureFunctionForNextShape ()* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-514">Fill in the code for the method *CallAzureFunctionForNextShape()*.</span></span> <span data-ttu-id="2feb8-515">Usará el *function App de Azure* creado anteriormente para solicitar un índice de forma.</span><span class="sxs-lookup"><span data-stu-id="2feb8-515">You will use the previously created *Azure Function App* to request a shape index.</span></span> <span data-ttu-id="2feb8-516">Una vez recibida la nueva forma, este método enviará la forma a la clase *ShapeFactory* para crear la nueva forma en la escena.</span><span class="sxs-lookup"><span data-stu-id="2feb8-516">Once the new shape is received, this method will send the shape to the *ShapeFactory* class to create the new shape in the scene.</span></span> <span data-ttu-id="2feb8-517">Use el código siguiente para completar el cuerpo de *CallAzureFunctionForNextShape ()* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-517">Use the code below to complete the body of *CallAzureFunctionForNextShape()*.</span></span>
 
     ```csharp
         /// <summary>
@@ -1142,7 +1142,7 @@ ms.locfileid: "67694556"
         }
     ```
 
-4.  <span data-ttu-id="45390-518">Agregue un método para crear una cadena, mediante la concatenación de los enteros almacenados en la lista de historial de la forma y guardarlos en su *archivos de almacenamiento de Azure*.</span><span class="sxs-lookup"><span data-stu-id="45390-518">Add a method to create a string, by concatenating the integers stored in the shape history list, and saving it in your *Azure Storage File*.</span></span>
+4.  <span data-ttu-id="2feb8-518">Agregue un método para crear una cadena mediante la concatenación de los enteros almacenados en la lista de historial de formas y guárdelo en el *archivo de Azure Storage*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-518">Add a method to create a string, by concatenating the integers stored in the shape history list, and saving it in your *Azure Storage File*.</span></span>
 
     ```csharp
         /// <summary>
@@ -1157,9 +1157,9 @@ ms.locfileid: "67694556"
         }
     ```
 
-5.  <span data-ttu-id="45390-519">Agregue un método para recuperar el texto almacenado en el archivo se encuentra en su *archivos de almacenamiento de Azure* y *deserializar* en una lista.</span><span class="sxs-lookup"><span data-stu-id="45390-519">Add a method to retrieve the text stored in the file located in your *Azure Storage File* and *deserialize* it into a list.</span></span>
+5.  <span data-ttu-id="2feb8-519">Agregue un método para recuperar el texto almacenado en el archivo que se encuentra en el *archivo de Azure Storage* y deserializarlo en una lista.</span><span class="sxs-lookup"><span data-stu-id="2feb8-519">Add a method to retrieve the text stored in the file located in your *Azure Storage File* and *deserialize* it into a list.</span></span>
 
-6.  <span data-ttu-id="45390-520">Una vez completado este proceso, el método vuelve a habilita a la mirada para que el usuario puede agregar más formas a la escena.</span><span class="sxs-lookup"><span data-stu-id="45390-520">Once this process is completed, the method re-enables the gaze so that the user can add more shapes to the scene.</span></span>
+6.  <span data-ttu-id="2feb8-520">Una vez completado este proceso, el método vuelve a habilitar la mirada para que el usuario pueda agregar más formas a la escena.</span><span class="sxs-lookup"><span data-stu-id="2feb8-520">Once this process is completed, the method re-enables the gaze so that the user can add more shapes to the scene.</span></span>
 
     ```csharp
         ///<summary>
@@ -1191,54 +1191,54 @@ ms.locfileid: "67694556"
         }
     ```
 
-7.  <span data-ttu-id="45390-521">Guarde los cambios en Visual Studio antes de volver a Unity.</span><span class="sxs-lookup"><span data-stu-id="45390-521">Save your changes in Visual Studio before returning to Unity.</span></span>
+7.  <span data-ttu-id="2feb8-521">Guarde los cambios en Visual Studio antes de volver a Unity.</span><span class="sxs-lookup"><span data-stu-id="2feb8-521">Save your changes in Visual Studio before returning to Unity.</span></span>
 
-## <a name="chapter-11---build-the-uwp-solution"></a><span data-ttu-id="45390-522">Capítulo 11: Compile la solución UWP</span><span class="sxs-lookup"><span data-stu-id="45390-522">Chapter 11 - Build the UWP Solution</span></span>
+## <a name="chapter-11---build-the-uwp-solution"></a><span data-ttu-id="2feb8-522">Capítulo 11: compilar la solución UWP</span><span class="sxs-lookup"><span data-stu-id="2feb8-522">Chapter 11 - Build the UWP Solution</span></span>
 
-<span data-ttu-id="45390-523">Para comenzar el proceso de compilación:</span><span class="sxs-lookup"><span data-stu-id="45390-523">To begin the Build process:</span></span>
+<span data-ttu-id="2feb8-523">Para comenzar el proceso de compilación:</span><span class="sxs-lookup"><span data-stu-id="2feb8-523">To begin the Build process:</span></span>
 
-1.  <span data-ttu-id="45390-524">Vaya a **archivo** > **configuración de compilación**.</span><span class="sxs-lookup"><span data-stu-id="45390-524">Go to **File** > **Build Settings**.</span></span>
+1.  <span data-ttu-id="2feb8-524">Vaya a **archivos** > **configuración de compilación**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-524">Go to **File** > **Build Settings**.</span></span>
 
-    ![Compilar la aplicación](images/AzureLabs-Lab5-54.png)
+    ![compilar la aplicación](images/AzureLabs-Lab5-54.png)
 
-2.  <span data-ttu-id="45390-526">Haz clic en **Compilación**.</span><span class="sxs-lookup"><span data-stu-id="45390-526">Click **Build**.</span></span> <span data-ttu-id="45390-527">Unity se iniciará un *Explorador de archivos* ventana, donde se debe crear y, a continuación, seleccione una carpeta para compilar la aplicación en.</span><span class="sxs-lookup"><span data-stu-id="45390-527">Unity will launch a *File Explorer* window, where you need to create and then select a folder to build the app into.</span></span> <span data-ttu-id="45390-528">Crear la carpeta y asígnele el nombre *aplicación*.</span><span class="sxs-lookup"><span data-stu-id="45390-528">Create that folder now, and name it *App*.</span></span> <span data-ttu-id="45390-529">A continuación, con el *aplicación* carpeta seleccionada, presione **seleccionar la carpeta**.</span><span class="sxs-lookup"><span data-stu-id="45390-529">Then with the *App* folder selected, press **Select Folder**.</span></span>
+2.  <span data-ttu-id="2feb8-526">Haz clic en **Compilación**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-526">Click **Build**.</span></span> <span data-ttu-id="2feb8-527">Unity iniciará una ventana del *Explorador de archivos* , donde tendrá que crear y seleccionar una carpeta en la que compilar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-527">Unity will launch a *File Explorer* window, where you need to create and then select a folder to build the app into.</span></span> <span data-ttu-id="2feb8-528">Cree esa carpeta ahora y asígnele el nombre *App*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-528">Create that folder now, and name it *App*.</span></span> <span data-ttu-id="2feb8-529">Después, con la carpeta de la *aplicación* seleccionada, presione **Seleccionar carpeta**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-529">Then with the *App* folder selected, press **Select Folder**.</span></span>
 
-3.  <span data-ttu-id="45390-530">Unity empezará a compilar el proyecto para el *aplicación* carpeta.</span><span class="sxs-lookup"><span data-stu-id="45390-530">Unity will begin building your project to the *App* folder.</span></span>
+3.  <span data-ttu-id="2feb8-530">Unity comenzará a compilar el proyecto en la carpeta de la *aplicación* .</span><span class="sxs-lookup"><span data-stu-id="2feb8-530">Unity will begin building your project to the *App* folder.</span></span>
 
-4.  <span data-ttu-id="45390-531">Una vez Unity ha finalizado la compilación (puede tardar algún tiempo), se abrirá un *Explorador de archivos* ventana en la ubicación de la compilación (comprobación de la barra de tareas, tal y como es posible que no siempre aparecen por encima de las ventanas, pero le informará de la adición de un nuevo ventana).</span><span class="sxs-lookup"><span data-stu-id="45390-531">Once Unity has finished building (it might take some time), it will open a *File Explorer* window at the location of your build (check your task bar, as it may not always appear above your windows, but will notify you of the addition of a new window).</span></span>
+4.  <span data-ttu-id="2feb8-531">Una vez que Unity termine de compilar (puede tardar algún tiempo), se abrirá una ventana del *Explorador de archivos* en la ubicación de la compilación (Compruebe la barra de tareas, ya que es posible que no aparezca siempre por encima de las ventanas, pero le notificará la adición de una nueva ventana).</span><span class="sxs-lookup"><span data-stu-id="2feb8-531">Once Unity has finished building (it might take some time), it will open a *File Explorer* window at the location of your build (check your task bar, as it may not always appear above your windows, but will notify you of the addition of a new window).</span></span>
 
-## <a name="chapter-12---deploying-your-application"></a><span data-ttu-id="45390-532">Capítulo 12 - implementación de la aplicación</span><span class="sxs-lookup"><span data-stu-id="45390-532">Chapter 12 - Deploying your application</span></span>
+## <a name="chapter-12---deploying-your-application"></a><span data-ttu-id="2feb8-532">Capítulo 12: implementación de la aplicación</span><span class="sxs-lookup"><span data-stu-id="2feb8-532">Chapter 12 - Deploying your application</span></span>
 
-<span data-ttu-id="45390-533">Para implementar la aplicación:</span><span class="sxs-lookup"><span data-stu-id="45390-533">To deploy your application:</span></span>
+<span data-ttu-id="2feb8-533">Para implementar la aplicación:</span><span class="sxs-lookup"><span data-stu-id="2feb8-533">To deploy your application:</span></span>
 
-1.  <span data-ttu-id="45390-534">Navegue hasta la *aplicación* carpeta que creó en el [último capítulo](#chapter-11---build-the-uwp-solution).</span><span class="sxs-lookup"><span data-stu-id="45390-534">Navigate to the *App* folder which was created in the [last Chapter](#chapter-11---build-the-uwp-solution).</span></span> <span data-ttu-id="45390-535">Verá un archivo con el nombre de las aplicaciones, con la extensión '.sln', que debería haga doble clic en, por lo que para abrirlo en *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="45390-535">You will see a file with your apps name, with the '.sln' extension, which you should double-click, so to open it within *Visual Studio*.</span></span>
+1.  <span data-ttu-id="2feb8-534">Navegue hasta la carpeta de la *aplicación* que se creó en el [último capítulo](#chapter-11---build-the-uwp-solution).</span><span class="sxs-lookup"><span data-stu-id="2feb8-534">Navigate to the *App* folder which was created in the [last Chapter](#chapter-11---build-the-uwp-solution).</span></span> <span data-ttu-id="2feb8-535">Verá un archivo con el nombre de la aplicación, con la extensión '. sln ', en la que debe hacer doble clic para abrirlo en *Visual Studio*.</span><span class="sxs-lookup"><span data-stu-id="2feb8-535">You will see a file with your apps name, with the '.sln' extension, which you should double-click, so to open it within *Visual Studio*.</span></span>
 
-2.  <span data-ttu-id="45390-536">En el **plataforma de solución**, seleccione **x86, equipo Local**.</span><span class="sxs-lookup"><span data-stu-id="45390-536">In the **Solution Platform**, select **x86, Local Machine**.</span></span>
+2.  <span data-ttu-id="2feb8-536">En la **plataforma**de la solución, seleccione **x86, equipo local**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-536">In the **Solution Platform**, select **x86, Local Machine**.</span></span>
 
-3.  <span data-ttu-id="45390-537">En el **configuración de la solución** seleccione **depurar**.</span><span class="sxs-lookup"><span data-stu-id="45390-537">In the **Solution Configuration** select **Debug**.</span></span>
+3.  <span data-ttu-id="2feb8-537">En la **configuración de soluciones** , seleccione Depurar.</span><span class="sxs-lookup"><span data-stu-id="2feb8-537">In the **Solution Configuration** select **Debug**.</span></span>
 
-    > <span data-ttu-id="45390-538">Para el Microsoft HoloLens, quizá le resulte más fácil establecer esto en *máquina remota*, de modo que no están atados a su equipo.</span><span class="sxs-lookup"><span data-stu-id="45390-538">For the Microsoft HoloLens, you may find it easier to set this to *Remote Machine*, so that you are not tethered to your computer.</span></span> <span data-ttu-id="45390-539">Sin embargo, necesitará también hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="45390-539">Though, you will need to also do the following:</span></span>
-    > - <span data-ttu-id="45390-540">Conocer el **dirección IP** de su HoloLens, que se encuentra dentro de la **configuración** > **red e Internet**  >   **Wi-Fi** > **opciones avanzadas**; IPv4 es la dirección que debe usar.</span><span class="sxs-lookup"><span data-stu-id="45390-540">Know the **IP Address** of your HoloLens, which can be found within the **Settings** > **Network & Internet** > **Wi-Fi** > **Advanced Options**; the IPv4 is the address you should use.</span></span> 
-    > - <span data-ttu-id="45390-541">Asegúrese de **modo de programador** es **en**; se encuentra en **configuración** > **actualización y seguridad**  >  **Para los desarrolladores**.</span><span class="sxs-lookup"><span data-stu-id="45390-541">Ensure **Developer Mode** is **On**; found in **Settings** > **Update & Security** > **For developers**.</span></span>
+    > <span data-ttu-id="2feb8-538">En el caso de Microsoft HoloLens, es posible que le resulte más fácil establecer esto en el *equipo remoto*, de modo que no esté anclado al equipo.</span><span class="sxs-lookup"><span data-stu-id="2feb8-538">For the Microsoft HoloLens, you may find it easier to set this to *Remote Machine*, so that you are not tethered to your computer.</span></span> <span data-ttu-id="2feb8-539">Sin embargo, también tendrá que hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="2feb8-539">Though, you will need to also do the following:</span></span>
+    > - <span data-ttu-id="2feb8-540">Conozca la **dirección IP** de HoloLens, que se encuentra en la red de **configuración** > &**Opciones avanzadas**de**Wi-Fi** > de**Internet** > ; la IPv4 es la dirección que debe usar.</span><span class="sxs-lookup"><span data-stu-id="2feb8-540">Know the **IP Address** of your HoloLens, which can be found within the **Settings** > **Network & Internet** > **Wi-Fi** > **Advanced Options**; the IPv4 is the address you should use.</span></span> 
+    > - <span data-ttu-id="2feb8-541">Asegurarse de que el **modo de desarrollador** está **activado**; se encuentra en **configuración** > **Actualizar & seguridad** > **para los desarrolladores**.</span><span class="sxs-lookup"><span data-stu-id="2feb8-541">Ensure **Developer Mode** is **On**; found in **Settings** > **Update & Security** > **For developers**.</span></span>
 
-    ![Implementar solución](images/AzureLabs-Lab5-55.png)
+    ![implementar solución](images/AzureLabs-Lab5-55.png)
 
-4.  <span data-ttu-id="45390-543">Vaya a la **compilar** menú y haga clic en **implementar solución** para transferir localmente la aplicación en el equipo.</span><span class="sxs-lookup"><span data-stu-id="45390-543">Go to the **Build** menu and click on **Deploy Solution** to sideload the application to your machine.</span></span>
+4.  <span data-ttu-id="2feb8-543">Vaya al menú  compilar y haga clic en **implementar solución** para transferir localmente la aplicación a la máquina.</span><span class="sxs-lookup"><span data-stu-id="2feb8-543">Go to the **Build** menu and click on **Deploy Solution** to sideload the application to your machine.</span></span>
 
-5.  <span data-ttu-id="45390-544">La aplicación debería aparecer ahora en la lista de las aplicaciones instaladas, listas para iniciar y probado.</span><span class="sxs-lookup"><span data-stu-id="45390-544">Your App should now appear in the list of installed apps, ready to be launched and tested!</span></span>
+5.  <span data-ttu-id="2feb8-544">La aplicación debe aparecer ahora en la lista de aplicaciones instaladas, lista para iniciarse y probarse.</span><span class="sxs-lookup"><span data-stu-id="2feb8-544">Your App should now appear in the list of installed apps, ready to be launched and tested!</span></span>
 
-## <a name="your-finished-azure-functions-and-storage-application"></a><span data-ttu-id="45390-545">El Azure Functions y la aplicación de almacenamiento finalizado</span><span class="sxs-lookup"><span data-stu-id="45390-545">Your finished Azure Functions and Storage Application</span></span>
+## <a name="your-finished-azure-functions-and-storage-application"></a><span data-ttu-id="2feb8-545">La aplicación de almacenamiento y Azure Functions finalizada</span><span class="sxs-lookup"><span data-stu-id="2feb8-545">Your finished Azure Functions and Storage Application</span></span>
 
-<span data-ttu-id="45390-546">Enhorabuena, compila una aplicación de realidad mixta que aprovecha los servicios de la funciones de Azure y el almacenamiento de Azure.</span><span class="sxs-lookup"><span data-stu-id="45390-546">Congratulations, you built a mixed reality app that leverages both the Azure Functions and Azure Storage services.</span></span> <span data-ttu-id="45390-547">La aplicación podrá dibujar en los datos almacenados y proporcionar una acción basada en esos datos.</span><span class="sxs-lookup"><span data-stu-id="45390-547">Your app will be able to draw on stored data, and provide an action based on that data.</span></span>
+<span data-ttu-id="2feb8-546">Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha los servicios Azure Functions y Azure Storage.</span><span class="sxs-lookup"><span data-stu-id="2feb8-546">Congratulations, you built a mixed reality app that leverages both the Azure Functions and Azure Storage services.</span></span> <span data-ttu-id="2feb8-547">La aplicación podrá dibujar en datos almacenados y proporcionar una acción basada en esos datos.</span><span class="sxs-lookup"><span data-stu-id="2feb8-547">Your app will be able to draw on stored data, and provide an action based on that data.</span></span>
 
-![final producto-end](images/AzureLabs-Lab5-00.png)
+![final del producto final](images/AzureLabs-Lab5-00.png)
 
-## <a name="bonus-exercises"></a><span data-ttu-id="45390-549">Ejercicios de bonificación</span><span class="sxs-lookup"><span data-stu-id="45390-549">Bonus exercises</span></span>
+## <a name="bonus-exercises"></a><span data-ttu-id="2feb8-549">Ejercicios de bonus</span><span class="sxs-lookup"><span data-stu-id="2feb8-549">Bonus exercises</span></span>
 
-### <a name="exercise-1"></a><span data-ttu-id="45390-550">Ejercicio 1</span><span class="sxs-lookup"><span data-stu-id="45390-550">Exercise 1</span></span>
+### <a name="exercise-1"></a><span data-ttu-id="2feb8-550">Ejercicio 1</span><span class="sxs-lookup"><span data-stu-id="2feb8-550">Exercise 1</span></span>
 
-<span data-ttu-id="45390-551">Cree una segunda spawn punto y registro que se creó un objeto desde el punto de generar.</span><span class="sxs-lookup"><span data-stu-id="45390-551">Create a second spawn point and record which spawn point an object was created from.</span></span> <span data-ttu-id="45390-552">Al cargar el archivo de datos, reproducir las formas que se generan a partir de la ubicación que se crearon originalmente.</span><span class="sxs-lookup"><span data-stu-id="45390-552">When you load the data file, replay the shapes being spawned from the location they originally were created.</span></span>
+<span data-ttu-id="2feb8-551">Cree un segundo punto de generación y grabe el punto de generación a partir del que se creó un objeto.</span><span class="sxs-lookup"><span data-stu-id="2feb8-551">Create a second spawn point and record which spawn point an object was created from.</span></span> <span data-ttu-id="2feb8-552">Al cargar el archivo de datos, reproduzca las formas que se van a generar desde la ubicación en la que se crearon originalmente.</span><span class="sxs-lookup"><span data-stu-id="2feb8-552">When you load the data file, replay the shapes being spawned from the location they originally were created.</span></span>
 
-### <a name="exercise-2"></a><span data-ttu-id="45390-553">Ejercicio 2</span><span class="sxs-lookup"><span data-stu-id="45390-553">Exercise 2</span></span>
+### <a name="exercise-2"></a><span data-ttu-id="2feb8-553">Ejercicio 2</span><span class="sxs-lookup"><span data-stu-id="2feb8-553">Exercise 2</span></span>
 
-<span data-ttu-id="45390-554">Crear un método para reiniciar la aplicación, en lugar de tener que volver a abrirlo cada vez.</span><span class="sxs-lookup"><span data-stu-id="45390-554">Create a way to restart the app, rather than having to re-open it each time.</span></span> <span data-ttu-id="45390-555">**Cargar escenas** es un buen lugar para comenzar.</span><span class="sxs-lookup"><span data-stu-id="45390-555">**Loading Scenes** is a good spot to start.</span></span> <span data-ttu-id="45390-556">Después de hacer eso, cree una forma de borrar la lista almacenada en *Azure Storage*, de modo que pueden restablecerse fácilmente desde su aplicación.</span><span class="sxs-lookup"><span data-stu-id="45390-556">After doing that, create a way to clear the stored list in *Azure Storage*, so that it can be easily reset from your app.</span></span> 
+<span data-ttu-id="2feb8-554">Cree una manera de reiniciar la aplicación, en lugar de tener que volver a abrirla cada vez.</span><span class="sxs-lookup"><span data-stu-id="2feb8-554">Create a way to restart the app, rather than having to re-open it each time.</span></span> <span data-ttu-id="2feb8-555">La **carga de escenas** es un buen punto de partida.</span><span class="sxs-lookup"><span data-stu-id="2feb8-555">**Loading Scenes** is a good spot to start.</span></span> <span data-ttu-id="2feb8-556">Después de hacerlo, cree una manera de borrar la lista almacenada en *Azure Storage*, para que se pueda restablecer fácilmente desde la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2feb8-556">After doing that, create a way to clear the stored list in *Azure Storage*, so that it can be easily reset from your app.</span></span> 
