@@ -1,37 +1,37 @@
 ---
-title: Optimización sensor
-description: Cómo usar el sensor de optimización de la utilidad que se encuentra en la configuración de HoloLens.
+title: Optimización del sensor
+description: Cómo usar la utilidad de optimización de sensores que se encuentra en la configuración de HoloLens.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: sensores, calibrar, calibración, optimizar, configuración, procedimientos
+keywords: sensores, calibración, calibrado, optimizar, configuración, procedimientos
 ms.openlocfilehash: 5d81cbd98809c6cbacdc48d9099168c5bc05a300
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59602638"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63517040"
 ---
-# <a name="sensor-tuning"></a>Optimización sensor
+# <a name="sensor-tuning"></a>Optimización del sensor
 
 >[!WARNING]
->Esta aplicación ya no está disponible en HoloLens a partir de Windows Update 10 de abril de 2018. Los sensores ahora recalibrar a sí mismos automáticamente. 
+>Esta aplicación ya no está disponible en HoloLens a partir de la actualización 2018 de abril de Windows 10. Los sensores ahora se recalibran automáticamente. 
 
-El sensor de utilidad de optimización permite HoloLens actualizar su información de calibración del sensor. Ejecutar la aplicación puede mejorar la calidad de holograma.
+La utilidad de optimización de sensores permite que HoloLens actualice su información de calibración del sensor. La ejecución de esta aplicación puede mejorar la calidad de los hologramas.
 
-1. Abrir configuración de la aplicación
+1. Abrir la aplicación de configuración
 
-   ![Configuración de aplicaciones en HoloLens](images/settingssensortuning-500px.png)
+   ![Configuración de la aplicación en HoloLens](images/settingssensortuning-500px.png)
   
-2. Seleccione el sistema
+2. Seleccionar sistema
 
-   ![Página del sistema en la aplicación configuración](images/systemsensortuning-500px.png)
+   ![Página del sistema de la aplicación de configuración](images/systemsensortuning-500px.png)
   
-3. Seleccione Utilidades
+3. Seleccionar utilidades
 
    ![Página de utilidades en la aplicación configuración](images/utilitiessensortuning-500px.png)
   
-4. Desplácese hacia abajo hasta la optimización Sensor
+4. Desplazarse hacia abajo hasta optimizar sensor
 
-   ![Sensor de ajuste en la página de utilidades](images/sensortuningsettingsapp-500px.png)
+   ![Página de utilidades de optimización de sensores](images/sensortuningsettingsapp-500px.png)

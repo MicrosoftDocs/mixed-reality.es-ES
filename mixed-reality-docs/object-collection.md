@@ -1,6 +1,6 @@
 ---
 title: Colección de objetos
-description: Colección de objetos es un control de diseño que le permite disponer de una matriz de objetos en una forma 3D predefinida.
+description: Colección de objetos es un control de diseño que ayuda a diseñar una matriz de objetos en una forma tridimensional predefinida.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
@@ -15,35 +15,35 @@ ms.locfileid: "66813891"
 ---
 # <a name="object-collection"></a>Colección de objetos
 
-Colección de objetos es un control de diseño que le permite disponer de una matriz de objetos en una forma 3D predefinida. Admite diversos estilos de superficie - **plano, cilindro, esfera** y **radial**. Puede ajustar el radio y el tamaño de los objetos y el espacio entre ellos. Colección de objetos es compatible con cualquier objeto desde Unity - 2D y 3D. En el  **[Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , hemos creado el script de Unity y ejemplos que le ayudarán a crean una colección de objetos.
+Colección de objetos es un control de diseño que ayuda a diseñar una matriz de objetos en una forma tridimensional predefinida. Admite varios estilos de superficie: **plano, cilindro, esfera** y **radial**. Puede ajustar el radio y el tamaño de los objetos y el espacio que hay entre ellos. La colección de objetos admite cualquier objeto de Unity, tanto en 2D como en 3D. En el **[Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , hemos creado scripts de Unity y ejemplos que le ayudarán a crear una colección de objetos.
 
-![Colección de objetos usado en la tabla periódico de la aplicación de elementos](images/640px-objectcollection-hero-640px.jpg)<br>
-*Ejemplos del uso de la colección de objetos*
+![Colección de objetos utilizada en la tabla periódica de la aplicación Elements](images/640px-objectcollection-hero-640px.jpg)<br>
+*Ejemplos de uso de la colección de objetos*
 
-## <a name="object-collection-examples"></a>Ejemplos de la colección de objetos
+## <a name="object-collection-examples"></a>Ejemplos de colección de objetos
 
-[Tabla periódica de los elementos](periodic-table-of-the-elements.md) es una aplicación de ejemplo que muestra cómo funciona la colección de objetos. Colección de objetos utiliza para diseñar los cuadros de elemento químico 3D en formas diferentes.
+[La tabla periódica de los elementos](periodic-table-of-the-elements.md) es una aplicación de ejemplo que muestra cómo funciona la colección de objetos. Utiliza la colección de objetos para colocar los cuadros de elementos químicos 3D en diferentes formas.
 
-![Ejemplos de colección de objetos que se muestra en la tabla periódico de la aplicación de elementos](images/periodictable-collections-1000px.jpg)<br>
-*Ejemplos de colección de objetos que se muestra en la tabla periódico de la aplicación de ejemplo de elementos*
+![Ejemplos de colección de objetos que se muestran en la tabla periódica de la aplicación Elements](images/periodictable-collections-1000px.jpg)<br>
+*Ejemplos de colección de objetos mostrados en la tabla periódica de la aplicación de ejemplo Elements*
 
-### <a name="3d-objects"></a>Objetos 3D
+### <a name="3d-objects"></a>objetos 3D
 
-Puede usar la colección de objetos para diseñar objetos 3D importados. El ejemplo siguiente muestra un plano y un diseño de cilindro de algunos objetos 3D silla.
+Puede utilizar la colección de objetos para colocar los objetos 3D importados. En el ejemplo siguiente se muestra un plano y una distribución cilíndrica de algunos objetos de la silla 3D.
 
-![Ejemplos de plano y los diseños cilíndricos de objetos 3D](images/objectcollection-3dobjects-1000px.jpg)<br>
-*Ejemplos de plano y los diseños cilíndricos de objetos 3D*
+![Ejemplos de diseños de plano y cilíndrico de objetos 3D](images/objectcollection-3dobjects-1000px.jpg)<br>
+*Ejemplos de diseños de plano y cilíndrico de objetos 3D*
 
-### <a name="2d-objects"></a>Objetos 2D
+### <a name="2d-objects"></a>objetos 2D
 
-También puede usar imágenes en 2D con la colección de objetos. Los ejemplos siguientes muestran cómo 2D imágenes se pueden mostrar en una cuadrícula.
+También puede usar imágenes 2D con la colección de objetos. En los siguientes ejemplos se muestra cómo se pueden mostrar imágenes 2D en una cuadrícula.
 
-![Un ejemplo de imágenes en 2D con la colección de objetos](images/640px-layout-3dobjects-3.jpg)
+![Ejemplo de imágenes 2D con colección de objetos](images/640px-layout-3dobjects-3.jpg)
 
-![Un ejemplo de imágenes en 2D con la colección de objetos](images/640px-layout-2dimages.jpg)<br>
-*Ejemplos del uso de colección de objetos con imágenes en 2D*
+![Ejemplo de imágenes 2D con colección de objetos](images/640px-layout-2dimages.jpg)<br>
+*Ejemplos de uso de colecciones de objetos con imágenes 2D*
 
 ## <a name="see-also"></a>Vea también
-* [Secuencias de comandos y prefabricados para la colección de objetos en el Kit de herramientas de realidad mixta en GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+* [Scripts y Prefabs para la colección de objetos en el kit de herramientas de realidad mixta en GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite](app-bar-and-bounding-box.md)

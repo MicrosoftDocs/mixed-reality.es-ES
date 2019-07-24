@@ -1,12 +1,12 @@
 ---
 layout: LandingPage
-title: Aplicaciones de ejemplo y tutoriales
+title: Tutoriales y aplicaciones de ejemplo
 description: Proporciona ejemplos de código y tutoriales sobre el desarrollo de realidad mixta.
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, tutorial
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, tutorial
 ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -14,34 +14,34 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67415399"
 ---
-# <a name="tutorials-and-sample-apps"></a>Aplicaciones de ejemplo y tutoriales
+# <a name="tutorials-and-sample-apps"></a>Tutoriales y aplicaciones de ejemplo
 
-Actualmente, todos nuestros tutoriales y aplicaciones de ejemplo están en función de Unity.  Como hemos desarrollar contenido para otras plataformas y los motores, encontrará bajo el encabezado correspondiente en la tabla de contenido.
+Actualmente, todos nuestros tutoriales y aplicaciones de ejemplo se basan en Unity.  A medida que desarrollamos contenido para otros motores y plataformas, los encontrará en el encabezado correspondiente en la tabla de contenido.
 
 ## <a name="mr-learning-modules"></a>Módulos de aprendizaje de MR
 
-Los módulos de aprendizaje MR están diseñados para ayudar a los desarrolladores aprender técnicas y prácticas recomendadas para desarrollar aplicaciones de realidad mixta.  Los módulos iniciales para HoloLens 2 e implementan Mixed Reality Toolkit 2.0 (MRTK 2.0).
-* El módulo básico está diseñado para mostrar cómo configurar su proyecto con MRTK, así como implementar la interfaz de usuario, la asignación espacial e interacciones básicas y avanzadas de desarrolladores
+Los módulos de aprendizaje MR están diseñados para ayudar a los desarrolladores a aprender las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta.  Los módulos iniciales son para HoloLens 2 e implementan el kit de herramientas de realidad mixta 2,0 (MRTK 2,0).
+* El módulo base está pensado para mostrar a los desarrolladores cómo configurar su proyecto con MRTK, así como implementar la interfaz de usuario, la asignación espacial y las interacciones básicas y avanzadas.
 
 ## <a name="open-source-sample-apps"></a>Aplicaciones de ejemplo de código abierto
 
-Las aplicaciones de ejemplo de código abierto son aplicaciones que se han creado nuestros equipos y se ha proporcionado el código fuente para que podrían verlo y aprenda de nuestros proyectos a los desarrolladores.
+Las aplicaciones de ejemplo de código abierto son aplicaciones creadas por nuestros equipos y hemos proporcionado el código fuente para que los desarrolladores puedan verla y aprender de nuestros proyectos.
 
 ## <a name="mixed-reality-academy-tutorials"></a>Tutoriales de la Academia de realidad mixta
 
-La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea con archivos de proyecto correspondientes: 
-* Los tutoriales cubren 100, 200 y 300 temas nivel, en el que: Fundamentos de proyectos de nivel 100 cubiertas, bloques de creación de nivel 200 cubre core MR e integración del servicio de nivel 300 cubiertas en la nube.
-* Mayoría de los cursos cubre los conceptos aplicables a HoloLens e inmersivos (VR). 
-* Cada tutorial está organizado por capítulo e incluir más demostraciones en vídeo de los conceptos clave. 
-* Un equipo con Windows 10 con el valor correcto [herramientas instaladas](install-the-tools.md) es un requisito previo comunes para completar cada tutorial.
+La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea con los archivos de proyecto correspondientes: 
+* Los tutoriales cubren los temas de nivel 100, 200 y 300, en los que: en el nivel 100 se describen los conceptos básicos de los proyectos, el nivel 200 cubre los principales bloques de creación 300 y la integración del servicio en la nube.
+* La mayoría de los cursos cubren los conceptos que se aplican a los auriculares HoloLens y envolventes (VR). 
+* Cada tutorial está organizado por capítulos y la mayoría de las demostraciones en vídeo de los conceptos clave. 
+* Un equipo con Windows 10 que tenga [instaladas las herramientas](install-the-tools.md) correctas es un requisito previo común para completar cada tutorial.
 
 >[!NOTE]
->Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
+>Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
 
 <br>
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
                             <li>
-                                    <a href="holograms-100.md" title="Conceptos básicos de MR 100" data-linktype="absolute-path">
+                                    <a href="holograms-100.md" title="Principios de MR 100" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -51,8 +51,8 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Conceptos básicos de MR 100: Introducción a Unity</h3>
-                                                    <p>Creación de una aplicación de realidad mixta básico con Unity. Este proyecto, a continuación, puede actuar como una plantilla de partida para cualquier aplicación MR que desea compilar en Unity.</p>
+                                                    <h3>Principios básicos 100: Introducción a Unity</h3>
+                                                    <p>Cree una aplicación básica de realidad mixta con Unity. A continuación, este proyecto puede servir como una plantilla de inicio para cualquier aplicación MR que quiera compilar en Unity.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -60,7 +60,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                </a>
                             </li>
                             <li>
-                                  <a href="holograms-101.md" title="Conceptos básicos de MR 101" data-linktype="absolute-path">
+                                  <a href="holograms-101.md" title="Principios de MR 101" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -70,8 +70,8 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Conceptos básicos de MR 101: Proyecto completo con el dispositivo</h3>
-                                                    <p>Configurar un proyecto completo, presentación de core mixto características de realidad (mirada, gestos, voz, sonido espacial y asignación espacial) usa un dispositivo HoloLens.</p>
+                                                    <h3>Principios básicos 101: Completar proyecto con dispositivo</h3>
+                                                    <p>Configure un proyecto completo, introduciendo características básicas de realidad mixta (con miras, gestos, voz, sonido espacial y asignación espacial) mediante un dispositivo HoloLens.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -79,7 +79,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                </a>
                             </li>
                             <li>
-                                <a href="holograms-101e.md" title="Conceptos básicos de MR 101E" data-linktype="absolute-path">
+                                <a href="holograms-101e.md" title="Aspectos básicos de MR 101E" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -89,8 +89,8 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Conceptos básicos de MR 101E: Proyecto completo con el emulador</h3>
-                                                    <p>Configurar un proyecto completo, presentación de core mixto características de realidad (mirada, gestos, voz, sonido espacial y asignación espacial) mediante el emulador de HoloLens.</p>
+                                                    <h3>101E de datos básicos de MR: Proyecto completo con el emulador</h3>
+                                                    <p>Configure un proyecto completo, introduciendo características básicas de realidad mixta (con miras, gestos, voz, sonido espacial y asignación espacial) mediante el emulador de HoloLens.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -109,7 +109,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                           </div>
                                           <div class="cardText">
                                               <h3>Entrada MR 210: Mirada</h3>
-                                              <p>Mirada es el primer formulario de entrada y revela el reconocimiento y la intención del usuario. Reconocimiento contextual va a agregar a su cursor y hologramas, si quiere aprovechar lo que la aplicación conoce mirada del usuario.</p>
+                                              <p>Mira la primera forma de entrada y revela la intención y el reconocimiento del usuario. Agregará reconocimiento contextual al cursor y a los hologramas, aprovechando al máximo todo lo que la aplicación conoce sobre la mirada del usuario.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -128,7 +128,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                           </div>
                                           <div class="cardText">
                                               <h3>Entrada MR 211: Gesto</h3>
-                                              <p>Los gestos convierten la intención del usuario en acción. Con los gestos, los usuarios pueden interactuar con hologramas. En este curso, aprenderá a realizar un seguimiento de las manos del usuario, responder a entradas del usuario y proporcionar comentarios según el estado de la mano y la ubicación.</p>
+                                              <p>Los gestos convierten la intención del usuario en acción. Con los gestos, los usuarios pueden interactuar con los hologramas. En este curso, aprenderá a realizar un seguimiento de las manos del usuario, responder a los datos proporcionados por el usuario y enviar comentarios en función del estado y la ubicación de la mano.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -147,7 +147,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                           </div>
                                           <div class="cardText">
                                               <h3>Entrada MR 212: Voz</h3>
-                                              <p>Voz nos permite interactuar con nuestra hologramas de una manera fácil y natural. En este curso, aprenderá a que los usuarios sea consciente de los comandos de voz disponibles, los comentarios que se ha oído un comando de voz y usar dictado para comprender lo que indica que el usuario.</p>
+                                              <p>Voice nos permite interactuar con nuestros hologramas de una manera sencilla y natural. En este curso, aprenderá a que los usuarios conozcan los comandos de voz disponibles, proporcionan comentarios sobre la escucha de un comando de voz y usan el dictado para comprender lo que está diciendo el usuario.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -166,7 +166,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                           </div>
                                           <div class="cardText">
                                               <h3>Entrada MR 213: Controladores de movimiento</h3>
-                                              <p>Este curso explorará los modos de visualización de los controladores de movimiento en inmersivos (VR), control de eventos de entrada y asociar elementos de interfaz de usuario personalizados para los controladores.</p>
+                                              <p>En este curso se explorarán las formas de visualizar los controladores de movimiento en auriculares envolventes (VR), el control de eventos de entrada y la Asociación de elementos de interfaz de usuario personalizados a los controladores.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -174,7 +174,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                               </a>
                             </li>   
                               <li>
-                              <a href="holograms-220.md" title="MR 220 espacial" data-linktype="absolute-path">
+                              <a href="holograms-220.md" title="MR espacial 220" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -184,8 +184,8 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 220 espacial: Sonido espacial</h3>
-                                              <p>Sonido espacial breathes vida en hologramas y les da presencia. En este curso, aprenderá a usar un sonido espacial a hologramas cero en el mundo circundante, proporcionar comentarios durante las interacciones y usar audio para encontrar sus hologramas.</p>
+                                              <h3>MR espacial 220: Sonido espacial</h3>
+                                              <p>El sonido espacial respire la vida en los hologramas y les da la presencia. En este curso, aprenderá a usar el sonido espacial para los hologramas en el mundo circundante, enviar comentarios durante las interacciones y usar el audio para buscar los hologramas.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -193,7 +193,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                               </a>
                             </li>      
                                <li>
-                               <a href="holograms-230.md" title="MR 230 espacial" data-linktype="absolute-path">
+                               <a href="holograms-230.md" title="MR espacial 230" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -203,8 +203,8 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 230 espacial: Asignación espacial</h3>
-                                              <p>Asignación espacial reúne el mundo real y el mundo virtual. Podrá explorar a los sombreadores y usarlas para visualizar el espacio. A continuación, aprenderá a simplificar la malla del salón en planos simples, proporcionar comentarios acerca de cómo colocar hologramas en superficies del mundo real y explorar los efectos visuales de oclusión.</p>
+                                              <h3>MR espacial 230: Asignación espacial</h3>
+                                              <p>La asignación espacial aporta el mundo real y el mundo virtual juntos. Explorará los sombreadores y los usará para visualizar el espacio. A continuación, aprenderá a simplificar la malla de salón en planos sencillos, proporcionar comentarios sobre cómo colocar hologramas en superficies del mundo real y explorar efectos visuales de oclusión.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -212,7 +212,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                              </a>
                             </li> 
                                 <li>
-                                <a href="holograms-240.md" title="MR compartir 240" data-linktype="absolute-path">
+                                <a href="holograms-240.md" title="Uso compartido de MR 240" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -222,8 +222,8 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 240 de uso compartido: Varios dispositivos HoloLens</h3>
-                                              <p>¡Nuestro proyecto //Build 2016! Configurar un proyecto completo con sistemas de coordenadas que se comparten entre los dispositivos HoloLens, permitiendo a los usuarios formen parte de un mundo holográfico compartido.</p>
+                                              <h3>Uso compartido de MR 240: Varios dispositivos HoloLens</h3>
+                                              <p>¡ Nuestro proyecto de//Build 2016! Configure un proyecto completo con sistemas de coordenadas compartidos entre dispositivos de HoloLens, lo que permite a los usuarios participar en un mundo holográfica compartido.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -231,7 +231,7 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                              </a>
                             </li> 
                                  <li>
-                                   <a href="mixed-reality-250.md" title="MR compartir 250" data-linktype="absolute-path">
+                                   <a href="mixed-reality-250.md" title="Uso compartido de MR 250" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -241,8 +241,8 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>MR 250 de uso compartido: HoloLens e inmersivos</h3>
-                                              <p>En nuestro proyecto //Build 2017, demostramos la creación de una aplicación que aprovecha las ventajas únicas de HoloLens e inmersivos (VR) dentro de una experiencia entre dispositivos compartida.</p>
+                                              <h3>Uso compartido de MR 250: HoloLens y auriculares envolvente</h3>
+                                              <p>En nuestro proyecto de//Build 2017, se muestra la creación de una aplicación que aprovecha las ventajas exclusivas de los auriculares de HoloLens y envolventes (VR) dentro de una experiencia compartida entre dispositivos.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -253,11 +253,11 @@ La Academia de realidad mixta es un conjunto de tutoriales paso a paso en línea
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriales de realidad mixta y servicios de Azure
 
-Estos tutoriales independientes son excelentes para aprender a implementar los diferentes servicios de Azure en su proyecto de Unity.  Estos tutoriales se basan en cualquier HoloLens (gen 1) o nuestro Inmersivos, pero las lecciones sobre el uso de los servicios deben transferirse a casi cualquier dispositivo.
+Estos tutoriales independientes son excelentes para aprender a implementar diferentes servicios de Azure en el proyecto de Unity.  Estos tutoriales se basan en HoloLens (1ª generación) o en nuestros auriculares más detallados, pero las lecciones sobre el uso de los servicios se deben transferir a la mayoría de los dispositivos.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
-                                   <a href="mr-azure-301.md" title="El Sr. y Azure 301" data-linktype="absolute-path">
+                                   <a href="mr-azure-301.md" title="MR y Azure 301" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -267,8 +267,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 301: Traducción de idiomas</h3>
-                                              <p>Con Azure Translator Text API, la aplicación de realidad mixta puede traducir voz a texto en otro idioma. Obtenga información sobre cómo hacerlo en este curso!</p>
+                                              <h3>MR y Azure 301: Traducción de idiomas</h3>
+                                              <p>Con Azure Translator Text API, la aplicación de realidad mixta puede traducir la voz al texto en otro idioma. Vea cómo hacerlo en este curso.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -276,7 +276,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-302.md" title="El Sr. y Azure 302" data-linktype="absolute-path">
+                                   <a href="mr-azure-302.md" title="MR y Azure 302" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -286,8 +286,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y 302 de Azure: Visión de equipo</h3>
-                                              <p>Usar Azure Computer Vision API en una aplicación de realidad mixta para procesamiento de imágenes y análisis, sin entrenar un modelo.</p>
+                                              <h3>MR y Azure 302: Computer Vision</h3>
+                                              <p>Use Azure Computer Vision API en una aplicación de realidad mixta para el procesamiento y el análisis de imágenes, sin entrenar un modelo.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -295,7 +295,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-302b.md" title="El Sr. y 302b de Azure" data-linktype="absolute-path">
+                                   <a href="mr-azure-302b.md" title="MR y Azure 302B" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -305,8 +305,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y 302b Azure: Visión personalizada</h3>
-                                              <p>Obtenga información sobre cómo entrenar un modelo de aprendizaje automático y utilizar el modelo entrenado para el análisis y procesamiento de imágenes.</p>
+                                              <h3>MR y Azure 302B: Visión personalizada</h3>
+                                              <p>Aprenda a entrenar un modelo de aprendizaje automático y a usar el modelo entrenado para el procesamiento y el análisis de imágenes.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -314,7 +314,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>                            
                                  <li>
-                                   <a href="mr-azure-303.md" title="El Sr. y 303 de Azure" data-linktype="absolute-path">
+                                   <a href="mr-azure-303.md" title="MR y Azure 303" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -324,8 +324,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 303: Comprensión del lenguaje natural</h3>
-                                              <p>Este curso le mostrará cómo usar el servicio Azure Language Understanding (LUIS) para agregar la comprensión del lenguaje natural en la aplicación de realidad mixta.</p>
+                                              <h3>MR y Azure 303: Comprensión del lenguaje natural</h3>
+                                              <p>Este curso le enseñará a usar el servicio Azure Language Understanding (LUIS) para agregar comprensión de lenguaje natural a la aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -333,7 +333,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-304.md" title="El Sr. y Azure 304" data-linktype="absolute-path">
+                                   <a href="mr-azure-304.md" title="MR y Azure 304" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -343,8 +343,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 304: Reconocimiento de caras</h3>
-                                              <p>Obtenga información sobre cómo usar Azure Face API para realizar el reconocimiento y detección de caras en la aplicación de realidad mixta.</p>
+                                              <h3>MR y Azure 304: Reconocimiento facial</h3>
+                                              <p>Aprenda a usar Azure Face API para realizar la detección de caras y el reconocimiento en la aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -352,7 +352,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-305.md" title="El Sr. y Azure 305" data-linktype="absolute-path">
+                                   <a href="mr-azure-305.md" title="MR y Azure 305" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -362,8 +362,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 305: Funciones y almacenamiento</h3>
-                                              <p>En este curso obtendrá información sobre cómo crear y usar Azure Functions y almacenar datos en Azure Storage, dentro de una aplicación de realidad mixta.</p>
+                                              <h3>MR y Azure 305: Funciones y almacenamiento</h3>
+                                              <p>En este curso aprenderá a crear y usar Azure Functions y almacenar datos en Azure Storage, dentro de una aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -371,7 +371,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-306.md" title="El Sr. y Azure 306" data-linktype="absolute-path">
+                                   <a href="mr-azure-306.md" title="MR y Azure 306" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -381,8 +381,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 306: Transmisión de vídeo</h3>
-                                              <p>Aprenda a usar Azure Media Services para transmitir vídeo de 360 grados dentro de una experiencia envolvente (VR) de Windows Mixed Reality.</p>
+                                              <h3>MR y Azure 306: Vídeo de streaming</h3>
+                                              <p>Aprenda a usar Azure Media Services para transmitir vídeo de 360 grados dentro de una experiencia de Windows Mixed Reality inmersivo (VR).</p>
                                           </div>
                                       </div>
                                   </div>
@@ -390,7 +390,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-307.md" title="El Sr. y Azure 307" data-linktype="absolute-path">
+                                   <a href="mr-azure-307.md" title="MR y Azure 307" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -400,8 +400,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 307: Aprendizaje automático</h3>
-                                              <p>Aproveche Azure Machine Learning Studio dentro de la aplicación de realidad mixta para implementar un gran número de algoritmos de machine learning (ML).</p>
+                                              <h3>MR y Azure 307: Aprendizaje automático</h3>
+                                              <p>Aproveche Azure Machine Learning Studio dentro de la aplicación de realidad mixta para implementar un gran número de algoritmos de aprendizaje automático (ML).</p>
                                           </div>
                                       </div>
                                   </div>
@@ -409,7 +409,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-308.md" title="El Sr. y Azure 308" data-linktype="absolute-path">
+                                   <a href="mr-azure-308.md" title="MR y Azure 308" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -419,8 +419,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 308: Notificaciones entre dispositivos</h3>
-                                              <p>En este curso, obtendrá información sobre cómo usar varios servicios de Azure para entregar notificaciones de inserción y escena cambia de una aplicación de PC a una aplicación de realidad mixta.</p>
+                                              <h3>MR y Azure 308: Notificaciones entre dispositivos</h3>
+                                              <p>En este curso, aprenderá a usar varios servicios de Azure para proporcionar notificaciones de envío y cambios de escenas desde una aplicación de PC a una aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -428,7 +428,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li>
                                  <li>
-                                   <a href="mr-azure-309.md" title="El Sr. y Azure 309" data-linktype="absolute-path">
+                                   <a href="mr-azure-309.md" title="MR y Azure 309" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -438,8 +438,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 309: Información de la aplicación</h3>
-                                              <p>Usar el servicio de Azure Application Insights para recopilar análisis de comportamiento del usuario dentro de una aplicación de realidad mixta.</p>
+                                              <h3>MR y Azure 309: Application Insights</h3>
+                                              <p>Use el servicio Aplicación de Azure Insights para recopilar análisis sobre el comportamiento del usuario en una aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -447,7 +447,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li> 
                                  <li>
-                                   <a href="mr-azure-310.md" title="El Sr. y Azure 310" data-linktype="absolute-path">
+                                   <a href="mr-azure-310.md" title="MR y Azure 310" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -457,8 +457,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 310: Detección de objetos</h3>
-                                              <p>Entrenar un modelo de aprendizaje automático y use el modelo entrenado para reconocer objetos similares y sus posiciones en el mundo físico.</p>
+                                              <h3>MR y Azure 310: Detección de objetos</h3>
+                                              <p>Entrenar un modelo de aprendizaje automático y usar el modelo entrenado para reconocer objetos similares y sus posiciones en el mundo físico.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -466,7 +466,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li> 
                                  <li>
-                                   <a href="mr-azure-311.md" title="El Sr. y 311 de Azure" data-linktype="absolute-path">
+                                   <a href="mr-azure-311.md" title="MR y Azure 311" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -476,8 +476,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y 311 de Azure: Microsoft Graph</h3>
-                                              <p>Obtenga información sobre cómo conectarse a los servicios de Microsoft Graph desde dentro de una aplicación de realidad mixta.</p>
+                                              <h3>MR y Azure 311: Microsoft Graph</h3>
+                                              <p>Obtenga información sobre cómo conectarse a Microsoft Graph Services desde una aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -485,7 +485,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li> 
                                  <li>
-                                   <a href="mr-azure-312.md" title="El Sr. y Azure 312" data-linktype="absolute-path">
+                                   <a href="mr-azure-312.md" title="MR y Azure 312" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -495,8 +495,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 312: Integración de bot</h3>
-                                              <p>Crear y distribuir un bot con Microsoft Bot Framework v4 y comunicarse con él en una aplicación de realidad mixta.</p>
+                                              <h3>MR y Azure 312: Integración de bot</h3>
+                                              <p>Cree e implemente un bot con Microsoft bot Framework V4 y comuníquese con él en una aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
@@ -504,7 +504,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                               </a>
                             </li> 
                                  <li>
-                                   <a href="mr-azure-313.md" title="El Sr. y Azure 313" data-linktype="absolute-path">
+                                   <a href="mr-azure-313.md" title="MR y Azure 313" data-linktype="absolute-path">
                               <div class="cardSize">
                                   <div class="cardPadding">
                                       <div class="card">
@@ -514,8 +514,8 @@ Estos tutoriales independientes son excelentes para aprender a implementar los d
                                               </div>
                                           </div>
                                           <div class="cardText">
-                                              <h3>El Sr. y Azure 313: Servicio IoT Hub</h3>
-                                              <p>Obtenga información sobre cómo implementar el servicio Azure IoT Hub en una máquina virtual y visualizar los datos en HoloLens.</p>
+                                              <h3>MR y Azure 313: Servicio de IoT Hub</h3>
+                                              <p>Aprenda a implementar Azure IoT Hub servicio en una máquina virtual y a visualizar los datos en HoloLens.</p>
                                           </div>
                                       </div>
                                   </div>

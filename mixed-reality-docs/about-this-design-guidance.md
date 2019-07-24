@@ -5,7 +5,7 @@ author: MRWied
 ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, diseño, introducción, instrucciones
+keywords: Windows Mixed Reality, diseño, introducción, guía
 ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -17,69 +17,69 @@ ms.locfileid: "67414159"
 
 ## <a name="introduction"></a>Introducción
 
-**Hola y bienvenida a la Guía de diseño de realidad mixta.**
+**Hola y le agradecemos su guía de diseño para la realidad mixta.**
 
-Esta guía es creada por Microsoft diseñadores, desarrolladores, administradores de programas y los investigadores, cuyo trabajo abarca holográficas dispositivos, como HoloLens y envolventes dispositivos, como los auriculares Acer y HP Windows Mixed Reality. Considere la posibilidad de este trabajo como un conjunto de temas sobre cómo diseñar para las pantallas de Windows montada head.
+Esta guía la crean los diseñadores de Microsoft, desarrolladores, administradores de programas e investigadores, cuyo trabajo abarca dispositivos holográficas, como HoloLens y dispositivos envolventes, como Acer y HP Windows con auriculares de realidad mixta. Tenga en cuenta este trabajo como un conjunto de temas sobre cómo diseñar pantallas montadas por el cabezal de Windows.
 
-Con usted, estamos entrando en una nueva era muy emocionante de la informática. Avances en muestra montada head, espacial sonido, sensores, concienciación medioambiental, entrados y gráficos en 3D guiarnos y lo desafiamos a nosotros, para definir nuevos tipos de experiencias--frontera nuevo considerablemente más personal, intuitiva, envolvente y contextual.
+Con usted, estamos introduciendo una nueva era enormemente emocionante de informática. Los avances en las pantallas montadas por el cabezal, el sonido espacial, los sensores, el reconocimiento medioambiental, la entrada y los gráficos 3D nos conducen y desafiamos para definir nuevos tipos de experiencias: una nueva frontera es mucho más personal, intuitiva, envolvente y contextual.
 
-Siempre que sea posible, le ofreceremos instrucciones de diseño que requieren acción con el código relacionado en GitHub. Dicho esto, ya que nos estamos aprendizaje derecha con usted, no siempre podremos ofrecer específico, que requieren acción aquí. Algunos de lo que compartimos estará siguiendo el espíritu de 'lecciones que aprendimos' y 'evitar bajando esa ruta de acceso'.
+Siempre que sea posible, ofreceremos orientación de diseño accionable con código relacionado en GitHub. Dicho esto, como estamos aprendiendo directamente con usted, no siempre podremos ofrecer instrucciones específicas y accionables aquí. Algunos de los elementos que compartimos estarán en el espíritu de las ' lecciones que hemos aprendido ' y ' no vamos a bajar ese camino '.
 
-Y lo sabemos, se generarán muchas innovaciones en la comunidad general de diseño. Por lo tanto, esperamos trabajar estrechamente con usted, aprendizaje del usuario y comunicarse con nosotros. Por nuestra parte, haremos todo lo posible para compartir la información, incluso si son exploratorias y anticipada con la intención de permitiendo a los desarrolladores y diseñadores con ideas de diseño, los procedimientos recomendados y los controles relacionados de código abierto, patrones y aplicaciones de ejemplo que puede usar directamente en su propio trabajo.
+Y sabemos que muchas innovaciones se generarán en la comunidad de diseño de mayor tamaño. Por lo tanto, esperamos tener noticias suyas, aprender de usted y trabajar en estrecha colaboración con usted. En nuestro caso, haremos todo lo posible para compartir la información, incluso si son exploratorios y pronto con el propósito de permitir a los desarrolladores y diseñadores el diseño del diseño, los procedimientos recomendados y los controles de código abierto, los patrones y las aplicaciones de ejemplo relacionados que puede usar. directamente en su propio trabajo.
 
 ## <a name="overview"></a>Información general
 
-Le presentamos una introducción rápida de cómo se organiza esta guía de diseño. Encontrará las secciones para cada una de estas áreas con vínculos a varios artículos.
-* **[Empezar a trabajar con diseño](mixed-reality.md)**  : lea nuestras ideas de alto nivel y comprender los principios se siguen.
-* **[Interacciones instinctual](interaction-fundamentals.md)**  -Obtenga información sobre la entrada, los comandos, navegación y otros conceptos básicos de interacción para diseñar sus aplicaciones.
-* **[Estilo](typography.md)**  -hacer que la aplicación agradable con color, movimiento y tipografía.
-* **[Patrones de aplicaciones](types-of-mixed-reality-apps.md)**  -Obtenga información sobre cómo las aplicaciones pueden abarcar escenarios en entornos reales y envolventes.
-* **[Controles](interactable-object.md)**  -usar controles y patrones como bloques de creación para crear su propia experiencia de aplicación.
-* **[Aplicaciones de ejemplo](design.md#sample-apps)**  -crear experiencias inmejorables en ejemplos diseñado y creado por nuestro equipo.
-* **[Herramientas y recursos de diseño](design.md#design-tools)**  -ponga en marcha su proyecto con las herramientas y plantillas de diseño.
+A continuación se muestra una introducción rápida de cómo se organiza esta guía de diseño. Encontrará secciones para cada una de estas áreas con vínculos a varios artículos.
+* Introducción al **[diseño](mixed-reality.md)** : Lea nuestras ideas de alto nivel y comprenda los principios que seguimos.
+* **[Interacciones de instinctual](interaction-fundamentals.md)** : Obtenga información sobre los aspectos básicos de la interacción de entrada, comandos, navegación y otros conceptos para diseñar aplicaciones.
+* **[Estilo](typography.md)** : haga que su aplicación sea agradables mediante el uso de color, tipografía y movimiento.
+* **[Patrones](types-of-mixed-reality-apps.md)** de aplicaciones: Obtenga información sobre cómo las aplicaciones pueden abarcar escenarios en entornos de solo lectura y del mundo real.
+* **[Controles](interactable-object.md)** : Use controles y patrones como bloques de creación para crear su propia experiencia de la aplicación.
+* **[Aplicaciones de ejemplo](design.md#sample-apps)** : cree experiencias excelentes a partir de los ejemplos diseñados y creados por nuestro equipo.
+* **[Herramientas de diseño y recursos](design.md#design-tools)** : inicie el proyecto con plantillas y herramientas de diseño.
 
-Para todos los mencionados anteriormente, nuestro objetivo es entregar la combinación correcta de texto, ilustraciones y los diagramas y vídeos, por lo que verá nos experimentar con distintos formatos y técnicas, todo ello con la intención de proporcionar lo que necesitan. Y en los próximos meses, ampliaremos esta taxonomía para incluir un conjunto más amplio de temas de diseño. Siempre que sea posible, que le ofreceremos un aviso sobre las próximas novedades, por tanto, tenga que comprobar de nuevo.
+Para todo lo anterior, nos esforzamos por ofrecer la combinación correcta de texto, ilustraciones y diagramas, y vídeos, por lo que nos vemos experimentando con distintos formatos y técnicas, todo ello con la intención de ofrecer lo que necesita. Y, en los próximos meses, ampliaremos esta taxonomía para incluir un conjunto más amplio de temas de diseño. Siempre que sea posible, le daremos un aviso sobre lo que va a continuación, por lo que debe volver a realizar la comprobación.
 
 ## <a name="objectives"></a>Objetivos
 
-Este es un vistazo a algunos objetivos de alto nivel que se indicará este trabajo para que pueda comprender dónde que regresamos de
+A continuación se muestra una visión rápida de algunos objetivos de alto nivel que son la guía de este trabajo para que pueda comprender desde dónde proviene
 
 ### <a name="help-solve-customer-challenges"></a>Ayudar a resolver los desafíos del cliente
 
 ![Ayudar a resolver los desafíos del cliente](images/500px-fix-a-broken-switch-with-hololens.jpg) <br>
 
-Se aprendieron con muchos de los mismos problemas que hacer, y somos conscientes es cómo un desafío de su trabajo. Es emocionante explorar y definir una frontera nuevo... y también puede resultar desalentadora. Procedimientos recomendados y paradigmas antiguos que se vuelva a considerar; los clientes necesitan nuevas experiencias; y hay muchas posibles para la innovación. Dado que queremos que este trabajo sea tan completa como bien posibles, moverse más allá de una guía de estilo. Nuestro objetivo es entregar un conjunto completo de la Guía de diseño que cubre mixto de interacción de la realidad, los comandos, navegación, entrada y el estilo: todos se basa en los escenarios y comportamiento humano. 
+Nos Wrestle con muchos de los mismos problemas que usted hace, y sabemos cómo es desafiante su trabajo. Es emocionante explorar y definir una nueva frontera... también puede ser desalentadora. Es necesario volver a pensar en los paradigmas y prácticas anteriores; los clientes necesitan nuevas experiencias; y hay muchas posibilidades de innovación. Dado que deseamos que este trabajo sea lo más completo posible, puede ir más allá de una guía de estilo. Nos esforzamos por ofrecer un conjunto completo de instrucciones de diseño que cubra la interacción con la realidad mixta, los comandos, la navegación, la entrada y el estilo, todo ello en escenarios y comportamientos humanos. 
 
-### <a name="point-the-way-towards-a-new-more-human-way-of-computing"></a>Señalar el camino hacia una forma novedosa y más humano de la informática
+### <a name="point-the-way-towards-a-new-more-human-way-of-computing"></a>Apuntar a una forma nueva y más humana de calcular
 
-![Señalar el camino hacia una forma novedosa y más humano de la informática](images/500px-man-and-women-with-holograph-on-table.png)<br>
+![Apuntar a una forma nueva y más humana de calcular](images/500px-man-and-women-with-holograph-on-table.png)<br>
 
-Si bien es importante centrarse en los problemas del cliente específico, también queremos insertar nosotros mismos pensar más allá de eso y para ofrecer más. Creemos un diseño excelente no es "solo" solución de problemas, sino una manera de activar significativamente evolución humana. Nuevas formas de comportamiento humano; nuevas formas de personas relacionadas con, sus actividades y sus entornos; nuevas formas de ver nuestro mundo... Queremos que nuestra orientación para reflejar todas estas formas más ambiciosos de pensamiento demasiado. 
+Aunque es importante centrarse en problemas específicos del cliente, también queremos inserciones para pensar más allá y ofrecer más. Creemos que un diseño excelente no es "simplemente" resolver problemas, sino también una manera de activar de forma significativa la evolución humana. Nuevas formas de comportamiento humano; nuevas formas de personas relacionadas con ellos mismos, sus actividades y sus entornos; nuevas formas de ver nuestro mundo... queremos que nuestras instrucciones reflejen también todas estas formas de pensar. 
 
-### <a name="meet-creators-where-they-are"></a>Cumplir con los creadores de dónde estén
+### <a name="meet-creators-where-they-are"></a>Conozca a los creadores donde están
 
-![Cumplir con los creadores de dónde estén](images/500px-creators.jpg) <br>
+![Conozca a los creadores donde están](images/500px-creators.jpg) <br>
 
-Esperamos más audiencias esta guía sea útil. Tiene diferentes habilidades (a partir de, intermedio, avanzado), use herramientas diferentes (Unity, DirectX, C++, C#, otros), están familiarizados con diversas plataformas (Windows, iOS, Android), proceden de distintos fondos (mobile, enterprise, juegos ) y estamos trabajando en los equipos de diferente tamaño (solo, pequeño, mediano, grande). Por lo tanto, esta guía puede verse con necesidades y perspectivas diferentes. Siempre que sea posible, intentamos mantener esta diversidad en mente, y hacer que nuestra orientación relevantes tanto como sea posible a tantas personas como sea posible. Además, sabemos que muchos de ustedes ya están en GitHub. Por lo tanto, directamente se vinculará a repositorios de GitHub y foros de conocerte donde ya están. 
+Esperamos que muchas audiencias encuentren esta guía para ser útiles. Tiene diferentes conjuntos de aptitudes (iniciales, intermedios y avanzados), usan diferentes herramientas (Unity, C++DirectX C#,, etc.), están familiarizados con las distintas plataformas (Windows, iOS y Android), provienen de diferentes conocimientos (móviles, empresariales, juegos ) y están trabajando en distintos equipos de tamaño (solo, pequeño, mediano, grande). Por lo tanto, esta guía se puede ver con diferentes perspectivas y necesidades. Siempre que sea posible, intentaremos tener en cuenta esta diversidad y haremos lo que sea más importante como sea posible a tantas personas como sea posible. Además, sabemos que muchos de los ya están en GitHub. Por lo tanto, se vincularán directamente a los foros y repositorioss de GitHub para que se le satisfagan donde ya está. 
 
-### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>Compartir tanto como sea posible, de experimental a explícita
+### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>Comparta todo lo posible, desde experimental hasta explícito
 
-![Compartir tanto como sea posible, de experimental a explícita](images/500px-man-playinggame.jpg) <br>
+![Comparta todo lo posible, desde experimental hasta explícito](images/500px-man-playinggame.jpg) <br>
 
-Uno de los desafíos de la oferta de instrucciones de diseño de este medio nuevo 3D es que no siempre tenemos una guía definitiva para ofrecer. Como usted, nos estamos de aprendizaje, experimentación, creación de prototipos, solución de problemas y el ajuste y ya que alcanzamos obstáculos. En lugar de esperar a que algunos momento futuro mítico cuando tengamos que imaginado, queremos compartir nuestro Pensamiento con usted en tiempo real, incluso si no es concluyente. Por supuesto, nuestro objetivo final es ser definitivos, dondequiera que se puede, clear, proporcionar un diseño flexible orientación asociada al código abierto y que requieren acción en las herramientas de diseño y desarrollo de Microsoft. Pero llegar a ese punto de toma de muchas rondas de iteración y el aprendizaje. Queremos ponerse en contacto con usted y Aprenda con usted, en el camino. Con todo esto en mente, haremos todo lo posible para compartir a medida que avancemos, incluso con nuestro material que es experimental. 
+Uno de los desafíos de ofrecer instrucciones de diseño en este nuevo medio 3D es que no siempre tenemos instrucciones definitivas para ofrecer. Del mismo modo, estamos aprendiendo, experimentando, prototipo, resolviendo problemas y ajustando a medida que se alcanzan los obstáculos. En lugar de esperar a un momento futuro en el que se haya descubierto todo, nos esforzaremos por compartir nuestro pensamiento en tiempo real, incluso si no es concluyente. Por supuesto, nuestro objetivo final es ser definitivo siempre que podamos, proporcionar una guía de diseño flexible y clara relacionada con el código de código abierto y accionable en herramientas de desarrollo y diseño de Microsoft. Pero llegar a ese punto conlleva muchos ciclos de iteración y aprendizaje. Queremos colaborar con usted y aprender con usted a lo largo del proceso. Teniendo todo esto en mente, haremos todo lo posible para compartir a medida que avanzamos, incluso con nuestro material experimental. 
 
-### <a name="the-right-balance-of-global-and-local-design"></a>El equilibrio adecuado entre diseño global y local
+### <a name="the-right-balance-of-global-and-local-design"></a>El equilibrio derecho del diseño global y local
 
-![El equilibrio adecuado entre diseño global y local](images/500px-fluentdesign.jpg) <br>
+![El equilibrio derecho del diseño global y local](images/500px-fluentdesign.jpg) <br>
 
-Ofrecemos dos niveles de la Guía de diseño: globales y locales. Nuestra guía de diseño 'global' se expresa en el [sistema de diseño Fluent](http://fluent.microsoft.com). Detalles de Fluent lo que pensamos sobre conceptos básicos, como la luz, profundidad, movimiento, material y escala a través de todo el diseño de Microsoft, nuestros dispositivos, productos, herramientas y servicios. Es decir, existen diferencias significativas de específico del dispositivo a través de este sistema de mayor tamaño. Por lo tanto, nuestra guía de diseño 'local' para las pantallas montada head describen el diseño para dispositivos holográficas y envolventes que a menudo tener otra entrada y salida de métodos, así como las necesidades de usuario diferente y escenarios. Guía de diseño local abarca temas HMDs exclusivos. Por ejemplo: Entornos 3D y los objetos; entornos compartidos; el uso de sensores, seguimiento de ojo y asignación espacial; y las oportunidades de audio espacial. En nuestra guía probablemente verá nos hacen referencia a estas globales y los aspectos locales. Espero que esto le ayudará en una base más grande del diseño de fondo de su trabajo mientras se aprovecha de las diferencias de diseño entre dispositivos específicos.
+Ofreceremos dos niveles de orientación de diseño: global y local. Nuestra guía de diseño "global" se incorpora en el [sistema de diseño fluida](http://fluent.microsoft.com). Información fluida sobre aspectos básicos como la luz, la profundidad, el movimiento, el material y la escala en todo el diseño de Microsoft, nuestros dispositivos, productos, herramientas y servicios. Dicho esto, existen importantes diferencias específicas del dispositivo en este sistema más grande. Por lo tanto, nuestra guía de diseño "local" para las pantallas montadas por el cabezal describe el diseño de dispositivos holográficas y envolventes que suelen tener distintos métodos de entrada y salida, así como diferentes necesidades y escenarios de usuario. La guía de diseño local trata los temas exclusivos de HMDs. Por ejemplo: entornos y objetos 3D; entornos compartidos; el uso de sensores, seguimiento ocular y asignación espacial; y las oportunidades de audio espacial. A lo largo de nuestras instrucciones, probablemente nos referiremos a ambos aspectos globales y locales. Espero que esto le ayude a realizar su trabajo en una base más grande del diseño mientras aprovecha las diferencias de diseño entre dispositivos específicos.
 
-### <a name="have-a-discussion"></a>Tiene una discusión
+### <a name="have-a-discussion"></a>Tener una discusión
 
-![Tiene una discusión](images/500px-share.jpg) <br>
+![Tener una discusión](images/500px-share.jpg) <br>
 
-Lo más importante, quizás desee ponerse en contacto con usted, la Comunidad de programadores y diseñadores holográficas y envolventes para definir esta fascinante era de diseño. Como se mencionó anteriormente, sabemos que no tenemos todas las respuestas. Que por ¿por qué creemos muchas soluciones interesantes e innovaciones procederán de usted. Nuestro objetivo es estar abierta y disponible para escuchar sobre ellos y analizar con usted en línea y en los eventos y agregar valor siempre que sea posible. Nos complace formar parte de este sorprendentes Comunidad de diseño, embarcarse en una aventura juntos. 
+Quizás lo más importante es que quieramos colaborar con usted, la comunidad de diseñadores y desarrolladores de Holographic y envolventes, para definir esta nueva era emocionante de diseño. Como se mencionó anteriormente, sabemos que no tenemos todas las respuestas. Esta es la razón por la que creemos que muchas interesantes soluciones e innovaciones provienen de usted. Nos esforzamos por estar abierto y disponible para recibir información sobre ellos, y hablaremos con usted en línea y en eventos, y agregaremos valor dondequiera que podamos. Nos complace formar parte de esta impresionante comunidad de diseño y embarcarnos en una aventura. 
 
-## <a name="please-dive-in"></a>Sumérjase.
+## <a name="please-dive-in"></a>Profundice
 
-Esperamos que este artículo introductorio proporciona algún contexto significativo como explorar nuestra guía de diseño. Por favor, profundizar y háganos saber sus opiniones en los foros de GitHub, encontrará vinculados en nuestros artículos, o en Microsoft Design en [Twitter](https://twitter.com/MicrosoftDesign) y [Facebook](https://www.facebook.com/microsoftdesign/). Vamos a compartir diseña el futuro juntos.
+Esperamos que este artículo introductorio proporcione un contexto significativo a medida que Explore nuestra guía de diseño. Profundice y díganos sus pensamientos en los foros de GitHub que encontrará vinculados en nuestros artículos o en Microsoft Design en [Twitter](https://twitter.com/MicrosoftDesign) y [Facebook](https://www.facebook.com/microsoftdesign/). Vamos a diseñar el futuro juntos.

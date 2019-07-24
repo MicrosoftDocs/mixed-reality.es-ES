@@ -1,48 +1,48 @@
 ---
 title: Persistencia en Unity
-description: Persistencia permite a los usuarios anclar hologramas individuales o un área de trabajo siempre que sea que deseen y, a continuación, busque, donde espera durante varias usa de la aplicación.
+description: La persistencia permite a los usuarios anclar hologramas individuales o un área de trabajo donde lo deseen y, después, buscarlos más adelante donde esperan muchos usos de la aplicación.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, persistencia, Unity
 ms.openlocfilehash: b6a67e52b3a5ce724a90eb1a479c5eda74b0c4cb
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605779"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524787"
 ---
 # <a name="persistence-in-unity"></a>Persistencia en Unity
 
-**Namespace:** *UnityEngine.XR.WSA.Persistence*<br>
-**Clase:** *WorldAnchorStore*
+**System.IO** *UnityEngine. XR. WSA. Persistence*<br>
+**Las** *WorldAnchorStore*
 
-El WorldAnchorStore es la clave para crear experiencias holográficas donde hologramas permanecen en posiciones específicas reales entre las instancias de la aplicación. Esto le permite a los usuarios anclan hologramas individuales o un área de trabajo donde desee y, a continuación, más adelante le resulte donde esperan a lo largo de muchos usos de la aplicación.
+WorldAnchorStore es la clave para crear experiencias holográficas en las que los hologramas permanecen en posiciones específicas del mundo real entre instancias de la aplicación. Esto permite a los usuarios anclar hologramas individuales o un área de trabajo dondequiera que deseen y, después, buscarlos más adelante donde esperan muchos usos de la aplicación.
 
-## <a name="how-to-persist-holograms-across-sessions"></a>Cómo conservar hologramas entre sesiones
+## <a name="how-to-persist-holograms-across-sessions"></a>Cómo conservar los hologramas entre sesiones
 
-El WorldAnchorStore le permitirá conservar la ubicación del WorldAnchor entre sesiones. Para conservar realmente hologramas entre sesiones, deberá por separado al realizar un seguimiento de los GameObjects que utilice un delimitador de mundo determinado. A menudo tiene sentido crear una raíz de GameObject con un anclaje del mundo y tener elementos secundarios hologramas delimitadas por él con un desplazamiento de posición local.
+El WorldAnchorStore le permitirá conservar la ubicación de los WorldAnchor de las sesiones. Para conservar los hologramas en todas las sesiones, tendrá que realizar un seguimiento por separado de los GameObjects que usan un delimitador mundial determinado. A menudo tiene sentido crear una raíz GameObject con un delimitador mundial y tener los hologramas secundarios anclados por él con un desplazamiento de posición local.
 
 Para cargar hologramas de sesiones anteriores:
-1. Obtener el WorldAnchorStore
-2. Cargar datos relacionados con el delimitador del mundo que proporciona el identificador del delimitador en el mundo de la aplicación
-3. Cargar un anclaje del mundo desde su Id.
+1. Obtención de WorldAnchorStore
+2. Cargar datos de la aplicación relacionados con el delimitador mundial que le proporciona el identificador del anclaje mundial
+3. Carga de un delimitador mundial desde su identificador
 
-Para guardar hologramas para sesiones futuras:
-1. Obtener el WorldAnchorStore
-2. Guardar un anclaje del mundo especificando un identificador
-3. Guardar datos relacionados con el delimitador del mundo junto con un identificador de la aplicación
+Para guardar los hologramas para las sesiones futuras:
+1. Obtención de WorldAnchorStore
+2. Guardar un delimitador mundial especificando un identificador
+3. Guardar datos de la aplicación relacionados con el delimitador mundial junto con un identificador
 
-### <a name="getting-the-worldanchorstore"></a>Introducción a la WorldAnchorStore
+### <a name="getting-the-worldanchorstore"></a>Obtención de WorldAnchorStore
 
-Queremos mantener una referencia a la WorldAnchorStore en torno a por lo que sabemos que estamos preparados ir cuando desea realizar una operación. Puesto que es una llamada asincrónica, potencialmente tan pronto como inicio, que queremos llamar
+Vamos a mantener una referencia a WorldAnchorStore en torno a lo que sabemos que estamos preparados para realizar una operación. Dado que se trata de una llamada asincrónica, posiblemente en cuanto se inicia, queremos llamar a
 
 ```
 WorldAnchorStore.GetAsync(StoreLoaded);
 ```
 
-En este caso, StoreLoaded es nuestro controlador para cuando haya terminado de cargarse el WorldAnchorStore:
+En este caso, StoreLoaded es el controlador para cuando se haya completado la carga de WorldAnchorStore:
 
 ```
 private void StoreLoaded(WorldAnchorStore store)
@@ -51,11 +51,11 @@ private void StoreLoaded(WorldAnchorStore store)
 }
 ```
 
-Ahora tenemos una referencia a la WorldAnchorStore que usaremos para guardar y cargar los delimitadores de mundo específico.
+Ahora tenemos una referencia a WorldAnchorStore que usaremos para guardar y cargar delimitadores del mundo específicos.
 
 ### <a name="saving-a-worldanchor"></a>Guardar un WorldAnchor
 
-Para guardar, simplemente tenemos lo que se va a guardar y pasarlo en el WorldAnchor obtuvimos antes cuando desea guardar el nombre. Nota: al intentar guardar dos anclajes en la misma cadena se producirá un error (almacén. Guardar se devolverá false). Es preciso eliminar el anterior guardar antes de guardar una nueva:
+Para ahorrar, simplemente necesitamos asignar un nombre a lo que estamos guardando y pasarlo en el WorldAnchor que obtuvimos antes cuando queremos ahorrar. Nota: Si intenta guardar dos delimitadores en la misma cadena, se producirá un error (Store. Save devolverá FALSE). Debe eliminar el guardado anterior antes de guardar el nuevo:
 
 ```
 private void SaveGame()
@@ -69,7 +69,7 @@ private void SaveGame()
 }
 ```
 
-### <a name="loading-a-worldanchor"></a>Cargar un WorldAnchor
+### <a name="loading-a-worldanchor"></a>Carga de un WorldAnchor
 
 Y para cargar:
 
@@ -85,11 +85,11 @@ private void LoadGame()
 }
 ```
 
-Además, podemos usar almacén. Delete() para quitar un delimitador que se guardó anteriormente y el almacén. Clear() para quitar todos los datos previamente guardados.
+Además, podemos usar Store. Elimine () para quitar un delimitador que se guardó y almacenó anteriormente. Borre () para quitar todos los datos guardados previamente.
 
-### <a name="enumerating-existing-anchors"></a>Enumerar los anclajes de existentes
+### <a name="enumerating-existing-anchors"></a>Enumerar delimitadores existentes
 
-Para descubrir los delimitadores almacenados previamente, llame a GetAllIds.
+Para detectar los delimitadores almacenados previamente, llame a GetAllIds.
 
 ```
 string[] ids = this.store.GetAllIds();
@@ -99,15 +99,15 @@ for (int index = 0; index < ids.Length; index++)
 }
 ```
 
-## <a name="persisting-holograms-for-multiple-devices"></a>Conservar hologramas para varios dispositivos.
+## <a name="persisting-holograms-for-multiple-devices"></a>Persistencia de hologramas para varios dispositivos
 
-Puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure espacial delimitadores</a> para crear un anclaje en la nube duraderas desde un WorldAnchor local, lo que la aplicación, a continuación, puede ubicar a través de varios HoloLens, dispositivos iOS y Android, incluso si esos dispositivos no están presentes en el mismo hora.  Dado que los anclajes en la nube son persistentes, varios dispositivos con el tiempo pueden cada ver contenido representado en relación con ese delimitador en la misma ubicación física.
+Puede usar los <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a> para crear un delimitador de la nube durable desde un WorldAnchor local, que la aplicación puede ubicar en varios dispositivos de HoloLens, iOS y Android, incluso si esos dispositivos no están presentes al mismo tiempo.  Dado que los delimitadores en la nube son persistentes, varios dispositivos a lo largo del tiempo pueden ver el contenido representado en relación con ese delimitador en la misma ubicación física.
 
-Para empezar a crear experiencias compartidas en Unity, pruebe el minuto 5 <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">guías de inicio rápido de Azure espacial delimitadores Unity</a>.
+Para empezar a crear experiencias compartidas en Unity, pruebe las guías de <a href="https://docs.microsoft.com/azure/spatial-anchors/unity-overview" target="_blank">Inicio rápido</a>de 5 minutos de anclaje espacial de Azure.
 
-Una vez que esté en marcha con delimitadores espacial de Azure, a continuación, puede <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">crear y localizar los anclajes en Unity</a>.
+Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">crear y buscar delimitadores en Unity</a>.
 
 ## <a name="see-also"></a>Vea también
-* [Persistencia de anclaje espacial](coordinate-systems.md#spatial-anchor-persistence)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure delimitadores espaciales</a>
-* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">Delimitadores espaciales Azure SDK para Unity</a>
+* [Persistencia del delimitador espacial](coordinate-systems.md#spatial-anchor-persistence)
+* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* <a href="https://docs.microsoft.com/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">SDK de anclajes espaciales de Azure para Unity</a>

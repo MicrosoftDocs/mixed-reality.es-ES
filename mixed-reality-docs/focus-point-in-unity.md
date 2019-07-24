@@ -1,37 +1,37 @@
 ---
 title: Punto de enfoque en Unity
-description: Ajuste manual estabilidad holograma en Unity estableciendo el punto de enfoque
+description: Ajuste manual de la estabilidad de holograma en Unity estableciendo el punto de enfoque
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, punto de enfoque, el plano de foco, el plano de estabilización, punto estabilización, reprojection, LSR, búfer de profundidad
+keywords: Unity, punto de enfoque, plano de enfoque, plano de estabilización, punto de estabilización, Reproyección, LSR, búfer de profundidad
 ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605740"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63525461"
 ---
 # <a name="focus-point-in-unity"></a>Punto de enfoque en Unity
 
-**Namespace:** *UnityEngine.XR.WSA*<br>
+**System.IO** *UnityEngine. XR. WSA*<br>
 **Tipo**: *HolographicSettings*
 
-El [centrarse punto](hologram-stability.md#stabilization-plane) puede conjunto para proporcionar una sugerencia sobre cómo realizar mejor estabilización en el hologramas actualmente de HoloLens que se va a mostrar.
+Se puede establecer el [punto de enfoque](hologram-stability.md#stabilization-plane) para proporcionar a HoloLens una sugerencia sobre cómo realizar mejor la estabilización en los hologramas que se muestran actualmente.
 
-Si desea establecer el punto de enfoque en Unity, debe establecerse cada fotograma mediante *HolographicSettings.SetFocusPointForFrame()*. Si no se establece el punto de enfoque para un marco, se usará el plano de estabilización de forma predeterminada.
+Si desea establecer el punto de enfoque en Unity, debe establecer cada fotograma mediante *HolographicSettings. SetFocusPointForFrame ()* . Si no se establece el punto de enfoque para un marco, se usará el plano de estabilización predeterminado.
 
 > [!NOTE]
-> De forma predeterminada, los nuevos proyectos de Unity tienen la opción "Habilitar compartida de búfer de profundidad" establecido.  Con esta opción, una aplicación de Unity que se ejecutan en un auricular envolvente de escritorio o un HoloLens que ejecutan Windows 10 de abril de 2018 Update (RS4) o posteriormente enviará el búfer de profundidad para Windows para optimizar la estabilidad holograma automáticamente, sin la aplicación especificar un punto de enfoque:
-> * En un escritorio auriculares envolventes, esto le permitirá reprojection de basado en profundidad por píxel.
-> * En un HoloLens que ejecutan el Windows 10 de abril de 2018 Update o posterior, esto analizará el búfer de profundidad para seleccionar automáticamente un plano de estabilización óptimo.
+> De forma predeterminada, los nuevos proyectos de Unity tienen establecida la opción "habilitar el uso compartido del búfer de profundidad".  Con esta opción, una aplicación de Unity que se ejecute en un casco de escritorio envolvente o en una HoloLens que ejecute la actualización 2018 de abril de Windows 10 (RS4) o posterior enviará el búfer de profundidad a Windows para optimizar la estabilidad del holograma automáticamente, sin que la aplicación especifique un punto de enfoque:
+> * En un casco de escritorio envolvente, esto habilitará la Reproyección basada en profundidad por píxel.
+> * En una HoloLens que ejecute la actualización de abril de 2018 de Windows 10 o posterior, se analizará el búfer de profundidad para elegir un plano de estabilización óptimo automáticamente.
 >
-> Cualquier enfoque debe proporcionar aún mejor calidad de imagen sin trabajo explícita por la aplicación para seleccionar un punto de enfoque cada fotograma.  Tenga en cuenta que si proporciona manualmente un punto de enfoque, que invalidará el comportamiento automático que se ha descrito anteriormente y normalmente se reducirá la estabilidad holograma.  Por lo general, sólo debe especificar un punto de enfoque manual cuando la aplicación se ejecuta en un HoloLens que aún no se ha actualizado a Windows Update 10 de abril de 2018.
+> Cualquier enfoque debe proporcionar una calidad de imagen incluso mejor sin que la aplicación Seleccione un punto de enfoque cada fotograma.  Tenga en cuenta que si proporciona un punto de enfoque manualmente, se invalidará el comportamiento automático descrito anteriormente y se reducirá la estabilidad del holograma.  Por lo general, solo debe especificar un punto de enfoque manual cuando la aplicación se ejecuta en una HoloLens que todavía no se ha actualizado a la actualización 2018 de abril de Windows 10.
 
 ### <a name="example"></a>Ejemplo
 
-Hay muchas maneras de establecer el punto de enfoque, tal como se sugiere por las sobrecargas disponibles en el *SetFocusPointForFrame* función estática. Presentados a continuación es un ejemplo sencillo para establecer el plano de foco en el objeto proporcionado en cada fotograma:
+Hay muchas maneras de establecer el punto de enfoque, como se sugiere por las sobrecargas disponibles en la función estática *SetFocusPointForFrame* . A continuación se muestra un ejemplo sencillo para establecer el plano de enfoque en el objeto proporcionado en cada fotograma:
 
 ```cs
 public GameObject focusedObject;
@@ -48,7 +48,7 @@ void Update()
 }
 ```
 
-Tenga en cuenta que el código simple anterior puede acabar reducir estabilidad holograma si el objeto enfocado termina detrás del usuario.  Esto es por eso normalmente debe establecer la opción "Habilitar compartida de búfer de profundidad" en lugar de especificar manualmente un punto de enfoque.
+Tenga en cuenta que el código anterior puede acabar reduciendo la estabilidad del holograma si el objeto que tiene el foco termina detrás del usuario.  Este es el motivo por el que normalmente debería establecer "habilitar el uso compartido del búfer de profundidad" en lugar de especificar manualmente un punto de enfoque.
 
 ### <a name="see-also"></a>Vea también
 * [Plano de estabilización](hologram-stability.md#stabilization-plane)

@@ -1,11 +1,11 @@
 ---
 title: Configuración recomendada para Unity
-description: Unity ofrece algunos comportamientos específicos de realidad mixta que puede alternar mediante la configuración del proyecto.
+description: Unity ofrece algunos comportamientos específicos de la realidad mixta que se pueden alternar a través de la configuración del proyecto.
 author: Troy-Ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
-keywords: Unity, la configuración, la realidad mixta
+keywords: Unity, configuración, realidad mixta
 ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -15,80 +15,80 @@ ms.locfileid: "67415449"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
-Unity proporciona un conjunto de opciones predeterminadas que suelen ser el caso promedio para todas las plataformas. Sin embargo, Unity ofrece algunos comportamientos específicos de realidad mixta que puede alternar mediante la configuración del proyecto.
+Unity proporciona un conjunto de opciones predeterminadas que suelen ser el caso promedio de todas las plataformas. Sin embargo, Unity ofrece algunos comportamientos específicos de la realidad mixta que se pueden alternar a través de la configuración del proyecto.
 
-## <a name="performant-environment-set-up"></a>Configuración del entorno de alto rendimiento
+## <a name="performant-environment-set-up"></a>Configuración del entorno de rendimiento
 
 ### <a name="low-quality-settings"></a>Configuración de baja calidad
 
-Es importante modificar el **configuración de calidad de Unity** de su entorno para **Very Low**. Esto le ayudará a asegurarse de que la aplicación se está ejecutando el modo más eficaz en la velocidad de fotogramas adecuada. Esto es muy importante para el desarrollo de Hololens. Para el desarrollo en inmersivos, según las especificaciones del escritorio potenciar la experiencia de realidad virtual, uno puede conseguir aún framerate sin los parámetros de calidad más bajos. 
+Es importante modificar la configuración de **calidad de Unity** de su entorno a **muy baja**. Esto ayudará a garantizar que la aplicación se ejecute de forma adecuada en la velocidad de fotogramas apropiada. Esto es muy importante para el desarrollo de Hololens. Para el desarrollo en auriculares inmersivo, en función de las especificaciones del escritorio que se enciende en la experiencia de VR, todavía se puede lograr una velocidad de fotogramas sin los parámetros de calidad más bajos. 
 
-En Unity 2018 LTS +, el nivel de calidad del proyecto puede establecerse mediante:
+En Unity 2018 LTS +, el nivel de calidad del proyecto se puede establecer de la siguiente manera:
 
-En **editar** > **configuración del proyecto** > **calidad** > Establezca el **predeterminado** haciendo clic en el la flecha hacia abajo a la **Very Low** nivel de calidad
+En **Editar** > **configuración**   del proyecto calidad > establezca el valor predeterminado haciendo clic en la flecha hacia abajo hasta el nivel de calidad muy bajo. > 
 
 ### <a name="lighting-settings"></a>Configuración de iluminación
 
-Al igual que la configuración de la escena de calidad, es importante establecer la configuración óptima de iluminación de la aplicación de realidad mixta. En Unity, la opción de iluminación que normalmente, tendrá el mayor impacto de rendimiento en su escena es **iluminación Global en tiempo real**. Esto se puede desactivar yendo **ventana** > **representación** > **iluminación configuración** > **en tiempo real Iluminación global**. 
+Similar a la configuración de la escena de calidad, es importante establecer una configuración de iluminación óptima para la aplicación de realidad mixta. En Unity, la configuración de iluminación que normalmente tendrá el mayor impacto en el rendimiento de la escena es la **iluminación global en tiempo real**. Para desactivarlo, vaya a la **ventana** > **representación** > de**luz configuración** > de iluminación**global en tiempo real**. 
 
-Hay otra configuración de iluminación, **incorporada iluminación Global**. Esta configuración puede proporcionar un rendimiento y resultados visualmente sorprendente en inmersivos, pero generalmente no es aplicable para el desarrollo de HoloLens. **Incorporada Illumniation Global** solo se calcula para GameObjects estático que generalmente no se encuentran en segundo plano de HoloLens debido a la naturaleza de un entorno cambiante y desconocida.
+Hay otro valor de iluminación, **iluminación global horneada**. Esta configuración puede proporcionar resultados visualmente impactantes y sorprendentes en auriculares envolventes, pero generalmente no es aplicable para el desarrollo de HoloLens. La **Illumniation global cocida** solo se calcula para GameObjects estáticas que normalmente no se encuentran en escenas de HoloLens debido a la naturaleza de un entorno desconocido y cambiante.
 
-Lea [iluminación Global de Unity](https://docs.unity3d.com/Manual/GIIntro.html) para obtener más información. 
+Lea la [iluminación global desde Unity](https://docs.unity3d.com/Manual/GIIntro.html) para obtener más información. 
 
 >[!NOTE]
-> **En tiempo real de iluminación Global** se establece **por escena** y, por tanto, los desarrolladores deben guardar esta propiedad para cada escena de Unity en su proyecto. 
+> La **iluminación global en tiempo real** se establece **por escena** y, por lo tanto, los desarrolladores deben guardar esta propiedad para cada escena de Unity en su proyecto. 
 
-### <a name="single-pass-instancing-rendering-path"></a>Ruta de representación de creación de instancias de paso único
+### <a name="single-pass-instancing-rendering-path"></a>Ruta de representación de instancia de un solo paso
 
-En las aplicaciones de realidad mixta, la escena se representa dos veces, una vez para cada ojo al usuario. En comparación con el desarrollo tradicional en 3D, este doble eficazmente la cantidad de trabajo que debe calcularse. Por lo tanto, es importante seleccionar la ruta de acceso más eficaz de representación en Unity para guardar tanto en tiempo de CPU y GPU. Representación con instancias de paso único optimiza la canalización de representación de Unity para aplicaciones de realidad mixta y, por tanto, se recomienda habilitar esta configuración predeterminada para todos los proyectos. 
+En las aplicaciones de realidad mixta, la escena se representa dos veces, una vez para cada ojo al usuario. En comparación con el desarrollo en 3D tradicional, esto duplica en efecto la cantidad de trabajo que se debe calcular. Por lo tanto, es importante seleccionar la ruta de acceso de representación más eficaz en Unity para ahorrar en el tiempo de CPU y GPU. La representación con instancia de un solo paso optimiza la canalización de representación de Unity para aplicaciones de realidad mixta y, por lo tanto, se recomienda habilitar esta opción de forma predeterminada para cada proyecto. 
 
 Para habilitar esta característica en el proyecto de Unity
-1)  Abra **configuración del Reproductor XR** (vaya a **editar** > **configuración del proyecto** > **Reproductor**  >  **Configuración XR**)
-2) Seleccione **pasar una instancia única** desde el **el método de representación estéreo** menú desplegable (**admite la realidad Virtual** casilla debe estar seleccionada)
+1)  Abra la configuración de el **reproductor XR** (vaya a **Editar** > **configuración** > del proyecto**reproductor** > **XR configuración**)
+2) Seleccione **una instancia de paso único** en el menú desplegable **método de representación de estéreo** (se debe activar la casilla se admite la**realidad virtual** )
 
-Lea los artículos siguientes de Unity para obtener más detalles con este enfoque de representación.
-- [Cómo maximizar el rendimiento de AR y VR con representación estéreo avanzada](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+Lea los siguientes artículos de Unity para obtener más información sobre este enfoque de representación.
+- [Cómo maximizar el rendimiento de AR y VR con la representación avanzada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
 - [Creación de instancias de un solo paso](https://docs.unity3d.com/Manual/SinglePassInstancing.html) 
 
 >[!NOTE]
-> Se produce un problema común con solo pasar una instancia de representación si los desarrolladores ya tienen sombreadores personalizados existentes no escritos para creación de instancias. Después de habilitar esta característica, los desarrolladores que observe algún procesamiento solo GameObjects en un ojo. Esto es porque los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
+> Un problema común con la representación con instancias de paso único se produce si los desarrolladores ya tienen sombreadores personalizados no escritos para la creación de instancias. Después de habilitar esta característica, los desarrolladores pueden observar que algunos GameObjects solo se representan en un ojo. Esto se debe a que los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
 >
-> Consulte [solo pasar estéreo de representación de HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) desde Unity para abordar este problema
+> Consulte [representación de un solo paso estéreo para HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) desde Unity para saber cómo solucionar este problema.
 
-### <a name="enable-depth-buffer-sharing"></a>Habilitar el uso compartido de búfer de profundidad
+### <a name="enable-depth-buffer-sharing"></a>Habilitar uso compartido de búfer de profundidad
 
-Para lograr una mayor estabilidad holograma desde la percepción del usuario, se recomienda habilitar el **uso compartido de búfer de profundidad** propiedad en Unity. Al activar esto, Unity compartirán el mapa de profundidad producido por la aplicación con la plataforma Windows Mixed Reality. La plataforma, a continuación, podrá optimizar mejor estabilidad holograma específicamente para su escena cualquier período determinado que se procesa la aplicación.
+Para lograr una mejor estabilidad del holograma a partir de la percepción del usuario, se recomienda habilitar la propiedad de **uso compartido del búfer de profundidad** en Unity. Al activar esta función, Unity compartirá el mapa de profundidad producido por la aplicación con la plataforma Windows Mixed Reality. La plataforma podrá optimizar mejor la estabilidad de los hologramas específicamente para la escena de cualquier fotograma determinado que se represente en la aplicación.
 
 Para habilitar esta característica en el proyecto de Unity
-1) Abra **configuración del Reproductor XR** (vaya a **editar** > **configuración del proyecto** > **Reproductor**  >  **Configuración XR**)
-2) Seleccione la casilla de verificación **Habilitar uso compartido de búfer de profundidad** en **SDK de realidad Virtual** > **Windows Mixed Reality** expansión (**Virtual Admite la realidad** casilla debe estar seleccionada)
+1) Abra la configuración de el **reproductor XR** (vaya a **Editar** > **configuración** > del proyecto**reproductor** > **XR configuración**)
+2) Active la casilla **Habilitar uso compartido de búfer de profundidad** en SDK > de **realidad virtual**Windows la expansión de la**realidad mixta** (se debe activar la casilla se**admite la realidad virtual** )
 
-Además, se recomienda seleccionar **profundidad de 16 bits** bajo el **formato profundidad** configuración en este panel, especialmente para el desarrollo de Hololens. Selección de 16 bits en comparación con 24 bits reducirá significativamente los requisitos de ancho de banda ya deberán mover o procesar menos datos.
+Además, se recomienda seleccionar profundidad de **16 bits** en la configuración de **formato de profundidad** de este panel, especialmente para el desarrollo de Hololens. Si selecciona 16 bits en comparación con 24 bits, se reducirán significativamente los requisitos de ancho de banda, ya que será necesario desplace o procese menos datos.
 
-En orden para la plataforma Windows Mixed Reality optimizar la estabilidad holograma, se basa en el búfer de profundidad sea precisa y coincide con cualquier hologramas representados en la pantalla. Por lo tanto, con el uso compartido en el búfer de profundidad, es importante al representar el color, también representar profundidad. En Unity, mayoría opaco o TransparentCutout materiales representarán en profundidad de forma predeterminada pero transparente y los objetos de texto por lo general no representarán profundidad aunque se trata de sombreador dependiente, etcetera. 
+Para que la plataforma Windows Mixed Reality optimice la estabilidad del holograma, se basa en el búfer de profundidad para que sea preciso y coincida con cualquier holograma representado en la pantalla. Por lo tanto, con el uso compartido de búfer de profundidad en, es importante al representar el color, también la profundidad de representación. En Unity, la mayoría de los materiales opacos o TransparentCutouts representarán la profundidad de forma predeterminada, pero los objetos transparentes y de texto no suelen representar la profundidad, aunque esto es dependiente del sombreador, etc. 
 
-Si utiliza al sombreador Mixed Reality Kit de herramientas estándar, para representar la profundidad de los objetos transparentes:
-1) Seleccione el material transparente que está usando al sombreador MRTK estándar y abra la ventana del editor de Inspector
-2) Establecer **modo de representación** a **personalizado** , a continuación, establezca **modo** a **transparente** y, por último, establezca **profundidad escribir**a **en**
+Si usa el sombreador estándar del kit de herramientas de realidad mixta, para representar la profundidad de los objetos transparentes:
+1) Seleccione el material de Tranparent que usa el sombreador estándar de MRTK y abra la ventana del editor del inspector.
+2) Establezca **el modo de representación** en **personalizado** y después establezca el **modo** en **transparente** y, por último, establezca **escritura de profundidad** en **activado** .
 
 >[!NOTE]
-> Los desarrolladores deben tenga cuidado con luchas Z al cambiar estos valores junto con la configuración de plano de cerca y lejos de la cámara. Luchas Z se produce cuando dos gameobjects intenta procesar al mismo píxel y debido a limitaciones en la fidelidad del búfer de profundidad (como) profundidad de la z), Unity no puede discernir qué objeto está encima del otro. Observarán a los desarrolladores un parpadeo entre dos objetos del juego cuanto *luchar contra* para el mismo valor de profundidad de z. Esto puede solucionarse al cambiar a formato de 24 bits profundidad tal como habrá un mayor intervalo de valores para cada objeto calcular tras su profundidad z de la cámara.
+> Los desarrolladores deben tener cuidado con las supuestos Z al cambiar estos valores junto con la configuración de plano Near/Far de la cámara. La lucha por Z se produce cuando dos GameObjects intentan representarse en el mismo píxel y debido a las limitaciones de la fidelidad del búfer de profundidad (es decir, profundidad z), Unity no puede discernir qué objeto está delante del otro. Los desarrolladores notarán un parpadeo entre dos objetos de juego mientras *luchan* por el mismo valor de profundidad z. Esto se puede resolver cambiando al formato de profundidad de 24 bits, ya que habrá un intervalo mayor de valores para cada objeto que se va a calcular en función de la profundidad de z de la cámara.
 >
-> Sin embargo, se recomienda, especialmente para Hololens desarrollo, para modificar la cámara cerca de la y planos mucho a un intervalo más pequeño en su lugar y conserva la profundidad de 16 bits en formato. La profundidad de z no lineales se asigna al intervalo de valores a lo largo de la cámara far y near planos. Esto se puede modificar mediante la selección la *cámara principal* en la escena y, en **Inspector**, cambiar el **plano de recorte cercano & mucho** valores para reducir su intervalo (como) desde 1000 m en 100 m u otro valor x, etcetera.)
+> Sin embargo, se recomienda, especialmente para el desarrollo de Hololens, modificar los planos cercanos y alejados de la cámara a un intervalo más pequeño en su lugar y conservar el formato de profundidad de 16 bits. La profundidad z no se asigna linealmente al intervalo de valores de los planos de cámara cercanos y alejados. Para modificarlo, seleccione la *cámara principal* de la escena y, en **Inspector**, cambie los valores **cercanos & plano de recorte lejano** para reducir su rango (es decir, de 1000 a 100m u otro valor x, etc.)
 
-### <a name="building-for-il2cpp"></a>Creación de aplicaciones para IL2CPP
+### <a name="building-for-il2cpp"></a>Compilar para IL2CPP
 
-Unity desusado soporte técnico para .NET de back-end y, por tanto, se recomienda a los desarrolladores usar scripting **IL2CPP** para su UWP de visual studio compila. Aunque esto aporta varias ventajas, compilar la solución de visual studio desde Unity para **Il2CPP** puede ser significativamente más lento que el método de .NET anterior. Por lo tanto, se recomienda encarecidamente seguir los procedimientos recomendados para la compilación **IL2CPP** para ahorrar en tiempo de iteración de desarrollo.
+Unity ha dejado de admitir el back-end de scripting de .NET y, por tanto, se recomienda a los desarrolladores que usen **IL2CPP** para sus compilaciones de Visual Studio de UWP. Aunque esto aporta varias ventajas, la compilación de la solución de Visual Studio desde Unity para **Il2CPP** puede ser significativamente más lenta que el anterior método de .net. Por lo tanto, se recomienda encarecidamente seguir los procedimientos recomendados para crear **IL2CPP** para ahorrar en el tiempo de iteración de desarrollo.
 
-1) Compilación incremental de sacar provecho mediante la creación de su proyecto en el mismo directorio cada vez, volver a usar los archivos compilados previamente allí
-2) Deshabilitar el análisis de software antimalware para su proyecto y carpetas de compilación
-   - Abra **protección de Virus y amenazas** en su aplicación de configuración de Windows 10
-   - Seleccione **Administrar configuración** en **configuración de protección de Virus y amenazas**
-   - Seleccione **exclusiones Add o remove** bajo el **exclusiones** sección
-   - Haga clic en **agregue una exclusión** y seleccione la carpeta contiene el código del proyecto Unity y generar salidas
-3) Usar una SSD para la compilación
+1) Aproveche las compilaciones incrementales compilando el proyecto en el mismo directorio cada vez, reutilizando los archivos creados previamente
+2) Deshabilitar exámenes de software antimalware para el proyecto & carpetas de compilación
+   - Abrir **protección contra amenazas de Virus &** en la aplicación de configuración de Windows 10
+   - Seleccione **Administrar configuración** en **configuración de protección contra amenazas de virus &**
+   - Seleccione **Agregar o quitar exclusiones** en la  sección Exclusiones.
+   - Haga clic en **Agregar una exclusión** y seleccione la carpeta que contiene el código del proyecto de Unity y las salidas de compilación
+3) Uso de SSD para compilar
 
-Lea [optimizar tiempos de compilación para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obtener más información.
+Consulte optimización de los [tiempos de compilación de IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obtener más información.
 
 > [!NOTE]
 > Además, puede resultar útil configurar un [servidor de caché](https://docs.unity3d.com/Manual/CacheServer.html), especialmente para los proyectos de Unity con una gran cantidad de activos (sin contar con los archivos de script), o que cambien constantemente de escenas o activos. Al abrir un proyecto, Unity almacena los activos aplicables en un formato de la memoria caché interna en la máquina del desarrollador. Los elementos se tienen que volver a importar y, por tanto, volver a procesar cuando se modifican. Este proceso se puede realizar una vez y guardar en un servidor de caché, de esta forma se comparte con otros desarrolladores, lo que ahorra tiempo al evitar que cada desarrollador tenga que procesar localmente los nuevos cambios que reimporte.
@@ -97,66 +97,66 @@ Lea [optimizar tiempos de compilación para IL2CPP](https://docs.unity3d.com/Man
 
 ### <a name="holographic-splash-screen"></a>Pantalla de presentación holográfica
 
-HoloLens tiene una clase de mobile CPU y GPU, lo que significa que las aplicaciones pueden tardar un poco más en cargarse. Mientras se carga la aplicación, los usuarios solo verán negro y, por lo que quizás se pregunte qué está ocurriendo. Para confirmar a ellos durante la carga, que puede agregar una pantalla de presentación holográfica.
+HoloLens tiene una CPU y una GPU de clase móvil, lo que significa que las aplicaciones pueden tardar un poco más en cargarse. Mientras se carga la aplicación, los usuarios solo verán el color negro y, por lo tanto, se les preguntará lo que está ocurriendo. Para garantizar la carga, puede Agregar una pantalla de presentación holográfica.
 
-Para activar o desactivar la pantalla de presentación holográfica:
-1) Vaya a **editar** > **configuración del proyecto** > **Reproductor** página
-2) Haga clic en el **Windows Store** pestaña y abra el **imagen presentación** sección
-3) Aplicar la imagen deseada en el **Windows Holographic > imagen presentación holográfica** propiedad.
-    - Si activa o desactiva el **mostrar la pantalla de presentación de Unity** opción habilitará o deshabilitará la pantalla de presentación con marca de Unity. Si no tiene una licencia de Pro de Unity, siempre se mostrará la pantalla de presentación de la marca de Unity.
-    - Si un **Holographic de presentación de imagen** está aplicado, siempre se mostrará, independientemente de si se habilita o deshabilita la casilla de verificación Mostrar la pantalla de presentación de Unity. Especificar una imagen personalizada de presentación holográfica solo está disponible para los desarrolladores con una licencia de Pro de Unity.
+Para alternar la pantalla de presentación de Holographic:
+1) Vaya a **Editar** > configuración > de proyecto página del**reproductor**
+2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
+3) Aplique la imagen deseada en la propiedad **imagen de bienvenida de Windows holographic > Holographic** .
+    - Al alternar la opción **Mostrar pantalla de presentación de Unity** , se habilitará o deshabilitará la pantalla de presentación con la marca Unity. Si no tiene una licencia de Unity Pro, siempre se mostrará la pantalla de presentación con la marca Unity.
+    - Si se aplica una **imagen de bienvenida holográfica** , se mostrará siempre independientemente de si la casilla Mostrar la pantalla de presentación de Unity está habilitada o deshabilitada. La especificación de una imagen de bienvenida holográfica personalizada solo está disponible para los desarrolladores con una licencia de la versión Pro de Unity.
 
-|  Mostrar la pantalla de presentación de Unity  |  Imagen de la presentación holográfica  |  Comportamiento |
+|  Pantalla de presentación de mostrar Unity  |  Imagen de bienvenida holográfica  |  Comportamiento |
 |----------|----------|----------|
-|  Activado  |  Ninguno  |  Mostrar la pantalla de presentación predeterminada Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. | 
-|  Activado  |  Personalizado  |  Mostrar la pantalla de presentación personalizado durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. | 
-|  Desactivado  |  Ninguno  |  Mostrar negro transparente (nothing) hasta que se cargue la aplicación. | 
-|  Desactivado  |  Personalizado  |  Mostrar la pantalla de presentación personalizado durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. | 
+|  Activado  |  None  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. | 
+|  Activado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. | 
+|  Desactivado  |  None  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. | 
+|  Desactivado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. | 
 
-Lea [documentación de pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
+Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
 
 ### <a name="tracking-loss"></a>Pérdida de seguimiento
 
-Auriculares de realidad mixta depende de ver el entorno a su alrededor para construir [bloqueado por el mundo de sistemas de coordenadas](coordinate-systems-in-unity.md), que permiten hologramas permanezca en posición. Cuando los auriculares no puede encontrarse en el mundo, se dice que los auriculares tienen *perdido seguimiento*. En estos casos, la funcionalidad dependiente en sistemas de coordenadas bloqueado por el mundo, como fases espaciales, los anclajes espaciales y asignación espacial, no funcionan.
+Un casco de realidad mixta depende de ver el entorno que lo rodea para construir [sistemas de coordenadas de bloqueo mundial](coordinate-systems-in-unity.md), que permiten que los hologramas permanezcan en la posición. Cuando el casco no puede encontrarse en el mundo, se dice que el casco ha *perdido el seguimiento*. En estos casos, la funcionalidad que depende de los sistemas de coordenadas de bloque mundial, como las fases espaciales, los delimitadores espaciales y la asignación espacial, no funcionan.
 
-Si se produce una pérdida de seguimiento, comportamiento predeterminado de Unity es hologramas de representación de detener, pausar la [bucle de juego](http://docs.unity3d.com/Manual/ExecutionOrder.html), y mostrar un seguimiento perdido notificación cómodamente que sigue la mirada a los usuarios. También se pueden proporcionar notificaciones personalizadas en el formulario de seguimiento de un imagen de pérdida. Las aplicaciones que dependen de seguimiento de su experiencia completa, es suficiente para dejar que Unity controlarlo completamente hasta que se ha recuperado el seguimiento. Los programadores pueden suministrar una imagen personalizada que se mostrará durante el seguimiento de la pérdida. 
+Si se produce una pérdida de seguimiento, el comportamiento predeterminado de Unity es detener la representación de los hologramas, pausar el [bucle de juego](http://docs.unity3d.com/Manual/ExecutionOrder.html)y mostrar una notificación de pérdida de seguimiento que siga de forma cómoda a los usuarios. También se pueden proporcionar notificaciones personalizadas en forma de una imagen de pérdida de seguimiento. En el caso de las aplicaciones que dependen del seguimiento de toda su experiencia, es suficiente para que Unity la controle completamente hasta que se recupere el seguimiento. Los desarrolladores pueden proporcionar una imagen personalizada que se mostrará durante la pérdida de seguimiento. 
 
-Para personalizar la imagen de pérdida de seguimiento:
-1) Vaya a **editar** > **configuración del proyecto** > **Reproductor** página
-2) Haga clic en el **Windows Store** pestaña y abra el **imagen presentación** sección
-3) Aplicar la imagen deseada en el **Windows Holographic > seguimiento pérdida imagen** propiedad.
+Para personalizar la imagen de seguimiento perdida:
+1) Vaya a **Editar** > configuración > de proyecto página del**reproductor**
+2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
+3) Aplique la imagen deseada en la propiedad **imagen de pérdida de seguimiento de > de Windows Holographic** .
 
-#### <a name="opt-out-of-automatic-pause"></a>Desactivación de pausa automática
+#### <a name="opt-out-of-automatic-pause"></a>No participar en la pausa automática
 
-Es posible que algunas aplicaciones no requieren seguimiento (por ejemplo, [aplicaciones sólo orientación](coordinate-systems-in-unity.md) como visores de vídeo de 360 grados) o que deba continuar sin interrupciones durante el seguimiento del procesamiento se pierde. En estos casos, las aplicaciones pueden rechazar la pérdida de valor predeterminado de seguimiento del comportamiento. Los desarrolladores que elija esta opción son responsables de ocultar y deshabilitar todos los objetos que no se presenten correctamente en un escenario de pérdida de seguimiento. En la mayoría de los casos, el único contenido que se recomienda que se puede representar en que el caso está bloqueado por el cuerpo de contenido, se centra en torno a la cámara principal.
+Es posible que algunas aplicaciones no requieran seguimiento (por ejemplo, [aplicaciones solo de orientación](coordinate-systems-in-unity.md) como los visores de vídeo de 360 bits) o que necesiten continuar el procesamiento sin interrupciones mientras se pierde el seguimiento. En estos casos, las aplicaciones pueden rechazar la pérdida predeterminada del comportamiento de seguimiento. Los desarrolladores que elijan esto son responsables de ocultar o deshabilitar los objetos que no se representarán correctamente en un escenario de pérdida de seguimiento. En la mayoría de los casos, el único contenido que se recomienda que se represente en ese caso es contenido bloqueado por el cuerpo, centrado en torno a la cámara principal.
 
-Para dejar de participar en el comportamiento de pausa automática:
-1) Vaya a **editar** > **configuración del proyecto** > **Reproductor** página
-2) Haga clic en el **Windows Store** pestaña y abra el **imagen presentación** sección
-3) Modificar el **Windows Holographic > en pérdida de pausa de seguimiento y mostrar imagen** casilla de verificación.
+Para no participar en el comportamiento de pausa automática:
+1) Vaya a **Editar** > configuración > de proyecto página del**reproductor**
+2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
+3) Modifique la casilla **de verificación de Windows Holographic > en el seguimiento de pérdida y Mostrar imagen** .
 
 #### <a name="tracking-loss-events"></a>Seguimiento de eventos de pérdida
 
-Para definir el comportamiento personalizado cuando el seguimiento se pierde, controlar global [seguimiento de eventos de pérdida](tracking-loss-in-unity.md).
+Para definir el comportamiento personalizado cuando se pierde el seguimiento, controle los [eventos de pérdida de seguimiento](tracking-loss-in-unity.md)global.
 
 ### <a name="capabilities"></a>Funcionalidades
 
-Para que una aplicación aprovechar las ventajas de cierta funcionalidad, deben declarar las capacidades adecuadas en su manifiesto. Las declaraciones del manifiesto se pueden realizar en Unity, por lo que se incluyen en cada exportación proyecto posterior. 
+Para que una aplicación aproveche ciertas funciones, debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones de manifiesto se pueden realizar en Unity para que se incluyan en cada exportación de proyecto subsiguiente. 
 
 Las capacidades se pueden habilitar para una aplicación de realidad mixta:
-1) Vaya a **editar** > **configuración del proyecto** > **Reproductor** página
-2) Haga clic en el **Windows Store** pestaña y abra el **configuración de publicación** sección y busque el **capacidades** lista
+1) Vaya a **Editar** > configuración > de proyecto página del**reproductor**
+2) Haga clic en la pestaña **tienda Windows** y abra la sección **configuración de publicación** y busque la lista de **capacidades** .
 
-Las capacidades para habilitar las API utilizadas para las aplicaciones holográficas aplicables son:
+Las funcionalidades aplicables para habilitar las API de uso frecuente para aplicaciones holográficas son:
 <br>
 
-|  Capacidad  |  API que requieren la capacidad |
+|  Capacidad  |  API que requieren funcionalidad |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver | 
-|  WebCam  |  PhotoCapture y VideoCapture | 
-|  PicturesLibrary o VideosLibrary  |  PhotoCapture o VideoCapture, respectivamente (al almacenar el contenido capturado) | 
-|  Micrófono  |  VideoCapture (cuando la captura de audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer | 
-|  InternetClient  |  DictationRecognizer (y utilizar el Profiler de Unity) | 
+|  Web  |  Fotocaptura y videocaptura | 
+|  PicturesLibrary/VideosLibrary  |  Fotocaptura o videocaptura, respectivamente (al almacenar el contenido capturado) | 
+|  Micrófono  |  VideoCapture (al capturar audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer | 
+|  InternetClient  |  DictationRecognizer (y para usar el generador de perfiles de Unity) | 
 
 ## <a name="see-also"></a>Vea también
 * [Introducción al desarrollo de Unity](unity-development-overview.md)

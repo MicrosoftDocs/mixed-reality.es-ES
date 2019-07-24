@@ -1,11 +1,11 @@
 ---
-title: El Sr. espacial 230 - asignación espacial
-description: Siga este tutorial con Unity, Visual Studio y HoloLens para conocer los detalles de los conceptos de asignación espacial de codificación.
+title: MR espacial 230-asignación espacial
+description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre los conceptos de asignación espacial.
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, academy, tutorial, asignación espacial, reconstrucción expuesta, malla
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, asignación espacial, reconstrucción superficial, malla
 ms.openlocfilehash: ed58676a0fda660cc6b4c197239aeb53166baa4d
 ms.sourcegitcommit: aa88f6b42aa8d83e43104b78964afb506a368fb4
 ms.translationtype: MT
@@ -14,19 +14,19 @@ ms.lasthandoff: 05/02/2019
 ms.locfileid: "64993560"
 ---
 >[!NOTE]
->Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (gen 1) y Mixed Reality Inmersivos en mente.  Por lo tanto, creemos que es importante dejar estos tutoriales en su lugar para los desarrolladores que todavía están buscando orientación en el desarrollo para esos dispositivos.  Estos tutoriales le **_no_** actualizarse con las interacciones que se usan para HoloLens 2 o los conjuntos de herramientas más recientes.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se registrará en el futuro que demostrará cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se hayan registrado.
+>Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
 
 <br>
 
-# <a name="mr-spatial-230-spatial-mapping"></a>MR 230 espacial: Asignación espacial
+# <a name="mr-spatial-230-spatial-mapping"></a>MR espacial 230: Asignación espacial
 
-[Asignación espacial](spatial-mapping.md) combina el mundo real y el mundo virtual juntos enseñanza hologramas sobre el entorno. En el Sr. espacial 230 (apartado planetario del proyecto y disfrutará), obtendrá información sobre cómo:
+La [asignación espacial](spatial-mapping.md) combina el mundo real y el mundo virtual juntos mediante la enseñanza de hologramas sobre el entorno. En MR Spatial 230 (Project Planetarium), veremos cómo:
 
-* Analizar los datos de entorno y la transferencia de la HoloLens a la máquina de desarrollo.
-* Explore los sombreadores y obtenga información sobre cómo usarlas para visualizar el espacio.
-* Desglosar la malla del salón en planos simple mediante el procesamiento de la malla.
-* Vaya más allá de las técnicas de selección de ubicación que hemos aprendido en [MR Fundamentos 101](holograms-101.md)y proporcionar comentarios sobre dónde se puede colocar un holograma en el entorno.
-* Explore los efectos de oclusión, por lo que cuando su holograma está detrás de un objeto del mundo real, todavía puede ver con la visión de rayos x!
+* Examinar el entorno y transferir los datos desde HoloLens a su equipo de desarrollo.
+* Explore los sombreadores y aprenda a usarlos para visualizar el espacio.
+* Divida la malla de la habitación en planos simples mediante el procesamiento de malla.
+* Vaya más allá de las técnicas de selección de ubicación que hemos aprendido en los [conceptos básicos de MR 101](holograms-101.md)y proporcione comentarios sobre dónde se puede colocar un holograma en el entorno.
+* Explore los efectos de la oclusión, de modo que cuando el holograma esté detrás de un objeto del mundo real, todavía puede verlo con la visión x-Ray.
 
 >[!VIDEO https://www.youtube.com/embed/NSNYRkUX6Mw]
 
@@ -34,210 +34,210 @@ ms.locfileid: "64993560"
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Inmersivos</a></th>
+<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td>MR 230 espacial: Asignación espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
+<td>MR espacial 230: Asignación espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* Un equipo con Windows 10 configurado con el valor correcto [herramientas instaladas](install-the-tools.md).
-* Básica C# capacidad de programación.
-* Debe haber completado [MR Fundamentos 101](holograms-101.md).
+* Un equipo con Windows 10 configurado con las [herramientas](install-the-tools.md)correctas instaladas.
+* Funcionalidad básica C# de programación.
+* Debe haber completado los [principios básicos 101](holograms-101.md).
 * Un dispositivo HoloLens [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode).
 
 ### <a name="project-files"></a>Archivos de proyecto
 
-* Descargue el [archivos](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-230-SpatialMapping.zip) requerida por el proyecto. Requiere Unity 2017.2 o posterior.
-  * Si necesita compatibilidad con Unity 5.6, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-230.zip).
-  * Si necesita compatibilidad con Unity 5.5, utilice [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-230.zip).
-  * Si necesita compatibilidad con Unity 5.4, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-230.zip).
-* Extraer del archivo los archivos en el escritorio o en otros más fáciles de alcanzar la ubicación.
+* Descargue los [archivos](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-230-SpatialMapping.zip) requeridos por el proyecto. Requiere Unity 2017,2 o posterior.
+  * Si sigue necesitando compatibilidad con Unity 5,6, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-230.zip).
+  * Si sigue necesitando compatibilidad con Unity 5,5, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-230.zip).
+  * Si sigue necesitando compatibilidad con Unity 5,4, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-230.zip).
+* Elimine el archivo de los archivos en el escritorio o en otra ubicación de fácil acceso.
 
 >[!NOTE]
->Si desea buscar en el código de origen antes de descargar, tiene [disponible en GitHub](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping).
+>Si desea examinar el código fuente antes de la descarga, está [disponible en github](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-230-SpatialMapping).
 
 ### <a name="notes"></a>Notas
 
-* "Habilitar Solo mi código" en Visual Studio debe estar deshabilitada (*unchecked*) en Herramientas > Opciones > depuración con el fin de alcanzar los puntos de interrupción en el código.
+* "Habilitar Solo mi código" en Visual Studio debe estar deshabilitado *(* desactivado) en herramientas > opciones > depuración para poder alcanzar puntos de interrupción en el código.
 
-## <a name="unity-setup"></a>Programa de instalación de Unity
+## <a name="unity-setup"></a>Configuración de Unity
 
 >[!VIDEO https://www.youtube.com/embed/y2Y4LhK6TEM]
 
-* Iniciar **Unity**.
-* Seleccione **New** para crear un nuevo proyecto.
-* Denomine el proyecto **planetario y disfrutará**.
-* Compruebe que la **3D** está seleccionada.
-* Haga clic en **crear proyecto**.
-* Una vez que se inicia en Unity, vaya a **Editar > configuración del proyecto > Reproductor**.
-* En el **Inspector** panel, busque y seleccione el color verde **Windows Store** icono.
-* Expanda **otras configuraciones**.
-* En el **representación** sección, compruebe el **admite la realidad Virtual** opción.
-* Compruebe que **Windows Holographic** aparece en la lista de **SDK de realidad Virtual**. Si no, seleccione el **+** situado en la parte inferior de la lista y elija **Windows Holographic**.
+* Inicie **Unity**.
+* Seleccione **nuevo** para crear un nuevo proyecto.
+* Asigne al proyecto el nombre **Planetarium**.
+* Compruebe que está seleccionada la opción **3D** .
+* Haz clic en **Create Project** (Crear proyecto).
+* Una vez que se inicia Unity, vaya a **editar > configuración del proyecto > Player**.
+* En el panel **Inspector** , busque y seleccione el icono verde de la **tienda Windows** .
+* Expanda **otros valores**.
+* En la sección **representación** , active la opción se **admite la realidad virtual** .
+* Compruebe que **Windows Holographic** aparece en la lista de **SDK de realidad virtual**. Si no es así, **+** Seleccione el botón situado en la parte inferior de la lista y elija **Windows Holographic**.
 * Expanda **configuración de publicación**.
-* En el **capacidades** sección, compruebe la configuración siguiente:
+* En la sección **capacidades** , Compruebe la siguiente configuración:
     * InternetClientServer
     * PrivateNetworkClientServer
     * Micrófono
     * SpatialPerception
-* Vaya a **Editar > configuración del proyecto > calidad**
-* En el **Inspector** panel, bajo el icono de Windows Store, seleccione la flecha de lista desplegable negra en la fila "Default" y cambie la configuración predeterminada para **Very Low**.
-* Vaya a **activos > Importar paquete > paquete personalizado**.
-* Navegue hasta la **...\HolographicAcademy-Holograms-230-SpatialMapping\Starting** carpeta.
-* Haga clic en **Planetarium.unitypackage**.
+* Vaya a **editar > configuración del proyecto > calidad**
+* En el panel **Inspector** , bajo el icono de la tienda Windows, seleccione la flecha de lista desplegable negra situada debajo de la fila "predeterminada" y cambie la configuración predeterminada a **muy baja**.
+* Vaya a **activos > importar paquete > paquete personalizado**.
+* Vaya a la carpeta **. ..\holographicacademy-holograms-230-SpatialMapping\Starting** .
+* Haga clic en **Planetarium. unitypackage Tools**.
 * Haga clic en **Abrir**.
-* Un **Importar paquete de Unity** debe aparecer la ventana, haga clic en el **importación** botón.
-* Espere a que Unity importar todos los recursos que necesitamos para completar este proyecto.
-* En el **jerarquía** panel, elimine el **cámara principal**.
-* En el **proyecto** panel, **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** carpeta, busque la **cámara principal** objeto.
-* Arrastre y coloque el **cámara principal** prefabricado en el **jerarquía** panel.
-* En el **jerarquía** panel, elimine el **luz direccional** objeto.
-* En el **proyecto** panel, **hologramas** carpeta, busque la **Cursor** objeto.
-* Arrastrar y colocar la **Cursor** prefabricado en el **jerarquía**.
-* En el **jerarquía** panel, seleccione el **Cursor** objeto.
-* En el **Inspector** del panel, haga clic en el **capa** hacia abajo y seleccione **capas editar...** .
-* Nombre **usuario capa 31** como "**SpatialMapping**".
-* Guarde la nueva escena: **Archivo > Guardar escena como...**
-* Haga clic en **nueva carpeta** y el nombre de la carpeta **escenas**.
-* Nombre del archivo "**planetario y disfrutará**" y guárdela en el **escenas** carpeta.
+* Debe aparecer una ventana **importar paquete Unity** , haga clic en el botón **importar** .
+* Espere a que Unity importe todos los recursos que se van a necesitar para completar este proyecto.
+* En el panel **jerarquía** , elimine la **cámara principal**.
+* En el panel **proyecto** , en la carpeta **HoloToolkit-SpatialMapping-230\Utilities\Prefabs** , busque el objeto de **cámara principal** .
+* Arrastre y coloque la **cámara principal** recurso prefabricado en el  panel de jerarquías.
+* En el panel **jerarquía** , elimine el objeto de **luz direccional** .
+* En el panel **proyecto** , carpeta **hologramas** , busque el objeto **cursor** .
+* Arrastre & Coloque el **cursor** recurso prefabricado en la **jerarquía**.
+* En el panel **jerarquía** , seleccione el objeto **cursor** .
+* En el panel **Inspector** , haga clic en la lista desplegable **capa** y seleccione **Editar capas.**
+* Nombre de la **capa de usuario 31** como "**SpatialMapping**".
+* Guarde la nueva escena: **Archivo > guardar la escena como...**
+* Haga clic en **nueva carpeta** y asigne un nombre a la carpeta Scenes.
+* Asigne al archivo el nombre "**Planetarium**" y guárdelo en  la carpeta Scenes.
 
-## <a name="chapter-1---scanning"></a>Capítulo 1: examen
+## <a name="chapter-1---scanning"></a>Capítulo 1: exploración
 
 >[!VIDEO https://www.youtube.com/embed/888oW51z_cE]
 
 **Objetivos**
-* Obtenga información sobre la SurfaceObserver y cómo su impacto de la configuración de la experiencia y el rendimiento.
-* Crear un salón de experiencia para recopilar las mallas de su sala de análisis.
+* Obtenga información sobre SurfaceObserver y cómo su configuración afecta a la experiencia y el rendimiento.
+* Cree una experiencia de detección de salones para recopilar las mallas de su habitación.
 
-**Instrucciones**
-* En el **proyecto** panel **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** carpeta, busque la **SpatialMapping** prefabricado.
-* Arrastrar y colocar la **SpatialMapping** prefabricado en el **jerarquía** panel.
+**Las**
+* En la carpeta **HoloToolkit-SpatialMapping-230\SpatialMapping\Prefabs** del panel de **proyecto** , busque el **SpatialMapping** recurso prefabricado.
+* Arrastre & Coloque el recurso prefabricado de **SpatialMapping** en el panel de **jerarquías** .
 
-**Compilar e implementar (parte 1)**
+**Compilación e implementación (parte 1)**
 * En Unity, seleccione **archivo > configuración de compilación**.
-* Haga clic en **agregar escenas abierto** para agregar la **planetario y disfrutará** escena a la compilación.
-* Seleccione **Universal Windows Platform** en el **plataforma** lista y haga clic en **Cambiar plataforma**.
-* Establecer **SDK** a **10 Universal** y **tipo de compilación UWP** a **D3D**.
-* Comprobar **Unity C# proyectos**.
+* Haga clic en **Agregar escenas abiertas** para agregar la escena **Planetarium** a la compilación.
+* Seleccione **plataforma universal de Windows** en la lista **plataforma** y haga clic en **cambiar plataforma**.
+* Establezca el **tipo de compilación** **SDK** en **universal 10** y UWP en **D3D**.
+* Compruebe **los C# proyectos de Unity**.
 * Haz clic en **Compilación**.
-* Crear un **nueva carpeta** denominada "Aplicación".
-* Solo haga clic en el **aplicación** carpeta.
-* Presione el **Seleccionar carpeta** botón.
-* Cuando se hace Unity compilar, aparecerá una ventana del explorador de archivos.
-* Haga doble clic en el **aplicación** carpeta para abrirla.
-* Haga doble clic en **Planetarium.sln** para cargar el proyecto en Visual Studio.
-* En Visual Studio, utilice la barra de herramientas superior para cambiar la configuración a **versión**.
-* Cambiar la plataforma a **x86**.
-* Haga clic en la flecha desplegable a la derecha de la «Máquina Local» y seleccione **máquina remota**.
-* Escriba [dirección IP de su dispositivo](connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) en la dirección de campo y cambiar el modo de autenticación a **Universal (protocolo sin cifrar)**.
-* Haga clic en **Depurar -> Iniciar sin depurar** o presione **Ctrl + F5**.
-* Inspección del **salida** panel en Visual Studio para la compilación y el estado de la implementación.
-* Una vez que se ha implementado la aplicación, caminar alrededor de la sala. Verá las superficies que lo rodea cubiertas por las mallas de tramas de alambres en blanco y negro.
-* Analizar respecto a su entorno. No olvide mirar paredes, los límites máximos y los pisos.
+* Cree una **nueva carpeta** denominada "app".
+* Haga clic en la carpeta de la **aplicación** .
+* Presione el botón **Seleccionar carpeta** .
+* Cuando Unity termine de compilar, aparecerá una ventana del explorador de archivos.
+* Haga doble clic en la carpeta de la **aplicación** para abrirla.
+* Haga doble clic en **Planetarium. sln** para cargar el proyecto en Visual Studio.
+* En Visual Studio, use la barra de herramientas superior para cambiar la configuración a **Release**.
+* Cambie la plataforma a **x86**.
+* Haga clic en la flecha desplegable situada a la derecha de "equipo local" y seleccione **equipo remoto**.
+* Escriba la [dirección IP del dispositivo](connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) en el campo Dirección y cambie el modo de autenticación a **universal (protocolo sin cifrar)** .
+* Haga clic en depurar **-> iniciar sin** depurar o presione **Ctrl + F5**.
+* Vea el panel de **salida** en Visual Studio para ver el estado de compilación e implementación.
+* Una vez que la aplicación se haya implementado, desplazarse por la habitación. Verá las superficies circundantes que se incluyen en mallas de alambres en blanco y negro.
+* Digitalice su entorno. Asegúrese de mirar paredes, techos y suelos.
 
-**Compilar e implementar (parte 2)**
+**Compilación e implementación (parte 2)**
 
-Ahora veamos cómo puede afectar la asignación espacial al rendimiento.
-* En Unity, seleccione **Ventana > Profiler**.
-* Haga clic en **agregar Profiler > GPU**.
-* Haga clic en **Profiler Active > <Enter IP>** .
-* Escriba el **dirección IP** de su HoloLens.
+Ahora vamos a explorar cómo la asignación espacial puede afectar al rendimiento.
+* En Unity, seleccione **Window > Profiler**.
+* Haga clic en **Agregar generador de perfiles > GPU**.
+* Haga clic en **Active <Enter IP>Profiler >** .
+* Escriba la **dirección IP** de su HoloLens.
 * Haga clic en **Conectar**.
-* Observe el número de milisegundos que tarda la GPU representar un fotograma.
-* Detener la aplicación se ejecute en el dispositivo.
-* Vuelva a Visual Studio y abra **SpatialMappingObserver.cs**. La encontrará en la carpeta HoloToolkit\SpatialMapping del proyecto de ensamblado-CSharp (Windows Universal).
-* Buscar el **Awake()** funcione y agregue la siguiente línea de código: **TrianglesPerCubicMeter = 1200;**
-* Volver a implementar el proyecto en el dispositivo y, a continuación, **volver a conectar el generador de perfiles**. Observe el cambio en el número de milisegundos para representar un fotograma.
-* Detener la aplicación se ejecute en el dispositivo.
+* Observe el número de milisegundos que tarda la GPU en representar un fotograma.
+* Detenga la ejecución de la aplicación en el dispositivo.
+* Vuelva a Visual Studio y Abra **SpatialMappingObserver.CS**. Lo encontrará en la carpeta HoloToolkit\SpatialMapping del proyecto Assembly-CSharp (universal Windows).
+* Busque la función Activate **()** y agregue la siguiente línea de código: **TrianglesPerCubicMeter = 1200;**
+* Vuelva a implementar el proyecto en el dispositivo y, a continuación, vuelva a **conectar el generador de perfiles**. Observe el cambio en el número de milisegundos para representar un fotograma.
+* Detenga la ejecución de la aplicación en el dispositivo.
 
 **Guardar y cargar en Unity**
 
-Por último, vamos a guardar la malla de la sala y cargarlos en Unity.
-* Vuelva a Visual Studio y quitar el **TrianglesPerCubicMeter** línea que agregó en el **Awake()** función durante la sección anterior.
-* Volver a implementar el proyecto en el dispositivo. Nos debemos estar ejecutando con **500** triángulos por medidor cúbica.
-* Abra un explorador y escriba en su HoloLens IPAddress para navegar hasta el **Windows Device Portal**.
-* Seleccione el **vista 3D** opción en el panel izquierdo.
-* En **reconstrucción de superficie** seleccione la **actualización** botón.
-* Vea en las áreas que se han analizado en su HoloLens aparecen en la ventana de presentación.
-* Para guardar el examen de la sala, presione el **guardar** botón.
-* Abra su **descargas** carpeta para encontrar el modelo guardado sala **SRMesh.obj**.
-* Copia **SRMesh.obj** a la **activos** carpeta del proyecto de Unity.
-* En Unity, seleccione el **SpatialMapping** objeto en el **jerarquía** panel.
-* Busque el **objeto observador de superficie (Script)** componente.
-* Haga clic en el círculo situado a la derecha de la **sala modelo** propiedad.
-* Busque y seleccione el **SRMesh** objeto y, a continuación, cierre la ventana.
-* Compruebe que la **sala modelo** propiedad en el **Inspector** panel ahora está configurado para **SRMesh**.
-* Presione el **reproducir** botón Entrar en modo de vista previa de Unity.
-* El componente SpatialMapping cargará las mallas del modelo guardado espacio para que pueda usar en Unity.
-* Cambie a **escena** vista para ver todo el modelo de sala muestra con el sombreador de tramas de alambres.
-* Presione el **reproducir** botón nuevo para salir del modo de vista previa.
+Por último, vamos a guardar la malla de sala y cargarla en Unity.
+* Vuelva a Visual Studio y quite la línea **TrianglesPerCubicMeter** que agregó en la función Activate **()** en la sección anterior.
+* Vuelva a implementar el proyecto en el dispositivo. Ahora deberíamos ejecutarse con triángulos **500** por metro cúbico.
+* Abra un explorador y escriba en la dirección IP de HoloLens para ir al **portal de dispositivos de Windows**.
+* Seleccione la opción **vista 3D** en el panel izquierdo.
+* En **reconstrucción superficial** , seleccione el botón **Actualizar** .
+* Observe que las áreas que ha examinado en HoloLens aparecen en la ventana de visualización.
+* Presione el botón **Guardar** para guardar el análisis de la habitación.
+* Abra la  carpeta downloads para buscar el modelo Room **SRMesh. obj**guardado.
+* Copie **SRMesh. obj** en la carpeta **assets** del proyecto de Unity.
+* En Unity, seleccione el objeto **SpatialMapping** en el panel de **jerarquías** .
+* Busque el componente de **observador de superficie de objeto (Script)** .
+* Haga clic en el círculo situado a la derecha de la propiedad **modelo Room** .
+* Busque y seleccione el objeto **SRMesh** y, a continuación, cierre la ventana.
+* Compruebe que la propiedad **modelo de habitación** del panel **Inspector** está ahora establecida en **SRMesh**.
+* Presione el botón **reproducir** para entrar en el modo de vista previa de Unity.
+* El componente SpatialMapping cargará las mallas del modelo de habitación guardado para que pueda usarlas en Unity.
+* Cambie a la vista **escena** para ver todo el modelo de habitación mostrado con el sombreador de tramas de alambres.
+* Vuelva a presionar el botón **reproducir** para salir del modo de vista previa.
 
-**NOTA:** La próxima vez que especifique el modo de vista previa en Unity, cargará la malla de la sala guardado de forma predeterminada.
+**NOTA:** La próxima vez que escriba el modo de vista previa en Unity, se cargará la malla de habitación guardada de forma predeterminada.
 
 ## <a name="chapter-2---visualization"></a>Capítulo 2: visualización
 
 >[!VIDEO https://www.youtube.com/embed/RnkvXl-aXD4]
 
 **Objetivos**
-* Obtenga información sobre los conceptos básicos de los sombreadores.
-* Visualizar respecto a su entorno.
+* Conozca los aspectos básicos de los sombreadores.
+* Visualice su entorno.
 
-**Instrucciones**
-* En Unity **jerarquía** panel, seleccione el **SpatialMapping** objeto.
-* En el **Inspector** panel, busque el **espacial Administrador de asignación (Script)** componente.
-* Haga clic en el círculo situado a la derecha de la **superficie Material** propiedad.
-* Busque y seleccione el **BlueLinesOnWalls** material y cerrar la ventana.
-* En el **proyecto** panel **sombreadores** carpeta, haga doble clic en **BlueLinesOnWalls** para abrir el sombreador en Visual Studio.
-* Se trata de un píxel simple (vértice fragmentar) sombreador, que lleva a cabo las siguientes tareas:
-    1. Convierte la ubicación de un vértice en espacio global.
-    2. Comprueba que el vértice 's normal para determinar si un píxel es vertical.
-    3. Establece el color del píxel para la representación.
+**Las**
+* En el panel  de jerarquías de Unity, seleccione el objeto **SpatialMapping** .
+* En el panel **Inspector** , busque el componente **Administrador de asignación espacial (Script)** .
+* Haga clic en el círculo situado a la derecha de la propiedad material de la **superficie** .
+* Busque y seleccione el material **BlueLinesOnWalls** y cierre la ventana.
+* En la carpeta **sombreadores** del panel de **proyecto** , haga doble clic en **BlueLinesOnWalls** para abrir el sombreador en Visual Studio.
+* Se trata de un sombreador de píxeles sencillo (vértice a fragmento), que realiza las tareas siguientes:
+    1. Convierte la ubicación de un vértice en el espacio universal.
+    2. Comprueba la normal del vértice para determinar si un píxel es vertical.
+    3. Establece el color del píxel que se va a representar.
 
 **Compilación e implementación**
-* Volver a Unity y presione **reproducir** entrar en modo de vista previa.
-* Las líneas azules se representará en todas las superficies verticales de la malla de espacio (que se cargan automáticamente desde nuestros datos guardados de análisis).
-* Cambie a la **escena** tab para ajustar la vista de la sala de reuniones y vea cómo aparece la malla en toda la sala de Unity.
-* En el **proyecto** panel, busque el **materiales** carpeta y seleccione el **BlueLinesOnWalls** material.
-* Modificar algunas propiedades y ver cómo aparecen los cambios en el editor de Unity.
-    * En el **Inspector** del panel, ajustar el **LineScale** valor para que las líneas aparezcan más gruesa o más estrecha.
-    * En el **Inspector** del panel, ajustar el **LinesPerMeter** valor para cambiar el número de líneas que aparecen en cada muro.
-* Haga clic en **reproducir** nuevo para salir del modo de vista previa.
-* Compilar e implementar a la HoloLens y observe cómo aparece el sombreador de representación en superficies real.
+* Vuelva a Unity y presione **reproducir** para entrar en el modo de vista previa.
+* Las líneas azules se representarán en todas las superficies verticales de la malla de habitación (que se cargan automáticamente a partir de los datos de exámenes guardados).
+* Cambie a la pestaña **escena** para ajustar la vista de la habitación y ver cómo aparece toda la malla de habitación en Unity.
+* En el panel **proyecto** , busque la carpeta **materiales** y seleccione el material **BlueLinesOnWalls** .
+* Modifique algunas propiedades y vea cómo aparecen los cambios en el editor de Unity.
+    * En el panel **Inspector** , ajuste el valor **LineScale** para que las líneas aparezcan más gruesas o más delgadas.
+    * En el panel **Inspector** , ajuste el valor **LinesPerMeter** para cambiar el número de líneas que aparecen en cada muro.
+* Haga clic en **reproducir** de nuevo para salir del modo de vista previa.
+* Compile e implemente en HoloLens y observe cómo aparece la representación del sombreador en superficies reales.
 
-Unity hace un gran trabajo de vista previa de materiales, pero siempre es una buena idea a la representación de desprotección en el dispositivo.
+Unity hace un gran trabajo de obtener una vista previa de los materiales, pero siempre es una buena idea desproteger la representación en el dispositivo.
 
-## <a name="chapter-3---processing"></a>Capítulo 3: procesar
+## <a name="chapter-3---processing"></a>Capítulo 3: procesamiento
 
 >[!VIDEO https://www.youtube.com/embed/kaUKiNiDxwY]
 
 **Objetivos**
-* Aprenda técnicas para procesar los datos de asignación espacial para su uso en la aplicación.
-* Analizar los datos de asignación espacial para buscar planes y quitar triángulos.
-* Utilice planos para selección de ubicación holograma.
+* Aprenda técnicas para procesar datos de asignación espacial para su uso en la aplicación.
+* Analizar datos de asignación espacial para buscar planos y Quitar triángulos.
+* Usar planos para la colocación de hologramas.
 
-**Instrucciones**
-* En Unity **proyecto** panel, **hologramas** carpeta, busque la **SpatialProcessing** objeto.
-* Arrastrar y colocar la **SpatialProcessing** objeto en el **jerarquía** panel.
+**Las**
+* En el panel de **proyectos** de Unity, carpeta **hologramas** , busque el objeto **SpatialProcessing** .
+* Arrastre & Coloque el objeto **SpatialProcessing** en el panel de **jerarquías** .
 
-El recurso prefabricado SpatialProcessing incluye componentes para procesar los datos de asignación espacial. **SurfaceMeshesToPlanes.cs** encontrará y generar planes según los datos de asignación espacial. Usaremos planos en nuestra aplicación para representar las paredes, pisos y los límites máximos. También incluye este recurso prefabricado **RemoveSurfaceVertices.cs** que puede quitar los vértices de la malla de asignación espacial. Esto puede usarse para crear agujeros en la malla, o para quitar un exceso triángulos que ya no son necesarios (porque los planos pueden usarse en su lugar).
-* En Unity **proyecto** panel, **hologramas** carpeta, busque la **SpaceCollection** objeto.
-* Arrastre y coloque el **SpaceCollection** objeto en el **jerarquía** panel.
-* En el **jerarquía** panel, seleccione el **SpatialProcessing** objeto.
-* En el **Inspector** panel, busque el **reproducir el Administrador de espacio (Script)** componente.
-* Haga doble clic en **PlaySpaceManager.cs** para abrirlo en Visual Studio.
+SpatialProcessing recurso prefabricado incluye componentes para procesar los datos de asignación espacial. **SurfaceMeshesToPlanes.CS** buscará y generará planos basados en los datos de asignación espacial. Usaremos planos en nuestra aplicación para representar paredes, suelos y techos. Este recurso prefabricado también incluye **RemoveSurfaceVertices.CS** , que puede quitar vértices de la malla de asignación espacial. Se puede usar para crear huecos en la malla o para quitar los triángulos sobrantes que ya no son necesarios (porque en su lugar se pueden usar planos).
+* En el panel de **proyectos** de Unity, carpeta **hologramas** , busque el objeto **SpaceCollection** .
+* Arrastre y coloque el objeto **SpaceCollection** en el panel de **jerarquías** .
+* En el panel **jerarquía** , seleccione el objeto **SpatialProcessing** .
+* En el panel **Inspector** , busque el componente de **Administrador de espacio de reproducción (Script)** .
+* Haga doble clic en **PlaySpaceManager.CS** para abrirlo en Visual Studio.
 
-PlaySpaceManager.cs contiene código específico de la aplicación. Se agregará funcionalidad a esta secuencia de comandos para habilitar el comportamiento siguiente:
-1. Detener la recopilación de datos de asignación espacial después de que se supere el límite de tiempo de análisis (10 segundos).
+PlaySpaceManager.cs contiene código específico de la aplicación. Agregaremos funcionalidad a este script para habilitar el comportamiento siguiente:
+1. Detener la recopilación de datos de asignación espacial después de superar el límite de tiempo de examen (10 segundos).
 2. Procesar los datos de asignación espacial:
-    1. Use SurfaceMeshesToPlanes para crear una representación más sencilla del mundo como planos (paredes, pisos, los límites máximos, etcetera).
-    2. Use RemoveSurfaceVertices para quitar los triángulos superficies que se encuentran dentro de los límites del plano.
-3. Generar una colección de hologramas en el mundo y colocarlos en planos de piso y la pared cerca del usuario.
+    1. Use SurfaceMeshesToPlanes para crear una representación más sencilla del mundo como planos (paredes, suelos, techos, etc.).
+    2. Use RemoveSurfaceVertices para quitar los triángulos de superficie que se encuentran dentro de los límites del plano.
+3. Generar una colección de hologramas en el mundo y colocarlos en planos murales y en planta cercanos al usuario.
 
-Completar los ejercicios de codificación marcados en PlaySpaceManager.cs o reemplazar la secuencia de comandos con la solución completa de los siguientes:
+Complete los ejercicios de codificación marcados en PlaySpaceManager.cs o reemplace el script por la solución terminada que aparece a continuación:
 
 ```cs
 using System.Collections.Generic;
@@ -434,41 +434,41 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 ```
 
 **Compilación e implementación**
-* Antes de implementar en el HoloLens, presione el **reproducir** botón en Unity para entrar en modo de reproducción.
-* Después de la malla de la sala se carga desde el archivo, espere 10 segundos antes de que comience el procesamiento en la malla de asignación espacial.
-* Cuando se completa el procesamiento, planos aparecerá representar el suelo, paredes, ceiling, etcetera.
-* Después de todo de los aviones se han encontrado, debería ver un sistema solar aparecen en una tabla de piso cerca de la cámara.
-* Dos pósteres demasiado deben aparecer en las paredes cerca de la cámara. Cambie a la **escena** pestaña si no puede verlas en **juego** modo.
-* Presione el **reproducir** botón nuevo para salir del modo de juego.
-* Compilar e implementar en el HoloLens, como de costumbre.
-* Espere a análisis y procesamiento de los datos de asignación espacial en completarse.
-* Una vez que vea aviones, intenta encontrar el sistema solar y pósters en el mundo.
+* Antes de implementar en HoloLens, presione el botón **reproducir** en Unity para entrar en el modo de reproducción.
+* Después de cargar la malla de sala desde el archivo, espere 10 segundos antes de que se inicie el procesamiento en la malla de asignación espacial.
+* Una vez completado el procesamiento, aparecerán los planos para representar el suelo, las paredes, el límite superior, etc.
+* Una vez que se hayan encontrado todos los planos, debería ver que aparece un sistema solar en una tabla de piso cerca de la cámara.
+* También deberían aparecer dos pósteres en las paredes cerca de la cámara. Cambie a la pestaña **escena** si no puede verla en el modo de **juego** .
+* Vuelva a presionar el botón **reproducir** para salir del modo de reproducción.
+* Compilar e implementar en HoloLens, como de costumbre.
+* Espere a que se complete el análisis y el procesamiento de los datos de la asignación espacial.
+* Una vez que vea los planos, intente encontrar el sistema solar y los pósteres de su mundo.
 
 ## <a name="chapter-4---placement"></a>Capítulo 4: selección de ubicación
 
 >[!VIDEO https://www.youtube.com/embed/Srhtpid1uZc]
 
 **Objetivos**
-* Determinar si un holograma caben en una superficie.
-* Proporcionar comentarios al usuario cuando un holograma puede o no cabe en una superficie.
+* Determine si un holograma se ajustará en una superficie.
+* Proporcione comentarios al usuario cuando un holograma pueda o no quepa en una superficie.
 
-**Instrucciones**
-* En Unity **jerarquía** panel, seleccione el **SpatialProcessing** objeto.
-* En el **Inspector** panel, busque el **mallas de superficie para aviones (Script)** componente.
-* Cambiar el **dibujar planos** propiedad **nada** para borrar la selección.
-* Cambiar el **dibujar planos** propiedad **pared**, de modo que solo los planos de pared se representará.
-* En el **proyecto** panel, **Scripts** carpeta, haga doble clic en **Placeable.cs** para abrirlo en Visual Studio.
+**Las**
+* En el panel  de jerarquías de Unity, seleccione el objeto **SpatialProcessing** .
+* En el panel **Inspector** , busque el componente de mallas de **superficie en los planos (Script)** .
+* Cambie la propiedad **Draw aviones** a **Nothing** para borrar la selección.
+* Cambie la propiedad **Draw aviones** a **Wall**para que solo se representen los planos de pared.
+* En el panel **proyecto** , en la carpeta **scripts** , haga doble clic en **placeable.CS** para abrirlo en Visual Studio.
 
-El **Placeable** script ya está conectado con el cuadro de proyección y pósteres de los que se crean una vez finalizada la búsqueda de plano. Todo lo que necesitamos hacer es eliminar los comentarios algo de código, y esta secuencia de comandos, logrará lo siguiente:
-1. Determinar si un holograma caben en una superficie de detalles de las cuatro esquinas del cubo delimitador y el centro.
-2. Comprobar para determinar si es lo suficientemente suave para el holograma vaciado estuvieron en normal de la superficie.
-3. Representar el holograma para mostrar su tamaño real mientras se coloca un cubo de delimitador.
-4. Convertir una sombra el holograma para mostrar dónde se colocarán en el muro de piso en/subyacente.
-5. Representar la sombra en rojo si el holograma no se puede colocar en la superficie o verde, si es posible.
-6. Vuelva a orientar el holograma para alinearse con el tipo de superficie (horizontal o vertical) que tiene afinidad con.
-7. Coloca sin problemas el holograma en la superficie seleccionada para evitar saltar o comportamiento de ajuste.
+El script que se pueda **colocar** ya está adjunto a los pósters y al cuadro de proyección que se crearon una vez completada la búsqueda de planos. Lo único que debemos hacer es quitar la marca de comentario de código y este script logrará lo siguiente:
+1. Determine si un holograma se ajustará en una superficie raycasting desde el centro y cuatro esquinas del cubo de límite.
+2. Compruebe la superficie normal para determinar si es lo suficientemente suave para que el holograma permanezca en el vaciado.
+3. Representa un cubo de límite alrededor del holograma para mostrar su tamaño real mientras se coloca.
+4. Convierta una sombra debajo/detrás del holograma para mostrar dónde se colocará en el piso o la pared.
+5. Representa la sombra en rojo si el holograma no se puede colocar en la superficie, o en verde, si es posible.
+6. Vuelva a orientar el holograma para alinearlo con el tipo de superficie (vertical u horizontal) al que tiene afinidad.
+7. Coloque suavemente el holograma en la superficie seleccionada para evitar saltar o ajustar el comportamiento.
 
-Quite todo el código en el ejercicio de codificación a continuación o usar esta solución completa en **Placeable.cs**:
+Quite la marca de comentario de todo el código del ejercicio de codificación siguiente o use esta solución completada en **placeable.CS**:
 
 ```cs
 using System.Collections.Generic;
@@ -1052,40 +1052,40 @@ public class Placeable : MonoBehaviour
 ```
 
 **Compilación e implementación**
-* Como antes, compile el proyecto e implemente en el HoloLens.
-* Espere a análisis y procesamiento de los datos de asignación espacial en completarse.
-* Cuando ve el sistema solar, mire debajo de la casilla de proyección y realizar un gesto de select para moverse por. Mientras está seleccionado el cuadro de proyección, un cubo delimitador estará visible alrededor del cuadro de proyección.
-* Mover head para que mirar en una ubicación diferente en la sala. El cuadro de proyección debe seguir a su mirada. Cuando la sombra debajo del cuadro de proyección en color roja, no se puede colocar el holograma en que se muestran. Cuando se vuelve verde la sombra debajo del cuadro de proyección, puede colocar el holograma realizando gesto seleccione otro.
-* Busque y seleccione uno de los pósteres holográficas en una pared para moverlo a una nueva ubicación. Tenga en cuenta que no se puede colocar el póster en el suelo, ceiling, y que se mantiene correctamente orientado hacia cada pared al desplazarse por.
+* Como antes, compile el proyecto e impleméntelo en HoloLens.
+* Espere a que se complete el análisis y el procesamiento de los datos de la asignación espacial.
+* Cuando vea el sistema solar, mira en el cuadro proyección siguiente y realiza un gesto de selección para moverlo. Mientras se selecciona el cuadro proyección, un cubo de límite estará visible alrededor del cuadro de proyección.
+* Desplácese hacia mira en una ubicación diferente de la habitación. El cuadro proyección debe seguir su mirada. Cuando la sombra situada debajo del cuadro proyección se vuelve roja, no se puede colocar el holograma en esa superficie. Cuando la sombra situada debajo del cuadro proyección se vuelve verde, puede colocar el holograma realizando otro gesto seleccionar.
+* Busque y seleccione uno de los pósteres holográficas en una pared para moverlo a una nueva ubicación. Tenga en cuenta que no puede colocar el póster en el piso o el límite superior, y que permanece correctamente orientado a cada pared mientras se desplaza.
 
 ## <a name="chapter-5---occlusion"></a>Capítulo 5: oclusión
 
 >[!VIDEO https://www.youtube.com/embed/6Xrzh_w-7SE]
 
 **Objetivos**
-* Determinar si un holograma se ocluyeron en la malla de asignación espacial.
-* Aplicar técnicas de oclusión diferentes para lograr un divertido efecto.
+* Determine si la malla de asignación espacial ocluidos un holograma.
+* Aplique distintas técnicas de oclusión para lograr un efecto divertido.
 
-**Instrucciones**
+**Las**
 
-En primer lugar, vamos a permitir la malla de asignación espacial a occlude otros hologramas sin occluding del mundo real:
-* En el **jerarquía** panel, seleccione el **SpatialProcessing** objeto.
-* En el **Inspector** panel, busque el **reproducir el Administrador de espacio (Script)** componente.
-* Haga clic en el círculo situado a la derecha de la **Material secundario** propiedad.
-* Busque y seleccione el **oclusión** material y cerrar la ventana.
+En primer lugar, vamos a permitir que la malla de asignación espacial tapaba otros hologramas sin occluding el mundo real:
+* En el panel **jerarquía** , seleccione el objeto **SpatialProcessing** .
+* En el panel **Inspector** , busque el componente de **Administrador de espacio de reproducción (Script)** .
+* Haga clic en el círculo situado a la derecha de la propiedad **material secundario** .
+* Busque y seleccione el material de **oclusión** y cierre la ventana.
 
-A continuación, vamos a agregar un comportamiento especial a la tierra, para que tenga un resaltado azul cada vez que se pasa a ser ocluido holograma otro (por ejemplo, el sol), o bien la malla de asignación espacial:
-* En el **proyecto** panel el **hologramas** carpeta, expanda la **SolarSystem** objeto.
+A continuación, vamos a agregar un comportamiento especial a la tierra, de modo que tenga un resaltado azul cada vez que se ocluidos por otro holograma (por ejemplo, el sol) o por la malla de asignación espacial:
+* En el panel **proyecto** , en la carpeta **hologramas** , expanda el objeto **SolarSystem** .
 * Haga clic en **tierra**.
-* En el **Inspector** del panel, encontrará abundante material de la tierra (componente de la parte inferior).
-* En el **sombreador desplegable**, cambie el sombreador **personalizado > OcclusionRim**. Esto representará un resaltado azul alrededor de la tierra cada vez que se ocluyeron en otro objeto.
+* En el panel **Inspector** , busque el material de la tierra (componente inferior).
+* En el **menú desplegable**del sombreador, cambie el sombreador a **personalizado > OcclusionRim**. Esto representará un resaltado azul alrededor de tierra siempre que se ocluidos por otro objeto.
 
-Por último, vamos a habilitar un efecto de la visión de rayos x para planetas en nuestro sistema solar. Tendremos que editar **PlanetOcclusion.cs** (que se encuentra en la carpeta Scripts\SolarSystem) con el fin de lograr lo siguiente:
-1. Determinar si un planeta se ocluyeron en la capa SpatialMapping (sala mallas y planos).
-2. Mostrar la representación de tramas de alambres de un mundo cada vez que se ocluyeron en la capa SpatialMapping.
-3. Ocultar la representación de tramas de alambres de un planeta cuando no está bloqueado por la capa de SpatialMapping.
+Por último, vamos a habilitar un efecto x-Ray Vision para los planetas de nuestro sistema solar. Tendremos que editar **PlanetOcclusion.CS** (que se encuentra en la carpeta Scripts\SolarSystem) para lograr lo siguiente:
+1. Determinar si el nivel de SpatialMapping (mallas y planos de la habitación) ocluidos un planeta.
+2. Muestra la representación en alambre de un planeta siempre que se ocluidos por el nivel de SpatialMapping.
+3. Oculte la representación en alambre de un planeta cuando no esté bloqueada por el nivel SpatialMapping.
 
-Siga el ejercicio de codificación de PlanetOcclusion.cs, o utilice la siguiente solución:
+Siga el ejercicio de codificación de PlanetOcclusion.cs o use la siguiente solución:
 
 ```cs
 using UnityEngine;
@@ -1179,18 +1179,18 @@ public class PlanetOcclusion : MonoBehaviour
 ```
 
 **Compilación e implementación**
-* Compile e implemente la aplicación a HoloLens, como de costumbre.
-* Espere de análisis y procesamiento de los datos de asignación espacial que se complete (debería ver las líneas azules aparecen en las paredes).
-* Buscar y seleccione el cuadro de proyección solar del sistema y, a continuación, establezca el cuadro situado junto a una pared o detrás de un contador.
-* Puede ver la oclusión básica ocultándose tras las superficies del mismo nivel en el cuadro de póster o proyección.
-* Busque la tierra, debe haber un efecto de resaltado en azul cada vez que va detrás de otro holograma o la superficie.
-* Ver cómo mover los planetas detrás de la pared o en otras superficies en la sala. ¡Ahora tiene la visión de rayos x y puede ver sus esqueletos de tramas de alambres!
+* Compile e implemente la aplicación en HoloLens, como de costumbre.
+* Espere a que se completen el análisis y el procesamiento de los datos de la asignación espacial (debe ver que aparecen líneas azules en las paredes).
+* Busque y seleccione el cuadro proyección del sistema solar y, a continuación, establezca el cuadro junto a una pared o detrás de un contador.
+* Para ver la oclusión básica, oculte las superficies detrás del mismo nivel en el póster o en el cuadro de proyección.
+* Busque la tierra; debe haber un efecto de resaltado azul cada vez que se encuentre detrás de otro holograma o superficie.
+* Observe que los planetas se mueven detrás de la pared u otras superficies de la habitación. Ahora tiene una visión de rayos x y puede ver sus esqueletos de alambres.
 
 ## <a name="the-end"></a>Fin
 
-¡Enhorabuena! Ahora ha completado **MR espacial 230: Asignación espacial**.
-* Saber cómo analizar los datos de carga y el entorno de asignación espacial a Unity.
-* Comprender los conceptos básicos de los sombreadores y cómo se pueden usar los materiales para volver a visualizar el mundo.
-* Ha aprendido de nuevas técnicas de procesamiento para buscar los planos y quitarlo una malla de triángulos.
-* Podía mover y colocar hologramas en superficies que tenía sentido.
-* ¡Ha experimentado técnicas diferentes oclusión y aprovecha la potencia de la visión de rayos x!
+¡Enhorabuena! Ahora ha completado **el Mr espacial 230: Asignación**espacial.
+* Sabe cómo analizar el entorno y cargar datos de asignación espacial en Unity.
+* Comprende los aspectos básicos de los sombreadores y cómo se pueden usar los materiales para volver a visualizar el mundo.
+* Ha aprendido las nuevas técnicas de procesamiento para buscar planos y Quitar triángulos de una malla.
+* Puede trasladar y colocar hologramas en superficies que tengan sentido.
+* Ha experimentado diferentes técnicas de oclusión y ha aprovechado la potencia de la visión de rayos x.

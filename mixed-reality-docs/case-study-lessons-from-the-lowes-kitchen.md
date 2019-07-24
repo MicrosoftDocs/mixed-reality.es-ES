@@ -1,49 +1,49 @@
 ---
-title: 'Caso práctico: lecciones de cocina del Lowe'
-description: El equipo de HoloLens desea compartir algunos de los procedimientos recomendados que se derivan de proyecto de HoloLens del Lowe.
+title: 'Caso práctico: lecciones de la cocina de Lowe'
+description: El equipo de HoloLens quiere compartir algunas de las prácticas recomendadas que se derivaron del proyecto HoloLens de Lowe.
 author: BrandonBray
 ms.author: kevincol
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, del Lowe, HoloLens, cocina, caso práctico
+keywords: Windows Mixed Reality, Lowe, HoloLens, cocina, caso práctico
 ms.openlocfilehash: 24759f90b8b84ec19e644fb8dff44f64c3ab81d2
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59599847"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522344"
 ---
-# <a name="case-study---lessons-from-the-lowes-kitchen"></a>Caso práctico: lecciones de cocina del Lowe
+# <a name="case-study---lessons-from-the-lowes-kitchen"></a>Caso práctico: lecciones de la cocina de Lowe
 
-El equipo de HoloLens desea compartir algunos de los procedimientos recomendados que se derivan de proyecto de HoloLens del Lowe. A continuación se muestra un vídeo de HoloLens del Lowe proyectadas en la conferencia de Ignite 2016 de Satya.
+El equipo de HoloLens quiere compartir algunas de las prácticas recomendadas que se derivaron del proyecto HoloLens de Lowe. A continuación se muestra un vídeo de HoloLens previsto de Lowe en el discurso de encendido 2016 de Satya.
 <br>
 >[!VIDEO https://www.youtube.com/embed/gC_4JxF0e_k]
 
-## <a name="lowes-hololens-best-practices"></a>Prácticas recomendadas de HoloLens del Lowe
+## <a name="lowes-hololens-best-practices"></a>Procedimientos recomendados de HoloLens de Lowe
 
-Los dos vídeos abarcan las prácticas recomendadas que se derivan HoloLens piloto del Lowe que ha estado en almacenes de dos Lowe desde abril de 2016. Los temas claves son:
+Los dos vídeos cubren los procedimientos recomendados que se derivaron del piloto de HoloLens de Lowe, que se ha realizado en dos almacenes de Lowe desde abril de 2016. Los temas clave son:
 * Maximizar el rendimiento de un dispositivo móvil
-* Crear métodos de la experiencia del usuario con un marco completo holográfico (2nd talk)
-* Alineación de precisión (2nd talk)
-* Compartir experiencias holográficas (2nd talk)
-* Interactuar con los clientes (2nd talk)
+* Crear métodos de experiencia del usuario con un marco holográfica completo (segunda charla)
+* Alineación de precisión (segunda conversación)
+* Experiencias de Holographic compartidas (segunda charla)
+* Interacción con los clientes (segunda charla)
 
 ## <a name="video-1"></a>Vídeo 1
 
-**Maximizar el rendimiento de un dispositivo móvil** HoloLens es un dispositivo sin restricción con todo el procesamiento que lleva a cabo en el dispositivo. Esto requiere una plataforma móvil y requiere una mentalidad similar a la creación de aplicaciones móviles. Microsoft recomienda que la aplicación de HoloLens mantienen 60FPS para proporcionar una experiencia deliciosa para los usuarios. Tener FPS bajo puede dar lugar a hologramas inestables.
+**Maximizar el rendimiento de un dispositivo móvil** HoloLens es un dispositivo untethered con todo el procesamiento que se lleva a cabo en el dispositivo. Esto requiere una plataforma móvil y requiere una mentalidad similar a la creación de aplicaciones móviles. Microsoft recomienda que la aplicación HoloLens mantenga 60FPS para proporcionar una experiencia de deliciosa a los usuarios. Tener pocos FPS puede producir hologramas inestables.
 
-Algunas de las cosas más importantes que se consulten al desarrollo de HoloLens está activo optimización/diezmado con sombreadores personalizados (disponible gratuitamente en el [HoloLens Toolkit](https://github.com/Microsoft/HoloToolkit-Unity)). Otra consideración importante es medir la velocidad de fotogramas desde el principio del proyecto. Según el proyecto, el orden de presentación de los recursos también puede ser un gran colaborador
+Algunos de los aspectos más importantes que se deben tener en cuentan al desarrollar en HoloLens son la optimización o la diezmación de recursos, el uso de sombreadores personalizados (disponibles de forma gratuita en el [Kit de herramientas de hololens](https://github.com/Microsoft/HoloToolkit-Unity)). Otra consideración importante es medir la velocidad de fotogramas desde el principio del proyecto. Dependiendo del proyecto, el orden de visualización de los activos también puede ser un gran colaborador
 <br>
 >[!VIDEO https://www.youtube.com/embed/o0QIPwgiP9A]
 
 ## <a name="video-2"></a>Vídeo 2
 
-**Crear métodos de la experiencia del usuario con un marco completo holográfico** es importante comprender la colocación de hologramas en un mundo físico. Con la del Lowe hablamos distintos métodos de experiencia de usuario que ayudan a los usuarios hologramas experiencia de cierre mientras sigue apareciendo en el entorno de hologramas mayor.
+**Creación de métodos de experiencia del usuario con un marco holográfica completo** Es importante comprender la colocación de los hologramas en un mundo físico. Con Lowe, hablamos de distintos métodos de la experiencia del usuario que ayudan a los usuarios a experimentar cerca de los hologramas mientras siguen viendo el entorno más grande de los hologramas.
 
-**Alineación de precisión** escenario para el Lowe, era primordial para la experiencia de tener alineación de precisión de la hologramas a la cocina física. Se describen técnicas que ayuda a garantiza una experiencia que convence a los usuarios que ha cambiado su entorno físico.
+**Alineación de precisión** En el escenario de Lowe, era primordial para la experiencia tener una alineación de precisión de los hologramas en la cocina física. Se describen técnicas que ayudan a garantizar una experiencia que convenci a los usuarios de que su entorno físico ha cambiado.
 
-**Compartir experiencias holográficas** asocia es la forma principal que se consume la experiencia del Lowe. Una persona puede cambiar la encimera y la otra persona pueda ver los cambios. Se llama a este "experiencias compartidas".
+**Experiencias de Holographic** compartidas Los acoplados son la forma principal en que se consume la experiencia del Lowe. Una persona puede cambiar la encimera y la otra persona verá los cambios. Hemos llamado a este "experiencias compartidas".
 
-**Interactuar con los clientes** diseñadores de Lowe no utilizan un HoloLens, pero que tienen que ver lo que están viendo los clientes. Se muestra cómo capturar lo que está experimentando el cliente en una aplicación de UWP.
+**Interactuar con los clientes** Los diseñadores de Lowe no usan HoloLens, pero necesitan ver lo que ven los clientes. Mostramos cómo capturar lo que el cliente está viendo en una aplicación de UWP.
 <br>
 >[!VIDEO https://www.youtube.com/embed/LceMdyKZ4PI]

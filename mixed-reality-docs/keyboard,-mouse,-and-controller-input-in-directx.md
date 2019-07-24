@@ -1,34 +1,34 @@
 ---
-title: Teclado, mouse y entrada del controlador de DirectX
-description: Explica cómo crear una aplicación para Windows Mixed Reality que usa dispositivos de juego, mouse y teclado.
+title: Teclado, mouse y entrada del controlador en DirectX
+description: Explica cómo crear una aplicación para Windows Mixed Reality que usa el teclado, el mouse y los controladores de juegos.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, teclado, mouse, dispositivo de juego, mando de xbox, HoloLens, escritorio, el tutorial, el código de ejemplo
+keywords: Windows Mixed Reality, teclado, Mouse, dispositivo de juego, controladora Xbox, HoloLens, escritorio, tutorial, código de ejemplo
 ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605781"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63551007"
 ---
-# <a name="keyboard-mouse-and-controller-input-in-directx"></a>Teclado, mouse y entrada del controlador de DirectX
+# <a name="keyboard-mouse-and-controller-input-in-directx"></a>Teclado, mouse y entrada del controlador en DirectX
 
-Teclados, mouse y dispositivos de juego pueden ser útiles formularios de entrada para dispositivos Windows Mixed Reality. Mouse y teclados de Bluetooth se admite en HoloLens, para su uso con la depuración de la aplicación o como una forma alternativa de entrada. Windows Mixed Reality también admite inmersivos conectados a PC - donde los controladores de juego, teclados y ratones históricamente han sido la norma.
+Los teclados, los mouse y los controladores de juego pueden ser formas útiles de entrada para dispositivos Windows Mixed Reality. Los teclados y ratones Bluetooth se admiten en HoloLens, para su uso con la depuración de la aplicación o como una forma alternativa de entrada. Windows Mixed Reality también admite auriculares envolventes conectados a equipos, donde los ratones, los teclados y los controladores de juegos han sido históricamente la norma.
 
-Usar entradas mediante teclado en HoloLens, par un teclado Bluetooth al dispositivo o entrada virtual a través de la Windows Device Portal. Para usar la entrada de teclado cuando se usan un auricular envolvente de Windows Mixed Reality, asigne foco de entrada a la realidad mixta colocar en el dispositivo o utilizando la tecla Windows + Y combinación de teclado. Tenga en cuenta que las aplicaciones destinadas a HoloLens deben proporcionar una funcionalidad sin estos dispositivos conectados.
+Para usar la entrada del teclado en HoloLens, empareje un teclado Bluetooth a su dispositivo o use la entrada virtual a través del portal de dispositivos de Windows. Para usar la entrada del teclado al mismo tiempo que usa un auricular envolvente de realidad mixta de Windows, asigne el foco de entrada a la realidad mixta colocando en el dispositivo o mediante la combinación de teclas de Windows + Y. Tenga en cuenta que las aplicaciones destinadas a HoloLens deben proporcionar funcionalidad sin estos dispositivos conectados.
 
 >[!NOTE]
->Los fragmentos de código en este artículo actualmente muestran el uso de C++/CX en lugar de C ++ 17 conforme C++/WinRT como utiliza en el [ C++ plantilla de proyecto holographic](creating-a-holographic-directx-project.md).  Los conceptos son equivalentes a un C++/WinRT del proyecto, aunque deberá traducir el código.
+>Los fragmentos de código de este artículo muestran actualmente el uso C++de/CX en lugar de/WinRT compatible C++con C + +17, tal y como se usa en la [ C++ plantilla de proyecto holográfica](creating-a-holographic-directx-project.md).  Los conceptos son equivalentes para C++un proyecto de/WinRT, aunque tendrá que traducir el código.
 
 ## <a name="subscribe-for-corewindow-input-events"></a>Suscribirse a eventos de entrada de CoreWindow
 
 ### <a name="keyboard-input"></a>Entrada de teclado
 
-En la plantilla de aplicación de Windows Holographic, incluimos un controlador de eventos para la entrada de teclado al igual que cualquier otra aplicación UWP. La aplicación consume datos de entrada de teclado de la misma manera en Windows Mixed Reality.
+En la plantilla de aplicación de Windows Holographic, se incluye un controlador de eventos para la entrada de teclado como cualquier otra aplicación de UWP. La aplicación consume los datos de entrada del teclado de la misma forma en Windows Mixed Reality.
 
-Desde AppView.cpp:
+Desde AppView. cpp:
 
 ```
 // Register for keypress notifications.
@@ -47,25 +47,25 @@ Desde AppView.cpp:
    }
 ```
 
-### <a name="virtual-keyboard-input"></a>Entradas mediante teclado virtual
-Para el escritorio inmersivos también pueden admitir teclados virtuales representados por Windows a través de la vista envolvente. Para admitir esto, puede implementar la aplicación **CoreTextEditContext**. Esto permite que Windows comprender el estado de sus propios cuadros de texto de la aplicación representó, por lo que el teclado virtual correctamente puede contribuir en el texto no existe.
+### <a name="virtual-keyboard-input"></a>Entrada de teclado virtual
+En el caso de los auriculares de escritorio envolventes, también puede admitir Teclados virtuales representados por Windows sobre la vista envolvente. Para admitir esto, la aplicación puede implementar **CoreTextEditContext**. Esto permite a Windows comprender el estado de sus propios cuadros de texto presentados por la aplicación, por lo que el teclado virtual puede contribuir correctamente al texto.
 
-Para obtener más información sobre la implementación de soporte técnico de CoreTextEditContext, consulte el [CoreTextEditContext ejemplo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
+Para obtener más información sobre cómo implementar la compatibilidad con CoreTextEditContext, vea el [ejemplo CoreTextEditContext](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
 
-### <a name="mouse-input"></a>Entrada de mouse
+### <a name="mouse-input"></a>Entrada del mouse
 
-También puede usar la entrada del mouse, nuevamente a través de los controladores de eventos de entrada de CoreWindow de UWP. Aquí le explicamos cómo modificar la plantilla de aplicación de Windows Holographic para admitir los clics del mouse en los gestos mismos manera como presionados. Después de realizar esta modificación, un clic del mouse mientras el exceso de un dispositivo de auriculares envolventes volverá a colocarse el cubo.
+También puede usar la entrada del mouse de nuevo a través de los controladores de eventos de entrada de CoreWindow de UWP. Aquí se muestra cómo modificar la plantilla de la aplicación holográfica de Windows para admitir los clics del mouse de la misma manera que los gestos presionados. Después de realizar esta modificación, al hacer clic con el mouse mientras se contenía un dispositivo con auriculares envolvente, cambiará la posición del cubo.
 
-Tenga en cuenta que las aplicaciones para UWP también pueden obtener datos XY sin procesar para el mouse mediante el [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) API.
+Tenga en cuenta que las aplicaciones UWP también pueden obtener datos XY sin formato para el mouse mediante la API de [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) .
 
-Comience por declarar un nuevo controlador OnPointerPressed en AppView.h:
+Empiece por declarar un nuevo controlador OnPointerPressed en AppView. h:
 
 ```
 protected:
        void OnPointerPressed(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::PointerEventArgs^ args);
 ```
 
-En AppView.cpp, agregue este código al SetWindow:
+En AppView. cpp, agregue este código a SetWindow:
 
 ```
 // Register for pointer pressed notifications.
@@ -73,7 +73,7 @@ En AppView.cpp, agregue este código al SetWindow:
        ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &AppView::OnPointerPressed);
 ```
 
-A continuación, poner esta definición para OnPointerPressed en la parte inferior del archivo:
+Después, coloque esta definición para OnPointerPressed en la parte inferior del archivo:
 
 ```
 void AppView::OnPointerPressed(CoreWindow^ sender, PointerEventArgs^ args)
@@ -86,21 +86,21 @@ void AppView::OnPointerPressed(CoreWindow^ sender, PointerEventArgs^ args)
    }
 ```
 
-Acaba de agregar el controlador de eventos es un acceso directo a la clase de plantilla principal. Vamos a modificar la clase principal para admitir este paso a través. Agregue esta declaración de método público para el archivo de encabezado:
+El controlador de eventos que acabamos de agregar es un paso a través de la clase principal de la plantilla. Vamos a modificar la clase principal para que admita este paso. Agregue esta declaración de método público al archivo de encabezado:
 
 ```
 // Handle mouse input.
        void OnPointerPressed();
 ```
 
-Necesitará esta variable de miembro privado:
+Necesitará esta variable miembro privada también:
 
 ```
 // Keep track of mouse input.
        bool m_pointerPressed = false;
 ```
 
-Por último, la clase principal se actualizará con la nueva lógica para admitir los clics del mouse. Empiece agregando este controlador de eventos. Asegúrese de actualizar el nombre de clase:
+Por último, actualizaremos la clase principal con una nueva lógica para admitir los clics del mouse. Empiece por agregar este controlador de eventos. Asegúrese de actualizar el nombre de clase:
 
 ```
 void MyHolographicAppMain::OnPointerPressed()
@@ -109,7 +109,7 @@ void MyHolographicAppMain::OnPointerPressed()
    }
 ```
 
-Ahora, en el método de actualización, reemplace la lógica existente para obtener una postura de puntero con esto:
+Ahora, en el método de actualización, reemplace la lógica existente para obtener una repose de puntero con este:
 
 ```
 SpatialInteractionSourceState^ pointerState = m_spatialInputHandler->CheckForInput();
@@ -125,13 +125,13 @@ SpatialInteractionSourceState^ pointerState = m_spatialInputHandler->CheckForInp
    m_pointerPressed = false;
 ```
 
-Vuelva a compilar y volver a implementar. Tenga en cuenta que el clic del mouse ahora volverá a colocarse el cubo en la envolvente auriculares - o HoloLens con el mouse bluetooth adjuntado.
+Vuelva a compilar e implementar. Tenga en cuenta que, al hacer clic con el mouse, se volverá a colocar el cubo en el casco envolvente, o HoloLens, con el mouse Bluetooth conectado.
 
-### <a name="game-controller-support"></a>Compatibilidad del dispositivo de juego
+### <a name="game-controller-support"></a>Compatibilidad con el dispositivo de juego
 
-Dispositivos de juego pueden ser una manera práctica y cómoda de permitir que al usuario para controlar una experiencia de Windows Mixed Reality envolvente.
+Los dispositivos de juego pueden ser una forma divertida y cómoda de permitir al usuario controlar una experiencia de Windows Mixed Reality más envolvente.
 
-Es el primer paso para agregar compatibilidad con dispositivos de juego en la plantilla de aplicación de Windows Holographic, agregue las siguientes declaraciones de miembro privado a la clase de encabezado para el archivo principal:
+El primer paso para agregar compatibilidad con dispositivos de juego a la plantilla de aplicación de Windows Holographic es agregar las siguientes declaraciones de miembro privado a la clase de encabezado para el archivo principal:
 
 ```
 // Recognize gamepads that are plugged in after the app starts.
@@ -158,7 +158,7 @@ Windows::Foundation::EventRegistrationToken                     m_gamepadAddedEv
        std::vector<GamepadWithButtonState>                             m_gamepads;
 ```
 
-Inicializar los eventos de gamepad y cualquier configuración de los controles que está conectados actualmente, en el constructor para la clase principal:
+Inicialice los eventos del controlador de juegos y los controladores de juegos que estén conectados actualmente en el constructor de la clase principal:
 
 ```
 // If connected, a game controller can also be used for input.
@@ -182,7 +182,7 @@ for (auto const& gamepad : Gamepad::Gamepads)
    }
 ```
 
-Agregar estos controladores de eventos a la clase principal. Asegúrese de actualizar el nombre de clase:
+Agregue estos controladores de eventos a la clase principal. Asegúrese de actualizar el nombre de clase:
 
 ```
 void MyHolographicAppMain::OnGamepadAdded(Object^, Gamepad^ args)
@@ -211,7 +211,7 @@ void MyHolographicAppMain::OnGamepadRemoved(Object^, Gamepad^ args)
    }
 ```
 
-Por último, actualice la lógica de entrada para que reconozca los cambios de estado del controlador. En este caso, usamos la misma variable m_pointerPressed descrita en la sección anterior para agregar los eventos del mouse. Agregue lo siguiente al método Update, justo antes de que busca el SpatialPointerPose:
+Por último, actualice la lógica de entrada para que reconozca los cambios en el estado del controlador. Aquí, usamos la misma variable m_pointerPressed que se describe en la sección anterior para agregar eventos del mouse. Agregue esto al método Update, justo antes de donde comprueba el SpatialPointerPose:
 
 ```
 // Check for new input state since the last frame.
@@ -241,7 +241,7 @@ Por último, actualice la lógica de entrada para que reconozca los cambios de e
    m_pointerPressed = false;
 ```
 
-No se olvide de anular el registro de los eventos al limpiar la clase principal:
+No olvide anular el registro de los eventos al limpiar la clase principal:
 
 ```
 if (m_gamepadAddedEventToken.Value != 0)
@@ -254,16 +254,16 @@ if (m_gamepadAddedEventToken.Value != 0)
    }
 ```
 
-Vuelva a compilar y volver a implementar. Ahora puede adjuntar, o emparejar un dispositivo de juego y usarlo para volver a colocar el cubo girando.
+Vuelva a compilar e implementar. Ahora puede adjuntar, o emparejar, un dispositivo de juego y usarlo para cambiar la posición del cubo giratorio.
 
-## <a name="important-guidelines-for-keyboard-and-mouse-input"></a>Instrucciones importantes para el teclado y mouse de entrada
+## <a name="important-guidelines-for-keyboard-and-mouse-input"></a>Directrices importantes para la entrada de teclado y del mouse
 
-Hay algunas diferencias clave en cómo se puede usar este código en Microsoft HoloLens, que es un dispositivo que se basa principalmente en la entrada de usuario natural – frente a lo que está disponible en un PC con Windows Mixed Reality.
-* No puede confiar en el teclado o mouse de entrada estén presentes. Toda la funcionalidad de la aplicación debe trabajar con la mirada, gestos y entrada de voz.
-* Cuando se adjunta un teclado Bluetooth, puede ser útil habilitar la entrada de teclado para cualquier texto que podría necesitar la aplicación. Esto puede ser un excelente complemento de dictado, por ejemplo.
-* En cuanto al diseño de la aplicación, no se basan en WASD (por ejemplo) y mouse busque los controles de su juego. HoloLens está diseñado para que el usuario a caminar alrededor de la sala. En este caso, el usuario controla la cámara directamente. Una interfaz para impulsar la cámara en torno a la sala con controles de movimiento o buscar no proporciona la misma experiencia.
-* Entrada de teclado puede ser una manera excelente de controlar los aspectos de depuración de la aplicación o el motor de juego, sobre todo porque el usuario no tendrá que usar el teclado. Transmitiendo es el mismo que el que está acostumbrado, con la API de eventos de CoreWindow. En este escenario, puede implementar una forma de configurar la aplicación para enrutar los eventos de teclado a un modo de "entrada sólo de debug" durante las sesiones de depuración.
-* Los controladores de Bluetooth también funcionan correctamente.
+Hay algunas diferencias importantes en el modo en que este código se puede usar en Microsoft HoloLens, que es un dispositivo que se basa principalmente en la entrada natural del usuario, frente a lo que está disponible en un equipo con Windows Mixed Reality habilitado.
+* No se puede confiar en que la entrada del mouse o del teclado esté presente. Toda la funcionalidad de la aplicación debe funcionar con la mirada, el gesto y la entrada de voz.
+* Cuando se adjunta un teclado Bluetooth, puede resultar útil habilitar la entrada del teclado para cualquier texto que la aplicación pueda solicitar. Este puede ser un complemento excelente para el dictado, por ejemplo.
+* En lo que respecta al diseño de la aplicación, no confíe en los controles WASD y de apariencia del mouse para el juego. HoloLens está diseñado para que el usuario pueda desplazarse por la habitación. En este caso, el usuario controla la cámara directamente. Una interfaz para impulsar la cámara en torno a la habitación con controles de movimiento y apariencia no proporciona la misma experiencia.
+* La entrada mediante teclado puede ser una manera excelente de controlar los aspectos de depuración de la aplicación o el motor de juegos, sobre todo porque el usuario no tendrá que usar el teclado. El cableado es el mismo que se usa con las API de eventos de CoreWindow. En este escenario, puede optar por implementar una manera de configurar la aplicación para que enrute los eventos de teclado a un modo de "depuración de solo entrada" durante las sesiones de depuración.
+* Los controladores Bluetooth también funcionan.
 
 ## <a name="see-also"></a>Vea también
 * [Accesorios de hardware](hardware-accessories.md)

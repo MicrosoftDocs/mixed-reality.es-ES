@@ -1,11 +1,11 @@
 ---
 title: Asignación espacial en Unity
-description: Representación y chocar con la geometría del mundo real que le rodea en Unity.
+description: Representación y colisión con la geometría del mundo real en su lugar en Unity.
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, asignación espacial, representador, colisionador, malla, el análisis, componente
+keywords: Unity, asignación espacial, representador, Colisionador, malla, exploración, componente
 ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
 ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
 ms.translationtype: MT
@@ -15,74 +15,74 @@ ms.locfileid: "67148649"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
-Este tema describe cómo usar [asignación espacial](spatial-mapping.md) en el proyecto de Unity, recuperar las mallas de triangulares que representan las superficies del mundo en torno a un dispositivo HoloLens, para la colocación, oclusión, análisis de la sala y mucho más.
+En este tema se describe cómo usar la [asignación espacial](spatial-mapping.md) en el proyecto de Unity, con lo que se recuperan mallas triangulares que representan las superficies del mundo en torno a un dispositivo HoloLens, para la selección de ubicación, la oclusión, el análisis de habitación y mucho más.
 
-Unity es totalmente compatible con la asignación espacial, que se expone a los desarrolladores de las maneras siguientes:
-1. Asignación de componentes disponibles en el MixedRealityToolkit espaciales, que proporcionan una ruta cómoda y rápida para comenzar con la asignación espacial
-2. Asignación espacial de nivel inferior API, que proporcionan un completo control y permiten la personalización específica de aplicación más sofisticada
+Unity incluye compatibilidad total con la asignación espacial, que se expone a los desarrolladores de las siguientes maneras:
+1. Componentes de asignación espacial disponibles en MixedRealityToolkit, que proporcionan una ruta de acceso cómoda y rápida para empezar a trabajar con la asignación espacial
+2. API de asignación espacial de nivel inferior, que proporcionan control total y permiten una personalización específica de la aplicación más sofisticada.
 
-Para usar asignación espacial en la aplicación, la capacidad de spatialPerception debe establecerse en su AppxManifest.
+Para usar la asignación espacial en la aplicación, debe establecerse la funcionalidad spatialPerception en el AppxManifest.
 
-## <a name="setting-the-spatialperception-capability"></a>Establecer la capacidad de SpatialPerception
+## <a name="setting-the-spatialperception-capability"></a>Establecimiento de la funcionalidad SpatialPerception
 
-En el orden de una aplicación consumir datos de asignación espacial, debe habilitarse la capacidad de SpatialPerception.
+Para que una aplicación consuma datos de asignación espacial, la funcionalidad SpatialPerception debe estar habilitada.
 
-Cómo habilitar la funcionalidad de SpatialPerception:
-1. En el Editor de Unity, abra el **"Configuración del Reproductor"** panel (Editar > configuración del proyecto > Reproductor)
-2. Haga clic en el **"Windows Store"** ficha
-3. Expanda **"Configuración de publicación"** y compruebe el **"SpatialPerception"** capacidad en el **"Capacidades"** lista
+Cómo habilitar la funcionalidad SpatialPerception:
+1. En el editor de Unity, abra el panel de **configuración del reproductor** (Editar > configuración del proyecto > Player).
+2. Haga clic en la pestaña **"tienda Windows"**
+3. Expanda **"configuración de publicación"** y seleccione la funcionalidad **"SpatialPerception"** en la lista **"funcionalidades"** .
 
-Tenga en cuenta que si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o manualmente [establecer esta funcionalidad en el AppxManifest en Visual Studio](spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
+Tenga en cuenta que si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o [establecer manualmente esta funcionalidad en el AppxManifest de Visual Studio](spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
 
-Asignación espacial también requiere un MaxVersionTested de al menos 10.0.10586.0:
-1. En Visual Studio, haga clic en **Package.appxmanifest** en el Explorador de soluciones y seleccione **ver código**
-2. Busque la línea especifica **TargetDeviceFamily** y cambiar **MaxVersionTested = "10.0.10240.0"** a **MaxVersionTested = "10.0.10586.0"**
-3. **Guardar** Package.appxmanifest.
+La asignación espacial también requiere un MaxVersionTested de al menos 10.0.10586.0:
+1. En Visual Studio, haga clic con el botón derecho en **Package. appxmanifest** en el explorador de soluciones y seleccione **Ver código** .
+2. Busque la línea que especifica **TargetDeviceFamily** y cambie **MaxVersionTested = "10.0.10240.0"** por **MaxVersionTested = "10.0.10586.0"**
+3. **Guarde** el paquete. appxmanifest.
 
-## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introducción a los componentes de asignación espacial integradas de Unity
+## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introducción a los componentes de asignación espacial integrados de Unity
 
-Unity ofrece 2 componentes para agregar fácilmente la asignación espacial a su aplicación, **representador de asignación espacial** y **espacial Colisionador asignación**.
+Unity ofrece 2 componentes para agregar fácilmente la asignación espacial a la aplicación, el representador de **asignación espacial** y el Colisionador de **asignación espacial**.
 
 ### <a name="spatial-mapping-renderer"></a>Representador de asignación espacial
 
 El representador de asignación espacial permite la visualización de la malla de asignación espacial.
 
-![Asignación espacial representador en Unity](images/spatialmappingrenderer.png)
+![Representador de asignación espacial en Unity](images/spatialmappingrenderer.png)
 
-### <a name="spatial-mapping-collider"></a>Asignación espacial Colisionador
+### <a name="spatial-mapping-collider"></a>Colisionador de asignación espacial
 
-Permite el Colisionador asignación espacial holográfica contenido (o carácter) interacción, como física, con la malla de asignación espacial.
+El Colisionador de asignación espacial permite la interacción de contenido holográfica (o de caracteres), como la física, con la malla de asignación espacial.
 
-![Asignación espacial Colisionador en Unity](images/spatialmappingcollider.png)
+![Colisionador de asignación espacial en Unity](images/spatialmappingcollider.png)
 
-### <a name="using-the-built-in-spatial-mapping-components"></a>Con los componentes integrados asignación espacial
+### <a name="using-the-built-in-spatial-mapping-components"></a>Usar los componentes de asignación espacial integrados
 
-Puede agregar ambos componentes a la aplicación si desea que tanto visualizar e interactuar con las superficies físico.
+Puede Agregar ambos componentes a la aplicación si desea visualizar y interactuar con las superficies físicas.
 
 Para usar estos dos componentes en la aplicación de Unity:
-1. Seleccione un GameObject en el centro del área en la que le gustaría detectar las mallas de superficie espaciales.
-2. En la ventana del Inspector, **Agregar componente** > **XR** > **Colisionador asignación espacial** o **espacial Representador de asignación**.
+1. Seleccione un GameObject en el centro del área en la que desea detectar mallas de superficie espacial.
+2. En la ventana del inspector, **agregue el elemento** > Colisionador de**asignación espacial** del componente**XR** > o el representador de **asignación espacial**.
 
-Puede encontrar más detalles sobre cómo usar estos componentes en el <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">sitio de documentación de Unity</a>.
+Puede encontrar más detalles sobre cómo usar estos componentes en el sitio de <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentación de Unity</a>.
 
-### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>Ir más allá de los componentes integrados asignación espacial
+### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>Ir más allá de los componentes de asignación espacial integrados
 
-Estos componentes facilitan arrastrar y colocar fácil empezar a trabajar con la asignación espacial.  Cuando desea ir más allá, hay dos formas de explorar:
-* Para realizar el procesamiento de la malla de nivel inferior, vea la sección siguiente sobre el script de bajo nivel de asignación espacial API.
-* Para realizar análisis de malla de nivel superior, consulte la sección acerca de la biblioteca SpatialUnderstanding en <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.
+Estos componentes facilitan la tarea de arrastrar y colocar para empezar a trabajar con la asignación espacial.  Si desea continuar, hay dos rutas principales para explorar:
+* Para realizar su propio procesamiento de malla de nivel inferior, consulte la sección siguiente sobre la API de script de asignación espacial de bajo nivel.
+* Para realizar análisis de malla de nivel superior, consulte la sección siguiente sobre la biblioteca SpatialUnderstanding en <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.
 
-## <a name="using-the-low-level-unity-spatial-mapping-api"></a>Utilizando el Unity espacial asignación de API de bajo nivel
+## <a name="using-the-low-level-unity-spatial-mapping-api"></a>Uso de la API de asignación espacial de Unity de bajo nivel
 
-Si necesita más control que obtendrá de los componentes de representador asignación espacial y Colisionador asignación espacial, puede usar el script de asignación espacial bajo nivel API.
+Si necesita más control de los que obtiene del representador de asignación espacial y los componentes de Colisionador de asignación espacial, puede usar las API de script de asignación espacial de bajo nivel.
 
-**Namespace:** *UnityEngine.XR.WSA*<br>
+**System.IO** *UnityEngine. XR. WSA*<br>
 **Tipos**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*
 
-El siguiente es un esquema del flujo sugerido para una aplicación que utiliza la API de asignación espacial.
+A continuación se describe el flujo sugerido para una aplicación que usa las API de asignación espacial.
 
-### <a name="set-up-the-surfaceobservers"></a>Configurar la SurfaceObserver(s)
+### <a name="set-up-the-surfaceobservers"></a>Configuración de los SurfaceObserver
 
-Crear una instancia de un objeto SurfaceObserver para cada región definida por la aplicación de espacio que necesita datos de asignación espacial para.
+Cree una instancia de un objeto SurfaceObserver para cada región de espacio definida por la aplicación para la que necesite datos de asignación espacial.
 
 ```cs
 SurfaceObserver surfaceObserver;
@@ -92,7 +92,7 @@ SurfaceObserver surfaceObserver;
  }
 ```
 
-Especificar la región del espacio que cada objeto SurfaceObserver proporcionará datos para llamar al método SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox o SetVolumeAsFrustum. Basta con volver a llamar a uno de estos métodos puede volver a definir la región de espacio en el futuro.
+Especifique la región de espacio para la que cada objeto SurfaceObserver proporcionará los datos mediante una llamada a SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox o SetVolumeAsFrustum. Para volver a definir la región de espacio en el futuro, simplemente vuelva a llamar a uno de estos métodos.
 
 ```cs
 void Start () {
@@ -101,7 +101,7 @@ void Start () {
 }
 ```
 
-Cuando se llama a SurfaceObserver.Update(), debe proporcionar un controlador para cada superficie espacial en región del SurfaceObserver de espacio que el sistema de asignación espacial tiene nueva información de. El controlador recibe de una superficie espacial:
+Cuando se llama a SurfaceObserver. Update (), debe proporcionar un controlador para cada superficie espacial en la región de espacio de SurfaceObserver para la que el sistema de asignación espacial tiene información nueva. El controlador recibe, para una superficie espacial:
 
 ```cs
 private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
@@ -110,11 +110,11 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
  }
 ```
 
-### <a name="handling-surface-changes"></a>Control de cambios superficiales
+### <a name="handling-surface-changes"></a>Control de cambios de superficie
 
-Hay varios casos principales para controlar. Agregar & actualizado que puede usar la misma ruta de acceso y se eliminan de código.
-* En los casos Added & actualizado en el ejemplo, se agrega u obtener el GameObject que representa esto de malla del diccionario, creación de un struct SurfaceData con los componentes necesarios y luego llamar a RequestMeshDataAsync para rellenar el GameObject con los datos de la malla y posición en la escena.
-* En el caso de quitado, se quita el GameObject que representa esta malla del diccionario y destruirlo.
+Hay varios casos principales que se deben controlar. Se ha agregado & actualizado que puede usar la misma ruta de código y se ha quitado.
+* En los casos agregados & actualizados en el ejemplo, se agrega u obtiene el GameObject que representa esta malla del diccionario, se crea un struct SurfaceData con los componentes necesarios y, después, se llama a RequestMeshDataAsync para rellenar el GameObject con los datos de la malla y posición en la escena.
+* En el caso de que se quite, se quita el GameObject que representa esta malla del diccionario y se destruye.
 
 ```cs
 System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects = 
@@ -164,13 +164,13 @@ System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects 
    }
 ```
 
-### <a name="handling-data-ready"></a>Listas de control de datos
+### <a name="handling-data-ready"></a>Controlar los datos preparados
 
-El controlador de OnDataReady recibe un objeto SurfaceData. El WorldAnchor, MeshFilter y (opcionalmente) MeshCollider objetos que contiene reflejan el estado más reciente de la superficie espacial asociado. Opcionalmente, realizar análisis o [procesamiento](spatial-mapping.md#mesh-processing) de los datos de la malla mediante el acceso a los miembros de malla del objeto MeshFilter. Representar la superficie espacial con la malla más reciente y (opcionalmente) se utiliza para conflictos de leyes físicas y raycasts. Es importante confirmar que el contenido de la SurfaceData no es null.
+El controlador OnDataReady recibe un objeto SurfaceData. Los objetos WorldAnchor, MeshFilter y (opcionalmente) MeshCollider que contiene reflejan el estado más reciente de la superficie espacial asociada. Opcionalmente, realice el análisis y/o el [procesamiento](spatial-mapping.md#mesh-processing) de los datos de la malla mediante el acceso al miembro de la malla del objeto MeshFilter. Represente la superficie espacial con la malla más reciente y, opcionalmente, Úsela para las colisiones físicas y raycasts. Es importante confirmar que el contenido de SurfaceData no es NULL.
 
-### <a name="start-processing-on-updates"></a>Iniciar el procesamiento de las actualizaciones
+### <a name="start-processing-on-updates"></a>Iniciar el procesamiento en las actualizaciones
 
-SurfaceObserver.Update() debe llamarse en un retraso, no en cada fotograma.
+Se debe llamar a SurfaceObserver. Update () en un retraso, no en todos los fotogramas.
 
 ```cs
 void Start () {
@@ -189,25 +189,25 @@ void Start () {
     }
 ```
 
-## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>Análisis de la malla de nivel superior: SpatialUnderstanding
+## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>Análisis de malla de nivel superior: SpatialUnderstanding
 
-El <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> es una colección de código de la utilidad de ayuda para el desarrollo holográfico basado las API de Unity holográfica.
+<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> es una colección de código de utilidad útil para el desarrollo holográfica basado en las API de Unity de Holographic.
 
-### <a name="spatial-understanding"></a>Understanding espacial
+### <a name="spatial-understanding"></a>Descripción espacial
 
-Al colocar hologramas en el mundo físico suele ser deseable para ir más allá de la asignación espacial de la malla y planos de la superficie. Cuando la selección de ubicación se realiza mediante procedimientos, es deseable un mayor nivel de comprensión del entorno. Esto requiere generalmente tomar decisiones sobre las novedades de las paredes, ceiling y floor. Además, la capacidad de optimizar con un conjunto de restricciones de colocación para determinar las ubicaciones físicas más conveniente para los objetos holográficas.
+Al colocar hologramas en el mundo físico, a menudo es conveniente ir más allá de los planos de malla y de superficie de la asignación espacial. Cuando la selección de ubicación se realiza con procedimientos, es deseable un nivel más alto de comprensión del entorno. Normalmente, esto requiere tomar decisiones sobre qué es el suelo, el techo y las paredes. Además, la capacidad de optimizar con respecto a un conjunto de restricciones de selección de ubicación para determinar las ubicaciones físicas más deseables de los objetos holográficas.
 
-Durante el desarrollo de fragmentos y Conker Young, Asobo Studios que afrontar este problema sin rodeos, desarrollo de un solucionador de espacio para este propósito. Cada uno de estos juegos tenía juego necesidades específicas, pero comparten core espacial descripción de la tecnología. Coloca el HoloToolkit.SpatialUnderstanding biblioteca encapsula esta tecnología, lo que permite que a rápidamente buscar espacios en blanco en las paredes, los objetos de contexto en el techo, identificar para carácter estar sentado y un sinnúmero de otras consultas espaciales descripción.
+Durante el desarrollo de conkers y fragmentos jóvenes, Asobo Studios se enfrentó a este problema en el desarrollo de una sala de Solver para este fin. Cada uno de estos juegos tenía necesidades específicas del juego, pero compartimos la tecnología de comprensión espacial básica. La biblioteca HoloToolkit. SpatialUnderstanding encapsula esta tecnología, lo que permite encontrar rápidamente espacios vacíos en las paredes, colocar objetos en el límite superior, identificar colocadas para que el carácter quede sentado y una gran cantidad de consultas espaciales.
 
-Todo el código fuente se incluye, lo que permite personalizar según sus necesidades y compartir sus mejoras con la Comunidad. El código para el C++ solver se ha ajustado en un archivo dll UWP y expuestos a Unity con una disminución en el prefabricado verá dentro de la MixedRealityToolkit.
+Se incluye todo el código fuente, lo que le permite personalizarlo según sus necesidades y compartir sus mejoras con la comunidad. El código de C++ Solver se ha encapsulado en un archivo dll de UWP y expuesto a Unity con una colocación en recurso prefabricado incluida en el MixedRealityToolkit.
 
-### <a name="understanding-modules"></a>Módulos de descripción
+### <a name="understanding-modules"></a>Descripción de los módulos
 
-Hay tres interfaces principales expuestas por el módulo: topología de superficie simple y consultas espaciales, forma para la detección de objeto y el Solucionador de selección de ubicación del objeto para la colocación de restricción en función de los conjuntos de objetos. Cada una de ellas se describe a continuación. Además de las tres interfaces de módulo principal, una interfaz de la conversión de ray puede usarse para recuperar tipos de superficie con etiquetas y una malla playspace estanca personalizados se puede copiar.
+Hay tres interfaces principales que expone el módulo: la topología para las consultas simples de superficie y espacial, la forma de detección de objetos y la colocación de objetos de Solver para la colocación basada en restricciones de los conjuntos de objetos. Cada una de ellas se describe a continuación. Además de las tres interfaces de módulos principales, se puede usar una interfaz de conversión de rayos para recuperar tipos de superficie etiquetada y se puede copiar una malla Playspace estanco personalizada.
 
-### <a name="ray-casting"></a>Ray conversión
+### <a name="ray-casting"></a>Conversión de rayos
 
-Después de haber analizado y finaliza la sala, las etiquetas se hayan generado internamente para superficies como paredes, ceiling y floor. El "PlayspaceRaycast" función toma un rayo y devuelve si el rayo entra en conflicto con una superficie conocida y si es así, la información sobre la que se muestran en forma de un "RaycastResult".
+Una vez que se ha analizado y finalizado el salón, las etiquetas se generan internamente para las superficies como el piso, el techo y las paredes. La función "PlayspaceRaycast" toma un rayo y devuelve si el rayo entra en conflicto con una superficie conocida y, en caso afirmativo, información sobre esa superficie en forma de "RaycastResult".
 
 ```cpp
 struct RaycastResult
@@ -235,18 +235,18 @@ struct RaycastResult
 };
 ```
 
-Internamente, el raycast es calculado con respecto a la representación de voxel calculada 8cm al cubo de la playspace. Cada voxel contiene un conjunto de elementos de superficie con datos de la topología procesados (también conocido como surfels). Se comparan los surfels dentro de la celda voxel intersectado y la mejor coincidencia utilizada para buscar la información de topología. Estos datos de la topología contienen el etiquetado devuelto en el formulario de la enumeración "SurfaceTypes", así como el área expuesta de la superficie de intersección.
+Internamente, el Raycast se calcula con la representación calculada de 8cm con cubo voxel de Playspace. Cada voxel contiene un conjunto de elementos Surface con datos de topología procesados (también conocido como surfels). Se comparan los surfels contenidos en la celda voxel intersectada y la mejor coincidencia utilizada para buscar la información de la topología. Estos datos de topología contienen la etiqueta devuelta en forma de enumeración "SurfaceTypes", así como el área expuesta de la superficie intersectada.
 
-En el ejemplo de Unity, el cursor convierte un rayo cada fotograma. En primer lugar, con colisionadores de Unity. En segundo lugar, con representación de mundo del módulo de la descripción. Y por último, vuelva a elementos de IU. En esta aplicación, la interfaz de usuario obtiene la prioridad, a continuación el resultado de la descripción y, por último, colisionadores de Unity. El SurfaceType se notifica como texto situado junto al cursor.
+En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma. En primer lugar, con los colisionadores de Unity. En segundo lugar, en la representación mundial del módulo de comprensión. Y, por último, los elementos de la interfaz de usuario. En esta aplicación, la interfaz de usuario obtiene prioridad, después del resultado de comprensión y, por último, los colisionadores de Unity. El SurfaceType se muestra como texto junto al cursor.
 
-![Tipo de superficie tiene la etiqueta situado junto al cursor](images/su-raycastresults-300px.jpg)<br>
-*Tipo de superficie tiene la etiqueta situado junto al cursor*
+![El tipo de superficie se etiqueta junto al cursor](images/su-raycastresults-300px.jpg)<br>
+*El tipo de superficie se etiqueta junto al cursor*
 
 ### <a name="topology-queries"></a>Consultas de topología
 
-En el archivo DLL, el Administrador de la topología controla etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacena en surfels, dentro de un volumen voxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre la playspace, incluida la alineación del mundo (más detalles en este tema), floor y ceiling de alto. Se utiliza la heurística para determinar las paredes, ceiling y floor. Por ejemplo, la superficie más grande y más baja horizontal con más de 1 área expuesta de m2 se considera el suelo. Tenga en cuenta que la ruta de acceso de la cámara durante el proceso de análisis también se usa en este proceso.
+En el archivo DLL, el administrador de topología controla el etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacenan en surfels, contenidos en un volumen de voxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre Playspace, incluida la alineación del mundo (más detalles a continuación), piso y alto del techo. La heurística se usa para determinar el piso, el techo y las paredes. Por ejemplo, la superficie horizontal más grande y más baja con un área de superficie superior a 1 m2 se considera el piso. Tenga en cuenta que la ruta de acceso de la cámara durante el proceso de digitalización también se usa en este proceso.
 
-Un subconjunto de consultas expuestas por el Administrador de topología se exponen fuera a través de la dll. Las consultas de topología expuestas son los siguientes.
+Un subconjunto de las consultas expuestas por el administrador de topología se expone a través de la dll. Las consultas de topologías expuestas son las siguientes.
 
 ```cpp
 QueryTopology_FindPositionsOnWalls
@@ -257,7 +257,7 @@ QueryTopology_FindLargestPositionsOnFloor
 QueryTopology_FindPositionsSittable
 ```
 
-Cada una de las consultas tiene un conjunto de parámetros, el tipo de consulta específicos. En el ejemplo siguiente, el usuario especifica el alto mínimo anc & ho del volumen deseado, el alto mínimo de la selección de ubicación por encima el suelo y la cantidad mínima de limpieza delante el volumen. Todas las medidas son en metros.
+Cada una de las consultas tiene un conjunto de parámetros, específico del tipo de consulta. En el ejemplo siguiente, el usuario especifica el alto mínimo & ancho del volumen deseado, el alto mínimo de la ubicación por encima del piso y la cantidad mínima de holgura delante del volumen. Todas las medidas están en metros.
 
 ```cpp
 EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
@@ -269,9 +269,9 @@ EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
     _Inout_ Dll_Interface::TopologyResult* locationData)
 ```
 
-Cada una de estas consultas toma una matriz de estructuras "TopologyResult" preasignada. El parámetro "locationCount" especifica la longitud de la matriz pasada. El valor devuelto indica el número de ubicaciones devueltas. Este número nunca es mayor que ha pasado en el parámetro "locationCount".
+Cada una de estas consultas toma una matriz preasignada de estructuras "TopologyResult". El parámetro "locationCount" especifica la longitud de la matriz pasada. El valor devuelto informa del número de ubicaciones devueltas. Este número nunca es mayor que el pasado en el parámetro "locationCount".
 
-El "TopologyResult" contiene la posición central de las dimensiones del espacio se encuentra, la dirección opuesta (es decir, normal) y el volumen devuelto.
+"TopologyResult" contiene la posición central del volumen devuelto, la dirección orientada (es decir, normal) y las dimensiones del espacio encontrado.
 
 ```cpp
 struct TopologyResult 
@@ -283,15 +283,15 @@ struct TopologyResult
 };
 ```
 
-Tenga en cuenta que en el ejemplo de Unity, cada una de estas consultas está vinculado a un botón en el panel de interfaz de usuario virtual. El disco duro de ejemplo códigos de los parámetros para cada una de estas consultas para valores razonables. En el código de ejemplo para obtener más ejemplos, consulte SpaceVisualizer.cs.
+Tenga en cuenta que en el ejemplo de Unity, cada una de estas consultas está vinculada a un botón en el panel de interfaz de usuario virtual. En el ejemplo se codifican los parámetros de cada una de estas consultas en valores razonables. Vea SpaceVisualizer.cs en el código de ejemplo para obtener más ejemplos.
 
 ### <a name="shape-queries"></a>Consultas de forma
 
-Dentro de la dll, el analizador de forma ("ShapeAnalyzer_W") usa el analizador de topología para coincidir con las formas personalizadas definidas por el usuario. El ejemplo de Unity define un conjunto de formas y muestra los resultados de salida a través del menú de la consulta en la aplicación, dentro de la pestaña de la forma. La intención es que el usuario puede definir sus propias consultas de forma de objeto y asegúrese de usar de ellas, según sea necesario para su aplicación.
+Dentro del archivo dll, el analizador de formas ("ShapeAnalyzer_W") utiliza el analizador de topología para buscar coincidencias con las formas personalizadas definidas por el usuario. En el ejemplo de Unity se define un conjunto de formas y se exponen los resultados a través del menú de consulta en la aplicación, dentro de la pestaña forma. La intención es que el usuario pueda definir sus propias consultas de forma de objeto y hacer uso de ellas, según las necesidades de su aplicación.
 
-Tenga en cuenta que el análisis de forma funciona en las superficies horizontales. Por ejemplo, un sofá, se define por la superficie del asiento sin formato y la parte superior plana de vuelta el sofá. La consulta shape busca dos superficies de un intervalo de tamaño, el alto y el aspecto específico, con las dos superficies alineado y conectado. Con la terminología de API, el sofá puesto y el back-superior son componentes de la forma y los requisitos de alineación son las restricciones de componentes de forma.
+Tenga en cuenta que el análisis de formas solo funciona en superficies horizontales. Por ejemplo, un sofá se define mediante la superficie de asiento plana y la parte superior plana del sofá. La consulta de forma busca dos superficies de un tamaño, alto y intervalo de aspecto específicos, con las dos superficies alineadas y conectadas. Con la terminología de las API, el asiento del sofá y la parte superior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.
 
-Una consulta de ejemplo que se define en el ejemplo de Unity (ShapeDefinition.cs), para los objetos "sittable" es el siguiente.
+A continuación se muestra una consulta de ejemplo definida en el ejemplo de Unity (ShapeDefinition.cs) para objetos "sittable".
 
 ```cs
 shapeComponents = new List<ShapeComponent>()
@@ -308,9 +308,9 @@ shapeComponents = new List<ShapeComponent>()
 AddShape("Sittable", shapeComponents);
 ```
 
-Cada consulta shape se define mediante un conjunto de componentes de forma, cada uno con un conjunto de restricciones de componente y un conjunto de restricciones de forma que enumerar las dependencias entre los componentes. En este ejemplo incluye tres restricciones en una definición de componente único y sin restricciones de forma entre los componentes (como hay solo un componente).
+Cada consulta de forma se define mediante un conjunto de componentes de forma, cada uno con un conjunto de restricciones de componentes y un conjunto de restricciones de forma que enumeran las dependencias entre los componentes. En este ejemplo se incluyen tres restricciones en una definición de componente único y no hay restricciones de forma entre los componentes (como solo hay un componente).
 
-En cambio, la forma del sofá tiene dos componentes de la forma y cuatro de las restricciones de forma. Tenga en cuenta que los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).
+En cambio, la forma sofá tiene dos componentes de forma y cuatro restricciones de forma. Tenga en cuenta que los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).
 
 ```cs
 shapeConstraints = new List<ShapeConstraint>()
@@ -322,14 +322,14 @@ shapeConstraints = new List<ShapeConstraint>()
 };
 ```
 
-Se proporcionan funciones de contenedor en el módulo de Unity para la creación fácil de definiciones de forma personalizada. Encontrará la lista completa de las restricciones de componente y la forma de "SpatialUnderstandingDll.cs" dentro de la "ShapeComponentConstraint" y las estructuras de "ShapeConstraint".
+Las funciones de contenedor se proporcionan en el módulo Unity para facilitar la creación de definiciones de formas personalizadas. La lista completa de restricciones de componente y forma se puede encontrar en "SpatialUnderstandingDll.cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".
 
-![Forma de rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)<br>
-*Forma de rectángulo se encuentra en esta superficie*
+![La forma de rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)<br>
+*La forma de rectángulo se encuentra en esta superficie*
 
-### <a name="object-placement-solver"></a>Solucionador de selección de ubicación del objeto
+### <a name="object-placement-solver"></a>Selección de ubicación de objetos
 
-El Solucionador de selección de ubicación del objeto puede utilizarse para identificar las ubicaciones ideales en la sala física para colocar los objetos. El solucionador encontrará que el que mejor ajusta según las reglas de objeto y las restricciones de ubicación. Además, las consultas de objeto se mantienen hasta que se quita el objeto con "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite las llamadas restringido de colocación de varios objetos. Las consultas de selección de ubicación de los objetos se componen de tres partes: un tipo de colocación con parámetros, una lista de reglas y una lista de restricciones. Para ejecutar una consulta, use la siguiente API.
+La selección de ubicación de objetos se puede usar para identificar las ubicaciones ideales en la habitación física para colocar los objetos. El Solver encontrará la ubicación más adecuada en función de las reglas y restricciones del objeto. Además, las consultas de objeto se conservan hasta que el objeto se quita con llamadas "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite la selección de ubicación de varios objetos restringidos. Las consultas de selección de ubicación de objetos constan de tres partes: tipo de ubicación con parámetros, una lista de reglas y una lista de restricciones. Para ejecutar una consulta, use la siguiente API.
 
 ```cpp
 public static int Solver_PlaceObject(
@@ -342,7 +342,7 @@ public static int Solver_PlaceObject(
             [Out] IntPtr placementResult)
 ```
 
-Esta función toma un nombre de objeto, definición de la selección de ubicación y una lista de reglas y restricciones. El C# contenedores proporciona construcción funciones auxiliares para facilitar la construcción de la regla y la restricción. La definición de la selección de ubicación contiene el tipo de consulta: es decir, uno de los siguientes.
+Esta función toma un nombre de objeto, una definición de ubicación y una lista de reglas y restricciones. Los C# contenedores proporcionan funciones auxiliares de construcción para facilitar la creación de reglas y restricciones. La definición de ubicación contiene el tipo de consulta, es decir, uno de los siguientes.
 
 ```cpp
 public enum PlacementType
@@ -359,7 +359,7 @@ public enum PlacementType
             };
 ```
 
-Cada uno de los tipos de posición tiene un conjunto de parámetros únicos para el tipo. La estructura de "ObjectPlacementDefinition" contiene un conjunto de funciones auxiliares estáticos para crear estas definiciones. Por ejemplo, para encontrar un lugar para colocar un objeto en el suelo, puede usar la función siguiente. público estático ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims) además de para el tipo de selección de ubicación, puede proporcionar un conjunto de reglas y restricciones. No se puede infringir las reglas. Ubicaciones posibles de la selección de ubicación que cumplen el tipo y las reglas están optimizadas, a continuación, en el conjunto de restricciones con el fin de seleccionar la ubicación de la ubicación óptima. Cada una de las reglas y restricciones se puede crear las funciones de creación estático proporcionado. A continuación, se proporciona una función de construcción de restricción y regla de ejemplo.
+Cada uno de los tipos de ubicación tiene un conjunto de parámetros únicos para el tipo. La estructura "ObjectPlacementDefinition" contiene un conjunto de funciones auxiliares estáticas para crear estas definiciones. Por ejemplo, para encontrar un lugar donde colocar un objeto en el piso, puede usar la función siguiente. public static ObjectPlacementDefinition Create_OnFloor (Vector3 halfDims) además del tipo de selección de ubicación, puede proporcionar un conjunto de reglas y restricciones. No se pueden infringir las reglas. Las ubicaciones de ubicación posibles que satisfacen el tipo y las reglas se optimizan con el conjunto de restricciones para seleccionar la ubicación de colocación óptima. Cada una de las reglas y restricciones se pueden crear mediante las funciones de creación estáticas proporcionadas. A continuación se proporciona una función de ejemplo y una función de construcción de restricciones.
 
 ```cs
 public static ObjectPlacementRule Create_AwayFromPosition(
@@ -368,7 +368,7 @@ public static ObjectPlacementConstraint Create_NearPoint(
     Vector3 position, float minDistance = 0.0f, float maxDistance = 0.0f)
 ```
 
-El siguiente objeto de consulta de selección de ubicación está buscando un lugar para colocar un cubo de la mitad del medidor en el borde de una superficie, fuera de sí previamente colocar objetos y cerca del centro de la sala de.
+La siguiente consulta de selección de ubicación de objetos busca un lugar donde colocar un cubo de media metro en el borde de una superficie, lejos de otros objetos colocados anteriormente y cerca del centro de la habitación.
 
 ```cs
 List<ObjectPlacementRule> rules = 
@@ -393,16 +393,16 @@ Solver_PlaceObject(
     UnderstandingDLL.GetStaticObjectPlacementResultPtr());
 ```
 
-Si se realiza correctamente, una estructura de "ObjectPlacementResult" que contiene la posición de colocación, dimensiones y la orientación se devuelve. Además, la selección de ubicación se agrega a la lista interna de la dll de objetos colocados. Las consultas posteriores de la selección de ubicación tendrá este objeto en la cuenta. El archivo "LevelSolver.cs" en el ejemplo de Unity contiene más de las consultas de ejemplo.
+Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación. Además, la selección de ubicación se agrega a la lista interna de objetos colocados del archivo dll. Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto. El archivo "LevelSolver.cs" del ejemplo de Unity contiene más consultas de ejemplo.
 
-![Resultados de la posición de los objetos](images/su-objectplacement-1000px.jpg)<br>
-*Figura 3: Cuadros de selección azul cómo el resultado de lugar tres participar en las consultas con fuera de las reglas de posición de cámara*
+![Resultados de la colocación del objeto](images/su-objectplacement-1000px.jpg)<br>
+*Figura 3: Los cuadros azules de cómo se realiza el resultado de tres consultas en planta con respecto a las reglas de posición de la cámara*
 
-Al resolver para la ubicación de colocación de varios objetos necesarios para un escenario de aplicación o nivel, resolver primero objetos indispensables y de gran tamaño con el fin de maximizar la probabilidad de que se puede encontrar un espacio. Es importante el orden de selección de ubicación. Si no se puede encontrar las selecciones de ubicación del objeto, intente configuraciones menos restringidas. Tener un conjunto de configuraciones de reserva es fundamental para admitir la funcionalidad en muchas configuraciones de espacio.
+En la resolución de ubicación de varios objetos necesarios para un escenario de nivel o aplicación, primero se resuelven objetos grandes e indispensables con el fin de maximizar la probabilidad de que se pueda encontrar un espacio. El orden de la ubicación es importante. Si no se encuentran colocaciones de objeto, pruebe con menos configuraciones restringidas. Tener un conjunto de configuraciones de reserva es fundamental para admitir la funcionalidad en muchas configuraciones de salón.
 
-### <a name="room-scanning-process"></a>Proceso de exploración de sala
+### <a name="room-scanning-process"></a>Proceso de detección de salas
 
-Mientras la solución de asignación espacial proporcionada por el HoloLens está diseñada para ser lo suficientemente genéricos como para satisfacer las necesidades de toda la gama de espacios del problema, el módulo de comprensión espaciales se generó para admitir las necesidades de dos juegos específicos. Su solución está estructurada en torno a un proceso específico y un conjunto de supuestos, resumida a continuación.
+Aunque la solución de asignación espacial proporcionada por HoloLens está diseñada para ser lo suficientemente genérica como para satisfacer las necesidades de la gama completa de espacios problemáticos, el módulo de comprensión espacial se creó para admitir las necesidades de dos juegos específicos. Su solución está estructurada en torno a un proceso específico y un conjunto de supuestos, que se resumen a continuación.
 
 ```
 Fixed size playspace – The user specifies the maximum playspace size in the init call.
@@ -413,7 +413,7 @@ One-time scan process –
     Query functions will not function until after the scan has been finalized.
 ```
 
-Controlada por playspace "pintar" – durante la fase de análisis, el usuario, el usuario se mueve y mira alrededor reproduce el ritmo, pintar eficazmente las áreas que deben incluirse. La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase. En el interior de inicio o de instalación de office: la consulta de funciones están diseñadas en torno a las superficies planas y paredes ángulos rectos. Esta es una limitación temporal. Sin embargo, durante la fase de análisis, se completa un análisis del eje principal para optimizar la teselación de malla a lo largo del eje principal y secundaria. El archivo SpatialUnderstanding.cs incluido administra el proceso de la fase de análisis. Llama a las funciones siguientes.
+Playspace controlada por el usuario "Painting": durante la fase de análisis, el usuario se mueve y se desplaza por el ritmo de las jugadas, con lo que se pintan las áreas que se deben incluir. La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase. Instalación en casa o en el programa de instalación de Office: las funciones de consulta están diseñadas en torno a superficies planas y paredes en los ángulos correctos. Se trata de una limitación flexible. Sin embargo, durante la fase de examen, se completa un análisis de eje principal para optimizar la teselación de malla junto con el eje principal y el secundario. El archivo SpatialUnderstanding.cs incluido administra el proceso de la fase de análisis. Llama a las siguientes funciones.
 
 ```
 SpatialUnderstanding_Init – Called once at the start.
@@ -438,27 +438,27 @@ Import_UnderstandingMesh –
     after scanning has been finalized.
 ```
 
-El flujo de análisis controlado por el comportamiento de "SpatialUnderstanding" llama InitScan, a continuación, UpdateScan cada fotograma. Cuando informa de la consulta de estadísticas de cobertura razonable, se permite al usuario airtap para llamar a RequestFinish para indicar el final de la fase de análisis. UpdateScan continúa llamada hasta que devueltos es el valor indica que el archivo dll ha completado el procesamiento.
+El flujo de análisis, controlado por el comportamiento "SpatialUnderstanding" llama a InitScan y, a continuación, UpdateScan cada fotograma. Cuando la consulta de estadísticas notifica una cobertura razonable, se permite al usuario airtap llamar a RequestFinish para indicar el final de la fase de análisis. UpdateScan sigue siendo llamado hasta que su valor devuelto indica que el archivo DLL ha finalizado el procesamiento.
 
-### <a name="understanding-mesh"></a>Malla de descripción
+### <a name="understanding-mesh"></a>Descripción de la malla
 
-El archivo dll de la descripción almacena internamente el playspace como una cuadrícula de 8cm tamaño voxel cubos. Durante la parte inicial del análisis, se completa un análisis del componente principal para determinar los ejes de la sala. Internamente, almacena su espacio voxel alineado para estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie desde el volumen voxel. 
+La dll de comprensión almacena internamente el Playspace como una cuadrícula de cubos voxel de 8cm de tamaño. Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la habitación. Internamente, almacena su espacio voxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie del volumen voxel. 
 
-![Malla generado producidos desde el volumen voxel](images/su-custommesh.jpg)<br>
-*Malla generado producidos desde el volumen voxel*
+![Malla generada generada a partir del volumen voxel](images/su-custommesh.jpg)<br>
+*Malla generada generada a partir del volumen voxel*
 
 ## <a name="troubleshooting"></a>Solución de problemas
-* Asegúrese de que ha establecido la [SpatialPerception](#setting-the-spatialperception-capability) capacidad
+* Asegúrese de que ha establecido la funcionalidad [SpatialPerception](#setting-the-spatialperception-capability)
 * Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.
 
-## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en el Kit de herramientas de realidad mixta
-Para obtener más información sobre el uso de la asignación espacial con el Kit de herramientas de realidad mixta v2, consulte el <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">sección reconocimiento espacial</a> de los documentos MRTK.
+## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en el kit de herramientas de realidad mixta
+Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
 
 ## <a name="see-also"></a>Vea también
 * [MR Spatial 230: asignación espacial](holograms-230.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a>
-* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine.Bounds</a>
+* <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
+* <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
+* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>

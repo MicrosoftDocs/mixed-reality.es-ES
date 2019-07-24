@@ -1,11 +1,11 @@
 ---
-title: Vallas publicitarias y tag-along
-description: Los objetos con vallas publicitarias siempre orientación para enfrentar el usuario.
+title: Acerca de la cartelera y la etiqueta
+description: Los objetos con la cartelera siempre se orientan a sí mismos para que se enfrente al usuario.
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, vallas publicitarias, tag-along
+keywords: Windows Mixed Reality, la cartelera, el etiquetado
 ms.openlocfilehash: e33ab0121398742b2e48553c9cbf2c1debdc6abf
 ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
 ms.translationtype: MT
@@ -13,27 +13,27 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/21/2019
 ms.locfileid: "65974788"
 ---
-# <a name="billboarding-and-tag-along"></a>Vallas publicitarias y tag-along
+# <a name="billboarding-and-tag-along"></a>Acerca de la cartelera y la etiqueta
 
-Vallas publicitarias es un concepto de comportamiento que se puede aplicar a objetos en la realidad mixta. Los objetos con vallas publicitarias siempre orientación para enfrentar el usuario. Esto es especialmente útil con texto y sistemas trabajé dónde colocan los objetos estáticos en el entorno del usuario (bloqueado por el mundo) sería en caso contrario, oculta o ilegible si para desplazarse por un usuario.
+La cartelera es un concepto de comportamiento que se puede aplicar a los objetos de realidad mixta. Los objetos con la cartelera siempre se orientan a sí mismos para que se enfrente al usuario. Esto es especialmente útil en el caso de los sistemas de texto y de menús en los que los objetos estáticos que se colocan en el entorno del usuario (con bloqueo mundial) quedarían ocultos o ilegibles si el usuario se desplazara.
 
-![HoloLens perspectiva de un sistema de menús que siempre enfrenta el usuario](images/billboarding-fragments.gif)<br>
-*HoloLens perspectiva de un sistema de menús que siempre enfrenta el usuario*
+![Perspectiva de HoloLens de un sistema de menús que siempre se enfrenta al usuario](images/billboarding-fragments.gif)<br>
+*Perspectiva de HoloLens de un sistema de menús que siempre se enfrenta al usuario*
 
-Los objetos con vallas publicitarias habilitada pueden girar libremente en el entorno del usuario. También puede estar restringidos a un único eje según las consideraciones de diseño. Tenga en cuenta, objetos billboarded pueden recortar o occlude propios si se colocan demasiado cerca de otros objetos o en HoloLens, analizado demasiado cerca superficies. Para evitar este problema, piense en la superficie total que puede producir un objeto si gira en el eje habilitado para vallas publicitarias.
+Los objetos con la cartelera habilitada pueden girar libremente en el entorno del usuario. También se pueden restringir a un único eje en función de las consideraciones de diseño. Tenga en cuenta que los objetos con recortes se pueden recortar o tapaba si se colocan demasiado cerca de otros objetos, o en HoloLens, hay demasiadas cerrar superficies digitalizadas. Para evitar esto, piense en la superficie total que un objeto puede producir cuando se gira en el eje habilitado para la cartelera.
 
-## <a name="what-is-a-tag-along"></a>¿Qué es un tag-along?
+## <a name="what-is-a-tag-along"></a>¿Qué es una etiqueta?
 
-Tag-Along es un concepto de comportamiento que se puede agregar a hologramas, incluidos los objetos billboarded. Esta interacción es una manera más natural y descriptiva de conseguir el efecto de contenido bloqueado a la cabeza. Un objeto tag-along intenta nunca deja la vista del usuario. Esto permite al usuario interactuar libremente con lo que es la parte delantera de ellos al observar el hologramas fuera de su vista directa.
+La etiqueta es un concepto de comportamiento que se puede Agregar a hologramas, incluidos los objetos de la cartelera. Esta interacción es una forma más natural y cómoda de lograr el efecto del contenido bloqueado por el cabezal. Una etiqueta a lo largo de un objeto intenta no salir nunca de la vista del usuario. Esto permite al usuario interactuar libremente con lo que se encuentra delante de ellos, a la vez que sigue viendo los hologramas fuera de su vista directa.
 
-![El panel de HoloLens PIN es un buen ejemplo de cómo se comporta tag-along](images/tagalong-1000px.jpg)<br>
-*El menú Inicio de HoloLens es un buen ejemplo de comportamiento tag-along*
+![El panel de PIN de HoloLens es un buen ejemplo de cómo se comparan las etiquetas](images/tagalong-1000px.jpg)<br>
+*El menú Inicio de HoloLens es un buen ejemplo de comportamiento de etiqueta.*
 
-Objetos Tag-Along tienen parámetros que pueden ajustar el comportamiento. Contenido puede ser dentro o fuera de línea de visión del usuario según sea necesario mientras el usuario se mueve en torno a su entorno. Cuando el usuario se mueve, el contenido se intentará respetar los periféricos del usuario desplazando hacia el borde de la vista, según qué rapidez se mueve un usuario puede dejar el contenido temporalmente fuera de la vista. Cuando el usuario gazes hacia el objeto tag-along, resulta más completa en la vista. Piense en contenido siempre está "Ausente rápida" por lo que los usuarios nunca olviden qué dirección de su contenido.
+Los objetos de etiqueta incluyen parámetros que pueden ajustarse de la forma en que se comportan. El contenido puede estar dentro o fuera de la línea de visión del usuario mientras se desee mientras el usuario se mueve por su entorno. A medida que el usuario se mueve, el contenido intentará permanecer dentro del perímetro del usuario desplazándose hacia el borde de la vista, en función de la rapidez con la que se mueva el usuario puede dejar el contenido temporalmente fuera de la vista. Cuando el usuario mira hacia el objeto de etiqueta, resulta más completo ver. Piense que el contenido siempre es "un vistazo", por lo que los usuarios nunca olvidan en qué dirección se encuentra el contenido.
 
-Parámetros adicionales pueden hacer que el objeto tag-along sienta adjunto a la cabeza del usuario mediante una banda de goma. Amortiguamiento de aceleración o deceleración da peso al objeto, lo que se sienta más físicamente presente. Este comportamiento spring es una prestación que ayuda al usuario crear un modelo mental preciso de cómo funciona tag-along. Audio ayuda a proporcionar prestaciones adicionales para cuando los usuarios tienen objetos en modo tag-along. Audio debe reforzar la velocidad de movimiento. vuelta rápida principal debe proporcionar un efecto más notable de sonido mientras caminando a una velocidad natural debe tener los efectos de audio si cualquier mínima en absoluto.
+Los parámetros adicionales pueden hacer que la etiqueta a lo largo del objeto se adjunte al encabezado del usuario mediante una banda elástica. La amortiguación de aceleración o desaceleración da peso al objeto, lo que hace que se sienta más físicamente presente. Este comportamiento del muelle es una prestación que ayuda al usuario a crear un modelo mental exacto de cómo funciona la etiqueta. Audio le ayuda a proporcionar prestaciones adicionales para cuando los usuarios tienen objetos en el modo de etiqueta. El audio debe reforzar la velocidad de movimiento; un cambio de cabeza rápido debe proporcionar un efecto de sonido más perceptible mientras el recorrido de una velocidad natural debe tener un audio mínimo si se produce algún efecto.
 
-Al igual que realmente bloqueado de encabezado de contenido, pueden resultar objetos tag-along sobrecargar o nauseating si se mueven extremadamente o primavera demasiado en la vista del usuario. Cuando un usuario busca en torno a y, a continuación, rápidamente stop, sus sentidos que indican que han dejado. El equilibrio que les informa de que su cabeza ha dejado de activación, así como sus ve vision la detención del mundo activación. Sin embargo, si tag-along en sigue moviendo cuando el usuario se ha detenido, pueden confundir a sus sentidos.
+Al igual que el contenido bloqueado realmente por el encabezado, los objetos de etiquetas pueden resultar abrumadores o nauseating si se mueven de forma desigual o muelle demasiado en la vista del usuario. A medida que un usuario busca y luego se detiene rápidamente, sus sentidos les indica que se han detenido. Su saldo les informa de que su cabeza ha dejado de activar y su visión ve que el mundo deja de activar. Sin embargo, si la etiqueta se mantiene en movimiento cuando el usuario se detiene, puede confundir sus sentidos.
 
 ## <a name="see-also"></a>Vea también
 * [Cursores](cursors.md)

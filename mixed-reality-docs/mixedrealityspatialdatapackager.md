@@ -1,11 +1,11 @@
 ---
-title: Documentación de Empaquetador de datos espaciales de realidad mixta
-description: Documentación para usar Mixed Reality Empaquetador de datos espaciales
+title: Documentación del Empaquetador de datos espaciales de realidad mixta
+description: Documentación para usar el Empaquetador de datos espaciales de realidad mixta
 author: alfred-msft
 ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
-keywords: lbe, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
 ms.openlocfilehash: 7ad1159af9eecd3ca3622dd25cc1f49fb0b1700a
 ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
 ms.translationtype: MT
@@ -13,45 +13,45 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/20/2019
 ms.locfileid: "65942111"
 ---
-# <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentación de Empaquetador de datos espaciales de realidad mixta
+# <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentación del Empaquetador de datos espaciales de realidad mixta
 
 >[!NOTE]
-> Esta herramienta y su funcionamiento se ofrecen como-es. Se está sujeta a cambios sin aviso y pueden no ser compatible con futuras Windows o Windows Mixed Reality HMD libera.
+> Esta herramienta y su operación se ofrecen tal cual. Está sujeto a cambios sin previo aviso y es posible que no sea compatible con las futuras versiones de HMD de Windows o Windows Mixed Reality.
 
 ## <a name="download"></a>Descargar
  Descargar [MixedRealitySpatialDataPackager aquí](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
 
 ## <a name="quickstart"></a>Guía de inicio rápido
 
-La herramienta Mixed Reality Empaquetador de datos espaciales copia los datos espaciales de una aplicación de destino de un PC a otro a través de un paso dos exportación e importación de proceso. La herramienta debe ejecutarse con privilegios de administrador y elimina los datos espaciales existentes en la importación. Exportación no altera los datos espaciales existentes.
+La herramienta de empaquetado de datos espaciales de realidad mixta copia los datos espaciales de una aplicación de destino de un equipo a otro a través de un proceso de exportación e importación de dos pasos. La herramienta debe ejecutarse con privilegios de administrador y elimina los datos espaciales existentes al importar. La exportación deja intactos los datos espaciales existentes.
 
-Limitaciones y requisitos clave:
+Requisitos y limitaciones clave:
 
-1. Se debe ejecutar la herramienta con privilegios de administrador 
-2. Es posible que deba reiniciar PC si el Portal de realidad mixta es inestable después de ejecutar la herramienta
-3. No se ejecutará la herramienta al encontrar errores de coincidencia de versión de los datos espaciales o incompatibilidades
-4. Herramienta, borrará los datos espaciales existentes en la importación
-5. Si el proceso de importación se produce un error anterior no se puede restaurar datos a menos que se ha hecho backup exportando previamente
-6. Calidad de la funcionalidad de importación contingente en modo "Solo lectura" para los datos espaciales del mapa
+1. La herramienta debe ejecutarse con privilegios de administrador 
+2. Es posible que tenga que reiniciar el equipo si el portal de realidad mixta es inestable después de ejecutar la herramienta
+3. La herramienta no se ejecutará al encontrar incompatibilidades o incompatibilidades de la versión de datos espaciales
+4. La herramienta borrará los datos espaciales existentes al importar
+5. Si se produce un error en el proceso de importación, los datos anteriores no se pueden restaurar a menos que se haya realizado la copia de seguridad mediante la exportación anterior
+6. Calidad de la funcionalidad de importación condicionada en el modo de "solo lectura" para los datos de mapa espacial
 ***
 
-## <a name="mapping-best-practices"></a>Asignación de procedimientos recomendados
+## <a name="mapping-best-practices"></a>Procedimientos recomendados de asignación
 
-1. Borrar asignaciones existentes desde el Panel de Control (configuración -> Mixed Reality -> entorno -> entorno borrar datos)
-2. Asegúrese de iluminación suficiente para seguimiento buena y si ejecuta el modo Mapa bloqueado intenta mantener la misma iluminación
-3. Cuando sea posible mantener el intervalo dinámico de iluminación baja, ya que evita las áreas de iluminación alta junto a áreas con sombra oscuras
-4. Minimizar en blanco, superficies textureless, por ejemplo, colocan una gama de diferentes Pósteres paredes blancas
-5. Asignar el espacio sin objetos dinámicos en la escena, como mover usuarios
-6. Bloquear el mapa en la importación (disponible a través de Insider Preview)
-7. Desbloquear la asignación y volver a examinar el entorno cuando se degrada el seguimiento de la calidad y hay cambios en el entorno (iluminación o cambios en el diseño de objeto)
+1. Borrar asignaciones existentes en el panel de control (Configuración-> entorno mixto de realidad >-> Borrar datos de entorno)
+2. Asegúrese de que haya suficiente iluminación para un buen seguimiento y si la ejecución del modo de mapa bloqueado intente mantener la misma iluminación
+3. Cuando sea posible, mantenga el intervalo dinámico de iluminación bajo evitando áreas de iluminación alta junto a áreas oscuras y sombreadas.
+4. Minimizar las superficies en blanco y sin texturas, por ejemplo, colocar un intervalo de pósters distintos en las paredes blancas
+5. Asignar el espacio sin objetos dinámicos en la escena, como mover personas
+6. Bloquear el mapa al importar (disponible a través de Insider Preview)
+7. Desbloquee el mapa y vuelva a examinar el entorno cuando el seguimiento de la calidad sea degradado o haya cambios en el entorno (iluminación o cambios en el diseño de objetos)
 ***
 
-## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Empaquetador de datos espaciales de realidad mixta ejecución con el Script complementario
+## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Ejecución de un empaquetador de datos espaciales de realidad mixta con un script complementario
 
-Hemos proporcionado MRSpatialPackagerHelperScript.ps1 que se ejecuta al Empaquetador de mapa de las herramientas. 
+Hemos proporcionado MRSpatialPackagerHelperScript. PS1 que ejecuta el paquete de asignación de las herramientas. 
 
 
-Los parámetros del script se definen a continuación:
+Los parámetros de script se definen a continuación:
 
 ```
 -AppName <String>
@@ -78,9 +78,9 @@ Los parámetros del script se definen a continuación:
     Path to MixedRealitySpatialDataPackager.exe, default value is current directory
 ```
 
-### <a name="powershell-script-example-usage-and-output"></a>Salida y el uso de ejemplo de Script de Powershell
+### <a name="powershell-script-example-usage-and-output"></a>Ejemplo de script de PowerShell uso y salida
 
-.\MRSpatialPackagerHelperScript.ps1 - AppName holoshell - nombre de usuario administrador-modo de exportación - MapxPath D:\temp\ LockMap - 0
+.\MRSpatialPackagerHelperScript.ps1-AppName holoshell-nombredeusuario administrador-Mode Export-MapxPath D:\temp\-LockMap 0
 ```
 Package Family Name for holoshell: HoloShell_cw5n1h2txyewy
 User SID for Administrator: S-1-5-21-1279937937-3984375698-1043392598-499
@@ -113,30 +113,30 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Cómo exportar mediante MixedRealityPackager.exe
+### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Cómo exportar con MixedRealityPackager. exe
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
-Exportar mapas de dispositivo genera dos archivos: mapx het.mapx y sa.mapx. Durante el proceso de exportación se quitan todos los delimitadores espaciales excepto para la aplicación especificada y los límites creados por el usuario (si existe). El nombre de familia del paquete de origen debe coincidir con una aplicación existente instalada o se producirá un error en el archivo exe.
+La exportación de mapas fuera del dispositivo genera dos archivos MAPX, Het. MAPX y SA. MAPX. Durante el proceso de exportación, se quitan todos los delimitadores espaciales, a excepción de la aplicación especificada y el límite creado por el usuario (si existe). El nombre de familia del paquete de origen debe coincidir con una aplicación instalada existente o se producirá un error en el archivo exe.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Cómo importar mediante MixedRealityPackager.exe
+### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Cómo importar mediante MixedRealityPackager. exe
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
-Importación elimina los datos espaciales existentes y lo reemplaza con los datos del directorio especificado. La entrada de nombre de la aplicación especifica el nombre del paquete de la aplicación de destino que al igual que los anclajes espaciales se debe importar para y el SID del usuario de destino Especifica el usuario que debe tener acceso a los delimitadores espaciales importados. El nombre de familia de paquete de destino y el SID de usuario deben coincidir con los valores existentes en el equipo o se producirá un error en el archivo exe.
+La importación elimina los datos espaciales existentes y los reemplaza con los datos del directorio especificado. La entrada del nombre de la aplicación especifica el nombre del paquete de la aplicación de destino que se debe importar para y el SID del usuario de destino especifica el usuario que debe tener acceso a los delimitadores espaciales importados. El nombre de familia y los SID de usuario del paquete de destino deben coincidir con los valores existentes en el equipo o se producirá un error en el archivo exe.
 
 
 ***
 ## <a name="error-messages"></a>Mensajes de error
-Además los mensajes de error por debajo de los errores también irá acompañados de un valor HRESULT
+Además, los mensajes de error siguientes también irán acompañados de un valor HRESULT.
 
-### <a name="if-there-was-an-error-invalid-arguments"></a>Si se produjo un error de argumentos no válidos
+### <a name="if-there-was-an-error-invalid-arguments"></a>Si se produjo un error argumentos no válidos
 ```
 Invalid command line parameters
 ```
 
-### <a name="if-the-executable-was-not-run-in-administrator-mode"></a>Si el archivo ejecutable no se ejecutó en modo de administrador
+### <a name="if-the-executable-was-not-run-in-administrator-mode"></a>Si el ejecutable no se ejecutó en modo de administrador
 ```
 1. Unable to determine elevation privileges 
 2. Please run with administrator privileges 
@@ -150,31 +150,31 @@ Invalid command line parameters
 4. Failed to enable/disable driver
 ```
 
-### <a name="if-there-was-an-error-validating-the-spatial-database-version"></a>Si se ha producido un error al validar la versión de la base de datos espaciales
+### <a name="if-there-was-an-error-validating-the-spatial-database-version"></a>Si se produjo un error al validar la versión de la base de datos espacial
 ```
 1. Could not read database version
 2. This tool is not compatible with the current driver version of Windows Mixed Reality and/or the spatial data provided to replace the existing spatial data is an invalid version.
 3. No spatial data is present on the current device please connect your Mixed Reality device to initialize spatial data. If the problem persists please restart your PC.
 ```
 
-### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a>Si se ha producido un error al validar el nombre de familia de paquete proporcionado para la aplicación de importación y exportación de destino
+### <a name="if-there-was-an-error-validating-the-package-family-name-provided-for-target-importexport-app"></a>Si se produjo un error al validar el nombre de familia del paquete proporcionado para la aplicación de importación y exportación de destino
 ```
 The package family name does not correspond to an installed app
 ```
 
-### <a name="if-there-was-an-error-validating-the-user-sid"></a>Si se ha producido un error al validar el SID del usuario
+### <a name="if-there-was-an-error-validating-the-user-sid"></a>Si se produjo un error al validar el SID del usuario
 ```
 Failed to find local user for passed in user SID
 ```
 
-### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a>Si se ha producido un error en el destino o el origen de datos espaciales archivos relacionados
+### <a name="if-there-was-an-error-related-to-the-destination-or-source-spatial-data-files"></a>Si se produjo un error relacionado con los archivos de datos espaciales de origen o de destino
 ```
 1. Folder path to space store files doesn't exist 
 2. het.mapx or sa.mapx file doesn't exist in <PATH> for import
 3. Unable to create directory at <PATH> for export
 ```
 
-### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a>Si se produjo un error relacionado con iniciar y detener el espectro/SharedRealitySvc
+### <a name="if-there-was-an-error-related-to-starting-and-stoping-spectrumsharedrealitysvc"></a>Si se produjo un error relacionado con el inicio y la detención del espectro/SharedRealitySvc
 ```
 1. Unable to open service manager <SERVICE>
 2. Timed out trying to start/stop <SERVICE>

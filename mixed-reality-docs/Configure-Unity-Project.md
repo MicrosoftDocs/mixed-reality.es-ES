@@ -1,11 +1,11 @@
 ---
-title: Configurar un nuevo proyecto de Unity para Windows Mixed Reality
-description: configurar el proyecto de Unity sin MRTK
+title: Configuración de un nuevo proyecto de Unity para Windows Mixed Reality
+description: configuración de un proyecto de Unity sin MRTK
 author: yoyoz
 ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
-keywords: Unity, mixto en realidad, desarrollo, introducción, nuevo proyecto
+keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto
 ms.openlocfilehash: 68dded9d0fc9e861bdda56c4954d72ddafafa686
 ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
 ms.translationtype: MT
@@ -13,70 +13,70 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 06/22/2019
 ms.locfileid: "67326092"
 ---
-# <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configurar un nuevo proyecto de Unity para Windows Mixed Reality 
+# <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configuración de un nuevo proyecto de Unity para Windows Mixed Reality 
 
-(omita si ya ha importado MRTK v2 en el proyecto de Unity)
+(omitir si ya ha importado MRTK V2 en el proyecto de Unity)
 
-Si desea crear un nuevo proyecto de Unity sin importar el Kit de herramientas de realidad mixta, hay un pequeño conjunto de configuración de Unity, deberá cambiar manualmente para Windows Mixed Reality, dividida en dos categorías: por proyecto y por la escena.
+Si desea crear un nuevo proyecto de Unity sin importar el kit de herramientas de realidad mixta, hay un pequeño conjunto de opciones de Unity que debe cambiar manualmente para Windows Mixed Reality, dividido en dos categorías: por proyecto y por escena.
 
 ## <a name="per-project-settings"></a>Configuración por proyecto
 
-Para tener como destino Windows Mixed Reality, primero debe configurar su proyecto de Unity para exportar como una aplicación plataforma Universal de Windows: 
-1. Seleccione **archivo > configuración de compilación...**
-2. Seleccione **Universal Windows Platform** en la plataforma de lista y haga clic en **Cambiar plataforma**
-3. Establecer **SDK** a **10 Universal**
-4. Establecer **dispositivo de destino** a **cualquier dispositivo** para admitir inmersivos o cambie a **HoloLens**
-5. Establecer **tipo de compilación** a **D3D**
-6. Establecer **UWP SDK** a **instalada más reciente**
+Para tener como destino Windows Mixed Reality, primero debe configurar el proyecto de Unity para que lo exporte como una aplicación Plataforma universal de Windows: 
+1. Seleccionar **archivo > configuración de compilación...**
+2. Seleccione **plataforma universal de Windows** en la lista plataforma y haga clic en **cambiar plataforma** .
+3. Establecer **SDK** en **universal 10**
+4. Establecer el **dispositivo de destino** en **cualquier dispositivo** para admitir auriculares envolventes o cambiar a **HoloLens**
+5. Establecer el **tipo de compilación** en **D3D**
+6. Establecimiento del **SDK de UWP** en la **versión más reciente instalada**
 
-A continuación, es necesario informar a Unity que se debe crear la aplicación que estamos intentando exportar una [vista envolvente](app-views.md) en lugar de una vista 2D. Para hacerlo habilitando "Realidad Virtual admite":
-1. Desde el **configuración de compilación...**  ventana abierta **configuración del Reproductor...**
-2. Seleccione el **configuración de plataforma Universal de Windows** ficha
-3. Expanda el **configuración XR** grupo
-4. En el **XR configuración** sección, compruebe el **admite la realidad Virtual** casilla de verificación para agregar el **dispositivos de realidad Virtual** lista.
-5. En el **XR configuración** grupo, confirme que **"Windows Mixed Reality"** aparece como un dispositivo compatible. (Esto puede aparecer como "Windows Holographic" en versiones anteriores de Unity)
+A continuación, necesitamos que Unity sepa que la aplicación que se está intentando exportar debe crear una [vista envolvente](app-views.md) en lugar de una vista 2D. Lo hacemos habilitando "realidad virtual admitida":
+1. En la ventana **configuración de compilación...** , Abra **configuración del reproductor...**
+2. Seleccione la **configuración de plataforma universal de Windows** pestaña
+3. Expandir el grupo de **configuración de XR**
+4. En la sección **configuración de XR** , active la casilla **compatibilidad con realidad virtual** para agregar la lista de **dispositivos de realidad virtual** .
+5. En el grupo de **configuración de XR** , confirme que **"Windows Mixed Reality"** aparece como un dispositivo compatible. (esto puede aparecer como "Windows Holographic" en versiones anteriores de Unity)
 
 ![Configuración de calidad de Unity](images/getting-started-unity-quality-settings.jpg)<br>
-*Configuración de Unity xr*
+*Configuración de Unity XR*
 
-Ahora puede hacer la aplicación básica representación holográfica y entrada espacial. Para ir más allá y aprovechar las ventajas de cierta funcionalidad, la aplicación debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones del manifiesto se pueden realizar en Unity, por lo que se incluyen en cada exportación proyecto posterior. La configuración se encuentran en **configuración del Reproductor > configuración de plataforma Universal de Windows > configuración de publicación > capacidades**. Las capacidades para habilitar las API de Unity usados para Mixed Reality aplicables son:
+La aplicación ahora puede realizar la representación básica holográfica y la entrada espacial. Para seguir sacando provecho de ciertas funciones, la aplicación debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones de manifiesto se pueden realizar en Unity para que se incluyan en cada exportación de proyecto subsiguiente. La configuración se encuentra en **configuración del reproductor > configuración de Plataforma universal de Windows > configuración de publicación > funcionalidades**. Las funcionalidades aplicables para habilitar las API de Unity usadas con frecuencia para la realidad mixta son:
 
-|  Capacidad  |  API que requieren la capacidad | 
+|  Capacidad  |  API que requieren funcionalidad | 
 |----------|----------|
-|  SpatialPerception  |  SurfaceObserver (acceso a [asignación espacial](spatial-mapping.md) mallas en HoloLens)&mdash;*ninguna funcionalidad necesaria para seguimiento espacial general de los auriculares* | 
-|  WebCam  |  PhotoCapture y VideoCapture | 
-|  PicturesLibrary o VideosLibrary  |  PhotoCapture o VideoCapture, respectivamente (al almacenar el contenido capturado) | 
-|  Micrófono  |  VideoCapture (cuando la captura de audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer | 
-|  InternetClient  |  DictationRecognizer (y utilizar el Profiler de Unity) | 
+|  SpatialPerception  |  SurfaceObserver (acceso a mallas de [asignación espacial](spatial-mapping.md) en HoloLens&mdash;)*no se necesita ninguna funcionalidad para el seguimiento espacial general de los auriculares* | 
+|  Web  |  Fotocaptura y videocaptura | 
+|  PicturesLibrary/VideosLibrary  |  Fotocaptura o videocaptura, respectivamente (al almacenar el contenido capturado) | 
+|  Micrófono  |  VideoCapture (al capturar audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer | 
+|  InternetClient  |  DictationRecognizer (y para usar el generador de perfiles de Unity) | 
 
 **Configuración de calidad de Unity**
 
 ![Configuración de calidad de Unity](images/getting-started-unity-quality-settings.jpg)<br>
 *Configuración de calidad de Unity*
 
-HoloLens tiene una GPU de la clase mobile. Si la aplicación está destinada a HoloLens, querrá la configuración de calidad optimizada para rendimiento más rápido para asegurarse de que mantenemos la velocidad de fotogramas completa:
-1. Seleccione **Editar > configuración del proyecto > calidad**
-2. Seleccione el **desplegable** bajo el **Windows Store** logotipo y seleccione **Very Low**. Sabrá que la configuración se aplique correctamente cuando la casilla de la columna de Windows Store y **Very Low** fila es verde.
+HoloLens tiene una GPU de clase móvil. Si la aplicación está destinada a HoloLens, querrá que la configuración de calidad esté optimizada para obtener un rendimiento más rápido para asegurarse de que se mantiene la velocidad de fotogramas completa:
+1. Seleccione **editar > configuración del proyecto > calidad**
+2. Seleccione la **lista desplegable** en el logotipo de la **tienda Windows** y seleccione **muy baja**. Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna tienda Windows y la fila **muy baja** es verde.
 
-## <a name="per-scene-settings"></a>Configuración por la escena
+## <a name="per-scene-settings"></a>Configuración por escena
 
 **Configuración de la cámara de Unity**
 
 ![Configuración de la cámara de Unity](images/Unitycamerasettings.png)<br>
 *Configuración de la cámara de Unity*
 
-Una vez que habilite la casilla "Compatible de realidad Virtual", la [Unity cámara](camera-in-unity.md) identificadores de componente [head seguimiento y la representación estereoscópica](rendering.md). No hay ninguna necesidad reemplazarla con una cámara personalizada para hacerlo.
+Una vez habilitada la casilla "se admite Virtual Reality", el componente de [cámara Unity](camera-in-unity.md) controla el [seguimiento de los cabezales y la representación Stereoscopic](rendering.md). No es necesario reemplazarlo por una cámara personalizada para hacerlo.
 
-Si la aplicación está destinada específicamente a HoloLens, hay algunas opciones de configuración que deben cambiarse para optimizar la muestra de transparente del dispositivo, por lo que se mostrará la aplicación a través en el mundo físico:
-1. En el **jerarquía**, seleccione el **cámara principal**
-2. En el **Inspector** del panel, establezca la transformación **posición** a **0, 0, 0** para que la ubicación de la cabeza a los usuarios que se inicie en el origen del mundo de Unity.
-3. Cambio **borrar las marcas de** a **Color sólido**.
-4. Cambiar el **en segundo plano** al color **RGBA 0,0,0,0**. Negro se representa como transparente en HoloLens.
-5. Cambio **cerca de recorte planos -** a la [HoloLens recomendadas](camera-in-unity.md#clip-planes) 0,85 (metros).
+Si su aplicación tiene como destino HoloLens específicamente, hay algunas opciones de configuración que deben cambiarse para optimizar las pantallas transparentes del dispositivo, por lo que la aplicación se mostrará a través del mundo físico:
+1. En la **jerarquía**, seleccione la **cámara principal** .
+2. En el panel **Inspector** , establezca la **posición** de la transformación en **0, 0, 0** para que la ubicación del encabezado de los usuarios se inicie en el origen del mundo de Unity.
+3. Cambie las **marcas** de borrado a **color sólido**.
+4. Cambie el color de **fondo** a **RGBA 0, 0, 0 y 0**. Los negros se representan como transparentes en HoloLens.
+5. Cambiar los **planos de recorte, cerca** de [HoloLens recomendado](camera-in-unity.md#clip-planes) 0,85 (metros).
 
-Si elimina y creación de una cámara nueva, asegúrese de que la cámara es **etiquetada** como **MainCamera**.
+Si elimina y crea una nueva cámara, asegúrese de que la cámara esté **etiquetada** como **MainCamera**.
 
 
 ## <a name="see-also"></a>Vea también
-* [La realidad mixta Toolkit v2](mrtk-getting-started.md)
+* [Kit de herramientas de realidad mixta V2](mrtk-getting-started.md)
 * [Introducción al desarrollo de Unity](unity-development-overview.md)

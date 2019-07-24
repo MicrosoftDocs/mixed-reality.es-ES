@@ -1,27 +1,32 @@
 ---
-title: Usar el espacio de nombres de Windows con las aplicaciones de Unity para HoloLens
-description: Explica cómo utilizar WinRT APIs en el proyecto de Unity para HoloLens.
+title: Uso del espacio de nombres de Windows con aplicaciones de Unity para HoloLens
+description: Explica cómo hacer uso de las API de WinRT en el proyecto de Unity para HoloLens.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Tutorial de Unity, WinRT, windows mixed reality, API,
-ms.openlocfilehash: ed65b5995d74c54057a49b878c1206d0f06394ca
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Unity, WinRT, Windows Mixed Reality, API, tutorial
+ms.openlocfilehash: fd25548de8eeb3c8157a3f9de283dc5004ed1180
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59599868"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63548737"
 ---
-# <a name="using-the-windows-namespace-with-unity-apps-for-hololens"></a>Usar el espacio de nombres de Windows con las aplicaciones de Unity para HoloLens
+# <a name="using-the-windows-namespace-with-unity-apps-for-hololens"></a>Uso del espacio de nombres de Windows con aplicaciones de Unity para HoloLens
 
-Esta página describe cómo utilizar WinRT APIs en el proyecto de Unity para HoloLens.
+En esta página se describe cómo hacer uso de las API de WinRT en el proyecto de Unity para HoloLens.
 
-## <a name="conditionally-include-winrt-api-calls"></a>Condicionalmente incluyen llamadas a API de WinRT
+## <a name="conditionally-include-winrt-api-calls"></a>Inclusión condicional de llamadas API de WinRT
 
-WinRT APIs solo se usará en las compilaciones de proyecto de Unity que tienen como destino Windows 8, Windows 8.1 o la plataforma Universal de Windows; cualquier código que se escribe en los scripts de Unity que tiene como destino WinRT APIs debe incluirse condicionalmente para solo las compilaciones. Esto se realiza mediante las definiciones del preprocesador NETFX_CORE o WINDOWS_UWP. Esta regla se aplica al uso de instrucciones, así como otro código.
+Las API de WinRT se pueden aprovechar para los proyectos de Unity creados para el Plataforma universal de Windows y la plataforma Xbox One; cualquier código que escriba en scripts de Unity que tengan como destino las API de WinRT debe incluirse condicionalmente solo para esas compilaciones. 
 
-El fragmento de código siguiente procede de la página del manual de Unity para [plataforma Universal de Windows: API de WinRT en C# scripts](http://docs.unity3d.com/Manual/windowsstore-scripts.html). En este ejemplo, un Id. de publicidad se devuelve, pero solo en Windows 8.0 o superior destino compilaciones:
+Esto puede hacerse a través de dos pasos en Unity:
+1) El nivel de compatibilidad de API debe establecerse en **.net 4,6** o **.net Standard 2,0** en la configuración del reproductor.
+    - **Editar** >  >    configuración de proyecto nivel de compatibilidad de API de configuración del reproductor en .net 4,6 o .net Standard 2,0 >  > 
+2) La Directiva de preprocesador **ENABLE_WINMD_SUPPORT** debe estar encapsulada en torno a cualquier código aprovechado por WinRT
+
+El siguiente fragmento de código procede de la página manual de [Unity para plataforma universal de Windows: API de WinRT C# en](http://docs.unity3d.com/Manual/windowsstore-scripts.html)scripts. En este ejemplo, se devuelve un identificador de anuncio, pero solo en las compilaciones de UWP y Xbox One:
 
 ```
 using UnityEngine;
@@ -32,7 +37,7 @@ public class WinRTAPI : MonoBehaviour {
     }
 
     string GetAdvertisingId() {
-        #if NETFX_CORE
+        #if ENABLE_WINMD_SUPPORT
             return Windows.System.UserProfile.AdvertisingManager.AdvertisingId;
         #else
             return "";
@@ -41,11 +46,10 @@ public class WinRTAPI : MonoBehaviour {
 }
 ```
 
-## <a name="edit-your-scripts-in-a-unity-c-project"></a>Editar los scripts en un Unity C# proyecto
+## <a name="edit-your-scripts-in-a-unity-c-project"></a>Editar los scripts en un C# proyecto de Unity
 
-Cuando hace doble clic en una secuencia de comandos en el editor de Unity, iniciará de forma predeterminada el script en un proyecto del editor. Las APIs WinRT aparecerán desconocido por dos motivos: NETFX_CORE no está definido en este entorno, y el proyecto no hace referencia el tiempo de ejecución de Windows. Si usas el [recomienda exportación y compila la configuración](exporting-and-building-a-unity-visual-studio-solution.md)y editar los scripts en el proyecto en su lugar, definirá NETFX_CORE y también incluyen una referencia al tiempo de ejecución de Windows; con esta configuración en su lugar, será WinRT APIs está disponible para IntelliSense.
-
-Tenga en cuenta que el Unity C# proyecto también puede utilizarse para depurar a través de las secuencias de comandos con F5 en Visual Studio de depuración remota. Si no ve IntelliSense funciona la primera vez que abra el Unity C# del proyecto, cierre el proyecto y vuelva a abrirlo. IntelliSense debería empezar a trabajar.
+Al hacer doble clic en un script en el editor de Unity, se iniciará el script de forma predeterminada en un proyecto de editor. Parece que las API de WinRT son desconocidas porque el proyecto de Visual Studio no hace referencia al Windows Runtime. Además, la directiva **ENALBE_WINMD_SUPPORT** estará sin definir y cualquier código ajustado *#if* se omitirá hasta que compile el proyecto en una solución de Visual Studio para UWP.
 
 ## <a name="see-also"></a>Vea también
-* [Exportar y creación de una solución de Visual Studio de Unity](exporting-and-building-a-unity-visual-studio-solution.md)
+* [Exportación y creación de una solución de Visual Studio para Unity](exporting-and-building-a-unity-visual-studio-solution.md)
+* [Windows Runtime admite Unity](https://docs.unity3d.com/Manual/IL2CPP-WindowsRuntimeSupport.html)

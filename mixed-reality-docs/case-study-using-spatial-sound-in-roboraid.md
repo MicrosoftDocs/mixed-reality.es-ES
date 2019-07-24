@@ -1,94 +1,94 @@
 ---
-title: 'Caso práctico: uso sonido espacial en RoboRaid'
-description: Sonido espacial es una de las características más interesantes de Microsoft HoloLens, que proporciona una manera para que los usuarios perciben qué está pasando en torno a ellas cuando los objetos están fuera de la línea de visión.
+title: 'Caso práctico: uso de sonido espacial en RoboRaid'
+description: El sonido espacial es una de las características más emocionantes de Microsoft HoloLens, lo que proporciona a los usuarios una forma de percibir qué está ocurriendo en torno a los objetos fuera de la línea de visión.
 author: mattzmsft
 ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, RoboRaid, sonido espacial
 ms.openlocfilehash: 4bb050b4a4051c121c488ea38e150a8973bd7c04
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59600778"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524154"
 ---
-# <a name="case-study---using-spatial-sound-in-roboraid"></a>Caso práctico: uso sonido espacial en RoboRaid
+# <a name="case-study---using-spatial-sound-in-roboraid"></a>Caso práctico: uso de sonido espacial en RoboRaid
 
-Charles Sinex, responsable de audio en el equipo de experiencia de Microsoft HoloLens, habla sobre los desafíos únicos que afrontó al crear audio para [RoboRaid](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j), un solucionador de la primera persona de realidad mixta.
+Charles Sinex, responsable de audio en el equipo de experiencia de Microsoft HoloLens, habla sobre los desafíos únicos que encontró al crear audio para [RoboRaid](https://www.microsoft.com/en-us/p/roboraid/9nblggh5fv3j), un shootje de primera persona de realidad mixta.
 
 ## <a name="the-tech"></a>La tecnología
 
-[Sonido espacial](spatial-sound.md) es una de las características más interesantes de Microsoft HoloLens, que proporciona una manera para que los usuarios perciben qué está pasando en torno a ellas cuando los objetos están fuera de la línea de visión.
+El [sonido espacial](spatial-sound.md) es una de las características más emocionantes de Microsoft HoloLens, lo que proporciona a los usuarios una forma de percibir qué está ocurriendo en torno a los objetos fuera de la línea de visión.
 
-En RoboRaid, el uso más obvio y eficaz de sonido espacial es alerta al Reproductor que algo que sucede fuera de la visión periféricos del usuario. Por ejemplo, puede escribir el Breacher desde cualquiera de las paredes digitalizadas en la sala, pero si no está accesible desde la ubicación donde está entrando, podría perder. Para generar una alerta para este invasión, oirá un poco distinto de audio procedentes de donde está entrando en el Breacher, que le permite saber que necesita para actuar rápidamente para detenerlo.
+En RoboRaid, el uso más obvio y eficaz del sonido espacial consiste en avisar al jugador sobre algo que ocurre fuera de la visión del periférico del usuario. Por ejemplo, el violador puede entrar en cualquiera de las paredes digitalizadas de la habitación, pero si no se encuentra en la ubicación en la que está escribiendo, puede que se lo pierda. Para avisarle de esta invasión, oirá un poco de audio procedente del punto en el que entra el incumplimiento, lo que le permite saber que debe actuar rápidamente para detenerlo.
 
 ## <a name="behind-the-scenes"></a>En segundo plano
 
-El proceso de creación de sonido espacial para las aplicaciones de HoloLens es tan nuevo y único y puede provocar la falta de proyectos anteriores para usarla como referencia a un lote de cabeza arañazos cuando surge un problema. Con suerte, estos ejemplos de los desafíos de audio nos enfrentamos mientras lo RoboRaid le ayudará a medida que cree audio para sus propias aplicaciones.
+El proceso de creación de sonido espacial para las aplicaciones de HoloLens es tan nuevo y único, y la falta de los proyectos anteriores que se van a usar como referencia puede conducir a una gran cantidad de arañazos principales cuando surge un problema. Afortunadamente, estos ejemplos de los desafíos de audio que nos enfrentamos al hacer RoboRaid le ayudarán a crear audio para sus propias aplicaciones.
 
-### <a name="be-mindful-of-taxing-the-cpu"></a>Esté atento a recargar la CPU
+### <a name="be-mindful-of-taxing-the-cpu"></a>Tenga en cuentan el uso de la CPU
 
-Puede ser exigentes sonido espacial en la CPU. Para obtener una experiencia ocupada como RoboRaid resultó crucial mantener las instancias de sonido espacial en ocho en un momento dado. En su mayor parte, era tan sencillo como establecer el límite de instancias de diferentes eventos de audio para que se eliminan todas las instancias que se producen cuando se alcanza el límite. Por ejemplo, al generan drones, sus screams se limitan a tres instancias en un momento dado. Considerar la actividad sólo aproximadamente cuatro drones pueden generar a la vez, tres screams son muchas ya que no hay ninguna manera su cerebro puede realizar un seguimiento de que muchos eventos de audio de sonido parecido. Esto libera los recursos para otros eventos espaciales de sonido, como enemigas explosiones o enemigos preparando para alcanzar.
+El sonido espacial puede ser exigente en la CPU. En el caso de una experiencia de uso como RoboRaid era fundamental mantener las instancias de sonido espacial en menos de ocho en un momento dado. En su mayor parte, era tan sencillo como establecer el límite de instancias de distintos eventos de audio para que se eliminen todas las instancias que se producen después del límite. Por ejemplo, cuando se genera drones, sus Screams se limitan a tres instancias en un momento dado. Considerar solo cuatro drones se puede generar a la vez, hay tres screamss, ya que no hay forma de que su cerebro pueda realizar un seguimiento de los muchos eventos de audio de sonido similar. Esto liberó recursos para otros eventos de sonido espacial, como explosiones de enemigo o enemigos en preparación para disparar.
 
-### <a name="rewarding-a-successful-dodge"></a>Un regalo para una correcta dodge
+### <a name="rewarding-a-successful-dodge"></a>Recompensar una sobreexposición correcta
 
-El mecánico dodging es uno de los aspectos más importantes del juego en RoboRaid y algo que pensamos que era realmente único a la experiencia de HoloLens. Por lo tanto, hemos querido sobreexpone correcta muy gratificante para el Reproductor. Tenemos al Doppler "pasen zumbando-por" para que se emita atractivas bastante pronto en el desarrollo. Inicialmente, mi plan fue usar un bucle y manipularlos en tiempo real con el volumen, el cabeceo y filtro. La implementación para que esto iba a ser muy elaborada, por lo que antes de confirmar los recursos necesarios para realmente crear esto, hemos creado un prototipo económico con un recurso con el efecto de Doppler preparados para averiguar cómo simplemente se sentía *. Nuestro desarrollo talento resultaba para que este activo por pasen zumbando podría reproducir exactamente 0,7 segundos antes de que habrá pasado el proyectil auricular del jugador y los resultados creía realmente increíbles! Obviamente, se ha descartado la solución más compleja e implementa el prototipo.
+El mecánico de dodging es uno de los aspectos más importantes del juego en RoboRaid y también algo que pensamos que era realmente único para la experiencia de HoloLens. Por lo tanto, queríamos realizar grandes sobreexposicións en el reproductor. Obtuvimos el Doppler "Whizz-by" para que suene bastante atractivo en el desarrollo. Inicialmente, mi plan era usar un bucle y manipularlo en tiempo real mediante el volumen, el paso y el filtro. La implementación de esto iba a ser muy elaborada, por lo que antes de confirmar los recursos para compilar realmente esto, creamos un prototipo barato con un recurso con el efecto Doppler que se preparaba para averiguar cómo lo sentía. Nuestro desarrollo de talentos lo hizo para que este recurso whizzdo se reproduzca exactamente 0,7 segundos antes de que el proyectil pase por los oídos del jugador y los resultados se sentían realmente increíbles. No es necesario decir que se ha reparado la solución más compleja y se ha implementado el prototipo.
 
-** (Si desea obtener más información acerca de cómo crear un recurso de audio con el efecto de Doppler integrado, consulte un artículo por diseñador sonido llamado Charles Deenan [100 Whooshes en 2 minutos](http://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/).) *
+\* * (Si desea obtener más información acerca de la creación de un recurso de audio con el efecto Doppler integrado, consulte un artículo con el diseñador de sonido Charles Deenan llamado [100 Whooshes en 2 minutos](http://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)). *
 <br>
-![Correctamente. evitar proyectil un enemigo recompensa al Reproductor con un sonido pasen zumbando forma satisfactoria.](images/successful-dodge-roboraid-500px.jpg)
+![Dodging correctamente las recompensas de un enemigo en el jugador con un sonido Whizz satisfactorio.](images/successful-dodge-roboraid-500px.jpg)
 
-### <a name="ditching-ineffective-sounds"></a>Ditching sonidos ineficaces
+### <a name="ditching-ineffective-sounds"></a>Deszanjar sonidos ineficaces
 
-Originalmente, habíamos queríamos reproducir un sonido en el Reproductor un aumento vertiginoso una vez que hayan sobreexpuesta correctamente el proyectil enemigo, pero hemos decidido eliminar esto por varias razones. En primer lugar, no se siente tan eficaz como se ha usado para la dodge whizz mediante SFX. En el momento en que el proyectil llega a una pared detrás, cosa hubiese sucedido en el juego que sería bastante mucho máscara que suenan. En segundo lugar, no tenemos colisiones en el suelo, por lo que no se pueden obtener la expansión a reproducir cuando el proyectil alcanza el límite inferior en lugar de las paredes. Y por último, se ha producido el costo de CPU del sonido espacial. El enemigo Elite Scorpion (uno que pueda rastrear dentro de la pared) tiene un ataque especial que dispara proyectiles aproximadamente ocho. No sólo hizo un caos enorme en la combinación, también introdujo desagradables entrecortado porque experimentaba la CPU muy difícil.
+Originalmente, habíamos querido jugar un sonido de explosión detrás del jugador una vez que ha sobrepasado correctamente el proyectil del enemigo, pero hemos decidido deshacerse por varios motivos. En primer lugar, no se sienta tan efectivo como Whizz-by SFX que usamos para la inexposición. En el momento en que el proyectil llega a una pared detrás, se habría producido algo más en el juego que enmascararía ese sonido. En segundo lugar, no teníamos colisiones en el piso, por lo que no pudimos reproducir la explosión cuando el proyectil alcanzó el piso en lugar de las paredes. Y, por último, el costo de CPU del sonido espacial. El enemigo de Elite Scorpion (uno que puede rastrear dentro de la pared) tiene un ataque especial que alcanza los ocho proyectiles. No solo hizo que un gran desorden en la combinación, sino que también presentaba entrecortados, porque hacía que la CPU estuviera demasiado duro.
 
-### <a name="communicating-a-hit"></a>Comunica un acierto
+### <a name="communicating-a-hit"></a>Comunicar una visita
 
-Un problema interesante hemos tenido que pensamos que eran exclusivos de la experiencia de HoloLens, es la dificultad de se comunican eficazmente a los jugadores que ha alcanzado. Lo que hace una realidad mixta experiencia correcta es la sensación de que se está realizando la historia para usted. Esto significa que tiene que creer que lucha una invasión robot externo en su propia sala de estar.
+Un problema interesante que hemos tenido en, que pensamos que era exclusivo de la experiencia de HoloLens, era la dificultad de comunicarse de forma eficaz con los jugadores que se han alcanzado. Lo que hace que una experiencia de realidad mixta sea correcta es la sensación de que se está produciendo la historia. Esto significa que debe creer que está lidiando una invasión del robot extranjero en su propia habitación.
 
-Los jugadores obviamente no sienten nada cuando alcanzarán, por lo que tuvimos que encontrar una manera realmente convencer al Reproductor que algo malo tenía happed a ellos. En juegos convencionales, puede que vea una animación que permite conocer su carácter ha tomado un acierto o la pantalla puede parpadear rojo y su carácter podría grunt un poco. Puesto que estos tipos de señales no funcionan en una experiencia de realidad mixta, hemos decidido combinar la indicación visual con un sonido realmente exagerado que indica que ha tomado el daño. Creé un sonido grande y resultaba tan destacado en la combinación de todo ducked hacia abajo. A continuación, para que destaque incluso más, se ha agregado un breve sonido de advertencia como si se desactivaba sub nuclear. 
+Obviamente, los jugadores no sentirán nada cuando se alcancen, por lo que tuvimos que encontrar una manera de convencer realmente al jugador de que algo malo les happed. En los juegos convencionales podría ver una animación que le permite saber que el personaje ha tenido un golpe o que la pantalla podría parpadear en rojo y el carácter podría resultar un poco. Dado que estos tipos de indicaciones no funcionan en una experiencia de realidad mixta, decidimos combinar la indicación visual con un sonido realmente exagerado que indica que ha sacado el daño. He creado un gran sonido y lo hemos destacado en la combinación de que ha sobrepuesto todo. A continuación, para que se resalte aún más, hemos agregado un breve sonido de advertencia como si se hubiera receptora un subproceso nuclear. 
 <br>
-![Cuando se alcanza un reproductor en RoboRaid, vea una indicación visual, pero también obtendrá una indicación de audio exagerada que les informa de que han tomado el daño.](images/player-hit-roboraid-500px.jpg)
+![Cuando se alcanza un jugador en RoboRaid, se ve una indicación visual, pero también se obtiene una señal de audio exagerada que indica que han sufrido daños.](images/player-hit-roboraid-500px.jpg)
 
-### <a name="getting-big-sound-from-small-speakers"></a>Obtención de sonido grande de altavoces pequeños
+### <a name="getting-big-sound-from-small-speakers"></a>Obtener sonido grande de pequeños altavoces
 
-HoloLens altavoces son pequeños y ligeros satisfacer las necesidades del dispositivo, por lo que no se puede esperar recibir demasiado bajo. De forma similar al desarrollo para smartphones o dispositivos de juegos portátiles, los diseñadores de sonido y compositores tienen que ser consciente del contenido de audio de su frecuencia. Siempre diseñar sonidos o escribir música con el intervalo de frecuencia completa porque el exceso de auriculares es una opción para los usuarios. Sin embargo, para garantizar la compatibilidad con altavoces HoloLens, ejecutar una prueba ocasionalmente colocando un EQ en el servidor maestro de cualquier DAW llego a estar trabajando en. La configuración de EQ consta de un filtro paso alto aproximadamente 600 a 700 Hz (no demasiado pronunciada) y paso bajo de filtro en aproximadamente 10 K (muy pronunciada). Que debe proporcionarle una idea aproximada de cómo los sonidos de realizarán la reproducción en el dispositivo.
+Los oradores de HoloLens son pequeños y ligeros para adaptarse a las necesidades del dispositivo, por lo que no se puede esperar que escuche demasiado bajo. De forma similar al desarrollo para dispositivos smartphones o dispositivos de juegos de mano, los diseñadores y Composers de sonido deben tener en cuenta el contenido de la frecuencia de su audio. Siempre se diseñan sonidos o se escribe música con un intervalo de frecuencia completo porque la utilización de auriculares es una opción para los usuarios. Sin embargo, para garantizar la compatibilidad con los hablantes de HoloLens, ejecuto una prueba ocasionalmente colocando un EC en el patrón de cualquier DAW en el que estoy trabajando. La configuración de EC consta de un filtro de paso alto de 600 a 700 Hz (no demasiado pronunciada) y un filtro de paso bajo alrededor de 10 000 (muy pronunciada). Esto le dará una idea aproximado de cómo se reproducirán los sonidos en el dispositivo.
 
-Si confía en graves para dar el sentido de cuerda cambiar de la música, es posible que su música pierde completamente el sentido de raíz al aplicar esta configuración EQ. Para solucionar este problema, agrega otra capa a los sonidos graves que es una octava superior (con algunas armónicos enriquecido) y se puede combinar para obtener el sentido de la parte posterior de la raíz. A veces con distorsión de amp copia la armonía proporcionará suficiente contenido de la frecuencia del intervalo superior para hacer que nuestro cerebro creer que hay algo debajo de ella. Esto es cierto para SFX como impactos, explosiones o sonidos para momentos especiales, como los ataques super un jefe. Realmente no puede depender de bajo costo para hacerse una idea del impacto o el peso del Reproductor. Al igual que con la música, distorsión para dar un poco de estudio sin duda ha ayudado a.
+Si se basa en graves para dar la sensación de cambiar el valor de cuerda en la música, es posible que la música pierda el sentido de la raíz al aplicar esta configuración de EC. Para solucionarlo, agregué otra capa al graves que es una octava superior (con algunos armónicos ricos) y la combina para obtener el sentido de la raíz. A veces, el uso de la distorsión para aumentar el valor de los armónicos proporcionará suficiente contenido de frecuencia en el intervalo superior para que nuestro cerebro piense que hay algo debajo. Esto es así para SFX como impactos, explosiones o sonidos para momentos especiales, como los ataques de superusuario de un jefe. En realidad, no puede confiar en el low-end para dar al jugador una sensación de impacto o peso. Al igual que con la música, el uso de distorsión para ofrecer un poco de esfuerzo de forma indefinida.
 
-### <a name="making-your-audio-cues-stand-out"></a>Hacer que su pistas de sonido destaque
+### <a name="making-your-audio-cues-stand-out"></a>Destaque las señales de audio
 
-Naturalmente, todo el equipo deseaba bombastic música, cañones mucho ruidos y explosiones locos; pero también deseaba escuchar voiceover o cualquier otras pistas de sonido críticos para el juego.
+Naturalmente, todos los miembros del equipo querían bombasticr música, armas de alto volumen y explosiones de loco; pero también querían ser capaces de oír VoiceOver o cualquier otra pista de audio crítica del juego.
 
-En un juego de consola con una gama completa de frecuencia tiene más opciones para dividir las frecuencias según la importancia del sonido. Para RoboRaid, sin embargo, estaba limitado el número de intervalos de frecuencias que podría curva de sonidos. Por ejemplo, si usa el filtro de paso bajo y curva demasiado desde el extremo superior del espectro, no tendrá todo lo que queda en el sonido porque no hay mucho low-end.
+En un juego de consola con una gama completa de frecuencia, tiene más opciones para dividir las frecuencias en función de la importancia del sonido. No obstante, en el caso de RoboRaid, se limitaba el número de intervalos de frecuencias que podía curvar de los sonidos. Por ejemplo, si usa un filtro de paso bajo y una curva demasiado en el extremo superior del espectro, no quedará nada en el sonido porque no hay mucho más bajo.
 
-Con el fin de que RoboRaid suene tan grande como sea posible en el dispositivo, se debían reducir el intervalo dinámico de la experiencia completa y realiza un uso extensivo de sobra mediante la creación de una jerarquía clara de importancia para los distintos tipos de sonidos. Establezca evite desde -2-6 DB según la importancia. Personalmente no me gusta evite evidente en los juegos, por lo que me pasaba mucho tiempo, ajuste el fundido de entrada/salida agote el tiempo y la cantidad de atenuación de volumen. Se configure buses separadas para sonido espacial, sonido no espaciales, VO y bus seco sin reverberación para copiar música, a continuación, crean los buses de prioridad muy alta, críticas y que no son críticas. Los activos, a continuación, se han configurado para ir a su autobús adecuados.
+Con el fin de que el sonido RoboRaid sea tan grande como en el dispositivo, tuvimos que reducir el intervalo dinámico de toda la experiencia y realizar un uso extensivo de la carga mediante la creación de una jerarquía clara de importancia para los diferentes tipos de sonidos. Configuro la cadena de-2 a-6 dB en función de la importancia. Personalmente no me gusta la untonía obvia en los juegos, por lo que he dedicado mucho tiempo a optimizar el tiempo de transición y salida y la cantidad de atenuación del volumen. Se configuran buses independientes para sonido espacial, sonido no espacial, VO y bus seco sin reverberación para música y, luego, se crearon buses de alta prioridad, críticos y no críticos. Los recursos se configuraron para ir a los buses correspondientes.
 
-Espero que los profesionales de audio tendrá tanta diversión y emoción trabajar en sus propias aplicaciones igual de trabajar en RoboRaid. Estoy ansioso por ver (y escuchar) lo que las personas con talento fuera de Microsoft aparecerá con para HoloLens.
+Espero que los profesionales de audio salgan del trabajo en sus propias aplicaciones mientras trabajaba en RoboRaid. No puedo esperar para ver (y oír) el contenido de las personas con talento ajenos a Microsoft para HoloLens.
 
 ## <a name="do-it-yourself"></a>Hágalo usted mismo
 
-Un truco que descubrí efectúe determinados eventos (por ejemplo, explosiones) de sonido "mayores", como está llenando la sala: consistía en crear un recurso de mono para el sonido espacial y combina con un recurso de estéreo 2D, que se reproducirá en 3D. Realizar algunos ajustes, ya que tener demasiada información en el contenido estéreo disminuirá la direccionalidad de los activos de mono. Sin embargo, conseguir el equilibrio adecuado dará como resultado enormes sonidos que obtendrán los jugadores a Predestinado en la dirección correcta.
+Un truco que he descubierto para realizar determinados eventos (como explosiones) suena "más grande", al igual que están llenando el salón, era crear un recurso mono para el sonido espacial y combinarlo con un recurso estéreo 2D para reproducirlo en 3D. Lleva cierto ajuste, ya que tener demasiada información en el contenido estéreo disminuirá la direccionalidad de los recursos mono. Sin embargo, el hecho de obtener el equilibrio tiene como resultado grandes sonidos que permitirán a los jugadores activar sus cabezales en la dirección correcta.
 
-Puede probar usted mismo con los recursos de audio a continuación:
+Puede probar esto con los recursos de audio siguientes:
 
 **Escenario 1**
-1. Descargar [roboraid_enemy_explo_mono.wav](images/roboraid-enemy-explo-mono.wav) y establezca para la reproducción de sonido espacial y asígnelo a un evento.
-2. Descargar [roboraid_enemy_explo_stereo.wav](images/roboraid-enemy-explo-stereo.wav) y establecido en reproducción en 2D estéreo y asignarse al mismo evento anterior. Dado que estos recursos se normalizan en Unity, atenuar volumen de los activos para que no recorta.
-3. Reproducir sonidos de ambos juntos. Mover la cabeza aproximadamente a sentirse espacial cómo suena.
+1. Descargue [roboraid_enemy_explo_mono. wav](images/roboraid-enemy-explo-mono.wav) y establézcalo en reproducción a través de un sonido espacial y asígnelo a un evento.
+2. Descargue [roboraid_enemy_explo_stereo. wav](images/roboraid-enemy-explo-stereo.wav) y establézcalo en reproducción en estéreo 2D y asígnelo al mismo evento que el anterior. Dado que estos recursos se normalizan en Unity, atenuar el volumen de ambos recursos para que no se recorte.
+3. Reproducir ambos sonidos juntos. Mueva el dedo para sentir cómo suena espacial.
 
 **Escenario 2**
-1. Descargar [roboraid_enemy_explo_summed.wav](images/roboraid-enemy-explo-summed.wav) y establecido en la reproducción de sonido espacial y asignar a un evento.
-2. Reproducir este activo por sí solo, a continuación, compárelo con el evento del escenario 1.
-3. Pruebe el equilibrio entre distintos archivos estéreo y mono.
+1. Descargue [roboraid_enemy_explo_summed. wav](images/roboraid-enemy-explo-summed.wav) y establézcalo en reproducción a través de un sonido espacial y asígnelo a un evento.
+2. Reproduzca este recurso y compárelo con el evento del escenario 1.
+3. Pruebe un equilibrio diferente de archivos mono y estéreo.
 
 ## <a name="about-the-author"></a>Acerca del autor
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>Ingeniero de audio @Microsoft</td>
+<td style="border-style: none"><b>Charles Sinex</b><br>Ingeniero de audio@Microsoft</td>
 </tr>
 </table>
 

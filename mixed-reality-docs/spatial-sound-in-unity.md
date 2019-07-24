@@ -1,61 +1,61 @@
 ---
 title: Sonido espacial en Unity
-description: Reproducir sonido espacial procede de un punto 3D específico dentro de la escena de Unity.
+description: Reproducir un sonido espacial procedente de un punto 3D específico dentro de la escena de Unity.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, espacial de sonido, HRTF, tamaño de la sala
+keywords: Unity, sonido espacial, HRTF, tamaño de sala
 ms.openlocfilehash: e2b321d7086314a14a940d57aa17e67636c758b8
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597517"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63549079"
 ---
 # <a name="spatial-sound-in-unity"></a>Sonido espacial en Unity
 
-Este tema describe cómo usar sonido espacial en los proyectos de Unity. Trata los archivos de complemento, así como los componentes de Unity y propiedades que permiten sonido espacial.
+En este tema se describe cómo usar el sonido espacial en los proyectos de Unity. Trata los archivos de complemento necesarios, así como los componentes y propiedades de Unity que permiten el sonido espacial.
 
-## <a name="enabling-spatial-sound-in-unity"></a>Habilitar el sonido espacial en Unity
+## <a name="enabling-spatial-sound-in-unity"></a>Habilitación del sonido espacial en Unity
 
-Sonido espacial, en Unity, se habilita mediante un complemento de audio espacial. Los archivos del complemento se agrupan directamente en Unity para habilitar el sonido espacial es tan fácil como va a **Editar > configuración del proyecto > Audio** y cambiando el **espacial complemento** en el Inspector de la  **MS HRTF espacial**. Puesto que el efecto de espacio de Microsoft solo admite actualmente 48000Hz, también se debe establecer la frecuencia de muestreo del sistema como 48000 para evitar un error HRTF en el caso excepcional de que el dispositivo de salida del sistema ya no se establece en 48000:
+El sonido espacial, en Unity, se habilita mediante un complemento de spatializer de audio. Los archivos de complemento se agrupan directamente en Unity, por lo que habilitar el sonido espacial es tan sencillo como **editar > configuración del proyecto > audio** y cambiar el **complemento Spatializer** en el inspector al **Spatializer MS HRTF**. Dado que Microsoft spatializer solo admite 48000Hz actualmente, también debe establecer la velocidad de muestra del sistema en 48000 para evitar un error de HRTF en el caso excepcional de que el dispositivo de salida del sistema no esté establecido en 48000 ya:
 
-![Inspector de AudioManager](images/audio-250px.png)<br>
-*Inspector de AudioManager*
+![Inspector para AudioManager](images/audio-250px.png)<br>
+*Inspector para AudioManager*
 
-El proyecto de Unity ahora está configurado para usar un sonido espacial.
+El proyecto de Unity ya está configurado para usar el sonido espacial.
 
 >[!NOTE]
->Si no está utilizando un equipo con Windows 10 para el desarrollo, no obtendrá espacial sonido en el editor ni en el dispositivo (incluso si está usando el SDK de Windows 10).
+>Si no usa un equipo con Windows 10 para el desarrollo, no obtendrá sonido espacial en el editor ni en el dispositivo (incluso si usa el SDK de Windows 10).
 
 ## <a name="using-spatial-sound-in-unity"></a>Uso de sonido espacial en Unity
 
-Sonido espacial se usa en su proyecto Unity mediante el ajuste de configuración de tres de los componentes de origen de Audio. Los pasos siguientes configurará los componentes de origen de Audio de sonido espacial.
-* En el **jerarquía** del panel, seleccione el objeto de juego que tenga adjunta **origen Audio**.
-* En el **Inspector** panel, en el **origen Audio** componente
-    * Compruebe el **Spatialize** opción.
-    * Establecer **Blend espacial** a **3D** (valor numérico 1).
-    * Para obtener mejores resultados, expanda **configuración sonido 3D** y establecer **atenuación de volumen** a **personalizado atenuación**.
+El sonido espacial se usa en el proyecto de Unity ajustando tres opciones en los componentes de origen de audio. En los pasos siguientes se configurarán los componentes de origen de audio para el sonido espacial.
+* En el panel **jerarquía** , seleccione el objeto de juego que tiene un **origen de audio**conectado.
+* En el panel **Inspector** , en el componente **origen de audio**
+    * Active la opción **Spatial** .
+    * Establezca **Blend espacial** en **3D** (valor numérico 1).
+    * Para obtener los mejores resultados, expanda la **opción Configuración de sonido 3D** y establezca el **volumen rolloff** en **rolloff personalizado**.
 
-![Panel del inspector de Unity que muestra el origen de Audio](images/audiosource.png)<br>
-*Panel del inspector de Unity que muestra el origen de Audio*
+![Panel de inspector en Unity que muestra el origen de audio](images/audiosource.png)<br>
+*Panel de inspector en Unity que muestra el origen de audio*
 
-Ahora los sonidos de forma realista existen dentro del entorno del proyecto.
+Sus sonidos ahora existen en el entorno del proyecto.
 
-Se recomienda encarecidamente que se familiarice con la [instrucciones de diseño de sonido espacial](spatial-sound-design.md). Estas directrices ayudar a integrar el audio a la perfección en su proyecto y Sumergir aún más los usuarios en la experiencia que ha creado.
+Se recomienda encarecidamente que se familiarice con las [directrices de diseño de sonido espacial](spatial-sound-design.md). Estas instrucciones ayudan a integrar el audio sin problemas en el proyecto y a sumergir aún más a los usuarios en la experiencia que ha creado.
 
-## <a name="setting-spatial-sound-settings"></a>Configuración de sonido espacial
+## <a name="setting-spatial-sound-settings"></a>Establecer la configuración de sonido espacial
 
-El complemento de Microsoft Spatial Sound proporciona un parámetro adicional que se puede establecer en una por cada origen de Audio, para permitir que un control adicional de la simulación de audio. Este parámetro es el tamaño de la sala simulado.
+El complemento de sonido espacial de Microsoft proporciona un parámetro adicional que se puede establecer en cada origen de audio para permitir un control adicional de la simulación de audio. Este parámetro es el tamaño del salón simulado.
 
-### <a name="room-size"></a>Tamaño de la sala
+### <a name="room-size"></a>Tamaño de sala
 
-El tamaño de la sala simulada mediante sonido espacial. El tamaño aproximado de las salas es: pequeño (una oficina en una sala de conferencias pequeño), mediano (una sala de conferencias de gran tamaño) y grande (un auditorio). También puede especificar un tamaño de la sala None para simular un entorno al aire libre. El tamaño del espacio predeterminado es pequeño.
+El tamaño de la habitación que simula el sonido espacial. Los tamaños aproximados de los salones son; pequeña (una oficina a una pequeña sala de conferencias), mediana (una gran sala de conferencias) y grande (un auditorio). También puede especificar un tamaño de sala de ninguno para simular un entorno exterior. El tamaño predeterminado de la sala es pequeño.
 
 ### <a name="example"></a>Ejemplo
 
-El MixedRealityToolkit para Unity proporciona una clase estática que hace que la configuración de sonido espacial fácil. Esta clase puede encontrarse en el [MixedRealityToolkit\SpatialSound carpeta](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialSound) y se puede llamar desde cualquier secuencia de comandos en el proyecto. Se recomienda establecer estos parámetros en cada componente de origen de Audio en el proyecto. El ejemplo siguiente muestra si selecciona el tamaño del espacio medio para un origen de Audio asociado.
+MixedRealityToolkit para Unity proporciona una clase estática que facilita el establecimiento de la configuración de sonido espacial. Esta clase se puede encontrar en la [carpeta MixedRealityToolkit\SpatialSound](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialSound) y se puede llamar desde cualquier script del proyecto. Se recomienda establecer estos parámetros en cada componente de origen de audio del proyecto. En el ejemplo siguiente se muestra cómo seleccionar el tamaño de la sala mediana para un origen de audio conectado.
 
 ```cs
 AudioSource audioSource = gameObject.GetComponent<AudioSource>()
@@ -65,9 +65,9 @@ if (audioSource != null) {
 }
 ```
 
-### <a name="directly-accessing-parameters-from-unity"></a>Acceso directo a los parámetros de Unity
+### <a name="directly-accessing-parameters-from-unity"></a>Acceso directo a los parámetros desde Unity
 
-Si no desea utilizar las excelentes herramientas de Audio en el MixedRealityToolkit, mostramos cómo cambiaría la HRTF parámetros. Se puede copiar y pegar esto en un script denominado *SetHRTF.cs* que desea asociar a cada AudioSource HRTF. Permite cambiar los parámetros importantes para la HRTF.
+Si no desea usar las excelentes herramientas de audio de MixedRealityToolkit, aquí se indica cómo cambiar los parámetros de HRTF. Puede copiarlo y pegarlo en un script denominado *SetHRTF.CS* que quiera asociar a cada AUDIOSOURCE de HRTF. Permite cambiar los parámetros importantes a HRTF.
 
 ```cs
 using UnityEngine;
@@ -93,13 +93,13 @@ using UnityEngine;
        }
    }
 ```
-### <a name="spatial-sound-in-mixed-reality-toolkit"></a>Sonido espacial en el Kit de herramientas de realidad mixta
-- [HoloToolkit-Examples/SpatialSound/Scenes/UAudioManagerTest.unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/UAudioManagerTest.unity)
+### <a name="spatial-sound-in-mixed-reality-toolkit"></a>Sonido espacial en el kit de herramientas de realidad mixta
+- [HoloToolkit-Examples/SpatialSound/Scenes/UAudioManagerTest. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/UAudioManagerTest.unity)
 
-Los siguientes ejemplos desde el Kit de herramientas de realidad mixta son ejemplos de efecto de audio general que demuestran formas de hacer sus experiencias más envolventes mediante el uso de sonido.
-- [HoloToolkit-Examples/SpatialSound/Scenes/AudioLoFiTest.unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioLoFiTest.unity)
-- [HoloToolkit-Examples/SpatialSound/Scenes/AudioOcclusionTest.unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioOcclusionTest.unity)
+Los ejemplos siguientes del kit de herramientas de realidad mixta son ejemplos de efectos de audio generales que muestran formas de hacer que sus experiencias sean más envolventes mediante el uso de sonido.
+- [HoloToolkit-Examples/SpatialSound/Scenes/AudioLoFiTest. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioLoFiTest.unity)
+- [HoloToolkit-Examples/SpatialSound/Scenes/AudioOcclusionTest. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/SpatialSound/Scenes/AudioOcclusionTest.unity)
 
 ## <a name="see-also"></a>Vea también
 * [Sonido espacial](spatial-sound.md)
-* [Diseño espacial de sonido](spatial-sound-design.md)
+* [Diseño de sonido espacial](spatial-sound-design.md)

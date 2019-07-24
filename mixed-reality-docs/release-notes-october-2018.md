@@ -1,121 +1,120 @@
 ---
-title: Notas de la versión - octubre de 2018
-description: HoloLens y notas de la versión de Windows Mixed Reality para Windows 10 de octubre de 2018 actualización (también conocido como RS5).
+title: 'Notas de la versión: octubre 2018'
+description: Notas de la versión de HoloLens y Windows Mixed Reality para la actualización 2018 de octubre de Windows 10 (también conocida como RS5).
 author: mattzmsft
 ms.author: mazeller
 ms.date: 10/02/2018
 ms.topic: article
-keywords: release notes, versión, windows 10, compilación, rs5, sistema operativo
-ms.openlocfilehash: 9838b4dcbdedc4bf2c94a8e31f3f8eb4c9634d36
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: Notas de la versión, versión, Windows 10, compilación, RS5, so
+ms.openlocfilehash: 794050910be40e7f98d0a1f67c2e1cf6963305dd
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605593"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524258"
 ---
-# <a name="release-notes---october-2018"></a>Notas de la versión - octubre de 2018
+# <a name="release-notes---october-2018"></a>Notas de la versión: octubre 2018
 
-El **[Windows 10 de octubre de 2018 Update](https://blogs.windows.com/windowsexperience/2018/10/02/find-out-whats-new-in-windows-and-office-in-october/)** (también conocido como RS5) incluye nuevas características para HoloLens y Windows Mixed Reality inmersivos conectados a PC. 
+La **[actualización 2018 de octubre de Windows 10](https://blogs.windows.com/windowsexperience/2018/10/02/find-out-whats-new-in-windows-and-office-in-october/)** (también conocida como RS5) incluye nuevas características para los auriculares de la realidad de HoloLens y Windows Mixed Reality conectados a equipos. 
 
-Para actualizar a la versión más reciente en HoloLens o PC (para Windows Mixed Reality (VR) inmersivos), abra el **configuración** aplicación, vaya a **actualización y seguridad**, a continuación, seleccione el **comprobar las actualizaciones** botón. En un equipo con Windows 10, puede instalar manualmente Windows 10 de octubre de 2018 actualizar mediante el [herramienta de creación de Windows media](https://www.microsoft.com/software-download/windows10).
+Para actualizar a la versión más reciente de HoloLens o PC (para auriculares con Windows Mixed Reality inmersivo (VR)), abra la aplicación de **configuración** , vaya a **Actualizar & seguridad**y, luego, seleccione el botón **Buscar actualizaciones** . En un equipo con Windows 10, también puede instalar manualmente la actualización de Windows 10 de octubre de 2018 con la [herramienta de creación de Windows Media](https://www.microsoft.com/software-download/windows10).
 
-**Última versión de escritorio:** Actualización de Windows 10 de octubre de 2018 (**10.0.17763.107**)<br>
-**Versión más reciente para HoloLens:** Actualización de Windows 10 de octubre de 2018 (**10.0.17763.134**)<br>
+**Versión más reciente del escritorio:** Actualización 2018 de octubre de Windows 10 (**10.0.17763.107**)<br>
+**Versión más reciente de HoloLens:** Actualización 2018 de octubre de Windows 10 (**10.0.17763.134**)<br>
 
-## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>Nuevas características para inmersivos Windows Mixed Reality
+## <a name="new-features-for-windows-mixed-reality-immersive-headsets"></a>Nuevas características para auriculares con Windows Mixed Reality
 
-Windows 10 de octubre de 2018 Update incluye muchas mejoras para usar auriculares de Windows Mixed Reality envolventes (VR) con su PC de escritorio.
+La actualización 2018 de octubre de Windows 10 incluye muchas mejoras para usar auriculares con Windows Mixed Reality envolventes (VR) con el equipo de escritorio.
 
-### <a name="for-everyone"></a>Para todos los usuarios
+### <a name="for-everyone"></a>Para todos
 
-* **Mixto realidad linterna** : abrir un portal en el mundo real para encontrar el teclado, ver a alguien cercanos o eche un vistazo a su entorno sin quitar los auriculares! Puede activar linterna de realidad mixta en el menú Inicio, presione Windows + arrastre en el controlador de movimiento o diciendo "Linterna on/off". Seleccione el controlador en el sentido de que desea ver, como el uso de una linterna en la oscuridad.
+* **Combinación de realidad mixta** : Abra un portal en el mundo real para encontrar su teclado, ver a alguien cerca o eche un vistazo a su entorno sin necesidad de quitar el casco. Puede activar la linterna de realidad mixta desde el menú Inicio; para ello, presione Windows + Grab en el controlador de movimiento o indique "linterna encendido/desactivado". Señale el controlador en la dirección de lo que desea ver, como el uso de una linterna en el oscuro.
 
-    ![Realidad mixta linterna](images/mr-flashlight.png)
+    ![Linterna de realidad mixta](images/mr-flashlight.png)
 
-* **Nuevas aplicaciones y formas de iniciar el contenido de la realidad mixta principal**
-    * Si usas [Windows Mixed Reality para SteamVR](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality), sus títulos SteamVR ahora se muestran en el menú Inicio y los iniciadores de aplicaciones para cada uno pueden colocarse en la realidad mixta principal.
+* **Nuevas aplicaciones y formas de iniciar contenido en la Página principal de la realidad mixta**
+    * Si usa [Windows Mixed Reality para SteamVR](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality), los títulos de SteamVR aparecen ahora en el menú Inicio y los iniciadores de aplicaciones para cada uno pueden colocarse en la Página principal de la realidad mixta.
     
-        ![Iniciadores de aplicaciones SteamVR](images/steamvr-launchers.png)
+        ![Iniciadores de aplicaciones de SteamVR](images/steamvr-launchers.png)
         
-    * Nuevo *360 vídeos* aplicación para detectar una selección con regularidad protegido de vídeos de 360 grados.
-    * Nuevo *WebVR Showcase* experiencias de aplicación para detectar una selección con regularidad protegido de WebVR.
-    * Los clientes de Windows Mixed Reality por primera vez introducirá el Cliff House y buscar que rellena previamente con los iniciadores de aplicaciones 3D para algunos de nuestros favoritos aplicaciones envolventes y juegos desde la Microsoft Store.
-    * Ventanas de Microsoft Edge ahora incluyen una *Share* botón.
-* **Menú Acciones rápidas** -desde dentro de una aplicación de realidad mixta envolventes, puede presionar el botón de Windows para tener acceso a un nuevo menú de acciones rápidas, con un acceso sencillo a *SteamVR menú*, *captura de fotografías y vídeo*, *linterna*, y *principal*.
-* **Compatibilidad con equipos mochila** -Windows Mixed Reality inmersivos (VR) se ejecutan en la mochila equipos sin necesidad de un emulador de visualización una vez completada la instalación.
-* **Nuevas características de audio** : ahora puede reflejar el audio de una experiencia de realidad mixta de Windows para el conector de audio (o auriculares) en los auriculares *y* un dispositivo de audio conectado a su equipo (por ejemplo, altavoces externos). También hemos agregado un indicador visual para el nivel de volumen en pantalla de los auriculares.
+    * Nueva aplicación de *vídeos de 360* para detectar una selección de vídeos de 360 grados de seleccionada con regularidad.
+    * Nueva aplicación de presentación de *WebVR* para detectar una selección periódica seleccionada de experiencias de WebVR.
+    * La primera vez que los clientes de Windows Mixed Reality entrarán en el centro de acantilado y lo encontrarán rellenados previamente con lanzadores de aplicaciones 3D para algunas de nuestras aplicaciones y juegos favoritos de la Microsoft Store.
+    * Las ventanas de Microsoft Edge ahora incluyen un botón *compartir* .
+* **Menú acciones rápidas** : desde una aplicación de realidad mixta, puede presionar el botón de Windows para obtener acceso a un nuevo menú de acciones rápidas, con fácil acceso al *menú SteamVR*, *captura de fotos o vídeos*, *linterna*y *Inicio*.
+* **Compatibilidad con equipos Backpack** : los auriculares con Windows Mixed Reality (VR) se ejecutan en equipos Backpack sin necesidad de un emulador de pantalla una vez que se ha completado la instalación.
+* **Nuevas características de audio** : ahora puede reflejar el audio de una experiencia de Windows Mixed Reality en el conector de audio (o auriculares) del casco *y* en un dispositivo de audio conectado a su equipo (por ejemplo, altavoces externos). También hemos agregado un indicador visual para el nivel de volumen en la pantalla del casco.
 * **Otras mejoras**
-    * Actualizaciones del Portal de realidad mixtas ahora se entregan a través de la Microsoft Store, habilitar las actualizaciones más rápidas entre las versiones principales de Windows. Tenga en cuenta que esto solo se aplica a la aplicación de escritorio y la experiencia de auriculares de realidad mixta de Windows todavía se actualiza con el sistema operativo. 
-    * Cuando auriculares entrar en suspensión, las aplicaciones de Windows Mixed Reality se suspenden en lugar de terminado (hasta que se cierra el Portal de realidad mixta).
+    * Ahora, las actualizaciones del portal de realidad mixta se entregan a través del Microsoft Store, lo que permite actualizaciones más rápidas entre las principales versiones de Windows. Tenga en cuenta que esto solo se aplica a la aplicación de escritorio y la experiencia de auriculares de la realidad mixta de Windows todavía se actualiza con el sistema operativo. 
+    * Cuando los auriculares van a la suspensión, las aplicaciones de Windows Mixed Reality se suspenden en lugar de finalizar (hasta que se cierra el portal de realidad mixta).
     
 ### <a name="for-developers"></a>Para desarrolladores
 
-* **[Seguimiento del código QR](qr-code-tracking.md)**  -realizar una copia de código QR habilitar el seguimiento en la aplicación de realidad mixta, lo que permite Windows Mixed Reality (VR) inmersivos buscar los códigos QR y notificarlos a aplicaciones interesadas.
-* **Compatibilidad con DRM de hardware para aplicaciones inmersivas** : los desarrolladores pueden texturas de hardware protegido el búfer de reserva de solicitud ahora si es compatible con el hardware de la pantalla, lo que permite a las aplicaciones utilizar contenido protegido de hardware desde orígenes como PlayReady.
-* **[Integre la realidad mixta captura la interfaz de usuario en aplicaciones envolventes](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)**  : los desarrolladores pueden integrar la captura de realidad mixta en sus aplicaciones con el Windows integrada [captura la interfaz de usuario de la cámara](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) con unas pocas líneas de código.
+* **[Seguimiento de código QR](qr-code-tracking.md)** : habilita el seguimiento del código QR en la aplicación de realidad mixta, lo que permite a los auriculares con Windows Mixed Reality (VR) Buscar códigos QR y volver a enviarlos a las aplicaciones interesadas.
+* **Compatibilidad de DRM de hardware** con las aplicaciones envolventes: los desarrolladores ahora pueden solicitar texturas de búfer de reserva protegidas por hardware Si se admiten en el hardware de pantalla, lo que permite a las aplicaciones usar contenido protegido por hardware de orígenes como PlayReady.
+* **[Integración de la interfaz de usuario de captura de realidad mixta en aplicaciones](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)** envolventes: los desarrolladores pueden integrar la captura de realidad mixta en sus aplicaciones con la [interfaz de usuario de captura de cámara](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) integrada de Windows con solo unas pocas líneas de código.
 
-## <a name="new-features-for-hololens"></a>Nuevas características para HoloLens
+## <a name="new-features-for-hololens"></a>Nuevas características de HoloLens
 
-El 10 de octubre de 2018 de Windows Update está disponible públicamente para todos los clientes de HoloLens e incluye una serie de mejoras, como:
+La actualización 2018 de octubre de Windows 10 está disponible públicamente para todos los clientes de HoloLens e incluye una serie de mejoras, como:
 
-### <a name="for-everyone"></a>Para todos los usuarios
+### <a name="for-everyone"></a>Para todos
 
-* **Menú Acciones rápidas** -desde dentro de una aplicación de realidad mixta envolventes, puede presionar el botón de Windows para tener acceso a un nuevo menú de acciones rápidas, con un acceso sencillo a *Iniciar grabación de vídeo*, *tomar fotografías*, *Mixed Reality principal*, *cambiar el volumen*, y *Connect*.
-* **Captura de vídeo de inicios y paradas desde el inicio o el menú Acciones rápidas** -si inicia la captura de vídeo desde el menú Inicio o el menú Acciones rápidas, podrá detener la grabación desde el mismo lugar. (No olvide que siempre hacer esto con los comandos de voz demasiado.)
-* **Proyecto para un dispositivo habilitado para Miracast** -el contenido de HoloLens en un dispositivo de superficie cercano o el monitor o TV del proyecto si utiliza un adaptador o habilitado para Miracast para mostrar.
-* **Nuevas notificaciones** -ver y responder a las notificaciones en HoloLens, igual que haría en un equipo.  
-* **Las superposiciones útiles en aplicaciones de realidad mixta envolventes** -ahora verá superposiciones tales como el teclado, los cuadros de diálogo Selector de archivos, etc. cuando se usa envolventes mixto las aplicaciones de realidad.
-* **Indicador visual para el cambio del volumen** : al usar el volumen / botones en su HoloLens verá un indicador visual del nivel de volumen de los auriculares.
-* **Nuevos objetos visuales para el arranque del dispositivo** -se agregó un indicador de carga durante el proceso de arranque para proporcionar comentarios visuales que se está cargando el sistema.
-* **Uso compartido de mano** -The Windows cercanos compartir experiencia le permite compartir una captura con un dispositivo cercano de Windows.  
-* **Recurso compartido de Microsoft Edge** -Microsoft Edge incluye ahora un *Share* botón. 
+* **Menú acciones rápidas** : desde una aplicación de realidad mixta, puede presionar el botón Windows para acceder a un nuevo menú de acciones rápidas, con fácil acceso para *empezar a grabar vídeo*, *tomar fotografías*, *Inicio de realidad mixta*, *cambiar Volume*y *Connect*.
+* **Iniciar o detener la captura de vídeo desde el menú acciones de inicio o rápido** : Si inicia la captura de vídeo desde el menú Inicio o desde el menú acciones rápidas, podrá detener la grabación desde el mismo lugar. (No olvide que siempre puede hacer esto con comandos de voz).
+* **Proyecto a un dispositivo habilitado para Miracast** : permite proyectar el contenido de HoloLens en un dispositivo de Surface Surface o en un monitor o TV, si se usa una pantalla o adaptador habilitado para Miracast.
+* **Nuevas notificaciones** : ver y responder a notificaciones en HoloLens, al igual que en un equipo.  
+* **Superposiciones útiles en aplicaciones de realidad mixtas** envolventes: ahora verá superposiciones como el teclado, los cuadros de diálogo, el selector de archivos, etc. cuando se usan aplicaciones de realidad mixta.
+* **Indicador visual para cambio de volumen** : cuando se usan los botones subir/bajar volumen en la HoloLens, verá un indicador visual del nivel de volumen en los auriculares.
+* **Nuevos objetos visuales para el arranque de dispositivos** : se ha agregado un indicador de carga durante el proceso de arranque para proporcionar comentarios visuales que el sistema está cargando.
+* **Uso compartido cercano** : la experiencia de uso compartido cercano de Windows permite compartir una captura con un dispositivo Windows cercano.  
+* **Compartir desde Microsoft Edge** : ahora, Microsoft Edge incluye un botón *compartir* . 
 
 ### <a name="for-developers"></a>Para desarrolladores
 
-* **[Integre la realidad mixta captura la interfaz de usuario en aplicaciones envolventes](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)**  : los desarrolladores pueden integrar la captura de realidad mixta en sus aplicaciones con el Windows integrada [captura la interfaz de usuario de la cámara](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) con unas pocas líneas de código.
+* **[Integración de la interfaz de usuario de captura de realidad mixta en aplicaciones](mixed-reality-capture-for-developers.md#integrating-mrc-functionality-from-within-your-app)** envolventes: los desarrolladores pueden integrar la captura de realidad mixta en sus aplicaciones con la [interfaz de usuario de captura de cámara](https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui) integrada de Windows con solo unas pocas líneas de código.
 
-### <a name="for-commercial-customers"></a>Para los clientes comerciales
+### <a name="for-commercial-customers"></a>Para clientes comerciales
 
-* **Habilitar el aprovisionamiento posterior a la instalación** -ahora se puede aplicar un paquete de aprovisionamiento en cualquier momento mediante la configuración en tiempo de ejecución.
-* **Asignar acceso con grupos de Azure AD** : ahora puede usar grupos de Azure AD para la configuración de Windows asignada acceso para establecer la configuración de pantalla completa solo o con varias aplicaciones.
-* **ANCLAR a inicio de sesión en el conmutador de perfil desde la pantalla de inicio de sesión** -inicio de sesión de PIN ahora está disponible para "Otro usuario" en la pantalla de inicio de sesión. 
-* **Inicie sesión con el proveedor de credenciales de Web con contraseña** : ahora puede seleccionar el icono de globo para iniciar el inicio de sesión web con su contraseña. 
-* **Leer información de hardware del dispositivo a través de MDM** -los administradores de TI pueden ver y realizar un seguimiento de HoloLens por número de serie del dispositivo en su consola MDM.
-* **Establecer nombre de dispositivo HoloLens a través de MDM (rename)** -los administradores de TI pueden ver y cambiar el nombre de los dispositivos HoloLens en su consola MDM.
+* **Habilitar aprovisionamiento posterior** a la instalación: ahora puede aplicar un paquete de aprovisionamiento en tiempo de ejecución en cualquier momento mediante la configuración.
+* **Acceso asignado con grupos de Azure ad** : ahora puede usar grupos de Azure ad para la configuración de acceso asignado de Windows para configurar una configuración de pantalla completa de una o varias aplicaciones.
+* **Switch inicio de sesión en el perfil cambiar desde** el inicio de sesión del PIN de la pantalla de inicio de sesión ahora está disponible para "otro usuario" en la pantalla de inicio de sesión. 
+* **Leer información de hardware de dispositivos a través de MDM** : los administradores de TI pueden ver y realizar un seguimiento de HoloLens por número de serie de dispositivo en la consola de MDM.
+* **Establecer el nombre del dispositivo hololens a través de MDM (cambiar nombre)** : los administradores de TI pueden ver y cambiar el nombre de los dispositivos de hololens en la consola de MDM.
 
 ### <a name="for-international-customers"></a>Para clientes internacionales
 
-Ahora puede usar HoloLens con la interfaz de usuario localizada para chino simplificado o japonés, incluidos los comandos de voz, dictado, texto a voz (TTS) y teclado Pinyin localizado.
+Ahora puede usar HoloLens con la interfaz de usuario localizada para chino simplificado o japonés, incluidos los comandos localizados teclado, dictado, conversión de texto a voz (TTS) y voz de pinyin.
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-Hemos trabajado duro para ofrecer una excelente experiencia de Windows Mixed Reality, pero todavía estamos realizando un seguimiento algunos problemas conocidos. Si encuentra otros, [enviarnos comentarios](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback).
+Hemos trabajado mucho para ofrecer una excelente experiencia de realidad mixta de Windows, pero todavía estamos realizando un seguimiento de algunos problemas conocidos. Si encuentra otras personas, envíenos [sus comentarios](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback).
 
 ### <a name="hololens"></a>HoloLens
  
 #### <a name="after-update"></a>Después de la actualización
-Es posible que observe los siguientes problemas cuando usa el Windows 10 de octubre de 2018 actualización en su HoloLens:
-* **Las aplicaciones pueden terminar en el inicio de sesión de bucle cuando se inicia desde una notificación** : algunas aplicaciones que requieren inicio de sesión pueden acabar en un bucle sin fin inicio de sesión cuando se inicia desde una notificación. Por ejemplo, esto puede ocurrir después de instalar la aplicación de Portal de empresa de Microsoft desde la Microsoft Store e iniciarlo desde la notificación de instalación completa.
-* **Página de inicio de sesión de la aplicación se puede completar con una página en blanco** : en algunos casos, cuando se muestra un mensaje de inicio de sesión a través de la aplicación al finalizar la página de inicio de sesión no se cierra y en su lugar, muestra una página en blanco (negra). Puede cerrar la página en blanco o muévalo para descubrir la aplicación debajo. Por ejemplo, esto puede ocurrir cuando se inicia sesión durante la inscripción de MDM desde la aplicación configuración. 
+Es posible que observe los siguientes problemas al usar la actualización 2018 de octubre de Windows 10 en HoloLens:
+* Las **aplicaciones pueden acabar en un bucle de inicio de sesión cuando se inician desde una notificación** : algunas aplicaciones que requieren inicio de sesión pueden acabar en un bucle de inicio de sesión sin fin cuando se inician desde una notificación. Por ejemplo, esto puede ocurrir después de instalar la aplicación de Microsoft Portal de empresa desde la Microsoft Store y de iniciarla desde la notificación de instalación completada.
+* La **Página de inicio de sesión de la aplicación puede completarse con una página en blanco** : en algunos casos, cuando se muestra una solicitud de inicio de sesión en la aplicación, al finalizar la página de inicio de sesión no se cierra y muestra una página en blanco (negro). Puede cerrar la página en blanco o moverla para descubrir la aplicación debajo de. Por ejemplo, esto puede ocurrir durante el inicio de sesión durante la inscripción de MDM desde la aplicación de configuración. 
 
-## <a name="provide-feedback-and-report-issues"></a>Proporcionar comentarios e informe de problemas
+## <a name="provide-feedback-and-report-issues"></a>Proporcionar comentarios e informar de problemas
 
-Use la [aplicación Centro de opiniones en su equipo con Windows 10 o en HoloLens](give-us-feedback.md) para proporcionar comentarios e informe de problemas. Mediante el centro de comentarios asegura que toda la información de diagnóstico necesarios se incluyen para ayudar a nuestros ingenieros de depurar y resolver el problema rápidamente.
+Use la [aplicación de centro de comentarios en su equipo HoloLens o Windows 10](give-us-feedback.md) para proporcionar comentarios e informar de problemas. El uso del centro de comentarios garantiza que se incluye toda la información de diagnóstico necesaria para ayudar a nuestros ingenieros a depurar y resolver el problema rápidamente.
 
 >[!NOTE]
->No olvide acepte el mensaje que pregunta si desea que el centro de opiniones para tener acceso a la carpeta documentos (seleccione **Sí** cuando se le solicite).
+>Asegúrese de aceptar el mensaje que le pregunta si desea que el centro de comentarios tenga acceso a la carpeta de documentos (seleccione **sí** cuando se le solicite).
 
 ## <a name="prior-release-notes"></a>Notas de la versión anterior
 
-* [Notas de la versión - abril de 2018](release-notes-april-2018.md)
-* [Notas de la versión - octubre de 2017](release-notes-october-2017.md)
-* [Notas de la versión - agosto de 2016](release-notes-august-2016.md)
-* [Notas de la versión - mayo de 2016](release-notes-may-2016.md)
-* [Notas de la versión: marzo de 2016](release-notes-march-2016.md)
+* [Notas de la versión (abril de 2018)](release-notes-april-2018.md)
+* [Notas de la versión (octubre de 2017)](release-notes-october-2017.md)
+* [Notas de la versión (agosto de 2016)](release-notes-august-2016.md)
+* [Notas de la versión (mayo de 2016)](release-notes-may-2016.md)
+* [Notas de la versión (marzo de 2016)](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>Vea también
-* [Soporte técnico de auriculares envolventes (vínculo externo)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
-* [Soporte técnico de HoloLens (vínculo externo)](https://support.microsoft.com/products/hololens)
-* [Instalar las herramientas](install-the-tools.md)
-* [Envíenos sus comentarios](give-us-feedback.md)
+* [Compatibilidad con auriculares envolvente (vínculo externo)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+* [Compatibilidad con HoloLens (vínculo externo)](https://support.microsoft.com/products/hololens)
+* [Instalación de las herramientas](install-the-tools.md)
+* [Comentarios](give-us-feedback.md)
 

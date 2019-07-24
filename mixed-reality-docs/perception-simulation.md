@@ -1,11 +1,11 @@
 ---
 title: Simulación de percepción
-description: Una guía para utilizar la biblioteca de simulación de percepción para automatizar la entrada simulada para aplicaciones envolventes
+description: Guía para el uso de la biblioteca de simulación de percepción para automatizar la entrada simulada para aplicaciones envolventes
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
-keywords: HoloLens, simulación, las pruebas
+keywords: HoloLens, simulación, pruebas
 ms.openlocfilehash: 8152181bdbe8c83d2b706b34f1f2fb5d51f4c880
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -15,44 +15,44 @@ ms.locfileid: "67414532"
 ---
 # <a name="perception-simulation"></a>Simulación de percepción
 
-¿Desea crear una prueba automatizada de la aplicación? ¿Desea que las pruebas para ir más allá de las pruebas unitarias de nivel de componente y realmente ejercitar su aplicación-to-end? Simulación de percepción es lo está buscando. La biblioteca de simulación de percepción envía humana y mundo datos de entrada en la aplicación para que pueda automatizar las pruebas. Por ejemplo, puede simular la entrada de un humano busca una posición específica, repetible y, a continuación, realizar un gesto o con un controlador de movimiento.
+¿Desea crear una prueba automatizada para la aplicación? ¿Desea que las pruebas vayan más allá de las pruebas unitarias de nivel de componente y realmente ejecute su aplicación de un extremo a otro? La simulación de percepción es lo que está buscando. La biblioteca de simulación de percepción envía datos de entrada humanos y del mundo a la aplicación para que pueda automatizar las pruebas. Por ejemplo, puede simular la entrada de un usuario que busca una posición concreta y repetible y, a continuación, realizar un gesto o usar un controlador de movimiento.
 
-Simulación de percepción puede enviar entrada simulado así a un HoloLens físico, el emulador de HoloLens (gen 1), el HoloLens 2 emulador o en un equipo con el Portal de realidad mixta instalado. Percepción simulación omite los sensores en directo en un dispositivo de realidad mixta y envía simula la entrada para aplicaciones que se ejecutan en el dispositivo. Las aplicaciones reciben estos eventos de entrada a través de las mismas API, use siempre y no se puede indicar la diferencia entre la ejecución con sensores reales frente a ejecutar con la simulación de percepción. Simulación de percepción es la misma tecnología que usa los emuladores de HoloLens para enviar la entrada simulado a la máquina Virtual de HoloLens.
+La simulación de percepción puede enviar una entrada simulada como esta a una HoloLens física, el emulador de HoloLens (1ª generación), el emulador de HoloLens 2 o un equipo con el portal de realidad mixta instalado. La simulación de percepción omite los sensores en directo en un dispositivo de realidad mixta y envía una entrada simulada a las aplicaciones que se ejecutan en el dispositivo. Las aplicaciones reciben estos eventos de entrada a través de las mismas API que siempre usan y no indican la diferencia entre la ejecución con sensores reales y la ejecución con simulación de percepción. La simulación de percepción es la misma tecnología que usan los emuladores de HoloLens para enviar datos simulados a la máquina virtual HoloLens.
 
-Para empezar a usar la simulación en el código, empiece por crear un objeto IPerceptionSimulationManager. Desde ese objeto, puede emitir comandos para controlar las propiedades de un simulado "humano", incluida la posición principal, la posición de la mano y los gestos, y puede habilitar y manipular los controladores de movimiento.
+Para empezar a usar la simulación en el código, empiece por crear un objeto IPerceptionSimulationManager. Desde ese objeto, puede emitir comandos para controlar las propiedades de una "persona" simulada, incluida la posición del encabezado, la posición de la mano y los gestos, y puede habilitar y manipular los controladores de movimiento.
 
 ## <a name="setting-up-a-visual-studio-project-for-perception-simulation"></a>Configuración de un proyecto de Visual Studio para la simulación de percepción
-1. [Instalar el emulador de HoloLens](install-the-tools.md) en el equipo de desarrollo. El emulador incluye las bibliotecas que se va a usar para la simulación de percepción.
-2. Crear un nuevo Visual Studio C# proyecto de escritorio (un proyecto de consola funciona bien para empezar a trabajar).
-3. Agregue los siguientes archivos binarios al proyecto como referencias (proyecto -> Agregar -> referencia...). Puede encontrarlos en % ProgramFiles (x86) %\Microsoft XDE\\(versión), como **% ProgramFiles (x86) %\Microsoft XDE\\10.0.18362.0** para el emulador de HoloLens 2.  (Nota: aunque los archivos binarios forman parte del emulador de HoloLens 2, también funcionan en Windows Mixed Reality en el escritorio.) a. PerceptionSimulationManager.Interop.dll - Managed C# contenedor para la simulación de percepción.
-    b. PerceptionSimulationRest.dll - Library para configurar un canal de comunicación de socket web al HoloLens o emulador.
-    c. SimulationStream.Interop.dll - tipos compartidos para la simulación.
-4. Agregue la implementación PerceptionSimulationManager.dll binarios al proyecto una. En primer lugar agregarlo al proyecto como un archivo binario (proyecto -> Agregar -> elemento existente...). Guárdelo como un vínculo para que no copiarlo a la carpeta de origen del proyecto. ![Agregar al proyecto como un vínculo PerceptionSimulationManager.dll](images/saveaslink.png) b. A continuación, asegúrese de que lo de la copia en la carpeta de salida en la compilación. Se trata en la hoja de propiedades para el archivo binario. ![Marcar PerceptionSimulationManager.dll para copiar en el directorio de salida](images/copyalways.png)
-5. Establezca la plataforma de soluciones activas en x64.  (Use el Administrador de configuración para crear una entrada de la plataforma para x64 si aún no existe).
+1. [Instale el emulador de HoloLens](install-the-tools.md) en el equipo de desarrollo. El emulador incluye las bibliotecas que se usarán para la simulación de percepción.
+2. Cree un nuevo proyecto de C# Visual Studio Desktop (un proyecto de consola funciona bien para empezar a trabajar).
+3. Agregue los siguientes archivos binarios al proyecto como referencias (proyecto-> referencia del complemento de >...). Puede encontrarlos en% ProgramFiles (x86)% \ Microsoft XDE\\(versión), como **% ProgramFiles (x86)% \ Microsoft XDE\\10.0.18362.0** para el emulador de HoloLens 2.  (Nota: aunque los archivos binarios forman parte del emulador de HoloLens 2, también funcionan para Windows Mixed Reality en el escritorio). un. PerceptionSimulationManager. Interop. dll: contenedor C# administrado para la simulación de percepción.
+    b. PerceptionSimulationRest. dll-Library para configurar un canal de comunicación de socket web a HoloLens o emulador.
+    c. SimulationStream. Interop. dll: tipos compartidos para la simulación.
+4. Agregue el archivo binario de implementación PerceptionSimulationManager. dll al proyecto a. Agréguelo primero como un archivo binario al proyecto (proyecto-> Agregar > elemento existente...). Guárdelo como un vínculo para que no lo copie en la carpeta de origen del proyecto. ![Agregue PerceptionSimulationManager. dll al proyecto como un vínculo](images/saveaslink.png) b. Después, asegúrese de que se copia en la carpeta de salida en la compilación. Está en la hoja de propiedades del archivo binario. ![Marque PerceptionSimulationManager. dll para copiarlo en el directorio de salida](images/copyalways.png)
+5. Establezca la plataforma de soluciones activa en x64.  (Utilice la Configuration Manager para crear una entrada de plataforma para x64 si aún no existe ninguna).
 
-## <a name="creating-an-iperceptionsimulation-manager-object"></a>Creación de un objeto de administrador IPerceptionSimulation
+## <a name="creating-an-iperceptionsimulation-manager-object"></a>Creación de un objeto de administrador de IPerceptionSimulation
 
-Para controlar la simulación, deberá emitir las actualizaciones a los objetos recuperados de un objeto IPerceptionSimulationManager. El primer paso es obtener ese objeto y conectarlo a su emulador o dispositivo de destino. Puede obtener la dirección IP de su emulador, haga clic en el botón de Portal de dispositivos en el [barra de herramientas](using-the-hololens-emulator.md)
+Para controlar la simulación, emitirá actualizaciones de los objetos recuperados de un objeto IPerceptionSimulationManager. El primer paso es obtener ese objeto y conectarlo al dispositivo o emulador de destino. Para obtener la dirección IP del emulador, haga clic en el botón portal de dispositivos en la [barra de herramientas](using-the-hololens-emulator.md) .
 
-![Icono de dispositivo Portal abierta](images/emulator-deviceportal.png) **abrir Portal de dispositivo**: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.  Para Windows Mixed Reality, esto se puede recuperar en la aplicación de configuración en "Actualización y seguridad" y "para desarrolladores" en la "conectar mediante:" sección en "Habilitar Portal de dispositivo".  No olvide anotar la dirección IP y el puerto.
+![Abra el icono](images/emulator-deviceportal.png) del portal de dispositivos **abrir portal de dispositivos**: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.  En el caso de Windows Mixed Reality, puede recuperarse en la aplicación de configuración en "actualizar & seguridad" y luego en "para desarrolladores" en la sección "conectar usando:" en "habilitar el portal de dispositivos".  Asegúrese de anotar la dirección IP y el puerto.
 
-En primer lugar, llamaremos a RestSimulationStreamSink.Create para obtener un objeto RestSimulationStreamSink. Este es el dispositivo de destino o el emulador que se controlan a través de una conexión http. Se pasa a los comandos y controla el [Windows Device Portal](using-the-windows-device-portal.md) que se ejecuta en el dispositivo o emulador. Los cuatro parámetros que deberá crear un objeto son:
-* Uri de URI: dirección IP del dispositivo de destino (por ejemplo, "http://123.123.123.123"o"http://123.123.123.123:50080")
-* System.Net.NetworkCredential credenciales: nombre de usuario y contraseña para conectarse a la [Windows Device Portal](using-the-windows-device-portal.md) en el emulador o dispositivo de destino. Si se conecta con el emulador a través de su dirección local (p. ej., 168. *.* . *) en el mismo equipo, se aceptan las credenciales.
-* normal: bool es True para una prioridad normal, false de prioridad baja. Por lo general desea establecerlo en *true* para escenarios de prueba, lo que permite la prueba para tomar el control.  El emulador y la simulación de Windows Mixed Reality usan conexiones de baja prioridad.  Si la prueba también utiliza una conexión de prioridad baja, el máximo establecido recientemente se cerrará en el control.
-* Elemento System.Threading.CancellationToken token: Token para cancelar la operación asincrónica.
+En primer lugar, llame a RestSimulationStreamSink. Create para obtener un objeto RestSimulationStreamSink. Este es el dispositivo de destino o el emulador que controlará la conexión http. Los comandos se pasarán y controlarán en el [portal de dispositivos de Windows](using-the-windows-device-portal.md) que se ejecuta en el dispositivo o emulador. Los cuatro parámetros que necesitará para crear un objeto son:
+* URI del URI: dirección IP del dispositivo de destino (por ejemplo, http://123.123.123.123"" o http://123.123.123.123:50080"")
+* Credenciales de System .net. NetworkCredential: nombre de usuario/contraseña para conectarse al [portal de dispositivos de Windows](using-the-windows-device-portal.md) en el emulador o dispositivo de destino. Si se va a conectar al emulador a través de su dirección local (por ejemplo,*168.* . *) en el mismo equipo, se aceptarán las credenciales.
+* bool normal: true para la prioridad normal; false para la prioridad baja. Por lo general, desea establecer este valor en *true* para los escenarios de prueba, lo que permite que la prueba tome el control.  El emulador y la simulación de Windows Mixed Reality usan conexiones de baja prioridad.  Si la prueba también usa una conexión de prioridad baja, la conexión establecida más recientemente tendrá el control.
+* System. Threading. CancellationToken token-token para cancelar la operación asincrónica.
 
-En segundo lugar, cree el IPerceptionSimulationManager. Este es el objeto que se usa para controlar la simulación. Tenga en cuenta que esto también se debe realizar en un método asincrónico.
+En segundo lugar, creará el IPerceptionSimulationManager. Este es el objeto que se usa para controlar la simulación. Tenga en cuenta que esto también debe realizarse en un método asincrónico.
 
-## <a name="control-the-simulated-human"></a>Controlar a los humanos simulado
+## <a name="control-the-simulated-human"></a>Controlar el usuario simulado
 
-Un IPerceptionSimulationManager tiene una propiedad humana que devuelve un objeto ISimulatedHuman. Para controlar a los humanos simulado, realizar operaciones en este objeto. Por ejemplo:
+Un IPerceptionSimulationManager tiene una propiedad humana que devuelve un objeto ISimulatedHuman. Para controlar el humano simulado, realice operaciones en este objeto. Por ejemplo:
 
 ```
 manager.Human.Move(new Vector3(0.1f, 0.0f, 0.0f))
 ```
 
-## <a name="basic-sample-c-console-application"></a>Ejemplo básico C# aplicación de consola
+## <a name="basic-sample-c-console-application"></a>Aplicación de C# consola de ejemplo básica
 
 ```
 using System;
@@ -108,7 +108,7 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="extended-sample-c-console-application"></a>Extended ejemplo C# aplicación de consola
+## <a name="extended-sample-c-console-application"></a>Aplicación de C# consola de ejemplo extendida
 
 ```
 using System;
@@ -216,43 +216,43 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="note-on-6-dof-controllers"></a>Tenga en cuenta en los controladores de 6 GDL
+## <a name="note-on-6-dof-controllers"></a>Nota en los controladores de 6 DOF
 
-Antes de llamar a las propiedades en los métodos en un controlador de 6-GDL simulado, debe activar el controlador.  De no hacerlo, se producirá una excepción.  A partir de Windows 10 puede actualizar de 2019, se pueden instalar y activar estableciendo la propiedad Status del objeto ISimulatedSixDofController para SimulatedSixDofControllerStatus.Active controladores 6-GDL simulado.
-En el 10 de octubre de 2018 de Windows Update y versiones anteriores, debe instalar por separado un controlador de 6-GDL simulado en primer lugar mediante una llamada a la herramienta PerceptionSimulationDevice ubicada en la carpeta \Windows\System32.  El uso de esta herramienta es como sigue:
+Antes de llamar a cualquier propiedad de los métodos en un controlador simulado de 6 DOF, debe activar el controlador.  Si no lo hace, se producirá una excepción.  A partir de la actualización 2019 de Windows 10, se pueden instalar y activar controladores simulados de 6 DOF si se establece la propiedad Status en el objeto ISimulatedSixDofController en SimulatedSixDofControllerStatus. Active.
+En la actualización de Windows 10 de octubre de 2018 y versiones anteriores, debe instalar por separado un controlador simulado de 6 DOF en primer lugar mediante una llamada a la herramienta PerceptionSimulationDevice que se encuentra en la carpeta \Windows\System32.  El uso de esta herramienta es el siguiente:
 
 
 ```
     PerceptionSimulationDevice.exe <action> 6dof <instance>
 ```
 
-Por ejemplo
+Por ejemplo,
 
 ```
     PerceptionSimulationDevice.exe i 6dof 1
 ```
 
-Acciones admitidas son:
-* = install
+Las acciones admitidas son:
+* i = instalación
 * q = consulta
 * r = quitar
 
-Instancias admitidas son:
-* 1 = el controlador de 6-GDL izquierdo
-* 2 = el controlador derecho 6-GDL
+Las instancias admitidas son:
+* 1 = el controlador de 6 DOF izquierdo
+* 2 = el controlador de 6 DOF adecuado
 
-El código de salida del proceso indicará (valor de retorno de un cero) de éxito o error (un valor devuelto distinto de cero).  Cuando se usa la acción 'q' para consultar si se instala un controlador, el valor devuelto será cero (0) si ya no está instalado el controlador o uno (1) si está instalado el controlador.
+El código de salida del proceso indicará que la operación se ha realizado correctamente (un valor devuelto de cero) o un error (valor devuelto distinto de cero).  Al usar la acción ' q ' para consultar si está instalado un controlador, el valor devuelto será cero (0) si el controlador no está ya instalado o uno (1) si el controlador está instalado.
 
-Al quitar un controlador de Windows 10 de octubre de 2018. actualice o anteriores, establece su estado desactivado a través de la API en primer lugar, a continuación, llamar a la herramienta PerceptionSimulationDevice.
+Al quitar un controlador en la actualización 2018 de octubre de Windows 10 o versiones anteriores, establezca su estado en desactivado a través de la API primero y, a continuación, llame a la herramienta PerceptionSimulationDevice.
 
-Tenga en cuenta que esta herramienta se debe ejecutar como administrador.
+Tenga en cuenta que esta herramienta debe ejecutarse como administrador.
 
 
 
 
 ## <a name="api-reference"></a>Referencia de API
 
-### <a name="microsoftperceptionsimulationsimulateddevicetype"></a>Microsoft.PerceptionSimulation.SimulatedDeviceType
+### <a name="microsoftperceptionsimulationsimulateddevicetype"></a>Microsoft. PerceptionSimulation. SimulatedDeviceType
 
 Describe un tipo de dispositivo simulado
 
@@ -263,13 +263,13 @@ public enum SimulatedDeviceType
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedDeviceType.Reference**
+**Microsoft. PerceptionSimulation. SimulatedDeviceType. Reference**
 
-Un dispositivo de referencia ficticia, el valor predeterminado para PerceptionSimulationManager
+Un dispositivo de referencia ficticio, el valor predeterminado para PerceptionSimulationManager
 
-### <a name="microsoftperceptionsimulationheadtrackermode"></a>Microsoft.PerceptionSimulation.HeadTrackerMode
+### <a name="microsoftperceptionsimulationheadtrackermode"></a>Microsoft. PerceptionSimulation. HeadTrackerMode
 
-Describe el modo principal de la herramienta de seguimiento
+Describe un modo de seguimiento de encabezado
 
 ```
 public enum HeadTrackerMode
@@ -280,19 +280,19 @@ public enum HeadTrackerMode
 }
 ```
 
-**Microsoft.PerceptionSimulation.HeadTrackerMode.Default**
+**Microsoft. PerceptionSimulation. HeadTrackerMode. default**
 
-De forma predeterminada Head de seguimiento. Esto significa que el sistema puede seleccionar el encabezado mejor según las condiciones de tiempo de ejecución del modo de seguimiento.
+Seguimiento de encabezado predeterminado. Esto significa que el sistema puede seleccionar el mejor modo de seguimiento de los encabezados según las condiciones del tiempo de ejecución.
 
-**Microsoft.PerceptionSimulation.HeadTrackerMode.Orientation**
+**Microsoft. PerceptionSimulation. HeadTrackerMode. Orientation**
 
-Orientación solo Head seguimiento. Esto significa que la posición de seguimiento puede no ser confiable y alguna funcionalidad depende de la posición principal no esté disponible.
+Seguimiento de encabezado de solo orientación. Esto significa que es posible que la posición de la que se realiza el seguimiento no sea confiable y que algunas funciones que dependen de la posición principal no estén disponibles.
 
-**Microsoft.PerceptionSimulation.HeadTrackerMode.Position**
+**Microsoft. PerceptionSimulation. HeadTrackerMode. Position**
 
-Seguimiento de Head posicional. Esto significa que la posición principal sometidas a seguimiento y la orientación son confiables
+Seguimiento de los cabezales posicionales. Esto significa que la posición y la orientación del encabezado controlados son confiables
 
-### <a name="microsoftperceptionsimulationsimulatedgesture"></a>Microsoft.PerceptionSimulation.SimulatedGesture
+### <a name="microsoftperceptionsimulationsimulatedgesture"></a>Microsoft. PerceptionSimulation. SimulatedGesture
 
 Describe un gesto simulado
 
@@ -307,29 +307,29 @@ public enum SimulatedGesture
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.None**
+**Microsoft. PerceptionSimulation. SimulatedGesture. None**
 
-Un valor de centinela utilizado para no indicar ningún movimiento.
+Un valor de centinela que se usa para indicar que no hay gestos.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.FingerPressed**
+**Microsoft. PerceptionSimulation. SimulatedGesture. FingerPressed**
 
-Un dedo presionado gesto.
+Gesto de presionar un dedo.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.FingerReleased**
+**Microsoft. PerceptionSimulation. SimulatedGesture. FingerReleased**
 
-Un gesto del dedo publicado.
+Gesto de dedo liberado.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.Home**
+**Microsoft. PerceptionSimulation. SimulatedGesture. Home**
 
-El gesto de inicio o de sistema.
+El gesto Home/System.
 
-**Microsoft.PerceptionSimulation.SimulatedGesture.Max**
+**Microsoft. PerceptionSimulation. SimulatedGesture. Max**
 
 El gesto máximo válido.
 
-### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerstatus"></a>Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus
+### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerstatus"></a>Microsoft. PerceptionSimulation. SimulatedSixDofControllerStatus
 
-Los Estados posibles de un controlador de 6-GDL simulado.
+Los posibles estados de un controlador simulado 6-DOF.
 
 ```
 public enum SimulatedSixDofControllerStatus
@@ -340,21 +340,21 @@ public enum SimulatedSixDofControllerStatus
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus.Off**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerStatus. OFF**
 
-El controlador de 6 GDL está desactivado.
+El controlador 6-DOF está desactivado.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus.Active**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerStatus. Active**
 
-El controlador de 6 GDL está encendido y realiza el seguimiento.
+El controlador 6-DOF está activado y controlado.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerStatus.TrackingLost**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerStatus. TrackingLost**
 
-El controlador de 6 GDL está activado pero no se puede realizar el seguimiento.
+El controlador 6-DOF está activado, pero no se puede realizar su seguimiento.
 
-### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerbutton"></a>Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton
+### <a name="microsoftperceptionsimulationsimulatedsixdofcontrollerbutton"></a>Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton
 
-Los botones admitidos en un controlador de 6-GDL simulado.
+Los botones admitidos en un controlador simulado 6-DOF.
 
 ```
 public enum SimulatedSixDofControllerButton
@@ -371,46 +371,46 @@ public enum SimulatedSixDofControllerButton
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.None**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. None**
 
-Un valor de centinela utilizado para no indicar ningún botón.
+Un valor de centinela que se usa para indicar que no hay botones.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Home**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. Home**
 
-Se presiona el botón de inicio.
+Se presiona el botón Inicio.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Menu**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. Menu**
 
 Se presiona el botón de menú.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Grip**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. control**
 
 Se presiona el botón de control.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.TouchpadPress**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. TouchpadPress**
 
-El panel táctil está presionado.
+El TouchPad está presionado.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Select**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. Select**
 
-Se presiona el botón de selección.
+Se presiona el botón seleccionar.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.TouchpadTouch**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. TouchpadTouch**
 
-Se toca la pantalla táctil.
+El TouchPad se toca.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Thumbstick**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. Stick**
 
-Se presiona la tecla de navegación.
+Se presiona el stick.
 
-**Microsoft.PerceptionSimulation.SimulatedSixDofControllerButton.Max**
+**Microsoft. PerceptionSimulation. SimulatedSixDofControllerButton. Max**
 
-El número máximo de botones válido.
+El botón válido máximo.
 
 
-### <a name="microsoftperceptionsimulationsimulatedeyescalibrationstate"></a>Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState
+### <a name="microsoftperceptionsimulationsimulatedeyescalibrationstate"></a>Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState
 
-El estado de calibración de los ojos simulados
+El estado de calibrado de los ojos simulados
 
 ```
 public enum SimulatedGesture
@@ -422,25 +422,25 @@ public enum SimulatedGesture
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.Unavailable**
+**Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. no disponible**
 
-No está disponible la calibración de ojos.
+La calibración de ojos no está disponible.
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.Ready**
+**Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. Ready**
 
-Han sido calibrados los ojos.  Este es el valor predeterminado.
+Los ojos se han calibrado.  Este es el valor predeterminado.
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.Configuring**
+**Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. configurando**
 
-Se está calibran los ojos.
+Los ojos se están calibrando.
 
-**Microsoft.PerceptionSimulation.SimulatedEyesCalibrationState.UserCalibrationNeeded**
+**Microsoft. PerceptionSimulation. SimulatedEyesCalibrationState. UserCalibrationNeeded**
 
-Los ojos necesitan calibrarse.
+Los ojos deben calibrarse.
 
-### <a name="microsoftperceptionsimulationsimulatedhandjointtrackingaccuracy"></a>Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy
+### <a name="microsoftperceptionsimulationsimulatedhandjointtrackingaccuracy"></a>Microsoft. PerceptionSimulation. SimulatedHandJointTrackingAccuracy
 
-La precisión de seguimiento de una unión de la mano.
+La precisión del seguimiento de una Unión de la mano.
 
 ```
 public enum SimulatedHandJointTrackingAccuracy
@@ -451,21 +451,21 @@ public enum SimulatedHandJointTrackingAccuracy
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy.Unavailable**
+**Microsoft. PerceptionSimulation. SimulatedHandJointTrackingAccuracy. no disponible**
 
-No se realiza el seguimiento de la unión.
+No se realiza el seguimiento de la Unión.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy.Approximate**
+**Microsoft. PerceptionSimulation. SimulatedHandJointTrackingAccuracy. aproximado**
 
-La posición conjunta se infiere.
+Se deduce la posición de la Unión.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointTrackingAccuracy.Visible**
+**Microsoft. PerceptionSimulation. SimulatedHandJointTrackingAccuracy. visible**
 
-La junta totalmente se realiza un seguimiento.
+Se realiza un seguimiento completo de la Unión.
 
-### <a name="microsoftperceptionsimulationsimulatedhandpose"></a>Microsoft.PerceptionSimulation.SimulatedHandPose
+### <a name="microsoftperceptionsimulationsimulatedhandpose"></a>Microsoft. PerceptionSimulation. SimulatedHandPose
 
-La precisión de seguimiento de una unión de la mano.
+La precisión del seguimiento de una Unión de la mano.
 
 ```
 public enum SimulatedHandPose
@@ -478,28 +478,28 @@ public enum SimulatedHandPose
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Closed**
+**Microsoft. PerceptionSimulation. SimulatedHandPose. Closed**
 
-Las uniones de la mano dedo se configuren para reflejar una postura cerrado.
+Las uniones de dedos de la mano se configuran para reflejar una pose cerrada.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Open**
+**Microsoft. PerceptionSimulation. SimulatedHandPose. Open**
 
-Las uniones de la mano dedo se configuren para reflejar una postura abierta.
+Las uniones de dedos de la mano se configuran para reflejar una pose abierta.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Point**
+**Microsoft. PerceptionSimulation. SimulatedHandPose. Point**
 
-Las uniones de la mano dedo se configuren para reflejar una postura señalador.
+Las uniones de dedos de la mano se configuran para reflejar una postura señaladora.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Pinch**
+**Microsoft. PerceptionSimulation. SimulatedHandPose. Pinch**
 
-Las uniones de la mano dedo se configuren para reflejar una postura alejamiento.
+Las uniones de dedos de la mano se configuran para reflejar una pose de pinch.
 
-**Microsoft.PerceptionSimulation.SimulatedHandPose.Max**
+**Microsoft. PerceptionSimulation. SimulatedHandPose. Max**
 
-El máximo valor válido para SimulatedHandPose.
+Valor máximo válido para SimulatedHandPose.
 
 
-### <a name="microsoftperceptionsimulationplaybackstate"></a>Microsoft.PerceptionSimulation.PlaybackState
+### <a name="microsoftperceptionsimulationplaybackstate"></a>Microsoft. PerceptionSimulation. PlaybackState
 
 Describe el estado de una reproducción.
 
@@ -513,25 +513,25 @@ public enum PlaybackState
 }
 ```
 
-**Microsoft.PerceptionSimulation.PlaybackState.Stopped**
+**Microsoft. PerceptionSimulation. PlaybackState. Stopped**
 
-La grabación está actualmente detenido y listo para su reproducción.
+La grabación está actualmente detenida y lista para su reproducción.
 
-**Microsoft.PerceptionSimulation.PlaybackState.Playing**
+**Microsoft. PerceptionSimulation. PlaybackState. Playing**
 
-La grabación se está reproduciendo.
+La grabación se está reproduciendo actualmente.
 
-**Microsoft.PerceptionSimulation.PlaybackState.Paused**
+**Microsoft. PerceptionSimulation. PlaybackState. pausado**
 
-Actualmente está en pausa la grabación.
+La grabación está en pausa actualmente.
 
-**Microsoft.PerceptionSimulation.PlaybackState.End**
+**Microsoft. PerceptionSimulation. PlaybackState. end**
 
-La grabación ha llegado al final.
+La grabación ha alcanzado el final.
 
-### <a name="microsoftperceptionsimulationvector3"></a>Microsoft.PerceptionSimulation.Vector3
+### <a name="microsoftperceptionsimulationvector3"></a>Microsoft. PerceptionSimulation. Vector3
 
-Describe un vector de 3 componentes, que se puede describir un punto o un vector en el espacio 3D.
+Describe un vector de 3 componentes, que puede describir un punto o un vector en el espacio 3D.
 
 ```
 public struct Vector3
@@ -543,28 +543,28 @@ public struct Vector3
 }
 ```
 
-**Microsoft.PerceptionSimulation.Vector3.X**
+**Microsoft. PerceptionSimulation. Vector3. X**
 
 Componente X del vector.
 
-**Microsoft.PerceptionSimulation.Vector3.Y**
+**Microsoft. PerceptionSimulation. Vector3. Y**
 
-El componente Y del vector.
+Componente Y del vector.
 
-**Microsoft.PerceptionSimulation.Vector3.Z**
+**Microsoft. PerceptionSimulation. Vector3. Z**
 
 Componente Z del vector.
 
-**Microsoft.PerceptionSimulation.Vector3.#ctor(System.Single,System.Single,System.Single)**
+**Microsoft. PerceptionSimulation. Vector3. #ctor (System. single, System. single, System. Single)**
 
-Construir un nuevo Vector3.
+Construya un nuevo Vector3.
 
 Parámetros
 * x: el componente x del vector.
-* y - el componente y del vector.
-* z - el componente z del vector.
+* y: el componente y del vector.
+* z: el componente z del vector.
 
-### <a name="microsoftperceptionsimulationrotation3"></a>Microsoft.PerceptionSimulation.Rotation3
+### <a name="microsoftperceptionsimulationrotation3"></a>Microsoft. PerceptionSimulation. Rotation3
 
 Describe un giro de 3 componentes.
 
@@ -578,30 +578,30 @@ public struct Rotation3
 }
 ```
 
-**Microsoft.PerceptionSimulation.Rotation3.Pitch**
+**Microsoft. PerceptionSimulation. Rotation3. Brea**
 
-El componente de punto de rotación, abajo alrededor del eje X.
+El componente de tono de la rotación, en torno al eje X.
 
-**Microsoft.PerceptionSimulation.Rotation3.Yaw**
+**Microsoft. PerceptionSimulation. Rotation3. guiñada**
 
-El componente de rotación de la rotación, justo en el eje Y.
+Componente de guiñada de la rotación, justo alrededor del eje Y.
 
-**Microsoft.PerceptionSimulation.Rotation3.Roll**
+**Microsoft. PerceptionSimulation. Rotation3. roll**
 
-El componente de rollo de rotación, justo en el eje Z.
+Componente de rollo de la rotación, justo alrededor del eje Z.
 
-**Microsoft.PerceptionSimulation.Rotation3.#ctor(System.Single,System.Single,System.Single)**
+**Microsoft. PerceptionSimulation. Rotation3. #ctor (System. single, System. single, System. Single)**
 
-Construir un nuevo Rotation3.
+Construya un nuevo Rotation3.
 
 Parámetros
-* pitch: el componente de tono de la rotación.
-* guiñada: el componente de rotación de la rotación.
-* Resumen: el componente de lanzamiento de la rotación.
+* paso: el componente de paso de la rotación.
+* guiñada: el componente de guiñada de la rotación.
+* rollo: componente de rollo de la rotación.
 
-### <a name="microsoftperceptionsimulationsimulatedhandjointconfiguration"></a>Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration
+### <a name="microsoftperceptionsimulationsimulatedhandjointconfiguration"></a>Microsoft. PerceptionSimulation. SimulatedHandJointConfiguration
 
-Describe la configuración de una unión en una mano simulada.
+Describe la configuración de una Unión en una mano simulada.
 
 ```
 public struct SimulatedHandJointConfiguration
@@ -612,22 +612,22 @@ public struct SimulatedHandJointConfiguration
 }
 ```
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.Position**
+**Microsoft. PerceptionSimulation. SimulatedHandJointConfiguration. Position**
 
-La posición de la unión.
+La posición de la Unión.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.Rotation**
+**Microsoft. PerceptionSimulation. SimulatedHandJointConfiguration. Rotation**
 
-La rotación de la unión.
+Rotación de la Unión.
 
-**Microsoft.PerceptionSimulation.SimulatedHandJointConfiguration.TrackingAccuracy**
+**Microsoft. PerceptionSimulation. SimulatedHandJointConfiguration. TrackingAccuracy**
 
-La precisión de seguimiento de la unión.
+La precisión del seguimiento de la Unión.
 
 
-### <a name="microsoftperceptionsimulationfrustum"></a>Microsoft.PerceptionSimulation.Frustum
+### <a name="microsoftperceptionsimulationfrustum"></a>Microsoft. PerceptionSimulation. frustum
 
-Describe un frustum de visualización, como suele ser utilizado por una cámara.
+Describe un frustum de vista, tal y como lo usa normalmente una cámara.
 
 ```
 public struct Frustum
@@ -639,25 +639,25 @@ public struct Frustum
 }
 ```
 
-**Microsoft.PerceptionSimulation.Frustum.Near**
+**Microsoft. PerceptionSimulation. frustum. Near**
 
-La distancia mínima que se encuentra en el frustum.
+Distancia mínima contenida en el frustum.
 
-**Microsoft.PerceptionSimulation.Frustum.Far**
+**Microsoft. PerceptionSimulation. frustum. Far**
 
-La distancia máxima a la que se encuentra en el frustum.
+La distancia máxima contenida en el frustum.
 
-**Microsoft.PerceptionSimulation.Frustum.FieldOfView**
+**Microsoft. PerceptionSimulation. frustum. FieldOfView**
 
-Campo de visión horizontal de frustum, en radianes (menos de PI).
+Campo horizontal de la vista del frustum, en radianes (menor que PI).
 
-**Microsoft.PerceptionSimulation.Frustum.AspectRatio**
+**Microsoft. PerceptionSimulation. frustum. AspectRatio**
 
-La proporción de campo de visión horizontal a vertical campo de visión.
+La proporción del campo horizontal de la vista en el campo vertical de la vista.
 
-### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>Microsoft.PerceptionSimulation.IPerceptionSimulationManager
+### <a name="microsoftperceptionsimulationiperceptionsimulationmanager"></a>Microsoft. PerceptionSimulation. IPerceptionSimulationManager
 
-Raíz para generar los paquetes utilizados para controlar un dispositivo.
+Raíz para generar los paquetes usados para controlar un dispositivo.
 
 ```
 public interface IPerceptionSimulationManager
@@ -668,19 +668,19 @@ public interface IPerceptionSimulationManager
 }
 ```
 
-**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Device**
+**Microsoft. PerceptionSimulation. IPerceptionSimulationManager. Device**
 
-Recuperar el objeto de dispositivo simulado que interpreta los humanos simulado y el mundo simulado.
+Recupere el objeto de dispositivo simulado que interpreta el usuario simulado y el mundo simulado.
 
-**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Human**
+**Microsoft. PerceptionSimulation. IPerceptionSimulationManager. Human**
 
-Recuperar el objeto que controla a los humanos simulado.
+Recupera el objeto que controla el usuario simulado.
 
-**Microsoft.PerceptionSimulation.IPerceptionSimulationManager.Reset**
+**Microsoft. PerceptionSimulation. IPerceptionSimulationManager. Reset**
 
-La simulación se restablece a su estado predeterminado.
+Restablece el estado predeterminado de la simulación.
 
-### <a name="microsoftperceptionsimulationisimulateddevice"></a>Microsoft.PerceptionSimulation.ISimulatedDevice
+### <a name="microsoftperceptionsimulationisimulateddevice"></a>Microsoft. PerceptionSimulation. ISimulatedDevice
 
 Interfaz que describe el dispositivo que interpreta el mundo simulado y el usuario simulado
 
@@ -693,24 +693,24 @@ public interface ISimulatedDevice
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedDevice.HeadTracker**
+**Microsoft. PerceptionSimulation. ISimulatedDevice. HeadTracker**
 
-Recuperar el Rastreador de Head del dispositivo simulado.
+Recupere el rastreador principal del dispositivo simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedDevice.HandTracker**
+**Microsoft. PerceptionSimulation. ISimulatedDevice. HandTracker**
 
-Recuperar el Rastreador de mano desde el dispositivo simulado.
+Recupere el seguimiento de manos del dispositivo simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedDevice.SetSimulatedDeviceType(Microsoft.PerceptionSimulation.SimulatedDeviceType)**
+**Microsoft. PerceptionSimulation. ISimulatedDevice. SetSimulatedDeviceType (Microsoft. PerceptionSimulation. SimulatedDeviceType)**
 
-Establecer las propiedades del dispositivo simulado para que coincida con el tipo de dispositivo proporcionado.
+Establezca las propiedades del dispositivo simulado para que coincida con el tipo de dispositivo proporcionado.
 
 Parámetros
 * tipo: el nuevo tipo de dispositivo simulado
 
-### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>Microsoft.PerceptionSimulation.ISimulatedHeadTracker
+### <a name="microsoftperceptionsimulationisimulatedheadtracker"></a>Microsoft. PerceptionSimulation. ISimulatedHeadTracker
 
-Interfaz que describe la parte del dispositivo simulado que realiza el seguimiento de la cabeza de los humanos simulado.
+Interfaz que describe la parte del dispositivo simulado que realiza el seguimiento del encabezado del usuario simulado.
 
 ```
 public interface ISimulatedHeadTracker
@@ -719,13 +719,13 @@ public interface ISimulatedHeadTracker
 };
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHeadTracker.HeadTrackerMode**
+**Microsoft. PerceptionSimulation. ISimulatedHeadTracker. HeadTrackerMode**
 
-Recupera y establece el modo de seguimiento principal actual.
+Recupera y establece el modo de seguimiento de encabezado actual.
 
-### <a name="microsoftperceptionsimulationisimulatedhandtracker"></a>Microsoft.PerceptionSimulation.ISimulatedHandTracker
+### <a name="microsoftperceptionsimulationisimulatedhandtracker"></a>Microsoft. PerceptionSimulation. ISimulatedHandTracker
 
-Interfaz que describe la parte del dispositivo simulado que realiza el seguimiento de las manos de los humanos simulado
+Interfaz que describe la parte del dispositivo simulado que hace un seguimiento de las manos del usuario simulado
 
 ```
 public interface ISimulatedHandTracker
@@ -738,29 +738,29 @@ public interface ISimulatedHandTracker
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.WorldPosition**
+**Microsoft. PerceptionSimulation. ISimulatedHandTracker. WorldPosition**
 
-Recuperar la posición del nodo con respecto a la del mundo, en metros.
+Recupere la posición del nodo con relación al mundo, en metros.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Position**
+**Microsoft. PerceptionSimulation. ISimulatedHandTracker. Position**
 
-Recuperar y establecer la posición de la herramienta de seguimiento de la mano simulado, en relación con el centro de la cabeza.
+Recupera y establece la posición del seguimiento de mano simulado, en relación con el centro del encabezado.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Pitch**
+**Microsoft. PerceptionSimulation. ISimulatedHandTracker. Brea**
 
-Recuperar y establecer el tono hacia abajo de la herramienta de seguimiento de la mano simulado.
+Recupere y establezca el tono hacia abajo del seguimiento de mano simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.FrustumIgnored**
+**Microsoft. PerceptionSimulation. ISimulatedHandTracker. FrustumIgnored**
 
-Recuperar y establecer si se omite el frustum del Rastreador de mano simulado. Cuando se omite, dos manos siempre están visibles. Cuando no pasa por alto (predeterminado) manos solamente están visibles cuando estén dentro del frustum del Rastreador de mano.
+Recupera y establece si se omite el frustum del seguimiento de mano simulado. Cuando se omite, ambas manecillas siempre están visibles. Cuando no se omite (el valor predeterminado), las manecillas solo están visibles cuando se encuentran dentro del frustum del seguimiento de la mano.
 
-**Microsoft.PerceptionSimulation.ISimulatedHandTracker.Frustum**
+**Microsoft. PerceptionSimulation. ISimulatedHandTracker. frustum**
 
-Recuperar y establecer las propiedades de frustum utilizadas para determinar si son visibles para el seguimiento de la mano simulado manos.
+Recupere y establezca las propiedades de frustum utilizadas para determinar si las manecillas están visibles para el seguimiento de mano simulado.
 
-### <a name="microsoftperceptionsimulationisimulatedhuman"></a>Microsoft.PerceptionSimulation.ISimulatedHuman
+### <a name="microsoftperceptionsimulationisimulatedhuman"></a>Microsoft. PerceptionSimulation. ISimulatedHuman
 
-Interfaz de nivel superior para controlar a los humanos simulado.
+Interfaz de nivel superior para controlar el usuario simulado.
 
 ```
 public interface ISimulatedHuman 
@@ -776,47 +776,47 @@ public interface ISimulatedHuman
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.WorldPosition**
+**Microsoft. PerceptionSimulation. ISimulatedHuman. WorldPosition**
 
-Recuperar y establecer la posición del nodo con respecto a la del mundo, en metros. La posición corresponde a un punto en el centro de metros del humanos.
+Recuperar y establecer la posición del nodo con relación al mundo, en metros. La posición corresponde a un punto en el centro de los pies del hombre.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Direction**
+**Microsoft. PerceptionSimulation. ISimulatedHuman. Direction**
 
-Recuperar y establecer las caras humanas simuladas de la dirección en el mundo. 0 radianes se enfrenta al eje Z negativo. Rotación radianes positivos sobre el eje Y.
+Recupere y establezca la dirección de las caras humanas simuladas del mundo. 0 radianes se orientan hacia abajo en el eje Z negativo. Los radianes positivos giran en el sentido de las agujas del reloj sobre el eje Y.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Height**
+**Microsoft. PerceptionSimulation. ISimulatedHuman. Height**
 
-Recuperar y establecer el alto de los humanos simulado, en metros.
+Recupere y establezca el alto del hombre simulado, en metros.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.LeftHand**
+**Microsoft. PerceptionSimulation. ISimulatedHuman. LeftHand**
 
-Recuperar la parte izquierda de los humanos simulado.
+Recupere el lado izquierdo del hombre simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.RightHand**
+**Microsoft. PerceptionSimulation. ISimulatedHuman. derecho**
 
-Recuperar la parte derecha de los humanos simulado.
+Recupere la mano derecha del hombre simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Head**
+**Microsoft. PerceptionSimulation. ISimulatedHuman. Head**
 
-Recuperar el encabezado de los humanos simulado.
+Recupera el encabezado del hombre simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Move(Microsoft.PerceptionSimulation.Vector3)**
+**Microsoft. PerceptionSimulation. ISimulatedHuman. Move (Microsoft. PerceptionSimulation. Vector3)**
 
-Mueva a los humanos simulado respecto a su posición actual, en metros.
-
-Parámetros
-* traducción: la traducción que se mueven en relación con la posición actual.
-
-**Microsoft.PerceptionSimulation.ISimulatedHuman.Rotate(System.Single)**
-
-Girar a los humanos simulado con respecto a su dirección actual, las agujas del reloj sobre el eje Y
+Mover el humano simulado con respecto a su posición actual, en metros.
 
 Parámetros
-* radianes - la cantidad que se va a girar alrededor del eje Y.
+* Translation: la traducción que se va a mover, relativa a la posición actual.
 
-### <a name="microsoftperceptionsimulationisimulatedhuman2"></a>Microsoft.PerceptionSimulation.ISimulatedHuman2
+**Microsoft. PerceptionSimulation. ISimulatedHuman. Rotate (System. Single)**
 
-Propiedades adicionales están disponibles al convertir el ISimulatedHuman a ISimulatedHuman2
+Girar el hombre simulado con respecto a su dirección actual, en el sentido de las agujas del reloj sobre el eje Y
+
+Parámetros
+* radianes: la cantidad que se va a girar alrededor del eje Y.
+
+### <a name="microsoftperceptionsimulationisimulatedhuman2"></a>Microsoft. PerceptionSimulation. ISimulatedHuman2
+
+Las propiedades adicionales están disponibles al convertir ISimulatedHuman en ISimulatedHuman2
 
 ```
 public interface ISimulatedHuman2
@@ -827,18 +827,18 @@ public interface ISimulatedHuman2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman2.LeftController**
+**Microsoft. PerceptionSimulation. ISimulatedHuman2. LeftController**
 
-Recuperar el controlador de 6-GDL izquierdo.
+Recupere el controlador de 6-DOF izquierdo.
 
-**Microsoft.PerceptionSimulation.ISimulatedHuman2.RightController**
+**Microsoft. PerceptionSimulation. ISimulatedHuman2. RightController**
 
-Recuperar el controlador derecho 6-GDL.
+Recupere el controlador de 6-DOF adecuado.
 
 
-### <a name="microsoftperceptionsimulationisimulatedhand"></a>Microsoft.PerceptionSimulation.ISimulatedHand
+### <a name="microsoftperceptionsimulationisimulatedhand"></a>Microsoft. PerceptionSimulation. ISimulatedHand
 
-Interfaz que describe una mano de los humanos simulado
+Interfaz que describe una mano del usuario simulado
 
 ```
 public interface ISimulatedHand
@@ -853,43 +853,43 @@ public interface ISimulatedHand
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.WorldPosition**
+**Microsoft. PerceptionSimulation. ISimulatedHand. WorldPosition**
 
-Recuperar la posición del nodo con respecto a la del mundo, en metros.
+Recupere la posición del nodo con relación al mundo, en metros.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Position**
+**Microsoft. PerceptionSimulation. ISimulatedHand. Position**
 
-Recuperar y establecer la posición de la mano simulada con respecto a los humanos, en metros.
+Recupera y establece la posición de la mano simulada en relación con el hombre, en metros.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Activated**
+**Microsoft. PerceptionSimulation. ISimulatedHand. activado**
 
-Recuperar y establecer si está activada actualmente la mano.
+Recupera y establece si la mano está activada actualmente.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Visible**
+**Microsoft. PerceptionSimulation. ISimulatedHand. visible**
 
-Recuperar datos si la mano está actualmente visible para el SimulatedDevice (es decir, si está en una posición para ser detectado por el HandTracker).
+Recupera si la mano es visible actualmente para SimulatedDevice (es decir, si se encuentra en una posición que HandTracker).
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.EnsureVisible**
+**Microsoft. PerceptionSimulation. ISimulatedHand. EnsureVisible**
 
-Mover la mano de manera que es visible para el SimulatedDevice.
+Mueva la mano para que sea visible para el SimulatedDevice.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand.Move(Microsoft.PerceptionSimulation.Vector3)**
+**Microsoft. PerceptionSimulation. ISimulatedHand. Move (Microsoft. PerceptionSimulation. Vector3)**
 
-Mover la posición de la mano simulada respecto a su posición actual, en metros.
-
-Parámetros
-* traducción: la cantidad de traslación de la mano simulada.
-
-**Microsoft.PerceptionSimulation.ISimulatedHand.PerformGesture(Microsoft.PerceptionSimulation.SimulatedGesture)**
-
-Realizar un gesto de la mano simulada.  Solo se detectará el sistema si está habilitada la mano.
+Mover la posición de la mano simulada en relación con su posición actual, en metros.
 
 Parámetros
-* gesto - gesto que se realice.
+* Translation: la cantidad que se va a trasladar a la mano simulada.
 
-### <a name="microsoftperceptionsimulationisimulatedhand2"></a>Microsoft.PerceptionSimulation.ISimulatedHand2
+**Microsoft. PerceptionSimulation. ISimulatedHand. PerformGesture (Microsoft. PerceptionSimulation. SimulatedGesture)**
 
-Propiedades adicionales están disponibles mediante la conversión de un ISimulatedHand a ISimulatedHand2.
+Realizar un gesto mediante la mano simulada.  Solo lo detectará el sistema si está habilitada la mano.
+
+Parámetros
+* gesto: el gesto que se va a realizar.
+
+### <a name="microsoftperceptionsimulationisimulatedhand2"></a>Microsoft. PerceptionSimulation. ISimulatedHand2
+
+Las propiedades adicionales están disponibles mediante la conversión de un ISimulatedHand a ISimulatedHand2.
 ```
 public interface ISimulatedHand2
 {
@@ -898,13 +898,13 @@ public interface ISimulatedHand2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHand2.Orientation**
+**Microsoft. PerceptionSimulation. ISimulatedHand2. Orientation**
 
-Recuperar o establecer el giro de la mano simulado.  Radianes giran a la derecha al buscar en el eje positivo.
+Recupera o establece la rotación de la mano simulada.  Los radianes positivos giran en el sentido de las agujas del reloj al mirar por el eje.
 
-### <a name="microsoftperceptionsimulationisimulatedhand3"></a>Microsoft.PerceptionSimulation.ISimulatedHand3
+### <a name="microsoftperceptionsimulationisimulatedhand3"></a>Microsoft. PerceptionSimulation. ISimulatedHand3
 
-Propiedades adicionales están disponibles mediante la conversión de un ISimulatedHand a ISimulatedHand3
+Hay propiedades adicionales disponibles mediante la conversión de un ISimulatedHand a ISimulatedHand3
 ```
 public interface ISimulatedHand3
 {
@@ -915,22 +915,22 @@ public interface ISimulatedHand3
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHand3.GetJointConfiguration**
+**Microsoft. PerceptionSimulation. ISimulatedHand3. GetJointConfiguration**
 
-Obtenga la configuración común para la unión especificada.
+Obtiene la configuración conjunta de la Unión especificada.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand3.SetJointConfiguration**
+**Microsoft. PerceptionSimulation. ISimulatedHand3. SetJointConfiguration**
 
-Establezca la configuración común para la unión especificada.
+Establezca la configuración conjunta de la Unión especificada.
 
-**Microsoft.PerceptionSimulation.ISimulatedHand3.SetHandPose**
+**Microsoft. PerceptionSimulation. ISimulatedHand3. SetHandPose**
 
-Establezca la mano para una postura conocido con una marca opcional que se va a animar.  Nota: la animación no origine articulaciones inmediatamente que refleja las configuraciones finales conjuntas.
+Establezca la mano en una pose conocida con una marca opcional que se va a animar.  Nota: la animación no provocará que las uniones reflejen inmediatamente sus configuraciones de conjuntos finales.
 
 
-### <a name="microsoftperceptionsimulationisimulatedhead"></a>Microsoft.PerceptionSimulation.ISimulatedHead
+### <a name="microsoftperceptionsimulationisimulatedhead"></a>Microsoft. PerceptionSimulation. ISimulatedHead
 
-Interfaz que describe el encabezado de los humanos simulado.
+Interfaz que describe el encabezado del usuario simulado.
 
 ```
 public interface ISimulatedHead
@@ -942,28 +942,28 @@ public interface ISimulatedHead
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.WorldPosition**
+**Microsoft. PerceptionSimulation. ISimulatedHead. WorldPosition**
 
-Recuperar la posición del nodo con respecto a la del mundo, en metros.
+Recupere la posición del nodo con relación al mundo, en metros.
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.Rotation**
+**Microsoft. PerceptionSimulation. ISimulatedHead. Rotation**
 
-Recuperar la rotación de la cabeza simulada. Radianes giran a la derecha al buscar en el eje positivo.
+Recupera el giro del encabezado simulado. Los radianes positivos giran en el sentido de las agujas del reloj al mirar por el eje.
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.Diameter**
+**Microsoft. PerceptionSimulation. ISimulatedHead. diameter**
 
-Recuperar el diámetro del encabezado simulado. Este valor se utiliza para determinar el centro del encabezado (punto de giro).
+Recuperar el diámetro del cabezal simulado. Este valor se usa para determinar el centro del encabezado (punto de giro).
 
-**Microsoft.PerceptionSimulation.ISimulatedHead.Rotate(Microsoft.PerceptionSimulation.Rotation3)**
+**Microsoft. PerceptionSimulation. ISimulatedHead. Rotate (Microsoft. PerceptionSimulation. Rotation3)**
 
-Girar la cabeza simulada con respecto a su rotación actual. Radianes giran a la derecha al buscar en el eje positivo.
+Gira el encabezado simulado con respecto a su rotación actual. Los radianes positivos giran en el sentido de las agujas del reloj al mirar por el eje.
 
 Parámetros
 * rotación: la cantidad que se va a girar.
 
-### <a name="microsoftperceptionsimulationisimulatedhead2"></a>Microsoft.PerceptionSimulation.ISimulatedHead2
+### <a name="microsoftperceptionsimulationisimulatedhead2"></a>Microsoft. PerceptionSimulation. ISimulatedHead2
 
-Propiedades adicionales están disponibles mediante la conversión de un ISimulatedHead a ISimulatedHead2
+Hay propiedades adicionales disponibles mediante la conversión de un ISimulatedHead a ISimulatedHead2
 
 ```
 public interface ISimulatedHead2
@@ -973,13 +973,13 @@ public interface ISimulatedHead2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedHead2.Eyes**
+**Microsoft. PerceptionSimulation. ISimulatedHead2. Eyes**
 
-Recuperar los ojos de los humanos simulado.
+Recupere los ojos del hombre simulado.
 
-### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller"></a>Microsoft.PerceptionSimulation.ISimulatedSixDofController
+### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller"></a>Microsoft. PerceptionSimulation. ISimulatedSixDofController
 
-Interfaz que describe un controlador de 6 GDL asociado con el usuario simulado.
+Interfaz que describe un controlador de 6 DOF asociado con el usuario simulado.
 
 ```
 public interface ISimulatedSixDofController
@@ -996,62 +996,62 @@ public interface ISimulatedSixDofController
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.WorldPosition**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. WorldPosition**
 
-Recuperar la posición del nodo con respecto a la del mundo, en metros.
+Recupere la posición del nodo con relación al mundo, en metros.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Status**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. status**
 
-Recuperar o establecer el estado actual del controlador.  El estado del controlador debe establecerse en un valor distinto de desactivado antes de llamar a mover, girar o presione los botones se realizará correctamente.
+Recupera o establece el estado actual del controlador.  El estado del controlador debe establecerse en un valor distinto de OFF antes de que las llamadas a Move, gire o presione botones se realicen correctamente.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Position**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. Position**
 
-Recuperar o establecer la posición del controlador simulado con respecto a los humanos, en metros.
+Recupera o establece la posición del controlador simulado con respecto al hombre, en metros.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Orientation**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. Orientation**
 
-Recuperar o establecer la orientación del controlador simulado.
+Recupera o establece la orientación del controlador simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.Move(Microsoft.PerceptionSimulation.Vector3)**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. Move (Microsoft. PerceptionSimulation. Vector3)**
 
-Mover la posición del controlador simulado respecto a su posición actual, en metros.
-
-Parámetros
-* traducción: la cantidad de traslación del controlador simulado.
-
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.PressButton(SimulatedSixDofControllerButton)**
-
-Presione un botón en el dispositivo simulado.  Solo se detectará el sistema si está habilitado el controlador.
+Mover la posición del controlador simulado con respecto a su posición actual, en metros.
 
 Parámetros
-* botón: presione el botón.
+* Translation: la cantidad para traducir el controlador simulado.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.ReleaseButton(SimulatedSixDofControllerButton)**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. PressButton (SimulatedSixDofControllerButton)**
 
-Suelte un botón en el dispositivo simulado.  Solo se detectará el sistema si está habilitado el controlador.
-
-Parámetros
-* botón: el botón va a liberar.
-
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.GetTouchpadPosition(out float, out float)**
-
-Obtiene la posición de un dedo simulado en el panel táctil del dispositivo simulado.
+Presione un botón en el controlador simulado.  Solo lo detectará el sistema si el controlador está habilitado.
 
 Parámetros
-* x: la posición horizontal del dedo.
-* y - la posición vertical del dedo.
+* Button: botón que se va a presionar.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController.SetTouchpadPosition(float, float)**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. ReleaseButton (SimulatedSixDofControllerButton)**
 
-Establezca la posición de un dedo simulado en el panel táctil del dispositivo simulado.
+Suelte un botón en el controlador simulado.  Solo lo detectará el sistema si el controlador está habilitado.
+
+Parámetros
+* Button: el botón que se va a liberar.
+
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. GetTouchpadPosition (out Float, out float)**
+
+Obtiene la posición de un dedo simulado en el Touchpad del controlador simulado.
 
 Parámetros
 * x: la posición horizontal del dedo.
-* y - la posición vertical del dedo.
+* y: posición vertical del dedo.
 
-### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller2"></a>Microsoft.PerceptionSimulation.ISimulatedSixDofController2
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController. SetTouchpadPosition (float, float)**
 
-Métodos y propiedades adicionales están disponibles mediante la conversión de un ISimulatedSixDofController a ISimulatedSixDofController2
+Establece la posición de un dedo simulado en el Touchpad del controlador simulado.
+
+Parámetros
+* x: la posición horizontal del dedo.
+* y: posición vertical del dedo.
+
+### <a name="microsoftperceptionsimulationisimulatedsixdofcontroller2"></a>Microsoft. PerceptionSimulation. ISimulatedSixDofController2
+
+Los métodos y propiedades adicionales están disponibles mediante la conversión de un ISimulatedSixDofController a ISimulatedSixDofController2
 
 ```
 public interface ISimulatedSixDofController2
@@ -1063,30 +1063,30 @@ public interface ISimulatedSixDofController2
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.GetThumbstickPosition(out float, out float)**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController2. GetThumbstickPosition (out Float, out float)**
 
-Obtiene la posición de la tecla de navegación simulado en el controlador simulado.
-
-Parámetros
-* x: la posición horizontal de la tecla de navegación.
-* y - la posición vertical de la tecla de navegación.
-
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.SetThumbstickPosition(float, float)**
-
-Establezca la posición de la tecla de navegación simulado en el controlador simulado.
+Obtiene la posición del stick analógico simulado en el controlador simulado.
 
 Parámetros
-* x: la posición horizontal de la tecla de navegación.
-* y - la posición vertical de la tecla de navegación.
+* x: la posición horizontal del Stick.
+* y: la posición vertical del Stick.
 
-**Microsoft.PerceptionSimulation.ISimulatedSixDofController2.BatteryLevel**
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController2. SetThumbstickPosition (float, float)**
 
-Recuperar o establecer el nivel de batería del controlador simulado.  El valor debe ser mayor que 0,0 y menor o igual que 100,0.
+Establece la posición del stick analógico simulado en el controlador simulado.
+
+Parámetros
+* x: la posición horizontal del Stick.
+* y: la posición vertical del Stick.
+
+**Microsoft. PerceptionSimulation. ISimulatedSixDofController2. BatteryLevel**
+
+Recupera o establece el nivel de batería del controlador simulado.  El valor debe ser mayor que 0,0 y menor o igual que 100,0.
 
 
-### <a name="microsoftperceptionsimulationisimulatedeyes"></a>Microsoft.PerceptionSimulation.ISimulatedEyes
+### <a name="microsoftperceptionsimulationisimulatedeyes"></a>Microsoft. PerceptionSimulation. ISimulatedEyes
 
-Interfaz que describe los ojos de los humanos simulado.
+Interfaz que describe los ojos del hombre simulado.
 
 ```
 public interface ISimulatedEyes
@@ -1098,29 +1098,29 @@ public interface ISimulatedEyes
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.Rotation**
+**Microsoft. PerceptionSimulation. ISimulatedEyes. Rotation**
 
-Recuperar la rotación de los ojos simulados. Radianes giran a la derecha al buscar en el eje positivo.
+Recupera el giro de los ojos simulados. Los radianes positivos giran en el sentido de las agujas del reloj al mirar por el eje.
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.Rotate(Microsoft.PerceptionSimulation.Rotation3)**
+**Microsoft. PerceptionSimulation. ISimulatedEyes. Rotate (Microsoft. PerceptionSimulation. Rotation3)**
 
-Gira los ojos simulados en relación con su rotación actual. Radianes giran a la derecha al buscar en el eje positivo.
+Gira los ojos simulados en relación con su rotación actual. Los radianes positivos giran en el sentido de las agujas del reloj al mirar por el eje.
 
 Parámetros
 * rotación: la cantidad que se va a girar.
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.CalibrationState**
+**Microsoft. PerceptionSimulation. ISimulatedEyes. CalibrationState**
 
-Recupera o establece el estado de calibración de los ojos simulados.
+Recupera o establece el estado de calibrado de los ojos simulados.
 
-**Microsoft.PerceptionSimulation.ISimulatedEyes.WorldPosition**
+**Microsoft. PerceptionSimulation. ISimulatedEyes. WorldPosition**
 
-Recuperar la posición del nodo con respecto a la del mundo, en metros.
+Recupere la posición del nodo con relación al mundo, en metros.
 
 
-### <a name="microsoftperceptionsimulationisimulationrecording"></a>Microsoft.PerceptionSimulation.ISimulationRecording
+### <a name="microsoftperceptionsimulationisimulationrecording"></a>Microsoft. PerceptionSimulation. ISimulationRecording
 
-Cargar la interfaz para interactuar con una grabación única para la reproducción.
+Interfaz para interactuar con un solo registro cargado para la reproducción.
 
 ```
 public interface ISimulationRecording
@@ -1134,36 +1134,36 @@ public interface ISimulationRecording
 };
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.DataTypes**
+**Microsoft. PerceptionSimulation. ISimulationRecording. Datatypes**
 
-Recupera la lista de tipos de datos en la grabación.
+Recupera la lista de tipos de datos de la grabación.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.State**
+**Microsoft. PerceptionSimulation. ISimulationRecording. State**
 
 Recupera el estado actual de la grabación.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Play**
+**Microsoft. PerceptionSimulation. ISimulationRecording. Play**
 
-Iniciar la reproducción. Si está en pausa la grabación, reproducción se reanudará desde la ubicación en pausa; Si se detiene, se iniciará la reproducción al principio. Si ya está reproduciendo, se omite esta llamada.
+Inicie la reproducción. Si se pausa la grabación, la reproducción se reanudará desde la ubicación en pausa; Si se detiene, la reproducción se iniciará al principio. Si ya se está reproduciendo, se omitirá esta llamada.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Pause**
+**Microsoft. PerceptionSimulation. ISimulationRecording. PAUSE**
 
-Pone en pausa la reproducción en su ubicación actual. Si se detiene la grabación, se omite la llamada.
+Pausa la reproducción en su ubicación actual. Si se detiene la grabación, se omite la llamada.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Seek(System.UInt64)**
+**Microsoft. PerceptionSimulation. ISimulationRecording. Seek (System. UInt64)**
 
-Busca la grabación a la hora especificada (en intervalos de 100 nanosegundos desde el principio) y se detiene en esa ubicación. Si el tiempo es más allá del final de la grabación, está en pausa en el último fotograma.
+Busca la grabación en el tiempo especificado (en intervalos de 100 nanosegundos desde el principio) y se pausa en esa ubicación. Si el tiempo está más allá del final de la grabación, se pausa en el último fotograma.
 
 Parámetros
-* tics: el tiempo que se va a buscar.
+* TICs: la hora a la que se va a buscar.
 
-**Microsoft.PerceptionSimulation.ISimulationRecording.Stop**
+**Microsoft. PerceptionSimulation. ISimulationRecording. STOP**
 
 Detiene la reproducción y restablece la posición al principio.
 
-### <a name="microsoftperceptionsimulationisimulationrecordingcallback"></a>Microsoft.PerceptionSimulation.ISimulationRecordingCallback
+### <a name="microsoftperceptionsimulationisimulationrecordingcallback"></a>Microsoft. PerceptionSimulation. ISimulationRecordingCallback
 
-Interfaz para recibir los cambios de estado durante la reproducción.
+Interfaz para recibir cambios de estado durante la reproducción.
 
 ```
 public interface ISimulationRecordingCallback
@@ -1172,14 +1172,14 @@ public interface ISimulationRecordingCallback
 };
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationRecordingCallback.PlaybackStateChanged(Microsoft.PerceptionSimulation.PlaybackState)**
+**Microsoft. PerceptionSimulation. ISimulationRecordingCallback. PlaybackStateChanged (Microsoft. PerceptionSimulation. PlaybackState)**
 
-Se llama cuando ha cambiado el estado de reproducción de un ISimulationRecording.
+Se llama cuando el estado de reproducción de un ISimulationRecording ha cambiado.
 
 Parámetros
-* newState - el nuevo estado de la grabación.
+* newState: el nuevo estado de la grabación.
 
-### <a name="microsoftperceptionsimulationperceptionsimulationmanager"></a>Microsoft.PerceptionSimulation.PerceptionSimulationManager
+### <a name="microsoftperceptionsimulationperceptionsimulationmanager"></a>Microsoft. PerceptionSimulation. PerceptionSimulationManager
 
 Objeto raíz para crear objetos de simulación de percepción.
 
@@ -1192,56 +1192,56 @@ public static class PerceptionSimulationManager
     public static ISimulationRecording LoadPerceptionSimulationRecording(string path, ISimulationStreamSinkFactory factory, ISimulationRecordingCallback callback);
 ```
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.CreatePerceptionSimulationManager(Microsoft.PerceptionSimulation.ISimulationStreamSink)**
+**Microsoft. PerceptionSimulation. PerceptionSimulationManager. CreatePerceptionSimulationManager (Microsoft. PerceptionSimulation. ISimulationStreamSink)**
 
-Crear en el objeto para generar paquetes simulados y entregarlos al receptor proporcionado.
+Cree en el objeto para generar paquetes simulados y entregarlos al receptor proporcionado.
 
 Parámetros
-* Sink - el receptor que recibirá todos genera paquetes.
+* receptor: el receptor que recibirá todos los paquetes generados.
 
 Valor devuelto
 
-El administrador creado.
+Administrador creado.
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.CreatePerceptionSimulationRecording(System.String)**
+**Microsoft. PerceptionSimulation. PerceptionSimulationManager. CreatePerceptionSimulationRecording (System. String)**
 
-Crear un receptor que almacena los paquetes recibidos todo en un archivo en la ruta de acceso especificada.
+Cree un receptor que almacene todos los paquetes recibidos en un archivo en la ruta de acceso especificada.
 
 Parámetros
-* ruta de acceso: la ruta de acceso del archivo que se va a crear.
+* Ruta de acceso: la ruta de acceso del archivo que se va a crear.
 
 Valor devuelto
 
-El receptor creado.
+Receptor creado.
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.LoadPerceptionSimulationRecording(System.String,Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory)**
+**Microsoft. PerceptionSimulation. PerceptionSimulationManager. LoadPerceptionSimulationRecording (System. String, Microsoft. PerceptionSimulation. ISimulationStreamSinkFactory)**
 
-Cargar una grabación desde el archivo especificado.
+Cargar una grabación del archivo especificado.
 
 Parámetros
-* ruta de acceso: la ruta de acceso del archivo para cargar.
-* Factory - un generador utilizado por la grabación para crear un ISimulationStreamSink cuando sea necesario.
+* Ruta de acceso: la ruta de acceso del archivo que se va a cargar.
+* Factory: un generador que utiliza la grabación para crear un ISimulationStreamSink cuando sea necesario.
 
 Valor devuelto
 
-La grabación cargada.
+Grabación cargada.
 
-**Microsoft.PerceptionSimulation.PerceptionSimulationManager.LoadPerceptionSimulationRecording (System.String,Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory, Microsoft.PerceptionSimulation.ISimulationRecordingCallback)**
+**Microsoft. PerceptionSimulation. PerceptionSimulationManager. LoadPerceptionSimulationRecording (System. String, Microsoft. PerceptionSimulation. ISimulationStreamSinkFactory, Microsoft. PerceptionSimulation. ISimulationRecordingCallback)**
 
-Cargar una grabación desde el archivo especificado.
+Cargar una grabación del archivo especificado.
 
 Parámetros
-* ruta de acceso: la ruta de acceso del archivo para cargar.
-* Factory - un generador utilizado por la grabación para crear un ISimulationStreamSink cuando sea necesario.
-* devolución de llamada - una devolución de llamada que recibe las actualizaciones reclasificación de estado de la grabación.
+* Ruta de acceso: la ruta de acceso del archivo que se va a cargar.
+* Factory: un generador que utiliza la grabación para crear un ISimulationStreamSink cuando sea necesario.
+* callback: devolución de llamada que recibe actualizaciones que retrasan el estado de la grabación.
 
 Valor devuelto
 
-La grabación cargada.
+Grabación cargada.
 
-### <a name="microsoftperceptionsimulationstreamdatatypes"></a>Microsoft.PerceptionSimulation.StreamDataTypes
+### <a name="microsoftperceptionsimulationstreamdatatypes"></a>Microsoft. PerceptionSimulation. StreamDataTypes
 
-Describe los diferentes tipos de datos de la secuencia.
+Describe los diferentes tipos de datos de secuencia.
 
 ```
 public enum StreamDataTypes
@@ -1256,37 +1256,37 @@ public enum StreamDataTypes
 }
 ```
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.None**
+**Microsoft. PerceptionSimulation. StreamDataTypes. None**
 
-Un valor de centinela utilizado para no indicar ningún tipo de datos de la secuencia.
+Un valor de centinela que se usa para indicar que no hay tipos de datos de flujo.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Head**
+**Microsoft. PerceptionSimulation. StreamDataTypes. Head**
 
-Stream de datos con respecto a la posición y la orientación de la cabeza.
+Secuencia de datos con respecto a la posición y orientación del encabezado.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Hands**
+**Microsoft. PerceptionSimulation. StreamDataTypes. handles**
 
-Stream de datos con respecto a la posición y movimientos de manos.
+Flujo de datos con respecto a la posición y los gestos de las manos.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.SpatialMapping**
+**Microsoft. PerceptionSimulation. StreamDataTypes. SpatialMapping**
 
-Stream de datos con respecto a la asignación espacial del entorno.
+Flujo de datos con respecto a la asignación espacial del entorno.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Calibration**
+**Microsoft. PerceptionSimulation. StreamDataTypes. Calibration**
 
-Stream de datos con respecto a la calibración del dispositivo. Solo se aceptan los paquetes de calibración mediante un sistema en modo remoto.
+Flujo de datos con respecto a la calibración del dispositivo. Los paquetes de calibración solo los acepta un sistema en modo remoto.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.Environment**
+**Microsoft. PerceptionSimulation. StreamDataTypes. Environment**
 
-Stream de datos relacionados con el entorno del dispositivo.
+Flujo de datos sobre el entorno del dispositivo.
 
-**Microsoft.PerceptionSimulation.StreamDataTypes.All**
+**Microsoft. PerceptionSimulation. StreamDataTypes. All**
 
-Un valor de centinela que se usa para indicar todos los tipos de datos registrados.
+Un valor de centinela que se usa para indicar todos los tipos de datos grabados.
 
-### <a name="microsoftperceptionsimulationisimulationstreamsink"></a>Microsoft.PerceptionSimulation.ISimulationStreamSink
+### <a name="microsoftperceptionsimulationisimulationstreamsink"></a>Microsoft. PerceptionSimulation. ISimulationStreamSink
 
-Un objeto que recibe los paquetes de datos de una secuencia de simulación.
+Objeto que recibe paquetes de datos de una secuencia de simulación.
 
 ```
 public interface ISimulationStreamSink
@@ -1295,15 +1295,15 @@ public interface ISimulationStreamSink
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationStreamSink.OnPacketReceived(uint length, byte[] packet)**
+**Microsoft. PerceptionSimulation. ISimulationStreamSink. OnPacketReceived (uint longitud, Byte [], paquete)**
 
-Recibe un solo paquete, que es internamente con tipo y con control de versiones.
+Recibe un único paquete, que está escrito internamente y con control de versiones.
 
 Parámetros
-* length: la longitud del paquete.
-* paquete - los datos del paquete.
+* longitud: la longitud del paquete.
+* paquete: los datos del paquete.
 
-### <a name="microsoftperceptionsimulationisimulationstreamsinkfactory"></a>Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory
+### <a name="microsoftperceptionsimulationisimulationstreamsinkfactory"></a>Microsoft. PerceptionSimulation. ISimulationStreamSinkFactory
 
 Objeto que crea ISimulationStreamSink.
 
@@ -1314,10 +1314,10 @@ public interface ISimulationStreamSinkFactory
 }
 ```
 
-**Microsoft.PerceptionSimulation.ISimulationStreamSinkFactory.CreateSimulationStreamSink()**
+**Microsoft. PerceptionSimulation. ISimulationStreamSinkFactory. CreateSimulationStreamSink ()**
 
-Crea una instancia única de ISimulationStreamSink.
+Crea una única instancia de ISimulationStreamSink.
 
 Valor devuelto
 
-El receptor creado.
+Receptor creado.

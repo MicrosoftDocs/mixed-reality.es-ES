@@ -1,55 +1,55 @@
 ---
 title: Escala
-description: Una clave para mostrar el contenido que busca realista en formulario holográfica es imitar lo máximo posible de las estadísticas visuales del mundo real.
+description: Una clave para mostrar el contenido que parece realista en forma holográfica es imitar las estadísticas visuales del mundo real lo más cerca posible.
 author: mavitazk
 ms.author: mavitazk
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Diseño de Windows Mixed Reality, estilo,
+keywords: Windows Mixed Reality, estilo, diseño
 ms.openlocfilehash: f13414bff7d84692e8e87aa2abdcded15627346f
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59598917"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63524116"
 ---
 # <a name="scale"></a>Escala
 
-Una clave para mostrar el contenido que busca realista en formulario holográfica es imitar lo máximo posible de las estadísticas visuales del mundo real. Esto significa que se incorpora como muchas de las indicaciones visuales como sea posible que nos (en el mundo real) ayudan a comprender dónde están los objetos, qué tamaño son y que se realizan de. La escala de un objeto es una de las más importantes de esas indicaciones visuales, lo que proporciona un visor de una idea del tamaño de un objeto, así como indicaciones a su ubicación (especialmente para los objetos que tienen un tamaño conocido). Además, la visualización de objetos a escala real se ha visto como uno de los diferenciadores clave de experiencia de realidad mixta en general, algo que no era posible en basado en pantalla ver anteriormente.
+Una clave para mostrar el contenido que parece realista en forma holográfica es imitar las estadísticas visuales del mundo real lo más cerca posible. Esto significa que se incorporan tantas indicaciones visuales como podamos que nos ayuden (en el mundo real) a entender dónde se encuentran los objetos, lo grande que son y de qué se crean. La escala de un objeto es uno de los más importantes de esas indicaciones visuales, lo que da a un visor un sentido del tamaño de un objeto, así como las entradas de su ubicación (especialmente para los objetos que tienen un tamaño conocido). Además, la visualización de objetos en escala real se ha visto como uno de los diferenciadores de experiencia clave para la realidad mixta en general, algo que no ha sido posible en la visualización basada en pantalla previamente.
 
-## <a name="how-to-suggest-the-scale-of-objects-and-environments"></a>Cómo sugerir la escala de los objetos y entornos
+## <a name="how-to-suggest-the-scale-of-objects-and-environments"></a>Cómo sugerir la escala de objetos y entornos
 
-Hay muchas maneras para sugerir la escala de un objeto, algunos de los cuales tienen posibles efectos de otros factores perceptuales. La clave es simplemente mostrar objetos con un tamaño de "real", y mantener ese tamaño realista como mover los usuarios. Esto significa que pueden tardar hasta una cantidad diferente de un ángulo visual de un usuario de un usuario hologramas cuando se lo más cerca o lejos aún más la misma manera que lo hacen los objetos reales.
+Hay muchas maneras de sugerir la escala de un objeto, algunas de las cuales tienen efectos posibles en otros factores de percepción. La clave es simplemente mostrar los objetos en un tamaño ' real ' y mantener ese tamaño realista a medida que los usuarios se mueven. Esto significa que los hologramas ocuparán una cantidad diferente del ángulo visual de un usuario a medida que se acerquen o alejen, del mismo modo que los objetos reales.
 
-### <a name="utilize-the-distance-of-objects-as-they-are-presented-to-the-user"></a>Usar la distancia de los objetos que se presentan al usuario
+### <a name="utilize-the-distance-of-objects-as-they-are-presented-to-the-user"></a>Uso de la distancia de los objetos a medida que se presentan al usuario
 
-Un método común consiste en utilizar la distancia de los objetos que se presentan al usuario. Por ejemplo, considere la posibilidad de visualizar un automóvil familiar gran delante del usuario. Si fuera el automóvil directamente frente a ellas, dentro de la longitud de arm, sería demasiado grande para caber en el campo de visión del usuario. Esto requeriría al usuario mover su cabeza y el cuerpo para comprender la totalidad del objeto. Si el vehículo se colocaron aún más lejos (a través de la sala), el usuario puede establecer una sensación de escala viendo la totalidad del objeto en su campo de visión, a continuación, mover a sí mismos más cercanos a ella para inspeccionar las áreas de detalle.
+Un método común es el uso de la distancia de los objetos a medida que se presentan al usuario. Por ejemplo, considere la posibilidad de visualizar un automóvil de gran familia delante del usuario. Si el coche estuviera directamente delante de ellos, dentro de la longitud de ARM, sería demasiado grande para caber en el campo de vista del usuario. Esto requeriría que el usuario desplace el encabezado y el cuerpo para comprender el completo del objeto. Si el coche se colocó fuera (en todo el salón), el usuario puede establecer un sentido de escala; para ello, Ve el completo del objeto en su campo de vista y, a continuación, se mueve a él para inspeccionar áreas en detalle.
 
-[Volvo](https://www.youtube.com/watch?v=DilzwF90vec) usa esta técnica para crear una experiencia de sala de exposición de un automóvil nuevo, utilizando la escala del automóvil holográfica de manera que pensaban realista e intuitivo para el usuario. La experiencia comienza con un holograma del automóvil en una tabla física, que permite al usuario a comprender el tamaño total y la forma del modelo. Más adelante en la experiencia, se expande el coche a una escala mayor (más allá del tamaño del campo de visión del dispositivo), pero, puesto que el usuario ha adquirido un marco de referencia desde el modelo más pequeño, puede navegar adecuadamente en torno a las características del automóvil.
+[Volvo](https://www.youtube.com/watch?v=DilzwF90vec) usó esta técnica para crear una experiencia de sala de exposición para un coche nuevo, con la escala del coche holográfica de una forma realista e intuitiva para el usuario. La experiencia comienza con un holograma del coche en una tabla física, lo que permite al usuario comprender el tamaño y la forma totales del modelo. Más adelante en la experiencia, el coche se expande a una escala mayor (más allá del tamaño del campo de vista del dispositivo), pero, puesto que el usuario ya adquirió un fotograma de referencia del modelo más pequeño, puede navegar adecuadamente por las características del coche.
 
-![Experiencia de los automóviles Volvo para HoloLens](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
-*Experiencia de los automóviles Volvo para HoloLens*
+![Experiencia de Volvo Cars para HoloLens](images/volvo-cars-microsoft-hololens-experience01-640px.jpg)<br>
+*Experiencia de Volvo Cars para HoloLens*
 
-### <a name="use-holograms-to-modify-the-users-real-space"></a>Use hologramas para modificar el espacio real del usuario
+### <a name="use-holograms-to-modify-the-users-real-space"></a>Usar hologramas para modificar el espacio real del usuario
 
-Otro método es usar hologramas para modificar el espacio real del usuario, reemplazando las paredes o techos existente con entornos o anexar 'agujeros' o 'windows', lo que permite objetos sobredimensionados a aparentemente 'vanguardista' el espacio físico. Por ejemplo, un árbol de gran tamaño podría no caber en salas de estar de la mayoría de los usuarios, pero colocando un cielo virtual de su límite superior, se expande el espacio físico en el virtual. Esto permite al usuario a caminar alrededor de la base del árbol virtual y obtener una idea de cómo podría aparecer en la vida real, a continuación, buscar para ver cómo se extienden más allá del espacio físico de la sala.
+Otro método consiste en usar hologramas para modificar el espacio real del usuario, reemplazando los planos laterales o techos existentes con entornos o anexando "huecos" o "ventanas", lo que permite que los objetos con un tamaño excesivo parezcan "desplazarse" por el espacio físico. Por ejemplo, un árbol grande podría no caber en la mayoría de los salones de los usuarios, pero al colocar un cielo virtual en el límite superior, el espacio físico se expande en el virtual. Esto permite al usuario desplazarse por la base del árbol virtual y recopilar una idea de la escala de cómo aparecería en la vida real y después buscar para ver que se extiende mucho más allá del espacio físico del salón.
 
-[Minecraft](https://minecraft.net/) desarrolló una experiencia de concepto mediante una técnica similar. Mediante la adición de una ventana virtual a una superficie física en una sala, los objetos existentes en la sala se colocan en el contexto de un entorno mucho mayor, más allá de las limitaciones físicas de escalado de la sala.
+[Minecraft](https://minecraft.net/) desarrolló una experiencia de concepto mediante una técnica similar. Al agregar una ventana virtual a una superficie física de una habitación, los objetos existentes en el salón se colocan en el contexto de un entorno de gran tamaño, más allá de las limitaciones de escala física de la habitación.
 
-![Experiencia del concepto de Minecraft para HoloLens](images/800px-minecraftwindow-640px.jpg)<br>
-*Experiencia del concepto de Minecraft para HoloLens*
+![Experiencia de concepto de Minecraft para HoloLens](images/800px-minecraftwindow-640px.jpg)<br>
+*Experiencia de concepto de Minecraft para HoloLens*
 
-## <a name="experimenting-with-scale"></a>Experimentar con escala
+## <a name="experimenting-with-scale"></a>Experimentación con escala
 
-En algunos casos, los diseñadores han experimentado con la modificación del escalado (cambiando el tamaño de "real" mostrado del objeto) manteniendo una posición única del objeto, para aproximarse a un objeto que se obtienen más cerca o más allá de un visor sin ningún movimiento real. Se ha probado en algunos casos como una forma de simular descubrir visualización de elementos al tiempo que respeta posibles limitaciones de confort de visualización virtual contenido más cerca que sugeriría la "zona de comodidad".
+En algunos casos, los diseñadores han experimentado la modificación de la escala (cambiando el tamaño "real" mostrado del objeto) mientras se mantiene una única posición del objeto, para aproximar un objeto que se acerque más o más a un visor sin ningún movimiento real. Esto se probó en algunos casos como una forma de simular la visualización vertical de los elementos, a la vez que sigue respetando las posibles limitaciones de comodidad de ver el contenido virtual más cerca de la "zona de confort" que sugeriría.
 
-Sin embargo esto puede crear algunos artefactos posibles en la experiencia:
-* Para los objetos virtuales que representan un objeto con un tamaño 'conocido' en el Visor, cambiar la escala sin cambiar la posición conduce a indicaciones visuales en conflicto: es posible que igualmente los ojos "ver" el objeto en cierta profundidad debido a las indicaciones de vergence (consulte la [comodidad ](comfort.md) artículo para obtener más información sobre esto), pero el tamaño actúa como una indicación monocular que podría obtener el objeto más de cerca. Provocar percepciones confundirse estas pilas en conflicto: visores a menudo ve el objeto permanece en su lugar (debido a la pila constante profundidad) pero crece rápidamente.
-* En algunos casos, el cambio de escala se ve como una indicación 'looming' en su lugar, donde el objeto puede o un visor no puede aparecer para cambiar la escala, pero parece ser móvil directamente hacia los ojos del (que pueden ser una sensación incómoda).
-* Con superficies de comparación en el mundo real, dichos cambios de escala se puede observar a veces que el cambio de posición a lo largo de varios ejes: objetos pueden aparecer quitar inferior en lugar de mover más cercano (similar en una proyección 2D de movimiento 3D en algunos casos).
-* Por último, para los objetos sin un tamaño conocido "real world" (p. ej. arbitrarios formas con tamaños arbitrarios, elementos de interfaz de usuario, etc.), puede cambiar la escala actúan funcionalmente como una manera para imitar los cambios en la distancia: visores no tiene tantas indicaciones preexistentes de arriba a abajo por la que se va a comprender el tamaño real del objeto o la ubicación, por lo que la escala se puede procesar como una indicación más importante.
+Sin embargo, esto puede crear algunos artefactos posibles en la experiencia:
+* En el caso de los objetos virtuales que representan algún objeto con un tamaño "conocido" en el visor, el cambio de la escala sin cambiar la posición conduce a indicaciones visuales en conflicto: los ojos todavía pueden "ver" el objeto a cierta profundidad debido a las vergence de las pilas (vea la [comodidad](comfort.md) artículo para obtener más información sobre esto), pero el tamaño actúa como una señal de cierre de sesión que el objeto podría estar más cerca. Estas claves conflictivas conducen a las percepciones de confusión: los visores ven a menudo el objeto como permanece en su lugar (debido a la indicación de profundidad constante), pero aumentan rápidamente.
+* En algunos casos, el cambio de escala se considera como una indicación de "tela" en su lugar, donde el objeto puede o no verse para cambiar la escala de un visor, pero parece moverse directamente hacia los ojos del espectador (lo que puede ser un repentino incómodo).
+* Con las superficies de comparación en el mundo real, los cambios de escalado a veces se ven como una posición cambiante a lo largo de varios ejes: es posible que los objetos parezcan inferiores en lugar de moverse más cerca (similar en una proyección 2D del movimiento 3D en algunos casos).
+* Por último, en el caso de los objetos sin un tamaño conocido del "mundo real" (por ejemplo, formas arbitrarias con tamaños arbitrarios, elementos de la interfaz de usuario, etc.), cambiar la escala puede actuar funcionalmente como una manera de imitar los cambios de distancia: los visores no tienen tantas guías arriba preexistentes como para comprenda el tamaño o la ubicación verdaderos del objeto, por lo que la escala se puede procesar como una pista más importante.
 
 ## <a name="see-also"></a>Vea también
-* [Color, claro y materiales](color,-light-and-materials.md)
+* [Color, luz y materiales](color,-light-and-materials.md)
 * [Tipografía](typography.md)
-* [Diseño espacial de sonido](spatial-sound-design.md)
+* [Diseño de sonido espacial](spatial-sound-design.md)

@@ -1,108 +1,95 @@
 ---
 title: Cámara en Unity
-description: Cómo usar el desarrollo de Main cámara para Windows Mixed Reality de Unity para realizar la representación holográfica
+description: Cómo usar la cámara principal de Unity para el desarrollo de la realidad mixta de Windows para realizar la representación holográfica
 author: keveleigh
 ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit unity, representación holográfica, punto de enfoque holográfica y envolventes, búfer de profundidad, sólo orientación, posicional, opaco, transparente, clip
-ms.openlocfilehash: 8ea5a1f53351faab1b2863a0afac74e958b4b1a0
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, representación holográfica, Holographic, envolvente, punto de enfoque, búfer de profundidad, solo orientación, posicional, opaco, transparente, clip
+ms.openlocfilehash: 3a9846242dd1709bcaf927d8ffae33862e96ecc8
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597778"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63522376"
 ---
 # <a name="camera-in-unity"></a>Cámara en Unity
 
-Al usar auriculares de realidad mixta, se convierte en el centro de su mundo holográfica. El Unity [cámara](http://docs.unity3d.com/Manual/class-Camera.html) componente controlará automáticamente representación estereoscópica y seguirá el movimiento y la rotación cuando el proyecto tiene "Virtual realidad admite" seleccionado con "Windows Mixed Reality" como el dispositivo (en la sección otras opciones de configuración de la configuración del Reproductor de Windows Store). Esto puede aparecer como "Windows Holographic" en versiones anteriores de Unity.
+Cuando se gasta un auricular de realidad mixta, se convierte en el centro del mundo holográfica. El componente de [cámara](http://docs.unity3d.com/Manual/class-Camera.html) Unity controlará automáticamente la representación de Stereoscopic y seguirá el movimiento y la rotación del cabezal cuando el proyecto tenga seleccionada la opción "realidad virtual" con "Windows Mixed Reality" como dispositivo (en la otra configuración sección de la configuración del reproductor de la tienda Windows). Esto puede aparecer como "Windows Holographic" en versiones anteriores de Unity.
 
-Sin embargo, a optimizar totalmente calidad visual y [estabilidad holograma](hologram-stability.md), debe establecer la configuración de la cámara se describe a continuación.
+Sin embargo, para optimizar completamente la calidad visual y la [estabilidad del holograma](hologram-stability.md), debe establecer la configuración de la cámara que se describe a continuación.
 
 >[!NOTE]
 >Esta configuración debe aplicarse a la cámara en cada escena de la aplicación.
 >
->De forma predeterminada, cuando se crea una nueva escena en Unity, contendrá un GameObject de cámara principal en la jerarquía que incluye el componente de la cámara, pero no tiene la configuración a continuación se aplican correctamente.
+>De forma predeterminada, cuando se crea una nueva escena en Unity, contiene una cámara principal GameObject en la jerarquía que incluye el componente de cámara, pero no tiene la configuración que se aplica correctamente.
 
-## <a name="holographic-vs-immersive-headsets"></a>Holográfica frente a inmersivos
+## <a name="automatic-scene-and-camera-setup-with-mixed-reality-toolkit-v2"></a>Configuración automática de escenas y cámaras con el kit de herramientas de realidad mixta V2. 
 
-La configuración predeterminada en el componente de la cámara de Unity es para aplicaciones de 3D tradicionales que necesitan un fondo skybox similar a cuando no tengan un mundo real.
-* Cuando se ejecuta en un  **[auriculares envolventes](immersive-headset-hardware-details.md)**, está representando todo lo que ve el usuario y, por lo tanto probablemente deseará mantener skybox.
-* Sin embargo, cuando se ejecuta en un **auriculares holográfica** como [HoloLens](hololens-hardware-details.md), debería aparecer el mundo real detrás de todo lo que la cámara representa. Para ello, establecer el fondo de la cámara para ser transparentes (en HoloLens, negro se representa como transparente) en lugar de una textura Skybox:
-    1. Seleccione la cámara principal en el panel de jerarquía
-    2. En el panel del Inspector, busque el componente de cámara y cambiar la lista desplegable de borrar las marcas de Skybox a Color sólido
-    3. Seleccione el selector de color de fondo y cambie los valores RGBA (0, 0, 0, 0)
+Siga la guía [paso a paso](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html) para agregar el kit de herramientas de realidad mixta a su proyecto de Unity y se configurará automáticamente el proyecto.
 
-Puede usar el código de script para determinar en tiempo de ejecución para comprobar si los auriculares es envolvente u holográfica [HolographicSettings.IsDisplayOpaque](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html).
+También puede configurar manualmente el proyecto sin MRTK con la guía de la sección siguiente. 
+
+## <a name="holographic-vs-immersive-headsets"></a>Auriculares holográfica frente a auriculares envolvente
+
+La configuración predeterminada en el componente de cámara Unity es para las aplicaciones 3D tradicionales que necesitan un fondo similar a SkyBOX, ya que no tienen un mundo real.
+* Cuando se ejecuta en un **[auricular envolvente](immersive-headset-hardware-details.md)** , está representando todo lo que ve el usuario y, por lo tanto, es probable que quiera mantener el skybox.
+* Sin embargo, cuando se ejecuta en un **casco holográfica** como [HoloLens](hololens-hardware-details.md), el mundo real debe aparecer detrás de todo lo que se representa en la cámara. Para ello, configure el fondo de la cámara para que sea transparente (en HoloLens, la representación en negro es transparente) en lugar de una textura SKYBOX:
+    1. Seleccionar la cámara principal en el panel de jerarquías
+    2. En el panel Inspector, busque el componente Camera y cambie la lista desplegable Clear flags de SKYBOX a Solid color.
+    3. Seleccione el selector de colores de fondo y cambie los valores RGBA a (0, 0, 0, 0)
+
+Puede usar el código de script para determinar en tiempo de ejecución si el casco es inmersivo o Holographic comprobando [HolographicSettings. IsDisplayOpaque](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.IsDisplayOpaque.html).
 
 
-## <a name="positioning-the-camera"></a>Colocación de la cámara
+## <a name="positioning-the-camera"></a>Posicionamiento de la cámara
 
-Será más fácil diseñar la aplicación si imaginar la posición inicial del usuario como (X: 0, Y: 0, Z: 0). Puesto que la cámara principal está realizando el seguimiento movimiento del encabezado del usuario, se puede establecer la posición inicial del usuario al establecer la posición inicial de la cámara principal.
-1. Seleccione la cámara principal en el panel de jerarquía
-2. En el panel del Inspector, busque el componente de transformación y cambiar la posición de (X: 0, Y: 1, Z: -10) a (X: 0, Y: 0, Z: 0)
+Es más fácil diseñar la aplicación si se imagina la posición inicial del usuario como (X: 0, Y: 0, Z: 0). Dado que la cámara principal está realizando el seguimiento del movimiento del usuario, la posición inicial del usuario se puede establecer estableciendo la posición inicial de la cámara principal.
+1. Seleccionar cámara principal en el panel jerarquía
+2. En el panel Inspector, busque el componente de transformación y cambie la posición de (X: 0, Y: 1, Z:-10) a (X: 0, Y: 0, Z: 0,1
 
-   ![Cámara en el panel del Inspector de Unity](images/maincamera-350px.png)<br>
-   *Cámara en el panel del Inspector de Unity*
+   ![Cámara en el panel del inspector en Unity](images/maincamera-350px.png)<br>
+   *Cámara en el panel del inspector en Unity*
 
-## <a name="clip-planes"></a>Planos de recorte
+## <a name="clip-planes"></a>Planos de recortes
 
-Representar contenido demasiado al usuario puede ser incómodo en realidad mixta. Puede ajustar el [casi y ahora los planos de recorte](hologram-stability.md#hologram-render-distances) en el componente de la cámara.
-1. Seleccione la cámara principal en el panel de jerarquía
-2. En el panel del Inspector, busque los planos de recorte del componente de cámara y cambie el cuadro de texto casi de 0,3 a.85. Contenido procesado más estrechas puede provocar malestar de usuario y debe evitarse por la [representar instrucciones distancia](hologram-stability.md#hologram-render-distances).
+La representación de contenido demasiado cercana al usuario puede resultar incómodo en la realidad mixta. Puede ajustar los [planos de clips cercanos y alejados](hologram-stability.md#hologram-render-distances) en el componente de cámara.
+1. Seleccionar la cámara principal en el panel de jerarquías
+2. En el panel Inspector, busque los planos de recorte del componente de cámara y cambie el cuadro de texto Near de 0,3 a. 85. El contenido representado aún más cerca puede dar lugar a la molestia del usuario y debe evitarse según las [directrices de distancia de representación](hologram-stability.md#hologram-render-distances).
 
-## <a name="multiple-cameras"></a>Varias de las cámaras
+## <a name="multiple-cameras"></a>Varias cámaras
 
-Cuando hay varios componentes de la cámara en la escena, Unity sabe qué cámara que se usará para la representación estereoscópica y seguimiento principal Comprobando qué GameObject tiene la etiqueta MainCamera.
+Cuando hay varios componentes de cámara en la escena, Unity sabe qué cámara usar para la representación de Stereoscopic y el seguimiento de los cabezales comprobando qué GameObject tiene la etiqueta MainCamera.
 
-## <a name="recentering-a-seated-experience"></a>Alabeo una experiencia de su asiento
+## <a name="recentering-a-seated-experience"></a>Recentro de una experiencia sentada
 
-Si está creando un [escala asentada experiencia](coordinate-systems.md), puede origin de mundo de Unity centrar en la posición del usuario actual principal mediante una llamada a la **[XR. InputTracking.Recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html)** método.
+Si va a crear una [experiencia de escalado original](coordinate-systems.md), puede volver a centrar el origen mundial de Unity en la posición principal del usuario mediante una llamada a **[XR. Método InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html)** .
 
-## <a name="reprojection-modes"></a>Modos de reprojection
+## <a name="reprojection-modes"></a>Modos de Reproyección
 
-HoloLens e inmersivos se reproject cada fotograma que representa la aplicación para ajustar de cualquier predicción de la posición del usuario real principal cuando se emiten photons.
+Tanto HoloLens como los auriculares envolventes se reproyectan en cada fotograma que representa la aplicación para ajustarse a cualquier predicción de la posición principal real del usuario cuando se emiten las fotos.
 
 De forma predeterminada:
 
-* **Inmersivos** llevará a cabo reprojection posicional, ajustar sus hologramas de predicción en la posición y orientación, si la aplicación proporciona un búfer de profundidad un período determinado.  Si no se proporciona un búfer de profundidad, el sistema solo corregirá equivocadas de ramas en orientación.
-* **Auriculares holográficas** como HoloLens llevará a cabo reprojection posicional si la aplicación proporciona su búfer de profundidad o no.  Reprojection posicional es posible sin búferes de profundidad en HoloLens como representación a menudo es dispersa con un fondo estable proporcionado por el mundo real.
+* Los **auriculares** envolventes realizarán una Reproyección posicional, ajustando los hologramas para una predicción inesperada en la posición y la orientación, si la aplicación proporciona un búfer de profundidad para un fotograma determinado.  Si no se proporciona un búfer de profundidad, el sistema solo corregirá errores de predicciones en la orientación.
+* Los **auriculares holográficas** como HoloLens realizarán una Reproyección posicional tanto si la aplicación proporciona su búfer de profundidad como si no.  La Reproyección posicional es posible sin búferes de profundidad en HoloLens, ya que la representación suele ser dispersa con un fondo estable proporcionado por el mundo real.
 
-Si sabe que está creando un [experiencia sólo orientación](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) con contenido bloqueado rígidamente en el cuerpo (contenido de vídeo, por ejemplo, de 360 grados), puede establecer explícitamente el modo de reprojection sea orientación solo estableciendo [ HolographicSettings.ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) a [HolographicReprojectionMode.OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+Si sabe que está creando una [experiencia de solo orientación](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) con contenido rígidomente bloqueado por el cuerpo (por ejemplo, contenido de vídeo de 360 grados), puede establecer explícitamente el modo de Reproyección para que sea Orientation solo [estableciendo HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) a [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
 
 ## <a name="sharing-your-depth-buffers-with-windows"></a>Uso compartido de los búferes de profundidad con Windows
 
-Uso compartido de búfer de profundidad de la aplicación para cada fotograma proporcionará la aplicación uno de dos aumenta en la estabilidad de holograma, según el tipo de auriculares de Windows está representación para:
-* **Inmersivos** puede realizar reprojection posicional cuando se proporciona un búfer de profundidad, ajustar sus hologramas de predicción en la posición y orientación.
-* **Auriculares holográficas** como HoloLens seleccionará automáticamente un [centrarse punto](focus-point-in-unity.md) cuando se proporciona un búfer de profundidad, optimizar la estabilidad holograma a lo largo del plano que forma una intersección con el contenido más.
+Compartir el búfer de profundidad de la aplicación en Windows cada fotograma proporcionará a la aplicación una de estas dos aumentos en la estabilidad del holograma, en función del tipo de casco que se está representando:
+* Los **auriculares** envolventes pueden realizar una Reproyección posicional cuando se proporciona un búfer de profundidad, ajustando los hologramas para una predicción inesperada en la posición y la orientación.
+* Los **auriculares holográficas** como HoloLens seleccionarán automáticamente un [punto de enfoque](focus-point-in-unity.md) cuando se proporcione un búfer de profundidad, optimizando la estabilidad del holograma a lo largo del plano que intersecta el mayor contenido.
 
-Para establecer si la aplicación de Unity proporcionará un búfer de profundidad en Windows:
-1. Vaya a **editar** > **configuración del proyecto** > **Reproductor** > **ficha Universal Windows Platform**  >  **XR configuración**.
-2. Expanda el **Windows Mixed Reality SDK** elemento.
-3. Active o desactive el **Habilitar uso compartido de búfer de profundidad** casilla de verificación.  Esto se comprobará de forma predeterminada en los proyectos nuevos creados, ya que esta característica se agregó a Unity y estará desactivada de forma predeterminada para los proyectos anteriores que se han actualizado.
+Para establecer si la aplicación de Unity proporcionará un búfer de profundidad a Windows:
+1. Vaya a **Editar** > **configuración** > de proyecto reproductor plataforma universal de Windowspestaña > XR configuración. > 
+2. Expanda el elemento **SDK de Windows Mixed Reality** .
+3. Active o desactive la casilla **Habilitar uso compartido del búfer de profundidad** .  Se comprobará de forma predeterminada en los proyectos nuevos creados desde que esta característica se agregó a Unity y se desactivará de forma predeterminada para los proyectos anteriores que se actualizaron.
 
-Proporcionar un búfer de profundidad a Windows puede mejorar la calidad visual, siempre y cuando Windows pueden asignar con precisión los valores de la profundidad normalizada por píxel en el búfer de profundidad a las distancias en metros, con los planos far y near que ha establecido en Unity en la cámara principal.  Si la representación pasa la profundidad del identificador de valores de las formas más habituales, por lo general estará bien aquí, aunque render translúcido pasa que escriben en el búfer de profundidad al que se muestra a través de las existentes píxeles de color pueden confundir el reprojection.  Si sabe que las pasadas de representación deje muchos de los píxeles de profundidad final con valores de profundidad imprecisos, es probable que obtenga una mejor calidad visual, desactive la casilla "Habilitar profundidad búfer compartiendo".
+Proporcionar un búfer de profundidad a Windows puede mejorar la calidad visual, siempre y cuando Windows pueda asignar con precisión los valores normalizados de profundidad por píxel en el búfer de profundidad a distancias en metros, con los planos cercanos y lejanos que haya establecido en Unity en la cámara principal.  Si las pasadas de representación controlan los valores de profundidad de maneras típicas, generalmente debería estar bien aquí, aunque las pasadas de representación translúcidas que escriben en el búfer de profundidad mientras se muestran a los píxeles de color existentes pueden confundir la Reproyección.  Si sabe que las fases de representación van a dejar muchos de los píxeles de profundidad finales con valores de profundidad inexactos, es probable que obtenga una mejor calidad visual si desactiva "habilitar el uso compartido del búfer de profundidad".
 
-## <a name="mixed-reality-toolkits-automatic-scenesetup"></a>Programa de instalación automática de escenas de mixed Reality del Kit de herramientas
-Al importar [MRTK publicar paquetes de Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases) o clonar el proyecto desde el [repositorio de GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity), va a buscar un nuevo menú 'Kit de herramientas de realidad mixta' en Unity. En el menú "Configurar", verá el menú 'Aplicar configuración de escena de Mixed Reality'. Al hacer clic en él, quita la cámara de forma predeterminada y agrega los componentes básicos - [InputManager](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/InputManager.prefab), [MixedRealityCameraParent](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/MixedRealityCameraParent.prefab), y [DefaultCursor](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Prefabs/Cursor/DefaultCursor.prefab).
-
-![Menú MRTK para la instalación de la escena](images/MRTK_Input_Menu.png)<br>
-*Menú MRTK para la instalación de la escena*
-
-![Programa de instalación automática de escenas en MRTK](images/MRTK_HowTo_Input1.png)<br>
-*Programa de instalación automática de escenas en MRTK*
-
-## <a name="mixedrealitycamera-prefab"></a>MixedRealityCamera prefabricado
-Puede agregar también manualmente desde el panel de proyecto. Puede encontrar estos componentes como prefabricados. Al buscar **MixedRealityCamera**, podrá ver dos prefabricados cámara diferente. La diferencia es que **MixedRealityCamera** es la cámara solo prefabricado, mientras que **MixedRealityCameraParent** incluye componentes adicionales para el inmersivos como Teleportation, movimiento Controlador y límites.
-
-![Cámara prefabricados en MRTK](images/MRTK_HowTo_Input2.png)<br>
-*Cámara prefabricados en MRTK*
-
-**MixedRealtyCamera** admite HoloLens y auriculares envolventes. Detecta el tipo de dispositivo y optimiza las propiedades como borrar las marcas y Skybox. A continuación, encontrará algunas de las propiedades útiles que puede personalizar como Cursor personalizado, los modelos de controlador de movimiento y el suelo.
-
-![Propiedades para el controlador de movimiento de Cursor y Floor](images/MRTK_HowTo_Input3.png)<br>
-*Propiedades para el controlador de movimiento de Cursor y Floor*
 
 ## <a name="see-also"></a>Vea también
-* [Estabilidad holograma](hologram-stability.md)
-* [Camera.prefab MixedRealityToolkit principal](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)
+* [Estabilidad de hologramas](hologram-stability.md)
+* [Cámara principal de MixedRealityToolkit. recurso prefabricado](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)

@@ -1,11 +1,11 @@
 ---
-title: Barra de la aplicación y de cuadro de límite
-description: La barra de la aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestra en la parte inferior de los límites de un holograma.
+title: Cuadro de límite y barra de la aplicación
+description: La barra de la aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestran en el borde inferior de los límites de un holograma.
 author: radicalad
 ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
-keywords: Windows Mixed Reality, barra, cuadro de límite de aplicaciones
+keywords: Windows Mixed Reality, barra de aplicaciones, cuadro de límite
 ms.openlocfilehash: d289be31129324c6ff419b69dbce52bd8f62eb64
 ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
 ms.translationtype: MT
@@ -13,43 +13,43 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66829682"
 ---
-# <a name="bounding-box-and-app-bar"></a>Barra de la aplicación y de cuadro de límite
-![Rectángulo de selección es la interfaz estándar para la manipulación del objeto en la realidad mixta.](images/640px-boundingbox-hero.jpg)<br>
+# <a name="bounding-box-and-app-bar"></a>Cuadro de límite y barra de la aplicación
+![El límite es la interfaz estándar para la manipulación de objetos en la realidad mixta.](images/640px-boundingbox-hero.jpg)<br>
 
-## <a name="what-is-the-bounding-box"></a>¿Qué es el cuadro de límite?
+## <a name="what-is-the-bounding-box"></a>¿Cuál es el cuadro de límite?
 
-Rectángulo de selección es la interfaz estándar para la manipulación del objeto en la realidad mixta. Proporciona al usuario una prestación que el objeto está actualmente ajustable. Las esquinas indican al usuario que también puede escalar el objeto. Esta prestación visual muestra a los usuarios la superficie total del objeto, incluso si no está visible fuera de un modo de ajuste. Esto es especialmente importante porque si no fuese allí, puede aparecer un objeto que se ajustan a otro objeto o la superficie se comporte como si no hay espacio alrededor de ella que no debería estar allí. En HoloLens 2, el rectángulo de selección funciona con la manipulación directa de mano y responde a la proximidad del dedo del usuario. Muestra los comentarios visuales para ayudar al usuario percibir la distancia desde el objeto. 
+El límite es la interfaz estándar para la manipulación de objetos en la realidad mixta. Proporciona al usuario una asequibilidad de que el objeto es ajustable actualmente. Las esquinas indican al usuario que el objeto también se puede escalar. Esta prestación visual muestra a los usuarios el área total del objeto, aunque no sea visible fuera de un modo de ajuste. Esto es especialmente importante porque, si no estuviera allí, es posible que un objeto ajustado a otro objeto o superficie parezca que se comporte como si hubiera espacio alrededor que no debiera estar ahí. En HoloLens 2, el cuadro de límite funciona con la manipulación directa y responde a la proximidad del finger's del usuario. Muestra comentarios visuales para ayudar al usuario a percibir la distancia desde el objeto. 
 
-![HoloLens punto de vista de un objeto mediante el cuadro de límite de escalado](images/HoloLens2_BoundingBox.gif)<br>
-*Escalar un objeto mediante el cuadro de límite*
+![Punto de vista de HoloLens de escalado de un objeto a través del cuadro de límite](images/HoloLens2_BoundingBox.gif)<br>
+*Escalado de un objeto a través del cuadro de límite*
 
-Los identificadores en las esquinas del cuadro de límite siguen un patrón ampliamente conocido por el ajuste de escala. 
+Los manipuladores de las esquinas del cuadro de límite siguen un patrón muy entendido para ajustar la escala. 
 
-![HoloLens punto de vista de girar un objeto mediante el cuadro de límite](images/HoloLens2_BoundingBox_Rotate.gif)<br>
-*Girar un objeto mediante el cuadro de límite*
+![Punto de vista de HoloLens de girar un objeto a través del cuadro de límite](images/HoloLens2_BoundingBox_Rotate.gif)<br>
+*Girar un objeto a través del cuadro de límite*
 
 
-![Comentarios visuales en la proximidad de mano](images/HoloLens2_Proximity.gif)<br>
+![Comentarios visuales en proximidad](images/HoloLens2_Proximity.gif)<br>
 *Comentarios visuales basados en la proximidad*
 
-La factibilidad rectangular vertical de los bordes del cuadro de límite es indicadores de rotación. Esto proporciona al usuario más ajuste fino sobre sus hologramas colocados. No sólo pueden ajustar y escalar, pero ahora también girar.
+Las prestaciones rectangulares verticales en los bordes del cuadro de límite son indicadores de rotación. Esto proporciona al usuario un ajuste más preciso sobre sus hologramas colocados. No solo se pueden ajustar y escalar, sino que ahora giran.
 
-* Para el desarrollo de aplicaciones de Unity, vea [caja en Kit de herramientas de Unity de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+* Para el desarrollo de aplicaciones de Unity, consulte [cuadro de límite en el kit de herramientas de realidad mixta (Unity)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) .
 
 
 
-## <a name="what-is-the-app-bar"></a>¿Qué es la barra de aplicaciones?
+## <a name="what-is-the-app-bar"></a>¿Qué es la barra de la aplicación?
 
-La barra de la aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestra en la parte inferior de los límites de un holograma. Este patrón normalmente se usa para proporcionar a los usuarios la capacidad de quitar y ajustar hologramas.
+La barra de la aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestran en el borde inferior de los límites de un holograma. Este patrón se usa normalmente para proporcionar a los usuarios la capacidad de quitar y ajustar los hologramas.
 
-Puesto que este patrón se usa con objetos que son world bloqueado, como un usuario se mueve alrededor del objeto en que la barra de la aplicación siempre se mostrará en el lado de los objetos más cercano al usuario. Aunque esto no es vallas publicitarias, consigue eficazmente el mismo resultado; impide la posición a occlude de un usuario o la funcionalidad de bloqueo que podría estar disponible desde una ubicación diferente en su entorno.
+Puesto que este patrón se usa con objetos que están bloqueados por todo el mundo, a medida que un usuario se desplaza por el objeto, la barra de la aplicación siempre se mostrará en el lado de los objetos más cercano al usuario. Aunque esto no se está desformando, se consigue el mismo resultado; impedir que la posición de un usuario tapaba o bloquee la funcionalidad que, de otro modo, estará disponible desde una ubicación diferente en su entorno.
 
-![Desplazarse un holograma. Sigue la barra de la aplicación.](images/HoloLens2_AppBarFollowing.gif)<br>
-*Desplazarse un holograma, sigue la barra de aplicaciones*
+![Recorrer un holograma. A continuación se muestra la barra de la aplicación.](images/HoloLens2_AppBarFollowing.gif)<br>
+*Desplazarse por un holograma, la barra de la aplicación sigue*
 
-La barra de la aplicación se diseñó principalmente como una manera de administrar los objetos colocados en el entorno de un usuario. Junto con el cuadro de límite, un usuario tiene control total sobre dónde y cómo están orientadas a objetos en la realidad mixta.
+La barra de la aplicación se diseñó principalmente como una manera de administrar objetos colocados en el entorno de un usuario. Junto con el cuadro de límite, un usuario tiene control total sobre dónde y cómo se orientan los objetos en realidad mixta.
 
-* Para el desarrollo de aplicaciones de Unity, vea [barra de la aplicación en Kit de herramientas de Unity de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)
+* Para el desarrollo de aplicaciones de Unity, consulte [App bar en el kit de herramientas de realidad mixta (Unity)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html) .
 
 ## <a name="see-also"></a>Vea también
 * [Objeto con el que se puede interactuar](interactable-object.md)
