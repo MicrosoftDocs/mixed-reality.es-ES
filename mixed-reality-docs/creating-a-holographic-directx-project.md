@@ -1,69 +1,69 @@
 ---
-title: Creación de un proyecto de DirectX holográfico
+title: Creación de un proyecto de DirectX holográfica
 description: Explica cómo crear una nueva aplicación holográfica basada en la plantilla de aplicación de Windows Mixed Reality.
 author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, aplicación holográfica, nueva aplicación, aplicación de UWP, aplicación de la plantilla, hologramas, nuevo proyecto, tutorial, descarga, el código de ejemplo
-ms.openlocfilehash: a7eac9d8056fe5f7bcc442d6441f71331fa96cf6
-ms.sourcegitcommit: 19c9bff21061d485821b61c9f3498daef8fa8235
+keywords: Windows Mixed Reality, aplicación holográfica, nueva aplicación, aplicación para UWP, aplicación de plantilla, hologramas, nuevo proyecto, tutorial, descarga, código de ejemplo
+ms.openlocfilehash: 24f217021cd448f19a744696de42f580f139f76f
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65828125"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387619"
 ---
-# <a name="creating-a-holographic-directx-project"></a>Creación de un proyecto de DirectX holográfico
+# <a name="creating-a-holographic-directx-project"></a>Creación de un proyecto de DirectX holográfica
 
-Una aplicación holográfica crear pasarán a ser un HoloLens un <a href="https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide" target="_blank">plataforma Universal de Windows (UWP) app</a>.  Si el destino es auriculares de realidad mixta de Windows desktop, puede crear una aplicación para UWP o una aplicación de Win32.
+Una aplicación holográfica que cree para HoloLens será una <a href="https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide" target="_blank">aplicación plataforma universal de Windows (UWP)</a>.  Si el destino es una aplicación de escritorio con auriculares de realidad mixta, puede crear una aplicación para UWP o una aplicación de Win32.
 
-La plantilla de aplicación de DirectX 11 holográfica UWP es muy similar a la plantilla de aplicación para UWP de DirectX 11; incluye un bucle de programa (o "bucle de juego"), un **DeviceResources** clase para administrar el dispositivo Direct3D y el contexto y una clase de representador de contenido simplificada. También tiene un <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview" target="_blank">IFrameworkView</a>, al igual que cualquier otra aplicación UWP.
+La plantilla de aplicación para UWP DirectX 11 Holographic es muy similar a la de la aplicación UWP de DirectX 11; incluye un bucle de programa (o "bucle de juego"), una clase **DeviceResources** para administrar el dispositivo y el contexto de Direct3D, y una clase de representador de contenido simplificada. También tiene un <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview" target="_blank">IFrameworkView</a>, al igual que cualquier otra aplicación de UWP.
 
-La aplicación de realidad mixta, sin embargo, tiene algunas capacidades adicionales que no están presentes en una aplicación típica de UWP de Direct3D 11. La plantilla de aplicación de Windows Holographic es capaz de:
-* Controlar los recursos de dispositivo Direct3D asociados con las cámaras holográficas.
-* Recuperación de búferes de reserva de la cámara del sistema.
-* Controlar [que mirar](gaze.md) de entrada y reconocer un sencillo [gesto](gestures.md).
-* ENTRAR en modo de representación estéreo de pantalla completa.
+La aplicación de realidad mixta, sin embargo, tiene algunas funcionalidades adicionales que no están presentes en una aplicación típica de UWP 11 de Direct3D. La plantilla de aplicación de Windows Holographic es capaz de:
+* Controlar los recursos de dispositivo de Direct3D asociados a las cámaras holográficas.
+* Recupere los búferes de retroceso de la cámara del sistema.
+* Controle la entrada de [mirada](gaze.md) y reconozca un [gesto](gestures.md)sencillo.
+* Entrar en el modo de representación estéreo de pantalla completa.
 
-## <a name="how-do-i-get-started"></a>¿Cómo puedo comenzar?
+## <a name="how-do-i-get-started"></a>¿Cómo empiezo?
 
-Primera [instalar las herramientas de](install-the-tools.md), siguiendo las instrucciones sobre la descarga de Visual Studio 2017 y el emulador de Microsoft HoloLens. Las plantillas de aplicación holográfica se incluyen en el mismo instalador como el emulador de Microsoft HoloLens. Asegúrese de que está seleccionada la opción para instalar las plantillas antes de instalar.
+En primer lugar, [Instale las herramientas](install-the-tools.md)siguiendo las instrucciones de descarga de Visual Studio 2019 y del emulador de Microsoft HoloLens. Las plantillas de aplicación holográfica se incluyen en el mismo instalador que el emulador de Microsoft HoloLens. Asegúrese también de que la opción para instalar las plantillas está seleccionada antes de instalar.
 
-Ahora está listo para crear la aplicación DirectX 11 Windows Mixed Reality. Tenga en cuenta que para quitar el contenido de ejemplo, convierta en comentario la **DRAW_SAMPLE_CONTENT** directiva de preprocesador en *pch.h*.
+Ya está listo para crear la aplicación Windows mixed reality de DirectX 11. Tenga en cuenta que, para quitar el contenido de ejemplo, comente la Directiva de preprocesador **DRAW_SAMPLE_CONTENT** en *PCH. h*.
 
-## <a name="creating-a-uwp-project"></a>Creación de un proyecto UWP
+## <a name="creating-a-uwp-project"></a>Crear un proyecto de UWP
 
-Una vez el [se instalan herramientas](install-the-tools.md) , a continuación, puede crear un proyecto de UWP de DirectX holográfico.
+Una vez [instaladas las herramientas](install-the-tools.md) , puede crear un proyecto holográfica de DirectX para UWP.
 
 Para crear un nuevo proyecto:
-1. Iniciar **Visual Studio**.
-2. Desde el **archivo** menú, elija **New** y seleccione **proyecto** en el menú contextual. El **nuevo proyecto** abre el cuadro de diálogo.
-3. Expanda **instalado** a la izquierda y expanda el **Visual C++**  nodo de lenguaje.
-4. Navegue hasta la **Windows Universal > Holographic** nodo y seleccione **aplicación holográfica de 11 DirectX (Windows Universal) (C++/WinRT)**.
-   ![Captura de pantalla de la versión de DirectX 11 holográfica C++plantilla de proyecto de aplicación de WinRT UWP en Visual Studio](images/holographic-directx-app-cpp-new-project.png)<br>
-   *Holográfica DirectX 11 C++plantilla de proyecto de aplicación de WinRT UWP en Visual Studio*
+1. Inicie **Visual Studio**.
+2. En el menú **archivo** , elija **nuevo** y seleccione **proyecto** en el menú contextual. Se abrirá el cuadro de diálogo **nuevo proyecto** .
+3. Expanda **instalado** a la izquierda y expanda el nodo del lenguaje **Visual C++**  .
+4. Vaya al nodo **Windows Universal > Holographic** y seleccione **aplicación holográfica DirectX 11 (Windows universal) (C++/WinRT)** .
+   ![Captura de pantalla de la plantilla C++de proyecto de aplicación para UWP de Holographic DirectX 11/WinRT en Visual Studio](images/holographic-directx-app-cpp-new-project.png)<br>
+   *Plantilla de proyecto C++de aplicación para UWP de Holographic DirectX 11/WinRT en Visual Studio*
    >[!IMPORTANT]
-   >Asegúrese de que incluye el nombre de la plantilla de proyecto "(C++/WinRT)".  Si no, tiene una versión anterior de las plantillas de proyecto holográfica instaladas.  Para obtener las últimas plantillas de proyecto, [instalar el emulador de HoloLens más reciente](using-the-hololens-emulator.md).
-5. Rellene el **nombre** y **ubicación** cuadros de texto y haga clic o pulse **Aceptar**. Se crea el proyecto de aplicación holográfica.
-6. Para el desarrollo destinadas a solo 2 HoloLens, asegúrese de que el **versión de destino** y **versión mínima** se establecen en **Windows 10, versión 1903**.  Si desea usar también HoloLens (gen 1) o auriculares de realidad mixta de Windows desktop, puede establecer **versión mínima** a **Windows 10, versión 1809** en su lugar, aunque esto requerirá algunas <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank"> comprobaciones de versión adaptable</a> en el código al usar las nuevas características de HoloLens 2.
-   ![Captura de pantalla de configuración de Windows 10, versión 1903 como las versiones de destino y mínima](images/new-uwp-project.png)<br>
-   *Establecer **Windows 10, versión 1903** como las versiones de destino y mínima*
+   >Asegúrese de que el nombre de la plantilla de proyecto incluyeC++"(/WinRT)".  Si no es así, tiene instalada una versión anterior de las plantillas de proyecto holográfica.  Para obtener las plantillas de proyecto más recientes, [Instale el emulador de HoloLens más reciente](using-the-hololens-emulator.md).
+5. Rellene los cuadros de texto **nombre** y **Ubicación** , y pulse o haga clic en **Aceptar**. Se crea el proyecto de aplicación holográfica.
+6. Para el desarrollo dirigido solo a HoloLens 2, asegúrese de que la versión de **destino** y la **versión mínima** están establecidas en **Windows 10, versión 1903**.  Si también tiene como destino HoloLens (1ª generación) o Windows de escritorio con auriculares con pausas mixtas, puede establecer la **versión mínima** en **Windows 10, versión 1809** , aunque esto requerirá algunas comprobaciones adaptables de la <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">versión</a> en el código cuando se use New características de HoloLens 2.
+   ![Captura de pantalla de la configuración de la versión 1903 de Windows 10 como destino y versiones mínimas](images/new-uwp-project.png)<br>
+   *Establecimiento de la **versión 1903 de Windows 10** como destino y versiones mínimas*
    >[!IMPORTANT]
-   >Si no ve **Windows 10, versión 1903** como opción, no tiene el SDK de Windows 10 más recientes instalados.  Para obtener esta opción en aparecer, <a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">instalar la versión 10.0.18362.0 o posterior del SDK de Windows 10</a>.
+   >Si no ve **Windows 10, versión 1903** como opción, no tiene instalado el SDK más reciente de Windows 10.  Para que aparezca esta opción, <a href="https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk" target="_blank">Instale la versión 10.0.18362.0 o posterior del SDK de Windows 10</a>.
 
-La plantilla genera un proyecto con <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, una proyección de las APIs de tiempo de ejecución de Windows que admite cualquier conforme a los estándares C ++ 17 del compilador C ++ 17 lenguaje.  El proyecto muestra cómo crear un cubo bloqueado por el mundo que ha colocado dos metros del usuario. El usuario puede [pulsar en el aire](gestures.md#air-tap) o presione un botón en el controlador para colocar el cubo en una posición diferente en el que se especifica por el usuario [que mirar](gaze.md). Puede modificar este proyecto para crear cualquier aplicación de realidad mixta.
+La plantilla genera un proyecto con <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, una proyección de lenguaje c++ 17 de las API Windows Runtime que admite cualquier compilador de c++ 17 compatible con los estándares.  En el proyecto se muestra cómo crear un cubo con bloqueo mundial que esté colocado dos metros del usuario. El usuario puede pulsar en el [aire](gestures.md#air-tap) o presionar un botón en el controlador para colocar el cubo en una posición diferente especificada por el [usuario.](gaze.md) Puede modificar este proyecto para crear cualquier aplicación de realidad mixta.
 
-Como alternativa, puede crear un nuevo proyecto con el **Visual C#**  plantilla de proyecto holográfica, que se basa en SharpDX.  Si los holographic C# proyecto no se inició desde la plantilla de aplicación de Windows Holographic, deberá copiar el archivo ms.fxcompile.targets de un Windows Mixed Reality C# proyecto de plantilla y la importación en el archivo .csproj archivo con el fin de compilar HLSL archivos que agregue al proyecto.
+También puede crear un nuevo proyecto con la plantilla de proyecto **de C# visual** Holographic, que se basa en SharpDX.  Si el proyecto C# Holographic no se inició desde la plantilla de aplicación de Windows Holographic, deberá copiar el archivo MS. fxcompile. targets de un proyecto de plantilla C# de realidad mixta de Windows e importarlo en el archivo. csproj para compilar HLSL archivos que se agregan al proyecto.
 
-Revisión [con Visual Studio para implementar y depurar](using-visual-studio.md) para obtener información sobre cómo compilar e implementar el ejemplo en su HoloLens, PC con envolvente dispositivo conectado o un emulador.
+Revise el [uso de Visual Studio para implementar y](using-visual-studio.md) depurar para obtener información sobre cómo compilar e implementar el ejemplo en su HoloLens, el equipo con un dispositivo inmersivo conectado o un emulador.
 
-El resto de las instrucciones siguientes se presupone que está usando C++ para compilar la aplicación.
+En el resto de las instrucciones siguientes se asumirá que está C++ usando para compilar la aplicación.
 
-### <a name="uwp-app-entry-point"></a>Punto de entrada de aplicación UWP
+### <a name="uwp-app-entry-point"></a>Punto de entrada de aplicación de UWP
 
-Se inicia la aplicación UWP holográfica en el **wWinMain** función en AppView.cpp. El **wWinMain** función crea la aplicación <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview" target="_blank">IFrameworkView</a> e inicia la <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication" target="_blank">CoreApplication</a> con él.
+La aplicación holográfica UWP se inicia en la función **wWinMain** en AppView. cpp. La función **wWinMain** crea el <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.iframeworkview" target="_blank">IFrameworkView</a> de la aplicación e inicia <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication" target="_blank">CoreApplication</a> con él.
 
-Desde **AppView.cpp**:
+Desde **AppView. cpp**:
 
 ```cpp
 // The main function bootstraps into the IFrameworkView.
@@ -75,19 +75,19 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 }
 ```
 
-Desde ese momento, la clase AppView administra la interacción con los eventos de entrada básicos de Windows, eventos de CoreWindow y mensajería y así sucesivamente. También creará el HolographicSpace utilizado por la aplicación.
+A partir de ese momento, la clase AppView controla la interacción con los eventos de entrada básicos de Windows, los eventos y la mensajería de CoreWindow, etc. También creará el HolographicSpace que usa la aplicación.
 
-## <a name="creating-a-win32-project"></a>Crear un proyecto Win32
+## <a name="creating-a-win32-project"></a>Crear un proyecto de Win32
 
-La manera más fácil para empezar a compilar Win32 holográfica proyecto consiste en adaptar la <a href="https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/BasicHologram" target="_blank"> *BasicHologram* ejemplo Win32</a>.
+La manera más sencilla de empezar a crear un proyecto de Win32 Holographic es adaptar el <a href="https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/BasicHologram" target="_blank">ejemplo de Win32 *BasicHologram* </a>.
 
-Este ejemplo Win32 utiliza <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, una proyección de las APIs de tiempo de ejecución de Windows que admite cualquier conforme a los estándares C ++ 17 del compilador C ++ 17 lenguaje.  El proyecto muestra cómo crear un cubo bloqueado por el mundo que ha colocado dos metros del usuario. El usuario puede presionar un botón en el controlador para colocar el cubo en una posición diferente en el que se especifica por el usuario [que mirar](gaze.md). Puede modificar este proyecto para crear cualquier aplicación de realidad mixta.
+En este ejemplo de Win32 se usa <a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/" target="_blank"> C++/WinRT</a>, una proyección de lenguaje c++ 17 de las API Windows Runtime que admite cualquier compilador de c++ 17 compatible con los estándares.  En el proyecto se muestra cómo crear un cubo con bloqueo mundial que esté colocado dos metros del usuario. El usuario puede presionar un botón en el controlador para colocar el cubo en una posición diferente especificada por el [usuario.](gaze.md) Puede modificar este proyecto para crear cualquier aplicación de realidad mixta.
 
-### <a name="win32-app-entry-point"></a>Punto de entrada de aplicación de Win32
+### <a name="win32-app-entry-point"></a>Punto de entrada de la aplicación Win32
 
-Se inicia la aplicación Win32 holográfica en el **wWinMain** función en AppMain.cpp. El **wWinMain** función crea el HWND de la aplicación e inicia su bucle de mensajes.
+La aplicación holográfica Win32 se inicia en la función **wWinMain** en AppMain. cpp. La función **wWinMain** crea el HWND de la aplicación e inicia su bucle de mensajes.
 
-Desde **AppMain.cpp**:
+Desde **AppMain. cpp**:
 
 ```cpp
 int APIENTRY wWinMain(
@@ -119,41 +119,41 @@ int APIENTRY wWinMain(
 }
 ```
 
-Desde ese momento, la clase AppMain administra la interacción con los mensajes de ventana básico y así sucesivamente. También creará el HolographicSpace utilizado por la aplicación.
+A partir de ese momento, la clase AppMain controla la interacción con los mensajes básicos de la ventana, etc. También creará el HolographicSpace que usa la aplicación.
 
-## <a name="render-holographic-content"></a>Representar el contenido holográfica
+## <a name="render-holographic-content"></a>Representación de contenido holográfica
 
-El proyecto **contenido** carpeta contiene clases para hologramas de representación en el [espacio holográfica](getting-a-holographicspace.md). El holograma de forma predeterminada en la plantilla es un cubo girando que ha colocado dos metros del usuario. Este cubo de dibujo se implementa en **SpinningCubeRenderer.cpp**, que tiene estos métodos claves:
+La carpeta de **contenido** del proyecto contiene clases para representar hologramas en el [espacio holográfica](getting-a-holographicspace.md). El holograma predeterminado de la plantilla es un cubo giratorio que se coloca dos metros fuera del usuario. El dibujo de este cubo se implementa en **SpinningCubeRenderer. cpp**, que tiene estos métodos clave:
 
 |  Método  |  Explicación | 
 |----------|----------|
-|  `CreateDeviceDependentResources` |  Carga a los sombreadores y crea la malla del cubo. | 
-|  `PositionHologram` |  Coloca el holograma en la ubicación especificada por el objeto <a href="https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose" target="_blank">SpatialPointerPose</a>. | 
-|  `Update` |  Gira el cubo y establece la matriz de modelo. | 
-|  `Render` |  Representa un marco con los sombreadores de vértices y píxeles. | 
+|  `CreateDeviceDependentResources` |  Carga los sombreadores y crea la malla del cubo. | 
+|  `PositionHologram` |  Coloca el holograma en la ubicación especificada por el <a href="https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose" target="_blank">SpatialPointerPose</a>proporcionado. | 
+|  `Update` |  Gira el cubo y establece la matriz del modelo. | 
+|  `Render` |  Representa un marco con los sombreadores de píxeles y vértices. | 
 
-El **sombreadores** subcarpeta contiene cuatro implementaciones de sombreador predeterminado:
+La  subcarpeta shaders contiene cuatro implementaciones de sombreador predeterminadas:
 
-|  Shader  |  Explicación | 
+|  Sombreador  |  Explicación | 
 |----------|----------|
-|  `GeometryShader.hlsl` |  Un acceso directo que deja la geometría sin modificar. | 
-|  `PixelShader.hlsl` |  Pasa a través de los datos de color. Los datos de color se interpolan y asignados a un píxel en el paso de la rasterización. | 
-|  `VertexShader.hlsl` |  Sombreador sencillo para el procesamiento de vértices en la GPU. | 
-|  `VPRTVertexShader.hlsl` |  Sombreador sencillo para el procesamiento de vértices en la GPU, que está optimizada para la representación de Windows Mixed Reality estéreo. | 
+|  `GeometryShader.hlsl` |  Un paso a través que deja la geometría sin modificar. | 
+|  `PixelShader.hlsl` |  Pasa por los datos de color. Los datos de color se interpolan y se asignan a un píxel en el paso de rasterización. | 
+|  `VertexShader.hlsl` |  Sombreador simple para realizar el procesamiento de vértices en la GPU. | 
+|  `VPRTVertexShader.hlsl` |  Sombreador simple para realizar el procesamiento de vértices en la GPU, que está optimizado para la representación estéreo de realidad mixta de Windows. | 
 
-`VertexShaderShared.hlsl` contiene el código común compartido entre `VertexShader.hlsl` y `VPRTVertexShader.hlsl`.
+`VertexShaderShared.hlsl`contiene código común compartido entre `VertexShader.hlsl` y `VPRTVertexShader.hlsl`.
 
-Los sombreadores se compilan cuando se compila el proyecto y que están cargados en el **SpinningCubeRenderer::CreateDeviceDependentResources** método.
+Los sombreadores se compilan cuando se compila el proyecto y se cargan en el método **SpinningCubeRenderer:: CreateDeviceDependentResources** .
 
-## <a name="interact-with-your-holograms"></a>Interactuar con sus hologramas
+## <a name="interact-with-your-holograms"></a>Interactúe con los hologramas
 
-Se procesa la entrada del usuario en el **SpatialInputHandler** clase, que obtiene un <a href="https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionmanager" target="_blank">SpatialInteractionManager</a> de instancia y se suscribe a la <a href="https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed" target="_blank">SourcePressed</a> eventos. Esto permite detectar el gesto de pulsar en el aire y otros eventos de entrada espaciales.
+La entrada del usuario se procesa en la clase **SpatialInputHandler** , que obtiene una instancia de <a href="https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionmanager" target="_blank">SpatialInteractionManager</a> y se suscribe al evento <a href="https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionmanager.sourcepressed" target="_blank">SourcePressed</a> . Esto permite detectar el gesto de punteo de aire y otros eventos de entrada espacial.
 
-## <a name="update-holographic-content"></a>Actualizar contenido holográfica
+## <a name="update-holographic-content"></a>Actualización del contenido holográfica
 
-Las actualizaciones de la aplicación de realidad mixta en un bucle de juego, que de forma predeterminada, se implementa en el **actualización** método `AppMain.cpp`. El **actualización** método actualiza los objetos de la escena, al igual que el cubo girando y devuelve un <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> objeto que se usa para obtener las matrices de proyección y de vista actualizadas y presentar la cadena de intercambio.
+Las actualizaciones de la aplicación de realidad mixta en un bucle de juego, que se implementa  de forma predeterminada `AppMain.cpp`en el método de actualización en. El método **Update** actualiza los objetos de la escena, como el cubo giratorio, y devuelve un objeto <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> que se usa para obtener las matrices de la vista y la proyección actualizadas y para presentar la cadena de intercambio.
 
-El **representar** método `AppMain.cpp` toma el <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> y presenta el marco actual a cada cámara holográfica, según la aplicación actual y el estado de posición espacial.
+El método **Render** en `AppMain.cpp` toma el <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> y representa el marco actual en cada cámara holográfica, según la aplicación actual y el estado de posicionamiento espacial.
 
 ## <a name="see-also"></a>Vea también
 * [Obtención de HolographicSpace](getting-a-holographicspace.md)
