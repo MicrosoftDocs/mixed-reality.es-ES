@@ -1,50 +1,50 @@
 ---
-title: Transferencias de anclaje local en Unity
-description: Transferir los delimitadores entre varios dispositivos de HoloLens en una aplicación de Unity.
+title: Transferencias de delimitadores locales en Unity
+description: Transfiera los anclajes entre varios dispositivos de HoloLens en una aplicación de Unity.
 author: fieldsJacksonG
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Recursos compartidos, delimitador, WorldAnchor, MR compartir 250, WorldAnchorTransferBatch, SpatialPerception, transferencia, transferencia local de anclaje, exportación de anclaje, importación de anclaje
+keywords: Uso compartido, delimitador, WorldAnchor, MR Sharing 250, WorldAnchorTransferBatch, SpatialPerception, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
 ms.openlocfilehash: 82bcd07417fd5aa1b265ebc3c8edc939101dd783
-ms.sourcegitcommit: f7fc9afdf4632dd9e59bd5493e974e4fec412fc4
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59605775"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516138"
 ---
-# <a name="local-anchor-transfers-in-unity"></a>Transferencias de anclaje local en Unity
+# <a name="local-anchor-transfers-in-unity"></a>Transferencias de delimitadores locales en Unity
 
-En situaciones donde no se puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure espacial delimitadores</a>, las transferencias de anclaje local habilitar un dispositivo HoloLens exportar un delimitador para ser importadas por un segundo dispositivo HoloLens.
-
->[!NOTE]
->Las transferencias de anclaje locales proporcionan menos sólida retirada de anclaje que <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure espacial delimitadores</a>, y dispositivos iOS y Android no son compatibles con este enfoque.
-
-### <a name="setting-the-spatialperception-capability"></a>Establecer la capacidad de SpatialPerception
-
-En orden para una aplicación transferir los anclajes de espaciales, el *SpatialPerception* posibilidad debe habilitarse.
-
-Cómo habilitar el *SpatialPerception* capacidad:
-1. En el Editor de Unity, abra el **"Configuración del Reproductor"** panel (Editar > configuración del proyecto > Reproductor)
-2. Haga clic en el **"Windows Store"** ficha
-3. Expanda **"Configuración de publicación"** y compruebe el **"SpatialPerception"** capacidad en el **"Capacidades"** lista
+En situaciones en las que no se pueden usar delimitadores espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
 
 >[!NOTE]
->Si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o manualmente [establecer esta funcionalidad en el AppxManifest en Visual Studio](local-anchor-transfers-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
+>Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
 
-### <a name="anchor-transfer"></a>Transferencia de anclaje
+### <a name="setting-the-spatialperception-capability"></a>Establecimiento de la funcionalidad SpatialPerception
 
-**Namespace:** *UnityEngine.XR.WSA.Sharing*<br>
+Para que una aplicación transfiera los anclajes espaciales, se debe habilitar la funcionalidad *SpatialPerception* .
+
+Cómo habilitar la funcionalidad *SpatialPerception* :
+1. En el editor de Unity, abra el panel de **configuración del reproductor** (Editar > configuración del proyecto > Player).
+2. Haga clic en la pestaña **"tienda Windows"**
+3. Expanda **"configuración de publicación"** y seleccione la funcionalidad **"SpatialPerception"** en la lista **"funcionalidades"** .
+
+>[!NOTE]
+>Si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o establecer manualmente [esta funcionalidad en el AppxManifest de Visual Studio](local-anchor-transfers-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
+
+### <a name="anchor-transfer"></a>Transferencia de delimitador
+
+**System.IO** *UnityEngine. XR. WSA. Sharing*<br>
 **Tipo**: *WorldAnchorTransferBatch*
 
-Para transferir un [WorldAnchor](coordinate-systems-in-unity.md), uno debe establecer el delimitador que se transferirá. El usuario de uno HoloLens examina su entorno y manualmente o mediante programación, elige un punto en el espacio que el delimitador de la experiencia compartida. A continuación, se pueden serializar y transmitir a los otros dispositivos que están compartiendo en la experiencia de los datos que representa este punto. Cada dispositivo, a continuación, deserializa los datos de anclaje e intenta localizar ese punto en el espacio. En orden para transferir ancla para que funcione, cada dispositivo debe escaneen suficiente del entorno de modo que se puede identificar el punto representado por el delimitador.
+Para transferir un [WorldAnchor](coordinate-systems-in-unity.md), debe establecer el delimitador que se va a transferir. El usuario de un HoloLens examina su entorno y, de forma manual o mediante programación, elige un punto en el espacio para que sea el delimitador de la experiencia compartida. Los datos que representan este punto se pueden serializar y transmitir a los otros dispositivos que compartan la experiencia. Después, cada dispositivo deserializa los datos de delimitador e intenta buscar ese punto en el espacio. Para que la transferencia de delimitador funcione, cada dispositivo debe haber explorado en el entorno suficiente, de modo que se pueda identificar el punto representado por el delimitador.
 
 ### <a name="setup"></a>Programa de instalación
 
-El código de ejemplo en esta página tiene unos cuantos campos que deben inicializarse:
-1. *GameObject rootGameObject* es un *GameObject* en Unity que tiene un *WorldAnchor* componente en él. Un usuario en la experiencia compartida Esto colocará *GameObject* y exportar los datos a los demás usuarios.
-2. *WorldAnchor gameRootAnchor* es el *UnityEngine.XR.WSA.WorldAnchor* que se encuentra en *rootGameObject*.
-3. *Byte [] importedData* es una matriz de bytes para el delimitador serializada recibe cada cliente a través de la red.
+El código de ejemplo de esta página tiene algunos campos que se deben inicializar:
+1. *GameObject rootGameObject* es un *GameObject* en Unity que tiene un componente *WorldAnchor* en él. Un usuario de la experiencia compartida colocará esta *GameObject* y exportará los datos a los demás usuarios.
+2. *WorldAnchor gameRootAnchor* es *UnityEngine. XR. WSA. WorldAnchor* que se encuentra en *rootGameObject*.
+3. *Byte [] importedData* es una matriz de bytes para el delimitador serializado que recibe cada cliente a través de la red.
 
 ```
 public GameObject rootGameObject;
@@ -61,16 +61,16 @@ void Start ()
 }
 ```
 
-### <a name="exporting"></a>Exportar
+### <a name="exporting"></a>Exportador
 
-Para exportar, sólo necesitamos un *WorldAnchor* y saber lo que llamaremos a lo que resulta conveniente para la aplicación receptora. Un cliente en la experiencia compartida llevará a cabo estos pasos para exportar el delimitador compartido:
-1. Crear un *WorldAnchorTransferBatch*
-2. Agregar el *WorldAnchors* para transferir
-3. Iniciar la exportación
-4. Controlar la *OnExportDataAvailable* eventos como los datos se convierte en disponible
-5. Controlar la *OnExportComplete* eventos
+Para exportar, solo necesitamos un *WorldAnchor* y para saber lo que le llamaremos de modo que tenga sentido para la aplicación receptora. Un cliente de la experiencia compartida realizará estos pasos para exportar el delimitador compartido:
+1. Creación de un *WorldAnchorTransferBatch*
+2. Agregar *WorldAnchors* para transferir
+3. Inicio de la exportación
+4. Controlar el evento *OnExportDataAvailable* a medida que los datos estén disponibles
+5. Controlar el evento *OnExportComplete*
 
-Creamos un *WorldAnchorTransferBatch* para encapsular lo que se pueden transferir y exportarlas a continuación, en bytes:
+Creamos un *WorldAnchorTransferBatch* para encapsular lo que se va a transferir y exportarlo en bytes:
 
 ```
 private void ExportGameRootAnchor()
@@ -81,7 +81,7 @@ private void ExportGameRootAnchor()
 }
 ```
 
-Cuando hay datos disponibles, enviar los bytes en el cliente o el búfer como segmentos de datos está disponible y enviar a través de cualquier medio deseado:
+A medida que los datos estén disponibles, envíe los bytes al cliente o búfer a medida que los segmentos de datos estén disponibles y envíe los medios que desee:
 
 ```
 private void OnExportDataAvailable(byte[] data)
@@ -90,7 +90,7 @@ private void OnExportDataAvailable(byte[] data)
 }
 ```
 
-Una vez completada la exportación, si nos hemos transferir datos y la serialización no se pudo, indicar al cliente para descartar los datos. Si la serialización se realizó correctamente, indicar al cliente que se ha transferido todos los datos y puede empezar a importar:
+Una vez completada la exportación, si se ha producido un error en la transferencia de datos y en la serialización, indique al cliente que descarte los datos. Si la serialización se realizó correctamente, indique al cliente que se han transferido todos los datos y que se puede iniciar la importación:
 
 ```
 private void OnExportComplete(SerializationCompletionReason completionReason)
@@ -106,9 +106,9 @@ private void OnExportComplete(SerializationCompletionReason completionReason)
 }
 ```
 
-### <a name="importing"></a>Importar
+### <a name="importing"></a>Importa
 
-Después de recibir todos los bytes del remitente, podemos importar los datos en un *WorldAnchorTransferBatch* y bloquear el objeto de juego de raíz en la misma ubicación física. Nota: importación transiently a veces, se producirá un error y necesita volver a intentarlo:
+Después de recibir todos los bytes del remitente, se pueden volver a importar los datos en un *WorldAnchorTransferBatch* y bloquear el objeto de juego raíz en la misma ubicación física. Nota: la importación a veces producirá un error temporal y se debe volver a intentar:
 
 ```
 // This byte array should have been updated over the network from TransferDataToClient
@@ -137,5 +137,5 @@ private void OnImportComplete(SerializationCompletionReason completionReason, Wo
 }
 ```
 
-Después de un *GameObject* está bloqueada mediante el *LockObject* llamada, tendrá un *WorldAnchor* que mantendrá en la misma posición física en el mundo, pero puede estar en un espacio que otros usuarios de coordenadas de ubicación diferente en el Unity.
+Después de que un *GameObject* se bloquee a través de la llamada de *LockObject* , tendrá un *WorldAnchor* que lo mantendrá en la misma posición física del mundo, pero puede estar en una ubicación diferente en el espacio de coordenadas de Unity que otros usuarios.
 

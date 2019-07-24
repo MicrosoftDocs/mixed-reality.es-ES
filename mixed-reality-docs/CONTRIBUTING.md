@@ -1,79 +1,79 @@
 ---
-title: Instrucciones de contribución
+title: Instrucciones de colaboración
 description: Cómo contribuir a la documentación de Windows Mixed Reality.
 author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
 ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59605694"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63516220"
 ---
-# <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Colaborar en la documentación para desarrolladores de Windows Mixed Reality
+# <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Contribución a la documentación para desarrolladores de realidad mixta de Windows
 
-Bienvenido a la [repositorio público de documentación para desarrolladores de Windows Mixed Reality](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs)! Los artículos se crean o editan en este repositorio **serán visibles para el público.** 
+Este es el [repositorio público de la documentación para desarrolladores de Windows Mixed Reality](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs). Los artículos que cree o edite en este repositorio **serán visibles para el público.** 
 
-Los documentos de Windows Mixed Reality ahora están en la plataforma de docs.microsoft.com, que usa el marcado característico de GitHub (con características Markdig). En esencia, activar en páginas estilizadas y con formato que se muestran en el contenido que se edita en este repositorio https://docs.microsoft.com/windows/mixed-reality. 
+Los documentos de Windows Mixed Reality se encuentran ahora en la plataforma docs.microsoft.com, que usa el Markdown con tipo GitHub (con características Markdig). En esencia, el contenido que se edita en este repositorio se convierte en páginas con formato y estilizadas que https://docs.microsoft.com/windows/mixed-reality se muestran en. 
 
-Esta página trata los pasos básicos y directrices para contribuir, así como vínculos a los conceptos básicos de Markdown. Le agradecemos su contribución.
+En esta página se describen los pasos básicos y las instrucciones para contribuir, así como vínculos a los conceptos básicos de Markdown. Gracias por su contribución.
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
-Si aún no tiene uno, deberá [crear una cuenta de GitHub](https://github.com/join).
+Si aún no tiene una, deberá [crear una cuenta de github](https://github.com/join).
 
 >[!NOTE]
->Si es empleado de Microsoft, vincular su cuenta de GitHub para el alias de Microsoft en la [portal de código abierto de Microsoft](https://repos.opensource.microsoft.com/). Únase a la **"Microsoft"** y **"MicrosoftDocs"** organizaciones).
+>Si es un empleado de Microsoft, vincule su cuenta de GitHub a su alias de Microsoft en el [portal de código abierto de Microsoft](https://repos.opensource.microsoft.com/). Únase a las organizaciones **"Microsoft"** y **"MicrosoftDocs"** ).
 
-Al configurar la cuenta de GitHub, también se recomienda que estas precauciones de seguridad:
-- Crear un [contraseña segura para la cuenta de Github](https://github.com/settings/admin).
-- Habilitar [autenticación en dos fases](https://github.com/settings/two_factor_authentication/configure).
-- Guarde su [códigos de recuperación](https://github.com/settings/auth/recovery-codes) en un lugar seguro.
-- Actualización de su [configuración del perfil público](https://github.com/settings/profile).
-   - Configure su nombre y considere la posibilidad de su *correo electrónico público* a *no mostrar mi dirección de correo electrónico*.
-   - Se recomienda cargar una imagen de perfil, tal como se mostrará una miniatura en páginas de docs a las que contribuya.
-- Si tiene previsto usar un flujo de trabajo de línea de comandos, considere la posibilidad de configurar [Git Credential Manager para Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest) para que no tengan que escribir la contraseña cada vez que realizar una contribución.
+Al configurar la cuenta de GitHub, también se recomiendan estas precauciones de seguridad:
+- Cree una [contraseña segura para la cuenta de github](https://github.com/settings/admin).
+- Habilitar [la autenticación en dos fases](https://github.com/settings/two_factor_authentication/configure).
+- Guarde los [códigos de recuperación](https://github.com/settings/auth/recovery-codes) en un lugar seguro.
+- Actualice la [configuración del perfil público](https://github.com/settings/profile).
+   - Establezca su nombre y considere la posibilidad de establecer el *correo electrónico público* para *no mostrar la dirección de correo electrónico*.
+   - Se recomienda cargar una imagen de perfil, ya que se mostrará una miniatura en las páginas de docs a las que contribuya.
+- Si planea usar un flujo de trabajo de línea de comandos, considere la posibilidad de configurar el [Administrador de credenciales de Git para Windows de](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest) modo que no tenga que escribir la contraseña cada vez que realice una contribución.
 
-Si realiza estos pasos es importante, como el sistema de publicación está asociado a GitHub y se mostrarán como autor o colaborador en cada artículo mediante su alias de GitHub.
+Realizar estos pasos es importante, ya que el sistema de publicación está asociado a GitHub y se mostrará como autor o colaborador en cada artículo mediante el alias de GitHub.
 
 ## <a name="editing-an-existing-article"></a>Edición de un artículo existente
 
-Use el siguiente flujo de trabajo para realizar actualizaciones para *un artículo existente* a través de GitHub en un explorador web:
+Use el siguiente flujo de trabajo para efectuar actualizaciones en *un artículo existente* a través de github en un explorador Web:
 
-1. Vaya al artículo que desea editar en la carpeta "mixto de realidad-docs".
-2. En la esquina superior derecha, seleccione el botón Editar (icono de lápiz). Esto automáticamente bifurcará descartable bifurcación de la rama "principal".
+1. Navegue hasta el artículo que desea editar en la carpeta "Mixed Reality-docs".
+2. Seleccione el botón Editar (icono de lápiz) en la parte superior derecha. Se bifurcará automáticamente una rama descartable de la rama "principal".
 
-   ![Editar un artículo.](images/editpage.png)
-3. Editar el contenido del artículo (consulte ["Aspectos básicos de Markdown"](#markdown-basics) a continuación para obtener instrucciones).
-4. Actualizar los metadatos como importante en la parte superior de cada artículo:
-   * title: Este es el título de página que aparece en la pestaña del explorador cuando se está viendo el artículo. Puesto que se usa para la indexación y la SEO, no debería cambiar el título a menos que es necesario (aunque esto es menos crítica antes de que quede pública documentación).
-   * description: Escriba una breve descripción del contenido del artículo. Esto ayuda a SEO y detección.
-   * Autor: Si es el propietario de la página principal, agregue aquí su alias de GitHub.
-   * ms.author: Si es el propietario de la página principal, agregue su alias aquí de Microsoft (no es necesario @microsoft.com, sólo con el alias).
-   * ms.date: Si va a agregar contenido importante a la página, pero no para las revisiones como aclaración, formato, gramática, o de ortografía, actualice la fecha.
-   * palabras clave: Palabras clave ayudan a SEO (optimización de motor de búsqueda). Agregar palabras clave, separadas por una coma y un espacio, que son específicas de su artículo (pero sin puntuación después de la última palabra clave en la lista); no es necesario agregar las palabras clave globales que se aplican a todos los artículos, como los que se administran en otro lugar. 
-5. Cuando haya completado las modificaciones del artículo, desplácese hacia abajo y haga clic en el **proponer cambio de archivo** botón.
-6. En la siguiente página, haga clic en **crear solicitud de incorporación de cambios** para combinar la rama creada automáticamente en 'master'.
-7. Repita los pasos anteriores para el siguiente artículo que desea editar.
+   ![Edite un artículo.](images/editpage.png)
+3. Edite el contenido del artículo (consulte ["conceptos básicos de Markdown"](#markdown-basics) a continuación para obtener instrucciones).
+4. Actualice los metadatos como corresponda en la parte superior de cada artículo:
+   * Titulo Este es el título de la página que aparece en la pestaña del explorador cuando se está viendo el artículo. Como se usa para SEO e indexación, no debe cambiar el título a menos que sea necesario (aunque esto es menos crítico antes de que la documentación sea pública).
+   * description: Escriba una breve descripción del contenido del artículo. Esto ayuda en la SEO y la detección.
+   * frente Si es el propietario principal de la página, agregue aquí su alias de GitHub.
+   * MS. Author: Si es el propietario principal de la página, agregue aquí su alias de Microsoft (no es necesario @microsoft.com, solo el alias).
+   * MS. Date: Actualice la fecha Si va a agregar contenido principal a la página, pero no para correcciones como aclaración, formato, gramática o ortografía.
+   * palabra Palabras clave: ayuda en SEO (optimización del motor de búsqueda). Agregue palabras clave, separadas por una coma y un espacio, específicas de su artículo (pero sin puntuación después de la última palabra clave de la lista); no es necesario agregar palabras clave globales que se apliquen a todos los artículos, ya que se administran en otro lugar. 
+5. Cuando haya terminado de editar el artículo, desplácese hacia abajo y haga clic en el botón **proponer cambio de archivo** .
+6. En la página siguiente, haga clic en **crear solicitud de incorporación** de cambios para fusionar mediante combinación la rama creada automáticamente en ' maestra '.
+7. Repita los pasos anteriores para el siguiente artículo que desee editar.
 
-## <a name="creating-a-new-article"></a>Crear un nuevo artículo
+## <a name="creating-a-new-article"></a>Creación de un nuevo artículo
 
-Use el siguiente flujo de trabajo *crear nuevos artículos* en el repositorio de documentación a través de GitHub en un explorador web:
+Use el siguiente flujo de trabajo para *crear nuevos artículos* en el repositorio de documentación a través de github en un explorador Web:
 
-1. Crear una bifurcación de la rama "principal" MicrosoftDocs/realidad mixta (mediante el **bifurcación** botón en la esquina superior derecha).
+1. Cree una bifurcación desconectada de la rama "principal" de MicrosoftDocs/Mixed  reality (con el botón bifurcar en la parte superior derecha).
 
-   ![Bifurcación de la rama maestra.](images/forkbranch.png)
-2. En la carpeta "mixto de realidad-docs", haga clic en el **crear nuevo archivo** botón en la esquina superior derecha.
-3. Crear un nombre de página para el artículo (utilice guiones en lugar de espacios y no use signos de puntuación o apóstrofos) y anexar "MD"
+   ![Bifurcar la bifurcación principal.](images/forkbranch.png)
+2. En la carpeta "Mixed Reality-docs", haga clic en el botón **crear nuevo archivo** en la parte superior derecha.
+3. Crear un nombre de página para el artículo (usar guiones en lugar de espacios y no usar signos de puntuación ni apóstrofos) y anexar ". MD"
 
-   ![Nombre de la nueva página.](images/newpagetitle.PNG)
+   ![Asigne un nombre a la nueva página.](images/newpagetitle.PNG)
    
    >[!IMPORTANT]
-   >Asegúrese de que crear el nuevo artículo desde dentro de la carpeta "mixto de realidad-docs". Puede confirmarlo comprobando "/ docs de realidad mixta /" en la línea de nombre de archivo nuevo.
+   >Asegúrese de crear el nuevo artículo desde la carpeta "Mixed Reality-docs". Puede confirmarlo comprobando "/Mixed-Reality-docs/" en la nueva línea de nombre de archivo.
 
-4. En la parte superior de la nueva página, agregue el siguiente bloque de metadatos:
+4. En la parte superior de la página nueva, agregue el siguiente bloque de metadatos:
 
    ```md
    ---
@@ -87,117 +87,117 @@ Use el siguiente flujo de trabajo *crear nuevos artículos* en el repositorio de
    ---
    ```
 
-5. Rellene los campos de metadatos relevantes por las instrucciones de la [sección anterior](#editing-an-existing-article).
-6. Artículo de escritura contenido mediante [conceptos básicos de Markdown](#markdown-basics).
-7. Agregar un `## See also` en la parte inferior del artículo con vínculos a artículos relevantes.
-8. Cuando termine, haga clic en **confirmación nuevo archivo**.
-9. Haga clic en **nueva solicitud de incorporación de cambios** y combinar rama "principal" de la bifurcación en MicrosoftDocs/realidad mixta 'master' (asegúrese de que la flecha señala la manera correcta).
+5. Rellene los campos de metadatos pertinentes según las instrucciones de la [sección anterior](#editing-an-existing-article).
+6. Escriba el contenido del artículo con los [conceptos básicos de Markdown](#markdown-basics).
+7. Agregue una `## See also` sección en la parte inferior del artículo con vínculos a otros artículos relevantes.
+8. Cuando termine, haga clic en **confirmar nuevo archivo**.
+9. Haga clic en **nueva solicitud de incorporación** de cambios y mezcle la rama ' maestra ' de la bifurcación en MicrosoftDocs/mixed-reality ' maestra ' (Asegúrese de que la flecha señala la manera correcta).
 
-   ![Crear solicitud de incorporación de cambios de la bifurcación en MicrosoftDocs/realidad mixta](images/pr_to_master.PNG)
+   ![Cree una solicitud de incorporación de cambios de la bifurcación en MicrosoftDocs/Mixed-Reality](images/pr_to_master.PNG)
 
-## <a name="markdown-basics"></a>Conceptos básicos de markdown
+## <a name="markdown-basics"></a>Aspectos básicos de Markdown
 
-Los siguientes recursos le ayudarán a obtener información sobre cómo editar la documentación mediante el lenguaje de Markdown:
+Los siguientes recursos le ayudarán a aprender a editar la documentación con el lenguaje Markdown:
 
-- [Conceptos básicos de markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-- [Póster de referencia de markdown de instantánea](images/MarkdownPoster.pdf)
-- [Recursos adicionales para la escritura de Markdown para docs.microsoft.com](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [Aspectos básicos de Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+- [Póster de referencia de Markdown a un vistazo](images/MarkdownPoster.pdf)
+- [Recursos adicionales para escribir Markdown para docs.microsoft.com](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>Agregar tablas
 
-Debido a las tablas de los estilos de docs.microsoft.com de forma, no tienen bordes o estilos personalizados, incluso si se trata de CSS en línea. Parece que funcionan durante un breve período de tiempo, pero finalmente la plataforma eliminará el estilo fuera de la tabla. Por lo tanto, planee con antelación y simplificar las tablas. [Este es un sitio que facilita las tablas de Markdown](http://www.tablesgenerator.com/markdown_tables).
+Debido a la forma en que docs.microsoft.com las tablas de estilos, no tendrán bordes ni estilos personalizados, aunque pruebe CSS en línea. Parecerá que funciona durante un breve período de tiempo, pero finalmente la plataforma eliminará el estilo de la tabla. Por tanto, planee con facilidad y mantenga las tablas sencillas. [Este es un sitio que facilita las tablas de Markdown](http://www.tablesgenerator.com/markdown_tables).
 
-El [extensión Docs Markdown para Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) también hace que la tabla generación fácil si usa [Visual Studio Code (ver abajo)](#using-visual-studio-code) para editar la documentación.
+La [extensión docs Markdown para Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) también facilita la generación de tablas si usa [Visual Studio Code (consulte a continuación)](#using-visual-studio-code) para editar la documentación.
 
-### <a name="adding-images"></a>Adición de imágenes
+### <a name="adding-images"></a>Agregar imágenes
 
-Deberá cargar sus imágenes a la carpeta "mixto-realidad-docs/images" en el repositorio y, a continuación, hacer referencia a ellos correctamente en el artículo. Las imágenes se mostrarán automáticamente en tamaño completo, lo que significa que si la imagen es grande, rellenará todo el ancho del artículo. Por lo tanto, se recomienda ajustar previamente el tamaño de las imágenes antes de cargarlos. El ancho recomendado es de 600 a 700 píxeles, aunque debe dimensionar o reducir verticalmente si es una captura de pantalla con gran densidad o una fracción de una captura de pantalla, respectivamente.
+Tendrá que cargar las imágenes en la carpeta "Mixed Reality-docs/Images" del repositorio y, a continuación, hacer referencia a ellas correctamente en el artículo. Las imágenes se mostrarán automáticamente a tamaño completo, lo que significa que si la imagen es grande, rellenará el ancho completo del artículo. Por lo tanto, se recomienda ajustar el tamaño de las imágenes antes de cargarlas. El ancho recomendado es de entre 600 y 700 píxeles, aunque debe ajustarse verticalmente o reducirse si es una captura de pantalla densa o una fracción de una captura de pantalla, respectivamente.
 
 >[!IMPORTANT]
->Solo puede cargar imágenes en el repositorio bifurcado antes de la mezcla. Por lo tanto, si tiene previsto agregar imágenes a un artículo, deberá [usar Visual Studio Code](#using-visual-studio-code) para agregar las imágenes a la carpeta "images" de la bifurcación primero o asegúrese de que ha hecho lo siguiente en un explorador web:
+>Solo puede cargar imágenes en el repositorio bifurcado antes de la combinación. Por lo tanto, si planea agregar imágenes a un artículo, deberá [usar Visual Studio Code](#using-visual-studio-code) para agregar las imágenes a la carpeta "images" de la bifurcación en primer lugar o asegurarse de que ha realizado lo siguiente en un explorador Web:
 >
->1. Bifurcado el repositorio MicrosoftDocs/realidad mixta.
->2. Puede editar el artículo en la bifurcación.
->3. Cargar las imágenes que se hace referencia en el artículo a la carpeta "mixto-realidad-docs/images" en la bifurcación.
->4. Crea un **solicitud de extracción** para combinar la bifurcación en la rama "principal" MicrosoftDocs/realidad mixta.
+>1. Se ha bifurcado el repositorio MicrosoftDocs/Mixed Reality.
+>2. Editó el artículo en la bifurcación.
+>3. Cargó las imágenes a las que hace referencia en el artículo en la carpeta "Mixed Reality-docs/Images" de la bifurcación.
+>4. Se creó una **solicitud de incorporación** de cambios para fusionar mediante combinación la bifurcación en la rama "principal" de MicrosoftDocs/Mixed Reality.
 >
 >Para obtener información sobre cómo configurar su propio repositorio bifurcado, siga las instrucciones para [crear un nuevo artículo](#creating-a-new-article).
 
-## <a name="previewing-your-work"></a>Vista previa de su trabajo
+## <a name="previewing-your-work"></a>Obtener una vista previa del trabajo
 
-Mientras se edita en GitHub a través de un explorador web, puede hacer clic en el **Preview** ficha cerca de la parte superior de la página para obtener una vista previa de su trabajo antes de confirmar. 
+Mientras edita en GitHub a través de un explorador Web, puede hacer clic en la pestaña **vista previa** situada cerca de la parte superior de la página para obtener una vista previa del trabajo antes de confirmar. 
 
 >[!NOTE]
->Vista previa de los cambios en review.docs.microsoft.com solo está disponible para los empleados de Microsoft
+>La vista previa de los cambios en review.docs.microsoft.com solo está disponible para los empleados de Microsoft
 
-Los empleados de Microsoft: una vez que se han combinado las contribuciones en la rama "principal", puede ver el aspecto de la documentación antes de enviarlos pública en https://review.docs.microsoft.com/windows/mixed-reality?branch=master (encontrar su artículo con la tabla de contenido de la columna izquierda).
+Empleados de Microsoft: una vez que las contribuciones se han combinado en la rama "principal", puede ver el aspecto que tendrá la documentación antes de https://review.docs.microsoft.com/windows/mixed-reality?branch=master que sea pública (busque el artículo mediante la tabla de contenido de la columna izquierda).
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Edición en el explorador frente a edición con un cliente de escritorio
 
-La edición en el explorador es la manera más fácil realizar cambios rápidos, sin embargo, hay algunas desventajas:
+La edición en el explorador es la forma más sencilla de realizar cambios rápidos; sin embargo, hay algunas desventajas:
 
-- No obtendrá el corrector ortográfico.
-- No obtendrá ninguna vinculación inteligente a otros artículos (tendrá que escribir manualmente el nombre de archivo del artículo).
+- No obtiene la revisión ortográfica.
+- No obtiene ninguna vinculación inteligente a otros artículos (tiene que escribir manualmente el nombre de archivo del artículo).
 - Puede ser una molestia para cargar y hacer referencia a las imágenes.
 
-Si en su lugar podría no tratar con estos problemas, es preferible usar un cliente de escritorio como [Visual Studio Code](https://code.visualstudio.com/) con un par [extensiones útiles](#useful-extensions) para contribuir a la documentación.
+Si prefiere no tratar estos problemas, es posible que prefiera usar un cliente de escritorio como [Visual Studio Code](https://code.visualstudio.com/) con un par de [extensiones útiles](#useful-extensions) para contribuir a la documentación.
 
-## <a name="using-visual-studio-code"></a>Con Visual Studio Code
+## <a name="using-visual-studio-code"></a>Usar Visual Studio Code
 
-Por motivos de la lista [anteriormente](#editing-in-the-browser-vs-editing-with-a-desktop-client), quizás prefiera usar un cliente de escritorio para editar la documentación en lugar de un explorador web. Se recomienda usar [Visual Studio Code](https://code.visualstudio.com/).
+Por los motivos mencionados [anteriormente](#editing-in-the-browser-vs-editing-with-a-desktop-client), es posible que prefiera usar un cliente de escritorio para editar la documentación en lugar de un explorador Web. Se recomienda el uso de [Visual Studio Code](https://code.visualstudio.com/).
 
 ### <a name="setup"></a>Programa de instalación
 
-Siga estos pasos para configurar el código de Visual Studio para trabajar con este repositorio:
+Siga estos pasos para configurar Visual Studio Code para trabajar con este repositorio:
 
-1. En un explorador web:
-    1. Instalar [Git para su PC](https://git-scm.com/downloads).
-    2. Instalar [código de Visual Studio](https://code.visualstudio.com/).
-    3. [Bifurcar MicrosoftDocs/realidad mixta](#creating-a-new-article) si no lo ha hecho ya.
-    4. En la bifurcación, haga clic en **clonar o descargar** y copie la dirección URL.
-2. Crear un clon local de la bifurcación en Visual Studio Code:
-    1. Desde el **vista** menú, seleccione **paleta de comandos**.
-    2. Tipo "Git:Clone".
+1. En un explorador Web:
+    1. Instale [git para su PC](https://git-scm.com/downloads).
+    2. Instale [Visual Studio Code](https://code.visualstudio.com/).
+    3. [Bifurcación MicrosoftDocs/Mixed-Reality](#creating-a-new-article) si todavía no lo ha hecho.
+    4. En la bifurcación, haga clic en **clonar o descargar** y copiar la dirección URL.
+2. Cree un clon local de la bifurcación en Visual Studio Code:
+    1. En el menú **Ver** , seleccione **paleta de comandos**.
+    2. Escriba "git: Clone".
     3. Pegue la dirección URL que acaba de copiar.
     4. Elija dónde desea guardar el clon en su PC.
-    5. Haga clic en **repositorio abierto** en el menú emergente.
+    5. Haga clic en **abrir repositorio** en el menú emergente.
 
-### <a name="editing-documentation"></a>Edición de la documentación
+### <a name="editing-documentation"></a>Editar documentación
 
-Use el siguiente flujo de trabajo para realizar cambios en la documentación de Visual Studio Code:
+Use el siguiente flujo de trabajo para realizar cambios en la documentación con Visual Studio Code:
 
 >[!NOTE]
->Todas las instrucciones para [edición](#editing-an-existing-article) y [crear](#creating-a-new-article) artículos y el [aspectos básicos de la edición de Markdown](#markdown-basics), desde arriba se aplica cuando se usa Visual Studio Code también.
+>Todas las instrucciones para [Editar](#editing-an-existing-article) y [crear](#creating-a-new-article) artículos, y los [aspectos básicos de la edición de Markdown](#markdown-basics), de lo anterior se aplican también cuando se usa Visual Studio Code.
 
-1. Asegúrese de que la bifurcación clonada está actualizada con el repositorio oficial.
-   1. En un explorador web, cree una solicitud de incorporación de cambios para sincronizar los cambios recientes de otros colaboradores en MicrosoftDocs/realidad mixta 'master' en la bifurcación (asegúrese de que la flecha señala la manera correcta).
+1. Asegúrese de que la bifurcación clonada esté actualizada con el repositorio oficial.
+   1. En un explorador Web, cree una solicitud de incorporación de cambios para sincronizar los cambios recientes de otros colaboradores en MicrosoftDocs/mixed-reality ' maestra ' en la bifurcación (Asegúrese de que la flecha señala el modo correcto).
       
-      ![Sincronizar los cambios de MicrosoftDocs/realidad mixta en la bifurcación](images/sync_repos.PNG)
-   2. En Visual Studio Code, haga clic en el botón de sincronización para sincronizar la bifurcación recién actualizada al clon local.
+      ![Sincronización de los cambios de MicrosoftDocs/Mixed-Reality en la bifurcación](images/sync_repos.PNG)
+   2. En Visual Studio Code, haga clic en el botón sincronizar para sincronizar la bifurcación recién actualizada con el clon local.
       
-      ![Haga clic en el botón Sincronizar](images/sync_clone.png)
+      ![Haga clic en el botón sincronizar](images/sync_clone.png)
 2. Cree o edite artículos en el repositorio clonado mediante Visual Studio Code.
-   1. Editar uno o más artículos (agregar imágenes a la carpeta "images" si es necesario).
-   2. **Guardar** cambia en **Explorer**.
+   1. Edite uno o varios artículos (agregue imágenes a la carpeta "images" si es necesario).
+   2. **Guarde** los cambios en el **Explorador**.
       
-      ![Elija "Guardar todo" en el explorador](images/explorer_save.png)
-   3. **Confirmar todo** cambia en **Control de código fuente** (Escribir mensaje de confirmación cuando se le solicite).
+      ![Elija "guardar todo" en el explorador.](images/explorer_save.png)
+   3. **Confirmar todos** los cambios en el **control de código fuente** (escribir mensaje de confirmación cuando se le solicite).
       
-      ![Elija "Confirmar todo" en el Control de código fuente](images/source_control_commit.png)
-   4. Haga clic en el **sincronización** botón para sincronizar los cambios de nuevo al origen (la bifurcación en GitHub).
+      ![Elegir "confirmar todo" en el control de código fuente](images/source_control_commit.png)
+   4. Haga clic  en el botón sincronizar para volver a sincronizar los cambios con el origen (la bifurcación en GitHub).
       
-      ![Haga clic en el botón Sincronizar](images/sync_back.png)
-3. En un explorador web, cree una solicitud de incorporación de cambios para sincronizar los cambios nuevo en la bifurcación a MicrosoftDocs/realidad mixta 'master' (asegúrese de que la flecha señala la manera correcta).
+      ![Haga clic en el botón sincronizar](images/sync_back.png)
+3. En un explorador Web, cree una solicitud de incorporación de cambios para sincronizar nuevos cambios en la bifurcación de nuevo en MicrosoftDocs/mixed-reality ' maestra ' (Asegúrese de que la flecha señala la manera correcta).
 
-   ![Crear solicitud de incorporación de cambios de la bifurcación en MicrosoftDocs/realidad mixta](images/pr_to_master.PNG)
+   ![Cree una solicitud de incorporación de cambios de la bifurcación en MicrosoftDocs/Mixed-Reality](images/pr_to_master.PNG)
 
 ### <a name="useful-extensions"></a>Extensiones útiles
 
-Las siguientes extensiones de Visual Studio Code son muy útiles cuando se edita la documentación:
+Las siguientes extensiones de Visual Studio Code son muy útiles al editar la documentación:
 
-- [Extensión docs Markdown para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) -uso **Alt + M** para que aparezca un menú de opciones, como de creación de docs:
-   - Búsqueda y referencia de imágenes que ha cargado.
-   - Agregar formato, como listas, tablas y leyendas específico de documentos como `>[!NOTE]`.
-   - Buscar y hacer referencia a vínculos internos y los marcadores (vínculos a secciones específicas dentro de una página).
-   - Se resaltan los errores de formato (mantenga el mouse sobre el error para obtener más información).
-- [Corrector ortográfico de código](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) -aparecerá subrayadas; haga doble clic en una palabra mal escrita para cambiarla o guardarlo en el diccionario de palabras mal escritas.
+- La [extensión de Markdown de docs para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) : use **Alt + M** para abrir un menú de opciones de creación de docs como:
+   - Imágenes de búsqueda y de referencia que ha cargado.
+   - Agregue formato como listas, tablas y llamadas específicas de documentos como `>[!NOTE]`.
+   - Buscar y hacer referencia a vínculos internos y marcadores (vínculos a secciones específicas de una página).
+   - Los errores de formato se resaltan (mantenga el mouse sobre el error para obtener más información).
+- [Corrector ortográfico de código](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) : las palabras mal escritas se subrayan; Haga clic con el botón derecho en una palabra mal escrita para cambiarla o guardarla en el diccionario.

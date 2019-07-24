@@ -5,14 +5,13 @@ author: shentan
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Windows Mixed Reality, design, interaction, voice
-ms.openlocfilehash: f2362400cba2946c3e97a7128c410ddcd17b4362
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
-ms.translationtype: HT
+ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66402368"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387645"
 ---
 # <a name="voice-commanding"></a>Comandos de voz
 
@@ -22,11 +21,24 @@ Al utilizar los comandos de voz, la mirada se utiliza normalmente como un mecani
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
 <table>
-<tr>
-<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª generación)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
-</tr><tr>
-<td>Comandos de voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️ (con casco adjunto)</td>
-</tr>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
+    </tr>
+     <tr>
+        <td>Comandos de voz</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>✔️ (con casco adjunto)</td>
+    </tr>
 </table>
 
 
@@ -35,13 +47,13 @@ Al utilizar los comandos de voz, la mirada se utiliza normalmente como un mecani
 
 Considera la posibilidad de agregar comandos de voz a cualquier experiencia que compiles. La voz es una manera eficaz y cómoda de controlar el sistema y las aplicaciones. Dado que los usuarios hablan con variantes regionales y acentos diversos, la opción adecuada de palabras clave de voz asegurará que los comandos de los usuarios se interpretan de forma inequívoca.
 
-### <a name="best-practices"></a>Procedimiento recomendado
+### <a name="best-practices"></a>Procedimientos recomendados
 
 A continuación se muestran algunas prácticas que te ayudarán a realizar sin problemas las tareas de reconocimiento de voz.
-* **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Por ejemplo: "Reproducir vídeo" es mejor que "Reproducir el vídeo seleccionado actualmente"
+* **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "Reproducir vídeo" es mejor que "Reproducir el vídeo seleccionado actualmente"
 * **Usa un vocabulario sencillo**: por ejemplo, "Mostrar nota" es mejor que "Mostrar letrero"
 * **Asegúrate de que los comandos no sean destructivos**: haz que cualquier acción que se puede realizar mediante un comando de voz no sea destructiva, y se pueda deshacer fácilmente, en caso de que otra persona que esté hablando cerca del usuario pueda desencadenar accidentalmente un comando.
-* **Evita los comandos que tengan un sonido similar**: evita registrar varios comandos de voz que suenen de forma parecida. Por ejemplo: "Mostrar más" y "Mostrar atrás" pueden sonar muy parecido.
+* **Evita los comandos que tengan un sonido similar**: evita registrar varios comandos de voz que suenen de forma parecida. Ejemplo: "Mostrar más" y "Mostrar atrás" pueden sonar muy parecido.
 * **Anula el registro de la aplicación cuando no esté en uso**: cuando la aplicación no está en un estado en el que un comando de voz determinado es válido, considera la posibilidad de anular el registro de modo que otros comandos no se confundan con ese.
 * **Prueba con diferentes acentos**: prueba la aplicación con usuarios con diferentes acentos.
 * **Mantén la coherencia en los comandos de voz**: si "Volver" va a la página anterior, mantén este comportamiento en tus aplicaciones.
@@ -101,6 +113,6 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 * ¿Cómo dirijo mi voz a una aplicación o un comando de la aplicación específicos?
 * ¿Puedo usar la voz para comandar cosas en el marco holográfico en HoloLens?
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Gestos](gestures.md)
 * [Control con la cabeza y permanencia](gaze-and-dwell.md)

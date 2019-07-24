@@ -1,60 +1,62 @@
 ---
 title: 'Módulo base de aprendizaje de Mixed Reality: Interacción con objetos 3D'
-description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+description: ''
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 05/02/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 45e772de0825fe2161f880a165d6c75c755b849e
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
-ms.translationtype: HT
+ms.openlocfilehash: d47f2940ad741cb436322a824a67f54bb6376c55
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "65730906"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387695"
 ---
-# <a name="mr-learning-base-module---3d-object-interaction"></a>Módulo base de aprendizaje de Mixed Reality: Interacción con objetos 3D
+# <a name="5-interacting-with-3d-objects"></a>5. Interactuar con objetos 3D
 
-En esta lección revisaremos el contenido 3D básico y la experiencia del usuario. Aprenderemos a organizar objetos 3D como parte de una colección e información sobre los rectángulos de selección para la manipulación básica, la interacción próxima y lejana, y los gestos de tocar y agarrar con el seguimiento manual. 
+En este tutorial, se proporciona información sobre el contenido 3D básico y la experiencia del usuario. Aprenderemos lo siguiente: 
+* Organizar objetos 3D como parte de una colección.
+* Cuadros de límite para la manipulación básica.
+* Interacción cercana y lejana.
+* Gestos táctiles y de agarre con seguimiento manual. 
 
 ## <a name="objectives"></a>Objetivos
 
-* Aprender a organizar el contenido 3D mediante la colección de objetos de cuadrícula de MRTK
+* Obtenga información sobre cómo organizar el contenido 3D con la colección de objetos Grid de MRTK
 * Implementar rectángulos de selección
-* Configurar objetos 3D para la manipulación básica (mover, girar y escalar)
+* Configurar objetos 3D para la manipulación básica: movimiento, rotación y escala
 * Explorar la interacción próxima y lejana
-* Aprender información sobre otros gestos de seguimiento manuales, como agarrar y tocar
+* Más información acerca de los gestos de seguimiento de la mano, como captar y tocar
 
 ## <a name="instructions"></a>Instrucciones
 
 ### <a name="organizing-3d-objects-in-a-collection"></a>Organización de los objetos 3D en una colección
 
-1. Haz clic con el botón derecho en la jerarquía y selecciona "Create Empty" (Crear vacío). Así se crea un objeto de juego vacío. Cámbiale el nombre a "3DObjectCollection". Aquí colocaremos todos nuestros objetos 3D. Asegúrate de que la posición de la colección se establece en x = 0, y = 0 y, z = 0.
+1. Haga clic con el botón derecho en la jerarquía y seleccione crear vacío. Así se crea un objeto de juego vacío. Cambie el nombre a 3DObjectCollection. Aquí colocaremos todos nuestros objetos 3D. Asegúrate de que la posición de la colección se establece en x = 0, y = 0 y, z = 0.
 
 ![Imagen de la lección 4, capítulo 1, paso 1](images/Lesson4_Chapter1_step1im.PNG)
 
-2. Importa los recursos BaseModule siguiendo las instrucciones para importar paquetes personalizados que se describen en la [lección 1](mrlearning-base-ch1.md). Los recursos BaseModule incluyen módulos 3D y otros script útiles que se usarán en este tutorial. El paquete BaseModule de Unity se encuentra aquí: <https://github.com/Microsoft/MixedRealityLearning/releases/tag/V1.1>.
+2. Importe los recursos de BaseModule con las mismas instrucciones para importar los paquetes personalizados descritos en [Lesson1](mrlearning-base-ch1.md). Los recursos de BaseModule incluyen módulos 3D y otros scripts útiles que se usan en este tutorial. El paquete de Unity de BaseModule se puede encontrar aquí:<https://github.com/Microsoft/MixedRealityLearning/releases/tag/V1.1>
 
-3. El objeto prefabricado CoffeeCup se reconoce por el cubo azul que lo acompaña. No debes seleccionar el objeto CoffeeCup con el cubo azul y la nota blanca (que denota el modelo 3D original y no el prefabricado). 
+3. El objeto prefabricado CoffeeCup se reconoce por el cubo azul que lo acompaña. No seleccione la taza de café con el cubo azul y las notas del producto pequeñas, ya que indica el modelo 3D original, no el recurso prefabricado). 
 
 ![Imagen de la lección 4, capítulo 1, nota a](images/Lesson4_chapter1_noteaim.PNG)
 
-4. Arrastra el objeto prefabricado CoffeeCup que prefieras al objeto de juego "3DObjectCollection" del paso 1. Ahora la taza de café será un elemento secundario de la colección.
+4. Arrastre el recurso prefabricado de la taza de café que prefiera al objeto de juego 3DObjectCollection del paso 1. Ahora la taza de café será un elemento secundario de la colección.
 
 ![Imagen de la lección 4, capítulo 1, paso 4](images/Lesson4_chapter1_step4ima.PNG)
 
-5. Ahora agregaremos más objetos 3D a la escena. A continuación se muestra la lista de objetos que vamos a agregar en este ejemplo. Al ir agregando objetos, pueden aparecer en la escena con distintos tamaños. Ajusta la escala de los modelos 3D en la configuración de transformación del panel del inspector. Los ajustes recomendados para este ejemplo se muestran con los objetos siguientes. Escribe estas palabras en el cuadro de búsqueda del panel del proyecto y arrastra el objeto 3D prefabricado al objeto "3DObjectCollection", como en el paso anterior. Esta colección de objetos prefabricados se encuentra en Assets>BaseModuleAssets>Base Module Prefabs (Recursos>RecursosDeMóduloBase>Objetos prefabricados del módulo base)
-- Busca "TheModule_BaseModuleIncomplete" y arrástralo a la escena. Establece la escala en x = 0.03; y = 0.03; z = 0.03. 
-- Busca "Octa_BaseModuleIncomplete" y arrástralo a la escena. Establece la escala en x = 0.13; y = 0.13; z =0.13.
-- Busca "EarthCore_BaseModuleIncomplete" y arrástralo a la escena. Establece la escala en x = 50.0; y = 50.0; z = 50.0.
-- Busca "Cheese_BaseModuleIncomplete" y arrástralo a la escena. Establece la escala en x = 0.05; y = 0.05; z = 0.05.
-- Busca "Model_Platonic_BaseModuleIncomplete" y arrástralo a la escena. Establece la escala en x = 0.13; y = 0.13; z = 0.13.
-- Busca "CoffeeCup_BaseModuleIncomplete" y arrástralo a la escena.
+5. Ahora agregaremos más objetos 3D a la escena. A continuación se muestra la lista de objetos que vamos a agregar en este ejemplo. A medida que agrega los objetos, es posible que aparezcan en la escena en varios tamaños. Ajuste la escala de cada modelo 3D en configuración de transformación en el panel Inspector. Los ajustes recomendados para este ejemplo se muestran con los objetos siguientes. Busque en estas palabras en el cuadro de búsqueda del panel del proyecto y arrastre el objeto 3D recurso prefabricado al objeto 3DObjectCollection de forma similar al paso anterior. Encontrará estas colecciones de Prefabs en assets > BaseModuleAssets > módulo base Prefabs
+- Busque TheModule_BaseModuleIncomplete. arrástralo a la escena. Establece la escala en x = 0.03; y = 0.03; z = 0.03. 
+- Busque Octa_BaseModuleIncomplete. arrástralo a la escena. Establece la escala en x = 0.13; y = 0.13; z =0.13.
+- Busque EarthCore_BaseModuleIncomplete. arrástralo a la escena. Establece la escala en x = 50.0; y = 50.0; z = 50.0.
+- Busque Cheese_BaseModuleIncomplete. arrástralo a la escena. Establece la escala en x = 0.05; y = 0.05; z = 0.05.
+- Busque Model_Platonic_BaseModuleIncomplete. arrástralo a la escena. Establece la escala en x = 0.13; y = 0.13; z = 0.13.
 
 ![Imagen de la lección 4, capítulo 1, paso 5](images/Lesson4_Chapter1_step5im.PNG)
 
-6. Agrega 3 cubos a la escena. Haz clic con el botón derecho en el objeto "3DObjectCollection" y selecciona "3D Object" (Objeto 3D) y "Cube" (Cubo). Establece la escala en x = 0.14; y = 0.14; z = 0.14. Repite este paso dos veces más para crear tres cubos en total. Para conseguir los tres, puedes duplicar el cubo dos veces. También puedes usar los tres cubos prefabricados preparados de Assets>BaseModuleAssets>Base Module Prefabs (Recursos>RecursosDeMóduloBase>Objetos prefabricados del módulo base) y seleccionar GreenCube_BaseModuleIncomplete, BlueCube_BaseModuleIncomplete y OrangeCube_BaseModuleIncomplete.
+6. Agregue tres cubos a la escena. Haga clic con el botón derecho en el objeto 3DObjectCollection, seleccione objeto 3D y, a continuación, seleccione cubo. Establece la escala en x = 0.14; y = 0.14; z = 0.14. Repita este paso dos veces más para crear un total de tres cubos. Como alternativa, puede duplicar el cubo dos veces para un total de tres cubos. También puedes usar los tres cubos prefabricados preparados de Assets>BaseModuleAssets>Base Module Prefabs (Recursos>RecursosDeMóduloBase>Objetos prefabricados del módulo base) y seleccionar GreenCube_BaseModuleIncomplete, BlueCube_BaseModuleIncomplete y OrangeCube_BaseModuleIncomplete.
 
 ![Imagen de la lección 4, capítulo 1, paso 6](images/Lesson4_Chapter1_step6im.PNG)
 
@@ -62,145 +64,146 @@ En esta lección revisaremos el contenido 3D básico y la experiencia del usuari
 
 ![Imagen de la lección 4, capítulo 1, nota b](images/Lesson4_chapter1_notebim.PNG)
 
->Nota: Puedes notar que algunos de los objetos están descentrados, como los de la imagen anterior. Esto se debe a que los recursos prefabricados o los objetos pueden tener objetos secundarios sin alinear. Puedes realizar los ajustes de posición necesarios en los objetos o los objetos secundarios para alinear la cuadrícula correctamente.
+>Nota: Es posible que observe que algunos de los objetos están fuera del centro, como los objetos de la imagen anterior. Esto se debe a que los recursos prefabricados o los objetos pueden tener objetos secundarios sin alinear. Puedes realizar los ajustes de posición necesarios en los objetos o los objetos secundarios para alinear la cuadrícula correctamente.
 
 
 ### <a name="manipulating-3d-objects"></a>Manipulación de objetos 3D
-1. Agrega la capacidad de manipular un cubo. Para agregar la capacidad de manipular objetos 3D, debes hacer lo siguiente:
--   Selecciona el objeto 3D que desees manipular en la jerarquía (en este ejemplo, uno de los cubos).
--   Haz clic en "Add component" (Agregar componente). 
--   Busca "Manipulation" (Manipulación).
--   Selecciona "Manipulation Handler" (Controlador de manipulación).
--   Repite el proceso para todos los objetos 3D del objeto "3DObjectCollection", pero no para "3DObjectCollection".
--   Asegúrate de que todos los objetos 3D tienen un colisionador o un colisionador de cuadro (Add Component > Box Collider [Agregar componente > Colisionador de cuadro]).
+1. Agrega la capacidad de manipular un cubo. Para agregar la capacidad de manipular objetos 3D, haga lo siguiente:
+-   Seleccione el objeto 3D que desea manipular en la jerarquía, es decir, uno de los cubos.
+-   Haga clic en Agregar componente. 
+-   Busque manipulación.
+-   Seleccione controlador de manipulación.
+-   Repita el procedimiento con todos los objetos 3D del objeto 3DObjectCollection, pero no con el propio 3DObjectCollection.
+-   Asegúrese de que todos los objetos 3D tengan un Colisionador de cuadro o Colisionador (agregar Colisionador de cuadro de > de componentes).
 
 ![Imagen de la lección 4, capítulo 2, paso 1](images/Lesson4_chapter2_step1im.PNG)
 
->El controlador de manipulación es un componente que permite ajustar la configuración de cómo se comportan los objetos al manipularlos. Esto incluye el giro, el escalado, el movimiento y la limitación de movimiento en determinados ejes. 
+>El controlador de manipulación es un componente que le permite ajustar la configuración de cómo se comportan los objetos cuando se manipulan. Esto incluye la rotación, el escalado, el movimiento y la restricción de movimiento en un eje específico. 
 
-2. Restringe un cubo para que solo se pueda escalar. Selecciona un cubo del objeto "3DObjectCollection". En el panel del inspector, junto a "Two Handed Manipulation Type" (Manipulación con dos manos), haz clic en el menú desplegable y selecciona "Scale" (Escalar). Esto hace que el usuario solo pueda cambiar del cubo el tamaño.
+2. Restringe un cubo para que solo se pueda escalar. Seleccione un cubo en el objeto 3DObjectCollection. En el panel Inspector, junto a tipo de manipulación dos manos, haga clic en el menú desplegable y seleccione escalar. Esto hace que el usuario solo pueda cambiar del cubo el tamaño.
 
 ![Imagen de la lección 4, capítulo 2, paso 2](images/Lesson4_Chapter2_step2im.PNG)
 
 3. Cambia el color de cada cubo para que los podemos diferenciar. 
--   Ve al panel del proyecto y desplázate hacia abajo hasta que veas "MixedRealityToolkit.SDK" y puedas seleccionarlo.
--   Selecciona la carpeta "Standard Assets" (Recursos estándar).
--   Haz clic en la carpeta "Materials" (Materiales).
+-   Vaya al panel Proyecto y desplácese hacia abajo hasta que vea MixedRealityToolkit. SDK y, a continuación, selecciónelo.
+-   Seleccione la carpeta activos estándar.
+-   Haga clic en la carpeta materiales.
 -   Arrastra un material distinto a cada cubo. 
 
->Nota: Para los cubos, puedes elegir cualquier color. En nuestro ejemplo, vamos a usar "glowingcyan", "glowingorange," y "green". Puedes también experimentar con otros colores. Para agregar el color al cubo, haz clic en el cubo correspondiente y arrastra el material al campo de material de la representación de la malla en el panel del inspector del cubo. 
+>Nota: Para los cubos, puedes elegir cualquier color. En nuestro ejemplo, vamos a usar glowingcyan, glowingorange y Green. Puedes también experimentar con otros colores. Para agregar el color al cubo, haga clic en el cubo que desea cambiar y, a continuación, arrastre el material al campo material del representador de malla en el panel Inspector del cubo. 
 
 ![Imagen de la lección 4, capítulo 2, paso 3](images/Lesson4_Chapter2_step3im.PNG)
 
-4. Selecciona otro cubo del objeto "3DObjectCollection" y haz que solo se pueda mover una distancia fija desde la cabeza. Para ello, a la derecha de "Constraint on Movement" (Limitación del movimiento), haz clic en el menú desplegable y selecciona "Fix Distance From Head" (Distancia fija desde la cabeza). De esta manera, el usuario solo podrá mover el cubo dentro de su campo de visión. 
+4. Seleccione otro cubo en el objeto 3DObjectCollection y conviértalo de modo que su movimiento esté restringido a una distancia fija desde el encabezado. Para ello, a la derecha de la etiqueta restricción en movimiento, haga clic en el menú desplegable y seleccione corregir distancia en el encabezado. De esta manera, el usuario solo podrá mover el cubo dentro de su campo de visión. 
 
 ![Imagen de la lección 4, capítulo 2, paso 4](images/Lesson4_chapter2_step4im.PNG)
 
-Objetivo de los siguientes pasos: podremos agarrar nuestros objetos 3D e interactuar con ellos. Aplicaremos distintas configuraciones de manipulación. 
+El objetivo de los siguientes pasos es habilitar la captación e interacción con nuestros objetos 3D y la aplicación de diferentes configuraciones de manipulación.
 
-5. Selecciona el objeto Cheese y, en el panel del inspector, haz clic en "Add Component" (Agregar componente). 
+5. Seleccione el objeto queso y haga clic en Agregar componente en el panel Inspector. 
 
-6. En el cuadro de búsqueda, busca "Near Interaction Grabbable" (Interacción próxima: atrapar) y selecciona el script. Este componente permite a los usuarios alcanzar y agarrar los objetos con las manos con seguimiento. Los objetos también se pueden manipular a distancia, a menos que esté desactivada la casilla "Allow Far Manipulation" (Permitir la manipulación lejana), la que tiene un círculo verde en la imagen siguiente.
+6. Busque en el cuadro de búsqueda para que se capte la interacción cercana y seleccione el script. Este componente permite que los usuarios accedan a los objetos con las manos con seguimiento. Los objetos también se pueden manipular desde una distancia, a menos que la casilla permitir manipulación lejana esté desactivada como se indica en el círculo verde de la imagen siguiente.
 
 ![Imagen de la lección 4, capítulo 2, paso 6](images/Lesson4_Chapter2_step6im.PNG)
 
-7. Repite los pasos 5 y 6 en los objetos Octa, Platonic, Earth Core, Lunar Module y CoffeeCup para agregar el evento "Near Interaction Grabbable" (Interacción próxima: atrapar).
+7. Agregue Near Interaction captable al objeto OCTA, el objeto Platonic, Earth Core, el módulo lunar y la taza de café repitiendo los pasos 5 y 6 en esos objetos.
 
-8. Deshabilita la manipulación lejana para el objeto Octa. Para ello, selecciónalo en la jerarquía y desactiva la casilla "Allow Far Manipulation" (Permitir manipulación lejana), marcada con un círculo verde en la imagen anterior. Esto hace que los usuarios solo pueden interactuar con el objeto Octa directamente con las manos con seguimiento.
+8. Deshabilita la manipulación lejana para el objeto Octa. Para ello, seleccione el OCTA en la jerarquía y desactive la casilla permitir la manipulación lejana (marcada con un círculo verde). Esto hace que los usuarios solo pueden interactuar con el objeto Octa directamente con las manos con seguimiento.
 
 >Nota: Para la documentación completa sobre el componente del controlador de manipulación y las configuraciones asociadas, consulta la [documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html).
 
-9. Asegúrate de que el componente "Near Interaction Grabbable" (Interacción próxima: atrapar) se ha agregado el objeto Earth Core, al objeto Lunar Module y al objeto Coffee Cup (consulta el paso 7).
+9. Asegúrese de que se ha agregado a la tierra Core, el módulo lunar y la taza de café (consulte el paso 7).
 
-10. Para el objeto Lunar Module, cambia la configuración del controlador de manipulación para que gire alrededor del centro del objeto para la interacción tanto próxima como lejana, tal y como se muestra en la siguiente imagen.
+10. En el módulo lunar, cambie la configuración del controlador de manipulación para que gire sobre el centro del objeto para la interacción cercana y lejana, tal como se muestra en la imagen siguiente.
 
 ![Imagen de la lección 4, capítulo 2, paso 10](images/Lesson4_chapter2_step10im.PNG)
 
-11: Para el objeto Earth Core, cambia el comportamiento de liberación a "Nothing" (Ninguno). Esto hace el objeto Earth Core deje de moverse al liberarse del alcance de los usuarios. 
+11: En el núcleo de la tierra, cambie el comportamiento de la versión a nada. Esto lo convierte en una vez que el núcleo de la tierra se suelta del agarre del usuario, no se sigue moviendo. 
 
 ![Imagen de la lección 4, capítulo 2, paso 11](images/Lesson4_Chapter2_step11im.PNG)
 
-> Nota: Esta configuración es útil para escenarios como la creación de una pelota para tirar. Mantener la velocidad linear y la angular hace que una vez lanzada la pelota, esta continúe moviéndose a la velocidad inicial, tal y como lo haría una bola física.
+> Nota: Esta configuración es útil para escenarios como la creación de una pelota para tirar. Mantener la velocidad y la velocidad angular lo convierte en una vez que se suelta la bola, se seguirá moviendo a la velocidad en la que se lanzó, de forma similar a como se comportaría una bola física.
 
 ### <a name="adding-bounding-boxes"></a>Agregar rectángulos de selección
-Los rectángulos de selección facilitan la manipulación de objetos con una mano y la hacen más intuitiva tanto en la manipulación directa (interacción próxima) como por rayos (interacción lejana). Los rectángulos de selección ofrecen "asas" que se pueden agarrar para el escalado y el giro de objetos en ejes concretos.
->Nota: Para agregar un rectángulo de selección a un objeto, este debe tener un colisionador (por ejemplo, un colisionador de cuadro). Como hicimos anteriormente en esta lección, para agregar un colisionador, selecciona el objeto y en su panel del inspector, selecciona Add Component>Box Collider (Agregar componente > Colisionador de cuadro).
+Los rectángulos de selección facilitan la manipulación de objetos con una mano y la hacen más intuitiva tanto en la manipulación directa (interacción próxima) como por rayos (interacción lejana). Los cuadros de límite proporcionan controladores que se pueden capturar para escalar y girar objetos a lo largo de un eje específico.
+>Nota: Antes de poder agregar un cuadro de límite a un objeto, primero debe tener un Colisionador en el objeto (por ejemplo, un Colisionador de cuadro), como hicimos anteriormente en esta lección. para agregar un colisionador, selecciona el objeto y en su panel del inspector, selecciona Add Component>Box Collider (Agregar componente > Colisionador de cuadro).
 >
 
-1. Si no lo tiene, agrega un colisionador de cuadro al objeto Earth Core (según las instrucciones, el colisionador de cuadro y la configuración no son necesarios si se usa el objeto prefabricado de la carpeta Base Module Assets [Recursos de Módulo Base]). En el caso del objeto Earth Core, tendremos que agregar el colisionador de cuadro al objeto "node_id30" de debajo, como se muestra en la siguiente imagen. Selecciona node_id30 y, en la pestaña del inspector del objeto, haz clic en "Add Component" (Agregar componente) y busca "Box Collider" (Colisionador de cuadro). 
+1. Agregue un Colisionador de cuadro al objeto de la tierra, si aún no existe uno. El Colisionador de Box y el programa de instalación no son necesarios si se usa el recurso prefabricado proporcionado en la carpeta de recursos del módulo base según las instrucciones proporcionadas. En el caso de la tierra Core, agregamos el Colisionador de cajas al objeto, node_id30, que se encuentra debajo de la tierra Core, como se muestra en la imagen siguiente. Seleccione node_id30 en la pestaña inspector del objeto, haga clic en Agregar componente y busque Box Colisionador. 
 
 ![Imagen de la lección 4, capítulo 3, paso 1](images/Lesson4_Chapter3_step1im.PNG)
 
 ![Imagen de la lección 4, capítulo 3, paso 2](images/Lesson4_chapter3_step2im.PNG)
 
-> Nota: Asegúrate de que visualizas el colisionador de cuadro, de manera que no sea demasiado grande ni demasiado pequeño. Debe ser aproximadamente del mismo tamaño que el objeto que rodea (en este ejemplo, el Earth Core). Ajusta el colisionador de cuadro como proceda al seleccionar la opción de edición del colisionador de cuadro. Puedes cambiar los valores de x, y o z, o arrastrar los controladores del rectángulo de selección en la ventana de edición de la escena. 
+> Nota: Asegúrese de ajustar el tamaño del Colisionador de caja para que no sea demasiado grande o demasiado pequeño. Debe ser aproximadamente del mismo tamaño que el objeto que rodea (en este ejemplo, el Earth Core). Ajuste el Colisionador de Box según sea necesario; para ello, seleccione la opción Editar Colisionador en el Colisionador de Box. Puede cambiar los valores x, y y z o arrastrar los controladores de rectángulo de selección en la ventana de escena del editor. 
 
 ![Imagen de la lección 4, capítulo 3, nota](images/Lesson4_Chapter3_noteim.PNG)
 
-2. Agrega un rectángulo de selección al objeto "node_id30" de Earth Core. Para ello, selecciona el objeto "node_id30" desde "3DObjectCollection". En la pestaña del inspector, haz clic en "Add Component" (Agregar componente) y busca "Bounding Box" (Rectángulo de selección). Asegúrate de que el rectángulo de selección, el colisionador de cuadro y los scripts de manipulación (Manipulation Handler [Controlador de manipulación] y Near Interaction Grabbable [Interacción próxima: agarrar]) se encuentran en el mismo objeto del juego.
+2. Agregue un cuadro de límite al objeto node_id30 de la base de la tierra. Para ello, seleccione el objeto node_id30 de 3DObjectCollection. En la pestaña inspector, haga clic en Agregar componente y busque cuadro de límite. Asegúrate de que el rectángulo de selección, el colisionador de cuadro y los scripts de manipulación (Manipulation Handler [Controlador de manipulación] y Near Interaction Grabbable [Interacción próxima: agarrar]) se encuentran en el mismo objeto del juego.
 
-3.  En la sección "Behaviour" (Comportamiento) del rectángulo de selección, selecciona "Activate on start" (Activar al inicio) en la lista desplegable Activation (Activación). Para revisar los detalles adicionales sobre las distintas opciones de activación y otras del rectángulo de selección, consulta la [documentación del recuadro de selección de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html>).
+3.  En la sección comportamiento del cuadro de límite, seleccione Activar al iniciar en la lista desplegable activación. Para revisar los detalles adicionales sobre las distintas opciones de activación y otras del rectángulo de selección, consulta la [documentación del recuadro de selección de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html>).
 
    
 
-   *En los siguientes pasos también cambiaremos el aspecto del rectángulo de selección. Para ello, ajustaremos el material predeterminado de la caja, el material que se agarra y la visualización de las asas (en la esquina y los laterales). MRTK contiene varias opciones para personalizar el rectángulo de selección.*
+   *En los siguientes pasos, también cambiaremos el aspecto del cuadro de límite ajustando el material del cuadro predeterminado, el material mientras se está captando, así como la visualización de los manipuladores de la esquina y del lado. MRTK contiene varias opciones para personalizar el rectángulo de selección.*
 
-4. En el panel del proyecto, busca "boundingbox" y verás una lista de materiales, que se indican con una esfera azul en los resultados de búsqueda, como en la siguiente imagen. 
+4. En el panel Proyecto, busque BoundingBox y verá una lista de materiales indicados por una esfera azul en los resultados de la búsqueda como se muestra en la imagen siguiente. 
 
-5. Arrastra el material "boundingbox" al recuadro del material de la caja del componente del rectángulo de selección. Arrastra también el material "boundingboxgrabbed" y colócalo en el recuadro del material de la caja agarrada del componente del rectángulo de selección.
+5. Arrastre el material BoundingBox a la ranura de material del cuadro en el componente del cuadro de límite. También puede captar el material de boundingboxgrabbed y colocarlo en la ranura de material captada en el cuadro del componente de cuadro de límite.
 
-6. Arrastra el material "MRTK_BoundingBox_ScaleWidget" al recuadro del asa para escalado prefabricada del componente del rectángulo de selección. 
+6. Arrastre el recurso prefabricado MRTK_BoundingBox_ScaleWidget a la ranura del controlador de escala recurso prefabricado del componente de cuadro de límite. 
 
-7. Arrastra el material "MRTK_BoundingBox_RotateWidget" al recuadro del asa para giro del componente del rectángulo de selección.
+7. Arrastre MRTK_BoundingBox_RotateWidget recurso prefabricado a la ranura del controlador de rotación en el componente del cuadro de enlace.
 
 ![Imagen de la lección 4, capítulo 3, pasos 4-7](images/Lesson4_chapter3_step4-7im.PNG)
 
-8. Asegúrate de que el rectángulo de selección apunta al objeto correcto. En el componente del rectángulo de selección se encuentran los scripts "Target Object" (Objeto de destino) y "Bounds Override" (Superponer selección). Asegúrate de arrastrar el objeto con el rectángulo de selección a su alrededor a ambos recuadros. En este ejemplo, arrastra "node_id30" a estos recuadros como se muestra en la siguiente imagen.
+8. Asegúrate de que el rectángulo de selección apunta al objeto correcto. En el componente de cuadro de límite, hay el objeto de destino y los límites invalidan los scripts. Asegúrate de arrastrar el objeto con el rectángulo de selección a su alrededor a ambos recuadros. En este ejemplo, arrastre el objeto node_id30 a ambas ranuras, tal como se muestra en la imagen siguiente.
 
-> Al iniciar la aplicación o al reproducirla, el objeto estará rodeado de un cuadro azul. Puedes arrastrar las esquinas de este para cambiar el tamaño del objeto. Si quieres que las asas de escalado y de giro sean mayores y más visibles, te recomendamos que uses la configuración del rectángulo de selección predeterminada (y se evitan los pasos 4-7). 
+> Al iniciar o reproducir la aplicación, el objeto estará rodeado por un marco azul. Puedes arrastrar las esquinas de este para cambiar el tamaño del objeto. Si desea que los manipuladores de escalado y los controladores de giro sean más grandes y más visibles, se recomienda usar la configuración predeterminada del cuadro de límite (evitando los pasos del 4 al 7). 
 
 ![Imagen de la lección 4, capítulo 3, paso 8](images/Lesson4_Chapter3_step8im.PNG)
 
-9. Para volver a la visualización predeterminada del rectángulo de selección, en el panel del inspector del objeto de este, selecciona el asa de giro prefabricada y presiona la tecla Delete (Eliminar). Verás un rectángulo de selección similar al de esta imagen. Nota: La visualización del rectángulo de selección solo aparece en el modo de reproducción.
+9. Para volver a la visualización predeterminada del cuadro de límite, en el panel Inspector del objeto del cuadro de límite, seleccione el controlador de giro recurso prefabricado y presione suprimir. Verá una visualización de cuadro de límite similar a la imagen siguiente. Nota: La visualización del rectángulo de selección solo aparece en el modo de reproducción.
 
 ![Imagen de la lección 4, capítulo 3, paso 9](images/Lesson4_chapter3_step9im.PNG)
 
-### <a name="adding-touch-effects"></a>Agregar de efectos al tocar
+### <a name="adding-touch-effects"></a>Agregar efectos de toque
 En este ejemplo vamos a reproducir un efecto de sonido al tocar un objeto con la mano.
 
-1. Agrega un componente de origen de audio al objeto de juego. Selecciona el objeto Octa en la jerarquía del escenario. En el panel del inspector, haz clic en el botón "Add Component" (Agregar componente), y busca y selecciona "Audio Source" (Origen de audio). Usaremos este origen de audio para reproducir un efecto de sonido más adelante. 
+1. Agrega un componente de origen de audio al objeto de juego. Seleccione el objeto OCTA en la jerarquía de la escena. En el panel Inspector, haga clic en el botón Agregar componente, busque y seleccione origen de audio. Usaremos este origen de audio para reproducir un efecto de sonido más adelante. 
 
->Nota: Asegúrate de que el objeto Octa tiene un colisionador de cuadro.
+>Nota: Asegúrese de que el objeto OCTA tiene un Colisionador de cuadro en él.
 
-2. Agrega el componente "Near Interaction Touchable" (Interacción próxima: tocar). Haz clic en el botón "Add Component" (Agregar componente) en el panel de inspector y busca "Near Interaction Touchable" (Interacción próxima: tocar). Selecciónalo para agregar el componente. NOTA: Corregir la captura de pantalla para destacar que estamos agregando el componente y no solo resaltando el colisionador de cuadro.
+2. Agregue el componente que se toque en la interacción cercana. Haga clic en el botón Agregar componente en el panel Inspector y busque Near Interaction Touchable. Selecciónalo para agregar el componente. 
 
->Nota: Antes agregamos "Near Interaction Grabbable" (Interacción próxima: agarrar). La diferencia entre esta y "Near Interaction Touchable" (Interacción próxima: tocar) es que la primera sirve para que un objeto se pueda agarrar y para que se pueda interactuar con él. La segunda, para poder tocar el objeto. Ambos componentes se pueden usar conjuntamente para una combinación de interacciones.
+>Nota: Anteriormente, agregamos Near Interaction acpuesto. La diferencia entre este y el toque de interacción cercano es que la interacción capturable está pensada para que un objeto se capte y se interactúe con él. El componente táctil está pensado para el objeto que se va a tocar. Ambos componentes se pueden usar conjuntamente para una combinación de interacciones.
 
 ![Imagen de la lección 4, capítulo 4, pasos 1-2](images/Lesson4_chapter4_step1-2im.PNG)
 
-3. Agrega el script "Hand Interaction Touch" (Interacción con las manos: tocar). Ten en cuenta que este script se incluye en la escena de Unity que importaste como parte de este paquete de demostración y no en la instancia de MRTK original. Como en el paso anterior, haz clic en "Add Component" (Agregar componente) y busca "Hand Interaction Touch" (Interacción con las manos: tocar) para agregarla. 
-   Observa que el script ofrece tres opciones: 
+3. Agregue el script Touch de interacción táctil. Tenga en cuenta que este script se incluye con la escena de Unity que importó como parte de esta demostración y no se incluye en el MRTK original. Al igual que en el paso anterior, haga clic en Agregar componente y busque el toque de interacción manual para agregarlo.
 
-   - "On Touch Completed" (Al terminar de tocar). Esta opción se activará al tocar y soltar el objeto. 
-   - "On Touch Started" (Al empezar a tocar). Esta, al tocar el objeto. 
-   - "On Touch Updated" (Al actualizarse el tocar). Esta se activará periódicamente mientras la mano toque el objeto. 
+>Tenga en cuenta que tiene tres opciones con el script: 
 
-   En este ejemplo trabajaremos con la configuración "On Touch Started" (Al empezar a tocar).
+>   - En Touch Completed: Desencadenadores al tocar y liberar el objeto
+>   - En Touch Started: Se desencadena cuando se toca el objeto
+>   - En Touch Updated: Desencadena periódicamente mientras su mano toca el objeto
 
-4. Haz clic en el botón "+" de "On Touch Started" (Al empezar a tocar), como se muestra en la siguiente imagen. Arrastra el objeto Octa al campo vacío. 
+>   En este ejemplo, vamos a trabajar con la opción on Touch Started.
 
-5. En la lista desplegable que reza "No Function" (Ninguna función) (encima del rectángulo verde de la siguiente imagen), selecciona AudioSource>PlayOneShot (OrigenDeAudio>ReproducirUnaPista). Agregaremos un clip de audio a este campo con los siguientes conceptos:
+4. Haga clic en el botón + en la opción on Touch Started, tal como se muestra en la imagen siguiente. Arrastre el objeto OCTA al campo vacío. 
 
-   - MRTK proporcionan una pequeña lista de clips de audio. Puedes explorarlas en el panel del proyecto. Se encuentran en carpeta "MixedRealityToolkit.SDK" y la subcarpeta "Standard Assets" (Recursos estándar). En ella se encuentra una carpeta "audio" con todos los clips.
-   - En este ejemplo usaremos "MRTK_Gem". 
+5. En la lista desplegable que indica que no hay ninguna función (sobre el rectángulo verde de la imagen siguiente), seleccione AudioSource-> PlayOneShot. Agregaremos un clip de audio a este campo con los siguientes conceptos:
+
+   - MRTK proporcionan una pequeña lista de clips de audio. Puedes explorarlas en el panel del proyecto. Los encontrará en la carpeta MixedRealityToolkit. SDK y, a continuación, en la carpeta activos estándar. Allí verá una carpeta de audio donde se encuentran todos los clips de audio.
+   - En este ejemplo, vamos a usar el clip de audio MRTK_Gem. 
    - Para agregar un clip de audio solo tienes que arrastrar el que quieras del panel del proyecto a AudioSource.PlayOneShot (que aparece con un recuadro verde en el siguiente ejemplo) en el panel del inspector.
 
-   Ahora, cuando el usuario alcance y toque el objeto Octa, se reproducirá la pista de audio "MRTK_Gem". El script "Hand Interaction Touch" (Interacción con las manos: tocar) también ajustará el color del objeto al tocarlo. 
+   Ahora, cuando el usuario llega y toca el objeto OCTA, se reproducirá la pista de audio MRTK_Gem. El script Touch de interacción táctil también ajustará el color del objeto cuando se toca. 
 
 ![Imagen de la lección 4, capítulo 4, pasos 3-5 y nota](images/Lesson4_chapter4_step3-5-noteim.PNG)
 
 ### <a name="congratulations"></a>Enhorabuena 
-En esta lección has aprendido a organizar objetos 3D en una colección de cuadrícula y a manipular objetos 3D (escalado, giro y movimiento) con interacción próxima (agarrándolos directamente con manos con seguimiento) y lejana (con la mirada o rayos de las manos). También has aprendido a colocar rectángulos de selección alrededor de objetos 3D, y a usar y personalizar los artilugios de estos rectángulos. Por último, has aprendido a desencadenar eventos al tocar objetos.
+En este tutorial, aprendió a organizar objetos 3D en una colección de cuadrículas y cómo manipular objetos 3D (escalado, rotación y movimiento) mediante la interacción aproximada (captando directamente con manos sometidas a seguimiento) e interacción lejana (mediante rayos de miración o rayos de mano). También ha aprendido a colocar rectángulos de selección alrededor de objetos 3D y ha aprendido a usar y personalizar Gizmos en los cuadros de límite. Por último, has aprendido a desencadenar eventos al tocar objetos.
 
 [Próxima lección: Entrada avanzada](mrlearning-base-ch5.md)
 

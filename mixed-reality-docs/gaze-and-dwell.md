@@ -5,14 +5,13 @@ author: liamartinez
 ms.author: liamar
 ms.date: 05/13/2019
 ms.topic: article
-ms.localizationpriority: high
 keywords: Mixed Reality, gaze, dwell, interaction, design
-ms.openlocfilehash: 70b25949380679d2edc81b07ab54f24fa20e3f3d
-ms.sourcegitcommit: 9b6949d7cd2e67e6bde9b32aebeaeea325baa6c4
-ms.translationtype: HT
+ms.openlocfilehash: d522ca3a6f36995959e8e6e87482279d05bf0aa3
+ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66516013"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387541"
 ---
 # <a name="head-gaze-and-dwell"></a>Mirada con la cabeza y permanencia
 
@@ -33,7 +32,7 @@ El modelo de mirada con la cabeza y permanencia destaca en escenarios en los que
     </colgroup>
     <tr>
         <td><strong>Modelo de entrada</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1ª generación)</strong></a></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -68,7 +67,7 @@ Proporcionar un mecanismo para interacciones totalmente con manos libres, sin ut
 ### <a name="target-sizes"></a>Tamaños de los destinos
   Para que los objetivos de mirada con la cabeza y permanencia sean fácilmente accesibles, deben ser lo suficientemente grandes como para poder enfocarlos cómodamente y mantener estable la cabeza sobre el objetivo durante el tiempo necesario. Se recomienda un tamaño de objetivo mínimo de 2 grados para lograr la experiencia más cómoda posible. 
 
-### <a name="visual-feedback"></a>Información visual
+### <a name="visual-feedback"></a>Comentarios visuales
 
 Al utilizar un relleno radial para representar el temporizador de permanencia, empieza desde el centro del botón. Una respuesta coherente es menos confusa que si cada botón tiene una dirección distinta. 
 
@@ -90,7 +89,8 @@ Utiliza un breve retraso antes de iniciar la información visual para evitar el 
 ## <a name="ui-patterns"></a>Patrones de la interfaz de usuario
 
 ### <a name="high-frequency-buttons"></a>Botones de alta frecuencia
-![Botón Siguiente de Microsoft Dynamics 365 Guides](images/GuideNextButton.png "Botón Siguiente de Microsoft Dynamics 365 Guides") Los botones de alta frecuencia son aquellos que se usan habitualmente en una aplicación. Un buen ejemplo son los botones Siguiente y Atrás de Microsoft Dynamics 365 Guides.
+![Botón siguiente de las guías de Microsoft Dynamics 365](images/GuideNextButton.png "Botón siguiente de las guías de Microsoft Dynamics 365")<br>
+*Los botones de alta frecuencia son botones que se usan habitualmente en una aplicación. Un buen ejemplo de estos son los botones siguiente y atrás de las guías de Microsoft Dynamics 365.*
 
 Los botones de alta frecuencia deben...
 * ser botones más grandes, más fáciles de seleccionar con la mirada con la cabeza;
@@ -114,7 +114,8 @@ Cuando una acción tiene un impacto significativo, como cobrar dinero, eliminar 
 Los botones de alternancia requieren una lógica matizada para que funcionen correctamente. Cuando una persona permanece sobre un botón de alternancia y lo activa, debe salir del botón y, a continuación, volver para reiniciar la lógica de permanencia. Es importante que se distinga claramente el estado activo del inactivo de los botones de alternancia. 
 
 ### <a name="list-views"></a>Vistas de lista
-![Cuadro de diálogo de confirmación de Microsoft Dynamics 365 Guides](images/GuidesListView.png "Microsoft Dynamics 365 Guides Confirmation Dialog") Las vistas de lista presentan un desafío particular para la entrada de mirada con la cabeza y permanencia. Los usuarios deben poder recorrer el contenido sin la sensación de tener que ir pasando de puntillas por los distintos objetivos de permanencia. 
+![Cuadro de diálogo de confirmación de Microsoft Dynamics 365 Guides](images/GuidesListView.png "Cuadro de diálogo de confirmación de Microsoft Dynamics 365 Guides")<br>
+*Las vistas de lista presentan un desafío determinado para la entrada de encabezado y de continuación. Los usuarios deben ser capaces de examinar el contenido sin tener que pretiptoer en torno a los objetivos de la vivienda.*
 
 A continuación se indican algunos consejos para diseñar vistas de lista:
 * Haz que toda la fila se resalte al mirarla con la cabeza, pero no inicies la permanencia hasta que la mirada con la cabeza se sitúe en el objetivo de permanencia específico.
@@ -123,7 +124,7 @@ A continuación se indican algunos consejos para diseñar vistas de lista:
 * No muestres todos los objetivos de permanencia al mismo tiempo para evitar que la interfaz de usuario resulte repetitiva.
 * Vuelve a usar el mismo patrón siempre que sea posible para que la experiencia del usuario resulte familiar.
  
- ## <a name="see-also"></a>Consulte también
+ ## <a name="see-also"></a>Vea también
 * [Manipulación directa con las manos](direct-manipulation.md)
 * [Apuntar y confirmar con las manos](point-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)

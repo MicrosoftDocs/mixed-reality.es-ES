@@ -55,7 +55,7 @@ En la tabla siguiente se muestran la funcionalidad de la vista Spectator y sus c
 | Vista de terceros                    |            ✔            |                      ✔                      |
 | Se puede transmitir a pantallas           |            ✔            |                      ✔                      |
 | Portable                             |            ✔            |                                             |
-| Inalámbrico                             |            ✔            |                                             |
+| Conexión inalámbrica                             |            ✔            |                                             |
 | Hardware necesario adicional         |     Teléfono Android, iPhone    | HoloLens + plataforma + trípode + cámara de vídeo + PC + Unity |
 | Inversión en hardware                  |           Bajo            |                     Alto                    |
 | Multiplataforma                       |           Android, iOS   |                                             |
