@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 3e4be00ddeab6d91dbbc8226bfa3dc543cded095
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 529a888dfa00180ca908fbc7f4c62f9a9086c661
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293673"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460329"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Compartir movimientos de objetos con varios usuarios
 
@@ -50,7 +50,7 @@ Objetivos
 
 ![module3chapter4updatestep6](images/module3chapter4updatestep6.png)
 
-7. En la vista de proyecto, vaya a activos-> recursos-> Prefabs. En primer lugar, arrastre y coloque la tabla recurso prefabricado en la ranura Tableprefab en la clase PhotonRoom. A continuación, arrastre y coloque LunarModule recurso prefabricado en la ranura recurso prefabricado del módulo en la clase PhotonRoom.
+7. En la vista de proyecto, vaya a activos-> recursos-> Prefabs. En primer lugar, arrastre y coloque la tabla recurso prefabricado en la ranura Tableprefab en la clase PhotonRoom. A continuación, arrastre y coloque RocketLauncherCompleteVariantprefab en la ranura recurso prefabricado del módulo en la clase PhotonRoom.
 
 ![module3chapter4updatestep7](images/module3chapter4updatestep7.png)
 
@@ -67,10 +67,6 @@ Objetivos
 10. Con el nuevo objeto seleccionado en la jerarquía, cambie el nombre del objeto a TableAnchor en el panel Inspector. Además, haga clic en Agregar componente y busque el componente TableAnchor. Selecciónelo y agréguelo al objeto. 
 
 ![Module3Chapter4step6im](images/module3chapter4step7im.PNG)
-
-> Nota: Establezca la posición en x = 1, y =-0,55 y z = 2. Además, establezca el giro en y = 90. 
->
-> ![Module3Chapter4step6im](images/module3chapter4noteim.PNG)
 
 11. Ahora, en el panel Proyecto de la carpeta Prefabs, arrastre la tabla recurso prefabricado al objeto secundario "TableAnchor" que acaba de crear.
 

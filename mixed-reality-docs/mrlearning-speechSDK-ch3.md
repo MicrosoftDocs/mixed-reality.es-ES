@@ -1,30 +1,47 @@
-## <a name="lesson-3"></a>Lección 3
+---
+title: 'Módulo SpeechSDK de aprendizaje MR: reconocimiento de voz y transcripción'
+description: Complete este curso para aprender a implementar el SDK de voz de Azure en una aplicación de realidad mixta.
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 02/26/2019
+ms.topic: article
+keywords: mixed reality, unity, tutorial, hololens
+ms.openlocfilehash: e5d0919a69c9e6b0c4233d23bf6d370f3def6576
+ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460312"
+---
+# <a name="3----adding-the-azure-cognitive-services-speech-translation-component"></a>3.    Adición del componente de traducción de voz de Azure Cognitive Services
 
-En el capítulo 3, agregaremos la característica de Azure Cognitive Services Speech Translation a nuestro proyecto y traducción a idiomas distintos 3 de prueba. 
+En este tutorial, aprendemos Aabout el componente de traducción de voz de Azure Cognitive Services en nuestro proyecto, además de traducirse en tres lenguajes diferentes. 
 
-1. Seleccione el objeto Lunarcom_Base en la jerarquía y haga clic en "Agregar componente" en el panel del inspector. Busque y seleccione "LunarcomTranslationRecognizer."
+1. Seleccione el objeto Lunarcom_Base en la jerarquía y haga clic en Agregar componente en el panel Inspector. Busque y seleccione LunarcomTranslationRecognizer.
 
 ![Module4Chapter3step1im](images/module4chapter3step1im.PNG)
 
-> Nota: Asegúrese de que el simulador de modo sin conexión está desactivado volver antes de probar el traductor de Speech SDK. Con el fin de traducir, debe estar conectado a internet. 
-
-2. Haga clic en la lista desplegable en la sección "LunarcomTranslationRecognizer" y seleccione el idioma que le gustaría se traducen en.
-
-![Module4Chapter3step2im](images/module4chapter3step2im.PNG)
-
-3. Ahora, ejecute la aplicación y probar el traductor haciendo clic en el botón de satélite y empiece a hablar. Presione el botón de satélite nuevo para detener el reconocimiento. 
-
-> Nota: Una vez más, antes de probar, asegurarse que el simulador sin conexión está deshabilitado, tal como se muestra en la imagen siguiente:
+> Nota: Asegúrese de que el simulador en modo sin conexión está deshabilitado antes de probar el traductor de Speech-SDK. Para traducir, debe estar conectado a Internet. Vea la imagen siguiente sobre dónde encontrar esta configuración. 
 >
 > ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
 
-A continuación es un ejemplo del aspecto de la escena:
+2. Haga clic en la lista desplegable de LunarcomTranslationRecognizer y seleccione el idioma al que le gustaría traducir.
+
+![Module4Chapter3step2im](images/module4chapter3step2im.PNG)
+
+3. Ahora, ejecute la aplicación y pruebe el traductor; para ello, haga clic en el botón satélite y empiece a hablar. Vuelva a presionar el botón satélite para detener el reconocimiento. A continuación se muestra un ejemplo de la apariencia de la escena. No dude en cambiar el idioma en la lista desplegable "idioma de destino" (consulte la imagen anterior) para explorar la traducción en otros idiomas.
+
+> Nota: Antes de realizar las pruebas, asegúrese de que el simulador sin conexión está deshabilitado, tal como se muestra en la imagen siguiente.
+>
+> ![Module4Chapter3noteim](images/module4chapter3noteim.PNG)
+
+A continuación se muestra un ejemplo de la apariencia de la escena:
 
 ![Module4Chapter3exampleim](images/module4chapter3exampleim.PNG)
 
 ## <a name="congratulations"></a>Enhorabuena
 
-Ahora el proyecto puede traducir sus palabras que se habla en distintos lenguajes! No dude en experimentar con los idiomas y probar la precisión. 
+Ahora el proyecto puede traducir las palabras que habla en varios idiomas diferentes. No dude en experimentar con los lenguajes y probar la precisión de la traducción. 
 
-[Siguiente lección: Speech SDK lección 4](placeholderlink)
+[Siguiente tutorial: 4.  Configuración de reconocimiento de intenciones y comprensión del lenguaje natural](mrlearning-speechSDK-ch4.md)
 
