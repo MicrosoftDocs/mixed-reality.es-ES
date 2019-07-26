@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 4baee7ba8643f5bb80e0456eb97d915405431654
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387708"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485691"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Colocar contenido dinámico y usar solucionadores
 
@@ -74,8 +74,8 @@ En esta sección, configuraremos el objeto de juego de cubo creado anteriormente
 
 ![Imagen de la lección 3, capítulo 3, paso 5](images/Lesson3_chapter3_step5im.PNG)
 
-### <a name="congratulations"></a>Enhorabuena
+## <a name="congratulations"></a>Enhorabuena
 En este tutorial, aprendió a usar los solucionadores de MRTK para que una interfaz de usuario pueda seguir de forma intuitiva al usuario. También has aprendido cómo adjuntar un solucionador a un objeto de juego (es decir, el cubo) para seguir a las manos con seguimiento del usuario. Para más información sobre estos y otros solucionadores incluidos con MRTK, no dudes en visitar la [página de documentación de los solucionadores de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html).
 
-[Próxima lección: Interacción de objetos 3D](mrlearning-base-ch4.md)
+[Siguiente lección: 5.    Interacción con objetos 3D](mrlearning-base-ch4.md)
 

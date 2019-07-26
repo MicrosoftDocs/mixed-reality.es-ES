@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 51cfc123f7da8d25a53eecfb730f60cf10fe7377
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: e79c3ea719a71d6df8ffd9e2be009d14a846a16a
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387783"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485719"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicializar el proyecto y la primera aplicación
 
@@ -112,4 +112,4 @@ Ya ha implementado su primera aplicación de HoloLens 2. A medida que recorra, d
 
 >Nota: Verás cómo alternar el contador de velocidad de fotogramas mediante un comando de voz en la [Lección 5](mrlearning-base-ch5.md)
 
-[Próxima lección: Interfaz de usuario, seguimiento con la mano y configuración de Mixed Reality Toolkit](mrlearning-base-ch2.md)
+[Siguiente lección: 3. Crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta](mrlearning-base-ch2.md)

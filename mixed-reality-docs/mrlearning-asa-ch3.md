@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: c6e902710eebe205b9e944b1bf95a9ddd3bd9044
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: cfd6ac9997a8a5d962603922f473bd6fc5d708ed
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293804"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485736"
 ---
-# <a name="displaying-azure-spatial-anchor-feedback"></a>Visualización de los comentarios del delimitador espacial de Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Visualización de los comentarios del delimitador espacial de Azure
 
 En esta lección, aprenderá a proporcionar a los usuarios comentarios sobre la detección de delimitadores, los eventos y el estado al usar delimitadores espaciales de Azure.
 
-Objetivos
+## <a name="objectives"></a>Objetivos
 
 * Obtenga información sobre cómo configurar un panel de interfaz de usuario que muestre información importante sobre la sesión actual de ASA.
 

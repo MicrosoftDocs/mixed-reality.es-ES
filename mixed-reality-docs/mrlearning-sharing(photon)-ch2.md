@@ -1,4 +1,4 @@
-### <a name="getting-unity-ready-for-development"></a>Preparar Unity para el desarrollo 
+# <a name="2-getting-unity-ready-for-development"></a>2. Preparar Unity para el desarrollo 
 
 
 En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de aplicaciones, incluida la importación del kit de herramientas de realidad mixta, la configuración de las opciones de compilación y la preparación de la escena.
@@ -11,7 +11,7 @@ Objetivos
 
 - Preparación de la escena del proyecto
 
-### <a name="instructions"></a>Instrucciones
+## <a name="instructions"></a>Instrucciones
 
 1. Descargue y guarde el paquete de Unity del kit de herramientas de realidad mixta; para ello, haga clic [aquí.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC2.1/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC2.1.unitypackage)
 
@@ -76,5 +76,5 @@ Objetivos
 
 El proyecto de Unity ya está listo para Photon. En los tutoriales venideros, se basará en esta escena y nuestro proyecto de Unity en una experiencia completa compartida.
 
-[Siguiente tutorial: Conexión de varios usuarios](mrlearning-sharing(photon)-ch3.md)
+[Siguiente tutorial: 3. Conexión de varios usuarios](mrlearning-sharing(photon)-ch3.md)
 

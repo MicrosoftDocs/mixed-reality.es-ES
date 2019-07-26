@@ -6,16 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: e5d0919a69c9e6b0c4233d23bf6d370f3def6576
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 7fe3c96cf7b888a4a91960147270be81a0973980
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460312"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485765"
 ---
 # <a name="3----adding-the-azure-cognitive-services-speech-translation-component"></a>3.    Adición del componente de traducción de voz de Azure Cognitive Services
 
 En este tutorial, aprendemos Aabout el componente de traducción de voz de Azure Cognitive Services en nuestro proyecto, además de traducirse en tres lenguajes diferentes. 
+
+## <a name="instructions"></a>Instrucciones
 
 1. Seleccione el objeto Lunarcom_Base en la jerarquía y haga clic en Agregar componente en el panel Inspector. Busque y seleccione LunarcomTranslationRecognizer.
 

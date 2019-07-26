@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 92bea1f3130f67645c10e36fe40cd4bc6f8b9151
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 53519d7bb2832fe8ce500f1ee146c91488b09366
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293666"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485659"
 ---
-# <a name="connecting-multiple-users"></a>Conexión de varios usuarios
+# <a name="3-connecting-multiple-users"></a>3. Conexión de varios usuarios
 
 En esta lección, aprenderá a conectar varios usuarios como parte de una experiencia compartida en directo. Al final de esta lección, podrá abrir la aplicación en varios dispositivos y ver el Avatar, representado por una esfera, representaciones de cada persona que se une. 
 
@@ -23,7 +23,7 @@ Objetivos
 - Configuración de reproductores
 - Obtenga información acerca de cómo conectar varios usuarios en una experiencia compartida
 
-### <a name="instructions"></a>Instrucciones
+## <a name="instructions"></a>Instrucciones
 
 1. En la carpeta assets-> Resources-> Prefabs en el panel Proyecto, arrastre y coloque el NetworkLobby recurso prefabricado en la jerarquía, tal como se muestra en la imagen siguiente.
 
@@ -72,5 +72,5 @@ Objetivos
 
 Una vez completados todos los pasos anteriores, también se completa el proceso de compilación, presione el botón reproducir y conecte su HoloLens 2. Debería ver una esfera desplazada a medida que mueve el cabezal. Esto se mostrará para cualquier usuario que se una a su proyecto de Unity.
 
-[Siguiente lección: Lección 4 de uso compartido (Photon)](mrlearning-sharing(photon)-ch4.md)
+[Siguiente lección: 4. Uso compartido de movimientos de objetos con varios usuarios](mrlearning-sharing(photon)-ch4.md)
 

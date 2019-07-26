@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 80367ed818168c1d642fadbd7316d3d6481dd2a9
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293800"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485741"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Guardar, recuperar y compartir anclajes espaciales de Azure
 
@@ -81,5 +81,5 @@ Aprendemos a implementar anclajes espaciales de Azure como parte de una experien
 
 En la lección siguiente, aprenderá a proporcionar a los usuarios comentarios en tiempo real. Estos comentarios incluirán información sobre la creación del delimitador, la calidad de la comprensión del entorno y el estado de la sesión de Azure. Sin comentarios, es posible que los usuarios no sepan si un delimitador se ha cargado correctamente en Azure, si la calidad del entorno es suficiente para la creación del delimitador o el estado actual.
 
-[Siguiente lección: Tutorial de ASA 3](mrlearning-asa-ch3.md)
+[Siguiente lección: 3. Visualización de los comentarios del delimitador espacial de Azure](mrlearning-asa-ch3.md)
 

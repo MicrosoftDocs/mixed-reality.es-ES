@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 690ece3a02aeefd598db18baa66de3ddabfa43eb
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293821"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485773"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a los delimitadores espaciales de Azure
 
@@ -136,7 +136,7 @@ Ahora que la escena está configurada para mostrar los aspectos básicos de los 
 4. Crea y asigna un nombre a una nueva carpeta para la aplicación. En la imagen siguiente, se creó una carpeta con el nombre app que contiene la aplicación. Haga clic en Seleccionar carpeta para empezar a compilar en la carpeta que acaba de crear. Una vez completada la compilación, puede cerrar la ventana de configuración de compilación en Unity. 
 ![Lesson1Chapter5Step4](images/Lesson1Chapter5Step4.JPG)
 
-  > NOTA: Si se produce un error en la compilación, intenta volver a compilar o reinicia Unity y vuelve a compilar. Si ves un error como "Error: CS0246 = no se encontró el escriba o el nombre de espacio de nombres "XX" (¿falta una directiva using o una referencia de ensamblado?). Es posible que tenga que instalar el [SDK de Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) 
+  > Nota: Si se produce un error en la compilación, intenta volver a compilar o reinicia Unity y vuelve a compilar. Si ves un error como "Error: CS0246 = no se encontró el escriba o el nombre de espacio de nombres "XX" (¿falta una directiva using o una referencia de ensamblado?). Es posible que tenga que instalar el [SDK de Windows 10 (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>) 
   >
 
 5. Una vez finalizada la compilación, abre la carpeta recién creada que contiene los archivos de la aplicación que acabas de crear. Haga doble clic en la solución "MixedRealityBase. sln" o en el nombre correspondiente. Si ha usado un nombre alternativo para el proyecto para abrir el archivo de solución en Visual Studio.
@@ -199,5 +199,5 @@ En las secciones anteriores, ha aprendido los aspectos básicos de los delimitad
 ## <a name="congratulations"></a>Enhorabuena
 En este tutorial, ha aprendido los aspectos básicos de los delimitadores espaciales de Azure. Esta Esso le proporcionó varios botones que le permiten explorar los distintos pasos necesarios para iniciar y detener una sesión de Azure, y crear, cargar y descargar los delimitadores de Azure en un único dispositivo. En la lección siguiente, aprenderá a guardar los identificadores de delimitador de Azure en HoloLens 2 para su recuperación, incluso después de reiniciar la aplicación. Durante la serie, también aprenderá a transferir los ID. de delimitador entre varios dispositivos para lograr la alineación espacial y a obtener información sobre las sesiones compartidas de varios usuarios, próximamente como parte del tutorial de uso compartido.
 
-[Siguiente lección: ASA, Lección 2](mrlearning-asa-ch2.md)
+[Siguiente lección: 2. Guardado, recuperación y uso compartido de Azure Spatial Anchors](mrlearning-asa-ch2.md)
 

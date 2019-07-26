@@ -6,12 +6,12 @@ ms.author: Yoyoz
 ms.date: 05/15/19
 ms.topic: article
 keywords: Windows Mixed Reality, test, kit de herramientas de realidad mixta, MRTK versión 2, MRTK, herramientas, SDK, HoloLens, HoloLens 2
-ms.openlocfilehash: 249a0ce0e608410983934b75e399d013e1ff1879
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 7eded2c766765a5ccebf741eed2f8b7fe8f65a93
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750377"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507930"
 ---
 # <a name="getting-started-with-mrtk-v2"></a>Introducción a MRTK V2
 
@@ -209,4 +209,4 @@ Al trabajar con plataformas móviles, se construyó pensando en el rendimiento. 
 * [Guía de introducción a MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 * [Página principal de la documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 * [Instalación de las herramientas](install-the-tools.md)
-* [Migración de HTK/MRTK a MRTK versión 2](mrtk-porting-guide.md)
+* [Migración de HTK/MRTK a MRTK versión 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)

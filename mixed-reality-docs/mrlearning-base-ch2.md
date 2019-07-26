@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 5275e862d2dec78c98510f754162961c80e9e4b8
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 6257b5a4b42127a7f15b235dbdd6b44967684fcb
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387714"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485754"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta 
 
@@ -167,8 +167,8 @@ En esta sección, aprenderás a agregar texto a tus experiencias de realidad mix
 
 ![Lección 2, capítulo 4, paso 5](images/Lesson2_Chapter4_Step5.JPG)
 
-### <a name="congratulations"></a>Enhorabuena
+## <a name="congratulations"></a>Enhorabuena
 En esta lección, has aprendido a copiar, personalizar y configurar un perfil de MRTK (es decir, la visibilidad de la malla de orientación espacial). También has aprendido a interactuar con un botón para desencadenar eventos mediante manos con seguimiento en HoloLens 2. Por último, has aprendido a crear una sencilla interfaz de usuario mediante el componente de colección de objetos de cuadrícula de MRTK de Text Mesh Pro de Unity.
 
-[Próxima lección: Colocación de contenido dinámico y solucionadores](mrlearning-base-ch3.md)
+[Siguiente lección: 4. Colocación del contenido dinámico y uso de solucionadores](mrlearning-base-ch3.md)
 

@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: e40cd50f75ca509c601d215cb865161ea3596565
-ms.sourcegitcommit: 611af6ff7a2412abad80c0c7d4decfc0c3a0e8c8
+ms.openlocfilehash: 46c32abaf45623b7ccba90f257959e4ef4f8e1b5
+ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68293644"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485642"
 ---
-#  <a name="setting-up-photon-unity-networking"></a>Configuración de redes Photon Unity
+#  <a name="1-setting-up-photon-unity-networking"></a>1. Configuración de redes Photon Unity
 
 En este tutorial, aprenderá a preparar la creación de una experiencia compartida mediante la importación de Photon Unity Networking (BURDO) en el proyecto de Unity. Photon es una de las diversas opciones de red disponibles para que los desarrolladores de realidad mixta creen experiencias compartidas. Veremos cómo crear una cuenta de Photon, importar Photon y crear un servidor local opcional.
 
-Objetivos
+## <a name="objectives"></a>Objetivos
 
 * Obtenga información sobre cómo crear una cuenta de Photon
 
@@ -27,7 +27,7 @@ Objetivos
 
   
 
-### <a name="setting-up-photon"></a>Configuración de Photon
+## <a name="setting-up-photon"></a>Configuración de Photon
 
 1. Configure una cuenta de [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) . Para ir a la página de registro de Photon, haga clic en [este vínculo](https://dashboard.photonengine.com/en-US/Account/SignUp). Siga las instrucciones que aparecen en la página de registro para crear la cuenta. 
    
@@ -69,5 +69,5 @@ Objetivos
 
 Ha creado correctamente una cuenta de Photon, ha configurado un servidor de Photon local y ha importado BURDO en Unity. El siguiente paso consiste en configurar el proyecto y, a continuación, permitir conexiones con otros usuarios para que varios usuarios puedan ver su trabajo. 
 
-[Siguiente tutorial: Preparación de Unity para desarrollo](mrlearning-sharing(photon)-ch2.md)
+[Siguiente tutorial: 2. Preparación de Unity para desarrollo](mrlearning-sharing(photon)-ch2.md)
 
