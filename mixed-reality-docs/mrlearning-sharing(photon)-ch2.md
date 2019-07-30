@@ -3,7 +3,7 @@
 
 En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de aplicaciones, incluida la importación del kit de herramientas de realidad mixta, la configuración de las opciones de compilación y la preparación de la escena.
 
-Objetivos
+## <a name="objectives"></a>Objetivos
 
 - Configuración de Unity para el desarrollo de aplicaciones
 
