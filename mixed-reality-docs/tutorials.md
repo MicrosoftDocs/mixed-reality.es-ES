@@ -4,28 +4,36 @@ title: Tutoriales y aplicaciones de ejemplo
 description: Proporciona ejemplos de código y tutoriales sobre el desarrollo de realidad mixta.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 03/26/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, tutorial
-ms.openlocfilehash: 4f1402cb9b91e0d0619c0516de9120302323b799
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 862cf8726df6143ece0d87a135a8e9cc6101948b
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415399"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601622"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriales y aplicaciones de ejemplo
 
 Actualmente, todos nuestros tutoriales y aplicaciones de ejemplo se basan en Unity.  A medida que desarrollamos contenido para otros motores y plataformas, los encontrará en el encabezado correspondiente en la tabla de contenido.
 
-## <a name="mr-learning-modules"></a>Módulos de aprendizaje de MR
+## <a name="hololens-2-tutorials"></a>Tutoriales de HoloLens 2
 
-Los módulos de aprendizaje MR están diseñados para ayudar a los desarrolladores a aprender las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta.  Los módulos iniciales son para HoloLens 2 e implementan el kit de herramientas de realidad mixta 2,0 (MRTK 2,0).
-* El módulo base está pensado para mostrar a los desarrolladores cómo configurar su proyecto con MRTK, así como implementar la interfaz de usuario, la asignación espacial y las interacciones básicas y avanzadas.
+Los tutoriales de HoloLens 2 están diseñados para ayudar a los desarrolladores a obtener información sobre las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta.  Los tutoriales se basan en el [Kit de herramientas de realidad mixta 2,0 (MRTK 2,0)](https://github.com/microsoft/MixedRealityToolkit-Unity).
+
+* Tutoriales de introducción: [1 de 7 información general y objetivos](mrlearning-base.md)
+* Tutoriales de anclaje espacial de Azure: [1 de 3 Introducción a](mrlearning-asa-ch1.md) los delimitadores espaciales de Azure
+* Tutoriales de Azure Speech Services: [1 de 4 integración y uso del reconocimiento de voz y](mrlearning-speechSDK-ch1.md) la transcripción
+* Tutoriales de funcionalidades para varios usuarios: [1 de 5 configuración de redes Photon Unity](mrlearning-sharing(photon)-ch1.md)
 
 ## <a name="open-source-sample-apps"></a>Aplicaciones de ejemplo de código abierto
 
 Las aplicaciones de ejemplo de código abierto son aplicaciones creadas por nuestros equipos y hemos proporcionado el código fuente para que los desarrolladores puedan verla y aprender de nuestros proyectos.
+
+* [Tabla periódica de elementos](periodic-table-of-the-elements.md)
+* [Módulo lunar](lunar-module.md)
+* [Explorador de la galaxia](galaxy-explorer.md)
 
 ## <a name="mixed-reality-academy-tutorials"></a>Tutoriales de la Academia de realidad mixta
 
