@@ -204,7 +204,7 @@ Después de crear la instancia de servicio de Notification Hubs, vuelva a Azure 
 
     6.  En **rendimiento**, haga clic en **estándar**.
 
-    7.  En la sección **transferencia segura requerida** , seleccione deshabilitado.
+    7.  En la sección **transferencia segura requerida** , seleccionedeshabilitado.
 
     8.  En el menú desplegable **suscripción** , seleccione una suscripción adecuada.
 
@@ -679,7 +679,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
             ![agregar escenas abiertas](images/AzureLabs-Lab8-56.png)
 
-        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre Scenes.
+        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígneleel nombre Scenes.
 
             ![nueva carpeta Scenes](images/AzureLabs-Lab8-57.png)
 
@@ -780,7 +780,7 @@ El segundo script que debe crear es **CloudScene**, que es responsable de:
 
 Para crear esta clase:
 
-1.  Haga clic con el botón derecho en la carpeta de **recursos** que se encuentra en el panel Proyecto, **crear** > **carpeta**. Asigne a la carpeta el nombre scripts.
+1.  Haga clic con el botón derecho en la carpeta de **recursos** que se encuentra en el panel Proyecto, **crear** > **carpeta**. Asigne a lacarpeta el nombre scripts.
 
     ![crear carpeta de scripts](images/AzureLabs-Lab8-66.png)
 
@@ -788,7 +788,7 @@ Para crear esta clase:
 
 2.  Haga doble clic en la carpeta que acaba de crear para abrirla.
 
-3.  Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne al script el nombre **TableToScene**.
+3.  Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne al script el nombre **TableToScene**.
 
     ![nuevo script](images/AzureLabs-Lab8-68.png)
     ![de c# TableToScene Rename](images/AzureLabs-Lab8-69.png)
@@ -953,7 +953,7 @@ Para crear esta clase:
 
 11. En el panel **jerarquía** , haga clic en la **cámara principal** para que sus propiedades aparezcan en el **Inspector**.
 
-12. Con la  carpeta scripts abierta, seleccione el **archivo** de script TableToScene y arrástrelo a la **cámara principal**. El resultado debe ser el siguiente:
+12. Con la carpeta scripts abierta, seleccione el **archivo** de script TableToScene y arrástrelo a la **cámara principal**. El resultado debe ser el siguiente:
 
     ![Agregar script a la cámara principal](images/AzureLabs-Lab8-71.png)
 
@@ -967,7 +967,7 @@ El segundo script que debe crear es **CloudScene**, que es responsable de:
 
 Para crear el segundo script:
 
-1.  Haga clic con el botón  derecho en la carpeta scripts, haga clic en **crear**, **script de C\#** . Asigne un nombre al script **CloudScene**
+1.  Haga clic con el botón derecho en la carpeta scripts, haga clic en **crear**, **script de C\#** . Asigne un nombre al script **CloudScene**
     
     ![nuevo script](images/AzureLabs-Lab8-72.png)
     ![de c# Rename CloudScene](images/AzureLabs-Lab8-73.png)
@@ -1128,7 +1128,7 @@ Para crear el segundo script:
 
     1. En el panel **jerarquía** , haga clic en la **cámara principal** para que sus propiedades aparezcan en el **Inspector**. 
 
-    2. Con la  carpeta scripts abierta, seleccione el script **CloudScene** y arrástrelo a la **cámara principal**. El resultado debe ser el siguiente:
+    2. Con la carpeta scripts abierta, seleccione el script **CloudScene** y arrástrelo a la **cámara principal**. El resultado debe ser el siguiente:
 
         > ![Arrastre el script de nube a la cámara principal](images/AzureLabs-Lab8-75.png)
 
@@ -1142,11 +1142,11 @@ Ya se ha completado todo lo necesario para la sección Unity de este proyecto.
 
     ![compilar proyecto](images/AzureLabs-Lab8-76.png)
 
-3.  Se abrirá una ventana del **Explorador de archivos** en la que se le solicitará una ubicación para compilar. Cree una nueva carpeta (haciendo clic en **nueva carpeta** en la esquina superior izquierda) y asígnele el nombre compilaciones.
+3.  Se abrirá una ventana del **Explorador de archivos** en la que se le solicitará una ubicación para compilar. Cree una nueva carpeta (haciendo clic en **nueva carpeta** en la esquina superior izquierda) y asígnele el nombrecompilaciones.
 
     ![nueva carpeta para compilación](images/AzureLabs-Lab8-77.png)
 
-    1.  Abra la nueva  carpeta Compilaciones y cree otra carpeta (con la **nueva carpeta** una vez más) y asígnele el nombre **\_NH Desktop\_App**.
+    1.  Abra la nueva carpeta Compilaciones y cree otra carpeta (con la **nueva carpeta** una vez más) y asígnele el nombre **\_NH Desktop\_App**.
 
         ![nombre de carpeta NH_Desktop_App](images/AzureLabs-Lab8-78.png)
 
@@ -1195,7 +1195,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
             ![agregar escenas abiertas](images/AzureLabs-Lab8-83.png)
 
-        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre Scenes.
+        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígneleel nombre Scenes.
 
             ![nueva carpeta Scenes](images/AzureLabs-Lab8-84.png)
 
@@ -1300,7 +1300,7 @@ El segundo script que debe crear es **NotificationReceiver**, que es responsable
 
 Para crear el script **NotificationReceiver** :
 
-1.  Haga clic con el botón  derecho en la carpeta scripts, haga clic en **crear**, **script de C\#** . Asigne al script el nombre **NotificationReceiver**.
+1.  Haga clic con el botón derecho en la carpeta scripts, haga clic en **crear**, **script de C\#** . Asigne al script el nombre **NotificationReceiver**.
 
     ![crear un nuevo nombre](images/AzureLabs-Lab8-95.png)
     de script![de c# NotificationReceiver](images/AzureLabs-Lab8-96.png)
@@ -1470,7 +1470,7 @@ Para crear el script **NotificationReceiver** :
 
 11. En el panel **jerarquía** , haga clic en la **cámara principal** para que sus propiedades aparezcan en el **Inspector**.
 
-12. Con la  carpeta scripts abierta, seleccione el script **NotificationReceiver** y arrástrelo a la **cámara principal**. El resultado debe ser el siguiente:
+12. Con la carpeta scripts abierta, seleccione el script **NotificationReceiver** y arrástrelo a la **cámara principal**. El resultado debe ser el siguiente:
 
     ![Arrastre el script del receptor de notificaciones a la cámara](images/AzureLabs-Lab8-98.png)
 
@@ -1487,15 +1487,15 @@ Este capítulo es idéntico al proceso de compilación del proyecto anterior. Ya
 
 2.  En el menú **configuración de compilación** , asegúrese de que los proyectos de **Unity C#** * se marcan (lo que le permitirá editar los scripts en este proyecto después de la compilación).
 
-3.  Una vez hecho esto, haga clic en compilar.
+3.  Una vez hecho esto, hagaclic en compilar.
 
     ![compilar proyecto](images/AzureLabs-Lab8-99.png)
 
-4.  Se abrirá una ventana del **Explorador de archivos** en la que se le solicitará una ubicación para compilar. Cree una nueva carpeta (haciendo clic en **nueva carpeta** en la esquina superior izquierda) y asígnele el nombre compilaciones.
+4.  Se abrirá una ventana del **Explorador de archivos** en la que se le solicitará una ubicación para compilar. Cree una nueva carpeta (haciendo clic en **nueva carpeta** en la esquina superior izquierda) y asígnele el nombrecompilaciones.
 
     ![crear carpeta de compilaciones](images/AzureLabs-Lab8-100.png)
 
-    1.  Abra la nueva  carpeta Compilaciones y cree otra carpeta (con la **nueva carpeta** una vez más) y asígnele el nombre **NH\_Mr\_** .
+    1.  Abra la nueva carpeta Compilaciones y cree otra carpeta (con la **nueva carpeta** una vez más) y asígnele el nombre **NH\_Mr\_** .
 
         ![crear carpeta NH_MR_Apps](images/AzureLabs-Lab8-101.png)
 
@@ -1625,7 +1625,7 @@ Ahora debe asociar el proyecto de **realidad mixta** a la aplicación de la tien
 
     ![buscar y seleccionar el nombre del almacén](images/AzureLabs-Lab8-107.png)
 
-6.  Haga clic en asociar.
+6.  Hagaclic en asociar.
 
     ![asociar la aplicación](images/AzureLabs-Lab8-108.png)
 
