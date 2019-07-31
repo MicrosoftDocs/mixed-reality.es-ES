@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 391e797ad9cc8933b057366ab47a3f453c68723e
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 9f830bc4ead35fd308108051617c61c65d98d451
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485773"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671966"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a los delimitadores espaciales de Azure
 
@@ -28,13 +28,13 @@ Este es el segundo módulo de los tutoriales de HoloLens 2. Antes de empezar, as
 ### <a name="downloading-and-importing-assets"></a>Descarga e importación de recursos
 Antes de comenzar, descargue e importe los siguientes recursos:
 
-[Azure Spatial Anchors](https://github.com/azure/azure-spatial-anchors-samples/releases)
+[Anclajes espaciales de Azure v 1.1.0](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v1.1.0/AzureSpatialAnchors.unitypackage)
 
-[Paquete de recursos del módulo base MR](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2)
+[Paquete de recursos del módulo base MR v 1.2](https://github.com/microsoft/MixedRealityLearning/releases/download/1.2/BaseModuleAssets-1.2.unitypackage)
 
-[Módulo de recursos del módulo ASA](https://github.com/microsoft/MixedRealityLearning/releases/tag/ASA_1.1)
+[Módulo de recursos del módulo ASA v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/v1/ASAModuleAssets_1.unitypackage)
 
-[Kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/)
+[Kit de herramientas de realidad mixta 2.0.0 RC1](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1-Refresh.unitypackage)
 
 > Nota: Consulte el paso 5 para obtener instrucciones específicas sobre cómo importar los anclajes espaciales de Azure, el paso 6 para obtener instrucciones específicas sobre el módulo de recursos del módulo base MR y los pasos del 3 al 4 para obtener instrucciones específicas sobre el kit de herramientas de la realidad mixta (MRKT).
 

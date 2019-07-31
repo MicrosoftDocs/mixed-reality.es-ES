@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, Mixed Reality OpenXR Developer Portal, DirectX, Native, motor personalizado de aplicación nativa, middleware
-ms.openlocfilehash: 057d01527163f2ffcfe10d2e105592f07ff9e9e2
-ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
+ms.openlocfilehash: efad0809356f969c825ef7285885fdb9431c7fce
+ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68601596"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671959"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -36,7 +36,7 @@ La API Core OpenXR 1,0 proporciona la funcionalidad básica que necesitará para
 * Entrada y hápticos
 * API de gráficos + integración de la plataforma
 
-Para obtener información sobre la API de OpenXR, consulte la [especificación de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) y la referencia de la [api de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/).  Para obtener más información, consulte la [Página de OpenXR de Khronos](https://www.khronos.org/openxr/).
+Para obtener información sobre la API de OpenXR, consulte la [especificación de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html) y la referencia de la [api de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html).  Para obtener más información, consulte la [Página de OpenXR de Khronos](https://www.khronos.org/openxr/).
 
 Para tener como destino el conjunto completo de características de HoloLens 2, también usará extensiones de OpenXR específicas entre proveedores y proveedores que habilitan características adicionales más allá del OpenXR 1,0 núcleo, como el seguimiento de mano articulado, el seguimiento ocular, la asignación espacial y los delimitadores espaciales.  Consulte la sección de la [Guía básica](openxr.md#roadmap) más adelante para obtener más información sobre las extensiones que entrarán más tarde este año.
 
@@ -117,5 +117,5 @@ Si el botón de instalación de la aplicación del portal para desarrolladores d
 
 * [Más información sobre OpenXR](https://www.khronos.org/openxr/)
 * [Especificación de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html)
-* [Referencia de la API de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/)
+* [Referencia de la API de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html)
 * [Guía de referencia rápida de OpenXR 1,0](https://www.khronos.org/registry/OpenXR/specs/1.0/refguide/OpenXR-1.0-web.pdf)
