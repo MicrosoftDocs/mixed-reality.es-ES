@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hololens, MMR, multimodal
-ms.openlocfilehash: 7b04141c832597be4bb58447629e0ef6e248dc2b
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 3ba1a2fc46aa88c856e4cc9531382c479b3fb17a
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415254"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507893"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instintivas
 
@@ -115,13 +115,13 @@ Estos son algunos ejemplos de cómo se optimizan las prestaciones y los comporta
     <tr>
         <td><a href="hands-and-tools.md">Controladores de movimiento y manos</a></td>
         <td>Veo una malla de mano, una prestación de dedo o haces de mano o controlador.</td>
-        <td>Veo manipuladores que se pueden agarrar o aparece un rectángulo de selección cuando mi mano está cerca.</td>
+        <td>Veo manipuladores que se pueden agarrar o aparece un rectángulo de selección cuando mi mano está cerca de un objeto.</td>
         <td>Puedo oír tonos audibles y ver animaciones al agarrar y soltar.</td>
     </tr>
     <tr>
         <td><a href="gaze-and-commit.md">Mirada-cabeza y confirmación</a></td>
         <td>Veo un cursor en el centro de mi campo de visión.</td>
-        <td>El cursor de la mirada con la cabeza cambia de estado cuando se encuentra sobre determinados objetos.</td>
+        <td>El cursor de mirada con la cabeza cambia de estado cuando se encuentra sobre determinados objetos.</td>
         <td>Veo u oigo confirmaciones visuales y auditivas al realizar una acción.</td>
     </tr>   
     <tr>

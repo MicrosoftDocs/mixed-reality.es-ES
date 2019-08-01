@@ -7,16 +7,16 @@ ms.date: 04/12/19
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: d0d406c6963866995164c9c004e51283df8d9382
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: ccf2bb9de1e69cfe306fe9fa8f7d3b80158348d4
+ms.sourcegitcommit: 23e172664c2ee1220fe3b4468c104b37ef3ceda9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387629"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68601608"
 ---
 # <a name="getting-your-existing-application-ready-for-hololens-2"></a>Preparación de una aplicación existente para HoloLens 2
 
-Esta guía está diseñada específicamente para ayudar a los desarrolladores que tienen una aplicación existente de Unity para HoloLens (Gen 1) para realizar la portabilidad de su aplicación al dispositivo HoloLens 2. Hay cuatro pasos clave para portar una aplicación de Unity de HoloLens (Gen 1) a HoloLens 2. En las secciones siguientes se detalla la información de cada fase. 
+Esta guía está diseñada específicamente para ayudar a los desarrolladores que tienen una aplicación existente de Unity para HoloLens (1ª generación) para realizar la portabilidad de su aplicación al dispositivo HoloLens 2. Hay cuatro pasos clave para portar una aplicación de Unity de HoloLens (1.ª generación) a HoloLens 2. En las secciones siguientes se detalla la información de cada fase. 
 
 | Paso 1 | Paso 2 | Paso 3 | Paso 4 |
 |----------|-------------------|-------------------|-------------------|
@@ -56,11 +56,11 @@ Es necesario reiterar que el [back-end de scripting de .NET](https://docs.unity3
 > El back-end del scripting de IL2CPP puede aumentar los tiempos de compilación de Unity a Visual Studio, y los desarrolladores deben configurar la máquina de desarrollo para [optimizar los tiempos de compilación de IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html).
 > También puede resultar útil configurar un [servidor de caché](https://docs.unity3d.com/Manual/CacheServer.html), especialmente para los proyectos de Unity con una gran cantidad de activos (sin contar con los archivos de script), o que cambien constantemente de escenas y activos. Al abrir un proyecto, Unity almacena los activos aplicables en un formato de la memoria caché interna en la máquina del desarrollador. Los elementos se tienen que volver a importar y a procesar cuando se modifican. Este proceso se puede realizar una vez y guardar en un servidor de caché, de esta forma se comparte con otros desarrolladores, lo que ahorra tiempo, en lugar de que cada desarrollador tenga que procesar localmente la reimportación de los nuevos cambios.
 
-Después de solucionar cualquier cambio importante tras el cambio a la versión actualizada de Unity, los desarrolladores deben compilar y probar sus aplicaciones actuales en HoloLens (Gen 1). Este es un buen momento para crear y guardar una confirmación en el control de código fuente. 
+Después de solucionar los cambios importantes tras el cambio a la versión actualizada de Unity, los desarrolladores deben compilar y probar sus aplicaciones actuales en HoloLens (1ª generación). Este es un buen momento para crear y guardar una confirmación en el control de código fuente. 
 
 ## <a name="compile-dependenciesplugins-for-arm-processor"></a>Compilación de dependencias/complementos para procesadores ARM
 
-HoloLens (Gen 1) ejecuta las aplicaciones en un procesador x86, mientras que el dispositivo HoloLens 2 usa un procesador ARM. Por lo tanto, las aplicaciones de HoloLens existentes se tienen que portar para admitir ARM. Como se indicó anteriormente, Unity 2018 LTS admite la compilación para las aplicaciones de ARM32, mientras que Unity 2019.x admite la compilación para las aplicaciones de ARM64. Normalmente es preferible desarrollar para aplicaciones de ARM64 porque hay una diferencia en el rendimiento. Sin embargo, esto requiere que todas [las dependencias de complemento](https://docs.unity3d.com/Manual/Plugins.html) se compilen también para ARM64. 
+HoloLens (1.ª generación) ejecuta las aplicaciones en un procesador x86, mientras que el dispositivo HoloLens 2 usa un procesador ARM. Por lo tanto, las aplicaciones de HoloLens existentes se tienen que portar para admitir ARM. Como se indicó anteriormente, Unity 2018 LTS admite la compilación para las aplicaciones de ARM32, mientras que Unity 2019.x admite la compilación para las aplicaciones de ARM64. Normalmente es preferible desarrollar para aplicaciones de ARM64 porque hay una diferencia en el rendimiento. Sin embargo, esto requiere que todas [las dependencias de complemento](https://docs.unity3d.com/Manual/Plugins.html) se compilen también para ARM64. 
 
 Revisa todas las dependencias DLL en la aplicación. Es aconsejable quitar del proyecto cualquier dependencia que ya no sea necesaria. Para el resto de complementos que son necesarios, se deben ingerir los respectivos archivos binarios de ARM32 o ARM64 en el proyecto de Unity. 
 
@@ -104,14 +104,14 @@ Para más información sobre las diferencias de API específicas entre HTK/MRTK 
 
 ### <a name="testing-your-application"></a>Prueba de la aplicación
 
-Ahora que ya están disponibles los componentes y las funcionalidades de HoloLens 2 en la versión 2 de MRTK, a partir de [RC1](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/tag/v2.0.0-RC1), puedes simular las interacciones con las manos directamente en Unity, así como desarrollar con las nuevas API para las interacciones con las manos y el seguimiento de los ojos. El dispositivo HoloLens 2 es necesario para crear una experiencia de usuario satisfactoria. Se recomienda empezar examinando la documentación y las herramientas para mejorar la comprensión. La [versión 2 de MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity) admite el desarrollo en HoloLens (Gen 1) y los modelos de entrada tradicionales, como la selección mediante pulsación en el aire, se pueden probar en los dispositivos HoloLens (Gen 1). 
+Ahora que ya están disponibles los componentes y las funcionalidades de HoloLens 2 en la versión 2 de MRTK, a partir de [RC1](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/tag/v2.0.0-RC1), puedes simular las interacciones con las manos directamente en Unity, así como desarrollar con las nuevas API para las interacciones con las manos y el seguimiento de los ojos. El dispositivo HoloLens 2 es necesario para crear una experiencia de usuario satisfactoria. Se recomienda empezar examinando la documentación y las herramientas para mejorar la comprensión. La [versión 2 de MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity) admite el desarrollo en HoloLens (1.ª generación) y los modelos de entrada tradicionales, como la selección mediante pulsación en el aire, se pueden probar en los dispositivos HoloLens (1.ª generación). 
 
-## <a name="updating-interaction-model-for-hololens-2"></a>Actualización del modelo de interacción para HoloLens 2
+## <a name="updating-your-interaction-model-for-hololens-2"></a>Actualización del modelo de interacción para HoloLens 2
 
 Una vez que la aplicación está portada y preparada para HoloLens 2, ya estás listo para considerar la actualización de las ubicaciones del diseño del holograma y del modelo.
-En HoloLens (Gen 1), es muy posible que tu aplicación tenga un modelo de interacción de mirada y confirmación con hologramas relativamente lejanos para encajar en el campo de visión.
+En HoloLens (1ª generación), es muy posible que tu aplicación tenga un modelo de interacción de mirada y confirmación con hologramas relativamente lejanos para encajar en el campo de visión.
 
-Pasos para actualizar el diseño de la aplicación al diseño más adecuado para HoloLens 2:
+Pasos para actualizar el diseño de la aplicación al diseño más adecuado para HoloLens 2:
 1.  Componentes de MRTK: por el trabajo previo, si agregas la [versión 2 de MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity), hay varios componentes o scripts para aprovechar que se han diseñado y optimizado para HoloLens 2.
 
 2.  Modelo de interacción: Plantéate la posibilidad de actualizar el modelo de interacción. Para la mayoría de los escenarios, se recomienda cambiar de mirada y confirmación a interacciones con las manos. Con tus hologramas normalmente fuera del alcance de la mano, el cambio a las entradas de interacción con las manos produce gestos de agarre y haces apuntadores de interacción lejana.
@@ -129,13 +129,13 @@ Cada aplicación y escenario son diferentes, y vamos a seguir mejorando y public
 
 - En algunos casos, puede que no exista un complemento de UWP/ARM para los complementos necesarios para la aplicación, lo que bloquea la capacidad de portar la aplicación y ejecutarla en HoloLens 2. Ponte en contacto con tu proveedor de complementos para resolver el problema y obtener compatibilidad con ARM.
 
-- El comando minfloat (y sus variantes, como min16float, minint, etc.) puede comportarse en los sombreadores de manera diferente en HoloLen 2 a como lo hacía en HoloLens (Gen 1). En concreto, estos garantizan que se utilizará al menos el número especificado de bits. En las GPU de Nvidia/Intel, por ejemplo, se tratan generalmente como de 32 bits. En ARM, el número de bits especificado se respeta. En la práctica, esto significa que estos números pueden tener menos precisión o rango en HoloLens 2 del que tenían en HoloLens (Gen 1).
+- El comando minfloat (y sus variantes, como min16float, minint, etc.) puede comportarse en los sombreadores de manera diferente en HoloLens 2 a como lo hacía en HoloLens (1ª generación). En concreto, estos garantizan que se utilizará al menos el número especificado de bits. En las GPU de Nvidia/Intel, por ejemplo, se tratan generalmente como de 32 bits. En ARM, el número de bits especificado se respeta. En la práctica, esto significa que estos números pueden tener menos precisión o rango en HoloLens 2 del que tenían en HoloLens (1.ª generación).
 
 - Las instrucciones _asm no parecen funcionar en ARM, lo que significa que cualquier código con instrucciones _asm tiene que volverse a escribir.
 
 - La instrucción SIMD establecida no se admite en ARM porque diferentes encabezados, como xmmintrin.h, emmintrin.h, tmmintrin.h e immintrin.h, no están disponibles en ARM.
 
-- El compilador del sombreador en ARM se ejecuta durante la primera llamada draw, después de que el sombreador se haya cargado, o algo en lo que se basa sombreador haya cambiado, no en el tiempo de carga de sombreador. El impacto en la velocidad de fotogramas puede ser muy notable, dependiendo de cuántos sombreadores tengan que compilarse. Esto tiene varias implicaciones en la forma diferente en la que se deben controlar, empaquetar o actualizar los sombreadores en HoloLens 2 en comparación con HoloLens (Gen 1).
+- El compilador del sombreador en ARM se ejecuta durante la primera llamada draw, después de que el sombreador se haya cargado, o algo en lo que se basa sombreador haya cambiado, no en el tiempo de carga de sombreador. El impacto en la velocidad de fotogramas puede ser muy notable, dependiendo de cuántos sombreadores tengan que compilarse. Esto cambia la forma de controlar, empaquetar o actualizar los sombreadores en HoloLens 2 en comparación con HoloLens (1.ª generación).
 
 ## <a name="see-also"></a>Consulte también
 * [Instalación de las herramientas](install-the-tools.md)
