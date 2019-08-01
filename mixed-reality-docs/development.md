@@ -8,12 +8,12 @@ ms.date: 02/12/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: b2bd9c4d81e5c7156ad753859a299209bad70c44
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: bf80b676d03fce9011f5952af476dcaa5e2b4eb2
+ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414433"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507918"
 ---
 # <a name="development-launchpad"></a>Launchpad de desarrollo
 
@@ -61,7 +61,7 @@ ms.locfileid: "67414433"
                             <a href="https://www.microsoft.com/hololens/hardware" target="_blank">HoloLens 2</a>
                         </p>
                         <p>
-                            <a href="hololens-hardware-details.md">HoloLens (Gen 1)</a>
+                            <a href="hololens-hardware-details.md">HoloLens (1ª generación)</a>
                         </p>
                         <p>
                             <a href="immersive-headset-hardware-details.md">Cascos envolventes</a>
@@ -133,7 +133,7 @@ ms.locfileid: "67414433"
                     <div class="cardText">
                         <h3>Guías de migración</h3>
                         <p>
-                            <a href="mrtk-porting-guide.md">Actualización de aplicaciones en HoloLens 2<br>de HoloLens (Gen 1)</a>
+                            <a href="mrtk-porting-guide.md">Actualización de aplicaciones en HoloLens 2<br>de HoloLens (1ª generación)</a>
                         </p>
                         <p>
                             <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html">Mixed Reality Toolkit (MRTK)<br>Guía de migración de API</a>
@@ -164,7 +164,7 @@ ms.locfileid: "67414433"
                             <a href="rendering.md">Representación holográfica</a>
                         </p>
                          <p>
-                            <a href="testing-your-app-on-hololens.md">Pruebas</a>
+                            <a href="testing-your-app-on-hololens.md">Prueba de una aplicación</a>
                         </p>                    
                     </div>
                 </div>
