@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, fuente, tipografía, UI, UX
-ms.openlocfilehash: f57b04c7d57219b7426793879004ef010d2b1ea8
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415429"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701911"
 ---
 # <a name="text-in-unity"></a>Texto en Unity
 
@@ -20,7 +20,7 @@ El texto es uno de los componentes más importantes de las aplicaciones holográ
 ![Cómo obtener texto nítido y bonito](images/hug-text-02-640px.png)<br>
 *Texto predeterminado borroso en Unity*
 
-## <a name="working-with-unitys-3d-texttext-mesh-and-ui-text"></a>Trabajar con texto 3D de Unity (malla de texto) y texto de la interfaz de usuario
+## <a name="working-with-unitys-3d-text-text-mesh-and-ui-text"></a>Trabajar con texto 3D de Unity (malla de texto) y texto de la interfaz de usuario
 
 Unity supone que todos los elementos nuevos que se agregan a una escena tienen un tamaño de unidad de 1 Unity, o una escala de transformación del 100%, lo que se traduce en aproximadamente 1 metro en HoloLens. En el caso de las fuentes, el cuadro de límite para un TextMesh 3D entra de forma predeterminada en aproximadamente 1 medidor de alto.
 
@@ -32,6 +32,8 @@ La mayoría de los diseñadores visuales usan puntos para definir tamaños de fu
 
 ![Malla de texto 3D de Unity con diferentes tamaños de fuente](images/Text_In_Unity_Measurements1.png)<br>
 *Ajustar los valores para el texto 3D de Unity y el texto de la interfaz de usuario*
+
+<br>
 
 ![Malla de texto 3D de Unity con diferentes tamaños de fuente](images/hug-text-05-1000px.png)<br>
 *Malla de texto 3D de Unity con valores optimizados*
@@ -49,7 +51,7 @@ Al agregar un elemento de texto basado en un lienzo o una interfaz de usuario a 
 
 ## <a name="working-with-text-mesh-pro"></a>Trabajar con la malla de texto Pro
 
-Con la malla de texto de Unity, puede proteger la calidad de representación de texto. Admite un esquema de texto nítido independientemente de la distancia mediante la técnica de [SDF (campo de distancia con signo)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Con el mismo método de cálculo que hemos usado anteriormente para la malla de texto 3D y el texto de la interfaz de usuario, podemos encontrar valores de ajuste de escala adecuados para usar el punto tipográfico convencional. Dado que la fuente pro de la malla de texto 3D predeterminada con el tamaño 36 muestra el límite de la unidad de Unity 2,5 (2,5 m), podemos usar el valor de escalado 0,005 para usar el tamaño de punto. La malla de texto Pro en el menú de la interfaz de usuario tiene el tamaño de límite predeterminado de 25 unidades de Unity. Esto nos da 0,0005 para el valor de escalado.
+Con la malla de texto de Unity, puede proteger la calidad de representación de texto. Admite los contornos de texto nítidos independientemente de la distancia mediante la técnica de [campo de distancia con signo (SDF)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Con el mismo método de cálculo que hemos usado anteriormente para la malla de texto 3D y el texto de la interfaz de usuario, podemos encontrar los valores de escalado adecuados para usarlos con puntos tipográficos convencionales. Dado que la fuente pro de la malla de texto 3D predeterminada con el tamaño de 36 tiene un tamaño de límite de 2,5 unidades de Unity (2,5 m), podemos usar el valor de escalado 0,005 para obtener el tamaño del punto. La malla de texto Pro en el menú de la interfaz de usuario tiene el tamaño de límite predeterminado de 25 unidades de Unity. Esto nos da 0,0005 para el valor de escalado.
 
 ![Malla de texto 3D de Unity con diferentes tamaños de fuente](images/Text_In_Unity_Measurements2.png)<br>
 *Ajustar los valores para el texto 3D de Unity y el texto de la interfaz de usuario*
@@ -63,14 +65,14 @@ En el caso de la interacción cercana en 0.45 m (45CM), el ángulo de visualizac
 de interacción Near y Far*en el intervalo de interacción Near y Far*
 
 ### <a name="the-minimum-legible-font-size"></a>El tamaño mínimo de fuente legible
-| posición | Ángulo de visualización | Alto de texto | Tamaño de fuente |
+| Posición | Ángulo de visualización | Alto de texto | Tamaño de fuente |
 |---------|---------|---------|---------|
 | 45CM (distancia de manipulación directa) | 0,4 °-0,5 ° | 3.14:3,9 mm | 8.9:11.13 pt |
 | 2m | 0.35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 PT |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>Tamaño de fuente cómodamente legible
-| posición | Ángulo de visualización | Alto de texto | Tamaño de fuente |
+| Posición | Ángulo de visualización | Alto de texto | Tamaño de fuente |
 |---------|---------|---------|---------|
 | 45CM (distancia de manipulación directa) | 0,65 °-0,8 ° | 5.1-6.3 mm | 14.47-17.8 pt |
 | 2m | 0,6 °-0,75 ° | 20.9-26.2 mm | 59.4-74.2 PT |

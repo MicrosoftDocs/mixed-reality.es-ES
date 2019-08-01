@@ -1,17 +1,17 @@
 ---
-title: MR Learning ASA Module Azure Spatial delimitador de HoloLens 2
+title: 'Tutoriales de anclaje espacial de Azure: 1. Introducción a los delimitadores espaciales de Azure'
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 9f830bc4ead35fd308108051617c61c65d98d451
-ms.sourcegitcommit: c0d5c19b756b8e6ff95ea26a4d8d2b3a53878c2e
+ms.openlocfilehash: 110c8ae1a529d4a3b4796a5d2b6ee44c150741cb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671966"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702068"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a los delimitadores espaciales de Azure
 
@@ -32,7 +32,7 @@ Antes de comenzar, descargue e importe los siguientes recursos:
 
 [Paquete de recursos del módulo base MR v 1.2](https://github.com/microsoft/MixedRealityLearning/releases/download/1.2/BaseModuleAssets-1.2.unitypackage)
 
-[Módulo de recursos del módulo ASA v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/v1/ASAModuleAssets_1.unitypackage)
+[Módulo de recursos del módulo ASA v 1.0](https://github.com/microsoft/MixedRealityLearning/releases/download/ASA_1.1/ASAModuleAssetsBeta.unitypackage)
 
 [Kit de herramientas de realidad mixta 2.0.0 RC1](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.0.0-RC1-Refresh/Microsoft.MixedReality.Toolkit.Unity.Foundation-v2.0.0-RC1-Refresh.unitypackage)
 

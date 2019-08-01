@@ -1,19 +1,19 @@
 ---
-title: 'Módulo SpeechSDK de aprendizaje MR: reconocimiento de voz y transcripción'
+title: 'Tutoriales de Azure Speech Services: 2. Agregar un modo sin conexión para la traducción de voz a texto local'
 description: Complete este curso para aprender a implementar el SDK de voz de Azure en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b13b22fcdce2e7fa1319d241302b764f457aabba
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 1dd6c01768ddf5dda954f50e0f7507022bd59c3b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485603"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701863"
 ---
-# <a name="2----adding-an-offline-mode-for-local-speech-to-text-translation"></a>2.    Agregar un modo sin conexión para la traducción de voz a texto local
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Agregar un modo sin conexión para la traducción de voz a texto local
 
 En este tutorial, vamos a agregar un modo sin conexión que le permite realizar la traducción de voz a texto local cuando no se puede conectar al servicio de Azure. También se *simulará* un estado desconectado.
 

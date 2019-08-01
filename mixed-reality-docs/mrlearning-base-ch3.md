@@ -1,17 +1,17 @@
 ---
-title: 'Módulo base de aprendizaje MR: Colocación de contenido dinámico y solucionadores'
+title: 'Tutoriales de introducción: 4. Colocar contenido dinámico y usar solucionadores'
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 401c667ef80042da9182b7f4e065dfd6884cf061
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: a73be40180e582058ae3e9bbaeffebe462042fbb
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485691"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701998"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Colocar contenido dinámico y usar solucionadores
 

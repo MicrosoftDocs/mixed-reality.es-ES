@@ -1,17 +1,17 @@
 ---
-title: 'Módulo SpeechSDK de aprendizaje MR: reconocimiento de voz y transcripción'
+title: 'Tutoriales de Azure Speech Services: 1. Integración y uso del reconocimiento de voz y la transcripción'
 description: Complete este curso para aprender a implementar el SDK de voz de Azure en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: c1ca44ffcaa8dced988b829d9875ebe304f14a12
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 501e8bc2e70248a4ca8a79f90d74d30129830701
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460356"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701959"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integración y uso del reconocimiento de voz y la transcripción
 

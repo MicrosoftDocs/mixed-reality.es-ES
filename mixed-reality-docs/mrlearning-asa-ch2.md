@@ -1,17 +1,17 @@
 ---
-title: MR Learning ASA Module Azure Spatial delimitador de HoloLens 2
+title: 'Tutoriales de anclaje espacial de Azure: 2. Guardar, recuperar y compartir anclajes espaciales de Azure'
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b263d30905c5a1ba81bfb59ba6a49c7710c43869
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485741"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702046"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Guardar, recuperar y compartir anclajes espaciales de Azure
 
@@ -81,5 +81,5 @@ Aprendemos a implementar anclajes espaciales de Azure como parte de una experien
 
 En la lección siguiente, aprenderá a proporcionar a los usuarios comentarios en tiempo real. Estos comentarios incluirán información sobre la creación del delimitador, la calidad de la comprensión del entorno y el estado de la sesión de Azure. Sin comentarios, es posible que los usuarios no sepan si un delimitador se ha cargado correctamente en Azure, si la calidad del entorno es suficiente para la creación del delimitador o el estado actual.
 
-[Siguiente lección: 3. Visualización de los comentarios del delimitador espacial de Azure](mrlearning-asa-ch3.md)
+[Siguiente lección: 3. Visualización de comentarios de Azure Spatial Anchors](mrlearning-asa-ch3.md)
 

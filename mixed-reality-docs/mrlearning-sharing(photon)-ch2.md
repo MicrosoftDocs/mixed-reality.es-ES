@@ -1,3 +1,18 @@
+---
+title: 'Tutoriales de funcionalidades para varios usuarios: 2. Preparar Unity para el desarrollo'
+description: Complete este curso para aprender a implementar experiencias compartidas multiusuario en una aplicación de HoloLens 2.
+author: jessemcculloch
+ms.author: jemccull
+ms.date: 02/26/2019
+ms.topic: article
+keywords: mixed reality, unity, tutorial, hololens
+ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701978"
+---
 # <a name="2-getting-unity-ready-for-development"></a>2. Preparar Unity para el desarrollo 
 
 

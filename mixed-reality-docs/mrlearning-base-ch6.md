@@ -1,17 +1,17 @@
 ---
-title: 'Módulo base de aprendizaje de Mixed Reality: Experiencia de ejemplo de ensamblado del objeto Lunar Module'
+title: 'Tutoriales de introducción: 7. Crear una aplicación de ejemplo de módulo lunar'
 description: En esta lección, vamos a agrupar varios conceptos aprendidos de lecciones anteriores para crear una experiencia de ejemplo.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 79f2d3a4a3224533761ea2e4a7e73dc3d4d5e53e
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 97dd8fce1ebe53efc37cb48cde7dc9e207be9a42
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387686"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701992"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. Crear una aplicación de ejemplo de módulo lunar
 

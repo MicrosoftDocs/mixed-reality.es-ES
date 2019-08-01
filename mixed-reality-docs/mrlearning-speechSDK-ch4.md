@@ -1,17 +1,17 @@
 ---
-title: 'Módulo SpeechSDK de aprendizaje MR: reconocimiento de voz y transcripción'
+title: 'Tutoriales de Azure Speech Services: 4. Configuración del propósito y la comprensión del lenguaje natural'
 description: Complete este curso para aprender a implementar el SDK de voz de Azure en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b434b9c79a702067a9c3db6fb25b0f75cdc6030d
-ms.sourcegitcommit: b086d7a62ee0c7913aa8f66c90e9d2527f270264
+ms.openlocfilehash: 5ca2df56eee3ae41d97de4e8b1e88a39d4d36718
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485785"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701951"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configuración del propósito y la comprensión del lenguaje natural
 

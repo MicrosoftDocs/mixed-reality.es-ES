@@ -6,17 +6,16 @@ ms.author: Yoyoz
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, portabilidad, capacidad, cámara, simulación, emulación, documentación
-ms.openlocfilehash: 24217b4c61bf2d438ebc1c4114bc9dc20dc62f64
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: b1384e886a2b4d0b3ed9f8008fca6af6ad4b78d5
+ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414520"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701792"
 ---
 # <a name="unity-development-overview"></a>Introducción al desarrollo de Unity
 
 La ruta más rápida para compilar una [aplicación de realidad mixta](app-views.md) es con [Unity](http://aka.ms/HoloLensUnity). Se recomienda dedicar tiempo a explorar los tutoriales de [Unity](https://unity3d.com/learn/tutorials). Si necesita recursos, Unity tiene un almacén de [recursos](https://www.assetstore.unity3d.com/)completo. Una vez que haya integrado una comprensión básica de Unity, puede visitar los [tutoriales](tutorials.md) para conocer los aspectos específicos del desarrollo de la realidad mixta con Unity. No olvide visitar los foros de la [realidad mixta de Unity](http://forum.unity3d.com/forums/hololens.102/) para interactuar con el resto de la comunidad que crea aplicaciones de realidad mixta en Unity y encontrar soluciones a los problemas con los que puede encontrarse.
-
 
 Para empezar a crear aplicaciones de realidad mixta con Unity, [Instale primero las herramientas](install-the-tools.md). 
 
@@ -71,7 +70,7 @@ Con esa solución de VS en mano, puede ejecutar la aplicación de una de estas t
 
 ## <a name="unity-documentation"></a>Documentación de Unity
 
-Además de esta documentación disponible en el centro de desarrollo de Windows, Unity instala la documentación de la funcionalidad de Windows Mixed Reality junto con el editor de Unity. La documentación proporcionada por Unity incluye dos secciones independientes:
+Además de esta documentación disponible en docs.microsoft.com, Unity instala la documentación de la funcionalidad de Windows Mixed Reality junto con el editor de Unity. La documentación proporcionada por Unity incluye dos secciones independientes:
 1. **Referencia de scripting de Unity**
     * Esta sección de la documentación contiene detalles de la API de scripting que proporciona Unity.
     * Accesible desde el editor de Unity a través de la **ayuda > referencia** de scripting
