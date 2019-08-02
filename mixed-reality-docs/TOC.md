@@ -134,8 +134,6 @@
 ## [Launchpad de desarrollo](development.md)
 ## Servicios en la nube de realidad mixta
 ### [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
-### [Holographic Remoting Player](holographic-remoting-player.md)
-### [Términos de licencia del software de reproducción remota de holografías](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 ## Unity
 ### [Introducción al desarrollo de Unity](unity-development-overview.md)
 ### Introducción
@@ -188,7 +186,6 @@
 #### [Entrada desde teclado, ratón y controlador en DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Temas avanzados
 #### [Uso de XAML con aplicaciones de DirectX holográficas](using-xaml-with-holographic-directx-apps.md)
-#### [Adición de control remoto de holografías](add-holographic-remoting.md)
 ### [OpenXR](openxr.md)
 ## WebVR
 ### [Uso de WebVR en Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
@@ -289,7 +286,16 @@
 ## Herramientas remotas y de investigación
 ### [Uso del Portal de dispositivos Windows](using-the-windows-device-portal.md)
 ### [Referencia de la API del Portal de dispositivos](device-portal-api-reference.md)
+## Control remoto de holografías
 ### [Holographic Remoting Player](holographic-remoting-player.md)
+### [Escritura de una aplicación de host de control remoto de holografías](holographic-remoting-create-host.md)
+### [Escritura de un reproductor de control remoto de holografías personalizado](holographic-remoting-create-player.md)
+### [Canales de datos personalizados de control remoto de holografías](holographic-remoting-custom-data-channels.md)
+### [Conexión segura con el control remoto de holografías](holographic-remoting-secure-connection.md)
+### [Solución de problemas y limitaciones](holographic-remoting-troubleshooting.md)
+### [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+### Control remoto de holografías para HoloLens 1
+#### [Adición de control remoto de holografías](add-holographic-remoting.md)
 ## Otras
 ### [Seguimiento de códigos QR](qr-code-tracking.md)
 ### [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
