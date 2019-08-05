@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, fuente, tipografía, UI, UX
-ms.openlocfilehash: 739dee36ffcbaa92fad705d1b0e58506801c9a4d
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 238f99442bcc5cf02de6760f0ce52d07c9d9c567
+ms.sourcegitcommit: be3631932ea1c88ac3ad8b2390c98c5a6e8b93ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701911"
+ms.lasthandoff: 08/04/2019
+ms.locfileid: "68776393"
 ---
 # <a name="text-in-unity"></a>Texto en Unity
 
@@ -51,7 +51,7 @@ Al agregar un elemento de texto basado en un lienzo o una interfaz de usuario a 
 
 ## <a name="working-with-text-mesh-pro"></a>Trabajar con la malla de texto Pro
 
-Con la malla de texto de Unity, puede proteger la calidad de representación de texto. Admite los contornos de texto nítidos independientemente de la distancia mediante la técnica de [campo de distancia con signo (SDF)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Con el mismo método de cálculo que hemos usado anteriormente para la malla de texto 3D y el texto de la interfaz de usuario, podemos encontrar los valores de escalado adecuados para usarlos con puntos tipográficos convencionales. Dado que la fuente pro de la malla de texto 3D predeterminada con el tamaño de 36 tiene un tamaño de límite de 2,5 unidades de Unity (2,5 m), podemos usar el valor de escalado 0,005 para obtener el tamaño del punto. La malla de texto Pro en el menú de la interfaz de usuario tiene el tamaño de límite predeterminado de 25 unidades de Unity. Esto nos da 0,0005 para el valor de escalado.
+Con la malla de texto de Unity, puede proteger la calidad de representación de texto. Admite los contornos de texto nítidos independientemente de la distancia mediante la técnica de [campo de distancia con signo (SDF)](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf) . Con el mismo método de cálculo que hemos usado anteriormente para la malla de texto 3D y el texto de la interfaz de usuario, podemos encontrar los valores de escalado adecuados para usarlos con puntos tipográficos convencionales. Dado que la fuente pro de la malla de texto 3D predeterminada con el tamaño de 36 tiene un tamaño de límite de 2,5 unidades de Unity (2,5 m), podemos usar el valor de escalado de 0,005 para obtener el tamaño del punto. La malla de texto Pro en el menú de la interfaz de usuario tiene el tamaño de límite predeterminado de 25 unidades de Unity. Esto nos da 0,0005 para el valor de escalado.
 
 ![Malla de texto 3D de Unity con diferentes tamaños de fuente](images/Text_In_Unity_Measurements2.png)<br>
 *Ajustar los valores para el texto 3D de Unity y el texto de la interfaz de usuario*
