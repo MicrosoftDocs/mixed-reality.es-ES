@@ -8,12 +8,12 @@ ms.date: 02/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de inicio, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto
-ms.openlocfilehash: cf513cebbbf4f05721811cb82d584f9039e378b7
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: c39a5f2f31dc962758456f743e17aaf37fd4ed64
+ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415396"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817359"
 ---
 # <a name="mixed-reality-documentation"></a>Documentación sobre Mixed Reality
 
@@ -61,7 +61,7 @@ Mixed Reality mezcla contenido real y virtual en entornos híbridos donde coexis
                                </a>
                             </li>
                              <li>
-                              <a href="implementing-3d-app-launchers.md" title="Distribución" data-linktype="absolute-path">
+                              <a href="implementing-3d-app-launchers.md" title="Distribuir" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
