@@ -6,12 +6,12 @@ ms.author: wguyman, cdedmonds
 ms.date: 06/12/2019
 ms.topic: article
 keywords: cámara, hololens, cámara de color, frontal cara, hololens 2, CV, Computer Vision, fiducial, Marks, código QR, QR, Foto, vídeo
-ms.openlocfilehash: b80e201723f8f499a6d35008b9d308f93b925b1c
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 368943dd70c721a41ca7c265a19ecb7c394db312
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694538"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861721"
 ---
 # <a name="locatable-camera"></a>Cámara localizable
 
@@ -84,11 +84,13 @@ Para ir de "CameraIntrinsics" y "CameraCoordinateSystem" al sistema de coordenad
 
 [Cámara localizable en Unity](locatable-camera-in-unity.md): La clase PhotoCaptureFrame proporciona automáticamente CameraToWorldMatrix (por lo que no es necesario preocuparse por las transformaciones CameraCoordinateSystem).
 
-[Cámara localizable en DirectX](locatable-camera-in-directx.md): Muestra la forma bastante sencilla de consultar la transformación entre el sistema de coordenadas de la cámara y sus propios sistemas de coordenadas de aplicación.
+[Cámara localizable en DirectX](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking): El ejemplo de seguimiento de caras holográficas muestra la forma bastante sencilla de consultar la transformación entre el sistema de coordenadas de la cámara y sus propios sistemas de coordenadas de aplicación.
 
 ### <a name="distortion-error"></a>Error de distorsión
 
-En HoloLens, los flujos de vídeo y de imagen fija no se distorsionan en la canalización de procesamiento de imágenes del sistema antes de que los fotogramas estén disponibles para la aplicación (la secuencia de vista previa contiene los fotogramas distorsionados originales). Dado que solo están disponibles los CameraIntrinsics, las aplicaciones deben suponer que los fotogramas de imagen representan una cámara pinhole perfecta; sin embargo, la función de no distorsión del procesador de imágenes todavía puede dejar un error de hasta 10 píxeles en HoloLens (primera generación) al usar CameraIntrinsics en los metadatos del marco. En muchos casos de uso, este error no es importante, pero si se alinean los hologramas con los pósteres o marcadores reales, por ejemplo, y observa un < desplazamiento 10px (aproximadamente 11mm para los hologramas ubicados en dos metros), este error de distorsión podría ser la causa. 
+En HoloLens, los flujos de vídeo y de imagen fija no se distorsionan en la canalización de procesamiento de imágenes del sistema antes de que los fotogramas estén disponibles para la aplicación (la secuencia de vista previa contiene los fotogramas distorsionados originales). Dado que solo están disponibles los CameraIntrinsics, las aplicaciones deben suponer que los fotogramas de imagen representan una cámara pinhole perfecta.
+
+En HoloLens (primera generación), la función de no distorsión del procesador de imágenes todavía puede dejar un error de hasta 10 píxeles al usar CameraIntrinsics en los metadatos del marco. En muchos casos de uso, este error no es importante, pero si se alinean los hologramas con los pósteres o marcadores reales, por ejemplo, y observa un < desplazamiento 10px (aproximadamente 11mm para los hologramas ubicados en dos metros), este error de distorsión podría ser la causa. 
 
 ## <a name="locatable-camera-usage-scenarios"></a>Escenarios de uso de cámara localizables
 
@@ -170,7 +172,7 @@ Ejemplos:
 * Identifique y reconozca a personas de la habitación (por ejemplo, coloque las tarjetas de contacto holográfica en caras)
 
 ## <a name="see-also"></a>Vea también
-* [Cámara localizable en DirectX](locatable-camera-in-directx.md)
+* [Ejemplo de cámara localizable](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Cámara localizable en Unity](locatable-camera-in-unity.md)
 * [Captura de realidad mixta](mixed-reality-capture.md)
 * [Captura de realidad mixta para desarrolladores](mixed-reality-capture-for-developers.md)

@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: c110b549603f42ec03fd6c0dc8df7bf70ba5ba9f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
+ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516220"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861715"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Contribución a la documentación para desarrolladores de realidad mixta de Windows
 
@@ -58,11 +58,33 @@ Use el siguiente flujo de trabajo para efectuar actualizaciones en *un artículo
 6. En la página siguiente, haga clic en **crear solicitud de incorporación** de cambios para fusionar mediante combinación la rama creada automáticamente en ' maestra '.
 7. Repita los pasos anteriores para el siguiente artículo que desee editar.
 
+## <a name="renaming-or-deleting-an-existing-article"></a>Cambiar el nombre o eliminar un artículo existente
+
+Si el cambio cambiará el nombre o eliminará un artículo existente, asegúrese de agregar una redirección. De este modo, todos los usuarios con un vínculo al artículo existente seguirán en el lugar correcto. Las redirecciones se administran mediante el archivo. openpublishing. Redirection. JSON en la raíz del repositorio.
+
+Para agregar una redirección a. openpublishing. Redirection. JSON, agregue una entrada a la `redirections` matriz:
+
+```json
+{
+    "redirections": [
+        {
+            "source_path": "mixed-reality-docs/old-article.md",
+            "redirect_url": "new-article#section-about-old-topic",
+            "redirect_document_id": false
+        },
+```
+
+- `source_path` Es la ruta de acceso relativa del repositorio al artículo anterior que se va a quitar. Asegúrese de que la ruta de `mixed-reality-docs` acceso comienza con `.md`y termina con.
+- `redirect_url` Es la dirección URL pública relativa del artículo anterior al nuevo artículo. Asegúrese de que esta dirección URL no contiene `mixed-reality-docs` o `.md`, ya que hace referencia a la dirección URL pública y no a la ruta de acceso del repositorio. Se permite la vinculación a una sección del `#section` nuevo artículo con. También puede usar una ruta de acceso absoluta a otro sitio, si es necesario.
+- `redirect_document_id`indica si desea conservar el identificador de documento del archivo anterior. De manera predeterminada, es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
+
+Si agrega un redireccionamiento, asegúrese de eliminar también el archivo antiguo.
+
 ## <a name="creating-a-new-article"></a>Creación de un nuevo artículo
 
 Use el siguiente flujo de trabajo para *crear nuevos artículos* en el repositorio de documentación a través de github en un explorador Web:
 
-1. Cree una bifurcación desconectada de la rama "principal" de MicrosoftDocs/Mixed  reality (con el botón bifurcar en la parte superior derecha).
+1. Cree una bifurcación desconectada de la rama "principal" de MicrosoftDocs/Mixed reality (con el botón bifurcar en la parte superior derecha).
 
    ![Bifurcar la bifurcación principal.](images/forkbranch.png)
 2. En la carpeta "Mixed Reality-docs", haga clic en el botón **crear nuevo archivo** en la parte superior derecha.
@@ -184,7 +206,7 @@ Use el siguiente flujo de trabajo para realizar cambios en la documentación con
    3. **Confirmar todos** los cambios en el **control de código fuente** (escribir mensaje de confirmación cuando se le solicite).
       
       ![Elegir "confirmar todo" en el control de código fuente](images/source_control_commit.png)
-   4. Haga clic  en el botón sincronizar para volver a sincronizar los cambios con el origen (la bifurcación en GitHub).
+   4. Haga clic en el botón sincronizar para volver a sincronizar los cambios con el origen (la bifurcación en GitHub).
       
       ![Haga clic en el botón sincronizar](images/sync_back.png)
 3. En un explorador Web, cree una solicitud de incorporación de cambios para sincronizar nuevos cambios en la bifurcación de nuevo en MicrosoftDocs/mixed-reality ' maestra ' (Asegúrese de que la flecha señala la manera correcta).
