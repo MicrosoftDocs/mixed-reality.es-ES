@@ -182,7 +182,6 @@
 #### [Asignación espacial en DirectX](spatial-mapping-in-directx.md)
 ### Otras características importantes
 #### [Delimitadores espaciales compartidos en DirectX](shared-spatial-anchors-in-directx.md)
-#### [Cámara localizable en DirectX](locatable-camera-in-directx.md)
 #### [Entrada desde teclado, ratón y controlador en DirectX](keyboard,-mouse,-and-controller-input-in-directx.md)
 ### Temas avanzados
 #### [Uso de XAML con aplicaciones de DirectX holográficas](using-xaml-with-holographic-directx-apps.md)
