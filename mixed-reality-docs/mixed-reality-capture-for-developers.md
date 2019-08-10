@@ -6,16 +6,17 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, vídeo, captura, cámara
-ms.openlocfilehash: d1675d2d6c74c6d15ca245a66719e00f2a7c2111
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 740b02dd1714679028541a888d721ae74e8e1f32
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694364"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937070"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidad mixta para desarrolladores
 
-> [Nota] Consulte [representación de la cámara PV](#render-from-the-pv-camera-opt-in) a continuación para obtener instrucciones sobre una nueva funcionalidad de MRC para HoloLens 2.
+> [!NOTE]
+> Consulte [representación de la cámara PV](#render-from-the-pv-camera-opt-in) a continuación para obtener instrucciones sobre una nueva funcionalidad de MRC para HoloLens 2.
 
 Dado que un usuario podría tomar una foto o un vídeo de [captura de realidad mixta](mixed-reality-capture.md) (MRC) en cualquier momento, hay algunas cosas que debe tener en cuenta al desarrollar la aplicación. Esto incluye procedimientos recomendados para la calidad visual de MRC y para responder a los cambios del sistema mientras se capturan MRCs.
 

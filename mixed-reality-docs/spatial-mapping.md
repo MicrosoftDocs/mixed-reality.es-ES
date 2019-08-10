@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: asignación espacial, HoloLens, realidad mixta, reconstrucción superficial, malla, Sr
-ms.openlocfilehash: 31abeca624512f1d5e721dbe879ca2243cf41345
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4914cf5b7864ecb2430a39af73729eb6dfc0e2bd
+ms.sourcegitcommit: c4c293971bb3205a82121bbfb40d1ac52b5cb38e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550486"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68937069"
 ---
 # <a name="spatial-mapping"></a>Asignación espacial
 
@@ -72,7 +72,7 @@ Uno de los usos principales de las superficies de asignación espacial es simple
 
 La oclusión también proporciona información al usuario; Cuando un holograma parece estar ocluidosdo por una superficie del mundo real, proporciona información visual adicional sobre la ubicación espacial de ese holograma en el mundo. Por el contrario, la oclusión también puede *ocultar* de forma útil información del usuario; occluding hologramas Behind Walls puede reducir la confusión visual de una manera intuitiva. Para ocultar o mostrar un holograma, el usuario solo tiene que desplace su encabezado.
 
-La oclusión también se puede utilizar para las expectativas principales de una interfaz de usuario natural basada en interacciones físicas conocidas. Si un holograma es ocluidos por una superficie, se debe a que esa superficie es sólida, por lo que el usuario debería esperar  que el holograma se colisionará con esa superficie y no simplemente lo pase.
+La oclusión también se puede utilizar para las expectativas principales de una interfaz de usuario natural basada en interacciones físicas conocidas. Si un holograma es ocluidos por una superficie, se debe a que esa superficie es sólida, por lo que el usuario debería esperar que el holograma se colisionará con esa superficie y no simplemente lo pase.
 
 A veces, no se desea la oclusión de hologramas. Si un usuario tiene que ser capaz de interactuar con un holograma, debe ser capaz de verlo, incluso si está detrás de una superficie del mundo real. En tales casos, normalmente tiene sentido representar tal holograma de manera diferente cuando se ocluidos (por ejemplo, reduciendo su luminosidad). De este modo, el usuario podrá localizar visualmente el holograma, pero seguirá teniendo en cuenta que está detrás de algo.
 
@@ -220,4 +220,5 @@ Sin embargo, tenga en cuenta que cada Raycast puede tener un alto costo computac
 * [Asignación espacial en DirectX](spatial-mapping-in-directx.md)
 * [Asignación espacial en Unity](spatial-mapping-in-unity.md)
 * [Diseño de asignaciones espaciales](spatial-mapping-design.md)
+* [Conocimiento de escenas](scene-understanding.md)
 * [Case study - Looking through holes in your reality](case-study-looking-through-holes-in-your-reality.md) (Caso práctico: mirar por un agujero en tu realidad)
