@@ -36,6 +36,7 @@
 ### [Controladores de movimiento](motion-controllers.md)
 ### [Entrada de voz](voice-input.md)
 ### [Asignación espacial](spatial-mapping.md)
+### [Descripción de escenas](scene-understanding.md)
 ### [Sonido espacial](spatial-sound.md)
 ### [Sistemas de coordenadas](coordinate-systems.md)
 ### [Delimitadores espaciales](spatial-anchors.md)
