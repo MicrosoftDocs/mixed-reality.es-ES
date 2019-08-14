@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 27742702f7a274b3212cdf12c77d8acfa0a29834
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: c7cbdca3c22253042a9be44a194fca8925f0f446
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701824"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977958"
 ---
 # <a name="3-adding-the-azure-cognitive-services-speech-translation-component"></a>3. Adición del componente de traducción de voz de Azure Cognitive Services
 
-En este tutorial, aprendemos Aabout el componente de traducción de voz de Azure Cognitive Services en nuestro proyecto, además de traducirse en tres lenguajes diferentes. 
+En este tutorial, aprendemos sobre el componente de traducción de voz de Azure Cognitive Services en nuestro proyecto, además de traducirse en tres lenguajes diferentes. 
 
 ## <a name="instructions"></a>Instrucciones
 
@@ -45,5 +45,5 @@ A continuación se muestra un ejemplo de la apariencia de la escena:
 
 Ahora el proyecto puede traducir las palabras que habla en varios idiomas diferentes. No dude en experimentar con los lenguajes y probar la precisión de la traducción. 
 
-[Siguiente tutorial: 4.  Configuración de reconocimiento de intenciones y comprensión del lenguaje natural](mrlearning-speechSDK-ch4.md)
+[Siguiente tutorial: 4. Configuración de reconocimiento de intenciones y comprensión del lenguaje natural](mrlearning-speechSDK-ch4.md)
 

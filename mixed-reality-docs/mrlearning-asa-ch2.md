@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 4e60ed844e64d736c268dd3ec8453c6c2cb7ad75
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 70f84c1ec03919a15bed486ffa51fb57db39deec
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702046"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977967"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Guardar, recuperar y compartir anclajes espaciales de Azure
 
@@ -46,13 +46,13 @@ En este tutorial, veremos cómo guardar los anclajes espaciales de Azure en vari
 
    - En el caso del botón denominado GetFromDisk, cree un nuevo evento bajo el desencadenador de eventos presionado del botón, así como el desencadenador de evento al hacer clic. Arrastre el objeto ParentAnchor al campo vacío y asigne el método LoadAzureAnchorIDsFromDisk () desde el componente ASAmoduleScript del objeto ParentAnchor.
 
-3. Siga las instrucciones de tutoiral 1 para compilar la aplicación actualizada en el dispositivo. Después de presionar el botón crear anclaje de Azure, como hizo en la lección anterior, puede guardar el identificador de delimitador de Azure en el disco presionando el botón Guardar en el disco.
+3. Siga las instrucciones del tutorial 1 para compilar la aplicación actualizada en el dispositivo. Después de presionar el botón crear anclaje de Azure, como hizo en la lección anterior, puede guardar el identificador de delimitador de Azure en el disco presionando el botón Guardar en el disco.
 
 4. Reinicie la aplicación, inicie la sesión de Azure, presione cargar identificador de delimitador y, a continuación, presione buscar delimitador de Azure para ubicar el delimitador asociado con el ID. que hemos guardado en el disco. La escena completa ahora debe ajustarse a la posición, en la ubicación en la que guardó el delimitador previamente.
 
 ### <a name="share-azure-anchors-between-multiple-devices"></a>Compartir anclajes de Azure entre varios dispositivos
 
-En esta sección, aprenderá a compartir el identificador de delimitador de Azure entre varios dispositivos. Esto permitirá que varios dispositivos consulten Azure para el mismo identificador de delimitador, lo que permite alinear espacialmente los hologramas y las escenas anclados. La alineación espacial (ver los mismos hologramas en la misma ubicación física entre varios dispositivos) es fundamental para las experiencias compartidas locales en HoloLens 2. Hay muchas maneras de transferir información relacionada con los identificadores de Azure entre dispositivos, incluidos los métodos descritos en los tutoriales de experiencias compartidas de los delimitadores espaciales de Azure (TODO: Agregar vínculo). En este ejemplo se usa un servicio web simple para cargar y descargar los ID. de delimitador entre dispositivos.
+En esta sección, aprenderá a compartir el identificador de delimitador de Azure entre varios dispositivos. Esto permitirá que varios dispositivos consulten Azure para el mismo identificador de delimitador, lo que permite alinear espacialmente los hologramas y las escenas anclados. La alineación espacial (ver los mismos hologramas en la misma ubicación física entre varios dispositivos) es fundamental para las experiencias compartidas locales en HoloLens 2. Hay muchas maneras de transferir información relacionada con los identificadores de Azure entre dispositivos, incluidos los métodos descritos en los [tutoriales](mrlearning-sharing(photon)-ch1.md)de tutoriales de experiencias compartidas de los delimitadores espaciales de Azure. En este ejemplo se usa un servicio web simple para cargar y descargar los ID. de delimitador entre dispositivos.
 
 1. Agregue el recurso prefabricado ShareAnchor en la jerarquía. Este recurso prefabricado agrega dos nuevos botones a la escena. uno para cargar información de identificador de delimitador y otro para descargar información de identificador de delimitador. 
 

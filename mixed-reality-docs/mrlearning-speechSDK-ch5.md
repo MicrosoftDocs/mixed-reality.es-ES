@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: fc65dccfcbc181af0c0b321374c721797e120e5d
-ms.sourcegitcommit: c7c7e3c836373b65e319609b4e8389dea6b081de
+ms.openlocfilehash: 43a6f02eaf09fcf43775374fae4fbe2d0bc8c346
+ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460334"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68977979"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Módulo de aprendizaje de Speech SDK: control selector de Rocket con comandos de voz
 
@@ -23,17 +23,17 @@ En esta lección, usaremos la característica de intención del servicio de voz 
 - Obtenga información sobre cómo usar los comandos de voz para el intento de voz como comandos de entrada de control de Rocket.
 
 ## <a name="instructions"></a>Instrucciones
-1. En este tutorial, vamos a usar un recurso "BaseModule" para integrar Rocket Launcher con los comandos de voz. Para ello, es necesario importar el recurso en el proyecto. Puede descargar el recurso "Rocket Launcher" mediante este vínculo (Adjunte el vínculo). 
+1. En este tutorial, vamos a usar un recurso "BaseModule" para integrar Rocket Launcher con los comandos de voz. Para ello, es necesario importar el recurso en el proyecto. Puede descargar el recurso "Rocket Launcher" mediante este [vínculo](https://github.com/microsoft/MixedRealityLearning/releases/tag/1.2). 
 
 2. Para importar el recurso, vaya a activos-> Importar paquete personalizado >-> navegue hasta el archivo descargado y haga clic en importar.
 
 ![module4chapter5step1](images/module4chapter5step1.PNG)
 
-3. Después de importar el recurso "Rocket Launcher", navegue dentro de la carpeta "Rocket Launcher"-> Prefabs-> seleccione "Rocket Launcher_Complete" y, a continuación, arrástrelo y colóquelo en la jerarquía de escenas existente.
+3. Después de importar el recurso "recursos del módulo base", navegue dentro de la carpeta "recursos del módulo base": > Prefabs-> seleccione "Rocket Launcher_Complete" y, a continuación, arrástrelo y colóquelo en la jerarquía de escenas existente.
 
 ![module4chapter5step2](images/module4chapter5step2.PNG)
 
-4. Ahora tenemos que integrar nuestro "selector de Rocket" con nuestro proyecto LUIS en la lección anterior (vínculo para lesson4). Para ello, expanda el recurso prefabricado "Rocket Launcher_Complete" en la jerarquía y busque los botones "LaunchRoundButton", "ResetRoundButton" y "sugerencias de colocación".
+4. Ahora tenemos que integrar nuestro "selector de Rocket" con nuestro proyecto LUIS en la [lección](mrlearning-speechSDK-ch4.md)anterior. Para ello, expanda el recurso prefabricado "Rocket Launcher_Complete" en la jerarquía y busque los botones "LaunchRoundButton", "ResetRoundButton" y "sugerencias de colocación".
 
 ![module4chapter5step3](images/module4chapter5step3.PNG)
 
