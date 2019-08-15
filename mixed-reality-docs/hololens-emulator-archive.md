@@ -3,15 +3,15 @@ title: Archivo del emulador de HoloLens
 description: Lista de las compilaciones publicadas del emulador de Microsoft HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 4/25/2019
+ms.date: 8/14/2019
 ms.topic: article
 keywords: HoloLens, emulador, compilaciones, versiones
-ms.openlocfilehash: b209e444c223c3183d2680976f68c33a3b6ed79b
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 548e8fb72af137e53c10c4507c56f29c8bd6a4ca
+ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694424"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030156"
 ---
 Las compilaciones del emulador de HoloLens (1ª generación) y de HoloLens 2 se instalan en paralelo. Por lo general, se recomienda usar la última compilación disponible, pero puede haber casos en los que desee o necesite probar una aplicación en un emulador anterior. En esta página se incluyen vínculos a versiones publicadas.
 
@@ -21,7 +21,8 @@ Las compilaciones del emulador de HoloLens (1ª generación) y de HoloLens 2 se 
 
 |  Compilación |  Fecha de lanzamiento |  Notas | 
 |----------|----------|----------|
-|  [10.0.18362.1021 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2098508) | 8 de julio de 2019 | Última compilación de HoloLens 2.  Soluciona un problema de firma con DiskStream. dll |
+|  [10.0.18362.1028 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2101019) | 14 de agosto de 2019 | Compilación de agosto de 2019 HoloLens 2.  Las plantillas de aplicación holográfica ya no se incluyen, pero están disponibles en la Visual Studio Marketplace a partir del 2019 de septiembre.  El emulador ahora funcionará cuando se instalen los SDK en una ubicación personalizada. |
+|  [10.0.18362.1021 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2098508) | 8 de julio de 2019 | Soluciona un problema de firma con DiskStream. dll |
 |  [10.0.18362.1019 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junio de 2019 | Ya no es necesario ejecutar como administrador.  Acceso directo del menú Inicio agregado. |
 |  [10.0.18362.1005 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 de abril de 2019 |  |
 

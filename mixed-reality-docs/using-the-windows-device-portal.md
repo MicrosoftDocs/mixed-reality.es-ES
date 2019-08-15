@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos de Windows, HoloLens
-ms.openlocfilehash: 79a4a1f99125028fcaf71e185eb00093aa8c742f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 5a2440c07ade1a9c41f3c28c332748e0c97cd3ed
+ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694583"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69020227"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portal de dispositivos de Windows
 
@@ -36,7 +36,7 @@ Esta documentación trata específicamente sobre el portal de dispositivos de Wi
 5. Selecciona el elemento de menú **Para desarrolladores**.
 6. Habilita el **Modo de desarrollador**.
 7. [Desplácese hacia abajo](gestures.md#composite-gestures) y habilite el **portal de dispositivos**.
-8. Si está configurando Windows Device portal para que pueda implementar aplicaciones en este HoloLens a través de USB o Wi-  Fi, haga clic en emparejar para [generar un PIN de emparejamiento](using-visual-studio.md). Deje la aplicación de configuración en el menú emergente del PIN hasta que escriba el PIN en Visual Studio durante la primera implementación.
+8. Si está configurando Windows Device portal para que pueda implementar aplicaciones en este HoloLens a través de USB o Wi- Fi, haga clic en emparejar para [generar un PIN de emparejamiento](using-visual-studio.md). Deje la aplicación de configuración en el menú emergente del PIN hasta que escriba el PIN en Visual Studio durante la primera implementación.
 
    ![Habilitación del modo de Desarrollador en la aplicación de configuración para Windows Holographic](images/deviceportalsettings.png)
 
@@ -52,7 +52,7 @@ Esta documentación trata específicamente sobre el portal de dispositivos de Wi
 
 1. [Instale las herramientas](install-the-tools.md) para asegurarse de que tiene Visual Studio Update 1 con las herramientas de desarrollo de Windows 10 instaladas en su equipo. Esto permite la conectividad USB.
 2. Conecta HoloLens en el equipo con un cable micro-USB.
-3. Desde un explorador web de tu equipo, ve a http://127.0.0.1:10080.
+3. Desde un explorador Web en su equipo, vaya a [http://127.0.0.1:10080](http://127.0.0.1:10080).
 
 ## <a name="connecting-to-an-emulator"></a>Conectarse a un emulador
 
@@ -69,7 +69,7 @@ La primera vez que te conectes a Device Portal en HoloLens, debes crear un nombr
 3. Escriba el PIN en el **código PIN mostrado en** el cuadro de texto del dispositivo.
 4. Escribe el nombre de usuario que usarás para conectarte a Device Portal. No es necesario que sea un nombre de cuenta de Microsoft (MSA) ni un nombre de dominio.
 5. Escribe una contraseña y confírmala. La contraseña debe tener al menos siete caracteres de longitud. No es necesario que sea una MSA ni una contraseña de dominio.
-6. Haga  clic en emparejar para conectarse al portal de dispositivos de Windows en HoloLens.
+6. Haga clic en emparejar para conectarse al portal de dispositivos de Windows en HoloLens.
 
 Si desea cambiar este nombre de usuario o contraseña en cualquier momento, puede repetir este proceso visitando la página de seguridad del dispositivo; para ello, vaya a: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm.
 
@@ -222,7 +222,7 @@ Administra las aplicaciones que están instaladas en HoloLens.
 ![Página de volcados de memoria de la aplicación en Windows Device portal en Microsoft HoloLens](images/windows-device-portal-dev-apps-crash-dumps-page-1000px.png)<br>
 *Página de volcados de memoria de la aplicación en Windows Device portal en Microsoft HoloLens*
 
-En esta página puedes recopilar los volcados de memoria de las aplicaciones transferidas localmente. Active la  casilla volcados de memoria habilitados para cada aplicación para la que desea recopilar volcados de memoria. Vuelve a esta página para recopilar los volcados de memoria. Los archivos de volcado de memoria se pueden [abrir en Visual Studio para](https://msdn.microsoft.com/library/d5zhxt22.aspx)la depuración.
+En esta página puedes recopilar los volcados de memoria de las aplicaciones transferidas localmente. Active la casilla volcados de memoria habilitados para cada aplicación para la que desea recopilar volcados de memoria. Vuelve a esta página para recopilar los volcados de memoria. Los archivos de volcado de memoria se pueden [abrir en Visual Studio para](https://msdn.microsoft.com/library/d5zhxt22.aspx)la depuración.
 
 ### <a name="file-explorer"></a>Explorador de archivos
 
