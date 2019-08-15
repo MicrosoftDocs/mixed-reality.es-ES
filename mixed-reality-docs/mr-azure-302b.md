@@ -276,7 +276,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 Este curso requiere el uso de la biblioteca **Newtonsoft** , que se puede agregar como un archivo DLL a los recursos. El paquete que contiene [esta biblioteca se puede descargar desde este vínculo](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/NewtonsoftDLL.unitypackage).
 Para importar la biblioteca de Newtonsoft en el proyecto, use el paquete de Unity que se incluía con este curso.
 
-1.  Agregue el *. unitypackage Tools* a Unity mediante la opción de menú de * >  *paquetes* *importar* *paquete* > *personalizado**  de paquetes.
+1.  Agregue el *.unitypackage Tools* a Unity mediante la opción de menú de **paquetes* **importar**  > *paquete* > *personalizado**  de paquetes.
 
 2.  En el cuadro **importar paquete Unity** que aparece, asegúrese de que todo lo que hay en **Complementos** (y incluido) está seleccionado.
 
