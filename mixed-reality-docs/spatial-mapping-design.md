@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, asignación espacial, HoloLens, reconstrucción superficial, malla
-ms.openlocfilehash: 451213a79e1d482d64725ce750065611830beec3
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 02e64727f9a23bea28e018d7c4e5a8b89c152447
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829959"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566010"
 ---
 # <a name="spatial-mapping-design"></a>Diseño de asignación espacial
 
@@ -45,49 +45,9 @@ Visualizar las superficies al colocar o mover hologramas (usar una cuadrícula p
 
 ## <a name="what-influences-spatial-mapping-quality"></a>¿Qué influye en la calidad de la asignación espacial?
 
-Con el fin de proporcionar la mejor experiencia de usuario, es importante comprender los factores que afectan a la calidad de los datos de asignación espacial recopilados por HoloLens.
-
-Los errores en los datos de asignación espacial se dividen en una de estas tres categorías:
-* **Agujeros**: Faltan las superficies del mundo real en los datos de asignación espacial.
-* **Hallucinations**: Existen superficies en los datos de asignación espacial que no existen en el mundo real.
-* **Bias**: Las superficies en los datos de asignación espacial se alinean imperfectamente con las superficies del mundo real, ya sean insertadas o extraídas.
-
-Varios factores pueden afectar a la frecuencia y la gravedad de estos errores:
-
-* **Movimiento de usuarios**
-   * La forma en que el usuario se mueve a través de su entorno determina en qué medida se examinará el entorno, por lo que el usuario puede requerir orientación para lograr un buen examen.
-   * La cámara utilizada para el análisis proporciona datos dentro de un cono de 70 grados, desde un mínimo de 0,8 metros hasta un máximo de 3,1 metros de distancia desde la cámara. Las superficies del mundo real solo se examinarán dentro de este campo de vista. Tenga en cuenta que estos valores están sujetos a cambios en versiones futuras.
-   * Si el usuario nunca obtiene en 3,1 metros de un objeto, no se examinará.
-   * Si el usuario solo ve un objeto a partir de una distancia inferior a 0,8 metros, no se examinará (Esto evitará el examen de las manos del usuario).
-   * Si el usuario no busca nunca (que es bastante normal), es probable que el límite superior no se analice.
-   * Si un usuario no busca nunca en el mobiliario o en una pared, no se examinarán los objetos que ocluidos.
-   * Las superficies tienden a analizarse con una calidad más alta cuando se ven como cabezales y no en un ángulo superficial.
-   * Si se produce un error en el sistema de seguimiento de los cabezales de HoloLens momentáneamente (lo que puede suceder debido a un movimiento de usuario rápido, una iluminación deficiente, paredes sin características o las cámaras que se están analizando), esto puede introducir errores en los datos de asignación espacial. Estos errores se corregirán con el tiempo a medida que el usuario siga desplazando y examinando el entorno.
-
-* **Materiales de superficie**
-   * Los materiales que se encuentran en las superficies del mundo real varían en gran medida. Estos afectan a la calidad de los datos de asignación espacial porque afectan al modo en que se refleja la luz de infrarrojos.
-   * Es posible que las superficies oscuras no digitalicen hasta que estén más cerca de la cámara, ya que reflejan menos luz.
-   * Algunas superficies pueden ser tan oscuras que reflejan demasiado poca luz para su análisis desde cualquier distancia, por lo que introducirán errores de orificio en la ubicación de la superficie y, en ocasiones, también detrás de la superficie.
-   * Las superficies especialmente brillantes solo pueden escanear cuando se ve el cabezal y no cuando se ven desde un ángulo superficial.
-   * Reflejos, ya que crean reflexiones de illusory de espacios y superficies reales, pueden producir errores de orificio y errores de Hallucination.
-
-* **Movimiento de la escena**
-   * La asignación espacial se adapta rápidamente a los cambios en el entorno, como mover personas o abrir y cerrar puertas.
-   * Sin embargo, la asignación espacial solo puede adaptarse a los cambios en un área cuando esa área está claramente visible para la cámara que se usa para el examen.
-   * Por este motivo, es posible que esta adaptación se retrase con la realidad, lo que puede provocar errores de orificio o Hallucination.
-   * Por ejemplo, un usuario examina un amigo y luego se enciende mientras el amigo deja la habitación. Una representación "fantasma" del amigo (un error de Hallucination) se conservará en los datos de asignación espacial, hasta que el usuario vuelva a examinar el espacio en el que estaba el amigo.
-
-* **Interferencia de iluminación**
-   * La luz de infrarrojos ambiente de la escena puede interferir con el análisis, por ejemplo, una luz solar fuerte que llega a través de una ventana.
-   * Las superficies especialmente brillantes pueden interferir con el análisis de las superficies cercanas, la luz que los rebotan causan errores de sesgo.
-   * Las superficies brillantes que reflejen la luz directamente en la cámara pueden interferir con el espacio cercano, ya sea provocando hallucinations de aire flotante o retrasando la adaptación al movimiento de la escena.
-   * Dos dispositivos HoloLens en la misma habitación no deberían interferir entre sí, pero la presencia de más de cinco dispositivos HoloLens puede producir interferencias.
-
-Puede que sea posible evitar o corregir algunos de estos errores. Sin embargo, debe diseñar la aplicación para que el usuario pueda alcanzar sus objetivos incluso en presencia de errores en los datos de asignación espacial.
+Algunos factores, detallados [aquí](environment-considerations-for-hololens.md), pueden afectar a la frecuencia y la gravedad de estos errores.  Sin embargo, debe diseñar la aplicación para que el usuario pueda alcanzar sus objetivos incluso en presencia de errores en los datos de asignación espacial.
 
 ## <a name="the-environment-scanning-experience"></a>La experiencia de análisis del entorno
-
-HoloLens aprende las superficies de su entorno a medida que el usuario las examina. Con el tiempo, HoloLens crea un examen de todas las partes del entorno que se han observado. También actualiza el análisis a medida que se observan los cambios en el entorno. Este examen se conservará automáticamente entre los lanzamientos de la aplicación.
 
 Cada aplicación que utiliza la asignación espacial debe considerar la posibilidad de proporcionar una experiencia de exploración. el proceso a través del cual la aplicación guía al usuario para que examine las superficies necesarias para que la aplicación funcione correctamente.
 
@@ -104,7 +64,7 @@ Para ayudar a diseñar la experiencia de examen adecuada, tenga en cuenta cuál 
 
 * **Sin experiencia de exploración**
    * Una aplicación puede funcionar perfectamente sin ninguna experiencia de exploración guiada; obtendrá información sobre las superficies observadas en el transcurso del movimiento natural de usuarios.
-   * Por ejemplo, una aplicación que permite al usuario dibujar en superficies con Holographic SprayPaint requiere conocer solo las superficies visibles actualmente para el usuario.
+   * Por ejemplo, una aplicación que permite que el usuario dibuje en superficies con Paint pulverizado solo requiere conocimiento de las superficies visibles actualmente para el usuario.
    * El entorno se puede examinar por completo ya si es uno en el que el usuario ya ha pasado mucho tiempo mediante HoloLens.
    * Sin embargo, tenga en cuenta que la cámara usada por la asignación espacial solo puede ver 3.1 m delante del usuario, por lo que la asignación espacial no conocerá las superficies más lejanas a menos que el usuario las haya observado desde una distancia más cercana en el pasado.
    * Por lo tanto, el usuario entiende qué superficies se han examinado, la aplicación debe proporcionar comentarios visuales a este efecto; por ejemplo, la conversión de sombras virtuales en superficies digitalizadas puede ayudar al usuario a colocar hologramas en esas superficies.
