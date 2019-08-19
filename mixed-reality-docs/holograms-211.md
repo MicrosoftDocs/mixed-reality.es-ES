@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, tutorial, gesto
-ms.openlocfilehash: 76d2b4c0ac3d0a3783b091f7dc8c39548a18b548
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
-ms.translationtype: HT
+ms.openlocfilehash: 694f51f1b56588e100d6d2676a8194d7e9936133
+ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522460"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69559877"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -64,7 +64,7 @@ En este curso, volveremos a visitar el explorador de **modelos**de proyectos de 
 
 ### <a name="errata-and-notes"></a>Erratas y notas
 
-* "Habilitar Solo mi código" debe estar deshabilitado *(* desactivado) en Visual Studio en herramientas-> opciones-> depuración para alcanzar puntos de interrupción en el código.
+* "Habilitar Solo mi código" debe estar deshabilitado(desactivado) en Visual Studio en herramientas-> opciones-> depuración para alcanzar puntos de interrupción en el código.
 
 ## <a name="chapter-0---unity-setup"></a>Capítulo 0: configuración de Unity
 
@@ -120,6 +120,9 @@ Si se implementa en un auricular envolvente:
 
 * Suscríbase a los eventos de seguimiento de la mano.
 * Use los comentarios del cursor para mostrar a los usuarios Cuándo se realiza el seguimiento de una mano.
+
+>[!NOTE]
+>En HoloLens 2, las manos detectadas se activan siempre que las manos están visibles (no solo cuando se señala un dedo).
 
 ### <a name="instructions"></a>Instrucciones
 

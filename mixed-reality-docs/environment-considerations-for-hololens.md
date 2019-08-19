@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: trama holográfica, campo de vista, campo de visualización, calibración, espacios, entorno, procedimientos
-ms.openlocfilehash: 0070455792e09cd59741362b201ca6b7b9af0aec
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
-ms.translationtype: HT
+ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
+ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670179"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69565988"
 ---
 # <a name="environment-considerations-for-hololens"></a>Consideraciones de entorno para HoloLens
 
@@ -21,7 +21,7 @@ Los hologramas que coloque permanecerán donde se colocan, incluso si apaga el d
 
 ## <a name="setting-up-an-environment"></a>Configuración de un entorno
 
-Los dispositivos HoloLens saben cómo colocar hologramas estables y precisos mediante el *seguimiento* de los usuarios en un espacio. Sin un seguimiento adecuado, el dispositivo no entiende el entorno o el usuario que contiene, por lo que los hologramas pueden aparecer en lugares equivocados, no aparecer en el mismo lugar cada vez o no aparecen en absoluto.
+Los dispositivos HoloLens saben cómo colocar hologramas estables y precisos mediante el *seguimiento* de los usuarios en un espacio. Sin un seguimiento adecuado, el dispositivo no entiende el entorno o el usuario que contiene, por lo que los hologramas pueden aparecer en lugares equivocados, no aparecer en el mismo lugar cada vez o no aparecen en absoluto. Los datos que se usan para realizar el seguimiento de los usuarios se representan en el *mapa espacial*. 
 
 El seguimiento del rendimiento se ve afectado en gran medida por el entorno en el que se encuentra el usuario, y el ajuste de un entorno para inducir un seguimiento estable y coherente es un arte en lugar de una ciencia. Muchos factores ambientales diferentes se combinan para permitir el seguimiento, pero como desarrollador de realidad mixta, hay varios factores que puede tener en cuenta para optimizar un espacio para un mejor seguimiento.
  
@@ -55,10 +55,12 @@ Si tiene dos áreas o regiones que tienen el mismo aspecto, el rastreador puede 
 
 Para evitar los túneles espaciales, intente evitar áreas idénticas en el mismo espacio. A veces, las áreas idénticas pueden incluir estaciones de fábrica, ventanas en un edificio, bastidores de servidor o estaciones de trabajo. Las áreas de etiquetado o la adición de características únicas a cada una de las áreas de aspecto similar pueden ayudar a mitigar los túneles espaciales.
  
-### <a name="temporal-stability-of-a-space"></a>Estabilidad temporal de un espacio
+### <a name="movement-in-a-space"></a>Movimiento en un espacio
 Si el entorno está cambiando y cambiando constantemente, el dispositivo no tiene características estables para localizar. 
 
 Cuanto más se muevan los objetos que se encuentren en un espacio, incluidas las personas, más fácil será perder el seguimiento. Se sabe que todos los puntos de las correas transportadoras, los elementos en diferentes Estados de construcción y muchas personas de un espacio causan problemas de seguimiento.
+
+HoloLens puede adaptarse rápidamente a estos cambios, pero solo cuando esa área esté claramente visible para el dispositivo. Las áreas que no se ven con frecuencia pueden retrasar la realidad, lo que puede provocar errores en el mapa espacial. Por ejemplo, un usuario examina un amigo y luego se enciende mientras el amigo deja la habitación. Una representación "fantasma" del amigo se conservará en los datos de asignación espacial hasta que el usuario vuelva a examinar el espacio vacío.
  
 ### <a name="proximity-of-the-user-to-items-in-the-space"></a>Proximidad del usuario a los elementos del espacio
 De forma similar al modo en que los usuarios no pueden centrarse bien en objetos cercanos a los ojos, HoloLens lucha cuando los objetos están cerca de sus cámaras. Si un objeto está demasiado cerca de verlo con ambas cámaras, o si un objeto está bloqueando una cámara, el dispositivo tendrá muchos más problemas con el seguimiento del objeto. 
@@ -76,11 +78,7 @@ Mientras WiFi esté habilitado, los datos del mapa se correlacionarán con una h
 La identificación de red (es decir, el SSID, la dirección MAC) no se envía a Microsoft y todas las referencias WiFi se mantienen en el equipo local en HoloLens.
 
 ## <a name="mapping-new-spaces"></a>Asignar nuevos espacios
-Al escribir un nuevo espacio (o cargar uno existente), verá un gráfico de malla que se propaga por el espacio. Esto significa que el dispositivo está [asignando su entorno](spatial-mapping-design.md). 
-
-Si tiene problemas para colocar hologramas, intente desplazarse por el espacio para que HoloLens pueda asignarlo más completo. 
-
-Si HoloLens no puede asignar espacio o está fuera de la calibración, puede entrar en modo limitado. En el modo limitado, no podrá colocar hologramas en su entorno.
+Al escribir un nuevo espacio (o cargar uno existente), verá un gráfico de malla que se propaga por el espacio. Esto significa que el dispositivo está asignando su entorno. Aunque HoloLens aprenderá un espacio a lo largo del tiempo, hay [sugerencias y trucos para asignar espacios](use-hololens-in-new-spaces.md). 
 
 ## <a name="environment-management"></a>Administración de entornos
 Hay dos opciones de configuración que permiten a los usuarios "limpiar" los hologramas y hacer que HoloLens "olvide" un espacio.  Existen en "hologramas and Environments" en la aplicación de configuración, donde la segunda opción también aparece en "privacidad" en la aplicación de configuración.
@@ -89,20 +87,14 @@ Hay dos opciones de configuración que permiten a los usuarios "limpiar" los hol
 
 2.  Eliminar todos los hologramas: al seleccionar esta opción, HoloLens borrará todos los datos de mapa y los hologramas delimitados en las bases de datos completas de espacios.  No se volverá a detectar ningún holograma y los hologramas deberán colocarse de nuevo para almacenar las secciones de mapa en la base de datos.
 
-### <a name="managing-your-spaces"></a>Administrar los espacios
-
-Las secciones de mapa y los distintos espacios se han contraído en una sola base de datos, almacenadas localmente en el dispositivo HoloLens. La base de datos de mapa se almacena de forma segura, con acceso solo disponible para el sistema interno y nunca a un usuario del dispositivo, incluso cuando está conectado a un equipo o a través de la aplicación del explorador de archivos. Cuando BitLocker está habilitado, los datos del mapa almacenado también se cifran.
-
-Existen varios componentes de mapa cuando los hologramas se colocan en ubicaciones diferentes sin una ruta de acceso de conexión entre las ubicaciones y los hologramas.  Los hologramas delimitados dentro de la misma sección de mapa se consideran "cercanos" en el espacio actual.
-
-Hay una API de desarrollador para exportar un pequeño subconjunto del "espacio actual" (una parte del componente de mapa reconocido actualmente) para habilitar escenarios de hologramas compartidos.  Actualmente no hay ningún mecanismo para descargar toda la base de datos de todos los espacios que se han asignado.
-
 
 ## <a name="hologram-quality"></a>Calidad de hologramas
 
 Los hologramas se pueden colocar en todo el entorno (alta, baja y todo el suyo), pero los verá a través de un [marco holográfica](holographic-frame.md) que se encuentra delante de los ojos. Para obtener la mejor vista, asegúrese de ajustar el dispositivo para que pueda ver todo el marco. Y no dude en recorrer su entorno y explorarlo.
 
 Para que los [hologramas](hologram.md) parezcan nítidos, claros y estables, HoloLens debe calibrarse solo para usted. La primera vez que configure su HoloLens, se le guiará a través de este proceso. Más adelante, si los hologramas no parecen correctos o está viendo muchos errores, puede realizar ajustes.
+
+Si tiene espacios de asignación de problemas, pruebe a eliminar los hologramas cercanos y a reasignar el espacio.
 
 ### <a name="calibration"></a>Curva
 
@@ -118,3 +110,4 @@ Si otra persona va a usar HoloLens, debe ejecutar la aplicación de calibración
 * [Diseño de asignaciones espaciales](spatial-mapping-design.md)
 * [Hologramas](hologram.md)
 * [Calibración](calibration.md)
+* [Usar Hololens en nuevos espacios](use-hololens-in-new-spaces.md)
