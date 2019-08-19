@@ -1,11 +1,11 @@
 ---
 title: Mirada
-description: Mirada es el primer formulario de entrada y un formulario principal de destino es en realidad mixta.
+description: Miramos la primera forma de entrada y es una forma principal de establecer como destino dentro de la realidad mixta.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: Mixed reality, mirada, interacción, diseñar
+keywords: Realidad mixta, mira, interacción, diseño
 ms.openlocfilehash: 7e65d26d3e9edabbd01d35a887ffc8622a3c6337
 ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
 ms.translationtype: MT
@@ -15,12 +15,12 @@ ms.locfileid: "67414367"
 ---
 # <a name="gaze"></a>Mirada
 
-**Observación** es el primer formulario de entrada y es un formulario principal de destino es en realidad mixta. Mirada indica que el usuario está buscando en el mundo y permite determinar su intención. En el mundo real, normalmente obtendrá información en un objeto que se va a interactuar con. Esto es lo mismo con la mirada.
+**Miramos** la primera forma de entrada y es una forma principal de establecer como destino dentro de la realidad mixta. Le indica dónde está buscando el usuario en el mundo y le permite determinar su intención. En el mundo real, normalmente observará un objeto con el que desea interactuar. Este es el mismo con miras.
 
-Auriculares de realidad mixta utilizar la posición y orientación de head del usuario para determinar su vector mirada principal. De este vector se puede considerar como un puntero láser recta desde directamente entre la vista del usuario. Como el usuario busca en torno a la sala de reuniones, la aplicación puede forman una intersección con este ray, con su propio hologramas tanto con el [asignación espacial](spatial-mapping.md) malla para determinar qué objeto reales o virtual que esté mirando el usuario.
+Los auriculares de realidad mixta usan la posición y la orientación del encabezado del usuario para determinar su vector de miras hacia abajo. Puede considerar este vector como un puntero láser directo directamente desde los ojos del usuario. A medida que el usuario mira el salón, la aplicación puede crear una intersección con este rayo, tanto con sus propios hologramas como con la malla de [asignación espacial](spatial-mapping.md) , para determinar qué objeto virtual o del mundo real puede estar mirando el usuario.
 
-En 2 HoloLens, interacciones mirada de principal del usuario, mirada ojo pueden tener como destino o a través de cerca o mucho entregar las interacciones.
-En HoloLens (gen 1), por lo general deben derivar las interacciones de sus destinatarios de mirada principal del usuario, en lugar de intentar para representar o interactuar directamente en la ubicación de la mano. Una vez que se ha iniciado una interacción, movimientos relativos de la mano pueden utilizarse para controlar la [gesto](gestures.md), igual que con el [manipulación o navegación](gestures.md#composite-gestures) gesto. Con inmersivos, puede tener como destino con una mirada principal o señalando capaz [motion controladores](motion-controllers.md).
+En HoloLens 2, las interacciones pueden tener como destino las interacciones de la cabeza del usuario, el ojo o la intersección de la mano.
+En HoloLens (1ª generación), las interacciones generalmente deben derivar sus destinatarios del encabezado del usuario, en lugar de intentar representarlas o interactuar directamente en la ubicación de la mano. Una vez que se ha iniciado una interacción, se pueden usar movimientos relativos de la mano para controlar el [gesto](gestures.md), al igual que con la [manipulación o](gestures.md#composite-gestures) el gesto de navegación. Con auriculares envolventes, puede dirigirse a través de [los controladores de movimiento](motion-controllers.md)de mira hacia abajo o con capacidad de puntero.
 
 <br>
 
@@ -42,13 +42,13 @@ En HoloLens (gen 1), por lo general deben derivar las interacciones de sus desti
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
-        <td>Mirada HEAD</td>
+        <td>Mira hacia abajo</td>
         <td>✔️</td>
         <td>✔️</td>
         <td>✔️</td>
     </tr>
      <tr>
-        <td>Mirada ojo</td>
+        <td>Ojo mirado</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -56,33 +56,33 @@ En HoloLens (gen 1), por lo general deben derivar las interacciones de sus desti
 </table>
 
 > [!NOTE]
-> Obtener información más específica de HoloLens 2 [próximamente](index.md#news-and-notes).
+> [Próximamente](index.md#news-and-notes) se ofrecerá orientación específica para HoloLens 2.
 
 
-## <a name="uses-of-gaze"></a>Usos de mirada
+## <a name="uses-of-gaze"></a>Usos de fijamente
 
-Como desarrollador de realidad mixta, puede hacer muchas cosas con mirada head u ojos:
-* La aplicación puede intersectar mirada con el hologramas en su escena para determinar dónde se encuentra la atención del usuario.
-* La aplicación puede tener como destino los gestos y pulsaciones de controlador según mirada del usuario, que permite que el usuario seleccione, activar, tomar, desplácese o interactuar con sus hologramas de otro modo.
-* La aplicación puede permitir que el usuario coloque hologramas en superficies del mundo real, mediante la intersección de su ray mirada a la malla de asignación espacial.
-* La aplicación puede saber cuando el usuario es *no* buscando en la dirección de un objeto importante, lo que puede provocar que la aplicación para proporcionar indicaciones visuales y de audio para activar hacia ese objeto.
+Como desarrollador de realidad mixta, puede hacer muchas cosas con miras hacia arriba o hacia abajo:
+* La aplicación puede intersectar con los hologramas de la escena para determinar dónde está la atención del usuario.
+* La aplicación puede tener como destino gestos y pulsaciones del controlador en función de la mirada del usuario, lo que permite que el usuario seleccione, active, grabe, desplace o interactúe con sus hologramas.
+* La aplicación puede permitir que el usuario coloque hologramas en superficies del mundo real, intersectando su rayo con la malla de asignación espacial.
+* La aplicación puede saber si el usuario *no* está buscando la dirección de un objeto importante, lo que puede conducir a que la aplicación proporcione indicaciones visuales y de audio para activar dicho objeto.
 
 ## <a name="cursor"></a>Cursor
 
-Para la mirada principal, debe usar la mayoría de las aplicaciones una [cursor](cursors.md) (u otra indicación visual de auditorio /) para proporcionar a la confianza de los usuarios en lo que va a interactuar con. Normalmente, se coloque este cursor en el mundo donde su ray mirada principal primero forma una intersección con un objeto, que puede ser un holograma o una superficie del mundo real.
+En el caso de la mirada, la mayoría de las aplicaciones deben usar un [cursor](cursors.md) (u otra indicación visual o de auditoría) para dar a la confianza del usuario en qué está a punto de interactuar. Normalmente, este cursor se coloca en el mundo en el que su rayo de miras hacia abajo intersecta primero con un objeto, que puede ser un holograma o una superficie del mundo real.
 
 ![Un cursor visual de ejemplo para mostrar la mirada](images/cursor.jpg)<br>
 *Un cursor visual de ejemplo para mostrar la mirada*
 
-Para la mirada ojo, generalmente recomendamos *no* para mostrar un cursor, como esto puede volverse rápidamente que distraen y molesta para el usuario. En su lugar sutilmente resaltar destinos visuales o utilizar un cursor de ojos muy débil para proporcionar confiabilidad sobre cuál es el usuario a interactuar con. Para obtener más información, consulte nuestra [instrucciones de diseño para la entrada de ojo](eye-tracking.md) en HoloLens 2.
+En general, se recomienda *no* mostrar un cursor, ya que esto puede resultar más rápido y molesto para el usuario. En su lugar, resalte los destinos visuales de forma sutilmente o use un cursor de ojo muy débil para proporcionar confianza sobre lo que el usuario está a punto de interactuar. Para obtener más información, consulte nuestra [Guía de diseño para la entrada basada en ojo](eye-tracking.md) en HoloLens 2.
 
-## <a name="giving-action-to-the-users-gaze"></a>Acción de la concesión en mirada del usuario
+## <a name="giving-action-to-the-users-gaze"></a>Realizar una acción en la mirada del usuario
 
-Una vez que el usuario destina un holograma o un objeto del mundo real mediante su mirada, su siguiente paso es realizar la acción en ese objeto. Las formas principales de un usuario para tomar medidas son a través de [gestos](gestures.md), [controladores de movimiento](motion-controllers.md) y [voz](voice-input.md).
+Una vez que el usuario ha dirigido un holograma o un objeto del mundo real con su mirada, el siguiente paso es tomar medidas en ese objeto. Las principales formas de que un usuario tome medidas a través de [gestos](gestures.md), [controladores de movimiento](motion-controllers.md) y [voz](voice-input.md).
 
 ## <a name="see-also"></a>Vea también
-* [MR Input 210: Mirada HEAD](holograms-210.md)
+* [MR Input 210: Mira hacia abajo](holograms-210.md)
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
-* [Mirada HEAD en Unity](gaze-in-unity.md)
-* [Mirada en HoloLens 2](eye-tracking.md)
-* [Efecto de ojos mirada en Unity mediante el Kit de herramientas de realidad mixta](https://aka.ms/mrtk-eyes)
+* [Mira hacia abajo en Unity](gaze-in-unity.md)
+* [Miras a la vista de HoloLens 2](eye-tracking.md)
+* [Mira fijamente en Unity con el kit de herramientas de realidad mixta](https://aka.ms/mrtk-eyes)

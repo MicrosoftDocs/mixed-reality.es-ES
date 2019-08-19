@@ -1,11 +1,11 @@
 ---
-title: Mirar en Unity
-description: Mirada es una manera más sencilla para los usuarios para tener como destino el hologramas que la aplicación se crea en realidad mixta.
+title: Miras en Unity
+description: Fijamente es una forma principal de que los usuarios tengan como destino los hologramas que crea la aplicación en realidad mixta.
 author: thetuvix
 ms.author: yoyoz
 ms.date: 03/21/2018
 ms.topic: article
-keywords: mirada, unity, holograma, realidad mixta
+keywords: mira fijamente, Unity, holograma, realidad mixta
 ms.openlocfilehash: b2cc86db156a1e97b013e4cd6debe3abe5ffb6dd
 ms.sourcegitcommit: 60060386305eabfac2758a2c861a43c36286b151
 ms.translationtype: MT
@@ -13,18 +13,18 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 05/31/2019
 ms.locfileid: "66453719"
 ---
-# <a name="head-gaze-in-unity"></a>Mirada HEAD en Unity
+# <a name="head-gaze-in-unity"></a>Mira hacia abajo en Unity
 
-[Observación](gaze.md) es una manera más sencilla para que los usuarios de destino la [hologramas](hologram.md) crea la aplicación en [Mixed Reality](mixed-reality.md).
+[Mirada](gaze.md) es una forma principal de que los usuarios tengan como destino los [hologramas](hologram.md) que crea la aplicación en [realidad mixta](mixed-reality.md).
 
 
-## <a name="implementing-head-gaze"></a>Implementación mirada principal
+## <a name="implementing-head-gaze"></a>Implementar encabezado
 
-Conceptualmente, [que mirar](gaze.md) se implementa mediante la proyección de un rayo desde principal del usuario donde los auriculares es, en la dirección de avance se enfrentan y determinar qué que ray está en conflicto con. En Unity, la posición del usuario principal y la dirección se exponen a través de los principales Unity [cámara](camera-in-unity.md), concretamente [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ Transform.Forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) y [UnityEngine.Camera.main](http://docs.unity3d.com/ScriptReference/Camera-main.html).[ Transform.Position](http://docs.unity3d.com/ScriptReference/Transform-position.html).
+Conceptualmente, la función de [mirada](gaze.md) se implementa mediante la proyección de un rayo desde el principio del usuario donde se encuentran los auriculares, en la dirección de avance hacia delante y con la determinación de la colisión del rayo. En Unity, la posición y la dirección principales del usuario se exponen a través de la [cámara](camera-in-unity.md)principal de Unity, concretamente [UnityEngine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. forward](http://docs.unity3d.com/ScriptReference/Transform-forward.html) y [UnityEngine. Camera. Main](http://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Position](http://docs.unity3d.com/ScriptReference/Transform-position.html).
 
-Una llamada a [Physics.RayCast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) da como resultado un [RaycastHit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) estructura que contiene información sobre la colisión incluido el punto 3D que se produjo el conflicto y el otro GameObject el rayo mirada entran en conflicto con.
+La llamada a [física. RayCast](http://docs.unity3d.com/ScriptReference/Physics.Raycast.html) da como resultado una estructura [RaycastHit](http://docs.unity3d.com/ScriptReference/RaycastHit.html) que contiene información sobre la colisión, incluido el punto 3D en el que se produjo la colisión y el otro GameObject en el que se colisiona el rayo.
 
-### <a name="example-implement-head-gaze"></a>Por ejemplo: Implemente principal mirada
+### <a name="example-implement-head-gaze"></a>Ejemplo: Implementar encabezado
 
 ```cs
 void Update()
@@ -46,17 +46,17 @@ void Update()
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
-Aunque el ejemplo anterior muestra cómo hacer una sola raycast en un bucle de actualización para encontrar el destino mirada, se recomienda hacer esto en un único objeto administración mirada en lugar de hacerlo en cualquier objeto que potencialmente está interesado en el objeto que se va a gazed en. Esto permite que la aplicación guarde procesamiento haciendo raycast de una sola mirada cada fotograma.
+Aunque en el ejemplo anterior se muestra cómo hacer un único Raycast en un bucle de actualización para buscar el destino de la mirada, se recomienda hacer esto en un solo objeto que administre fijamente en lugar de hacerlo en cualquier objeto que esté interesado en el objeto que se mira. Esto permite que la aplicación guarde el procesamiento realizando una sola mirada Raycast cada fotograma.
 
-## <a name="visualizing-gaze"></a>Visualización de mirada
+## <a name="visualizing-gaze"></a>Visualizar fijamente
 
-Al igual que en el escritorio donde usar un puntero del mouse de destino e interactuar con el contenido, debe implementar un [cursor](cursors.md) que representa la mirada del usuario. Esto proporciona la confianza de los usuarios en lo que va a interactuar con.
+Al igual que en el escritorio, en el que se usa un puntero del mouse para destinar e interactuar con el contenido, se debe implementar un [cursor](cursors.md) que represente la mirada al usuario. Esto proporciona a los usuarios confianza en lo que están a punto de interactuar.
 
-## <a name="gaze-in-mixed-reality-toolkit-v2"></a>En realidad mixta que mirar Toolkit v2
-Puede tener acceso a la mirada desde el [entrada Manager](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) MRTK v2.
+## <a name="gaze-in-mixed-reality-toolkit-v2"></a>Mira fijamente en el kit de herramientas de realidad mixta V2
+Puede acceder a la mirada desde el [Administrador de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html) en MRTK V2.
 
 ## <a name="see-also"></a>Vea también
 * [Cámara](camera-in-unity.md)
-* [Entrada de mirada](gaze.md)
+* [Entrada de mira](gaze.md)
 * [Cursores](cursors.md)
 * [Selección de destinos de la mirada](gaze-targeting.md)

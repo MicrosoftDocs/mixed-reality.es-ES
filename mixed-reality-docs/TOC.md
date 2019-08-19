@@ -22,6 +22,7 @@
 #### [Guardado y búsqueda de archivos](saving-and-finding-your-files.md)
 #### [Visualización de fotos](see-your-photos.md)
 #### [Actualización de HoloLens](updating-hololens.md)
+#### [Uso de HoloLens en nuevos espacios](use-hololens-in-new-spaces.md)
 #### [Uso compartido de dispositivos](device-sharing.md)
 #### [Guía de limpieza y ajuste de demostración de HoloLens](hololens-demo-guide.md)
 ### Cascos envolventes

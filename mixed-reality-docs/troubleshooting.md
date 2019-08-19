@@ -1,78 +1,78 @@
 ---
 title: Solución de problemas de HoloLens
-description: Pasos para solucionar problemas para Microsoft HoloLens.
+description: Pasos para la solución de problemas de Microsoft HoloLens.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: problemas de errores, solucionar problemas, corregir, ayuda, soporte técnico, HoloLens
+keywords: problemas, errores, solución de problemas, corrección, ayuda, soporte técnico, HoloLens
 ms.openlocfilehash: 7b7a32a9a358ff75b2675d265445d9ef1acc1b9e
-ms.sourcegitcommit: 384b0087899cd835a3a965f75c6f6c607c9edd1b
+ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59597577"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63550884"
 ---
 # <a name="hololens-troubleshooting"></a>Solución de problemas de HoloLens
 
-## <a name="my-hololens-is-unresponsive-or-wont-boot"></a>Mi HoloLens no responde o no se inicia
+## <a name="my-hololens-is-unresponsive-or-wont-boot"></a>Mi HoloLens no responde o no arranca
 
-Si no se inicia su HoloLens:
-* Si no encenderán el LED mediante el botón de encendido, activada o solo 1 LED parpadea brevemente, es posible que deba cargar su HoloLens.
-* Si el LED se iluminan cuando hay presiona el botón de encendido pero no puede ver nada en las pantallas, mantenga el botón de encendido hasta las 5 los LED mediante el botón de encendido se desactiva.
+Si HoloLens no arranca:
+* Si los LEDs del botón de encendido no se encienden, o si solo 1 LED parpadea brevemente, es posible que tenga que cargar HoloLens.
+* Si los LED se encienden al presionar el botón de encendido, pero no puede ver nada en las pantallas, mantenga presionado el botón de encendido hasta que el botón de encendido desactive los 5 de los LEDs.
 
-Si se convierte en su HoloLens inmovilizado o no responde:
-* Desactivar la HoloLens presionando el botón de encendido hasta que todos los 5 de los LED mediante el botón de encendido desactivar a sí mismos, o durante 10 segundos si el LED son no responde. Presione el botón de encendido para que vuelva a arrancar.
+Si HoloLens está inmovilizado o no responde:
+* Para desactivar HoloLens, presione el botón de encendido hasta que los 5 LEDs del botón de encendido se desactiven o durante 10 segundos si los LED no responden. Vuelva a presionar el botón de encendido para arrancar.
 
 Si estos pasos no funcionan:
 * Puede intentar [recuperar el dispositivo](reset-or-recover-your-hololens.md).
 
-## <a name="holograms-dont-look-good-or-are-moving-around"></a>Hologramas no aparezcan correctamente o se a mover.
+## <a name="holograms-dont-look-good-or-are-moving-around"></a>Los hologramas no tienen un aspecto correcto o se mueven.
 
-Si sus hologramas están inestable, con saltos o no se ven bien, intente una de estas correcciones:
-* Limpiar el visor de dispositivo y asegúrese de que nada esté obstruyendo los sensores.
-* Asegúrese de que hay suficiente luz en la habitación.
-* Try deambulan y examinando respecto a su entorno de HoloLens por lo que pueden explorarlas más completamente.
-* Intente ejecutar la aplicación de calibración. Lo calibra el HoloLens funcionar mejor para sus ojos. Vaya a **configuración** > **sistema** > **utilidades**. En la calibración, seleccione **calibración abierto**.
-* Si sigue teniendo problemas después de ejecutar la aplicación de calibración, usar la aplicación de optimización Sensor para optimizar los sensores del dispositivo. Vaya a **configuración** > **sistema** > **utilidades**. En la optimización Sensor, seleccione **abierto de optimización Sensor**.
+Si los hologramas son inestables, saltan o no parecen correctos, pruebe una de estas correcciones:
+* Limpie el visor del dispositivo y asegúrese de que no hay nada que obstruya los sensores.
+* Asegúrese de que haya suficiente luz en su habitación.
+* Intente caminar y mire el entorno para que HoloLens pueda escanearlos más completamente.
+* Intente ejecutar la aplicación de calibración. Calibra su HoloLens para que funcione mejor para sus ojos. Vaya a **configuración** > **utilidades** **del sistema** > . En calibración, seleccione **abrir calibración**.
+* Si sigue teniendo problemas después de ejecutar la aplicación de calibración, use la aplicación de optimización de sensor para optimizar los sensores de dispositivos. Vaya a **configuración** > **utilidades** **del sistema** > . En ajuste del sensor, seleccione **abrir la optimización del sensor**.
 
-## <a name="hololens-doesnt-respond-to-my-gestures"></a>HoloLens no responden a mi gestos.
+## <a name="hololens-doesnt-respond-to-my-gestures"></a>HoloLens no responde a mis gestos.
 
-Para asegurarse de que HoloLens pueden ver los movimientos, mantener la mano en el marco de gesto, que amplía un par de pies a cada lado de ustedes. HoloLens pueden ver la mano, el cursor cambiará desde un punto a un anillo. Más información sobre el uso de [gestos](gestures.md).
+Para asegurarse de que HoloLens puede ver los gestos, mantenga su mano en el marco de gestos, que extiende un par de metros a cada lado de usted. Cuando HoloLens pueda ver su mano, el cursor cambiará de un punto a un anillo. Más información sobre el uso de [gestos](gestures.md).
 
-Si su entorno es demasiado oscuro, HoloLens no es posible que vea su mano, así que asegúrese de que hay suficiente luz.
+Si el entorno es demasiado oscuro, es posible que HoloLens no vea su mano, así que asegúrese de que hay suficiente luz.
 
-Si el hipervisor tiene las huellas digitales o el dedo, use el microfiber paño suministrada con el HoloLens para limpiar el hipervisor suavemente de limpieza.
+Si el parasol tiene huellas digitales o manchas, use el tejido de limpieza de microfiber que venía con HoloLens para limpiar el parasol suavemente.
 
-## <a name="hololens-doesnt-respond-to-my-voice-commands"></a>HoloLens no responden a los comandos de voz.
+## <a name="hololens-doesnt-respond-to-my-voice-commands"></a>HoloLens no responde a los comandos de voz.
 
-Si Cortana no responde a los comandos de voz, asegúrese de que Cortana está activado. En la lista de todas las aplicaciones, seleccione Cortana > menú > cuaderno > configuración para realizar cambios. Para obtener más información sobre lo que puede decir, consulte usar su voz para controlar HoloLens.
+Si Cortana no responde a los comandos de voz, asegúrese de que Cortana está activado. En la lista todas las aplicaciones, seleccione el menú de Cortana > > Notebook > configuración para realizar cambios. Para obtener más información sobre lo que puede decir, consulte uso de la voz para controlar HoloLens.
 
-## <a name="i-cant-place-holograms-or-see-holograms-i-previously-placed"></a>No puedo colocar hologramas o vea hologramas que coloqué anteriormente.
+## <a name="i-cant-place-holograms-or-see-holograms-i-previously-placed"></a>No puedo colocar hologramas ni ver los hologramas que había colocado previamente.
 
-Si HoloLens no se pueden asignar o el espacio de carga, se pasará al modo limitado y no podrá colocar hologramas o vea hologramas que haya colocado. Estas son algunas cosas que pueden probarse:
-* Asegúrese de que hay suficiente luz en su entorno para que pueden ver y asignar el espacio de HoloLens.
-* Asegúrese de que está conectado a una red Wi-Fi. Si no está conectado a Wi-Fi, HoloLens no pueden identificar y cargar un espacio conocido.
-* Si necesita crear un espacio, conectarse a Wi-Fi y reinicie la HoloLens.
-* Para ver si el espacio correcto está activo, o para cargar manualmente un espacio, vaya a **configuración** > **sistema** > **espacios**.
-* Si se carga el espacio correcto y sigue teniendo problemas, el espacio puede estar dañado. Para solucionar este problema, seleccione el espacio y luego seleccione Quitar. Una vez que se quita el espacio, HoloLens iniciará asignación respecto a su entorno y crear un nuevo espacio.
+Si HoloLens no puede asignar o cargar el espacio, entrará en modo limitado y no podrá colocar hologramas ni ver los hologramas que haya colocado. Estas son algunas cosas que pueden probarse:
+* Asegúrese de que haya suficiente luz en su entorno para que HoloLens pueda ver y asignar el espacio.
+* Asegúrese de que está conectado a una red Wi-Fi. Si no está conectado a la red Wi-Fi, HoloLens no puede identificar ni cargar un espacio conocido.
+* Si necesita crear un nuevo espacio, conéctese a Wi-Fi y, a continuación, reinicie HoloLens.
+* Para ver si el espacio correcto está activo o para cargar manualmente un espacio, vaya a **configuración** > **espacios** **del sistema** > .
+* Si se carga el espacio correcto y sigue teniendo problemas, puede que el espacio esté dañado. Para corregir esto, seleccione el espacio y, a continuación, seleccione quitar. Una vez que se quita el espacio, HoloLens comenzará a asignar el entorno y creará un espacio nuevo.
 
-## <a name="my-hololens-frequently-enters-limited-mode-or-shows-a-tracking-lost-message"></a>Con frecuencia mi HoloLens entra en modo limitado o muestran un mensaje de "Seguimiento perdidos".
+## <a name="my-hololens-frequently-enters-limited-mode-or-shows-a-tracking-lost-message"></a>Mi HoloLens suele entrar en modo limitado o muestra un mensaje de "seguimiento perdido".
 
-Si el dispositivo a menudo muestra un mensaje de "seguimiento perdido" o "modo limited", pruebe las sugerencias de [hologramas mi no aparezcan correctamente o se mueve en torno a](#holograms-dont-look-good-or-are-moving-around).
+Si el dispositivo suele mostrar un mensaje de "modo limitado" o "se perdió el seguimiento", pruebe las sugerencias de [mis hologramas no se ven bien o se mueven](#holograms-dont-look-good-or-are-moving-around).
 
-## <a name="my-hololens-cant-tell-what-space-im-in"></a>Mi HoloLens no pueden saber qué espacio me encuentro en.
+## <a name="my-hololens-cant-tell-what-space-im-in"></a>Mi HoloLens no puede saber qué espacio tengo.
 
-Si su HoloLens automáticamente no se pueden identificar y cargar el espacio que se encuentra en, asegúrese de que está conectado a Wi-Fi, hay una gran cantidad de luz en la sala de reuniones y no ha habido cambios importantes a su entorno. También puede cargar manualmente un espacio o administrar los espacios, vaya a **configuración** > **sistema** > **espacios**.
+Si HoloLens no puede identificar y cargar automáticamente el espacio en el que se encuentra, asegúrese de que está conectado a la red Wi-Fi, hay mucha luz en el salón y no ha habido cambios importantes en el entorno. También puede cargar un espacio manualmente o administrar los espacios; para ello, vaya a **configuración** > **espacios** **del sistema** > .
 
-## <a name="im-getting-a-low-disk-space-error"></a>Obtengo un error de "espacio en disco insuficiente".
+## <a name="im-getting-a-low-disk-space-error"></a>Obtengo un error de "espacio insuficiente en disco".
 
-Necesita liberar espacio de almacenamiento mediante uno o varios de los siguientes:
-* Eliminar algunos espacios no utilizados. Vaya a **configuración** > **sistema** > **espacios**, seleccione un espacio ya no necesita y, a continuación, seleccione **quitar**.
-* Quite algunos de los hologramas que haya colocado.
-* Elimine algunas imágenes y vídeos en la aplicación fotos.
-* Desinstalar algunas aplicaciones de su HoloLens. En la lista de todas las aplicaciones, pulse y mantenga la aplicación que desea desinstalar y, a continuación, seleccione **desinstalar**.
+Deberá liberar espacio de almacenamiento mediante una o varias de las siguientes acciones:
+* Elimine algunos espacios no usados. Vaya a **configuración** > **espacios** **del sistema** > , seleccione un espacio que ya no necesite y, a continuación, seleccione **quitar**.
+* Quite algunos de los hologramas que ha colocado.
+* Elimine algunas imágenes y vídeos de la aplicación fotos.
+* Desinstale algunas aplicaciones de HoloLens. En la lista todas las aplicaciones, pulse y mantenga presionada la aplicación que quiere desinstalar y,a continuación, seleccione Desinstalar.
 
-## <a name="my-hololens-cant-create-a-new-space"></a>Mi HoloLens no pueden crear un nuevo espacio.
+## <a name="my-hololens-cant-create-a-new-space"></a>Mi HoloLens no puede crear un nuevo espacio.
 
-El problema más probable es que está quedando sin espacio de almacenamiento. Pruebe uno de los [sugerencias anteriores](#im-getting-a-low-disk-space-error) para liberar espacio en disco.
+El problema más probable es que se esté quedando sin espacio de almacenamiento. Pruebe una de las [sugerencias anteriores](#im-getting-a-low-disk-space-error) para liberar espacio en disco.
