@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 925ab825c2716a847726ac763dc6800914d87c6b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
+ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702034"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629181"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta 
 
@@ -34,7 +34,7 @@ En esta sección, aprenderá a personalizar y configurar los perfiles predetermi
 
 >Nota: De forma predeterminada, los perfiles de MRTK no son editables. Estas son plantillas de perfil predeterminadas que puede copiar y personalizar. Existen varios niveles de personalización y perfiles. Por lo tanto, es una práctica estándar copiar y personalizar varios perfiles al configurar una o más opciones.
 >
->Para obtener más información sobre los perfiles de MRTK y su arquitectura, visite la [documentación de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/SpatialAwareness/SpatialAwarenessSystemArchitecture.html>).
+>Para obtener más información sobre los perfiles de MRTK y su arquitectura, visite la [documentación de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
 2. Crea una copia del perfil predeterminado para personalizarlo. Para copiar un perfil predeterminado, haga clic en copiar & personalizar (vea la imagen). Se crea una copia del perfil de MRTK. Con tu propia copia del perfil de MRTK, ahora tienes la posibilidad de personalizar cualquier configuración de este perfil. También deberá repetir el paso copiar y personalizar para cualquier perfil adicional anidado bajo este perfil, tal como se describe en los pasos siguientes.
 
