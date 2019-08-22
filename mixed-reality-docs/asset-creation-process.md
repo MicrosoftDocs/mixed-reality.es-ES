@@ -1,17 +1,17 @@
 ---
 title: Proceso de creación de recursos
 description: Instrucciones para crear recursos para experiencias de realidad mixta.
-author: paseb
-ms.author: paseb
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: activo, creación, proceso, presupuesto, polígonos, texturas, sombreadores, rendimiento
-ms.openlocfilehash: 513a9856ac35e4229cfb7bc8bcb92d9d6a152980
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692297"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896508"
 ---
 # <a name="asset-creation-process"></a>Proceso de creación de recursos
 
@@ -24,7 +24,7 @@ Los recursos que se crean para un proyecto de tienen muchas formas y formularios
 
 ## <a name="things-to-consider"></a>Cosas a tener en cuenta
 
-Al examinar la experiencia que está intentando crear, piense en ella como un **presupuesto** que puede gastar para intentar crear la mejor experiencia. No hay necesariamente límites estrictos en cuanto al número  de polígonos o **tipos de materiales** que se usan en los recursos, sino más un conjunto presupuestado de contrapartidas.
+Al examinar la experiencia que está intentando crear, piense en ella como un **presupuesto** que puede gastar para intentar crear la mejor experiencia. No hay necesariamente límites estrictos en cuanto al número de polígonos o **tipos de materiales** que se usan en los recursos, sino más un conjunto presupuestado de contrapartidas.
 
 A continuación se muestra un presupuesto de ejemplo para su experiencia. Por lo general, el rendimiento no es un punto único de error, sino una muerte de mil cortes por cada se.
 <br>
@@ -60,7 +60,7 @@ A continuación se muestra un presupuesto de ejemplo para su experiencia. Por lo
 
 **Complejidad de los recursos**
 * ¿Cuántos triángulos/polígonos?
-* ¿Qué complejidad tiene el sombreador?
+* ¿Qué complejidad tiene el sombreador? Cuando se usa el kit de herramientas de la realidad mixta, se recomienda usar el sombreador de la opción de [conjunto de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) para reducir la complejidad del sombreador.
 
 Tanto los desarrolladores como los artistas tienen que tener en cuenta las capacidades del dispositivo y el motor de gráficos. Microsoft HoloLens tiene todo el cálculo y los gráficos integrados en el dispositivo. Comparte las funcionalidades que los desarrolladores encontrarán en una plataforma móvil.
 

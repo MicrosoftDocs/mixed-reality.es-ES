@@ -1,17 +1,17 @@
 ---
 title: 'Caso práctico: el logro de más informática personal'
 description: Hoy en día, las oportunidades de mañana están descubiertas al compilar productos. Las soluciones que estos productos proporcionan muestran lo que es necesario para avanzar en el futuro.
-author: mavitazk
-ms.author: mavitazk
+author: danielescudero
+ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, caso práctico, visión, escenarios
-ms.openlocfilehash: 64ec4b9e55758b760c294d933fb80a2a638e0088
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522974"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896522"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Caso práctico: el logro de más informática personal
 

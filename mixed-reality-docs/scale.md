@@ -1,17 +1,17 @@
 ---
 title: Escala
 description: Una clave para mostrar el contenido que parece realista en forma holográfica es imitar las estadísticas visuales del mundo real lo más cerca posible.
-author: mavitazk
-ms.author: mavitazk
+author: shengkait
+ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, estilo, diseño
-ms.openlocfilehash: f13414bff7d84692e8e87aa2abdcded15627346f
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 169665293e2cc612a546bbee5af14387855ae96b
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63524116"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896549"
 ---
 # <a name="scale"></a>Escala
 

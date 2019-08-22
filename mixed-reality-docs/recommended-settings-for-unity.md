@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configuración, realidad mixta
-ms.openlocfilehash: 8afcefb49a860d66a372ebd3d0c4bcdb43038813
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 395363cb99fd7e9e61adbea8ebc341aab50755e0
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415449"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896535"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -25,7 +25,7 @@ Es importante modificar la configuración de **calidad de Unity** de su entorno 
 
 En Unity 2018 LTS +, el nivel de calidad del proyecto se puede establecer de la siguiente manera:
 
-En **Editar** > **configuración**   del proyecto calidad > establezca el valor predeterminado haciendo clic en la flecha hacia abajo hasta el nivel de calidad muy bajo. > 
+En **Editar** > **configuración** del proyecto calidad > establezca el valor predeterminado haciendo clic en la flecha hacia abajo hasta el nivel de calidad muy bajo. > 
 
 ### <a name="lighting-settings"></a>Configuración de iluminación
 
@@ -67,9 +67,9 @@ Además, se recomienda seleccionar profundidad de **16 bits** en la configuraci�
 
 Para que la plataforma Windows Mixed Reality optimice la estabilidad del holograma, se basa en el búfer de profundidad para que sea preciso y coincida con cualquier holograma representado en la pantalla. Por lo tanto, con el uso compartido de búfer de profundidad en, es importante al representar el color, también la profundidad de representación. En Unity, la mayoría de los materiales opacos o TransparentCutouts representarán la profundidad de forma predeterminada, pero los objetos transparentes y de texto no suelen representar la profundidad, aunque esto es dependiente del sombreador, etc. 
 
-Si usa el sombreador estándar del kit de herramientas de realidad mixta, para representar la profundidad de los objetos transparentes:
+Si usa el [sombreador estándar del kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md), para representar la profundidad de los objetos transparentes:
 1) Seleccione el material de Tranparent que usa el sombreador estándar de MRTK y abra la ventana del editor del inspector.
-2) Establezca **el modo de representación** en **personalizado** y después establezca el **modo** en **transparente** y, por último, establezca **escritura de profundidad** en **activado** .
+2) Seleccione el botón **corregir ahora** dentro de la advertencia de uso compartido de búfer de profundidad. Esto también puede realizarse manualmente si se establece **el modo de representación** en **personalizado** y, a continuación, se establece el **modo** en **transparente** y, por último, se establece la **escritura de profundidad** **en activado** .
 
 >[!NOTE]
 > Los desarrolladores deben tener cuidado con las supuestos Z al cambiar estos valores junto con la configuración de plano Near/Far de la cámara. La lucha por Z se produce cuando dos GameObjects intentan representarse en el mismo píxel y debido a las limitaciones de la fidelidad del búfer de profundidad (es decir, profundidad z), Unity no puede discernir qué objeto está delante del otro. Los desarrolladores notarán un parpadeo entre dos objetos de juego mientras *luchan* por el mismo valor de profundidad z. Esto se puede resolver cambiando al formato de profundidad de 24 bits, ya que habrá un intervalo mayor de valores para cada objeto que se va a calcular en función de la profundidad de z de la cámara.
@@ -84,7 +84,7 @@ Unity ha dejado de admitir el back-end de scripting de .NET y, por tanto, se rec
 2) Deshabilitar exámenes de software antimalware para el proyecto & carpetas de compilación
    - Abrir **protección contra amenazas de Virus &** en la aplicación de configuración de Windows 10
    - Seleccione **Administrar configuración** en **configuración de protección contra amenazas de virus &**
-   - Seleccione **Agregar o quitar exclusiones** en la  sección Exclusiones.
+   - Seleccione **Agregar o quitar exclusiones** en la sección Exclusiones.
    - Haga clic en **Agregar una exclusión** y seleccione la carpeta que contiene el código del proyecto de Unity y las salidas de compilación
 3) Uso de SSD para compilar
 

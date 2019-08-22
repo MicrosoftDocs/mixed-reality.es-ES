@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, color, Light, material
-ms.openlocfilehash: 3f8ee8edfe4cbbaf8a55b3c4a9125f752823be9c
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526517"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896516"
 ---
 # <a name="color-light-and-materials"></a>Color, Light y material
 
@@ -28,7 +28,7 @@ Siempre Tómese tiempo para probar sus experiencias holográficas en un casco ho
 ## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Aspectos básicos de la representación en dispositivos holográficas
 * Los **dispositivos holográficas tienen pantallas aditivas** : los hologramas se crean agregando luz a la luz del mundo real: el blanco aparecerá brillante, mientras que el negro aparecerá transparente.
 * **El impacto de los colores varía en el entorno del usuario** : hay muchas condiciones de iluminación diferentes en el salón de un usuario. Cree contenido con los niveles de contraste adecuados para ayudar a mejorar la claridad.
-* **Evitar la iluminación dinámica** : los hologramas que están iluminados uniformemente en las experiencias holográficas son los más eficaces. Con Advanced, la iluminación dinámica probablemente superará las capacidades de los sombreadores móviles.
+* **Evitar la iluminación dinámica** : los hologramas que están iluminados uniformemente en las experiencias holográficas son los más eficaces. Con la iluminación avanzada, el alumbrado dinámico probablemente superará las capacidades de los dispositivos móviles. Cuando se requiere la iluminación dinámica, se recomienda usar el [sombreador estándar del kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md). 
 
 ## <a name="designing-with-color"></a>Diseñar con color
 
@@ -55,7 +55,7 @@ Debido a la naturaleza de las pantallas aditivas, los colores oscuros aparecen t
 
 La luz y el color pueden ayudar a que los hologramas aparezcan de forma más natural en el entorno de un usuario, así como ofrecer orientación y ayuda para el usuario. En el caso de las experiencias holográficas, tenga en cuenta estos factores a medida que explora la iluminación y el color:
 * **Viñetas** : un efecto de ' viñetas ' para oscurecer materiales puede ayudar a centrar la atención del usuario en el centro del campo de la vista. Este efecto oscurece el material del holograma en algún radio desde el vector de mirada del usuario. Tenga en cuenta que esto también es efectivo cuando el usuario ve los hologramas de un ángulo oblicuo o glancing.
-* Recalque **la atención** de los objetos o puntos de interacción mediante el contraste de los colores, el brillo y la iluminación. Para obtener una visión más detallada de los métodos de iluminación de contar historias, consulte el cine de los [píxeles: un enfoque de iluminación para gráficos informáticos](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
+* Recalque la atención de los objetos o puntos de interacción mediante el contraste de los colores, el brillo y la iluminación. Para obtener una visión más detallada de los métodos de iluminación de contar historias, consulte el cine de los [píxeles: un enfoque de iluminación para gráficos informáticos](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
 
 ![Uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de fragmentos.](images/640px-fragments.jpg)<br>
 *Uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*

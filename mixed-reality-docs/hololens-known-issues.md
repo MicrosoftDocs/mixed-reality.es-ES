@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: solución de problemas, problema conocido, ayuda
-ms.openlocfilehash: 9ec15957b75ca3ec51dd01f5b9b4bc7371912c5a
-ms.sourcegitcommit: a11999e92e4e87516a6dcceabc2c5ed7642f1fd9
+ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
+ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896544"
 ---
 # <a name="hololens-known-issues"></a>Problemas conocidos de HoloLens
 
@@ -127,6 +127,9 @@ Agradecemos su paciencia a medida que hemos pasado por el proceso para resolver 
 Durante la configuración de OOBE &, hay un tiempo de espera de credencial de 2 minutos. El nombre de usuario/contraseña debe especificarse en 2 minutos; de lo contrario, el campo de nombre de usuario se desactivará automáticamente.
 
 Se recomienda usar un teclado Bluetooth para escribir contraseñas largas.
+
+>[!NOTE]
+> Si se selecciona la red incorrecta durante la OOBE, el dispositivo deberá restablecerse por completo. Las instrucciones se pueden encontrar [aquí.](https://docs.microsoft.com/en-us/windows/mixed-reality/reset-or-recover-your-hololens#perform-a-full-device-recovery) 
 
 ## <a name="device-update"></a>Actualización del dispositivo
 * 30 segundos después de una nueva actualización, el shell puede desaparecer una vez. Realice el gesto de **floración** para reanudar la sesión.
