@@ -6,15 +6,56 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: calibración, confort, objetos visuales, calidad, IPD
-ms.openlocfilehash: 5f8e6aef1df0efe4c64c807e627f69c7949363f2
-ms.sourcegitcommit: c20563b8195c0c374a927b96708d958b127ffc8f
+ms.openlocfilehash: 354d7eb74666471f24a6b5774e5772260b1e3570
+ms.sourcegitcommit: 5d3be2d7569d912011ea114c0a283bc3c635d5df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974801"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979480"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Mejore la calidad visual y la comodidad
 HoloLens, HoloLens 2 y Windows Mixed Reality con auriculares de gran rendimiento ofrecen diferentes maneras de mejorar la calidad de la experiencia visual. 
+
+## <a name="hololens-2"></a>Hololens 2
+
+### <a name="calibration"></a>Curva
+
+Hololens 2 está diseñado para proporcionar el mayor nivel de imagen y comodidad para nuestros clientes. La tecnología de seguimiento ocular se usa para mejorar la experiencia del usuario de ver e interactuar con el entorno virtual.  
+En HoloLens 2, se le pedirá que calibre los objetos visuales durante la configuración del dispositivo. Se pide a los usuarios que examinen el conjunto de destinos de fijación. Esto permite que el dispositivo ajuste la representación de hologramas para el usuario con el fin de garantizar un holograma colocado con precisión, una experiencia de visualización 3D y una calidad de presentación mejorada. Todos los ajustes se producen sobre la marcha sin necesidad de una optimización manual. Mediante el uso de los ojos como puntos de referencia, el dispositivo se ajusta para cada usuario y los objetos visuales se ajustan cuando el casco se desplaza ligeramente en el uso. El sistema utiliza internamente el seguimiento de la posición del ojo y los desarrolladores no tienen que hacer nada para aprovechar esta funcionalidad. Esta información no está disponible para los desarrolladores. En Hololens 2, realizar una calibración también garantiza un seguimiento preciso de la mirada para cada usuario. El seguimiento de los ojos permite a las aplicaciones realizar un seguimiento de dónde mira el usuario en tiempo real. Esta es la principal capacidad que los desarrolladores pueden aprovechar para habilitar un nuevo nivel completo de contexto, comprensión humana e interacciones dentro de la experiencia holográfica.  
+La calibración se almacena localmente en el dispositivo y no está asociada a ninguna información de la cuenta. No hay ningún registro de quién ha usado el dispositivo sin calibración. Esto significa que se les pedirá a los nuevos usuarios que calibren los objetos visuales cuando usen el dispositivo por primera vez, así como los usuarios que hayan optado por la calibración previamente o si la calibración no se ha realizado correctamente. La calibración siempre se puede eliminar del dispositivo en **configuración** > de la**vista**de**privacidad** > . 
+
+### <a name="calibration-failures"></a>Errores de calibración
+
+La calibración debe funcionar para la mayoría de los usuarios, pero hay casos en los que es posible que el usuario no pueda calibrarse correctamente.  
+Algunos ejemplos de errores de calibración se deben a:
+- El usuario se distrae y no sigue los objetivos de calibración durante la experiencia de calibración
+- El visor del dispositivo sucio o desarañado o el visor del dispositivo no se colocaron correctamente 
+- Vasos sucios o con arañazos
+- Determinados tipos de lentes y anteojos de contacto (lentes de contacto en color, algunos lentes de contacto de toric, gafas de bloqueo de INFRARROJOs, algunos vasos de receta elevados, cristal de la luna, etc.)
+- Composición más pronunciada, algunas extensiones de eyelash
+- Oclusións de ojo y/o visor del dispositivo (pelo, algunos fotogramas de gafas gruesos)
+- Physiology ocular, ciertas condiciones oculares o cirugía ocular (algunos ojos estrechos, eyelashes largos, amblyopia, nystagmus, algunos casos de LASIK u otros surgeries ocular, etc.)
+
+Si la calibración no se realiza correctamente, pruebe una de estas correcciones: 
+- Limpiar el visor del dispositivo
+- Limpie sus gafas
+- Inserte el visor del dispositivo en todo el proceso.
+- Asegúrese de que no haya ninguna obstrucción de los sensores o de los ojos (por ejemplo, pelo) 
+- Asegúrese de que hay suficiente luz en su habitación y que no está bajo la luz solar directa
+- Asegúrese de seguir cuidadosamente los destinos durante la calibración
+
+Si ha seguido las instrucciones y se sigue produciendo un error en la calibración, puede deshabilitar la petición de calibración en **configuración** > **calibración** **del sistema** > . ' Cuando una persona nueva usa este Hololens, preguntar automáticamente para ejecutar la calibración de ojo ' debe estar optimizada. Tenga en cuentan que esto podría dar lugar a una calidad de representación de hologramas peor y a la molestia.
+
+### <a name="launching-the-calibration-app-from-settings"></a>Inicio de la aplicación de calibración desde la configuración
+1. Use el gesto de inicio para ir al [menú Inicio](navigating-the-windows-mixed-reality-home.md#start-menu).
+2. Seleccione **todas las aplicaciones** para ver todas las aplicaciones si la **configuración** no está anclada para iniciarse.
+3. **Configuración**de inicio.
+4. Desplácese > a calibración**ocular** **del sistema** > y seleccione **Ejecutar calibración de ojo**.
+
+### <a name="calibration-when-sharing-a-device--session"></a>Calibración al compartir un dispositivo/sesión
+
+Hololens 2 puede compartirse entre personas, sin necesidad de que cada persona pase a través de la configuración del dispositivo. Hololens 2 le pedirá al usuario que calibre los objetos visuales cuando el dispositivo se coloque en el cabezal si el usuario es nuevo en el dispositivo. Si el usuario ha calibrado previamente objetos visuales en el dispositivo, la pantalla se ajustará sin problemas para la calidad y una experiencia de visualización cómoda cuando el usuario coloque el dispositivo en el cabezal. 
+
 
 ## <a name="hololens"></a>HoloLens
 
@@ -53,21 +94,6 @@ La calibración puede realizarse en cualquier momento a través de la aplicació
 
 ![Inicio de la aplicación de calibración desde la aplicación de configuración](images/calibration-settings-500px.jpg)
 
-## <a name="hololens-2"></a>HoloLens 2
-
-### <a name="calibration"></a>Curva 
-
-En HoloLens 2, se le pedirá que calibre los objetos visuales durante la configuración del dispositivo. Se pide a los usuarios que examinen el conjunto de destinos de fijación. Esto permite que el dispositivo ajuste la representación del holograma para el usuario con el fin de garantizar un holograma colocado con precisión, una experiencia de visualización 3D más cómoda y una calidad de presentación mejorada. Todos los ajustes se producen sobre la marcha sin necesidad de una optimización manual. 
-
-### <a name="calibration-when-sharing-a-device"></a>Calibración al compartir un dispositivo 
-
-El dispositivo Hololens 2 puede compartirse entre personas, sin necesidad de que cada persona pase a través de la configuración del dispositivo. Hololens 2 le pedirá al usuario que calibre los objetos visuales cuando el dispositivo se coloque en el cabezal, si el usuario es nuevo en el dispositivo. Si el usuario ya ha calibrado los objetos visuales en el dispositivo, la pantalla se ajustará sin problemas para ofrecer una experiencia de visualización óptima y cómoda cuando el usuario coloque el dispositivo en el cabezal.  
-
-### <a name="launching-the-calibration-app-from-settings"></a>Inicio de la aplicación de calibración desde la configuración
-1. Use el gesto de inicio para ir al menú Inicio.
-2. Seleccione **+** esta opción para ver todas las aplicaciones si la **configuración** no está anclada para iniciarse.
-3. **Configuración**de inicio.
-4. Vaya a**utilidades** **del sistema** > y seleccione **abrir calibración**.
 
 ## <a name="immersive-headsets"></a>Cascos envolventes
 
