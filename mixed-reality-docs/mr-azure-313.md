@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realidad mixta, Academia, Edge, IOT Edge, tutorial, API, notificación, funciones, tablas, hololens, inmersivo, VR, IOT, máquina virtual, Ubuntu, Python
-ms.openlocfilehash: 93f7dc64426360d2e02b0ee0a9b1796fc8f2b469
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: ec669b799e7c46a9a4ed87674ed78e50f816c9e9
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694598"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047240"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -84,7 +84,7 @@ Se requiere el siguiente hardware y software:
 1. Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup).
 2. Es una buena idea realizar la **calibración** y el **ajuste del sensor** al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario).
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens-2).
 
 Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](sensor-tuning.md).
 
@@ -425,7 +425,7 @@ Ahora completará la solución de contenedor mediante la actualización de los s
 - *Deployment. template. JSON*.
 - *Dockerfile. AMD64*
 
-A continuación, creará  la carpeta images, usada por el script de Python para comprobar que las imágenes coinciden con el *modelo de Custom Vision*. Por último, agregará el archivo *Labels. txt* , que le ayudará a leer el modelo y el archivo *Model. PB* , que es el modelo.
+A continuación, creará la carpeta images, usada por el script de Python para comprobar que las imágenes coinciden con el *modelo de Custom Vision*. Por último, agregará el archivo *Labels. txt* , que le ayudará a leer el modelo y el archivo *Model. PB* , que es el modelo.
 
 1. Con VS Code abierto, vaya a la carpeta del módulo y busque el script denominado **<span></span>Main. py**. Haga doble clic para abrirlo.
 
@@ -731,7 +731,7 @@ A continuación, creará  la carpeta images, usada por el script de Python para 
 
     ```
 
-6.  Haga clic con el botón secundario en la carpeta situada debajo de **módulos** (tendrá el nombre que proporcionó anteriormente; en el ejemplo más abajo, se denomina *pythonmodule*) y haga clic en **nueva carpeta**. Asigne a la carpeta el nombre images.
+6.  Haga clic con el botón secundario en la carpeta situada debajo de **módulos** (tendrá el nombre que proporcionó anteriormente; en el ejemplo más abajo, se denomina *pythonmodule*) y haga clic en **nueva carpeta**. Asigne a lacarpeta el nombre images.
 
 7.  Dentro de la carpeta, agregue algunas imágenes que contengan el mouse o el teclado. Serán las imágenes que se van a analizar con el modelo Tensorflow.
 
@@ -776,7 +776,7 @@ A continuación, creará  la carpeta images, usada por el script de Python para 
 
 9. Para ver los mensajes enviados desde el dispositivo a la IoT Hub, vuelva a hacer clic con el botón derecho en el nombre del dispositivo en la sección **dispositivos Azure IOT Hub** , en el panel **Explorador** y haga clic en **iniciar supervisión del mensaje de D2C**. Los mensajes enviados desde el dispositivo deben aparecer en el terminal de VS. Sea paciente, ya que esto puede tardar algún tiempo. Vea el capítulo siguiente para la depuración y comprobar si la implementación se realizó correctamente.
 
-Este módulo iterará ahora entre las imágenes de la  carpeta images y las analizará con cada iteración. Obviamente, esto es solo una demostración de cómo obtener el modelo de aprendizaje automático básico para trabajar en un entorno de dispositivo IoT Edge. 
+Este módulo iterará ahora entre las imágenes de la carpeta images y las analizará con cada iteración. Obviamente, esto es solo una demostración de cómo obtener el modelo de aprendizaje automático básico para trabajar en un entorno de dispositivo IoT Edge. 
 
 Para expandir la funcionalidad de este ejemplo, puede continuar de varias maneras. Una manera podría incluir código en el contenedor, que capture fotografías de una cámara web conectada al dispositivo y las guarde en la carpeta images. 
 
@@ -864,7 +864,7 @@ Vuelva a Azure portal, donde creará un servicio de tablas de Azure, mediante la
 
     6. En **rendimiento**, haga clic en **estándar**.
 
-    7. Dentro de la sección **transferencia segura requerida** , haga clic en deshabilitado.
+    7. Dentro de la sección **transferencia segura requerida** ,haga clic en deshabilitado.
 
     8. En el menú desplegable **suscripción** , haga clic en una suscripción adecuada.
 
@@ -872,7 +872,7 @@ Vuelva a Azure portal, donde creará un servicio de tablas de Azure, mediante la
 
         > Si desea leer más sobre los grupos de recursos de Azure, siga este [vínculo sobre cómo administrar un grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
 
-    10. Deje **redes virtuales** como deshabilitadas si se trata de una opción.
+    10. Deje **redes virtuales** comodeshabilitadas si se trata de una opción.
 
     11. Haga clic en **Create**(Crear).
 
@@ -886,11 +886,11 @@ Vuelva a Azure portal, donde creará un servicio de tablas de Azure, mediante la
 
 8. Haga clic en el botón **ir a recurso** de la notificación y se le dirigirá a la página de información general de la nueva instancia del servicio de almacenamiento.
 
-    ![Ir al recurso](images/AzureLabs-Lab313-39.png)
+    ![ir al recurso](images/AzureLabs-Lab313-39.png)
 
 9. En la página información general, en la parte derecha, haga clic en **tablas**.
     
-    ![Tablas](images/AzureLabs-Lab313-40.png)
+    ![tablas](images/AzureLabs-Lab313-40.png)
 
 10. El panel de la derecha cambiará para mostrar la información del **servicio tabla** , en la que es necesario agregar una nueva tabla. Para ello, haga clic en el botón **+ tabla** en la esquina superior izquierda.
 
@@ -906,7 +906,7 @@ Vuelva a Azure portal, donde creará un servicio de tablas de Azure, mediante la
 
     ![nueva tabla creada](images/AzureLabs-Lab313-43.png) 
 
-14. Vuelva a usar el panel de la izquierda, desplácese hasta la sección *Table Service* y  haga clic en tables ( **examinar tablas**, en portales más recientes) y realice una copia de la **dirección URL** de la tabla (con el Bloc de notas). Usará este valor más adelante en este curso, al vincular la tabla a la aplicación **Power BI** .
+14. Vuelva a usar el panel de la izquierda, desplácese hasta la sección *Table Service* y haga clic en tables ( **examinar tablas**, en portales más recientes) y realice una copia de la **dirección URL** de la tabla (con el Bloc de notas). Usará este valor más adelante en este curso, al vincular la tabla a la aplicación **Power BI** .
 
     ![nueva tabla creada](images/AzureLabs-Lab313-44.png)
 
@@ -1037,7 +1037,7 @@ En primer lugar, debe crear un archivo que permita que la función de Azure carg
 
 10. Haga clic en el botón **ir a recurso** de la notificación para explorar la nueva instancia de servicio. 
 
-    ![Ir al recurso](images/AzureLabs-Lab313-57.png)
+    ![ir al recurso](images/AzureLabs-Lab313-57.png)
 
 11. En el lado izquierdo del nuevo panel, haga clic en **+** el icono (más) situado junto a *funciones*para crear una nueva función.
 
@@ -1175,7 +1175,7 @@ Si ahora abre Visual Studio (**no** Visual Studio Code), puede visualizar el res
 
 Con el servicio tabla y Function App en su lugar, los mensajes del dispositivo Ubuntu aparecerán en la tabla *IoTMessages* . Si aún no se está ejecutando, vuelva a iniciar el dispositivo y podrá ver los mensajes de resultado desde el dispositivo, y el módulo, dentro de la tabla, mediante el uso de Visual Studio *Cloud Explorer*.
 
-![Visualizar datos](images/AzureLabs-Lab313-72.png)
+![visualizar datos](images/AzureLabs-Lab313-72.png)
 
 
 ## <a name="chapter-15---power-bi-setup"></a>Capítulo 15: configuración de Power BI

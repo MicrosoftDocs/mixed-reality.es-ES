@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, visión personalizada, hololens, envolventes, VR
-ms.openlocfilehash: e6e9782a8d559af660dc4765556f1e926c5360b1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: b173648e2e829e94e47306277bd7814a19842cae
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63553563"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047208"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -72,7 +72,7 @@ Se recomienda el siguiente hardware y software para este curso:
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens-2).
 
 Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](sensor-tuning.md).
 
@@ -82,7 +82,7 @@ Para usar el *Custom Vision Service* en Azure, debe configurar una instancia del
 
 1.  En primer lugar, [vaya a la Página principal de *Custom Vision Service* ](https://azure.microsoft.com/services/cognitive-services/custom-vision-service/).
 
-2.  Haga clic en **el botón** introducción.
+2.  Haga clic en el botón introducción.
 
     ![](images/AzureLabs-Lab302b-01.png)
 
@@ -93,7 +93,7 @@ Para usar el *Custom Vision Service* en Azure, debe configurar una instancia del
     > [!NOTE]
     > Si aún no tiene una cuenta de Azure, tendrá que crear una. Si sigue este tutorial en una situación de aula o de laboratorio, pregunte al instructor o a uno de los Proctors para obtener ayuda para configurar la nueva cuenta.
 
-4.  Una vez iniciada la sesión por primera vez, se le solicitará el panel *de condiciones de servicio* . Haga clic en la casilla para aceptar los términos. A continuación, haga clic en **acepto.**
+4.  Una vez iniciada la sesión por primera vez, se le solicitará el panel *de condiciones de servicio* . Haga clic en la casilla para aceptar los términos. A continuación,haga clic en Acepto.
 
     ![](images/AzureLabs-Lab302b-03.png)
 
@@ -781,7 +781,7 @@ Para crear esta clase:
     ```
 
     > [!IMPORTANT]
-    > Asegúrese de agregar el valor de **clave de servicio** (clave de entrenamiento) y el valor de identificador de **proyecto** , que anotó anteriormente; Estos son los valores que [recopiló en el portal anteriormente en el curso (capítulo 2, paso 10 y posteriores)](#chapter-2---training-your-custom-vision-oroject).
+    > Asegúrese de agregar el valor de **clave de servicio** (clave de entrenamiento) y el valor de identificador de **proyecto** , que anotó anteriormente; Estos son los valores que [recopiló en el portal anteriormente en el curso (capítulo 2, paso 10 y posteriores)](#chapter-2---training-your-custom-vision-project).
 
 5.  Agregue los siguientes métodos **Start ()** y Activate **()** . Estos métodos se llaman en la inicialización y contienen la llamada para configurar la interfaz de usuario:
 
@@ -1694,7 +1694,7 @@ Para cambiar la funcionalidad de la aplicación entre el modo de *entrenamiento*
         // Change this flag to switch between Analysis mode and Training mode 
         AppMode = AppModes.Training;
 ```
-o bien
+o
 ```
         // Change this flag to switch between Analysis mode and Training mode 
         AppMode = AppModes.Analysis;

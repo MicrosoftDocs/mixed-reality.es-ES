@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, visión personalizada, detección de objetos, realidad mixta, Academia, Unity, tutorial, API, hololens
-ms.openlocfilehash: 89ee79943a88de8a34c679ae33621db5770908b0
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 71370db84a9b90b017e8d5fac0799a862883d046
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63544420"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047226"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -32,7 +32,7 @@ Este servicio le permitirá entrenar un modelo de aprendizaje automático median
 Al finalizar este curso, tendrá una aplicación de realidad mixta que podrá hacer lo siguiente:
 
 1. El usuario podrá hacer una *mirada* a un objeto, que ha entrenado con la Custom Vision Service de Azure, la detección de objetos. 
-2. El usuario usará el gesto  de puntear para capturar una imagen de lo que están examinando.
+2. El usuario usará el gesto de puntear para capturar una imagen de lo que están examinando.
 3. La aplicación enviará la imagen a Azure Custom Vision Service.
 4. Habrá una respuesta del servicio que mostrará el resultado del reconocimiento como texto de espacio universal. Esto se consigue mediante el seguimiento espacial de Microsoft HoloLens, como una forma de entender la posición mundial del objeto reconocido y, a continuación, usando la *etiqueta* asociada a lo que se detecta en la imagen para proporcionar el texto de la etiqueta.
 
@@ -75,7 +75,7 @@ Se recomienda el siguiente hardware y software para este curso:
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens-2).
 
 Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](sensor-tuning.md).
 
@@ -95,7 +95,7 @@ Para usar la **Custom Vision Service de Azure**, debe configurar una instancia d
 
 4.  Si aún no tiene una cuenta de Azure, tendrá que crear una. Si sigue este tutorial en una situación de aula o de laboratorio, pregunte al instructor o a uno de los Proctors para obtener ayuda para configurar la nueva cuenta.
 
-5.  Una vez iniciada la sesión por primera vez, se le solicitará el panel *de condiciones de servicio* . Haga clic en la casilla para *aceptar los términos*. A continuación **, haga clic**en Acepto.
+5.  Una vez iniciada la sesión por primera vez, se le solicitará el panel *de condiciones de servicio* . Haga clic en la casilla para *aceptar los términos*. A continuación, haga clic en Acepto.
 
     ![](images/AzureLabs-Lab310-03.png)
 
@@ -190,7 +190,7 @@ Para entrenar su proyecto de Custom Vision:
     ![](images/AzureLabs-Lab310-19.png)
 
     > [!NOTE] 
-    > El extremo que se proporciona a partir de este, se establece  en la iteración que se haya marcado como predeterminada. Por lo tanto, si posteriormente realiza una nueva *iteración* y la actualiza como predeterminada, no necesitará cambiar el código.
+    > El extremo que se proporciona a partir de este, se establece en la iteración que se haya marcado como predeterminada. Por lo tanto, si posteriormente realiza una nueva *iteración* y la actualiza como predeterminada, no necesitará cambiar el código.
 
 14. Una vez que haya hecho clic **en URL**de predicción, abra el *Bloc de notas*y copie y pegue la **dirección URL** (también denominada predicción **-punto de conexión**) y la **clave de predicción del servicio**para que pueda recuperarla cuando la necesite más adelante en el código.
 
@@ -293,7 +293,7 @@ Puede encontrar el [paquete Azure-Mr-310 que necesita descargar aquí](https://g
 
     1.  La carpeta **materiales** contiene el material usado por el **cursor de mira fijamente**. 
 
-    2.  La  carpeta plugins contiene el archivo dll de Newtonsoft que usa el código para deserializar la respuesta web del servicio. Las dos (2) versiones diferentes contenidas en la carpeta y subcarpeta, son necesarias para permitir que la biblioteca sea utilizada y compilada por el editor de Unity y la compilación de UWP. 
+    2.  La carpeta plugins contiene el archivo dll de Newtonsoft que usa el código para deserializar la respuesta web del servicio. Las dos (2) versiones diferentes contenidas en la carpeta y subcarpeta, son necesarias para permitir que la biblioteca sea utilizada y compilada por el editor de Unity y la compilación de UWP. 
 
     3.  La carpeta **Prefabs** contiene el Prefabs contenido en la escena. Estos son:
 
@@ -301,9 +301,9 @@ Puede encontrar el [paquete Azure-Mr-310 que necesita descargar aquí](https://g
         2.  La **etiqueta**, que es el objeto de interfaz de usuario que se usa para mostrar la etiqueta de objeto en la escena cuando sea necesario.
         3.  **SpatialMapping**, que es el objeto que permite a la aplicación usar crear un mapa virtual, mediante el seguimiento espacial de Microsoft HoloLens.
 
-    4.  La  carpeta Scenes que contiene actualmente la escena pregenerada para este curso.
+    4.  La carpeta Scenes que contiene actualmente la escena pregenerada para este curso.
 
-4.  Abra la  carpeta Scenes, en el **panel Proyecto**, y haga doble clic en **ObjDetectionScene**para cargar la escena que usará para este curso.
+4.  Abra la carpeta Scenes, en el **panel Proyecto**, y haga doble clic en **ObjDetectionScene**para cargar la escena que usará para este curso.
 
     ![](images/AzureLabs-Lab310-36.png)
 
@@ -468,7 +468,7 @@ Este script contiene una serie de objetos utilizados por otras clases para seria
 
 Para crear esta clase:
 
-1.  Haga clic con el botón  derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Llame al script **CustomVisionObjects.**
+1.  Haga clic con el botón derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Llame al script **CustomVisionObjects.**
 
 2.  Haga doble clic en el nuevo script **CustomVisionObjects** para abrirlo con **Visual Studio.**
 
@@ -624,7 +624,7 @@ Esta clase establecerá el **Colisionador de asignación espacial** en la escena
 
 Para crear esta clase:
 
-1.  Haga clic con el botón  derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Llame al script **SpatialMapping.**
+1.  Haga clic con el botón derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Llame al script **SpatialMapping.**
 
 2.  Haga doble clic en el nuevo script **SpatialMapping** para abrirlo con **Visual Studio.**
 
@@ -701,7 +701,7 @@ Esta clase es responsable de configurar el cursor en la ubicación correcta en e
 
 Para crear esta clase:
 
-1.  Haga clic con el botón  derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Llame al script **GazeCursor**
+1.  Haga clic con el botón derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Llame al script **GazeCursor**
 
 2.  Haga doble clic en el nuevo script **GazeCursor** para abrirlo con **Visual Studio.**
 
@@ -785,7 +785,7 @@ Esta clase hará lo siguiente:
 
 Para crear esta clase:
 
-1.  Haga clic con el botón  derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Asigne al script el nombre **SceneOrganiser**.
+1.  Haga clic con el botón derecho en la carpeta scripts y luego haga clic en **crear** > **script de C\#** . Asigne al script el nombre **SceneOrganiser**.
 
 2.  Haga doble clic en el nuevo script **SceneOrganiser** para abrirlo con **Visual Studio.**
 
@@ -1020,7 +1020,7 @@ Esta clase es responsable de:
 
 Para crear esta clase:
 
-1.  Vaya a la  carpeta scripts que creó anteriormente.
+1.  Vaya a la carpeta scripts que creó anteriormente.
 
 2.  Haga clic con el botón derecho en la carpeta y luego haga clic en **crear** > **script de C\#** . Asigne al script el nombre **ImageCapture**.
 
@@ -1300,13 +1300,13 @@ Ya está listo para compilar la aplicación como una solución de UWP en la que 
 
 8.  Vaya a la nueva compilación de Unity (la carpeta de la **aplicación** ) y abra el archivo de solución con **Visual Studio**.
 
-9.  En la configuración de soluciones , seleccione Depurar.
+9.  En la configuración de soluciones, seleccione Depurar.
 
 10. En la plataforma de la solución, seleccione **x86, equipo remoto**. Se le pedirá que inserte la **dirección IP** de un dispositivo remoto (Microsoft HoloLens, en este caso, que anotó).
 
     ![](images/AzureLabs-Lab310-43.png)
 
-11. Vaya al menú  compilar y haga clic en **implementar solución** para transferir localmente la aplicación a HoloLens.
+11. Vaya al menú compilar y haga clic en **implementar solución** para transferir localmente la aplicación a HoloLens.
 
 12. La aplicación debe aparecer ahora en la lista de aplicaciones instaladas en Microsoft HoloLens, lista para su lanzamiento.
 

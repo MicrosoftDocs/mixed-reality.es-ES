@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Microsoft Graph, hololens, envolventes, VR
-ms.openlocfilehash: 04c72a7ef7724cfcc27867f7f003c171a6f7851f
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 775971c4e4289d2dc963dfa2bf033192d9f3489e
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694524"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047204"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -66,7 +66,7 @@ Se recomienda el siguiente hardware y software para este curso:
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens-2).
 
 Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](sensor-tuning.md).
 
@@ -226,7 +226,7 @@ Para importar el paquete:
 
 6.  A continuación, debe abrir la carpeta **WSA** , dentro de la carpeta **MSGraph** Verá una copia del mismo archivo que acaba de configurar. Seleccione el archivo y, a continuación, en el Inspector:
 
-    -   Asegúrese de que **cualquier plataforma** esté desactivada y de que **solo** se Compruebe **WSAPlayer** .
+    -   Asegúrese de que **cualquier plataforma** esté desactivada y de que **solo** seCompruebe **WSAPlayer** .
 
     -   Asegúrese de que el **SDK** está establecido en **UWP**y que el **back-end** de scripting está establecido en **dot net**
 
@@ -266,12 +266,12 @@ El primer script que debe crear es **MeetingsUI**, que es responsable de hospeda
 
 Para crear esta clase:
 
-1.  Haga clic con el botón derecho en la carpeta **activos** del *panel Proyecto*y, a continuación, seleccione **crear** > **carpeta**. Asigne a la carpeta el nombre scripts.
+1.  Haga clic con el botón derecho en la carpeta **activos** del *panel Proyecto*y, a continuación, seleccione **crear** > **carpeta**. Asigne a lacarpeta el nombre scripts.
 
     ![](images/AzureLabs-Lab311-26.png)
     ![](images/AzureLabs-Lab311-27.png)
 
-2.  Abra la  carpeta scripts y, dentro de esa carpeta, haga clic con el botón secundario en **crear**  >   **C# script**. Asigne al script el nombre **MeetingsUI.**
+2.  Abra la carpeta scripts y, dentro de esa carpeta, haga clic con el botón secundario en **crear**  >   **C# script**. Asigne al script el nombre **MeetingsUI.**
 
     ![](images/AzureLabs-Lab311-28.png)
 
@@ -375,9 +375,9 @@ El siguiente script que se va a crear es el script del **gráfico** . Este scrip
 
 Para crear esta clase:
 
-1.  Haga doble clic en la  carpeta scripts para abrirla.
+1.  Haga doble clic en la carpeta scripts para abrirla.
 
-2.  Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne un nombre al **gráfico**de script.
+2.  Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne un nombre al **gráfico**de script.
 
 3.  Haga doble clic en el script para abrirlo con Visual Studio.
 
@@ -622,9 +622,9 @@ Ahora creará el **GazeInput**. Esta clase controla y realiza un seguimiento de 
 
 Para crear el script:
 
-1.  Haga doble clic en la  carpeta scripts para abrirla.
+1.  Haga doble clic en la carpeta scripts para abrirla.
 
-2.  Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne al script el nombre **GazeInput**.
+2.  Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne al script el nombre **GazeInput**.
 
 3.  Haga doble clic en el script para abrirlo con Visual Studio.
 
@@ -816,9 +816,9 @@ Ahora tendrá que crear el script de **interacciones** , que es responsable de:
 
 Para crear el script:
 
-1.  Haga doble clic en la  carpeta scripts para abrirla.
+1.  Haga doble clic en la carpeta scripts para abrirla.
 
-2.  Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne un nombre a las interacciones del script.
+2.  Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear**  >   **C# script**. Asigne un nombrea las interacciones del script.
 
 3.  Haga doble clic en el script para abrirlo con Visual Studio.
 
@@ -909,9 +909,9 @@ Para crear el script:
 
 ## <a name="chapter-9---set-up-the-script-references"></a>Capítulo 9: configuración de las referencias de script
 
-En este capítulo, debe colocar el script  de interacciones en la **cámara principal**. Después, ese script controlará la colocación de los demás scripts en los que sea necesario.
+En este capítulo, debe colocar el script de interacciones en la **cámara principal**. Después, ese script controlará la colocación de los demás scripts en los que sea necesario.
 
--  En la  carpeta scripts del *panel Proyecto*, arrastre las interacciones del script al objeto de **cámara principal** , como se muestra a continuación.
+-  En la carpeta scripts del *panel Proyecto*, arrastre las interacciones del script al objeto de **cámara principal** , como se muestra a continuación.
 
     ![](images/AzureLabs-Lab311-29.png)
 
@@ -975,7 +975,7 @@ Para implementar en HoloLens:
 
     ![](images/AzureLabs-Lab311-34.png)
 
-5.  Vaya al  menú compilar y haga clic en **implementar solución** para transferir localmente la aplicación a HoloLens.
+5.  Vaya al menú compilar y haga clic en **implementar solución** para transferir localmente la aplicación a HoloLens.
 
 6.  La aplicación debe aparecer ahora en la lista de aplicaciones instaladas en HoloLens, lista para su lanzamiento.
 

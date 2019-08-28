@@ -6,15 +6,15 @@ ms.author: xerxesb
 ms.date: 02/24/2019
 ms.topic: article
 keywords: calibración, confort, objetos visuales, calidad, IPD
-ms.openlocfilehash: 354d7eb74666471f24a6b5774e5772260b1e3570
-ms.sourcegitcommit: 5d3be2d7569d912011ea114c0a283bc3c635d5df
+ms.openlocfilehash: 1fc3904f4b3e441a967616f20e4287dbc7f08835
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979480"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047051"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Mejore la calidad visual y la comodidad
-HoloLens, HoloLens 2 y Windows Mixed Reality con auriculares de gran rendimiento ofrecen diferentes maneras de mejorar la calidad de la experiencia visual. 
+Los auriculares de alta calidad de HoloLens, HoloLens y Windows Mixed Reality ofrecen diferentes maneras de mejorar la calidad de la experiencia visual. 
 
 ## <a name="hololens-2"></a>Hololens 2
 
@@ -52,12 +52,12 @@ Si ha seguido las instrucciones y se sigue produciendo un error en la calibraci�
 3. **Configuración**de inicio.
 4. Desplácese > a calibración**ocular** **del sistema** > y seleccione **Ejecutar calibración de ojo**.
 
-### <a name="calibration-when-sharing-a-device--session"></a>Calibración al compartir un dispositivo/sesión
+### <a name="calibration-when-sharing-a-devicesession"></a>Calibración al compartir un dispositivo/sesión
 
 Hololens 2 puede compartirse entre personas, sin necesidad de que cada persona pase a través de la configuración del dispositivo. Hololens 2 le pedirá al usuario que calibre los objetos visuales cuando el dispositivo se coloque en el cabezal si el usuario es nuevo en el dispositivo. Si el usuario ha calibrado previamente objetos visuales en el dispositivo, la pantalla se ajustará sin problemas para la calidad y una experiencia de visualización cómoda cuando el usuario coloque el dispositivo en el cabezal. 
 
 
-## <a name="hololens"></a>HoloLens
+## <a name="hololens-v1"></a>Hololens (V1)
 
 La calibración de IPD (Interpupillary Distance) puede mejorar la calidad de los objetos visuales.
 

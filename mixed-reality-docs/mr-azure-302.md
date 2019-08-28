@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Computer Vision, hololens, envolventes, VR
-ms.openlocfilehash: 9d5288904dd6cae08a995ae40a31b00fea655776
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9cc526afdc36b8056afd61948fea5cf98015bb35
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63552327"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047194"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -71,7 +71,7 @@ Se recomienda el siguiente hardware y software para este curso:
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens-2).
 
 Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](sensor-tuning.md).
 
@@ -171,7 +171,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
         
             ![Haga clic en el botón Agregar escenas abiertas](images/AzureLabs-Lab2-11.png)
 
-        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre Scenes.
+        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígneleel nombre Scenes.
 
             ![Crear nueva carpeta de scripts](images/AzureLabs-Lab2-12.png)
 
@@ -291,11 +291,11 @@ El primer script que necesita crear es la clase *ResultsLabel* , que es responsa
 
 Para crear esta clase: 
 
-1.  Haga clic con el botón derecho en el *panel Proyecto*y, a continuación, **cree > carpeta**. Asigne a la carpeta el nombre scripts. 
+1.  Haga clic con el botón derecho en el *panel Proyecto*y, a continuación, **cree > carpeta**. Asigne a lacarpeta el nombre scripts. 
 
     ![Crear carpeta de scripts.](images/AzureLabs-Lab2-24.png)
 
-2.  Con la  carpeta scripts creada, haga doble clic en ella para abrirla. Después, dentro de esa carpeta, haga clic con el botón derecho y seleccione **crear >** después  **C# script**. Asigne al script el nombre *ResultsLabel*. 
+2.  Con la carpeta scripts creada, haga doble clic en ella para abrirla. Después, dentro de esa carpeta, haga clic con el botón derecho y seleccione **crear >** después  **C# script**. Asigne al script el nombre *ResultsLabel*. 
 
 3.  Haga doble clic en el nuevo script *ResultsLabel* para abrirlo con **Visual Studio**.
 
@@ -377,7 +377,7 @@ La clase siguiente que va a crear es la clase *ImageCapture* . Esta clase es res
 
 Para crear esta clase: 
 
-1.  Vaya a la  carpeta scripts que creó anteriormente. 
+1.  Vaya a la carpeta scripts que creó anteriormente. 
 2.  Haga clic con el botón derecho dentro de la carpeta, **cree > C# script**. Llame al script *ImageCapture*. 
 3.  Haga doble clic en el nuevo script *ImageCapture* para abrirlo con **Visual Studio**.
 4.  Agregue los siguientes espacios de nombres al principio del archivo:
@@ -530,8 +530,8 @@ Esta clase es responsable de:
  
 Para crear esta clase:
 
-1.  Haga doble clic en  la carpeta scripts para abrirla. 
-2.  Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne al script el nombre *VisionManager*. 
+1.  Haga doble clic en la carpeta scripts para abrirla. 
+2.  Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne al script el nombre *VisionManager*. 
 3.  Haga doble clic en el nuevo script para abrirlo con Visual Studio.
 4.  Actualice los espacios de nombres para que sean los mismos que los que se indican a continuación, en la parte superior de la clase *VisionManager* :
 
@@ -716,7 +716,7 @@ Para implementar en HoloLens:
     5. Establezca el modo de Desarrollador en.
 
 2.  Vaya a la nueva compilación de Unity (la carpeta de la *aplicación* ) y abra el archivo de solución con *Visual Studio*.
-3.  En la configuración de soluciones , seleccione Depurar.
+3.  En la configuración de soluciones, seleccione Depurar.
 4.  En la plataforma de la solución, seleccione **x86**, **equipo remoto**. 
 
     ![Implemente la solución desde Visual Studio.](images/AzureLabs-Lab2-27.png)
@@ -725,7 +725,7 @@ Para implementar en HoloLens:
 6.  La aplicación debe aparecer ahora en la lista de aplicaciones instaladas en HoloLens, lista para su lanzamiento.
 
 > [!NOTE]
-> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en depurar, con  *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú**compilar, seleccionando *implementar solución*. 
+> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en depurar, con *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú**compilar, seleccionando *implementar solución*. 
 
 ## <a name="your-finished-computer-vision-api-application"></a>La aplicación Computer Vision API finalizada
 

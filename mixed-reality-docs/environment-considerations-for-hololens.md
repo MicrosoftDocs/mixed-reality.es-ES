@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 04/22/2019
 ms.topic: article
 keywords: trama holográfica, campo de vista, campo de visualización, calibración, espacios, entorno, procedimientos
-ms.openlocfilehash: fd5c5020916b3fde6f91663135c3bc2b6c334b44
-ms.sourcegitcommit: 60f73ca23023c17c1da833c83d2a02f4dcc4d17b
+ms.openlocfilehash: cc856c42aaf4ddfca8365f63ab0c7df1a1a3b248
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69565988"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047087"
 ---
 # <a name="environment-considerations-for-hololens"></a>Consideraciones de entorno para HoloLens
 
@@ -37,7 +37,7 @@ Si tiene un Luxmeter, un 500-1000 Lux estable es un buen punto de partida.
 #### <a name="types-of-lighting"></a>Tipos de iluminación
 Los distintos tipos de luz en un espacio también pueden influir en el seguimiento. Bombillas con la electricidad de CA que se ejecuta a través de ella: Si la frecuencia de la CA es de 50 Hz, la luz se pulsa en 50 Hz. Para un usuario, este pulso no se observa. Sin embargo, la cámara 30 fps de HoloLens ve estos cambios: algunos fotogramas estarán bien iluminados, algunos quedarán mal iluminados y otros se expondrán a medida que la cámara intente compensar los impulsos ligeros.
 
-En Estados Unidos, el estándar de frecuencia de electricidad es de 60 Hz, por lo que los impulsores de bombilla se comparan con los impulsos de velocidad de bits de HoloLens con la alineación de 30 FPS de Hololens. Sin embargo, muchos países tienen un estándar de frecuencia de AC de 50 Hz, lo que significa que se realizarán algunos fotogramas de Hololens durante los impulsos, y otros no. En concreto, se sabe que la iluminación fluorescente en Europa causa problemas. 
+En Estados Unidos, el estándar de frecuencia de electricidad es de 60 Hz, por lo que los impulsores de bombilla se comparan con los impulsos de velocidad de bits de HoloLens con la alineación de 30 FPS de HoloLens. Sin embargo, muchos países tienen un estándar de frecuencia de AC de 50 Hz, lo que significa que se realizarán algunos fotogramas de HoloLens durante los impulsos, y otros no. En concreto, se sabe que la iluminación fluorescente en Europa causa problemas. 
 
 Hay algunas cosas que puede intentar para resolver problemas de parpadeo. La temperatura, la edad de la lámpara y los ciclos de preparación son causas comunes del parpadeo de fluorescentes y la sustitución de bombillas puede resultar de ayuda. Apretar las bombillas y asegurarse de que los dibujos actuales son constantes también pueden ayudar. 
 
@@ -46,7 +46,7 @@ HoloLens usa puntos de referencia de entorno únicos, también conocidos como *c
 
 Un dispositivo casi nunca realiza un seguimiento en un área de característica deficiente, ya que el dispositivo no tiene forma de saber dónde se encuentra en el espacio. Agregar características a las paredes de un espacio es normalmente una buena forma de mejorar el seguimiento. Los pósteres, los símbolos que se adquieren a una pared, plantas, objetos únicos u otros elementos similares sirven de ayuda. Un escritorio desordenado es un buen ejemplo de un entorno que conduce a un buen seguimiento: hay muchas características diferentes en una sola área. 
 
-Además, use características únicas en el mismo espacio. El mismo póster se repite varias veces a lo largo de una pared, por ejemplo, causará confusión en el dispositivo, ya que HoloLens no sabrá cuál de los pósteres repetitivos está examinando. Una forma común de agregar características únicas es usar líneas de cinta de enmascaramiento para crear patrones únicos y nonrepetitves en las paredes y el piso de un espacio. 
+Además, use características únicas en el mismo espacio. El mismo póster se repite varias veces a lo largo de una pared, por ejemplo, causará confusión en el dispositivo, ya que HoloLens no sabrá cuál de los pósteres repetitivos está examinando. Una forma común de agregar características únicas es usar líneas de cinta de enmascaramiento para crear patrones únicos y no repetitivos en las paredes y en el suelo de un espacio. 
 
 Una buena pregunta que debe plantearse es: si vio solo una pequeña cantidad de la escena, ¿podría encontrarse de forma exclusiva en el espacio? Si no es así, es probable que el dispositivo también tenga problemas de seguimiento.
 
@@ -54,6 +54,15 @@ Una buena pregunta que debe plantearse es: si vio solo una pequeña cantidad de 
 Si tiene dos áreas o regiones que tienen el mismo aspecto, el rastreador puede pensar que son iguales. Esto da lugar a que el dispositivo se confunda en el caso de que sea algo más. Llamamos a estos tipos de áreas repetitivas, *túneles espaciales*. 
 
 Para evitar los túneles espaciales, intente evitar áreas idénticas en el mismo espacio. A veces, las áreas idénticas pueden incluir estaciones de fábrica, ventanas en un edificio, bastidores de servidor o estaciones de trabajo. Las áreas de etiquetado o la adición de características únicas a cada una de las áreas de aspecto similar pueden ayudar a mitigar los túneles espaciales.
+
+### <a name="qr-codes-in-environments"></a>Códigos QR en entornos.
+HoloLens puede usar [códigos QR](qr-code-tracking.md) por varios motivos, como etiquetar objetos o proporcionar contexto adicional a los entornos, pero también se pueden usar para mejorar la calidad del seguimiento. HoloLens usará automáticamente los códigos QR para ayudar a crear un mapa, incluso si no está consumiendo los datos incrustados en los códigos.
+
+Si usa códigos QR para ayudar con el seguimiento, querrá tener entre dos y tres códigos en cualquier campo de la vista determinado. En muchos escenarios, esto se traduce en colocar un código QR cada 2-3 metros o 6-9 pies.
+
+Asegúrese de que los códigos QR son planos y firmemente conectados a paredes u otras superficies.
+
+Los procedimientos recomendados para generar e imprimir códigos QR se pueden encontrar en [procedimientos recomendados para la detección del código QR](qr-code-tracking.md#best-practices-for-qr-code-detection).
  
 ### <a name="movement-in-a-space"></a>Movimiento en un espacio
 Si el entorno está cambiando y cambiando constantemente, el dispositivo no tiene características estables para localizar. 
@@ -110,4 +119,4 @@ Si otra persona va a usar HoloLens, debe ejecutar la aplicación de calibración
 * [Diseño de asignaciones espaciales](spatial-mapping-design.md)
 * [Hologramas](hologram.md)
 * [Calibración](calibration.md)
-* [Usar Hololens en nuevos espacios](use-hololens-in-new-spaces.md)
+* [Uso de HoloLens en nuevos espacios](use-hololens-in-new-spaces.md)

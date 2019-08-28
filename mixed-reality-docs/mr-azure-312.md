@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Computer Vision, hololens, inmersivo, VR, Microsoft bot Framework V4, Web App bot, Bot Framework, Microsoft bot
-ms.openlocfilehash: b828aa4415103d280459bd2c666004c994b3e59d
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 481693b5af8c946e1cb45dda5144e78a175fa771
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63542474"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047228"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -66,7 +66,7 @@ Se recomienda el siguiente hardware y software para este curso:
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens-2).
 
 Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](sensor-tuning.md).
 
@@ -374,7 +374,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
         
             ![Configurar el proyecto de Unity](images/AzureLabs-Lab312-24.png)
 
-        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre Scenes.
+        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígneleel nombre Scenes.
 
              ![Configurar el proyecto de Unity](images/AzureLabs-Lab312-25.png)
 
@@ -417,7 +417,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 ## <a name="chapter-5--camera-setup"></a>Capítulo 5: configuración de cámara
 
 > [!IMPORTANT]
-> Si desea omitir el componente de *configuración de Unity* de este curso y continuar directamente en el código, no dude en descargar este [paquete Azure-Mr-312-package. unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage), impórtelo en el proyecto como un [**paquete personalizado**](https://docs.unity3d.com/Manual/AssetPackages.html)y, después, continúe desde [ Capítulo 7](#chapter-7-–-create-the-botobjects-class).
+> Si desea omitir el componente de *configuración de Unity* de este curso y continuar directamente en el código, no dude en descargar este [paquete Azure-Mr-312-package. unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20312%20-%20Bot%20integration/Azure-MR-312.unitypackage), impórtelo en el proyecto como un [**paquete personalizado**](https://docs.unity3d.com/Manual/AssetPackages.html)y, después, continúe desde [ Capítulo 7](#chapter-8--create-the-botobjects-class).
 
 1.  En el *Panel jerarquía*, seleccione la **cámara principal**. 
 2.  Una vez seleccionado, podrá ver todos los componentes de la **cámara principal** en el *panel del inspector*.
@@ -437,7 +437,7 @@ Para ayudarle a deserializar y serializar los objetos recibidos y enviados al se
 
 Para importar la biblioteca de Newtonsoft en el proyecto, use el paquete de Unity que se incluía con este curso.
 
-1.  Agregue el *. unitypackage Tools* a Unity **mediante la opción** > de menú de paquetes**importar paquete** > **personalizado** de paquetes.
+1.  Agregue el *. unitypackage Tools* a Unity mediante la opción > de menú de paquetes**importar paquete** > **personalizado** de paquetes.
 
     ![Importar la biblioteca Newtonsoft](images/AzureLabs-Lab312-34.png)
 
@@ -459,7 +459,7 @@ Para importar la biblioteca de Newtonsoft en el proyecto, use el paquete de Unit
     > Al marcar estos complementos, se configuran para que solo se usen en el editor de Unity. Hay un conjunto diferente de ellos en la carpeta WSA que se usará después de exportar el proyecto desde Unity.
 
 6.  A continuación, debe abrir la carpeta **WSA** , dentro de la carpeta **Newtonsoft** Verá una copia del mismo archivo que acaba de configurar. Seleccione el archivo y, a continuación, en el inspector, asegúrese de que
-    -   **Cualquier plataforma** está  desactivada 
+    -   **Cualquier plataforma** está desactivada 
     -   **solo** **WSAPlayer** está **activado**
     -   No **procesar** está **activado**
 
@@ -486,11 +486,11 @@ La creación de esta clase es puramente una opción arquitectónica, en su lugar
 
 Para crear esta clase: 
 
-1.  Haga clic con el botón derecho en el *panel Proyecto*y, a continuación, **cree > carpeta**. Asigne a la carpeta el nombre scripts. 
+1.  Haga clic con el botón derecho en el *panel Proyecto*y, a continuación, **cree > carpeta**. Asigne a lacarpeta el nombre scripts. 
 
     ![Crear carpeta de scripts.](images/AzureLabs-Lab312-36.png)
 
-2.  Haga doble clic en la  carpeta scripts para abrirla. Después, en esa carpeta, haga clic con el botón derecho y seleccione **crear > C# script**. Asigne al script el nombre **BotObjects**. 
+2.  Haga doble clic en la carpeta scripts para abrirla. Después, en esa carpeta, haga clic con el botón derecho y seleccione **crear > C# script**. Asigne al script el nombre **BotObjects**. 
 
 3.  Haga doble clic en el nuevo script **BotObjects** para abrirlo con **Visual Studio**.
 
@@ -563,7 +563,7 @@ La clase siguiente que va a crear es la clase **GazeInput** . Esta clase es resp
 
 Para crear esta clase: 
 
-1.  Vaya a la  carpeta scripts que creó anteriormente. 
+1.  Vaya a la carpeta scripts que creó anteriormente. 
 2.  Haga clic con el botón derecho dentro de la carpeta, **cree > C# script**. Llame al script **GazeInput**. 
 3.  Haga doble clic en el nuevo script **GazeInput** para abrirlo con **Visual Studio**.
 4.  Inserte la siguiente línea justo encima del nombre de clase:
@@ -760,8 +760,8 @@ Para enviar mensajes al servicio bot, la corutina **SendMessageToBot ()** crear�
  
 Para crear esta clase: 
 
-1. Haga doble clic en la  carpeta scripts para abrirla. 
-2. Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne al **Bot**el nombre de la secuencia de comandos. 
+1. Haga doble clic en la carpeta scripts para abrirla. 
+2. Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne al **Bot**el nombre de la secuencia de comandos. 
 3. Haga doble clic en el nuevo script para abrirlo con Visual Studio.
 4. Actualice los espacios de nombres para que sean los mismos que los que se indican a continuación, en la parte superior de la clase **Bot** :
 
@@ -1045,10 +1045,10 @@ Esta clase hereda de la clase **GazeInput** y, por lo tanto, puede hacer referen
  
 Para crear esta clase:
 
-1.  Haga doble clic en la  carpeta scripts para abrirla. 
-2.  Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne un nombre a las interacciones del script. 
+1.  Haga doble clic en la carpeta scripts para abrirla. 
+2.  Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne un nombrea las interacciones del script. 
 3.  Haga doble clic en el nuevo script para abrirlo con Visual Studio.
-4.  Actualice los espacios de nombres y la herencia de clases para que sea igual que la siguiente, en la parte  superior de la clase Interactions:
+4.  Actualice los espacios de nombres y la herencia de clases para que sea igual que la siguiente, en la parte superior de la clase Interactions:
 
     ```csharp
     using UnityEngine.XR.WSA.Input;
@@ -1057,7 +1057,7 @@ Para crear esta clase:
     {
     ```
 
-5.  Dentro de  la clase Interactions, agregue la siguiente variable:
+5.  Dentro de la clase Interactions, agregue la siguiente variable:
 
     ```csharp
         /// <summary>
@@ -1121,8 +1121,8 @@ La última clase requerida en este laboratorio se denomina **SceneOrganiser**. E
  
 Para crear esta clase:
 
-1.  Haga doble clic en la  carpeta scripts para abrirla. 
-2.  Haga clic con el botón  derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne al script el nombre **SceneOrganiser**. 
+1.  Haga doble clic en la carpeta scripts para abrirla. 
+2.  Haga clic con el botón derecho en la carpeta scripts y haga clic en **crear > C# script**. Asigne al script el nombre **SceneOrganiser**. 
 3.  Haga doble clic en el nuevo script para abrirlo con Visual Studio.
 4.  Dentro de la clase **SceneOrganiser** , agregue las siguientes variables:
 
@@ -1229,7 +1229,7 @@ Para crear esta clase:
 Para realizar una prueba exhaustiva de la aplicación, debe transferirla a su HoloLens.
 Antes de hacerlo, asegúrese de que:
 
--   Toda la configuración mencionada en el [**capítulo 4**](#Chapter-4-–-Set-up-the-unity-project) se establece correctamente. 
+-   Toda la configuración mencionada en el [**capítulo 4**](#chapter-4--set-up-the-unity-project) se establece correctamente. 
 -   El script **SceneOrganiser** se adjunta al objeto de **cámara principal** . 
 -   En la clase **Bot** , asegúrese de que ha insertado la **clave de bot secreta** en la variable **botSecret** .
 
@@ -1269,7 +1269,7 @@ Para implementar en HoloLens:
 6.  La aplicación debe aparecer ahora en la lista de aplicaciones instaladas en HoloLens, lista para su lanzamiento.
 
     > [!NOTE]
-    > Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en depurar, con  *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú**compilar, seleccionando *implementar solución*. 
+    > Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en depurar, con *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú**compilar, seleccionando *implementar solución*. 
 
 ## <a name="chapter-16--using-the-application-on-the-hololens"></a>Capítulo 16: uso de la aplicación en HoloLens
 

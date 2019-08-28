@@ -6,12 +6,12 @@ ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 keywords: Spectator ver, iPhone, iOS, iPad, OpenCV, cámara, ARKit, HoloLens, Mixed Reality, MixedRealityToolkit, Demo, registro
-ms.openlocfilehash: 135a566456f1000669d2033edcf0d0b4649ccdf3
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: 708ed694af3769f16d5dce0595e026f9a348d754
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387668"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047172"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Vista de Spectator para HoloLens y HoloLens 2
 
@@ -25,10 +25,8 @@ Spectator View ofrece un enfoque rápido y asequible para grabar hologramas en H
 ## <a name="key-resources"></a>Recursos clave
 
 * [**Vista de Spectator en GitHub**](https://github.com/microsoft/MixedReality-SpectatorView)
-* [**Arquitectura**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Architecture.md)
-* [**Assembl**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
-* [**Instrucciones para la configuración de dispositivos móviles**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.md)
-* [**Instrucciones de configuración de la cámara de vídeo**](https://github.com/microsoft/MixedReality-SpectatorView/blob/master/doc/SpectatorView.Setup.VideoCamera.md)
+* [**Spectator ver documentación**](https://microsoft.github.io/MixedReality-SpectatorView/README.html)
+* [**Spectator ver ejemplos**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>Casos de uso
 * Puede grabar una experiencia de realidad mixta mediante un dispositivo iPhone o Android. Grabe en HD completo y aplique suavizado de contorno a hologramas e incluso sombras. Es una forma rentable y rápida de capturar vídeo de hologramas.
@@ -55,7 +53,7 @@ En la tabla siguiente se muestran la funcionalidad de la vista Spectator y sus c
 | Vista de terceros                    |            ✔            |                      ✔                      |
 | Se puede transmitir a pantallas           |            ✔            |                      ✔                      |
 | Portable                             |            ✔            |                                             |
-| Conexión inalámbrica                             |            ✔            |                                             |
+| Inalámbrico                             |            ✔            |                                             |
 | Hardware necesario adicional         |     Teléfono Android, iPhone    | HoloLens + plataforma + trípode + cámara de vídeo + PC + Unity |
 | Inversión en hardware                  |           Bajo            |                     Alto                    |
 | Multiplataforma                       |           Android, iOS   |                                             |

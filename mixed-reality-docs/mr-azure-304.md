@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, reconocimiento facial, hololens, envolventes, VR
-ms.openlocfilehash: 6330d3e5c51d6b2cbc43ea795a3f953a5b14d6f1
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
+ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63554547"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70047182"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -72,7 +72,7 @@ Se recomienda el siguiente hardware y software para este curso:
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](calibration.md#hololens-2).
 
 Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](sensor-tuning.md).
 
@@ -169,7 +169,7 @@ Encargado de la ejecución de la **persona**:
 
 2.  Una vez abierta la *solución PersonMaker* , asegúrese de que:
 
-    1. La *configuración* de la solución está establecida en depurar.
+    1. La *configuración* de la solución estáestablecida en depurar.
 
     2. La *plataforma* de la solución está establecida en **x86**
 
@@ -293,7 +293,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 ## <a name="chapter-4---main-camera-setup"></a>Capítulo 4: configuración de la cámara principal
 
 > [!IMPORTANT]
-> Si desea omitir el componente de *configuración de Unity* de este curso y continuar directamente en el código, no dude en [Descargar este. unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)e importarlo en el proyecto como un [paquete personalizado](https://docs.unity3d.com/Manual/AssetPackages.html). Tenga en cuenta que este paquete también incluye la importación del *archivo dll de Newtonsoft*, que se describe en el [capítulo 5](#chapter-5--import-the-newtonsoft.json-library). Con esta importación, puede continuar en el [capítulo 6](#chapter-6-create-the-faceanalysis-class).
+> Si desea omitir el componente de *configuración de Unity* de este curso y continuar directamente en el código, no dude en [Descargar este. unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/Azure-MR-304.unitypackage)e importarlo en el proyecto como un [paquete personalizado](https://docs.unity3d.com/Manual/AssetPackages.html). Tenga en cuenta que este paquete también incluye la importación del *archivo dll de Newtonsoft*, que se describe en el [capítulo 5](#chapter-5--import-the-newtonsoftjson-library). Con esta importación, puede continuar en el [capítulo 6](#chapter-6---create-the-faceanalysis-class).
 
 1.  En el panel *jerarquía* , seleccione la **cámara principal**.
 
@@ -314,7 +314,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 ## <a name="chapter-5--import-the-newtonsoftjson-library"></a>Capítulo 5: importar la biblioteca Newtonsoft. JSON
 
 > [!IMPORTANT]
-> Si importó el ". unitypackage Tools" en el [último capítulo](#chapter-4--main-camera-setup), puede omitir este capítulo.
+> Si importó el ". unitypackage Tools" en el [último capítulo](#chapter-4---main-camera-setup), puede omitir este capítulo.
 
 Para ayudarle a deserializar y serializar los objetos recibidos y enviados al servicio de bot, debe descargar la biblioteca *Newtonsoft. JSON* . Encontrará una versión compatible ya organizada con la estructura de carpetas de Unity correcta en este [archivo de paquete de Unity](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20304%20-%20Face%20recognition/newtonsoftDLL.unitypackage). 
 
@@ -647,7 +647,7 @@ El propósito de la clase *ImageCapture* es hospedar los métodos necesarios par
 
 Para crear la clase *ImageCapture* :
  
-1.  Haga clic con el botón  derecho dentro de la carpeta scripts que ha creado anteriormente y, a continuación, haga clic en **crear**,  **C# script**. Llame al script *ImageCapture*. 
+1.  Haga clic con el botón derecho dentro de la carpeta scripts que ha creado anteriormente y, a continuación, haga clic en **crear**,  **C# script**. Llame al script *ImageCapture*. 
 2.  Haga doble clic en el nuevo script *ImageCapture* para abrirlo con Visual Studio 2017.
 3.  Escriba los siguientes espacios de nombres encima de la clase ImageCapture:
 
@@ -825,7 +825,7 @@ Para implementar en HoloLens:
     5. Establezca el modo de Desarrollador en.
 
 2.  Vaya a la nueva compilación de Unity (la carpeta de la *aplicación* ) y abra el archivo de solución con *Visual Studio*.
-3.  En la configuración de soluciones , seleccione Depurar.
+3.  En la configuración de soluciones, seleccione Depurar.
 4.  En la plataforma de la solución, seleccione **x86**, **equipo remoto**. 
 
     ![Implemente la solución desde Visual Studio.](images/AzureLabs-Lab4-26.png)
@@ -834,7 +834,7 @@ Para implementar en HoloLens:
 6.  La aplicación debe aparecer ahora en la lista de aplicaciones instaladas en HoloLens, lista para su lanzamiento.
 
 > [!NOTE]
-> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en depurar, con  *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú**compilar, seleccionando *implementar solución*. 
+> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en depurar, con *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú**compilar, seleccionando *implementar solución*. 
 
 
 ## <a name="chapter-10---using-the-application"></a>Capítulo 10: uso de la aplicación
