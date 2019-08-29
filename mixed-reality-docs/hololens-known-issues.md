@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: solución de problemas, problema conocido, ayuda
-ms.openlocfilehash: f043164f21f20925a78b59057e14ac4607d0d3f1
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: 80bd7499c0075399e516648dd92b7515fdba753a
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896544"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122130"
 ---
 # <a name="hololens-known-issues"></a>Problemas conocidos de HoloLens
 
@@ -28,7 +28,7 @@ Causa raíz del problema: Los usuarios que usaron Visual Studio 2015 o versiones
  
 **Solución**: 
 
-Nuestro equipo está trabajando actualmente en una solución. Mientras tanto, puede usar los pasos siguientes para solucionar el problema y ayudar a desbloquear la implementación y la depuración:  
+Aunque este problema se ha corregido en Visual Studio 2019 16,2, los desarrolladores que optan por permanecer en versiones anteriores de Visual Studio pueden usar los pasos siguientes para solucionar el problema y ayudar a desbloquear la implementación y la depuración:  
 1. Abra Visual Studio
 2. Proyecto > Nuevo-> de archivo
 3. Visual C# -> aplicación de consola de > de escritorio de Windows (.NET Framework)
@@ -74,7 +74,6 @@ Nuestro equipo está trabajando actualmente en una solución. Mientras tanto, pu
  
 15. Una vez que la herramienta haya salido sin ningún mensaje (esto solo debería tardar unos segundos), ahora podrá implementar y depurar desde Visual Studio 2017 o una versión más reciente.  El uso continuado de la herramienta no es necesario.
 
-Le proporcionaremos más actualizaciones a medida que estén disponibles.
 
 ## <a name="issues-launching-the-microsoft-store-and-apps-on-hololens"></a>Problemas al iniciar el Microsoft Store y las aplicaciones en HoloLens
 

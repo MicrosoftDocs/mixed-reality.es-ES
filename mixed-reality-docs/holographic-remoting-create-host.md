@@ -6,17 +6,17 @@ ms.author: bethau
 ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 95cf98504f26e2362b3c4fd38e7d9228350798f3
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: 6b0f92fce1099ec98d87100e015de9442bff6bd2
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68718069"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122029"
 ---
 # <a name="writing-a-holographic-remoting-host-app"></a>Escritura de una aplicación de host de Holographic Remoting
 
 >[!IMPORTANT]
->En este documento se describe la creación de una aplicación host para HoloLens 2. La aplicación host para **HoloLens 1** debe usar el paquete NuGet versión **1. x. x**. Esto implica que las aplicaciones host escritas para HoloLens 2 no son compatibles con HoloLens 1 y viceversa. La documentación de HoloLens 1 se puede encontrar [aquí](add-holographic-remoting.md).
+>En este documento se describe la creación de una aplicación host para HoloLens 2. La aplicación host para **HoloLens (1ª generación)** debe usar el paquete NuGet versión **1. x. x**. Esto implica que las aplicaciones host escritas para HoloLens 2 no son compatibles con HoloLens 1 y viceversa. La documentación de HoloLens 1 se puede encontrar [aquí](add-holographic-remoting.md).
 
 Al crear un contenido remoto de aplicación de host de Holographic Remoting que se representa en un equipo remoto, se puede transmitir a HoloLens 2. En este artículo se describe cómo se puede lograr esto. Todo el código de esta página y los proyectos de trabajo se pueden encontrar en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
@@ -44,7 +44,7 @@ Los pasos siguientes son necesarios para agregar el paquete NuGet a un proyecto 
 6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en Acepto para aceptar el contrato de licencia.
 
 >[!NOTE]
->La versión **1. x.** x del paquete NuGet sigue estando disponible para los desarrolladores que quieran tener como destino HoloLens 1. Para obtener más información, consulte incorporación de la [comunicación remota holográfica (HoloLens 1)](add-holographic-remoting.md).
+>La versión **1. x.** x del paquete NuGet sigue estando disponible para los desarrolladores que quieran tener como destino HoloLens 1. Para obtener más información, consulte incorporación de la [comunicación remota holográfica (HoloLens (1º generación))](add-holographic-remoting.md).
 
 ## <a name="create-the-remote-context"></a>Crear el contexto remoto
 
@@ -297,8 +297,8 @@ Los canales de datos personalizados se pueden usar para enviar datos de usuario 
 
 ## <a name="see-also"></a>Vea también
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)
-* [Canales de datos personalizados de Holographic Remoting](holographic-remoting-custom-data-channels.md)
+* [Canales de datos personalizados de control remoto de holografías](holographic-remoting-custom-data-channels.md)
 * [Establecimiento de una conexión segura con Holographic Remoting](holographic-remoting-secure-connection.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)
-* [Términos de licencia del software de Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

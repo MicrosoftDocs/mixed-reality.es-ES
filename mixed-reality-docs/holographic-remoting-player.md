@@ -6,17 +6,17 @@ ms.author: jlyons
 ms.date: 08/01/2019
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: fe26092ec8f5895652d17f88bf3be15cb116e482
-ms.sourcegitcommit: ca949efe0279995a376750d89e23d7123eb44846
+ms.openlocfilehash: c3e31cdb5acf35ecc3101d3cf359e40771cc8cbd
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68712683"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122075"
 ---
 # <a name="holographic-remoting-player"></a>Reproductor remoto holográfica
 
 >[!IMPORTANT]
->Holographic Remoting para HoloLens 2 es un cambio de versión principal. [Las aplicaciones host de **hololens 1** ](add-holographic-remoting.md) deben usar el paquete NuGet versión **1. x.** x y [las aplicaciones host para **hololens 2** ](holographic-remoting-create-host.md) deben usar **2. x**. x. Esto implica que las aplicaciones host escritas para HoloLens 2 no son compatibles con HoloLens 1 y viceversa.
+>Holographic Remoting para HoloLens 2 es un cambio de versión principal. [Las aplicaciones host para **hololens (1ª generación)** ](add-holographic-remoting.md) deben usar el paquete NuGet versión **1. x.** x y [las aplicaciones host para **hololens 2** ](holographic-remoting-create-host.md) deben usar **2. x**. x. Esto implica que las aplicaciones host escritas para HoloLens 2 no son compatibles con HoloLens 1 y viceversa.
 
 Holographic Remoting Player es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a Microsoft HoloLens en tiempo real mediante una conexión Wi-Fi.
 
@@ -43,7 +43,7 @@ La calidad y el rendimiento de su experiencia variarán en función de tres fact
 
 ## <a name="diagnostics"></a>Diagnóstico
 
-Para medir la calidad de la conexión, indique **"habilitar diagnósticos"** mientras se está en la pantalla principal del reproductor de comunicación remota holográfica. Cuando se habilitan los diagnósticos, en **HoloLens 1** la aplicación le mostrará:
+Para medir la calidad de la conexión, indique **"habilitar diagnósticos"** mientras se está en la pantalla principal del reproductor de comunicación remota holográfica. Cuando se habilitan los diagnósticos, en **HoloLens (1ª generación)** , la aplicación le mostrará:
 
 * **Fps** : el número medio de fotogramas representados que el reproductor remoto recibe y representa por segundo. El ideal es 60 FPS.
 * **Latencia** : la cantidad de tiempo promedio que tarda un fotograma en pasar de su equipo a HoloLens. Cuanto menor es el mejor. Esto depende en gran medida de la red Wi-Fi.
@@ -76,7 +76,7 @@ En la pantalla principal, puede decir **"deshabilitar diagnósticos"** para desa
 * Se recomienda conectar el equipo a la red a través de Ethernet para reducir el número de saltos inalámbricos.
 
 ## <a name="see-also"></a>Vea también
-* [HoloLens 1: Incorporación de Holographic Remoting](add-holographic-remoting.md)
+* [HoloLens (1ª generación): Incorporación de Holographic Remoting](add-holographic-remoting.md)
 * [HoloLens 2: Escritura de una aplicación de host de Holographic Remoting](holographic-remoting-create-host.md)
-* [Términos de licencia del software de Holographic Remoting](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
+* [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

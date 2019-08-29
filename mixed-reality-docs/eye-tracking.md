@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 04/05/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo
-ms.openlocfilehash: 6c51e1cdc2057142f47b6f96e8a1f1aec0bbcc17
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: 51779b7b210522aa4d19b5a32d7df6ccb2cb3a35
+ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047106"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122063"
 ---
 # <a name="eye-gaze-on-hololens-2"></a>Miras a la vista de HoloLens 2
 HoloLens 2 permite un nuevo nivel de contexto y comprensión humana dentro de la experiencia holográfica, ya que proporciona a los desarrolladores la capacidad de usar información sobre lo que los usuarios ven. En esta página se indica a los desarrolladores cómo pueden beneficiarse del seguimiento ocular de varios casos de uso, así como qué buscar al diseñar interfaces de usuario basadas en el ojo. 
@@ -47,13 +47,14 @@ Tenga en cuenta que el [Kit de herramientas de la realidad mixta](https://micros
 ### <a name="user-intent"></a>Intención del usuario    
 Información sobre dónde y qué mira un usuario proporciona un contexto eficaz **para otras entradas**, como voz, manos y controladores.
 Esta información puede utilizarse para varias tareas.
-Por ejemplo, esto puede variar de forma rápida y sin esfuerzo a través de la escena, simplemente mirando un holograma y diciendo "Select" (consulte también la [cabecera y la confirmación](gaze-and-commit.md)) o diciendo "Put this..." y, a continuación, buscando dónde desea colocar el usuario el holograma y el "... allí ". Puedes consultar varios ejemplos en [Mixed Reality Toolkit: Selección de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) y [Mixed Reality Toolkit: Posicionamiento de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+Por ejemplo, esto puede variar de forma rápida y sin esfuerzo a través de la escena, simplemente examinando un holograma y diciendo "Select" (consulte también el [encabezado y la confirmación](gaze-and-commit.md)) o diciendo *"Put this..."* y, después, buscando Dónde está el usuario. quiere colocar el holograma y decir *"... allí "* . Puedes consultar varios ejemplos en [Mixed Reality Toolkit: Selección de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) y [Mixed Reality Toolkit: Posicionamiento de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
 
 Además, un ejemplo de intención del usuario podría incluir el uso de información sobre lo que los usuarios ven para mejorar la interacción con agentes virtuales incorporados y hologramas interactivos. Por ejemplo, los agentes virtuales pueden adaptar las opciones disponibles y su comportamiento en función del contenido que se vea actualmente. 
 
 ### <a name="implicit-actions"></a>Acciones implícitas
 La categoría de acciones implícitas está estrechamente relacionada con la intención del usuario.
-La idea es que los hologramas o los elementos de la interfaz de usuario reaccionan de una manera algo instinctual que puede que no parezca incluso que el usuario está interactuando con el sistema, sino que el sistema y el usuario están sincronizados. Un ejemplo es el **desplazamiento automático basado en la mirada** en el que el usuario lee el texto a medida que el texto continúa desplazando o fluyen en sincronización con la vista del usuario. Un aspecto clave de esto es que la velocidad de desplazamiento se adapta a la velocidad de lectura del usuario.
+La idea es que los hologramas o los elementos de la interfaz de usuario reaccionan de una manera algo instinctual que puede que no parezca incluso que el usuario está interactuando con el sistema, sino que el sistema y el usuario están sincronizados. Un ejemplo es el **desplazamiento automático basado en la mirada** , en el que el usuario puede leer un texto largo que inicia automáticamente el desplazamiento una vez que el usuario llega a la parte inferior del cuadro de texto para evitar que el usuario realice el flujo de lectura sin levantar un dedo.  
+Un aspecto clave de esto es que la velocidad de desplazamiento se adapta a la velocidad de lectura del usuario.
 Otro ejemplo es el **zoom y la panorámica** que se admiten, donde el usuario puede sentir como sumergir exactamente en lo que se centra. El zoom y el control de la velocidad de zoom se pueden controlar mediante la entrada de voz o a mano, lo que es importante para proporcionar al usuario la sensación de control mientras evita estar abrumado. Hablaremos sobre estas instrucciones de diseño con más detalle a continuación. Una vez que se ha ampliado, el usuario puede seguir sin problemas, por ejemplo, en el transcurso de una calle para explorar su entorno con solo ver la mirada.
 Puedes consultar ejemplos de demostración de estos tipos de interacciones en el ejemplo [Mixed Reality Toolkit - Navegación con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html).
 
@@ -73,26 +74,25 @@ Otras aplicaciones de esta área pueden incluir:
 ### <a name="additional-use-cases"></a>Casos de uso adicionales
 - **Videojuegos:** ¿Alguna vez has deseado tener superpoderes? Esta es tu oportunidad. Puede levitater los hologramas mediante la estrella. Dispara rayos láser con los ojos. Convierta los enemigos en piedra o inmovilice. Usa tu visión de rayos X para explorar edificios. El límite es tu imaginación.  
 
-- **Avatares expresivos:** El seguimiento ocular ayuda en avatares 3D más expresivos mediante el uso de datos de seguimiento de ojos en directo para animar los ojos del Avatar que indican lo que el usuario está mirando. También agrega más expresividad agregando parpadeos. 
+- **Avatares expresivos:** El seguimiento ocular ayuda en avatares 3D más expresivos mediante el uso de datos de seguimiento de ojos en directo para animar los ojos del Avatar que indican lo que el usuario está mirando. 
 
 - **Entrada de texto:** El seguimiento ocular se puede usar como alternativa a la entrada de texto de bajo esfuerzo, especialmente cuando la voz o las manos no son prácticas de usar. 
 
 
-## <a name="eye-tracking-api"></a>API de seguimiento de los ojos
-Antes de entrar en detalles sobre las directrices de diseño específicas para la interacción ocular, queremos señalar brevemente las funcionalidades que proporciona la API de seguimiento de la vista HoloLens 2 para los desarrolladores. Proporciona un único origen de miración y una dirección, que proporciona datos de aproximadamente _30 Hz_. 
+## <a name="available-eye-tracking-data"></a>Datos de seguimiento ocular disponibles
+Antes de entrar en detalles sobre las directrices de diseño específicas para la interacción ocular, queremos señalar brevemente las funcionalidades que proporciona la [API de seguimiento](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) de la vista de HoloLens 2. Los desarrolladores obtienen acceso a un solo rayo de mira fijamente (miran el origen y la dirección) a aproximadamente _30 fps (60 Hz)_ .
+Para obtener información más detallada sobre cómo obtener acceso a los datos de seguimiento de los ojos, consulte nuestras guías para desarrolladores sobre el uso de la mirada [en DirectX](gaze-in-directx.md) y la mirada a [la vista de Unity](https://aka.ms/mrtk-eyes).
 
-La vista de predicción mira en la CA. 1,0-1,5 grados en el ángulo visual alrededor del destino real. Caben esperar pequeñas imprecisiones, por lo que debe dejarse algo de margen para este valor límite inferior. Más adelante se tratará este aspecto en detalle. Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. 
+El ojo de miración predicho es aproximadamente de 1,5 grados en el ángulo visual alrededor del destino real (vea la ilustración siguiente). A medida que se esperan ligeras imprecisiones, los desarrolladores deben planear algún margen alrededor de este valor límite inferior (por ejemplo, 2,0-3.0 grados pueden dar lugar a una experiencia mucho más cómoda). Veremos cómo abordar la selección de destinos pequeños con más detalle a continuación. Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. 
 
 ![Tamaño de objetivo óptimo a una distancia de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
 *Tamaño óptimo de destino a una distancia de 2 metros*
-<br>
-<br>
-La [API de seguimiento ocular](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose) es accesible a través de: ' Windows. Perception. people. EyesPose '. 
 
 ## <a name="calibration"></a>Curva 
-Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. En HoloLens 2, se solicita al usuario que calibre los objetos visuales durante la configuración del dispositivo, mirando el conjunto de destinos de fijación. Esto permite que el dispositivo ajuste el dispositivo para una experiencia de visualización cómoda y de calidad para el usuario y garantizar un seguimiento de ojo preciso al mismo tiempo.  La calibración debe funcionar para la mayoría de los usuarios, pero hay casos en los que es posible que el usuario no pueda calibrarse correctamente.  Para obtener más información acerca de la calibración, Compruebe la [calibración](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration).
+Para que el seguimiento de los ojos funcione con precisión, cada usuario tiene que pasar por una [calibración de usuario de seguimiento ocular](calibration.md) en la que el usuario tiene que mirar un conjunto de destinos holográficas. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. El seguimiento ocular debe funcionar para la mayoría de los usuarios, pero hay casos en los que un usuario podría no ser capaz de calibrarse correctamente.
+Para obtener más información acerca de la calibración, Compruebe la [calibración](calibration.md).
 
-## <a name="eye-gaze-design-guidelines"></a>Guías de diseño ocular
+## <a name="eye-gaze-input-design-guidelines"></a>Guías de diseño de entrada de mirada
 Crear una interacción que aproveche los objetivos de vista rápida en movimiento puede ser un reto. En esta sección, se resumen las principales ventajas y los desafíos que se deben tener en cuenta al diseñar la aplicación. 
 
 ### <a name="benefits-of-eye-gaze-input"></a>Ventajas de la entrada ocular
@@ -126,7 +126,7 @@ No debe sobrecargarse al usuario con efectos emergentes inmediatos o sonidos al 
 Se trata de una sensación que podría invocar a los usuarios al obligarles a seleccionar destinos que son demasiado pequeños en la aplicación mediante el establecimiento de destinos de la vista.
 Al diseñar la aplicación, para crear una experiencia agradable y cómoda para los usuarios, se recomienda que los objetivos sean al menos de 2° en ángulo visual, o preferiblemente mayores.
 
-- **Movimientos oculares** desiguales Nuestros ojos realizan movimientos rápidos desde la fijación hasta la fijación. Si observas las trayectorias de movimientos registrados de ojos, podrás ver que son irregulares. Los ojos se mueven rápidamente y a saltos espontáneos en comparación con la *mirada con la cabeza* o los *movimientos manuales*.  
+- **Movimientos oculares** desiguales Nuestros ojos realizan movimientos rápidos desde la fijación hasta la fijación. Si observas las trayectorias de movimientos registrados de ojos, podrás ver que son irregulares. Los ojos se mueven rápidamente y en saltos espontáneos en comparación con los *movimientos*de *miras* o de mano.  
 
 - **Confiabilidad del seguimiento:** La precisión del seguimiento de los ojos puede verse mermada con los cambios de luz, al ajustarse los ojos a las nuevas condiciones.
 Aunque esto no debería afectar necesariamente al diseño de la aplicación, dado que la precisión debe estar dentro de la limitación de 2 °, es posible que sea necesario que el usuario se calibre de nuevo. 
@@ -147,7 +147,7 @@ En el caso de un cursor, esto puede dar lugar al efecto "cursor fleeing" debido 
   
     - **Proveedor de contexto eficaz:** El uso de información sobre dónde y qué mira el usuario mientras se ejecuta un comando de voz o realiza un gesto de mano permite canalizar sin problemas la entrada a través del campo de vista. Por ejemplo: “Coloca eso ahí” para seleccionar y situar de manera rápida y fluida un holograma en la escena con solo mirar un objetivo y un destino. 
 
-    - **Necesidad de sincronizar entradas multimodales (problema de “salir antes de hacer clic”):** La combinación de movimientos oculares rápidos con entradas adicionales más complejas, como comandos de voz largos o gestos de mano, asume el riesgo de continuar la mirada antes de finalizar el comando de entrada adicional. Por lo tanto, si crea sus propios controles de entrada (por ejemplo, gestos de mano personalizados), asegúrese de registrar la aparición de esta entrada o una duración aproximada para correlacionarla con lo que un usuario ha mirado en el pasado.
+    - **Necesidad de sincronizar entradas multimodales (problema de “salir antes de hacer clic”):** La combinación de movimientos oculares rápidos con entradas adicionales más complejas, como comandos de voz largos o gestos de mano, asume el riesgo de continuar la mirada antes de finalizar el comando de entrada adicional. Por lo tanto, si crea sus propios controles de entrada (por ejemplo, gestos de mano personalizados), asegúrese de registrar la aparición de esta entrada o de una duración aproximada para correlacionarla con lo que un usuario había examinado en el pasado.
     
 3. **Información sutil para la entrada de seguimiento de los ojos:** Resulta útil proporcionar comentarios cuando se examina un destino para indicar que el sistema funciona según lo previsto, pero debe mantenerse sutil. Esto puede incluir una mezcla lenta, de arriba y de salida, que resalta visualmente o realiza otros comportamientos de destino sutiles, como movimientos lentos, como un aumento ligeramente del tamaño de destino, para indicar que el sistema ha detectado correctamente que el usuario está viendo un destino sin interrumpir innecesariamente el flujo de trabajo actual del usuario. 
 
@@ -155,13 +155,44 @@ En el caso de un cursor, esto puede dar lugar al efecto "cursor fleeing" debido 
 
 5. **Ten en cuenta las imprecisiones:** Se distinguen dos tipos de imprecisiones que son evidentes para los usuarios: desplazamiento y vibración. La manera más fácil de resolver un desplazamiento es proporcionar destinos suficientemente grandes para interactuar con. Se recomienda usar un ángulo visual superior a 2 ° como referencia. Por ejemplo, la miniatura es aproximadamente de 2 ° en el ángulo visual al expandir el brazo. Esto conduce a la siguiente pauta:
     - No obligue a los usuarios a seleccionar pequeños destinos. La investigación ha demostrado que si los destinos son suficientemente grandes y que el sistema está diseñado correctamente, los usuarios describen sus interacciones como sin esfuerzo y mágicas. Si los objetivos son demasiado pequeños, los usuarios describen la experiencia como agotadora y frustrante.
-   
+  
+## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Instrucciones para desarrolladores: ¿Qué ocurre si el seguimiento ocular no está disponible?
+Puede haber situaciones en las que la aplicación no recibirá ningún dato de seguimiento ocular debido a diversas razones, entre las que se incluyen las siguientes:
+* El usuario omitió la calibración del seguimiento de ojo.
+* El usuario ha calibrado, pero decidió no conceder permiso a la aplicación para que use los datos de seguimiento ocular.
+* El usuario tiene anteojos únicos o alguna condición de ojo que el sistema todavía no admite.
+* Factores externos que impiden el seguimiento de ojos fiables, como manchas en el parasol o anteojos de HoloLens, luz solar directa y oclusión, debido al pelo en la parte delantera de los ojos.
+
+Como desarrollador de aplicaciones, esto significa que debe tener en cuenta la compatibilidad con los usuarios para los que es posible que los datos de seguimiento ocular no estén disponibles. A continuación se explica en primer lugar cómo detectar si el seguimiento ocular está disponible y cómo solucionarlo cuando no está disponible para aplicaciones diferentes.
+
+### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. Cómo detectar que el seguimiento ocular está disponible
+Hay algunas comprobaciones para determinar si los datos de seguimiento ocular están disponibles. Compruebe si...
+* ... el sistema admite el seguimiento ocular en absoluto. Llame al *método*siguiente: [Windows. Perception. people. EyesPose. IsSupported ()](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
+
+* ... se calibra el usuario. Llame a la siguiente *propiedad*: [Windows. Perception. people. EyesPose. IsCalibrationValid](https://docs.microsoft.com/en-us/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
+
+* ... el usuario ha dado permiso a la aplicación para usar los datos de seguimiento ocular: Recupere el _' GazeInputAccessStatus '_ actual. Un ejemplo de cómo hacerlo se explica cómo solicitar el [acceso a la entrada de mirada](https://docs.microsoft.com/en-us/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
+
+Además, puede que desee comprobar que los datos de seguimiento ocular no están obsoletos agregando un tiempo de espera entre las actualizaciones de datos de seguimiento de ojos recibidos y, de lo contrario, reserva a Head-mira como se describe a continuación. 
+
+Como se describió anteriormente, existen varios motivos por los que es posible que los datos de seguimiento ocular no estén disponibles. Aunque algunos usuarios pueden haber decidido revocar el acceso a sus datos de seguimiento ocular y son correctos con la desventaja de una experiencia de usuario inferior a la privacidad de no proporcionar acceso a los datos de seguimiento ocular, en algunos casos esto puede ser involuntaria. Por lo tanto, si la aplicación usa el seguimiento ocular y esta es una parte importante de la experiencia, recomendamos que se comunique claramente al usuario. Informar a los usuarios de por qué el seguimiento ocular es fundamental para su aplicación (quizás incluso mostrar algunas características mejoradas) para experimentar todo el potencial de su aplicación puede ayudar al usuario a comprender mejor lo que están ofreciendo. Ayudar al usuario a identificar por qué el seguimiento ocular puede no funcionar (en función de las comprobaciones anteriores) y ofrecer algunas sugerencias para solucionar rápidamente posibles problemas. Por ejemplo, si puede detectar que el sistema admite el seguimiento ocular, el usuario está calibrado e incluso ha dado su permiso, pero no se reciben datos de seguimiento ocular, puede que esto señale a otros problemas, como manchas o ojos que se ocluidos. No obstante, tenga en cuenta que hay casos poco frecuentes de usuarios para los que es posible que el seguimiento ocular simplemente no funcione. Por lo tanto, sea respetuoso de eso permitiendo descartar o incluso deshabilitar recordatorios para habilitar el seguimiento ocular en la aplicación.
+
+### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. Reserva para aplicaciones con miras ocular como puntero de entrada principal
+Si la aplicación usa la vista de puntero para seleccionar rápidamente los hologramas en toda la escena, aunque los datos de seguimiento ocular no están disponibles, se recomienda revertir al encabezado y empezar a mostrar el cursor de miras hacia abajo. Se recomienda utilizar un tiempo de espera (por ejemplo, 500 – 1500 MS) para determinar si se debe cambiar o no. Esto es para evitar que se extraiga un cursor cada vez que el sistema pierda el seguimiento debido a movimientos de ojos o guiños y parpadeos. Si es un desarrollador de Unity, la reserva automática para la cabeza de mira ya está controlada en el kit de herramientas de realidad mixta. Si es un desarrollador de DirectX, debe administrar este conmutador usted mismo.
+
+### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. Reserva para otras aplicaciones específicas del seguimiento ocular
+La aplicación puede usar miradamente en una forma única que se adapte específicamente a los ojos; por ejemplo, para animar los ojos de un avatar o para mapas térmicosr la atención basada en el ojo con información precisa sobre la atención visual. En este caso, no hay ninguna reserva clara. Si el seguimiento ocular no está disponible, es posible que estas funcionalidades simplemente deban deshabilitarse. 
+
+<br>
+
+Esperamos que esta página le haya proporcionado una buena introducción para empezar a comprender el papel del seguimiento ocular y la entrada de mirada para HoloLens 2. Para empezar a desarrollar, eche un vistazo a nuestra información sobre [la vista de la mirada en Unity](https://aka.ms/mrtk-eyes) y [la mirada en DirectX](gaze-in-directx.md).
+
 
 ## <a name="see-also"></a>Vea también
-* [Mirada-cabeza y confirmación](gaze-and-commit.md)
-* [Encabezado y ojo en DirectX](gaze-in-directx.md)
+* [Miras a la vista en DirectX](gaze-in-directx.md)
 * [Mirada a la vista de Unity (kit de herramientas de realidad mixta)](https://aka.ms/mrtk-eyes)
-* [Calibración](https://docs.microsoft.com/en-us/windows/mixed-reality/calibration)
+* [Calibración](calibration.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Gestos con la mano](gestures.md)
 * [Entrada de voz](voice-design.md)
 * [Controladores de movimiento](motion-controllers.md)
