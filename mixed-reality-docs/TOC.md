@@ -104,8 +104,7 @@
 #### [Comandos de voz](Voice-design.md)
 #### [Control con la cabeza y permanencia](Gaze-and-dwell.md)
 ### [Mirada-cabeza y confirmación](gaze-and-commit.md)
-### Interacciones complementarias
-#### [Control con los ojos](eye-tracking.md)
+### [Control con los ojos](eye-tracking.md)
 ## Estilo
 ### [Color, luz y materiales](color,-light-and-materials.md)
 ### [Diseño de sonido espacial](spatial-sound-design.md)
@@ -296,7 +295,7 @@
 ### [Conexión segura con el control remoto de holografías](holographic-remoting-secure-connection.md)
 ### [Solución de problemas y limitaciones](holographic-remoting-troubleshooting.md)
 ### [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com/en-us/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
-### Control remoto de holografías para HoloLens 1
+### Control remoto de holografías para HoloLens (1ª generación)
 #### [Adición de control remoto de holografías](add-holographic-remoting.md)
 ## Otras
 ### [Seguimiento de códigos QR](qr-code-tracking.md)
