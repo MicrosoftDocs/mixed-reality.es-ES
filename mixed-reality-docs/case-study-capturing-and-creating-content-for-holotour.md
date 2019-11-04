@@ -1,21 +1,21 @@
 ---
-title: 'Caso práctico: captura y creación de contenido para HoloTour'
-description: HoloTour para Microsoft HoloLens proporciona paseos en 3D sobre las ubicaciones de iconos en todo el mundo.
+title: 'Caso práctico: HoloTour'
+description: HoloTour para Microsoft HoloLens proporciona paseos en 3D sobre las ubicaciones de iconos en todo el mundo. Este caso práctico le guiará a través del proceso de captura y creación del contenido que se usa para HoloTour.
 author: DannyAskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, Windows Mixed Reality
-ms.openlocfilehash: 6c9e5f44c439310883c8b0271187a7b2263b0854
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63518296"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436928"
 ---
-# <a name="case-study---capturing-and-creating-content-for-holotour"></a>Caso práctico: captura y creación de contenido para HoloTour
+# <a name="case-study---holotour"></a>Caso práctico: HoloTour
 
-HoloTour para Microsoft HoloLens proporciona paseos en 3D sobre las ubicaciones de iconos en todo el mundo. A medida que los diseñadores, artistas, productores, diseñadores de audio y desarrolladores que trabajan en este proyecto han descubierto, la creación de una representación 3D convincentemente real de una ubicación conocida toma una mezcla exclusiva de Wizardry de creatividad y tecnología.
+HoloTour para Microsoft HoloLens proporciona paseos en 3D sobre las ubicaciones de iconos en todo el mundo. A medida que los diseñadores, artistas, productores, diseñadores de audio y desarrolladores que trabajan en este proyecto han descubierto, la creación de una representación 3D convincentemente real de una ubicación conocida toma una mezcla exclusiva de Wizardry de creatividad y tecnología. Este caso práctico le guiará a través del proceso de captura y creación del contenido que se usa para HoloTour.
 
 ## <a name="the-tech"></a>La tecnología
 
@@ -42,7 +42,6 @@ Hemos actualizado nuestra plataforma de velcro y cartón a un alojamiento de cá
 
 La plataforma de cámaras 360 ° filmada en Machu Picchu. 
 
-
 ## <a name="behind-the-scenes"></a>En segundo plano
 
 Antes de filmarnos, es necesario averiguar qué ubicaciones deseamos incluir en nuestro paseo virtual. Roma era la primera ubicación en la que se pretendía enviar y queríamos obtenerla, por lo que decidimos realizar un viaje de Scout con antelación. Hemos enviado un equipo de seis personas, incluidos artistas, diseñadores y productores, para una visita en persona a los sitios que estamos considerando. El viaje tardó unos 9 días: 2,5 para viajar, el resto para filmarlos. (En el caso de Machu Picchu, hemos optado por no hacer un viaje de Scout, investigar de antemano y reservar unos días de búfer para filmarlos).
@@ -58,7 +57,7 @@ Una vez finalizado el viaje del Scout, se realizó un plan final para el filmado
 
 ### <a name="capturing-the-video"></a>Captura del vídeo
 
-Realizar algunos sencillos pasos durante la captura puede hacer que el procesamiento posterior sea mucho más fácil. Por ejemplo, cada vez que une imágenes de varias cámaras, acaba con artefactos visuales porque cada cámara tiene una vista ligeramente diferente. Cuanto más se acerquen los objetos a la cámara, mayor será la diferencia entre las vistas y mayores serán los artefactos de Unión. Esta es una manera fácil de visualizar el problema: Sujete el dedo delante de su cara y examínelo con un solo ojo. Ahora cambie los ojos. Verá que el control Thumb parece moverse en relación con el fondo. Si mantiene el control lejos de su esfera y repite el experimento, parecerá que el control de posición se mueve menos. Ese movimiento aparente es similar al problema de Unión que nos enfrentamos: Los ojos, al igual que las cámaras, no ven exactamente la misma imagen porque están separadas por poco de distancia.
+Realizar algunos sencillos pasos durante la captura puede hacer que el procesamiento posterior sea mucho más fácil. Por ejemplo, cada vez que une imágenes de varias cámaras, acaba con artefactos visuales porque cada cámara tiene una vista ligeramente diferente. Cuanto más se acerquen los objetos a la cámara, mayor será la diferencia entre las vistas y mayores serán los artefactos de Unión. Esta es una manera fácil de visualizar el problema: Sujete el dedo delante de su cara y examínelo con un solo ojo. Ahora cambie los ojos. Verá que el control Thumb parece moverse en relación con el fondo. Si mantiene el control lejos de su esfera y repite el experimento, parecerá que el control de posición se mueve menos. Ese movimiento aparente es similar al de la Unión que nos enfrentamos: los ojos, al igual que las cámaras, no ven exactamente la misma imagen porque están separadas por un poco de distancia.
 
 Dado que es mucho más fácil evitar los peores artefactos mientras se filman que para corregirlos en el procesamiento posterior, se intentó mantener a las personas y cosas lejos de la cámara en la espera de que se pudiera eliminar la necesidad de unir objetos. Mantener un gran desplazamiento alrededor de nuestra cámara era probablemente uno de los mayores desafíos que teníamos durante el rodaje y tuvimos que crear creatividad para que funcione. Trabajar con guías locales era una gran ayuda en la administración de amontonamientos, pero también encontramos que el uso de signos (y a veces pequeños conos o bolsas de Bean) para marcar el espacio de filmación era razonablemente eficaz, especialmente porque solo necesitábamos obtener una breve cantidad de material de trabajo en cada ubicación. A menudo, la mejor manera de obtener una buena captura era llegar a la primera vez por la mañana, antes de que la mayoría de las personas se hubieran mostrado.
 
@@ -77,7 +76,7 @@ La captura del contenido de 360 ° es solo el primer paso; se necesita una gran 
 Un corte aproximado del material de Pantheon antes de la Unión. 
 
 
-Para unir los vídeos, usamos una herramienta denominada [PTGui](http://www.ptgui.com/) y la integró en nuestra canalización de procesamiento. Como parte del procesamiento posterior se extrajeron los fotogramas de nuestros vídeos y se encontró un patrón de Unión que parecía adecuado para uno de esos fotogramas. A continuación, aplicamos ese patrón a un complemento personalizado que hemos escrito que permitió a nuestros artistas de vídeo ajustar y ajustar el patrón de unión directamente durante la composición en After Effects. 
+Para unir los vídeos, usamos una herramienta denominada [PTGui](https://www.ptgui.com/) y la integró en nuestra canalización de procesamiento. Como parte del procesamiento posterior se extrajeron los fotogramas de nuestros vídeos y se encontró un patrón de Unión que parecía adecuado para uno de esos fotogramas. A continuación, aplicamos ese patrón a un complemento personalizado que hemos escrito que permitió a nuestros artistas de vídeo ajustar y ajustar el patrón de unión directamente durante la composición en After Effects. 
 
 ![Captura de pantalla de PTGui que muestra el material de Pantheon de Unión.](images/stitching-tool-pantheon-500px.png)
 
@@ -153,5 +152,5 @@ Esperamos que el uso compartido de soluciones a algunos de los desafíos más im
 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Vídeo: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

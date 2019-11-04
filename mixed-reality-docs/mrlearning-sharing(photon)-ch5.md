@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: cb4645d197238d8712719625bf11eac0650a8246
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701869"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437570"
 ---
-# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Integración de los anclajes espaciales de Azure en una experiencia compartida
+# <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrar los anclajes espaciales de Azure en una experiencia compartida
 
 En esta lección, aprenderá a integrar anclajes espaciales de Azure (ASA) en nuestra experiencia compartida. ASA permite que varios dispositivos colocalizados tengan una referencia común si su entorno físico va a delimitar experiencias virtuales de forma que todos los participantes vean objetos en la misma ubicación física.
 
@@ -37,7 +37,7 @@ Objetivos
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Ahora, en la jerarquía, seleccione ShareAzureAnchorButton y desplace su atención al panel inestable. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente y seleccione AnchorModuleScript y haga clic en ShareAnchorNetework ().
+4. Ahora, en la jerarquía, seleccione ShareAzureAnchorButton y desplace su atención al panel de inestado. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente, seleccione AnchorModuleScript y haga clic en ShareAnchorNetework ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
@@ -45,13 +45,15 @@ Objetivos
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Para probar el módulo de uso compartido, haga clic en el botón "iniciar sesión de Azure ASA", que iniciará la sesión de anclajes espaciales de Azure y, después, cree el anclaje de Azure haciendo clic en el botón "crear anclaje de Azure" y espere unos minutos para que se cree el delimitador de Azure. Una vez creado el delimitador de Azure, haga clic en el botón "compartir el anclaje de Azure" para compartir el delimitador de Azure creado desde HoloLens.
+6. Para probar el módulo de uso compartido, haga clic en el botón "iniciar sesión de Azure ASA", que iniciará la sesión de anclajes espaciales de Azure y luego cree el anclaje de Azure haciendo clic en el botón "crear anclaje de Azure". Espere a que se cree el delimitador de Azure. Una vez creado el delimitador de Azure, haga clic en el botón "compartir el anclaje de Azure" para compartir el anclaje de Azure creado desde HoloLens.
 
-7. Para recibir el delimitador de Azure compartido en otro HoloLens, haga clic en "iniciar sesión de Azure ASA" para empezar a trabajar en la sesión de ASA actual y haga clic en el botón "obtener el anclaje de Azure" para obtener el anclaje compartido de Azure desde el otro HoloLens.
+7. Para recibir el delimitador de Azure compartido en otro HoloLens, haga clic en "iniciar sesión de Azure ASA" para empezar a trabajar en la sesión de ASA actual.
 
-   > Nota: Todos los detalles de las acciones correspondientes en los botones individuales se mostrarán en la ventana Depurar.
+8. Haga clic en el botón "obtener anclaje de Azure" para obtener el anclaje compartido de Azure desde el otro HoloLens.
+
+   > Nota: todos los detalles de las acciones correspondientes en los botones individuales se mostrarán en la ventana Depurar.
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En esta lección ha aprendido a integrar los nuevos delimitadores espaciales de Azure para alinear dispositivos colocalizados en una experiencia compartida. En esta lección también se concluye el módulo de uso compartido. Hemos aprendido a configurar una nueva cuenta de Photon, a integrar Photon y BURDO en una nueva aplicación de Unity, a configurar avatares y objetos compartidos, y, por último, a alinear varios participantes con ASA. 
+En esta lección ha aprendido a integrar los nuevos delimitadores espaciales de Azure para alinear dispositivos colocalizados en una experiencia compartida. Esto también concluye el módulo de uso compartido. Hemos aprendido a configurar una nueva cuenta de Photon, a integrar Photon y BURDO en una nueva aplicación de Unity, a configurar avatares y a objetos compartidos y, por último, a alinear varios participantes con ASA. 
 

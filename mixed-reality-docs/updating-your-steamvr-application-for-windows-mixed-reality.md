@@ -1,25 +1,24 @@
 ---
-title: Actualización de la aplicación SteamVR para Windows Mixed Reality
+title: Actualización de la aplicación SteamVR
 description: Prácticas recomendadas para actualizar la aplicación SteamVR con el fin de maximizar la compatibilidad con auriculares de realidad mixta de Windows.
 author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: SteamVR, compatibilidad
-ms.openlocfilehash: db21651df8e586edf500f0d05def4b1ea5474284
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 6479130b14b8b50828ebecd3a648fd8a425aec15
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548661"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438206"
 ---
-# <a name="updating-your-steamvr-application-for-windows-mixed-reality"></a>Actualización de la aplicación SteamVR para Windows Mixed Reality
-
+# <a name="updating-your-steamvr-application"></a>Actualización de la aplicación SteamVR
 Animamos a los desarrolladores a probar y optimizar sus experiencias de SteamVR para que se ejecuten en auriculares Windows Mixed Reality. En esta documentación se describen las mejoras comunes que los desarrolladores pueden hacer para asegurarse de que su experiencia se ejecute de manera excelente en Windows Mixed Reality.
 
 ## <a name="initial-setup-instructions"></a>Instrucciones de configuración inicial
 
-Para empezar a probar su juego o aplicación en Windows Mixed Reality, asegúrese de que primero siga nuestra [Guía de introducción.](http://aka.ms/WindowsMixedRealitySteamVR)
+Para empezar a probar su juego o aplicación en Windows Mixed Reality, asegúrese de que primero siga nuestra [Guía de introducción.](https://aka.ms/WindowsMixedRealitySteamVR)
 
 ## <a name="controller-models"></a>Modelos de controlador
 1. Si la aplicación representa modelos de controlador:
@@ -49,7 +48,7 @@ Los controladores de movimiento de Windows Mixed Reality usan un motor hápticos
 
 ## <a name="launching-steamvr-apps-from-windows-mixed-reality-start-menu"></a>Inicio de aplicaciones de SteamVR desde el menú Inicio de Windows Mixed Reality
 
-En el caso de las experiencias de VR distribuidas a través de vapor, hemos [actualizado Windows Mixed Reality para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto con los vuelos de [Windows](https://insider.windows.com) Insider RS5 más recientes para que los títulos de SteamVR ahora aparezcan en el menú Inicio de Windows Mixed Reality en "todas las aplicaciones". Mostrar automáticamente. Con estas versiones de software instaladas, los clientes ahora pueden iniciar títulos de SteamVR directamente desde la Página principal de Windows Mixed Reality sin necesidad de quitar los auriculares.
+En el caso de las experiencias de VR distribuidas a través de vapor, hemos [actualizado Windows Mixed Reality para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto con los vuelos de [Windows Insider](https://insider.windows.com) RS5 más recientes para que los títulos de SteamVR ahora aparezcan en el menú Inicio de Windows Mixed Reality en "todas las aplicaciones". Mostrar automáticamente. Con estas versiones de software instaladas, los clientes ahora pueden iniciar títulos de SteamVR directamente desde la Página principal de Windows Mixed Reality sin necesidad de quitar los auriculares.
 
 ## <a name="windows-mixed-reality-logo"></a>Logotipo de Windows Mixed Reality
 
@@ -59,13 +58,13 @@ Para mostrar la compatibilidad con Windows Mixed Reality para su título, vaya a
 
 Sus comentarios son invaluables cuando se trata de mejorar la experiencia SteamVR de Windows Mixed Reality. Envíe todos los comentarios y errores a través del [centro de comentarios de Windows](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/filing-feedback). A continuación se muestran algunas [sugerencias sobre cómo hacer que los comentarios de SteamVR sean lo más útiles posible](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality#sharing-feedback-on-steamvr).
 
-Si tiene preguntas o comentarios para compartir, también puede ponerse en contacto con nosotros en nuestro [Foro de vapor](http://steamcommunity.com/app/719950/discussions/).
+Si tiene preguntas o comentarios para compartir, también puede ponerse en contacto con nosotros en nuestro [Foro de vapor](https://steamcommunity.com/app/719950/discussions/).
 
 ## <a name="faqs-and-troubleshooting"></a>Preguntas más frecuentes y solución de problemas
 
 Si tiene problemas generales al configurar o reproducir su experiencia, [consulte los pasos de solución de problemas más recientes](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#steamvr).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Instalación de las herramientas](install-the-tools.md)
 * [Historial de controladores de casco y controlador de movimiento](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/mixed-reality-software)
 * [Instrucciones de compatibilidad de hardware de equipo mínima de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)

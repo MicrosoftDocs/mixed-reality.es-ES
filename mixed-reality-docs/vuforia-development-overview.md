@@ -1,17 +1,17 @@
 ---
 title: Uso de Vuforia con Unity
 description: Aproveche Vuforia para compilar aplicaciones de Windows Mixed Reality en Unity.
-author: ailyadis
-ms.author: ''
+author: thetuvix
+ms.author: alexturn
 ms.date: 01/28/2019
 ms.topic: article
 keywords: Vuforia, marcadores, coordenadas, marco de referencia, seguimiento
-ms.openlocfilehash: c0d2f6d0707e1ddd3ee00d3eb80af9fb459f252b
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: 0ab87a6262cbe74fd116fdc0a7045961bf8695d9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750351"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437141"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Uso del motor Vuforia con Unity
 
@@ -60,7 +60,7 @@ El desarrollo de una aplicación de motor de Vuforia para HoloLens es fundamenta
 10. Seleccione compilar para generar un proyecto de Visual Studio
 11. Compilar el archivo ejecutable desde Visual Studio e instalarlo en HoloLens
 
-Nota: A partir de la versión 7,2, el ejemplo de Vuforia Engine para HoloLens incluye una escena de ejemplo que incluye el uso de ejemplo de destinos de modelo.
+Nota: a partir de la versión 7,2, el ejemplo de Vuforia Engine para HoloLens incluye una escena de ejemplo que incluye el uso de ejemplo de destinos de modelo.
 
 ## <a name="the-vuforia-developer-portal"></a>Portal para desarrolladores de Vuforia
 
@@ -70,12 +70,12 @@ Los desarrolladores que quieran crear sus propias experiencias de AR con el moto
 
 El [seguimiento extendido](https://library.vuforia.com/articles/Training/Extended-Tracking) crea un mapa del entorno para mantener el seguimiento incluso cuando un destino ya no está en la vista. Es equivalente de los motores de Vuforia a la asignación espacial realizada por HoloLens. Al habilitar el seguimiento extendido en un destino, se habilita la suposición de ese destino para pasarlo al sistema de asignación espacial. De esta manera, los destinos pueden existir en el motor de Vuforia y en los sistemas de coordenadas espaciales de HoloLens, aunque no simultáneamente.
 
-![Ventana de configuración de Unity](images/vuforia-extendedtracking.png)<br>
+![ventana de configuración de Unity](images/vuforia-extendedtracking.png)<br>
 *Ventana de configuración de Unity*
 
 **Habilitar el seguimiento extendido en un destino**
 
-El motor de Vuforia transformará automáticamente la suposición de un destino que utiliza el seguimiento extendido en el sistema de coordenadas espaciales de HoloLens. Esto permite que HoloLens asuma un seguimiento e integre cualquier contenido que se amplíe en el mapa espacial del entorno del destino. Este proceso se produce entre el motor de Vuforia y las API de realidad mixta en Unity y no requiere que el desarrollador realice ninguna programación, sino que se administra automáticamente.
+El motor de Vuforia transformará automáticamente la suposición de un destino que utiliza el seguimiento extendido en el sistema de coordenadas espaciales de HoloLens. Esto permite que HoloLens asuma un seguimiento e integre cualquier contenido que aumente en la asignación espacial del entorno del destino. Este proceso se produce entre el motor de Vuforia y las API de realidad mixta en Unity y no requiere que el desarrollador realice ninguna programación, sino que se administra automáticamente.
 
 **Esto es lo que sucede...**
 1. El rastreador de destino de Vuforia reconoce el destino
@@ -86,16 +86,16 @@ El motor de Vuforia transformará automáticamente la suposición de un destino 
 
 El desarrollador puede controlar este proceso, para devolver el control a Vuforia, deshabilitando el seguimiento extendido en el TargetBehaviour.
 
-**NOTA:** A partir de Vuforia 7,2, el seguimiento extendido ya no se habilita para cada destino. En su lugar, los desarrolladores pueden activar el seguimiento de los dispositivos para habilitar una funcionalidad similar en todos los destinos de la escena.
+**Nota:** A partir de Vuforia 7,2, el seguimiento extendido ya no se habilita para cada destino. En su lugar, los desarrolladores pueden activar el seguimiento de los dispositivos para habilitar una funcionalidad similar en todos los destinos de la escena.
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Instalación de las herramientas](install-the-tools.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Asignación espacial](spatial-mapping.md)
 * [Cámara en Unity](camera-in-unity.md)
 * [Exportación y creación de una solución de Visual Studio para Unity](exporting-and-building-a-unity-visual-studio-solution.md)
-* [Documentación de Vuforia: Desarrollo para Windows 10 en Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
-* [Documentación de Vuforia: Cómo instalar la extensión Vuforia Unity](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
-* [Documentación de Vuforia: Trabajar con el ejemplo de HoloLens en Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
-* [Documentación de Vuforia: Seguimiento extendido en Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)
+* [Documentación de Vuforia: desarrollo para Windows 10 en Unity](https://library.vuforia.com/articles/Solution/Developing-for-Windows-10-in-Unity)
+* [Documentación de Vuforia: instalación de la extensión Vuforia Unity](https://library.vuforia.com/articles/Solution/Installing-the-Unity-Extension)
+* [Documentación de Vuforia: trabajar con el ejemplo de HoloLens en Unity](https://library.vuforia.com/articles/Solution/Working-with-the-HoloLens-sample-in-Unity)
+* [Documentación de Vuforia: seguimiento extendido en Vuforia](https://library.vuforia.com/articles/Training/Extended-Tracking)

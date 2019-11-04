@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: sonido espacial, sonido envolvente, audio 3D, sonido 3D, audio espacial
-ms.openlocfilehash: a30a484c4e47593556fbd1786158262551e11d22
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 31ec8f88a060127daab9bf3afc970457ec7c90a3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829917"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437397"
 ---
 # <a name="spatial-sound"></a>Sonido espacial
 
@@ -21,7 +21,7 @@ Aunque los hologramas solo pueden aparecer visualmente donde apunta la mirada de
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/PTPvx7mDon4]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/PTPvx7mDon4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -33,9 +33,9 @@ Aunque los hologramas solo pueden aparecer visualmente donde apunta la mirada de
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
@@ -52,7 +52,7 @@ Mediante el análisis de cómo llega el sonido a nuestros oídos, nuestro cerebr
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Las señales de audio izquierda o derecha (Azimuth) proceden de las diferencias en el momento en que llega el sonido en cada oído. Las pilas de arriba y abajo se originan a partir de los cambios espectrales generados por la forma auricular externa (pinnae). Al designar desde dónde proviene el audio, el sistema puede simular la experiencia de sonido que llega en diferentes momentos a nuestros oídos. Tenga en cuenta que en HoloLens, aunque la espacialización Azimuth está personalizada, la simulación de elevación se basa en un conjunto medio de anthropometrics. Por lo tanto, la precisión de la elevación puede ser menos precisa que la precisión de Azimuth.
 
@@ -69,7 +69,7 @@ También es importante tener en cuenta que, aunque la combinación de sonidos es
 
 El motor de sonido espacial de Windows solo admite una velocidad de muestreo de 48k para la reproducción. La mayoría de middleware, como Unity, convertirá automáticamente los archivos de sonido en el formato admitido, pero cuando use las API de audio de Windows directamente, haga coincidir el formato del contenido con el formato admitido por el efecto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [MR espacial 220](holograms-220.md)
 * [Sonido espacial en Unity](spatial-sound-in-unity.md)
 * [Sonido espacial en DirectX](spatial-sound-in-directx.md)

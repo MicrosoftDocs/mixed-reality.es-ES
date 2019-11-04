@@ -6,12 +6,12 @@ ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, Windows Mixed Reality, compartir ideas, caso práctico
-ms.openlocfilehash: a478eaa35144a8ee0fbeaeb43cec4b9f901890ab
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523733"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436881"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Caso práctico: creación de una galaxia en una realidad mixta
 
@@ -25,7 +25,7 @@ Andy Zibits, el director de arte del proyecto y Karim Luccin, el ingeniero de gr
 
 Queríamos sacar el máximo partido de la capacidad de HoloLens para representar objetos 3D directamente en tu espacio de vida, por lo que decidimos que queríamos crear una galaxia de aspecto realista en la que los usuarios pudieran hacer zoom para ampliar y ver los estrellas individuales, cada uno con sus propias trayectorias. .
 
-En la primera semana de desarrollo, surgimos con unos pocos objetivos para nuestra representación de la forma láctea de Galaxy: Necesitaba tener profundidad, movimiento y funcionamiento volumétricos, lleno de estrellas que ayudarían a crear la forma de la galaxia.
+En la primera semana de desarrollo, surgimos con unos pocos objetivos para nuestra representación de la forma láctea de Galaxy: era necesario tener una profundidad, un movimiento y un volumétrico (lleno de estrellas) que le ayuden a crear la forma de la galaxia.
 
 El problema con la creación de una galaxia animada que tenía miles de millones de estrellas era que el número de elementos únicos que es necesario actualizar sería demasiado grande por fotograma para que HoloLens se animase con la CPU. Nuestra solución ha participado en una combinación compleja de arte y ciencia.
 
@@ -41,7 +41,7 @@ Iniciamos pruebas de esfuerzo con miles de objetos de punto en distintos patrone
 
 ### <a name="creating-the-position-of-the-stars"></a>Crear la posición de las estrellas
 
-Uno de nuestros miembros del equipo ya ha escrito C# el código que generaría estrellas en su posición inicial. Las estrellas se encuentran en una elipse y su posición puede describirse mediante (**curveOffset**, **ellipseSize**, **elevation**), donde **curveOffset** es el ángulo de la estrella a lo largo de la elipse, **ellipseSize** es la dimensión de la elipse. a lo largo de X y Z, y eleva la elevación adecuada de la estrella dentro de la galaxia. Por lo tanto, podemos crear un búfer ([ComputeBuffer de Unity](http://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que se inicializaría con cada atributo de estrella y lo enviaría en la GPU donde residiría para el resto de la experiencia. Para dibujar este búfer, usamos [DrawProcedural de Unity](http://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite ejecutar un sombreador (código en una GPU) en un conjunto arbitrario de puntos sin tener una malla real que represente la galaxia:
+Uno de nuestros miembros del equipo ya ha escrito C# el código que generaría estrellas en su posición inicial. Las estrellas se encuentran en una elipse y su posición puede describirse mediante (**curveOffset**, **ellipseSize**, **elevation**), donde **curveOffset** es el ángulo de la estrella a lo largo de la elipse, **ellipseSize** es la dimensión de la elipse. a lo largo de X y Z, y eleva la elevación adecuada de la estrella dentro de la galaxia. Por lo tanto, podemos crear un búfer ([ComputeBuffer de Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que se inicializaría con cada atributo de estrella y lo enviaría en la GPU donde residiría para el resto de la experiencia. Para dibujar este búfer, usamos [DrawProcedural de Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite ejecutar un sombreador (código en una GPU) en un conjunto arbitrario de puntos sin tener una malla real que represente la galaxia:
 
 **CPU**
 
@@ -147,7 +147,7 @@ Realizar nubes de pantalla completa e intentar desenfocarlos habría sido una ma
 
 ### <a name="a-bit-of-context-first"></a>Un bit de contexto primero
 
-Al usar las texturas en un juego el tamaño de la textura rara vez coincidirá con el área que deseamos utilizar en, pero podemos usar otro tipo de filtrado para obtener la tarjeta gráfica para interpolar el color que desee de los píxeles de la textura de textura ([Texture Filtering<C3/>).](https://msdn.microsoft.com/library/dn642451.aspx) El filtrado que nos interesa es [bilinear filtering](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx), que calculará el valor de cualquier píxel usando los 4 vecinos más cercanos.
+Cuando se usan texturas en un juego, el tamaño de la textura rara vez coincidirá con el área en la que se desea utilizar, pero se puede usar un tipo diferente de filtrado de textura para que la tarjeta gráfica se interpole el color que se desea de los píxeles de la textura ([filtrado de textura](https://msdn.microsoft.com/library/dn642451.aspx)). El filtrado que nos interesa es [bilineal Filtering](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) , que calculará el valor de cualquier píxel usando los 4 vecinos más cercanos.
 
 ![Original antes del filtrado](images/texture-1.png)
 
@@ -203,6 +203,6 @@ Hemos abierto el código para la aplicación Galaxy Explorer y lo hemos puesto a
 </table>
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Explorador de Galaxy en GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Actualizaciones de proyectos del explorador de Galaxy en YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

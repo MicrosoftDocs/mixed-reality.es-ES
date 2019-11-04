@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: problemas, errores, solución de problemas, corrección, ayuda, soporte técnico, HoloLens
-ms.openlocfilehash: 7b7a32a9a358ff75b2675d265445d9ef1acc1b9e
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 855bb0cafb0d3fba0d8d97c93d9415b51bcc2fb3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550884"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438272"
 ---
 # <a name="hololens-troubleshooting"></a>Solución de problemas de HoloLens
 
@@ -33,12 +33,12 @@ Si los hologramas son inestables, saltan o no parecen correctos, pruebe una de e
 * Limpie el visor del dispositivo y asegúrese de que no hay nada que obstruya los sensores.
 * Asegúrese de que haya suficiente luz en su habitación.
 * Intente caminar y mire el entorno para que HoloLens pueda escanearlos más completamente.
-* Intente ejecutar la aplicación de calibración. Calibra su HoloLens para que funcione mejor para sus ojos. Vaya a **configuración** > **utilidades** **del sistema** > . En calibración, seleccione **abrir calibración**.
-* Si sigue teniendo problemas después de ejecutar la aplicación de calibración, use la aplicación de optimización de sensor para optimizar los sensores de dispositivos. Vaya a **configuración** > **utilidades** **del sistema** > . En ajuste del sensor, seleccione **abrir la optimización del sensor**.
+* Intente ejecutar la aplicación de calibración. Calibra su HoloLens para que funcione mejor para sus ojos. Vaya a **configuración** > **herramientas**de > **del sistema** . En calibración, seleccione **abrir calibración**.
+* Si sigue teniendo problemas después de ejecutar la aplicación de calibración, use la aplicación de optimización de sensor para optimizar los sensores de dispositivos. Vaya a **configuración** > **herramientas**de > **del sistema** . En ajuste del sensor, seleccione **abrir la optimización del sensor**.
 
 ## <a name="hololens-doesnt-respond-to-my-gestures"></a>HoloLens no responde a mis gestos.
 
-Para asegurarse de que HoloLens puede ver los gestos, mantenga su mano en el marco de gestos, que extiende un par de metros a cada lado de usted. Cuando HoloLens pueda ver su mano, el cursor cambiará de un punto a un anillo. Más información sobre el uso de [gestos](gestures.md).
+Para asegurarse de que HoloLens puede ver los gestos, mantenga su mano en el marco de gestos, que extiende un par de metros a cada lado de usted. Cuando HoloLens pueda ver su mano, el cursor cambiará de un punto a un anillo. Más información sobre el uso de [gestos](gaze-and-commit.md#composite-gestures).
 
 Si el entorno es demasiado oscuro, es posible que HoloLens no vea su mano, así que asegúrese de que hay suficiente luz.
 
@@ -54,7 +54,7 @@ Si HoloLens no puede asignar o cargar el espacio, entrará en modo limitado y no
 * Asegúrese de que haya suficiente luz en su entorno para que HoloLens pueda ver y asignar el espacio.
 * Asegúrese de que está conectado a una red Wi-Fi. Si no está conectado a la red Wi-Fi, HoloLens no puede identificar ni cargar un espacio conocido.
 * Si necesita crear un nuevo espacio, conéctese a Wi-Fi y, a continuación, reinicie HoloLens.
-* Para ver si el espacio correcto está activo o para cargar manualmente un espacio, vaya a **configuración** > **espacios** **del sistema** > .
+* Para ver si el espacio correcto está activo o para cargar manualmente un espacio, vaya a **configuración** > **espacios**de > **del sistema** .
 * Si se carga el espacio correcto y sigue teniendo problemas, puede que el espacio esté dañado. Para corregir esto, seleccione el espacio y, a continuación, seleccione quitar. Una vez que se quita el espacio, HoloLens comenzará a asignar el entorno y creará un espacio nuevo.
 
 ## <a name="my-hololens-frequently-enters-limited-mode-or-shows-a-tracking-lost-message"></a>Mi HoloLens suele entrar en modo limitado o muestra un mensaje de "seguimiento perdido".
@@ -63,15 +63,15 @@ Si el dispositivo suele mostrar un mensaje de "modo limitado" o "se perdió el s
 
 ## <a name="my-hololens-cant-tell-what-space-im-in"></a>Mi HoloLens no puede saber qué espacio tengo.
 
-Si HoloLens no puede identificar y cargar automáticamente el espacio en el que se encuentra, asegúrese de que está conectado a la red Wi-Fi, hay mucha luz en el salón y no ha habido cambios importantes en el entorno. También puede cargar un espacio manualmente o administrar los espacios; para ello, vaya a **configuración** > **espacios** **del sistema** > .
+Si HoloLens no puede identificar y cargar automáticamente el espacio en el que se encuentra, asegúrese de que está conectado a la red Wi-Fi, hay mucha luz en el salón y no ha habido cambios importantes en el entorno. También puede cargar un espacio manualmente o administrar los espacios; para ello, vaya a **configuración** > **espacios**de > **del sistema** .
 
 ## <a name="im-getting-a-low-disk-space-error"></a>Obtengo un error de "espacio insuficiente en disco".
 
 Deberá liberar espacio de almacenamiento mediante una o varias de las siguientes acciones:
-* Elimine algunos espacios no usados. Vaya a **configuración** > **espacios** **del sistema** > , seleccione un espacio que ya no necesite y, a continuación, seleccione **quitar**.
+* Elimine algunos espacios no usados. Vaya a **configuración** > **espacios**de > **del sistema** , seleccione un espacio que ya no necesite y, a continuación, seleccione **quitar**.
 * Quite algunos de los hologramas que ha colocado.
 * Elimine algunas imágenes y vídeos de la aplicación fotos.
-* Desinstale algunas aplicaciones de HoloLens. En la lista todas las aplicaciones, pulse y mantenga presionada la aplicación que quiere desinstalar y,a continuación, seleccione Desinstalar.
+* Desinstale algunas aplicaciones de HoloLens. En la lista todas las aplicaciones, pulse y mantenga presionada la aplicación que quiere desinstalar y, a continuación, seleccione **desinstalar**.
 
 ## <a name="my-hololens-cant-create-a-new-space"></a>Mi HoloLens no puede crear un nuevo espacio.
 

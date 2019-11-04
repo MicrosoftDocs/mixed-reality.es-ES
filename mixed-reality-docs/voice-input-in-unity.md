@@ -6,14 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Entrada de voz, KeywordRecognizer, GrammarRecognizer, micrófono, dictado, voz
-ms.openlocfilehash: ef8114a1c877fe9b858122e0c64628d4b71a69cd
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d1cd2a2b954a195bc3f2688d915965f89aa30f98
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548683"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438200"
 ---
 # <a name="voice-input-in-unity"></a>Entrada de voz en Unity
+
+>[!NOTE]
+>En lugar de la siguiente información, considere la posibilidad de usar el complemento Unity para el SDK de servicios de voz cognitivos, que tiene unos resultados de precisión de voz mucho mejores y proporciona fácil acceso a la descodificación de voz a texto y a características avanzadas de voz como cuadro de diálogo, basado en intención interacción, traducción, síntesis de texto a voz y reconocimiento de voz en lenguaje natural. Busque el ejemplo y documentación aquí: https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
 
 Unity expone tres maneras de agregar una [entrada de voz](voice-input.md) a la aplicación de Unity.
 
@@ -37,8 +40,8 @@ Para permitir que la aplicación escuche frases específicas que habla el usuari
 
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
-**Espacio de nombres**: *UnityEngine. Windows. Speech*<br>
-**Distintos** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
+**Espacio de nombres:** *UnityEngine. Windows. Speech*<br>
+**Tipos:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
 Necesitamos algunas instrucciones Using para guardar algunas pulsaciones de teclas:
 
@@ -99,12 +102,12 @@ keywordRecognizer.Start();
 
 ### <a name="grammarrecognizer"></a>GrammarRecognizer
 
-**System.IO** *UnityEngine. Windows. Speech*<br>
+**Espacio de nombres:** *UnityEngine. Windows. Speech*<br>
 **Tipos**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
-El GrammarRecognizer se usa si se especifica la gramática de reconocimiento mediante SRGS. Esto puede ser útil si la aplicación tiene más de unas pocas palabras clave, si desea reconocer frases más complejas o si desea activar o desactivar fácilmente conjuntos de comandos. Vea: [Cree gramáticas con XML de SRGS](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) para obtener información sobre el formato de archivo.
+El GrammarRecognizer se usa si se especifica la gramática de reconocimiento mediante SRGS. Esto puede ser útil si la aplicación tiene más de unas pocas palabras clave, si desea reconocer frases más complejas o si desea activar o desactivar fácilmente conjuntos de comandos. Vea: [crear gramáticas con XML de SRGS](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) para obtener información sobre el formato de archivo.
 
-Una vez que tenga la gramática de SRGS y esté en el proyecto en una [carpeta StreamingAssets](http://docs.unity3d.com/Manual/StreamingAssets.html):
+Una vez que tenga la gramática de SRGS y esté en el proyecto en una [carpeta StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html):
 
 ```
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
@@ -141,7 +144,7 @@ grammarRecognizer.Start();
 
 ## <a name="dictation"></a>Dictado
 
-**System.IO** *UnityEngine. Windows. Speech*<br>
+**Espacio de nombres:** *UnityEngine. Windows. Speech*<br>
 **Tipos**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*
 
 Use DictationRecognizer para convertir la voz del usuario en texto. DictationRecognizer expone la funcionalidad de [dictado](voice-input.md#dictation) y admite el registro y la escucha de eventos de hipótesis y frases completadas, de forma que puede enviar comentarios al usuario mientras hablan y después. Los métodos Start () y STOP () respectivamente habilitan y deshabilitan el reconocimiento de dictado. Una vez que se realiza con el reconocedor, se debe desechar mediante el método Dispose () para liberar los recursos que utiliza. Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se publican antes.

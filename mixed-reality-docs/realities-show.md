@@ -6,19 +6,19 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: Realidad, presentación, calendario, Academia, programación, SF, San Francisco, reactor
-ms.openlocfilehash: 0a568e5d72bb7ed502d783df2f0815f2d9c75364
-ms.sourcegitcommit: e5b677f92ac4b1dff9aad6c329345a5aca4fcef5
+ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69020187"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438323"
 ---
 # <a name="the-realities-show"></a>Los hechos que se muestran
 ![Diseño para realidad mixta](images/therealitiesshow.jpg)
 
 **El programa real es un streaming en vivo de 30 minutos sobre HoloLens 2, servicios de realidad mixta y tecnologías MR. En cada episodio profundizaremos en las características, las capacidades, la técnica subyacente, cómo desarrollar para los distintos dispositivos, recomendar prácticas recomendadas y responder a preguntas de nuestro público. Streaming a desarrolladores en todo el mundo desde nuestra configuración de la fase de reactor de San Francisco como un entorno de salón (y ocasionalmente desde otros sitios).**
 
-**[Vea los episodios en directo y en el pasado aquí](http://aka.ms/trs)**
+**[Vea los episodios en directo y en el pasado aquí](https://aka.ms/trs)**
 ___
 
 ## <a name="hololens-2-and-mixed-reality-services---march-12-2019-8-am-pdt"></a>**HoloLens 2 y servicios de realidad mixta** : 12 de marzo de 2019, 8 am (PDT)

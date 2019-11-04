@@ -3,17 +3,17 @@ title: SDK de introducción a la escena
 description: Guía de programación para el SDK de descripción de la escena
 author: szymons
 ms.author: szymons
-ms.date: 07/08/19
+ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 152ffdbd84798c164963717a8dc41beb2e1a0902
-ms.sourcegitcommit: e9a55528965048ce34f8247ef6e544f9f432ee37
+ms.openlocfilehash: e31c0b1c954516db2dbb025d849dba3e3203a04b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69559864"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438300"
 ---
-## <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
+# <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
 
 El objetivo de la comprensión de la escena es transformar los datos del sensor de entorno no estructurado que captura el dispositivo de realidad mixta y convertirlos en una representación eficaz pero abstracta que es intuitiva y fácil de desarrollar para. El SDK actúa como la capa de comunicación entre la aplicación y la escena que comprende el tiempo de ejecución. Está diseñado para imitar construcciones estándar existentes como gráficos de escenas 3D para representaciones 3D y rectángulos y paneles 2D para aplicaciones 2D. Aunque las construcciones que comprenden los imitadores se asignarán a marcos concretos que se pueden usar, en general SceneUnderstanding es independiente del marco de trabajo, lo que permite la interoperabilidad entre marcos variados que interactúan con él. A medida que la comprensión de la escena evolucione el rol del SDK, se asegurará de que las nuevas representaciones y capacidades sigan expuestas dentro de un marco unificado. En este documento, en primer lugar, introduciremos conceptos de alto nivel que le ayudarán a familiarizarse con el uso o el entorno de desarrollo y, a continuación, proporcionar documentación más detallada sobre clases y construcciones específicas.
 
@@ -23,7 +23,15 @@ El SDK de SceneUnderstanding se descarga a través de NuGet.
 
 [SDK de SceneUnderstanding](https://www.nuget.org/packages/Microsoft.MixedReality.SceneUnderstanding/)
 
-Antes de empezar, tenga en cuenta que el SDK se ejecuta en la parte superior de UWP y requiere Windows SDK versión 18362 o posterior. 
+**Nota:** la versión más reciente depende de la vista previa de pacakges y deberá habilitar los paquetes de versión preliminar para verlo.
+
+A partir de la versión 0.5.2022-RC, la descripción de la escena C# admite C++ proyecciones de idioma para y permite a las aplicaciones desarrollar aplicaciones para las plataformas Win32 o UWP. A partir de esta versión, SceneUnderstanding es compatible con la compatibilidad del editor de Unity con el SceneObserver, que se usa únicamente para comunicarse con HoloLens2. 
+
+SceneUnderstanding requiere Windows SDK versión 18362 o posterior. 
+
+Si usa el SDK en un proyecto de Unity, use [NuGet para Unity](https://github.com/GlitchEnzo/NuGetForUnity) para instalar el paquete en el proyecto.
+
+## <a name="conceptual-overview"></a>Información general conceptual
 
 ### <a name="the-scene"></a>La escena
 
@@ -35,11 +43,11 @@ A continuación se muestra un diagrama que ilustra este flujo de proceso y muest
 
 ![Diagrama del proceso](images/SU-ProcessFlow.png)
 
-En el lado izquierdo hay un diagrama del tiempo de ejecución de realidad mixta que siempre está activado y en ejecución en su propio proceso. Este tiempo de ejecución es responsable de realizar el seguimiento de los dispositivos, la reconstrucción superficial y otras operaciones que la comprensión de la escena usa para entender y explicar el mundo. En el lado derecho del diagrama, se muestran dos aplicaciones teóricas que hacen uso de la comprensión de la escena. La primera interfaz de la aplicación con MRTK, que usa el SDK de información de escenas internamente, la segunda aplicación calcula y usa dos instancias de sepereate Scene. Las 3 escenas de este diagrama generan instancias distintas de las escenas, el controlador no realiza un seguimiento del estado global que se comparte entre las aplicaciones y los objetos de escena de una escena no se encuentran en otro. La comprensión de la escena proporciona un mecanismo para realizar el seguimiento con el tiempo, pero esto se realiza mediante el SDK y codifica el código que realiza este seguimiento en el SDK del proceso de la aplicación.
+En el lado izquierdo hay un diagrama del tiempo de ejecución de realidad mixta que siempre está activado y en ejecución en su propio proceso. Este tiempo de ejecución es responsable de realizar el seguimiento de los dispositivos, la asignación espacial y otras operaciones que la comprensión de la escena usa para entender y explicar el mundo. En el lado derecho del diagrama, se muestran dos aplicaciones teóricas que hacen uso de la comprensión de la escena. La primera interfaz de la aplicación con MRTK, que usa el SDK de información de escenas internamente, la segunda aplicación calcula y usa dos instancias de sepereate Scene. Las 3 escenas de este diagrama generan instancias distintas de las escenas, el controlador no realiza un seguimiento del estado global que se comparte entre las aplicaciones y los objetos de escena de una escena no se encuentran en otro. La comprensión de la escena proporciona un mecanismo para realizar el seguimiento con el tiempo, pero esto se realiza mediante el SDK y codifica el código que realiza este seguimiento en el SDK del proceso de la aplicación.
 
 Dado que cada escena almacena sus datos en el espacio de memoria de la aplicación, puede suponer que todas las funciones del objeto de escena o de sus datos internos siempre se ejecutan en el proceso de la aplicación.
 
-#### <a name="layout"></a>Diseño
+### <a name="layout"></a>Diseño
 
 Para trabajar con la comprensión de la escena, puede ser útil conocer y entender cómo representa los componentes el tiempo de ejecución de forma lógica y física. La escena representa los datos con un diseño específico que se eligió para ser sencillo al tiempo que se mantiene una estructura subyacente que se pliable para satisfacer los requisitos futuros sin necesidad de revisiones importantes. Para ello, la escena almacena todos los componentes (bloques de creación de todos los objetos de escena) en una lista plana y define la jerarquía y la composición a través de referencias en las que determinados componentes hacen referencia a otros.
 
@@ -54,20 +62,20 @@ A continuación se presenta un ejemplo de una estructura en su forma plana y ló
   <ul>
   <li>SceneObject_1
     <ul>
-      <li>Mesh_1</li>
-      <li>Quad_1</li>
-      <li>Quad_2</li>
+      <li>SceneMesh_1</li>
+      <li>SceneQuad_1</li>
+      <li>SceneQuad_2</li>
     </ul>
   </li>
   <li>SceneObject_2
     <ul>
-      <li>Quad_1</li>
-      <li>Quad_3</li>
+      <li>SceneQuad_1</li>
+      <li>SceneQuad_3</li>
       </li></ul>
   </li>
   <li>SceneObject_3
     <ul>
-      <li>Mesh_3</li>
+      <li>SceneMesh_3</li>
     </ul>
   </ul>
 </ul>
@@ -77,11 +85,11 @@ A continuación se presenta un ejemplo de una estructura en su forma plana y ló
   <li>SceneObject_1</li>
   <li>SceneObject_2</li>
   <li>SceneObject_3</li>
-  <li>Quad_1</li>
-  <li>Quad_2</li>
-  <li>Quad_3</li>
-  <li>Mesh_1</li>
-  <li>Mesh_2</li>
+  <li>SceneQuad_1</li>
+  <li>SceneQuad_2</li>
+  <li>SceneQuad_3</li>
+  <li>SceneMesh_1</li>
+  <li>SceneMesh_2</li>
 </ul>
 </td>
 </tr>
@@ -89,17 +97,19 @@ A continuación se presenta un ejemplo de una estructura en su forma plana y ló
 
 En esta ilustración se resalta la diferencia entre el diseño físico y lógico de la escena. A la derecha, vemos el diseño jerárquico de los datos que la aplicación ve al enumerar la escena. A la izquierda, vemos que la escena se compone en realidad de 12 componentes distintos a los que se puede tener acceso individualmente si es necesario. Al procesar una nueva escena, esperamos que las aplicaciones recorran esta jerarquía de manera lógica; sin embargo, al realizar un seguimiento entre las actualizaciones de la escena, algunas aplicaciones solo pueden estar interesadas en determinados componentes que se comparten entre dos escenas.
 
-### <a name="high-level-overview"></a>Información general de alto nivel
+## <a name="api-overview"></a>Introducción a API
 
 En la sección siguiente se proporciona información general de alto nivel sobre las construcciones de comprensión de la escena. Al leer esta sección se proporciona una descripción de cómo se representan las escenas y para qué se usan los distintos componentes. En la siguiente sección se proporcionan ejemplos de código concretos e información adicional con el glosario en esta información general.
 
-#### <a name="scenecomponents"></a>SceneComponents
+Todos los tipos que se describen a continuación residen en el espacio de nombres `Microsoft.MixedReality.SceneUnderstanding`.
+
+### <a name="scenecomponents"></a>SceneComponents
 
 Ahora que comprende el diseño lógico de escenas, ahora podemos presentar el concepto de SceneComponents y cómo se usan para crear la jerarquía. SceneComponents son las descomposiciones más pormenorizadas de SceneUnderstanding que representan una sola cosa principal, por ejemplo, una malla o un cuadro de límite cuádruple o de rectángulo. SceneComponents son elementos que se pueden actualizar de forma independiente y a los que puede hacer referencia otro SceneComponents, por lo que tienen una única propiedad global como un identificador único, lo que permite este tipo de mecanismo de seguimiento o referencia. Los identificadores se usan para la composición lógica de la jerarquía de escenas, así como para la persistencia de objetos (la acción de actualizar una escena en relación con otra). 
 
 Si trata cada escena recién calculada como DISTINCT y simplemente enumera todos los datos que contiene, los identificadores son en gran medida transparentes para usted. Sin embargo, si planea realizar un seguimiento de los componentes de varias actualizaciones, usará los identificadores para indexar y buscar SceneComponents entre los objetos de la escena.
 
-#### <a name="sceneobjects"></a>SceneObjects
+### <a name="sceneobjects"></a>SceneObjects
 
 Un SceneObject es un SceneComponent que representa una instancia de una "cosa", por ejemplo, una pared, una planta, un límite superior, etc. expresado por su propiedad Kind. Los SceneObjects son geométricos y, por tanto, tienen funciones y propiedades que representan su ubicación en el espacio, pero no contienen ninguna estructura geométrica o lógica. En su lugar, SceneObjects hace referencia a otros SceneComponents, en concreto SceneQuads y SceneMeshes, que proporcionan las representaciones variadas que son compatibles con el sistema. Cuando se calcula una nueva escena, es probable que la aplicación Enumere los SceneObjects de la escena para procesar lo que le interesa.
 
@@ -111,29 +121,27 @@ SceneObjects puede tener cualquiera de las siguientes opciones:
 </tr>
 <tr><td>Background</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
 <tr><td>Reloj</td><td>Una pared física. Se supone que las paredes son estructuras de entorno inmóviles.</td></tr>
-<tr><td>Palabra</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no están en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
-<tr><td>Umbral</td><td>La superficie superior de una habitación.</td></tr>
+<tr><td>palabra</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no están en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
+<tr><td>umbral</td><td>La superficie superior de una habitación.</td></tr>
 <tr><td>Plataforma</td><td>Una superficie plana grande en la que se pueden colocar hologramas. Tienden a representar las tablas, los extremos y otras superficies horizontales grandes.</td></tr>
 <tr><td>Mundo</td><td>Etiqueta reservada para los datos geométricos que es independiente de la etiqueta. La malla generada al establecer la marca de actualización EnableWorldMesh se clasificaría como World.</td></tr>
 <tr><td>Unknown</td><td>Este objeto de escena todavía se puede clasificar y asignar a un tipo. Esto no se debe confundir con el fondo, ya que este objeto podría ser cualquier cosa, el sistema no ha incorporado todavía una clasificación suficientemente fuerte para él.</td></tr>
 </tr>
 </table>
 
-#### <a name="scenemesh"></a>SceneMesh
+### <a name="scenemesh"></a>SceneMesh
 
-Un SceneMesh es un SceneComponent que se aproxima a la geometría de objetos geométricos arbitrarios mediante una lista de triángulos. SceneMeshes se usan en varios contextos diferentes, pueden representar componentes de la estructura de la celda estanca o como WorldMesh que representa la reconstrucción de la superficie sin enlazar asociada a la escena. Los datos de índice y vértices que se proporcionan con cada malla usan el mismo diseño conocido que los búferes de [vértices y de índices](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) que se usan para representar mallas de triángulo en todas las API de representación modernas. Tenga en cuenta que, en la descripción de la escena, las mallas usan índices de 32 bits y es posible que necesiten dividirse en fragmentos para determinados motores de representación.
+Un SceneMesh es un SceneComponent que se aproxima a la geometría de objetos geométricos arbitrarios mediante una lista de triángulos. SceneMeshes se usan en varios contextos diferentes, pueden representar componentes de la estructura de celda estanca o como WorldMesh que representa la malla de asignación espacial sin enlazar asociada a la escena. Los datos de índice y vértices que se proporcionan con cada malla usan el mismo diseño conocido que los [búferes de vértices y de índices](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) que se usan para representar mallas de triángulo en todas las API de representación modernas. Tenga en cuenta que, en la descripción de la escena, las mallas usan índices de 32 bits y es posible que necesiten dividirse en fragmentos para determinados motores de representación.
 
-#### <a name="scenequad"></a>SceneQuad
+### <a name="scenequad"></a>SceneQuad
 
 Un SceneQuad es un SceneComponent que representa superficies 2D que ocupan el mundo 3D. SceneQuads se puede usar de forma similar a los planos ARKit ARPlaneAnchor o ARCore, pero ofrecen más funcionalidad de alto nivel que los lienzos 2D que usarán las aplicaciones planas o la experiencia de usuario aumentada. se proporcionan API específicas de 2D para cuádruples que facilitan el uso de la ubicación y el diseño, y el desarrollo (con la excepción de la representación) con cuatros se siente más parecido al trabajo con lienzos 2D que las mallas 3D.
 
-### <a name="scene-understanding-sdk-details-and-reference"></a>Detalles y referencia del SDK de la escena
-
-#### <a name="sdk"></a>SDK
+## <a name="scene-understanding-sdk-details-and-reference"></a>Detalles y referencia del SDK de la escena
 
 La siguiente sección le ayudará a familiarizarse con los conceptos básicos de SceneUnderstanding. En esta sección se proporcionan los conceptos básicos, momento en el que debe tener suficiente contexto para examinar las aplicaciones de ejemplo para ver cómo se usa SceneUnderstanding de forma holística.
 
-#### <a name="initialization"></a>Inicialización
+### <a name="initialization"></a>Inicialización
 
 El primer paso para trabajar con SceneUnderstanding es que la aplicación pueda obtener referencias a un objeto de escena. Esto puede realizarse de una de estas dos formas: el controlador puede calcular una escena, o bien se puede deserializar una escena existente calculada en el pasado. Esto último es especialmente útil para trabajar con SceneUnderstanding durante el desarrollo, donde las aplicaciones y experiencias se pueden crear rápidamente con un dispositivo de realidad mixta.
 
@@ -162,27 +170,29 @@ querySettings.EnableWorldMesh = true;                                           
 querySettings.RequestedMeshLevelOfDetail = SceneMeshLevelOfDetail.Fine;            // Requests the finest LOD of the static spatial mapping mesh.
 
 // Initialize a new Scene
-Scene myScene = SceneObserver.Compute(querySettings, 10.0f);
+Scene myScene = SceneObserver.ComputeAsync(querySettings, 10.0f).GetAwaiter().GetResult();
 ```
 
-#### <a name="initialization-from-data-aka-the-pc-path"></a>Inicialización de datos (también conocido como la ruta de acceso del equipo)
+### <a name="initialization-from-data-aka-the-pc-path"></a>Inicialización de datos (también conocido como la ruta de acceso del equipo)
 
 Aunque se pueden calcular escenas para su consumo directo, también se pueden calcular en forma serializada para su uso posterior. Esto ha demostrado ser muy útil para el desarrollo, ya que permite a los desarrolladores trabajar y probar la comprensión de la escena sin necesidad de un dispositivo. El acto de serializar una escena es casi idéntico al cálculo, los datos se devuelven a la aplicación en lugar de deserializarse localmente mediante el SDK. Después, puede deserializarlo usted mismo o guardarlo para su uso futuro.
 
 ```cs
 // Create Query settings for the scene update
-SceneUnderstanding.QuerySettings querySettings;
+SceneQuerySettings querySettings;
 
 // Compute a scene but serialized as a byte array
-byte[] newSceneBlob = SceneObserver.ComputeSerialized(querySettings, 10.0f);
+SceneBuffer newSceneBuffer = SceneObserver.ComputeSerializedAsync(querySettings, 10.0f).GetAwaiter().GetResult();
 
-// If we want to use it immediatley we can de-serialize the scene ourselves
-Scene mySceneDeSerialized = Scene.Deserialize(newSceneBlob);
+// If we want to use it immediately we can de-serialize the scene ourselves
+byte[] newSceneData = new byte[newSceneBuffer.Size];
+newSceneBuffer.GetData(newSceneData);
+Scene mySceneDeSerialized = Scene.Deserialize(newSceneData);
 
 // Save newSceneBlob for later
 ```
 
-#### <a name="sceneobject-enumeration"></a>Enumeración SceneObject
+### <a name="sceneobject-enumeration"></a>Enumeración SceneObject
 
 Ahora que la aplicación tiene una escena, la aplicación examinará e interactuará con SceneObjects. Esto se hace mediante el acceso a la propiedad **SceneObjects** :
 
@@ -200,13 +210,13 @@ foreach (var sceneObject in myScene.SceneObjects)
 }
 ```
 
-#### <a name="component-update-and-re-finding-components"></a>Actualización de componentes y volver a buscar componentes
+### <a name="component-update-and-re-finding-components"></a>Actualización de componentes y volver a buscar componentes
 
 Hay otra función que recupera los componentes de la escena denominada ***FindComponent***. Esta función es útil cuando se actualizan objetos de seguimiento y se encuentran en escenas posteriores. El siguiente código calculará una nueva escena en relación con una escena anterior y, a continuación, buscará el piso en la nueva escena.
 
 ```cs
-// Compute a new scene, but tell the system that we want to compute relative to the previous scene
-Scene myNextScene = SceneObserver.Compute(querySettings, 10.0f, myScene);
+// Compute a new scene, and tell the system that we want to compute relative to the previous scene
+Scene myNextScene = SceneObserver.ComputeAsync(querySettings, 10.0f, myScene).GetAwaiter().GetResult();
 
 // Use the Id for the floor we found last time, and find it again
 firstFloor = (SceneObject)myNextScene.FindComponent(firstFloor.Id);
@@ -217,14 +227,14 @@ if (firstFloor != null)
 }
 ```
 
-### <a name="accessing-meshes-and-quads-from-scene-objects"></a>Acceso a mallas y cuádruples de objetos de escena
+## <a name="accessing-meshes-and-quads-from-scene-objects"></a>Acceso a mallas y cuádruples de objetos de escena
 
-Una vez que se ha detectado SceneObjects, es más probable que la aplicación tenga acceso a los datos contenidos en las cuatro o las mallas de las que se compone. Se tiene acceso a estos datos con las propiedades de cuádruples y ***mallas*** . En el código siguiente se enumeran todos los cuádruples y mallas de nuestro objeto Floor.
+Una vez que se ha detectado SceneObjects, es más probable que la aplicación tenga acceso a los datos contenidos en las cuádruples o mallas de las que se compone. Se tiene acceso a estos datos con las propiedades de ***cuádruples*** y ***mallas*** . En el código siguiente se enumeran todos los cuádruples y mallas de nuestro objeto Floor.
 
 ```cs
 
-// Get the matrix for the SceneObject
-System.Numerics.Matrix4x4 floorTransform = firstFloor.LocationAsMatrix();
+// Get the transform for the SceneObject
+System.Numerics.Matrix4x4 objectToSceneOrigin = firstFloor.GetLocationAsMatrix();
 
 // Enumerate quads
 foreach (var quad in firstFloor.Quads)
@@ -243,60 +253,46 @@ Observe que es el SceneObject que tiene la transformación relativa al origen de
 
 ### <a name="dealing-with-transforms"></a>Trabajar con transformaciones
 
-La comprensión de la escena ha realizado un intento deliberado de alinearse con representaciones de escenas 3D tradicionales al tratar con transformaciones. Por lo tanto, cada escena se limita a un sistema de coordenadas único, de forma muy similar a la mayoría de las representaciones comunes del entorno 3D. Si la aplicación trata de escenas que amplían el límite de lo que proporciona un único origen, puede delimitar SceneObjects a SpatialAnchors, o generar varias escenas y combinarlas juntas, pero para simplificar, se supone que las escenas estancas existen en su propio origen localizado por un NodeId definido por Scene:: OriginSpatialGraphNodeId.
+La comprensión de la escena ha realizado un intento deliberado de alinearse con representaciones de escenas 3D tradicionales al tratar con transformaciones. Por lo tanto, cada escena se limita a un sistema de coordenadas único, de forma muy similar a la mayoría de las representaciones comunes del entorno 3D. Cada SceneObjects proporciona su ubicación como posición y orientación dentro de ese sistema de coordenadas. Si la aplicación trata de escenas que amplían el límite de lo que proporciona un único origen, puede delimitar SceneObjects a SpatialAnchors, o generar varias escenas y combinarlas juntas, pero para simplificar, se supone que las escenas estancas existen en su propio origen localizado por un NodeId definido por Scene. OriginSpatialGraphNodeId.
 
-El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas juntos:
-
+El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas. Consulte [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) y [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obtener más información sobre las API de percepción de Windows y los [objetos nativos de realidad mixta en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obtener más información sobre cómo obtener una SpatialCoordinateSystem que se corresponda con Unity. origen mundial, así como el método de extensión `.ToUnity()` para la conversión entre `System.Numerics.Matrix4x4` y `UnityEngine.Matrix4x4`.
 
 ```cs
-    public static System.Numerics.Matrix4x4? GetSceneToUnityTransform(Guid nodeId)
+public class SceneRootComponent : MonoBehavior
+{
+    public SpatialCoordinateSystem worldOrigin;
+    public Scene scene;
+    SpatialCoordinateSystem sceneOrigin;
+    
+    void Start()
     {
-        System.Numerics.Matrix4x4? sceneToUnityTransform; 
-       
-        SpatialCoordinateSystem sceneSpatialCoordinateSystem = Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.CreateCoordinateSystemForNode(nodeId);
-        SpatialCoordinateSystem unitySpatialCoordinateSystem = (SpatialCoordinateSystem)System.Runtime.InteropServices.Marshal.GetObjectForIUnknown(UnityEngine.XR.WSA.WorldManager.GetNativeISpatialCoordinateSystemPtr());
-
-        sceneToUnityTransform = sceneSpatialCoordinateSystem.TryGetTransformTo(unitySpatialCoordinateSystem);
-
-        if (sceneToUnityTransform != null)
+        // Initialize a SpatialCoordinateSystem for the scene's node in the system's Spatial Graph.
+        scene.origin = SpatialGraphInteropPreview.CreateCoordinateSystemForNode(scene.OriginSpatialGraphNodeId);
+    }
+    
+    void Update()
+    {
+        // Try to get the current transform of the scene's spatial graph node.
+        // This may not be available, e.g. when tracking has been lost.
+        var sceneToWorld = sceneOrigin.TryGetTransformTo(worldOrigin);
+        if (sceneToWorld.HasValue)
         {
-            sceneToUnityTransform = TransformUtils.ConvertRightHandedMatrix4x4ToLeftHanded(sceneToUnityTransform.Value);
+            // Convert the transform to Unity numerics and update the game object.
+            var sceneToWorldUnity = sceneToWorld.Value.ToUnity();
+            this.gameObject.transform.SetPositionAndRotation(sceneToWorldUnity.GetColumn(3), sceneToWorldUnity.rotation);
         }
-        
-        return sceneToUnityTransform;
     }
-
-    /// <summary>
-    /// Converts a transformation matrix from right handed (+x is right, +y is up, +z is back) to left handed (+x is right, +y is up, +z is front).
-    /// </summary>
-    /// <param name="transformationMatrix">Right-handed transformation matrix to convert.</param>
-    /// <returns>Converted left-handed matrix.</returns>
-    public System.Numerics.Matrix4x4 ConvertRightHandedMatrix4x4ToLeftHanded(System.Numerics.Matrix4x4 transformationMatrix)
-    {
-        transformationMatrix.M13 = -transformationMatrix.M13;
-        transformationMatrix.M23 = -transformationMatrix.M23;
-        transformationMatrix.M43 = -transformationMatrix.M43;
-
-        transformationMatrix.M31 = -transformationMatrix.M31;
-        transformationMatrix.M32 = -transformationMatrix.M32;
-        transformationMatrix.M34 = -transformationMatrix.M34;
-
-        return transformationMatrix;
-    }
+}
 ```
 
-Y el código siguiente llama a esta función:
+Cada `SceneObject` tiene una propiedad `Position` y `Orientation` que se puede utilizar para colocar el contenido correspondiente en relación con el origen del `Scene`contenedor. Por ejemplo, en el ejemplo reciben se supone que el juego es un elemento secundario de la raíz de la escena y asigna su posición y giro local para alinear con una `SceneObject`determinada:
 
 ```cs
-System.Numerics.Matrix4x4? sceneToUnityTransform = TransformUtils.GetSceneToUnityTransform(scene.OriginSpatialGraphNodeId);
-
-// Set the root transform
-Vector3 t;
-Quaternion r;
-Vector3 s;
-
-System.Numerics.Matrix4x4.Decompose(sceneToUnityTransform, out s, out r, out t);
-SceneRoot.Transform.SetPositionAndRotation(t, r);
+void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
+{
+    gameObject.transform.localPosition = sceneObject.Position.ToUnity();
+    gameObject.transform.localRotation = sceneObject.Orientation.ToUnity());
+}
 ```
 
 ### <a name="quad"></a>Cuádruple
@@ -325,33 +321,32 @@ foreach (var sceneObject in myScene.SceneObjects)
             if (quads[0].FindCentermostPlacement(new System.Numerics.Vector2(1.0f, 1.0f), out location))
             {
                 // We found one, anchor something to the transform
-                // Step 1: Create a new node QuadTransformNode as a child of Root, and set the transform from quad[0].Transform
-                // Step 2: Create your hologram and set it as a child of QuadTransformNode
-                // Step 3: Set the QuadTransformNode tranform to a translation (location.x, location.y, 0)
+                // Step 1: Create a new game object for the quad itself as a child of the scene root
+                // Step 2: Set the local transform from quads[0].Position and quads[0].Orientation
+                // Step 3: Create your hologram and set it as a child of the quad's game object
+                // Step 4: Set the hologram's local tranform to a translation (location.x, location.y, 0)
             }
         }
     }
 }
 ```
 
-Los pasos 1-3 son muy dependientes de la implementación o el marco de trabajo en particular, pero los temas deben ser similares. Es importante tener en cuenta que la cuádruple no está pensada normalmente como, simplemente representa un plano 2D enlazado que está localizado en el espacio. Si el motor o el marco de trabajo saben dónde está la cuádruple y la raíz de los objetos en relación con la cuádruple, los hologramas se encontrarán correctamente. Para obtener información más detallada, consulte nuestros ejemplos en cuatro que muestran implementaciones específicas.
+Los pasos 1-4 son muy dependientes de la implementación o el marco de trabajo en particular, pero los temas deben ser similares. Es importante tener en cuenta que la cuádruple simplemente representa un plano 2D enlazado que está localizado en el espacio. Debido a que el motor o el marco de trabajo saben dónde está el cuádruple y la raíz de los objetos en relación con la cuádruple, los hologramas se ubicarán correctamente con Repect en el mundo real. Para obtener información más detallada, consulte nuestros ejemplos en cuatro que muestran implementaciones específicas.
 
 ### <a name="mesh"></a>Tamiz
 
-Las mallas representan representaciones geométricas de objetos o entornos. De forma similar a la [asignación espacial](spatial-mapping.md), los datos del índice de malla y del vértice que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los búferes de vértices y de índices que se usan para representar mallas de triángulo en todas las API de representación modernas. Las API específicas que se usan para hacer referencia a estos datos son las siguientes:
+Las mallas representan representaciones geométricas de objetos o entornos. De forma similar a la [asignación espacial](spatial-mapping.md), los datos del índice de malla y del vértice que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los búferes de vértices y de índices que se usan para representar mallas de triángulo en todas las API de representación modernas. Las posiciones de los vértices se proporcionan en el sistema de coordenadas de la `Scene`. Las API específicas que se usan para hacer referencia a estos datos son las siguientes:
 
 ```cs
 void GetTriangleIndices(int[] indices);
-void GetVertices(float[] vertices);
+void GetVertices(System.Numerics.Vector3[] vertices);
 ```
-
-\* * Nota: GetVertices devuelve una lista de vértices donde cada tres tuplas de valores de punto flotante representa una única coordenada en el espacio de x, y y z cartesiano.
 
 El código siguiente proporciona un ejemplo de generación de una lista de triángulos a partir de la estructura de malla:
 
 ```cs
 uint[] indices = new uint[mesh.TriangleIndexCount];
-float[] positions = new float[mesh.VertexCount * 3];
+System.Numerics.Vector3[] positions = new System.Numerics.Vector3[mesh.VertexCount];
 
 mesh.GetTriangleIndices(indices);
 mesh.GetVertexPositions(positions);
@@ -359,10 +354,11 @@ mesh.GetVertexPositions(positions);
 
 Los búferes de índice/vértices se deben > = los recuentos de índice o vértices, pero de lo contrario se puede cambiar el tamaño de forma arbitraria, lo que permite reutilizar la memoria de forma eficaz.
 
-### <a name="developing-with-scene-understandings"></a>Desarrollo con conocimientos de escenas
+## <a name="developing-with-scene-understandings"></a>Desarrollo con conocimientos de escenas
 
-En este momento, debe comprender los principales bloques de creación de la escena que comprende el tiempo de ejecución y el SDK. La mayor parte de la eficacia y la complejidad radica en los patrones de acceso, la interacción con los marcos 3D y las herramientas que se pueden escribir sobre estas API para realizar tareas más avanzadas, como la planeación espacial, el análisis de salas, la navegación, la física, etc. Esperamos que se capturen en ejemplos que deberían ser de esperar en la dirección adecuada para que los escenarios se muestren. Si hay ejemplos/escenarios que no abordamos, háganoslo saber e intentaremos documentar o crear prototipos de lo que necesita.
+En este momento, debe comprender los principales bloques de creación de la escena que comprende el tiempo de ejecución y el SDK. La mayor parte de la eficacia y la complejidad radica en los patrones de acceso, la interacción con Marcos 3D y las herramientas que se pueden escribir sobre estas API para realizar tareas más avanzadas, como la planeación espacial, el análisis de salas, la navegación, la física, etc. Esperamos que se capturen en ejemplos que deberían ser de esperar en la dirección adecuada para que los escenarios se muestren. Si hay ejemplos/escenarios que no abordamos, háganoslo saber e intentaremos documentar o crear prototipos de lo que necesita.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-* [asignación espacial](spatial-mapping.md)
+* [Asignación espacial](spatial-mapping.md)
+* [Descripción de escenas](scene-understanding.md)

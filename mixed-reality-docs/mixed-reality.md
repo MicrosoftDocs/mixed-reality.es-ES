@@ -6,26 +6,49 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mixed reality, Holographic, ar, VR, Mr, XR, realidad aumentada, realidad virtual, explicación
-ms.openlocfilehash: fbac8176b36cf28673dd9633cc059e5856a50296
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 83beca8b6abad56fc37800ddfc9faad0d21859bf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67326311"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437876"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es la realidad mixta?
 
-La realidad mixta es el resultado de mezclar el mundo físico con el mundo digital. La realidad mixta es la siguiente evolución en la interacción de los usuarios, equipos y entornos, y desbloquea las posibilidades de que antes ahora se limitaran a nuestras imaginacións. Es posible gracias a los avances en Computer Vision, la potencia de procesamiento gráfico, la tecnología de pantalla y los sistemas de entrada. El término *Mixed Reality* se presentó originalmente en un papel de 1994 de Paul Milgram y Fumio Kishino, "se[muestra una taxonomía de la realidad visual de la realidad mixta](http://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". En este documento se ha introducido el concepto de *continuum*de virtualización y se ha centrado en cómo se muestra la categorización de la taxonomía aplicada. Desde entonces, la aplicación de realidad mixta va más allá de las pantallas. También incluye la entrada del entorno, el sonido espacial y la ubicación.
+La realidad mixta es el resultado de fusionar el mundo físico con el mundo digital. La realidad mixta es el siguiente paso evolutivo en la interacción del ser humano, los equipos y el entornos. Ofrece posibilidades que antes solo eran posibles en nuestra imaginación. Es posible gracias a los avances en Computer Vision, la potencia de procesamiento gráfico, la tecnología de pantalla y los sistemas de entrada. El término *Mixed Reality* se presentó originalmente en un papel de 1994 de Paul Milgram y Fumio Kishino, "se[muestra una taxonomía de la realidad visual de la realidad mixta](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". En este documento se ha introducido el concepto de *continuum de virtualización*y se ha centrado en cómo se muestra la categorización de la taxonomía aplicada. Desde entonces, la aplicación de realidad mixta va más allá de las pantallas. También incluye la entrada del entorno, el sonido espacial y la ubicación.
+
+![el espectro de realidad mixta](images/MixedRealitySpectrum-worlds.jpg)<br>
+*La realidad mixta es el resultado de mezclar el mundo físico con el mundo digital.*
+
+<br>
+
+---
 
 ## <a name="environmental-input-and-perception"></a>Entrada y percepción del entorno
 
-![Diagrama de Venn que muestra las interacciones entre equipos, seres humanos y entornos](images/mixed-reality-venn-diagram-300px.png)<br> 
-
 En las últimas décadas, la relación entre la entrada del equipo y el usuario se ha explorado bien. Incluso tiene una disciplina muy estudiada conocida como *interacción del equipo humano* o HCl. La entrada humana se realiza a través de una gran variedad de medios, como teclados, ratones, toque, tinta, voz e incluso seguimiento del esqueleto de Kinect.
 
-Los avances en los sensores y el procesamiento dan lugar a una nueva área de entrada del equipo desde los entornos. La interacción entre equipos y entornos es realmente una comprensión o *percepción*del entorno. Por lo tanto, los nombres de API de Windows que revelan información del entorno se denominan [API de percepción](https://docs.microsoft.com/uwp/api/Windows.Perception). La entrada de entorno captura elementos como la posición de una persona en el mundo (por ejemplo, el [seguimiento](coordinate-systems.md)de los cabezales), las superficies y los límites (por ejemplo, [asignación espacial](spatial-mapping.md) y [comprensión espacial](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)), iluminación ambiente, sonido ambiental, objeto reconocimiento y ubicación.
+Los avances en los sensores y el procesamiento dan lugar a una nueva área de entrada del equipo desde los entornos. La interacción entre equipos y entornos es realmente una comprensión o *percepción*del entorno. Por lo tanto, los nombres de API de Windows que revelan información del entorno se denominan [API de percepción](https://docs.microsoft.com/uwp/api/Windows.Perception). La entrada del entorno captura elementos como la posición de una persona en el mundo (por ejemplo, el seguimiento de los [cabezales](coordinate-systems.md)), las superficies y los límites (por ejemplo, la [asignación espacial](spatial-mapping.md) y el conocimiento de la [escena](scene-understanding.md)), la iluminación ambiente, el sonido ambiental, el reconocimiento de objetos, y ubicación.
 
-Ahora, la combinación de los datos de procesamiento, entrada humana e información del entorno de tres equipos establece la oportunidad de crear verdaderas experiencias de realidad mixta. El movimiento a través del mundo físico puede traducirse al movimiento en el mundo digital. Los límites del mundo físico pueden influir en las experiencias de la aplicación, como la reproducción de juegos, en el mundo digital. Sin la intervención del entorno, las experiencias no pueden mezclar entre realidad real y digital.
+<br>
+
+
+
+:::row:::
+    :::column:::
+        Ahora, la combinación de los**datos de procesamiento, entrada humana e información del entorno**de tres equipos establece la oportunidad de crear verdaderas experiencias de realidad mixta. El movimiento a través del mundo físico puede traducirse al movimiento en el mundo digital. Los límites del mundo físico pueden influir en las experiencias de la aplicación, como la reproducción de juegos, en el mundo digital. Sin la intervención del entorno, las experiencias no pueden mezclar entre realidad real y digital.<br>
+        <br>
+        *Imagen: las interacciones entre equipos, seres humanos y entornos.*
+    :::column-end:::
+        :::column:::
+       ![Diagrama de Venn que muestra las interacciones entre equipos, seres humanos y entornos](images/mixed-reality-venn-diagram-300px.png)<br> 
+    :::column-end:::
+:::row-end:::
+
+<br>
+
+---
+
 
 ## <a name="the-mixed-reality-spectrum"></a>El espectro de realidad mixta
 
@@ -33,18 +56,32 @@ Dado que la realidad mixta mezcla los mundos físicos y digitales, estos dos hec
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/_xpI0JosYUk]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/_xpI0JosYUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+### <a name="augmented-vs-virtual-reality"></a>Aumento frente a realidad virtual
 
 La mayoría de los teléfonos móviles del mercado hoy en día tienen poca o ninguna funcionalidad de comprensión medioambiental. Por lo tanto, las experiencias que ofrecen no pueden combinarse entre realidad física y digital. Las experiencias que superponen los gráficos en las secuencias de vídeo del mundo físico son la *realidad aumentada*. Las experiencias que tapaba la vista para presentar una experiencia digital son la *realidad virtual*. Como puede ver, las experiencias habilitadas entre estos dos extremos son de *realidad mixta*:
 * A partir del mundo físico, colocar un objeto digital, como un holograma, como si estuviera realmente ahí.
 * A partir del mundo físico, una representación digital de otra persona, un avatar, muestra la ubicación en la que estaban de pie al pasar notas. En otras palabras, experiencias que representan la colaboración asincrónica en distintos momentos en el tiempo.
 * A partir de un mundo digital, los límites físicos del mundo físico, como las paredes y el mobiliario, aparecen de forma digital dentro de la experiencia para ayudar a los usuarios a evitar objetos físicos.
 
-![El espectro de realidad mixta](images/mixed-reality-spectrum-550px.png)
+
+<br>
+
+![el espectro de realidad mixta](images/MixedRealitySpectrum.jpg)<br>
+*Specturm de realidad mixta*
+
+<br>
 
 Hoy en día, la realidad más aumentada y las ofertas de realidad virtual representan una parte muy pequeña de este espectro. Sin embargo, son subconjuntos del espectro de realidad mixta más grande. Windows 10 se ha creado pensando en todo el espectro y permite mezclar representaciones digitales de personas, lugares y cosas con el mundo real.
 
-![Tipos de dispositivos en el espectro de realidad mixta](images/mixed-reality-spectrum-device-types-550px.png)
+
+
+
+## <a name="devices-and-experiences"></a>Dispositivos y experiencias
+
 
 Hay dos tipos principales de dispositivos que proporcionan experiencias de Windows Mixed Reality:
 1. **Dispositivos holográficas.** Se caracterizan por la capacidad del dispositivo de colocar contenido digital en el mundo real como si estuviera en realidad.
@@ -64,11 +101,13 @@ Hay dos tipos principales de dispositivos que proporcionan experiencias de Windo
 
 Tenga en cuenta que si un dispositivo está conectado o acoplado a un equipo independiente (a través de un cable USB o Wi-Fi) o autónomo (untethered), no refleja si un dispositivo es Holographic o envolvente. Ciertamente, las características que mejoran la movilidad conducen a mejores experiencias y los dispositivos holográficas y envolventes podrían estar anclados o untethered.
 
-## <a name="devices-and-experiences"></a>Dispositivos y experiencias
 
 El avance tecnológico es lo que ha habilitado experiencias de realidad mixta. Actualmente no hay ningún dispositivo que pueda ejecutar experiencias en todo el espectro. Sin embargo, Windows 10 proporciona una plataforma de realidad mixta común para los desarrolladores y los fabricantes de dispositivos. Los dispositivos de hoy en día pueden admitir un intervalo específico dentro del espectro de realidad mixta. Con el tiempo, los nuevos dispositivos expandirán ese intervalo. En el futuro, los dispositivos holográficas serán más envolventes y los dispositivos envolventes serán más holográficas.
 
-![Dónde se encuentran los dispositivos en el espectro de realidad mixta](images/mixed-reality-spectrum-device-placement-550px.png)
+<br>
+
+![tipos de dispositivo en el espectro de realidad mixta](images/MixedRealitySpectrum-devices.jpg)<br>
+*Dónde existen los dispositivos en el espectro de realidad mixta*
 
 A menudo, es mejor pensar en qué tipo de experiencia desea crear una aplicación o un desarrollador de juegos. Las experiencias normalmente se destinan a un punto o parte específicos del espectro. Después, los desarrolladores deben tener en cuenta las capacidades de los dispositivos a los que desean dirigirse. Por ejemplo, las experiencias que dependen del mundo físico se ejecutarán mejor en HoloLens.
 * **Hacia la izquierda (la realidad casi física).** Los usuarios permanecen presentes en su entorno físico y nunca se crean para creer que han dejado ese entorno.
@@ -76,7 +115,10 @@ A menudo, es mejor pensar en qué tipo de experiencia desea crear una aplicació
 * **Hacia la derecha (casi digital reality).** Los usuarios experimentan un entorno completamente digital y no saben lo que ocurre en el entorno físico.
 
 
-## <a name="see-also"></a>Vea también
-* [Referencia de API: Windows. percepción](https://docs.microsoft.com/uwp/api/Windows.Perception)
-* [Referencia de API: Windows. percepción. espacial](https://docs.microsoft.com/uwp/api/Windows.Perception.Spatial)
-* [Referencia de API: Windows. Perception. Spatial. Surfaces](https://docs.microsoft.com/uwp/api/Windows.Perception.Spatial.Surfaces)
+## <a name="see-also"></a>Consulta también
+
+* [¿Qué es un holograma?](hologram.md)
+* [Descripción de los conceptos básicos de la realidad mixta](index.md#understand-the-basics)
+* [Empezar a crear y crear prototipos](design.md)
+* [Conozca las herramientas y la arquitectura](development.md)
+

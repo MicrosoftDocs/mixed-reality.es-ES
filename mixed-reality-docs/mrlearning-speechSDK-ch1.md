@@ -6,14 +6,14 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: a6367a1be1bcaeab911b925641dbb3a66998c2dc
-ms.sourcegitcommit: 599bbdd861ce6ff11b6cfb345a0a995f8b7bf85b
+ms.openlocfilehash: 4baef90f8e00e5da1063c708ae24d2057e0dc227
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68977990"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438376"
 ---
-# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integración y uso del reconocimiento de voz y la transcripción
+# <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. integración y uso del reconocimiento de voz y la transcripción
 
 En este tutorial se crea una aplicación de realidad mixta que explora el uso de Azure Cognitive Services Speech SDK con HoloLens 2. Una vez finalizada esta serie de tutoriales, podrá usar el micrófono del dispositivo para transcribir voz en texto en tiempo real, traducir su voz en otros idiomas y aprovechar la característica de intención del SDK de Speech para comprender los comandos de voz con inteligencia artificial.
 
@@ -25,7 +25,7 @@ En este tutorial se crea una aplicación de realidad mixta que explora el uso de
 
 ## <a name="instructions"></a>Instrucciones
 
-### <a name="getting-started"></a>Introducción
+### <a name="getting-started"></a>Tareas iniciales
 
 1. Inicie Unity y cree un nuevo proyecto. Escriba el nombre del proyecto de Speech SDK Learning Module. Elija una ubicación donde guardar el proyecto. A continuación, haga clic en crear proyecto.
 
@@ -96,7 +96,7 @@ En este tutorial se crea una aplicación de realidad mixta que explora el uso de
 
 ![Module4Chapter1step13im](images/module4chapter1step13im.PNG)
 
-17. Para conectar la aplicación a Azure Cognitive Services, debe especificar una clave de suscripción (también conocida como clave de API) para el servicio de voz. Siga las instrucciones que se indican [aquí](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started) para obtener una clave de suscripción gratuita. Una vez que obtenga la clave de suscripción, escríbala en el campo clave de la API del servicio de voz del componente LunarcomController en el panel Inspector, tal como se muestra en la imagen siguiente.
+17. Para conectar la aplicación a Azure Cognitive Services, debe especificar una clave de suscripción (también conocida como clave de API) para el servicio de voz. Siga las instrucciones que se indican [aquí](https://docs.microsoft.com//azure/cognitive-services/speech-service/get-started) para obtener una clave de suscripción gratuita. Una vez que obtenga la clave de suscripción, escríbala en el campo clave de la API del servicio de voz del componente LunarcomController en el panel Inspector, tal como se muestra en la imagen siguiente.
 
 18. Escriba la región que eligió al suscribirse a la clave de suscripción en el campo región del servicio de voz del componente LunarcomController del panel Inspector. Por ejemplo, para la región "oeste de EE. UU.", escriba "westus"
 
@@ -143,18 +143,18 @@ En este tutorial se crea una aplicación de realidad mixta que explora el uso de
 
 ![Lesson1 Chapter5 Paso4](images/Lesson1Chapter5Step4.JPG)
 
-> Nota: Si se produce un error en la compilación, intenta volver a compilar o reinicia Unity y vuelve a compilar. Si ves un error como "Error: CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?)" [Error: CS0246 = No se encontró el nombre de tipo o de espacio de nombres "XX" (¿te falta una directiva de uso o una referencia de ensamblado?)", es posible que debas instalar [Windows 10 SDK (10.0.18362.0)](<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>)]
+> Nota: si se produce un error en la compilación, intente compilar de nuevo o reiniciar Unity y compilar de nuevo. Si ve un error como "error: CS0246 = no se encontró el tipo o el nombre de espacio de nombres" XX "(¿falta una directiva using o una referencia de ensamblado?)", es posible que deba instalar el [SDK de Windows 10 (10.0.18362.0)](<https://developer.microsoft.com//windows/downloads/windows-10-sdk>)
 
 7. Una vez finalizada la compilación, abre la carpeta recién creada que contiene los archivos de la aplicación que acabas de crear. Haga doble clic en el archivo de solución ". sln" para abrir el archivo de solución en Visual Studio.
 
-> Nota: Asegúrate de abrir la carpeta recién creada [es decir, la carpeta "App" (Aplicaciones), si ha seguido las convenciones de nomenclatura de los pasos anteriores], ya que habrá un archivo .sln con el mismo nombre fuera de esa carpeta que no debes confundir con el archivo .sln dentro de la carpeta de compilación. 
+> Nota: Asegúrese de abrir la carpeta recién creada (es decir, la carpeta "app", si sigue las convenciones de nomenclatura de los pasos anteriores), ya que habrá un archivo. sln con el nombre similar fuera de esa carpeta que no debe confundirse con el archivo. sln dentro de la carpeta de compilación. 
 
 ![Lección 1, capítulo 5, paso 5](images/Lesson1Chapter5Step5.JPG)
 
-> Nota: Si Visual Studio te pide que instales nuevos componentes, dedica un momento a comprobar que todos los componentes de requisitos previos estén instalados, tal como se especifica en la [página "Instalación de las herramientas"](install-the-tools.md).
+> Nota: Si Visual Studio le pide que instale nuevos componentes, dedique un momento a asegurarse de que todos los componentes necesarios se instalan como se especifica en [la página "instalar las herramientas"](install-the-tools.md) .
 
-8. Conecta HoloLens 2 a tu equipo con el cable USB. Aunque en estas instrucciones de la lección se supone que vas a implementar una prueba con un dispositivo HoloLens 2, también puedes optar por realizar la implementación en el [emulador de HoloLens 2](using-the-hololens-emulator.md) o decidir crear un [paquete de la aplicación para una transferencia local](<https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps>).
-9. Antes de compilar en el dispositivo, comprueba que el dispositivo está en modo de desarrollador. Si es la primera vez que estás realizando una implementación en HoloLens 2, Visual Studio puede pedirte que emparejes HoloLens 2 con un PIN. Sigue [estas instrucciones](https://docs.microsoft.com/en-us/windows/mixed-reality/using-visual-studio) si tienes que habilitar el modo de desarrollador o emparejar con Visual Studio.
+8. Conecta HoloLens 2 a tu equipo con el cable USB. Aunque en estas instrucciones de la lección se supone que vas a implementar una prueba con un dispositivo HoloLens 2, también puedes optar por realizar la implementación en el [emulador de HoloLens 2](using-the-hololens-emulator.md) o decidir crear un [paquete de la aplicación para una transferencia local](<https://docs.microsoft.com//windows/uwp/packaging/packaging-uwp-apps>).
+9. Antes de compilar en el dispositivo, comprueba que el dispositivo está en modo de desarrollador. Si es la primera vez que estás realizando una implementación en HoloLens 2, Visual Studio puede pedirte que emparejes HoloLens 2 con un PIN. Sigue [estas instrucciones](https://docs.microsoft.com//windows/mixed-reality/using-visual-studio) si tienes que habilitar el modo de desarrollador o emparejar con Visual Studio.
 
 10. Configura Visual Studio para compilar HoloLens 2 seleccionando la configuración "Release" (Liberar) y la arquitectura "ARM".
 
@@ -168,5 +168,5 @@ En este tutorial se crea una aplicación de realidad mixta que explora el uso de
 
 Ha configurado el reconocimiento de voz en la aplicación, con la tecnología de Azure. Ejecute la aplicación para asegurarse de que todas las funciones y características funcionan correctamente. Empiece por decir la palabra de reactivación que escribió en el paso 22, activar terminal. Seleccione el botón micrófono para iniciar el reconocimiento de voz. Empiece a hablar. Verá las palabras transformadas en el terminal mientras habla. Presione el botón micrófono una segunda vez para detener el reconocimiento de voz. Por ejemplo, descartar terminal para ocultar el terminal Lunarcom. En la lección siguiente, veremos cómo cambiar dinámicamente al uso del reconocimiento de voz basado en dispositivos en situaciones en las que el SDK de voz de Azure no está disponible debido a que HoloLens 2 está sin conexión.
 
-[Siguiente tutorial: 2. Adición de un modo sin conexión para la traducción de voz a texto local](mrlearning-speechSDK-ch2.md)
+[Siguiente tutorial: 2. agregar un modo sin conexión para la traducción de voz a texto local](mrlearning-speechSDK-ch2.md)
 

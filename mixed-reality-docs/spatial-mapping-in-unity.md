@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, asignación espacial, representador, Colisionador, malla, exploración, componente
-ms.openlocfilehash: 8f7bad1651ab31b2e83ad9d9c8f465547fbbdc5a
-ms.sourcegitcommit: 2f600e5ad00cd447b180b0f89192b4b9d86bbc7e
+ms.openlocfilehash: 452e629a877df585ffbc0a6466ffeb2588b66ecf
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148649"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438033"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
@@ -22,6 +22,29 @@ Unity incluye compatibilidad total con la asignación espacial, que se expone a 
 2. API de asignación espacial de nivel inferior, que proporcionan control total y permiten una personalización específica de la aplicación más sofisticada.
 
 Para usar la asignación espacial en la aplicación, debe establecerse la funcionalidad spatialPerception en el AppxManifest.
+
+## <a name="device-support"></a>Compatibilidad con dispositivos
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Ofrecen</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
+    </tr>
+     <tr>
+        <td>Asignación espacial</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="setting-the-spatialperception-capability"></a>Establecimiento de la funcionalidad SpatialPerception
 
@@ -41,7 +64,7 @@ La asignación espacial también requiere un MaxVersionTested de al menos 10.0.1
 
 ## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introducción a los componentes de asignación espacial integrados de Unity
 
-Unity ofrece 2 componentes para agregar fácilmente la asignación espacial a la aplicación, el representador de **asignación espacial** y el Colisionador de **asignación espacial**.
+Unity ofrece 2 componentes para agregar fácilmente la asignación espacial a la aplicación, el **representador de asignación espacial** y el **Colisionador de asignación espacial**.
 
 ### <a name="spatial-mapping-renderer"></a>Representador de asignación espacial
 
@@ -61,7 +84,7 @@ Puede Agregar ambos componentes a la aplicación si desea visualizar y interactu
 
 Para usar estos dos componentes en la aplicación de Unity:
 1. Seleccione un GameObject en el centro del área en la que desea detectar mallas de superficie espacial.
-2. En la ventana del inspector, **agregue el elemento** > Colisionador de**asignación espacial** del componente**XR** > o el representador de **asignación espacial**.
+2. En la ventana del inspector **, agregue el componente** > **XR** > **colisionador de asignación espacial** o el **representador de asignación espacial**.
 
 Puede encontrar más detalles sobre cómo usar estos componentes en el sitio de <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentación de Unity</a>.
 
@@ -75,7 +98,7 @@ Estos componentes facilitan la tarea de arrastrar y colocar para empezar a traba
 
 Si necesita más control de los que obtiene del representador de asignación espacial y los componentes de Colisionador de asignación espacial, puede usar las API de script de asignación espacial de bajo nivel.
 
-**System.IO** *UnityEngine. XR. WSA*<br>
+**Espacio de nombres:** *UnityEngine. XR. WSA*<br>
 **Tipos**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*
 
 A continuación se describe el flujo sugerido para una aplicación que usa las API de asignación espacial.
@@ -239,7 +262,7 @@ Internamente, el Raycast se calcula con la representación calculada de 8cm con 
 
 En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma. En primer lugar, con los colisionadores de Unity. En segundo lugar, en la representación mundial del módulo de comprensión. Y, por último, los elementos de la interfaz de usuario. En esta aplicación, la interfaz de usuario obtiene prioridad, después del resultado de comprensión y, por último, los colisionadores de Unity. El SurfaceType se muestra como texto junto al cursor.
 
-![El tipo de superficie se etiqueta junto al cursor](images/su-raycastresults-300px.jpg)<br>
+![tipo de superficie se etiqueta junto al cursor](images/su-raycastresults-300px.jpg)<br>
 *El tipo de superficie se etiqueta junto al cursor*
 
 ### <a name="topology-queries"></a>Consultas de topología
@@ -324,7 +347,7 @@ shapeConstraints = new List<ShapeConstraint>()
 
 Las funciones de contenedor se proporcionan en el módulo Unity para facilitar la creación de definiciones de formas personalizadas. La lista completa de restricciones de componente y forma se puede encontrar en "SpatialUnderstandingDll.cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".
 
-![La forma de rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)<br>
+![forma rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)<br>
 *La forma de rectángulo se encuentra en esta superficie*
 
 ### <a name="object-placement-solver"></a>Selección de ubicación de objetos
@@ -395,8 +418,8 @@ Solver_PlaceObject(
 
 Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación. Además, la selección de ubicación se agrega a la lista interna de objetos colocados del archivo dll. Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto. El archivo "LevelSolver.cs" del ejemplo de Unity contiene más consultas de ejemplo.
 
-![Resultados de la colocación del objeto](images/su-objectplacement-1000px.jpg)<br>
-*Figura 3: Los cuadros azules de cómo se realiza el resultado de tres consultas en planta con respecto a las reglas de posición de la cámara*
+![resultados de la colocación de objetos](images/su-objectplacement-1000px.jpg)<br>
+*Figura 3: los cuadros azules del resultado de tres consultas en planta con respecto a las reglas de posición de la cámara*
 
 En la resolución de ubicación de varios objetos necesarios para un escenario de nivel o aplicación, primero se resuelven objetos grandes e indispensables con el fin de maximizar la probabilidad de que se pueda encontrar un espacio. El orden de la ubicación es importante. Si no se encuentran colocaciones de objeto, pruebe con menos configuraciones restringidas. Tener un conjunto de configuraciones de reserva es fundamental para admitir la funcionalidad en muchas configuraciones de salón.
 
@@ -444,21 +467,21 @@ El flujo de análisis, controlado por el comportamiento "SpatialUnderstanding" l
 
 La dll de comprensión almacena internamente el Playspace como una cuadrícula de cubos voxel de 8cm de tamaño. Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la habitación. Internamente, almacena su espacio voxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie del volumen voxel. 
 
-![Malla generada generada a partir del volumen voxel](images/su-custommesh.jpg)<br>
+![malla generada producida a partir del volumen voxel](images/su-custommesh.jpg)<br>
 *Malla generada generada a partir del volumen voxel*
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>de solución de problemas
 * Asegúrese de que ha establecido la funcionalidad [SpatialPerception](#setting-the-spatialperception-capability)
 * Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en el kit de herramientas de realidad mixta
 Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
 
-## <a name="see-also"></a>Vea también
-* [MR Spatial 230: asignación espacial](holograms-230.md)
+## <a name="see-also"></a>Consulta también
+* [MR espacial 230: asignación espacial](holograms-230.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
-* <a href="http://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
-* <a href="http://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a>
+* <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a>
+* <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a>

@@ -1,17 +1,17 @@
 ---
 title: Comandos de voz
 description: Mirada, gesto y voz (GGV) son el medio principal de interacción en HoloLens. Este artículo proporciona información detallada sobre el diseño de voz.
-author: shentan
+author: shengkait
 ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interaction, voice
-ms.openlocfilehash: 724ef87dae1c731289af51504a518193c20b7d96
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: bfcaef787b22f17da9627a53c92c43f5cb1e1d9b
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387645"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437218"
 ---
 # <a name="voice-commanding"></a>Comandos de voz
 
@@ -28,9 +28,9 @@ Al utilizar los comandos de voz, la mirada se utiliza normalmente como un mecani
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
@@ -47,13 +47,13 @@ Al utilizar los comandos de voz, la mirada se utiliza normalmente como un mecani
 
 Considera la posibilidad de agregar comandos de voz a cualquier experiencia que compiles. La voz es una manera eficaz y cómoda de controlar el sistema y las aplicaciones. Dado que los usuarios hablan con variantes regionales y acentos diversos, la opción adecuada de palabras clave de voz asegurará que los comandos de los usuarios se interpretan de forma inequívoca.
 
-### <a name="best-practices"></a>Procedimientos recomendados
+### <a name="best-practices"></a>Procedimiento recomendado
 
 A continuación se muestran algunas prácticas que te ayudarán a realizar sin problemas las tareas de reconocimiento de voz.
-* **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "Reproducir vídeo" es mejor que "Reproducir el vídeo seleccionado actualmente"
-* **Usa un vocabulario sencillo**: por ejemplo, "Mostrar nota" es mejor que "Mostrar letrero"
+* **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "reproducir vídeo" es mejor que "reproducir el vídeo seleccionado actualmente"
+* **Usar vocabulario simple** : por ejemplo, "show Note" es mejor que "show letrero"
 * **Asegúrate de que los comandos no sean destructivos**: haz que cualquier acción que se puede realizar mediante un comando de voz no sea destructiva, y se pueda deshacer fácilmente, en caso de que otra persona que esté hablando cerca del usuario pueda desencadenar accidentalmente un comando.
-* **Evita los comandos que tengan un sonido similar**: evita registrar varios comandos de voz que suenen de forma parecida. Ejemplo: "Mostrar más" y "Mostrar atrás" pueden sonar muy parecido.
+* **Evita los comandos que tengan un sonido similar**: evita registrar varios comandos de voz que suenen de forma parecida. Ejemplo: "Mostrar más" y "Mostrar tienda" puede ser un sonido muy similar.
 * **Anula el registro de la aplicación cuando no esté en uso**: cuando la aplicación no está en un estado en el que un comando de voz determinado es válido, considera la posibilidad de anular el registro de modo que otros comandos no se confundan con ese.
 * **Prueba con diferentes acentos**: prueba la aplicación con usuarios con diferentes acentos.
 * **Mantén la coherencia en los comandos de voz**: si "Volver" va a la página anterior, mantén este comportamiento en tus aplicaciones.
@@ -65,7 +65,7 @@ A continuación se muestran algunas prácticas que te ayudarán a realizar sin p
 
 Decir "seleccionar" en cualquier momento activará aquello a lo que está apuntando el cursor de mirada. 
 
->Nota: En HoloLens 2, el cursor de mirada tiene que invocarse primero diciendo la palabra "seleccionar". Vuelve a decir "seleccionar" para activar. Para ocultar el cursor de mirada, utiliza las manos, pulsa en el aire o toca un objeto. 
+>Nota: en HoloLens 2, el cursor de miración debe invocarse primero indicando la palabra "Select". Vuelve a decir "seleccionar" para activar. Para ocultar el cursor de mirada, utiliza las manos, pulsa en el aire o toca un objeto. 
 
 ### <a name="see-it-say-it"></a>Verlo, decirlo
 
@@ -113,6 +113,6 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 * ¿Cómo dirijo mi voz a una aplicación o un comando de la aplicación específicos?
 * ¿Puedo usar la voz para comandar cosas en el marco holográfico en HoloLens?
 
-## <a name="see-also"></a>Vea también
-* [Gestos](gestures.md)
+## <a name="see-also"></a>Consulta también
+* [Gestos](gaze-and-commit.md#composite-gestures)
 * [Control con la cabeza y permanencia](gaze-and-dwell.md)

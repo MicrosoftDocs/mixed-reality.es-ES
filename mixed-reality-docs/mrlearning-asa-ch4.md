@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b29f27284c352d27fb1d4d4de701a1ebc2a7cd1c
-ms.sourcegitcommit: 30246ab9b9be44a3c707061753e53d4bf401eb6b
+ms.openlocfilehash: 141aa90f2bf5d90527a0fe1e6a812c1ce56bd0eb
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67327292"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437794"
 ---
 # <a name="photon-correct-me-if-im-wrong"></a>Photon (corregir si soy mal)
 
@@ -29,7 +29,7 @@ Objetivos
 
 ### <a name="setting-up-photon"></a>Configuración de Photon
 
-1. Configure una cuenta de [Photon](https://dashboard.photonengine.com/en-US/Account/SignUp) . Esto consistirá en imputar el correo electrónico y seguir algunos pasos de comprobación.
+1. Configure una cuenta de [Photon](https://dashboard.photonengine.com//Account/SignUp) . Esto consistirá en imputar el correo electrónico y seguir algunos pasos de comprobación.
    
 
 ![Module2Chapter4step1im](images/Module2chapter4step1im.png)
@@ -86,7 +86,7 @@ Objetivos
 
 9. Cree un nuevo proyecto de Unity. Abra Unity Hub y haga clic en "nuevo". Asígnele el nombre "HLSharingProject". A continuación, haga clic en crear. 
 
-   > Tenga en cuenta Esto puede tardar hasta 2 minutos en cargarse, en función de la velocidad del equipo.
+   > Nota: esto puede tardar hasta 2 minutos en cargarse, en función de la velocidad del equipo.
 
 ![Module2Chapter4step9im](images/Module2chapter4step9im.png)
 
@@ -140,7 +140,7 @@ Objetivos
 
 ![Module2Chapter4step19im](images/Module2chapter4step19im.png)
 
-> Tenga en cuenta Asegúrese también de que la casilla situada junto a "Scenes/HLSharedProjectMain" también está activada.
+> Nota: Asegúrese también de que la casilla situada junto a "Scenes/HLSharedProjectMain" también está activada.
 
 20. En "configuración de publicación" en el panel de inspectores, desplácese hacia abajo hasta "capacidades" y asegúrese de que solo están marcadas las siguientes casillas:
 
@@ -148,7 +148,7 @@ Objetivos
 - servidor de cliente de Internet
 - servidor cliente de red privada
 - cámara o cámara web
-- Micrófono
+- micrófono
 
 21. Al igual que el paso 12, el paso siguiente sería importar otro paquete personalizado llamado "Lesson2", que se puede descargar [aquí.] [lesson2. unitypackage Tools vínculo va aquí] Importe ese paquete.
 
@@ -158,7 +158,7 @@ Objetivos
 
 ![Module2Chapter4step22im](images/Module2chapter4step21im.PNG)
 
-> Tenga en cuenta Es posible que observe que aparece una ventana emergente al hacer clic en el recurso prefabricado, donde se le pregunta sobre TMP Essentials. Haga clic en "importar TMP Essentials", ya que se necesitarán.
+> Nota: es posible que observe que aparece una ventana emergente al hacer clic en el recurso prefabricado, donde se le pregunta sobre TMP Essentials. Haga clic en "importar TMP Essentials", ya que se necesitarán.
 >
 > ![Module2Chapter4note3im](images/Module2chapter4note3im.PNG)
 

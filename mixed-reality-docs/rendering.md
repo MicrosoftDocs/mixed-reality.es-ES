@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: representación, holograma
-ms.openlocfilehash: 45713fd7a30fc55a799da7e89ef52aff8f7eec46
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: a974b9d8a00713c28c27963a9f96379693db9b60
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67415415"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437525"
 ---
 # <a name="rendering"></a>Representación
 
@@ -27,9 +27,9 @@ La representación holográfica permite a la aplicación dibujar un holograma en
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
@@ -66,7 +66,7 @@ En el caso de las aplicaciones que no se pueden representar con la frecuencia de
 
 El frustum de representación, la resolución y la velocidad de fotogramas en la que se solicita la representación de la aplicación también pueden cambiar de un marco a otro y pueden diferir en el ojo izquierdo y derecho. Por ejemplo, cuando la [captura de realidad mixta](mixed-reality-capture.md) (MRC) está activa y la configuración de la [vista de cámara de foto/vídeo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) no se ha incorporado, un ojo podría representarse con un gran tamaño o resolución.
 
-Para cualquier fotograma determinado, la aplicación *debe* representarse mediante la transformación de la vista, la transformación de la proyección y la resolución de la ventanilla proporcionada por el sistema. Además, la aplicación nunca debe asumir que cualquier parámetro de representación o vista permanece fijo de fotograma a fotograma. Los motores como Unity controlan todas estas transformaciones en sus propios objetos de cámara, de modo que siempre se respeta el movimiento físico de los usuarios y el estado del sistema. Si la aplicación permite el movimiento virtual del usuario a través del mundo (por ejemplo, con el stick analógico en un controlador de juegos), puede Agregar un objeto de plataforma de control principal encima de la cámara que lo mueve. Esto hace que la cámara refleje el movimiento virtual y físico del usuario. Si la aplicación modifica la transformación de la vista, la transformación de proyección o la dimensión de ventanilla proporcionada por el sistema, debe informar al sistema mediante una llamada a la [API](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicCameraPose#Windows_Graphics_Holographic_HolographicCameraPose)de invalidación adecuada.
+Para cualquier fotograma determinado, la aplicación *debe* representarse mediante la transformación de la vista, la transformación de la proyección y la resolución de la ventanilla proporcionada por el sistema. Además, la aplicación nunca debe asumir que cualquier parámetro de representación o vista permanece fijo de fotograma a fotograma. Los motores como Unity controlan todas estas transformaciones en sus propios objetos de cámara, de modo que siempre se respeta el movimiento físico de los usuarios y el estado del sistema. Si la aplicación permite el movimiento virtual del usuario a través del mundo (por ejemplo, con el stick analógico en un controlador de juegos), puede Agregar un objeto de plataforma de control principal encima de la cámara que lo mueve. Esto hace que la cámara refleje el movimiento virtual y físico del usuario. Si la aplicación modifica la transformación de la vista, la transformación de proyección o la dimensión de ventanilla proporcionada por el sistema, debe informar al sistema mediante una llamada a la [API de invalidación](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicCameraPose#Windows_Graphics_Holographic_HolographicCameraPose)adecuada.
 
 Para mejorar la estabilidad de la representación holográfica, la aplicación debe proporcionar a Windows cada fotograma el búfer de profundidad que se usa para la representación. Si la aplicación proporciona un búfer de profundidad, debe tener valores de profundidad coherentes, con una profundidad expresada en metros de la cámara. Esto permite que el sistema use los datos de profundidad por píxel para estabilizar mejor el contenido si el encabezado del usuario termina ligeramente desplazado desde la ubicación de predicción. Si no puede proporcionar el búfer de profundidad, puede proporcionar un punto de enfoque y normal, y definir un plano que recorte la mayor parte del contenido. Si se proporcionan el búfer de profundidad y un plano de foco, el sistema podría usar ambos. En concreto, es útil proporcionar el búfer de profundidad y un punto de enfoque que incluye un vector de velocidad cuando la aplicación muestra hologramas que están en movimiento.
 
@@ -76,7 +76,7 @@ Consulte el artículo sobre [representación en DirectX](rendering-in-directx.md
 
 Windows Mixed Reality presenta el concepto de una **cámara holográfica**. Las cámaras holográficas son similares a la cámara tradicional que se encuentra en los textos de gráficos 3D: definen las propiedades extrínsecos (posición y orientación) y de cámara intrínseca. (Por ejemplo:, el campo de vista se usa para ver una escena 3D virtual). A diferencia de las cámaras 3D tradicionales, la aplicación no tiene el control de la posición, la orientación y las propiedades intrínsecas de la cámara. En su lugar, el movimiento del usuario controla implícitamente la posición y la orientación de la cámara holográfica. El movimiento del usuario se retransmite a la aplicación de forma fotograma a fotograma a través de una transformación de vista. Del mismo modo, las propiedades intrínsecas de la cámara se definen mediante los dispositivos ópticos calibrados del dispositivo y el marco por fotograma retransmitido a través de la transformación de proyección.
 
-En general, la aplicación se representará para una sola cámara estéreo. Sin embargo, un bucle de representación sólido será compatible con varias cámaras y admitirá cámaras mono y estéreo. Por ejemplo, el sistema puede pedir a la aplicación que se represente desde una perspectiva alternativa cuando el usuario activa una característica como [captura de realidad mixta](mixed-reality-capture.md) (MRC), dependiendo de la forma de los auriculares en cuestión. Las aplicaciones que pueden admitir varias cámaras las obtienen al [participar](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) en el [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de cámaras que pueden admitir.
+En general, la aplicación se representará para una sola cámara estéreo. Sin embargo, un bucle de representación sólido será compatible con varias cámaras y admitirá cámaras mono y estéreo. Por ejemplo, el sistema puede pedir a la aplicación que se represente desde una perspectiva alternativa cuando el usuario activa una característica como [captura de realidad mixta](mixed-reality-capture.md) (MRC), dependiendo de la forma de los auriculares en cuestión. Las aplicaciones que pueden admitir varias cámaras las obtienen al [participar en el](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de cámaras que pueden admitir.
 
 ## <a name="volume-rendering"></a>Representación de volumen
 
@@ -93,9 +93,9 @@ Al representar volúmenes médicos MRIs o de ingeniería en 3D, a menudo se util
 ## <a name="supported-resolutions-on-hololens-2"></a>Resoluciones admitidas en HoloLens 2
 
 > [!NOTE]
-> [Próximamente](index.md#news-and-notes) se ofrecerá orientación específica para HoloLens 2.
+> [Próximamente](news.md)se ofrecerá orientación específica para HoloLens 2.
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Estabilidad de hologramas](hologram-stability.md)
 * [Representación en DirectX](rendering-in-directx.md)

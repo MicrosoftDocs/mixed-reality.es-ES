@@ -1,21 +1,21 @@
 ---
 title: Color, Light y material
-description: El diseño de contenido para la realidad mixta requiere una consideración cuidadosa del color, la iluminación y los materiales de cada uno de los recursos visuales usados en su experiencia.
+description: El diseño de contenido para la realidad mixta requiere considerar con cautela el color, la iluminación y los materiales de cada uno de los recursos visuales que se usan en tu experiencia.
 author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, color, Light, material
-ms.openlocfilehash: bef0c8b63c109baa536e4192ce94919eb888faf2
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: c49d88c2bb53c07adcb77e8dbb0e3cd77e1e78ae
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896516"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436405"
 ---
 # <a name="color-light-and-materials"></a>Color, Light y material
 
-El diseño de contenido para la realidad mixta requiere una consideración cuidadosa del color, la iluminación y los materiales de cada uno de los recursos visuales usados en su experiencia. Estas decisiones pueden ser para fines estéticos, como usar la luz y el material para establecer el tono de un entorno envolvente y propósitos funcionales, como el uso de colores impactantes para alertar a los usuarios de una acción inminente. Cada una de estas decisiones se debe sopesar con respecto a las oportunidades y las restricciones del dispositivo de destino de su experiencia.
+El diseño de contenido para la realidad mixta requiere considerar con cautela el color, la iluminación y los materiales de cada uno de los recursos visuales que se usan en tu experiencia. Estas decisiones pueden ser para fines estéticos, como usar la luz y el material para establecer el tono de un entorno envolvente y propósitos funcionales, como el uso de colores impactantes para alertar a los usuarios de una acción inminente. Cada una de estas decisiones se debe sopesar con respecto a las oportunidades y las restricciones del dispositivo de destino de su experiencia.
 
 A continuación se muestran las instrucciones específicas para la representación de recursos en auriculares envolvente y holográfica. Muchos de ellos están estrechamente vinculados a otras áreas técnicas y se puede encontrar una lista de temas relacionados en la sección [Consulte también](color,-light-and-materials.md#see-also) al final de este artículo.
 
@@ -36,14 +36,14 @@ Debido a la naturaleza de las pantallas aditivas, algunos colores pueden aparece
 * **Gama** -HoloLens se beneficia de una "amplia gama" de color, conceptualmente similar a Adobe RGB. Como resultado, algunos colores pueden presentar cualidades y representaciones diferentes en el dispositivo.
 * **Gamma** : el brillo y el contraste de la imagen representada variarán entre dispositivos envolventes y holográficas. Estas diferencias de dispositivo suelen parecer que las áreas oscuras de color y de sombras son más o menos brillantes.
 * **Separación de colores** : también denominada "división de color" o "halo de color", la separación de colores suele producirse con los hologramas móviles (incluido el cursor) cuando un usuario realiza un seguimiento de los objetos con sus ojos.
-* Uniformidad de **color** : normalmente los hologramas se representan lo suficientemente brillantes como para mantener la uniformidad del color, independientemente del fondo. Es posible que las áreas de gran tamaño estén desfavorecidas. Evite grandes regiones de color sólido y brillante.
+* **Uniformidad de color** : normalmente los hologramas se representan lo suficientemente brillantes como para mantener la uniformidad del color, independientemente del fondo. Es posible que las áreas de gran tamaño estén desfavorecidas. Evite grandes regiones de color sólido y brillante.
 * **Colores claros de representación** : el blanco aparece muy brillante y debe usarse con moderación. En la mayoría de los casos, considere un valor blanco alrededor de R 235 G 235 B 235. Las áreas brillantes de gran tamaño pueden ocasionar la molestia del usuario.
 
 **Representación de colores oscuros**
 
 Debido a la naturaleza de las pantallas aditivas, los colores oscuros aparecen transparentes. Un objeto de negro sólido no será diferente del mundo real. Consulte canal alfa a continuación. Para dar la apariencia de "Black", pruebe un valor RGB gris muy oscuro como 16, 16, 16.
 
-![Gama de colores normal frente a ancho](images/640px-widegamut.png)<br>
+![gama de colores normal frente a ancho](images/640px-widegamut.png)<br>
 *Gama de colores normal frente a ancho*
 
 ## <a name="technical-considerations"></a>Consideraciones técnicas
@@ -54,13 +54,25 @@ Debido a la naturaleza de las pantallas aditivas, los colores oscuros aparecen t
 ## <a name="storytelling-with-light-and-color"></a>Contar historias con luz y color
 
 La luz y el color pueden ayudar a que los hologramas aparezcan de forma más natural en el entorno de un usuario, así como ofrecer orientación y ayuda para el usuario. En el caso de las experiencias holográficas, tenga en cuenta estos factores a medida que explora la iluminación y el color:
-* **Viñetas** : un efecto de ' viñetas ' para oscurecer materiales puede ayudar a centrar la atención del usuario en el centro del campo de la vista. Este efecto oscurece el material del holograma en algún radio desde el vector de mirada del usuario. Tenga en cuenta que esto también es efectivo cuando el usuario ve los hologramas de un ángulo oblicuo o glancing.
-* Recalque la atención de los objetos o puntos de interacción mediante el contraste de los colores, el brillo y la iluminación. Para obtener una visión más detallada de los métodos de iluminación de contar historias, consulte el cine de los [píxeles: un enfoque de iluminación para gráficos informáticos](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).
 
-![Uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de fragmentos.](images/640px-fragments.jpg)<br>
-*Uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
+:::row:::
+    :::column:::
+* **Viñetas** : un efecto de ' viñetas ' para oscurecer materiales puede ayudar a centrar la atención del usuario en el centro del campo de la vista. Este efecto oscurece el material del holograma en algún radio desde el vector de mirada del usuario. Tenga en cuenta que esto también es efectivo cuando el usuario ve los hologramas de un ángulo oblicuo o glancing.<br>
+* Recalque la atención de los objetos o puntos de interacción mediante el **contraste de los** colores, el brillo y la iluminación. Para obtener una visión más detallada de los métodos de iluminación de contar historias, consulte el cine de los [píxeles: un enfoque de iluminación para gráficos informáticos](https://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).<br>
+        <br>
+        *Imagen: uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
+    :::column-end:::
+        :::column:::
+        ![Uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de fragmentos.](images/640px-fragments.jpg)<br>
+    :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>Vea también
+
+<br>
+
+---
+
+## <a name="see-also"></a>Consulta también
 * [Separación de colores](hologram-stability.md#color-separation)
 * [Hologramas](hologram.md)
 * [Lenguaje de diseño de Microsoft: color](https://www.microsoft.com/design/color)

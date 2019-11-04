@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: activo, creación, proceso, presupuesto, polígonos, texturas, sombreadores, rendimiento
-ms.openlocfilehash: f7bee55249764af37453ea0fab01730b43907569
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.openlocfilehash: fb8266a018e11a8fb944819a0cac5ace38f2cb25
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896508"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437005"
 ---
 # <a name="asset-creation-process"></a>Proceso de creación de recursos
 
@@ -19,12 +19,12 @@ Windows Mixed Reality se basa en las décadas de inversión que Microsoft ha rea
 
 Los recursos que se crean para un proyecto de tienen muchas formas y formularios. Pueden estar formados por una serie de texturas e imágenes, audio, vídeo, modelos 3D y animaciones. No podemos empezar a cubrir todas las herramientas que están disponibles para crear los diferentes tipos de recursos que se usan en un proyecto. En este artículo, nos centraremos en los métodos de creación de recursos 3D.
 
-![Concepto, creación, integración e flujo de iteración](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
+![el concepto, la creación, la integración y el flujo de iteración](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
 *Concepto, creación, integración e flujo de iteración*
 
 ## <a name="things-to-consider"></a>Cosas a tener en cuenta
 
-Al examinar la experiencia que está intentando crear, piense en ella como un **presupuesto** que puede gastar para intentar crear la mejor experiencia. No hay necesariamente límites estrictos en cuanto al número de polígonos o **tipos de materiales** que se usan en los recursos, sino más un conjunto presupuestado de contrapartidas.
+Al examinar la experiencia que está intentando crear, piense en ella como un **presupuesto** que puede gastar para intentar crear la mejor experiencia. No hay necesariamente límites estrictos en cuanto al número de **polígonos** o **tipos de materiales** que se usan en los recursos, sino más un conjunto presupuestado de contrapartidas.
 
 A continuación se muestra un presupuesto de ejemplo para su experiencia. Por lo general, el rendimiento no es un punto único de error, sino una muerte de mil cortes por cada se.
 <br>
@@ -35,7 +35,7 @@ A continuación se muestra un presupuesto de ejemplo para su experiencia. Por lo
 </tr><tr>
 <td> Polígonos</td><td> 0,1</td><td> 5 %</td><td> 10 %</td>
 </tr><tr>
-<td> Texturas</td><td> 5 %</td><td> 4,5</td><td>25%</td>
+<td> Texturas</td><td> 5 %</td><td> 4,5</td><td>25 %</td>
 </tr><tr>
 <td> Sombreadores</td><td> 4,5</td><td> 35 %</td><td> 0,1</td>
 </tr><tr>
@@ -45,9 +45,9 @@ A continuación se muestra un presupuesto de ejemplo para su experiencia. Por lo
 </tr><tr>
 <td> Iluminación en tiempo real</td><td> 10 %</td><td> 0,1</td><td> 0,1</td>
 </tr><tr>
-<td> Medios (audio y vídeo)</td><td> -</td><td> 4,5</td><td> 25%</td>
+<td> Medios (audio y vídeo)</td><td> -</td><td> 4,5</td><td> 25 %</td>
 </tr><tr>
-<td> Script o lógica</td><td> 25%</td><td> 0,1</td><td> 5 %</td>
+<td> Script o lógica</td><td> 25 %</td><td> 0,1</td><td> 5 %</td>
 </tr><tr>
 <td> Sobrecarga general</td><td> 5 %</td><td> 5 %</td><td> 5 %</td>
 </tr><tr>
@@ -84,7 +84,7 @@ También hay la opción de capturar objetos en 3D. La captura de objetos inanima
 
 ### <a name="purchasing-assets"></a>Recursos de compra
 
-Otra opción excelente es adquirir recursos para su experiencia. Hay una gran cantidad de recursos disponibles a través de servicios como el [almacén de recursos de Unity](https://www.assetstore.unity3d.com/) o [TurboSquid](http://www.turbosquid.com/) entre otros.
+Otra opción excelente es adquirir recursos para su experiencia. Hay una gran cantidad de recursos disponibles a través de servicios como el [almacén de recursos de Unity](https://www.assetstore.unity3d.com/) o [TurboSquid](https://www.turbosquid.com/) entre otros.
 
 Cuando compre recursos de un tercero, siempre querrá comprobar lo siguiente:
 * **¿Cuál es el número de poli?**
@@ -92,7 +92,7 @@ Cuando compre recursos de un tercero, siempre querrá comprobar lo siguiente:
 * **¿Hay niveles de detalle (LODs) para el modelo?**
   * El nivel de detalle de un modelo le permite escalar los detalles de un modelo para el rendimiento.
 * **¿Está disponible el archivo de origen?**
-  * Normalmente no se incluye con el [almacén de recursos de Unity](https://www.assetstore.unity3d.com/) , pero siempre se incluye con servicios como [TurboSquid](http://www.turbosquid.com/).
+  * Normalmente no se incluye con el [almacén de recursos de Unity](https://www.assetstore.unity3d.com/) , pero siempre se incluye con servicios como [TurboSquid](https://www.turbosquid.com/).
   * Sin el archivo de origen no podrá modificar el recurso.
   * Asegúrese de que las herramientas 3D pueden importar el archivo de código fuente proporcionado.
 * **Sepa lo que está obteniendo**

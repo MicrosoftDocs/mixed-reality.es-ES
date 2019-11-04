@@ -6,16 +6,16 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, emulador, simulación, Windows Mixed Reality
-ms.openlocfilehash: 6ea493d8c1269ff0bea1d4102b9e224e30d06aef
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 01277e4b00dafaecdfd4e5205feccbf055e0caf5
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580593"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437062"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Emulador de HoloLens avanzado y entrada del simulador de realidad mixta
 
-La mayoría de los usuarios del emulador solo tendrán que usar los controles de entrada básicos para el emulador de [HoloLens](using-the-hololens-emulator.md#basic-emulator-input) o el simulador de [realidad de Windows Mixed](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). Los detalles siguientes son para usuarios avanzados que han encontrado una necesidad de simular tipos de entrada más complejos.
+La mayoría de los usuarios del emulador solo tendrán que usar los controles de entrada básicos para el [emulador de HoloLens](using-the-hololens-emulator.md#basic-emulator-input) o el [simulador de realidad de Windows Mixed](using-the-windows-mixed-reality-simulator.md#basic-simulator-input). Los detalles siguientes son para usuarios avanzados que han encontrado una necesidad de simular tipos de entrada más complejos.
 
 
 ## <a name="concepts"></a>Conceptos
@@ -23,29 +23,29 @@ La mayoría de los usuarios del emulador solo tendrán que usar los controles de
 Para empezar a controlar la entrada virtual en el emulador de HoloLens y el simulador de realidad de Windows Mixed, primero debe comprender algunos conceptos.
 
 El movimiento se refiere a controlar y cambiar la posición y la orientación de un elemento de la escena. En el caso de un objeto controlable en el destino, el movimiento se controla con la rotación y la traslación (movimiento) a lo largo de tres ejes.
-* **Guiñada**: Girar a la izquierda o a la derecha.
-* **Paso**: Activar o desactivar.
-* **Rollo**: Revertir en paralelo.
-* **X**: Moverse a la izquierda o a la derecha.
-* **Y**: Subir o bajar.
-* **Z**: Desplazarse hacia delante o hacia atrás.
+* **Guiñada**: gire a la izquierda o a la derecha.
+* **Paso**: activar o desactivar.
+* **Roll**: rollo de un lado a otro.
+* **X**: moverse a la izquierda o a la derecha.
+* **Y**: subir o bajar.
+* **Z**: moverse hacia delante o hacia atrás.
 
-[Los gestos](gestures.md) y la entrada del controlador de movimiento se asignan estrechamente a la manera en que los dispositivos físicos:
-* **Acción**: Esto simula la acción de presionar el índice en el control de posición o de extraer el botón de acción de un controlador. Por ejemplo, la entrada de acción se puede usar para simular el gesto de punteo de aire, desplazarse por el contenido y mantener presionado.
-* **Gesto o inicio del/System de [floración](gestures.md#bloom)** : El gesto de la floración/sistema de HoloLens o el botón Inicio de un controlador se usa para volver al shell y realizar las acciones del sistema.
+Los gestos y la entrada del controlador de movimiento se asignan estrechamente a la manera en que los dispositivos físicos:
+* **Acción**: esto simula la acción de presionar índice al control de posición o de extraer el botón de acción de un controlador. Por ejemplo, la entrada de acción se puede usar para simular el gesto de punteo de aire, desplazarse por el contenido y mantener presionado.
+* **Gesto o inicio del/System de [floración](system-gesture.md#bloom)** : el gesto de la floración/del sistema de HoloLens o el botón Inicio de un controlador se usa para volver al shell y realizar acciones del sistema.
 
 Las manos tienen un reprresentation rico en HoloLens 2.  Además de ser sometidos a seguimiento y sin seguimiento, y que se pueden usar para llevar a cabo gestos, ahora tienen un modelo de esqueleto articulado y se exponen al desarrollador.  Esto introduce 26 puntos de seguimiento en cada mano.  
-* **Conjunto**: Una de las veinte posiciones de las que se ha realizado un seguimiento para una mano controlada determinada. Esto tendrá un punto con el espacio 3D asociado.
-* **Suponer**: Colección completa de todas las uniones en una mano a la que se ha realizado un seguimiento. En este momento, se trata de una colección de 26 uniones. 
+* **Conjunto**: una de las veinte posiciones de las que se ha realizado un seguimiento para una mano controlada determinada. Esto tendrá un punto con el espacio 3D asociado.
+* **Pose**: colección completa de todas las uniones en una mano A la que se ha realizado un seguimiento. En este momento, se trata de una colección de 26 uniones. 
 
 En este momento, no se expone el control directo de cada posición de la Unión a través de la interfaz de usuario del emulador, aunque se pueden establecer a través de la API de simulación. En su lugar, tenemos un conjunto de representativos útiles que el emulador le permite alternar entre.
 
 También puede controlar el estado de la entrada de sensor simulado:
-* **Restablecer**: Esto devolverá todos los sensores simulados a sus valores predeterminados.  A partir del emulador de HoloLens 2, se puede establecer un restablecimiento para el ámbito de una o las dos manos mediante la participación de las manos deseadas mediante las teclas modificadoras apropiadas o los botones (de la izquierda o derecha, o del reboteador izquierdo y/o derecho en el controlador de juegos).
-* **Seguimiento**: Recorre los modos de seguimiento posicional. Esto incluye:
-  * **Predeterminado**: El sistema operativo elige el mejor modo de seguimiento en función de las solicitudes realizadas del sistema.
-   * **Orientación**: Fuerza el seguimiento de solo orientación, independientemente de las solicitudes realizadas del sistema.
-   * **Posicional**: Fuerza el seguimiento posicional, independientemente de las solicitudes realizadas del sistema.
+* **Restablecer**: se devolverán todos los sensores simulados a sus valores predeterminados.  A partir del emulador de HoloLens 2, se puede establecer un restablecimiento para el ámbito de una o las dos manos mediante la participación de las manos deseadas mediante las teclas modificadoras apropiadas o los botones (de la izquierda o derecha, o del reboteador izquierdo y/o derecho en el controlador de juegos).
+* **Tracking**: recorre los modos de seguimiento posicional. Esto incluye:
+  * **Valor predeterminado**: el sistema operativo elige el mejor modo de seguimiento en función de las solicitudes realizadas del sistema.
+   * **Orientation**: fuerza el seguimiento de solo orientación, independientemente de las solicitudes realizadas del sistema.
+   * **Posicional**: fuerza el seguimiento posicional, independientemente de las solicitudes realizadas del sistema.
 
 ## <a name="types-of-input"></a>Tipos de entrada
 
@@ -57,9 +57,9 @@ En la tabla siguiente se muestra cómo se asignan los tipos de entrada al teclad
 |  Cabeceo |  Flechas arriba/abajo |  Arrastrar hacia arriba o hacia abajo |  Palanca derecha arriba/abajo | 
 |  Balanceo |  P/E |  |  DPad izquierda/derecha | 
 |  X |  A/D |  |  Stick izquierdo izquierdo/derecho | 
-|  Y |  RE PÁG/AV pág |  |  DPad arriba/abajo | 
+|  esté |  RE PÁG/AV pág |  |  DPad arriba/abajo | 
 |  Z |  W/S |  |  Stick izquierdo hacia arriba/abajo | 
-|  . |  Escriba o espacio |  Botón derecho |  Un botón o cualquier desencadenador | 
+|  Acción |  Escriba o espacio |  Botón derecho |  Un botón o cualquier desencadenador | 
 |  Floración/sistema |  F2 o tecla Windows |  |  Botón B | 
 |  Botón de control del controlador |  G  |  |  | 
 |  Botón de menú controlador |  M  |  |  | 
@@ -76,7 +76,7 @@ En la tabla siguiente se muestra cómo se asignan los tipos de entrada al teclad
 |  Llevar |  T o F3 |  |  Botón X | 
 
 
-Nota: Los botones del controlador pueden estar orientados a una mano o un controlador, o al otro mediante los modificadores de destino de la mano.
+Nota: los botones del controlador pueden estar dirigidos a una mano o un controlador, o al otro mediante los modificadores de destino de la mano.
 
 ## <a name="targeting"></a>Selección de destino 
 
@@ -84,9 +84,9 @@ Algunos de los conceptos de entrada anteriores se destacan por sí mismos.  Acci
 
 En la tabla siguiente se describen las opciones de destino y la manera de activar cada una de ellas.
 
-| Object | Modificador de teclado | Modificador de controlador | Modificador de interfaz de usuario del emulador |
+| Objeto | Modificador de teclado | Modificador de controlador | Modificador de interfaz de usuario del emulador |
 |----------|----------|----------|----------|
-| Cuerpo | (Valor predeterminado) | (Valor predeterminado) | (Valor predeterminado) |
+| Body | (Valor predeterminado) | (Valor predeterminado) | (Valor predeterminado) |
 | Head | Mantener H | (No disponible) | (No disponible) |
 | Mano izquierda/controlador | Mantener presionado el botón Alt izq | Mantenga presionado el botón izquierdo del hombro | Marcador izquierdo | 
 | Mano derecha/controlador | Mantenga presionado el botón Alt derecho | Botón mantener el hombro derecho | Tachuela derecha |
@@ -100,7 +100,7 @@ En la tabla siguiente se muestra cómo cada modificador de destino asigna cada u
 |  Cabeceo |  Activar o desactivar el cabezal |  Subir o bajar |  Activar o desactivar el cabezal | El ojo mira hacia arriba o hacia abajo | 
 |  Balanceo |  Deshacer el cabezal izquierdo y derecho |  |  Deshacer el cabezal izquierdo y derecho | (Ninguna acción) |
 |  X |  Cuerpo de la diapositiva a la izquierda o a la derecha |  Movimiento de mano o controlador izquierda/derecha |  Desactivar la izquierda o la derecha | (Ninguna acción) |
-|  Y |  Subir o bajar el cuerpo |  Subir o bajar el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
+|  esté |  Subir o bajar el cuerpo |  Subir o bajar el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
 |  Z |  Desplazar el cuerpo hacia delante o hacia atrás |  Avanzar o retroceder el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
  
  
@@ -123,7 +123,7 @@ Se sugiere el siguiente conjunto de controles para el uso cotidiano:
 |  Guiñada de mano/controlador |  Alt + arrastrar mouse a la izquierda/derecha |  Hombro + stick analógico izquierdo/derecho | 
 |  Tono de mano/controlador |  Alt + arrastrar el mouse hacia arriba o abajo |  Hombro + stick analógico derecho arriba/abajo | 
 |  Rollo de mano/controlador |  Alt + Q/E |  Hombro + DPad izquierda/derecha | 
-|  . |  Botón secundario del mouse |  Desencadenador | 
+|  Acción |  Botón secundario del mouse |  Activado | 
 |  Floración/sistema/Inicio |  F2 o tecla Windows |  Botón B | 
 |  Restablecer |  Escape |  Botón Inicio | 
 |  Llevar |  T |  Botón X | 
@@ -144,7 +144,7 @@ Los siguientes métodos abreviados de teclado están disponibles para tener acce
 | Establecer el foco del teclado en el panel de control | F8 | Si el panel no está visible actualmente, se mostrará primero. |
 | Acoplar o desacoplar el panel en el emulador o en la ventana del portal de realidad mixta | F9 | Si la ventana se cierra cuando está desacoplada, está acoplada y oculta. |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Instalación de las herramientas](install-the-tools.md)
 * [Uso del emulador HoloLens](using-the-hololens-emulator.md)
 * [Uso del simulador de Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)

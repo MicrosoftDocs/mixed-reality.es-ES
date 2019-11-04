@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Criterios de calidad de la aplicación, realidad mixta, aplicación de realidad mixta
-ms.openlocfilehash: 8e635585c0981d81bf71fb5577232af28f2a0fdd
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024493"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437049"
 ---
 # <a name="app-quality-criteria"></a>Criterios de calidad de la aplicación
 
@@ -176,7 +176,7 @@ Las alineaciones de los hologramas con objetos físicos (si se prevé que se col
 
 |  Rendimiento  |  Reúne |  Puedan |
 --- | --- | ---
-| Los hologramas se alinean a la superficie normalmente en el intervalo de centímetros a pulgadas. Si se requiere más precisión, la aplicación debe proporcionar un medio eficaz para la colaboración dentro de la especificación de la aplicación deseada. | N/D | Los hologramas aparecen sin alinear con el objeto de destino físico, ya que separan el plano de la superficie o parecen flotar fuera de la superficie. Si se requiere precisión, los hologramas deben cumplir las especificaciones de proximidad del escenario. | 
+| Los hologramas se alinean a la superficie normalmente en el intervalo de centímetros a pulgadas. Si se requiere más precisión, la aplicación debe proporcionar un medio eficaz para la colaboración dentro de la especificación de la aplicación deseada. | N/A | Los hologramas aparecen sin alinear con el objeto de destino físico, ya que separan el plano de la superficie o parecen flotar fuera de la superficie. Si se requiere precisión, los hologramas deben cumplir las especificaciones de proximidad del escenario. | 
 
 ### <a name="how-to-measure"></a>Cómo medir
 
@@ -203,7 +203,7 @@ Las alineaciones de los hologramas con objetos físicos (si se prevé que se col
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 
-* [MR Spatial 230: asignación espacial](holograms-230.md)
+* [MR espacial 230: asignación espacial](holograms-230.md)
 * [Kit de herramientas de MR, bibliotecas de asignación espacial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialMapping/README.md)
 * [Kit complementario MR, ejemplo de calibración de póster](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/PosterCalibrationSample)
 * [Kit complementario MR, Kinect IPD](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/KinectIPD)
@@ -246,7 +246,7 @@ Los desarrolladores de aplicaciones controlan el lugar en el que los usuarios co
 </tr><tr>
 <td> Reúne</td><td> El contenido está dentro de la guía de visualización y movimiento, pero se usa inadecuadamente o no se usa el plano de recorte.</td>
 </tr><tr>
-<td> Puedan </td><td> El contenido se presenta demasiado cerca ( &lt;normalmente 1,25 m o &lt;50CM para los hologramas estacionales que requieren una observación más detallada).</td>
+<td> Puedan </td><td> El contenido se presenta demasiado cerca (normalmente &lt;1,25 m o &lt;50CM para los hologramas estacionales que requieren una observación más detallada).</td>
 </tr>
 </table>
 
@@ -368,7 +368,7 @@ En Windows Mixed Reality, el motor de audio proporciona el componente aural de l
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 
-* [MR Spatial 220: sonido espacial](holograms-220.md)
+* [MR espacial 220: sonido espacial](holograms-220.md)
 * [MRToolkit, audio espacial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Centrarse en los límites de trama holográfica (hipertema)
@@ -488,7 +488,7 @@ Los hologramas deben reaccionar a la posición del usuario aproximadamente de la
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 
-* [MR Input 210: mirada](holograms-210.md)
+* [Entrada MR 210: mirada](holograms-210.md)
 
 ## <a name="input-interaction-clarity"></a>Claridad de interacción de entrada
 
@@ -526,7 +526,7 @@ La claridad de la interacción de entrada es fundamental para el uso de una apli
 * Si la aplicación tiene una entrada personalizada, se comunica claramente mediante:
 * Experiencia de primera ejecución
 * Pantallas de introducción
-* Información sobre herramientas
+* Información de herramientas
 * Autocar manual
 * Sección de ayuda
 * Voz sobre
@@ -546,9 +546,7 @@ La claridad de la interacción de entrada es fundamental para el uso de una apli
 * [Control con la cabeza y permanencia](gaze-and-dwell.md)
 * [Cursores](cursors.md)
 * [Confort y mira](comfort.md#gaze-direction)
-* [Gestos](gestures.md)
 * [Entrada de voz](voice-input.md)
-* [Comandos de voz](voice-design.md)
 * [Controladores de movimiento](motion-controllers.md)
 * [Guía de portabilidad de entrada para Unity](input-porting-guide-for-unity.md)
 * [Entrada desde teclado en Unity](keyboard-input-in-unity.md)
@@ -562,13 +560,13 @@ La claridad de la interacción de entrada es fundamental para el uso de una apli
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 
-* [Caso práctico: Realización de más informática personal](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
-* [Estudio de conversión: Aprendizaje de la interfaz de usuario y diseño de interacción de HoloStudio](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
-* [Aplicación de ejemplo: Tabla periódica de los elementos](periodic-table-of-the-elements.md)
-* [Aplicación de ejemplo: Módulo lunar](lunar-module.md)
-* [MR Input 210: mirada](holograms-210.md)
-* [MR Input 211: Gestos](holograms-211.md)
-* [MR Input 212: voz](holograms-212.md)
+* [Caso práctico: el logro de más informática personal](case-study-the-pursuit-of-more-personal-computing.md#less-interface-in-your-face)
+* [Estudio de conversión: aprendizaje de la interfaz de usuario de HoloStudio y diseño de interacción](case-study-3-holostudio-ui-and-interaction-design-learnings.md)
+* [Aplicación de ejemplo: tabla periódica de los elementos](periodic-table-of-the-elements.md)
+* [Aplicación de ejemplo: módulo lunar](lunar-module.md)
+* [Entrada MR 210: mirada](holograms-210.md)
+* [Entrada MR 211: gestos](holograms-211.md)
+* [Entrada MR 212: voz](holograms-212.md)
 
 ## <a name="interactable-objects"></a>Objetos interactuables
 
@@ -619,7 +617,7 @@ Un botón ha sido una metáfora usada para desencadenar un evento en el mundo ab
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Texto en Unity](text-in-unity.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Comandos de voz](voice-design.md)
+* [Entrada de voz](voice-input.md)
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 
@@ -672,9 +670,9 @@ Las aplicaciones que requieren datos de asignación espacial se basan en el disp
 #### <a name="documentation"></a>Documentación
 
 * [Visualización de la exploración de la sala](room-scan-visualization.md)
-* [Caso práctico: Ampliación de las capacidades de asignación espacial de HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
-* [Caso práctico: Diseño de sonido espacial para HoloTour](case-study-spatial-sound-design-for-holotour.md)
-* [Caso práctico: Creación de una experiencia envolvente en fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)
+* [Caso práctico: ampliación de las funcionalidades de asignación espacial de HoloLens](case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)
+* [Caso práctico: diseño de sonido espacial para HoloTour](case-study-spatial-sound-design-for-holotour.md)
+* [Caso práctico: creación de una experiencia envolvente en fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 

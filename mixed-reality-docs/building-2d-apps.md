@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: aplicación 2D, UWP, aplicación plana, HoloLens, auriculares envolvente, modelo de aplicación, botón atrás, barra de la aplicación, PPP, resolución, escala
-ms.openlocfilehash: f9792a7e5fd9729bf9f5f632c699c74c58c10ddf
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 46d2a9ca044dee977faecc84d610dc0811a4bfb7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414222"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436991"
 ---
 # <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Actualización de aplicaciones para UWP en 2D para la realidad mixta
 
@@ -51,7 +51,7 @@ Solo tiene que ir al menú Inicio dentro del casco de realidad mixta e iniciar l
 
 ## <a name="targeting-both-immersive-headsets-and-hololens"></a>Establecer como destino los auriculares que se envolverán y HoloLens
 
-¡Enhorabuena! La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
+Enhorabuena. La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
 
 La aplicación ahora es capaz de ejecutarse en los dispositivos Windows de hoy en día, como escritorio, móviles, Xbox, la realidad mixta de Windows y los auriculares que se envolverán, y HoloLens, así como los futuros dispositivos Windows. Sin embargo, para tener como destino realmente todos esos dispositivos, deberá asegurarse de que la aplicación esté destinada a la familia de dispositivos Windows. universal.
 
@@ -60,7 +60,7 @@ La aplicación ahora es capaz de ejecutarse en los dispositivos Windows de hoy e
 Ahora vamos a pasar al manifiesto de AppX para asegurarse de que la aplicación para UWP de Windows 10 pueda ejecutarse en HoloLens:
 * Abra el archivo de solución de la aplicación con **Visual Studio** y navegue hasta el manifiesto del paquete de la aplicación.
 * Haga clic con el botón derecho en el archivo **Package. appxmanifest** de la solución y vaya a **Ver código** .<br>
-  ![Package. appxmanifest en Explorador de soluciones](images/openappxmanifest-500px.png)<br>
+  ![package. appxmanifest en Explorador de soluciones](images/openappxmanifest-500px.png)<br>
 * Asegúrese de que la plataforma de destino es Windows. universal en la sección de dependencias.
   ```
   <Dependencies>
@@ -73,7 +73,7 @@ Si no usa Visual Studio para su entorno de desarrollo, puede abrir **AppXManifes
 
 ### <a name="run-in-the-hololens-emulator"></a>Ejecutar en el emulador de HoloLens
 
-Ahora que la aplicación para UWP tiene como destino "Windows. universal", vamos a compilar la aplicación y ejecutarla en el emulador de [HoloLens](using-the-hololens-emulator.md).
+Ahora que la aplicación para UWP tiene como destino "Windows. universal", vamos a compilar la aplicación y ejecutarla en el [emulador de HoloLens](using-the-hololens-emulator.md).
 * Asegúrese de que ha [instalado el emulador de HoloLens](install-the-tools.md).
 * En Visual Studio, seleccione la configuración de compilación **x86** para la aplicación.
 
@@ -81,7 +81,7 @@ Ahora que la aplicación para UWP tiene como destino "Windows. universal", vamos
 * Seleccione **emulador de HoloLens** en el menú desplegable destino de implementación.
 
   ![Emulador de HoloLens en la lista de destinos de implementación](images/deployemulator-500px.png)<br>
-* Seleccione **Depurar > iniciar** depuración para implementar la aplicación e iniciar la depuración.
+* Seleccione **Depurar > iniciar depuración** para implementar la aplicación e iniciar la depuración.
 * El emulador se iniciará y ejecutará la aplicación.
 * Con un teclado, un mouse o una controladora Xbox, coloca la aplicación en el mundo para iniciarla.
 
@@ -98,8 +98,8 @@ Para llegar a la parte inferior de lo que puede estar causando que la aplicació
 ### <a name="running-your-uwp-app-in-the-debugger"></a>Ejecutar la aplicación para UWP en el depurador
 
 Estos pasos le guiarán a través de la depuración de la aplicación para UWP mediante el depurador de Visual Studio.
-* Si todavía no lo ha hecho, abra la solución en Visual Studio. Cambie el destino al emulador de **HoloLens** y la configuración de compilación a **x86**.
-* Seleccione **Depurar > iniciar** depuración para implementar la aplicación e iniciar la depuración.
+* Si todavía no lo ha hecho, abra la solución en Visual Studio. Cambie el destino al **emulador de HoloLens** y la configuración de compilación a **x86**.
+* Seleccione **Depurar > iniciar depuración** para implementar la aplicación e iniciar la depuración.
 * Coloque la aplicación en el mundo con el mouse, el teclado o la controladora Xbox.
 * Visual Studio ahora debería interrumpir en algún lugar del código de la aplicación.
   - Si la aplicación no se bloquea inmediatamente o se interrumpe en el depurador debido a un error no controlado, siga un paso de prueba de las características principales de la aplicación para asegurarse de que todo esté en funcionamiento y en funcionamiento. Es posible que vea errores como los que se muestran a continuación (excepciones internas que se están controlando). Para asegurarse de que no se pierdan los errores internos que afectan a la experiencia de la aplicación, ejecute las pruebas automatizadas y las pruebas unitarias para asegurarse de que todo se comporta según lo esperado.
@@ -110,13 +110,13 @@ Estos pasos le guiarán a través de la depuración de la aplicación para UWP m
 
 Ahora que la aplicación para UWP se está ejecutando en auriculares más envolventes y/o HoloLens como un holograma de 2D, vamos a asegurarnos de que parece bonito. Estos son algunos aspectos que se deben tener en cuenta:
 * Windows Mixed Reality ejecutará todas las aplicaciones 2D con una resolución fija y un PPP equivalentes a los píxeles efectivos de 853x480. Considere la posibilidad de que su diseño necesite perfeccionarse a esta escala y revise las instrucciones de diseño que se indican a continuación para mejorar su experiencia en HoloLens y en auriculares de gran tamaño.
-* Windows Mixed Reality [no admite](app-model.md) mosaicos dinámicos 2D. Si la funcionalidad principal muestra información sobre un icono dinámico, considere la posibilidad de mover esa información de nuevo a la aplicación o explore los iniciadores de [aplicaciones 3D](3d-app-launcher-design-guidance.md).
+* Windows Mixed Reality [no admite](app-model.md) mosaicos dinámicos 2D. Si la funcionalidad principal muestra información sobre un icono dinámico, considere la posibilidad de mover esa información de nuevo a la aplicación o explore los [iniciadores de aplicaciones 3D](3d-app-launcher-design-guidance.md).
 
 ### <a name="2d-app-view-resolution-and-scale-factor"></a>resolución de vista de aplicación 2D y factor de escala
 
 ![Del diseño con capacidad de respuesta](images/scale-500px.png)
 
-Windows 10 mueve todo el diseño visual de píxeles de pantalla reales a **píxeles efectivos**. Esto significa que los desarrolladores diseñan su interfaz de usuario siguiendo las directrices de la interfaz de usuario de Windows 10 para píxeles efectivos y el escalado de Windows garantiza que los píxeles efectivos son el tamaño adecuado para la facilidad de uso en dispositivos, resoluciones, PPP, etc. Vea esta [excelente lectura en MSDN](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) para obtener más información, así como esta [presentación de compilación](http://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx).
+Windows 10 mueve todo el diseño visual de píxeles de pantalla reales a **píxeles efectivos**. Esto significa que los desarrolladores diseñan su interfaz de usuario siguiendo las directrices de la interfaz de usuario de Windows 10 para píxeles efectivos y el escalado de Windows garantiza que los píxeles efectivos son el tamaño adecuado para la facilidad de uso en dispositivos, resoluciones, PPP, etc. Vea esta [excelente lectura en MSDN](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) para obtener más información, así como esta [presentación de compilación](https://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx).
 
 Incluso con la capacidad exclusiva para colocar aplicaciones en su mundo a una gran distancia, se recomiendan distancias de visualización similares a las de la televisión para obtener la mejor legibilidad y la interacción con la función de toque y gesto. Por eso, una pizarra virtual en la Página principal de la realidad mixta mostrará la vista plana de UWP en:
 
@@ -145,11 +145,11 @@ El [modelo de aplicación](app-model.md) de la realidad mixta está diseñado pa
 
 las vistas 2D se decoran con una barra de la aplicación por encima de su contenido. La barra de la aplicación tiene dos puntos de personalización específicos de la aplicación:
 
-**Título:** *muestra el* nombre para mostrar del icono asociado a la instancia de la aplicación.
+**Título:** muestra el nombre para *Mostrar del icono* asociado a la instancia de la aplicación.
 
 **Botón atrás:** genera el evento *[solicitado](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.backrequested.aspx)* cuando se presiona. *[SystemNavigationManager. AppViewBackButtonVisibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.systemnavigationmanager.aspx)* controla la visibilidad del botón atrás.
 
-![Interfaz de usuario de la barra de aplicación en la vista de aplicación 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
+![interfaz de usuario de la barra de la aplicación en la vista de aplicación 2D](images/12697297-10104100857470613-1470416918759008487-o-500px.jpg)<br>
 *Interfaz de usuario de la barra de aplicación en la vista de aplicación 2D*
 
 ### <a name="test-your-2d-apps-design"></a>Prueba del diseño de la aplicación 2D
@@ -158,14 +158,14 @@ Es importante probar la aplicación para asegurarse de que el texto se puede lee
 
 ## <a name="new-input-possibilities"></a>Nuevas posibilidades de entrada
 
-HoloLens usa sensores avanzados de profundidad para ver el mundo y ver los usuarios. Esto permite gestos de mano avanzados como el [floración](gestures.md#bloom) y [el toque de aire](gestures.md#air-tap). Los micrófonos eficaces también habilitan las [experiencias de voz](voice-input.md).
+HoloLens usa sensores avanzados de profundidad para ver el mundo y ver los usuarios. Esto permite gestos de mano avanzados como el [floración](system-gesture.md#bloom) y [el toque de aire](gaze-and-commit.md#composite-gestures). Los micrófonos eficaces también habilitan las [experiencias de voz](voice-input.md).
 
 Con los auriculares de escritorio, los usuarios pueden usar los controladores de movimiento para apuntar a las aplicaciones y tomar medidas. También pueden usar un controlador de juegos, orientados a objetos con miras.
 
-Windows se encarga de toda esta complejidad en el caso de las aplicaciones UWP, la traducción de los movimientos de [mirada](gaze.md), gestos, voz y del controlador de movimiento a [eventos de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610#pointer_events) que abstraen el mecanismo de entrada. Por ejemplo, un usuario puede haber realizado una pulsación aérea con su mano o haber extraído el desencadenador SELECT en un controlador de movimiento, pero las aplicaciones 2D no necesitan saber de dónde procede la entrada, sino que solo ven una prensa táctil 2D, como si estuvieran en una pantalla táctil.
+Windows se encarga de toda esta complejidad en el caso de las aplicaciones UWP, la traducción de los movimientos de [miración](gaze-and-commit.md), gestos, voz y del controlador de movimiento a [eventos de puntero](https://msdn.microsoft.com/library/windows/apps/mt404610#pointer_events) que abstraen el mecanismo de entrada. Por ejemplo, un usuario puede haber realizado una pulsación aérea con su mano o haber extraído el desencadenador SELECT en un controlador de movimiento, pero las aplicaciones 2D no necesitan saber de dónde procede la entrada, sino que solo ven una prensa táctil 2D, como si estuvieran en una pantalla táctil.
 
 Estos son los conceptos y escenarios de alto nivel que debe comprender para la entrada al llevar su aplicación de UWP a HoloLens:
-* [Mira](gaze.md) los eventos de mantener el mouse, que pueden desencadenar inesperadamente menús, controles flotantes u otros elementos de la interfaz de usuario para que aparezcan simplemente Gazing en torno a la aplicación.
+* [Mira](gaze-and-commit.md) los eventos de mantener el mouse, que pueden desencadenar inesperadamente menús, controles flotantes u otros elementos de la interfaz de usuario para que aparezcan simplemente Gazing en torno a la aplicación.
 * Mira fijamente no es tan preciso como la entrada del mouse. Use los objetivos de aciertos de tamaño adecuado para HoloLens, similares a las aplicaciones móviles táctiles. Los elementos pequeños cerca de los bordes de la aplicación son especialmente difíciles de interactuar con ellos.
 * Los usuarios deben cambiar los modos de entrada para pasar de desplazamiento a dos movimientos de movimiento. Si la aplicación se ha diseñado para la entrada táctil, considere la posibilidad de asegurarse de que no se bloquee ninguna funcionalidad principal detrás de dos dedos. Si es así, considere la posibilidad de tener mecanismos de entrada alternativos, como botones que puedan iniciar dos movimientos de dedo. Por ejemplo, la aplicación de mapas puede hacer zoom con dos movimientos panorámicos, pero tiene un botón más, menos y girar para simular las mismas interacciones de zoom con un solo clic.
 
@@ -175,10 +175,9 @@ La [entrada de voz](voice-input.md) es una parte fundamental de la experiencia d
 
 Una vez que la aplicación esté en funcionamiento, empaquete la aplicación para [enviarla a la Microsoft Store](submitting-an-app-to-the-microsoft-store.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Modelo de aplicaciones](app-model.md)
-* [Gaze](gaze.md)
-* [Hacia](gestures.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Controladores de movimiento](motion-controllers.md)
 * [Entrada de voz](voice-input.md)
 * [Envío de aplicaciones a Microsoft Store](submitting-an-app-to-the-microsoft-store.md)

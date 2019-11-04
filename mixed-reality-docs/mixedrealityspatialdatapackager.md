@@ -6,12 +6,12 @@ ms.author: alreynol
 ms.date: 05/16/2019
 ms.topic: article
 keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 7ad1159af9eecd3ca3622dd25cc1f49fb0b1700a
-ms.sourcegitcommit: d565a69a9320e736304372b3f010af1a4d286a62
+ms.openlocfilehash: 52556e4028407086f943c4b765a8bcfad2744eac
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65942111"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438478"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentación del Empaquetador de datos espaciales de realidad mixta
 
@@ -19,9 +19,32 @@ ms.locfileid: "65942111"
 > Esta herramienta y su operación se ofrecen tal cual. Está sujeto a cambios sin previo aviso y es posible que no sea compatible con las futuras versiones de HMD de Windows o Windows Mixed Reality.
 
 ## <a name="download"></a>Descargar
- Descargar [MixedRealitySpatialDataPackager aquí](http://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
+ Descargar [MixedRealitySpatialDataPackager aquí](https://download.microsoft.com/download/A/1/2/A12B8A90-B3F7-4ED9-A4BB-D59DDCDAA125/MixedRealitySpatialDataPackager.zip)
 
-## <a name="quickstart"></a>Guía de inicio rápido
+## <a name="device-support"></a>Compatibilidad con dispositivos
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Ofrecen</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
+    </tr>
+     <tr>
+        <td>Empaquetador de datos espaciales de realidad mixta</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>✔️</td>
+    </tr>
+</table>
+
+## <a name="quickstart"></a>Inicio rápido
 
 La herramienta de empaquetado de datos espaciales de realidad mixta copia los datos espaciales de una aplicación de destino de un equipo a otro a través de un proceso de exportación e importación de dos pasos. La herramienta debe ejecutarse con privilegios de administrador y elimina los datos espaciales existentes al importar. La exportación deja intactos los datos espaciales existentes.
 

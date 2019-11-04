@@ -6,19 +6,19 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, sincronizar, delimitador espacial, transferencia, multijugador, vista, escenario, tutorial, código de ejemplo, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
-ms.openlocfilehash: 5d03f4bfa764b9948ec4718bce86127cfcc3e303
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515448"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437957"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferencias de delimitadores locales en DirectX
 
-En situaciones en las que no se pueden usar delimitadores espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
+En situaciones en las que no se pueden usar <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">delimitadores espaciales de Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
 
 >[!NOTE]
->Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
+>Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">espaciales de Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
 
 >[!NOTE]
 >Los fragmentos de código de este artículo muestran actualmente el uso C++de/CX en lugar de/WinRT compatible C++con C + +17, tal y como se usa en la [ C++ plantilla de proyecto holográfica](creating-a-holographic-directx-project.md).  Los conceptos son equivalentes para C++un proyecto de/WinRT, aunque tendrá que traducir el código.
@@ -33,7 +33,7 @@ Tenga en cuenta que los anclajes espaciales no pueden transferirse entre diferen
 
 Se debe conceder permiso a la aplicación para usar la funcionalidad spatialPerception antes de poder usar [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Esto es necesario porque la transferencia de un delimitador espacial implica compartir imágenes de sensor recopiladas a lo largo del tiempo en proximidad de ese delimitador, lo que puede incluir información confidencial.
 
-Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación. Por ejemplo:
+Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación. A continuación te mostramos un ejemplo:
 
 ```
 <Capabilities>
@@ -41,19 +41,19 @@ Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación
 </Capabilities>
 ```
 
-La funcionalidad proviene del espacio de nombres **uap2** . Para obtener acceso a este espacio de nombres en el manifiesto, inclúyalo como un atributo *xlmns* en &lt;el elemento > del paquete. Por ejemplo:
+La funcionalidad proviene del espacio de nombres **uap2** . Para obtener acceso a este espacio de nombres en el manifiesto, inclúyalo como un atributo *xlmns* en el elemento &lt;paquete >. A continuación te mostramos un ejemplo:
 
 ```
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap mp"
     >
 ```
 
-**NOTA:** La aplicación tendrá que solicitar la funcionalidad en tiempo de ejecución para poder acceder a las API de exportación e importación de SpatialAnchor. Vea [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) en los ejemplos siguientes.
+**Nota:** La aplicación tendrá que solicitar la funcionalidad en tiempo de ejecución para poder acceder a las API de exportación e importación de SpatialAnchor. Vea [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) en los ejemplos siguientes.
 
 ## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serializar los datos del delimitador exportándolos con el SpatialAnchorTransferManager
 
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-En primer lugar, es necesario configurar el flujo de datos. Esto nos permitirá 1). Use TryExportAnchorsAsync para colocar los datos en un búfer que pertenezca a la aplicación y 2). leer datos del flujo de búfer de bytes exportado, que es un flujo de datos de WinRT, en nuestro propio búfer de memoria,&lt;que es un byte STD:: Vector >.
+En primer lugar, es necesario configurar el flujo de datos. Esto nos permitirá 1). Use TryExportAnchorsAsync para colocar los datos en un búfer que pertenezca a la aplicación y 2). leer datos del flujo de búfer de bytes exportado, que es un flujo de datos de WinRT, en nuestro propio búfer de memoria, que es un objeto STD:: Vector&lt;Byte >.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -270,7 +270,7 @@ Si se pueden importar los datos, obtenemos una vista de mapa de pares clave-valo
 }
 ```
 
-**NOTA:** Solo porque puede importar un delimitador, no significa necesariamente que se pueda usar de inmediato. El delimitador puede estar en un salón diferente u otra ubicación física completamente; no se puede localizar el delimitador hasta que el dispositivo que lo recibe tenga suficiente información visual sobre el entorno en el que se creó el delimitador, para restaurar la posición del delimitador en relación con el entorno actual conocido. La implementación del cliente debe intentar localizar el delimitador en relación con el sistema de coordenadas local o el marco de referencia antes de continuar para intentar usarlo para el contenido en directo. Por ejemplo, intente buscar el delimitador en relación con un sistema de coordenadas actual periódicamente hasta que el delimitador empiece a ser localizable.
+**Nota:** Solo porque puede importar un delimitador, no significa necesariamente que se pueda usar de inmediato. El delimitador puede estar en un salón diferente u otra ubicación física completamente; no se puede localizar el delimitador hasta que el dispositivo que lo recibe tenga suficiente información visual sobre el entorno en el que se creó el delimitador, para restaurar la posición del delimitador en relación con el entorno actual conocido. La implementación del cliente debe intentar localizar el delimitador en relación con el sistema de coordenadas local o el marco de referencia antes de continuar para intentar usarlo para el contenido en directo. Por ejemplo, intente buscar el delimitador en relación con un sistema de coordenadas actual periódicamente hasta que el delimitador empiece a ser localizable.
 
 ## <a name="special-considerations"></a>Consideraciones especiales
 
@@ -288,7 +288,7 @@ Al igual que la exportación de un único SpatialAnchor, el BLOB contiene una re
 
 ![Varios delimitadores exportados mediante una única llamada a TryExportAnchorsAsync](images/multipleanchors.png) ![Varios delimitadores exportados mediante una llamada TryExportAnchorsAsync independiente para cada delimitador](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Ejemplo: Envío de datos de delimitador mediante Windows:: Networking:: StreamSocket
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Ejemplo: enviar datos de delimitador mediante Windows:: Networking:: StreamSocket
 
 Aquí se proporciona un ejemplo de cómo usar los datos de delimitador exportados enviándolos a través de una red TCP. Este es el HolographicSpatialAnchorTransferSample.
 
@@ -464,7 +464,7 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 
 En primer lugar, tenemos que conectarnos al servidor. En este ejemplo de código se muestra cómo crear y configurar un StreamSocket, y cómo crear un DataReader que puede usar para adquirir datos de red mediante la conexión de socket.
 
-**NOTA:** Si ejecuta este código de ejemplo, asegúrese de configurar e iniciar el servidor antes de iniciar el cliente.
+**Nota:** Si ejecuta este código de ejemplo, asegúrese de configurar e iniciar el servidor antes de iniciar el cliente.
 
 ```
 task<bool> SampleAnchorTcpClient::ConnectToServer()
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-Ya está. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
+Eso es todo. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Biblioteca de patrones de procesamiento paralelo (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

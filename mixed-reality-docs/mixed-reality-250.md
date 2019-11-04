@@ -3,22 +3,22 @@ title: MR Sharing 250-HoloLens y auriculares envolventes
 description: Siga este tutorial de codificación con auriculares con Unity, Visual Studio, HoloLens y Windows Mixed Reality para obtener información detallada sobre el uso compartido de hologramas entre dispositivos de realidad mixta.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, inmersivo, controlador de movimiento, uso compartido, controladora Xbox, redes, dispositivos cruzados
-ms.openlocfilehash: 9e1cb0d168b8bf830b4477190516cd19caef7972
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: c8d341f75424887ca1b0994c8a4d16a0bded671e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63506115"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437864"
 ---
 >[!NOTE]
->Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
+>Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
 
 <br>
 
-# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>Uso compartido de MR 250: HoloLens y auriculares envolvente
+# <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>MR Sharing 250: HoloLens y auriculares envolventes
 
 Con la flexibilidad de Plataforma universal de Windows (UWP), es fácil crear una aplicación que abarque varios dispositivos. Con esta flexibilidad, podemos crear experiencias que aprovechen las ventajas de cada dispositivo. En este tutorial se tratará una experiencia básica compartida que se ejecuta tanto en HoloLens como en Windows Mixed Reality. Este contenido se entregó originalmente en la Conferencia de Microsoft Build 2017 en Seattle, WA.
 
@@ -35,15 +35,15 @@ Con la flexibilidad de Plataforma universal de Windows (UWP), es fácil crear un
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td>Uso compartido de MR 250: HoloLens y auriculares envolvente</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR Sharing 250: HoloLens y auriculares envolventes</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* Un equipo con Windows 10 con las [herramientas de desarrollo necesarias](install-the-tools.md) y configurada [para admitir un casco con Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines).
+* Un equipo con Windows 10 con las [herramientas de desarrollo necesarias](install-the-tools.md) y [configurada para admitir un casco con Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines).
 * Un controlador de Xbox que funcione con su PC.
 * Al menos un dispositivo HoloLens y un casco envolvente.
 * Una red que permite la difusión de UDP para la detección.
@@ -69,6 +69,7 @@ Asegúrese de que el entorno de desarrollo está listo para usar un proyecto sen
 Una aplicación que muestra un holograma en HoloLens o en un auricular envolvente de Windows Mixed Reality.
 
 ### <a name="steps"></a>Pasos
+
 * Abra Unity.
     * Seleccione **abrir**.
     * Vaya a la ubicación donde extrajo los archivos del proyecto.
@@ -106,13 +107,13 @@ Una aplicación que muestra un holograma en HoloLens o en un auricular envolvent
     * El uso de la barra de herramientas superior cambia el destino a **Release** y **x86**.
     * Haga clic en la flecha situada junto a **equipo local** y seleccione el **dispositivo** que desea implementar en HoloLens.
     * Haga clic en la flecha situada junto a **dispositivo** y seleccione **equipo local** para implementar el casco de realidad mixta.
-    * Haga clic en depurar **-> iniciar sin** depurar o **Ctrl + F5** para iniciar la aplicación.
+    * Haga clic en **depurar-> iniciar sin depurar** o **Ctrl + F5** para iniciar la aplicación.
 
 ### <a name="digging-into-the-code"></a>Profundizar en el código
 
 En el panel Proyecto, desplácese a **Assets\HoloToolkit\Input\Scripts\Utilities** y haga doble clic en **MixedRealityCameraManager.CS** para abrirlo.
 
-**Visión** MixedRealityCameraManager.cs es un script sencillo que ajusta la configuración de nivel de calidad y de fondo en función del dispositivo. La clave aquí es HolographicSettings. IsDisplayOpaque, que permite que un script detecte si el dispositivo es un HoloLens (IsDisplayOpaque devuelve false) o un auricular envolvente (IsDisplayOpaque devuelve true).
+**Información general:** MixedRealityCameraManager.cs es un script sencillo que ajusta la configuración de nivel de calidad y de fondo en función del dispositivo. La clave aquí es HolographicSettings. IsDisplayOpaque, que permite que un script detecte si el dispositivo es un HoloLens (IsDisplayOpaque devuelve false) o un auricular envolvente (IsDisplayOpaque devuelve true).
 
 ### <a name="enjoy-your-progress"></a>Disfrute de su progreso
 
@@ -130,9 +131,10 @@ Muestra cómo controlar la entrada de una aplicación de Windows Mixed Reality.
 
 Al basarse en la aplicación del capítulo 1, agregaremos funcionalidad para que el usuario pueda seleccionar el holograma y colocarlo en una superficie real de HoloLens o en una tabla virtual en un casco envolvente.
 
-**Actualizador de entrada:** En HoloLens, el gesto de selección es la **TAP del aire**. En los auriculares inmersivo, usaremos el botón **a** del controlador Xbox. Para obtener más información sobre la entrada, [empiece aquí](gestures.md).
+**Actualizador de entrada:** En HoloLens, el gesto de selección es la **TAP del aire**. En los auriculares inmersivo, usaremos el botón **a** del controlador Xbox. Para obtener más información, consulte la información [General sobre el modelo de interacción](interaction-fundamentals.md).
 
 ### <a name="steps"></a>Pasos
+
 * Agregar administrador de entrada
     * En **HoloToolkit > entrada > Prefabs** arrastre **InputManager** hasta **jerarquía** como elemento secundario de **Managers**.
     * En **HoloToolkit > entrada > Prefabs >** **cursor de arrastre** del cursor a la **jerarquía**.
@@ -193,6 +195,7 @@ Asegúrese de que la red está configurada correctamente y detalle cómo se comp
 Convertiremos el proyecto en un proyecto de varios jugadores. Agregaremos la interfaz de usuario y la lógica para hospedar o unirse a sesiones. Los usuarios de HoloLens se verán entre sí en la sesión con nubes a través de sus cabezales y los auriculares de un casco envolventes tienen nubes cerca de donde se encuentra el delimitador. Los usuarios de los auriculares envolventes verán los usuarios de HoloLens en relación con el origen de la escena. Todos los usuarios de HoloLens verán el holograma de la isla en el mismo lugar. Es importante tener en cuenta que los usuarios de los auriculares envolventes no estarán en la isla durante este capítulo, pero se comportarán de forma similar a HoloLens, con una vista de pájaros de la isla.
 
 ### <a name="steps"></a>Pasos
+
 * Quitar isla y VRRoom
     * En **jerarquía** , haga clic con el botón derecho en **isla** seleccionar **eliminar**
     * En **jerarquía** , haga clic con el botón derecho en **VRRoom** seleccionar **eliminar**
@@ -250,10 +253,12 @@ Disfrute de la experiencia en cada tipo de dispositivo de realidad mixta.
 Actualizaremos la aplicación para poner a los usuarios con auriculares envolvente en la isla con una vista envolvente. Los usuarios de HoloLens seguirán teniendo la vista de pájaro de la isla. Los usuarios de cada tipo de dispositivo pueden ver a otros usuarios a medida que aparecen en el mundo. Por ejemplo, los auriculares envolventes pueden ver los demás avatares en otras rutas de acceso de la isla y ven a los usuarios de HoloLens como nubes gigantes por encima de la isla. Los auriculares envolventes también verán el cursor del rayo fijamente del usuario de HoloLens si el usuario de HoloLens mira la isla. Los usuarios de HoloLens verán un avatar en la isla para representar cada usuario de auriculares envolvente.
 
 **Entrada actualizada para el dispositivo envolvente:**
+
 * Los botones del parachoques izquierdo y derecho del controlador Xbox giran el reproductor
 * Si mantiene presionado el botón Y en el controlador de Xbox, se habilitará un cursor [teletranspórtate](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) . Si el cursor tiene un indicador de flecha giratoria al soltar el botón Y, se teletransporta a la ubicación del cursor.
 
 ### <a name="steps"></a>Pasos
+
 * Agregar MixedRealityTeleport a MixedRealityCameraParent
     * En **jerarquía**, seleccione **Usland**.
     * En **Inspector**, habilite el **control de nivel**.
@@ -288,6 +293,7 @@ Esta vez necesitará encontrar un amigo.
 Una vez más, un usuario con HoloLens hospedará una sesión. Otros usuarios se unirán a la sesión. La aplicación colocará los tres primeros usuarios para unirse desde un casco inmersivo en una de las tres rutas de acceso de la isla. No dude en explorar la isla en esta sección.
 
 Detalles que se deben tener en cuenta:
+
 1. Puede ver caras en las nubes, lo que ayuda a un usuario sumergido a ver la dirección que está buscando un usuario de HoloLens.
 2. Los avatares de la isla tienen cuellos que giran. No se van a seguir lo que el usuario está haciendo es realidad real (no tenemos esa información), pero es una buena experiencia.
 3. Si el usuario de HoloLens mira la isla, los usuarios sumergidos pueden ver su cursor.
@@ -306,6 +312,7 @@ Cree una experiencia interactiva colaborativa entre los dos tipos de dispositivo
 Basándose en el capítulo 4, cuando un usuario con un casco envolvente se acerque a un rompecabezas de la isla, los usuarios de HoloLens obtendrán una información sobre herramientas con una pista sobre el rompecabezas. Una vez que todos los auriculares envolventes se colocan por encima de sus rompecabezas y en el "panel listo" del salón, se lanzará el cohete.
 
 ### <a name="steps"></a>Pasos
+
 * En **jerarquía**, seleccione **Usland**.
 * En **Inspector**, en **control de nivel**, Active **Habilitar colaboración**.
 
@@ -323,20 +330,20 @@ CheckGoal realiza algunas operaciones matemáticas para ver si estamos más o me
 
 ```cs
 private void CmdSendAtGoal(int GoalIndex)
-       {
-           levelState.SetGoalIndex(GoalIndex);
-       }
+{
+    levelState.SetGoalIndex(GoalIndex);
+}
 ```
 
 ```cs
 public void SendAtGoal(int GoalIndex)
-       {
-           if (isLocalPlayer)
-           {
-               Debug.Log("sending at goal " + GoalIndex);
-               CmdSendAtGoal(GoalIndex);
-           }
-       }
+{
+    if (isLocalPlayer)
+    {
+        Debug.Log("sending at goal " + GoalIndex);
+        CmdSendAtGoal(GoalIndex);
+    }
+}
 ```
 
 Tenga en cuenta que SendAtGoalMessage llama a CmdSendAtGoal, que llama a levelState. SetGoalIndex, que vuelve a LevelControl.cs. A primera vista, parece extraño. ¿Por qué no simplemente llamar a SetGoalIndex en lugar de a este enrutamiento extraño a través del controlador del reproductor? La razón es que estamos conformes al modelo de datos que UNET usa para mantener los datos sincronizados. Para evitar la mejora y la paginación, UNET requiere que cada objeto tenga un usuario que tenga autoridad para cambiar las variables sincronizadas. Además, solo el host (el usuario que inició la sesión) puede cambiar los datos directamente. Los usuarios que no son el host, pero que tienen autoridad, deben enviar un comando al host que cambiará la variable. De forma predeterminada, el host tiene autoridad sobre todos los objetos, salvo el objeto generado para representar al usuario. En nuestro caso, este objeto tiene el script playercontroller. Hay una manera de solicitar la autoridad para un objeto y, a continuación, realizar cambios, pero optamos por aprovechar el hecho de que el controlador del reproductor tiene autoautoridad y enrutar los comandos a través del controlador del reproductor.
@@ -349,5 +356,6 @@ De nuevo en LevelControl.cs, consulte SetGoalIndex. Aquí se establece el valor 
 
 En el capítulo anterior, se iniciará la sesión como antes. Esta vez, a medida que los usuarios del casco envolvente lleguen a la "puerta" en su ruta de acceso, aparecerá una información sobre herramientas que solo pueden ver los usuarios de HoloLens. Los usuarios de HoloLens son responsables de comunicar esta pista a los usuarios en el casco envolvente. El cohete se iniciará en el espacio una vez que cada Avatar esté escalonado en su correspondiente controlador marrón dentro de la Volcano. La escena se restablecerá después de 60 segundos para que pueda volver a hacerlo.
 
-## <a name="see-also"></a>Vea también
-* [MR Input 213: controladores de movimiento](mixed-reality-213.md)
+## <a name="see-also"></a>Consulta también
+
+* [Entrada MR 213: Controladores de movimiento](mixed-reality-213.md)

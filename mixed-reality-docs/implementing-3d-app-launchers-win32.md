@@ -6,17 +6,17 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo activo, Win32
-ms.openlocfilehash: ac3d5e17614bcd1072f6843a46bf0525f441f130
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 87eadfb5184f9fb5f8d513ab00a2a954e71df376
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63515605"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438576"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)
 
 > [!NOTE]
-> Esta característica solo está disponible para los equipos que ejecutan la versión más reciente de [Windows](https://insider.windows.com) Insider (RS5), compilación 17704 y versiones más recientes.
+> Esta característica solo está disponible para los equipos que ejecutan la versión más reciente de [Windows Insider](https://insider.windows.com) (RS5), compilación 17704 y versiones más recientes.
 
 La [Página principal de Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md) es el punto de partida en el que los usuarios se colocan antes de iniciar las aplicaciones. De forma predeterminada, las aplicaciones y juegos envolventes de Win32 VR deben iniciarse desde fuera del casco y no aparecerán en la lista "todas las aplicaciones" del menú Inicio de Windows Mixed Reality. Sin embargo, al seguir las instrucciones de este artículo para implementar un iniciador de aplicaciones 3D, la experiencia de Win32 VR envolvente se puede iniciar desde el menú Inicio y el entorno de inicio de Windows Mixed Reality.
 
@@ -42,18 +42,18 @@ Las aplicaciones Win32 aparecerán en la lista "todas las aplicaciones" del men�
         * Se usarán para el logotipo de 2D de la aplicación en la lista todas las aplicaciones de Windows Mixed Reality y para el menú Inicio en el escritorio.
         * La ruta de acceso del archivo es relativa a la carpeta que contiene el manifiesto de elementos visuales.
         * Todavía tiene que proporcionar un icono de menú Inicio de escritorio para la aplicación a través de los mecanismos estándar. Puede estar directamente en el archivo ejecutable o en el acceso directo que cree (por ejemplo, a través de IShellLink:: SetIconLocation).
-        * *Opta* Puede usar un archivo resources. PRI si desea que MRT proporcione varios tamaños de recursos para diferentes escalas de resolución y temas de contraste alto.
+        * *Opcional:* Puede usar un archivo resources. PRI si desea que MRT proporcione varios tamaños de recursos para diferentes escalas de resolución y temas de contraste alto.
     3. Actualice la **ruta de acceso de MixedRealityModel** para que apunte al glb del iniciador de la aplicación 3D.
     4. Guarde el archivo con el mismo nombre que el archivo ejecutable, con la extensión ". VisualElementsManifest. xml "y guárdelo en el mismo directorio. Por ejemplo, para el archivo ejecutable "contoso. exe", el archivo XML que lo acompaña se denomina "contoso. visualelementsmanifest. xml".
 3. **Agregue un acceso directo** a la aplicación en el menú Inicio de Windows de escritorio. Vea el [ejemplo siguiente](#sample-app-launcher-shortcut-creation) para obtener una C++ implementación de ejemplo. 
     * Créelo en%ALLUSERSPROFILE%\Microsoft\Windows\Start Inicio\programas (equipo) o en el Inicio\programas de%APPDATA%\Microsoft\Windows\Start (usuario)
     * Si una actualización cambia el manifiesto de los elementos visuales o los recursos a los que hace referencia, el instalador o actualizador debe actualizar el acceso directo para que el manifiesto se analice y se actualicen los recursos almacenados en caché.
-4. *Opta* Si el acceso directo del escritorio no apunta directamente al archivo EXE de la aplicación (por ejemplo, si invoca un controlador de protocolo personalizado como "myapp://"), el menú Inicio no buscará automáticamente el archivo VisualElementsManifest. XML de la aplicación. Para resolverlo, el acceso directo debe especificar la ruta de acceso del archivo del manifiesto de elementos visuales con System. AppUserModel. VisualElementsManifestHintPath (). Se puede establecer en el acceso directo con las mismas técnicas que System.AppUserModel.ID. No es necesario usar System.AppUserModel.ID, pero puede hacerlo si desea que el acceso directo coincida con el identificador de modelo de usuario de aplicación explícito de la aplicación si se usa uno.  Vea la sección [creación de acceso directo](#sample-app-launcher-shortcut-creation) del iniciador de C++ aplicaciones de ejemplo siguiente para obtener un ejemplo.
+4. *Opcional:* Si el acceso directo del escritorio no apunta directamente al archivo EXE de la aplicación (por ejemplo, si invoca un controlador de protocolo personalizado como "myapp://"), el menú Inicio no buscará automáticamente el archivo VisualElementsManifest. XML de la aplicación. Para resolverlo, el acceso directo debe especificar la ruta de acceso del archivo del manifiesto de elementos visuales con System. AppUserModel. VisualElementsManifestHintPath (). Se puede establecer en el acceso directo con las mismas técnicas que System.AppUserModel.ID. No es necesario usar System.AppUserModel.ID, pero puede hacerlo si desea que el acceso directo coincida con el identificador de modelo de usuario de aplicación explícito de la aplicación si se usa uno.  Vea la sección [creación de acceso directo del iniciador de aplicaciones de ejemplo](#sample-app-launcher-shortcut-creation) siguiente para obtener un C++ ejemplo.
 
 ### <a name="sample-visual-elements-manifest"></a>Manifiesto de elementos visuales de ejemplo
 
 ```xml
-<Application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Application xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
   <VisualElements
     ShowNameOnSquare150x150Logo="on"
     Square150x150Logo="YOUR_APP_LOGO_150X150.png"
@@ -165,7 +165,7 @@ IconFile=C:\Program Files (x86)\MyLauncher\apps\app-identifier\game.exe
 IconIndex=0
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 * [Ejemplo de modelo de realidad mixta](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MixedRealityModel) que contiene un iniciador de aplicaciones 3D.
 * [Guía de diseño del iniciador de aplicaciones 3D](3d-app-launcher-design-guidance.md)

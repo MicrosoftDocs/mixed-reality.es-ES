@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: auriculares inmersivo, optimización del rendimiento, VR, caso práctico
-ms.openlocfilehash: 990a5ee6de07b6416e3150a7885220409a9c8d93
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 05f97188c81d85685540be998111ecfc47d9ef9c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523401"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436506"
 ---
 # <a name="case-study---scaling-datascape-across-devices-with-different-performance"></a>Caso práctico: escalado de Datascape entre dispositivos con un rendimiento diferente
 
@@ -43,7 +43,7 @@ Nos hemos administrado para obtener tanto la interfaz de usuario como el mapa qu
 
 ## <a name="background-on-cloud-data"></a>Información general sobre los datos en la nube
 
-Nuestros datos en la nube se han descargado de los servidores de NOAA (http://nomads.ncep.noaa.gov/) y nos venían en tres capas 2D distintas, cada una con la altura superior e inferior de la nube, así como la densidad de la nube para cada celda de la cuadrícula. Los datos se procesaron en una textura de información de la nube donde cada componente estaba almacenado en el componente rojo, verde y azul de la textura para facilitar el acceso a la GPU.
+Nuestros datos en la nube se han descargado de los servidores de NOAA (https://nomads.ncep.noaa.gov/) y nos llegaron en tres capas 2D distintas, cada una con la altura superior e inferior de la nube, así como la densidad de la nube para cada celda de la cuadrícula. Los datos se procesaron en una textura de información de la nube donde cada componente estaba almacenado en el componente rojo, verde y azul de la textura para facilitar el acceso a la GPU.
 
 ## <a name="geometry-clouds"></a>Nubes de geometría
 
@@ -306,16 +306,16 @@ Diseño para los peores escenarios de casos y quizás considere el uso de la rep
 <table style="border:0">
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Robert Ferrese" width="60" height="60" src="images/robert-ferrese-60px.jpg"></td>
-<td style="border:0"><b>Robert Ferrese</b><br>Ingeniero de software@Microsoft</td>
+<td style="border:0"><b>Robert Ferrese</b><br>@Microsoft de Ingeniero de software</td>
 </tr>
 <tr>
 <td style="border:0" width="60px"><img alt="Picture of Dan Andersson" width="60" height="60" src="images/dan-andersson-60px.jpg"></td>
-<td style="border:0"><b>Dan Andersson</b><br>Ingeniero de software@Microsoft</td>
+<td style="border:0"><b>Dan Andersson</b><br>@Microsoft de Ingeniero de software</td>
 </tr>
 </table>
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
 * [Recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md)
 

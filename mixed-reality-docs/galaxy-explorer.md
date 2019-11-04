@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo
-ms.openlocfilehash: a33a1541ef97298facfa9b0ef2d126654dd02f51
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 11cb2ad17f42fe49d84a61480dc8d43698386a1c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526535"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435402"
 ---
 # <a name="galaxy-explorer"></a>Explorador de la galaxia
 
@@ -41,43 +41,43 @@ Compartimos más de 5000 increíbles ideas a lo largo de esas pocas semanas. Nue
 
 Después de un sondeo de Twitter de 24 horas, Galaxy Explorer fue la idea ganadora. Nuestro equipo de desarrollo de HoloLens de diseñadores, artistas y desarrolladores crearon el explorador de Galaxy y le invitamos a que forme parte de este viaje con ellos. Puede seguir el proceso de desarrollo en los vídeos siguientes.
 
-## <a name="ep-1-trust-the-process"></a>EP 1: Confiar en el proceso
+## <a name="ep-1-trust-the-process"></a>EP 1: confiar en el proceso
 
 >[!VIDEO https://www.youtube.com/embed/rIX2XrRQgDg]
 
 En el episodio 1, el equipo de desarrollo comienza el proceso creativo: lluvia de ideas, concepto y decisión sobre lo que se debe establecer como prototipo.
 
-## <a name="ep-2-lets-do-this"></a>EP 2: Vamos a hacer esto
+## <a name="ep-2-lets-do-this"></a>EP 2: vamos a hacer esto
 
 >[!VIDEO https://www.youtube.com/embed/q1ee8a-84Ro]
 
 En el episodio 2, el equipo de desarrollo completa la fase de creación de prototipos, con lo que se abordan los problemas de hardware y se averigua qué ideas se deben seguir.
 
-## <a name="ep-3-laying-foundations"></a>EP 3: Establecimiento de bases
+## <a name="ep-3-laying-foundations"></a>EP 3: establecimiento de bases
 
 >[!VIDEO https://www.youtube.com/embed/fUqni6C4nmo]
 
 En el episodio 3, el equipo comienza la primera semana de desarrollo: creación de un plan, escritura de código de producción, creación de activos gráficos y averiguación de la interfaz de usuario.
 
-## <a name="ep-4-make-it-real"></a>EP 4: Convertirlo en real
+## <a name="ep-4-make-it-real"></a>EP 4: hacer que sea real
 
 >[!VIDEO https://www.youtube.com/embed/ePA6hcaqoug]
 
 En el episodio 4, el equipo profundiza en el desarrollo: incorporar datos científicos, optimizar el proceso de representación e incorporar la asignación espacial.
 
-## <a name="ep-5-see-what-happens"></a>EP 5: Ver lo que sucede
+## <a name="ep-5-see-what-happens"></a>EP 5: ver qué ocurre
 
 >[!VIDEO https://www.youtube.com/embed/Up1EDRrCrho]
 
 En el episodio 5, el equipo de desarrollo prueba la aplicación, busca errores que deben corregirse y refina la experiencia.
 
-## <a name="ep-6-coming-to-life"></a>EP 6: Próximamente
+## <a name="ep-6-coming-to-life"></a>EP 6: ciclo de vida
 
 >[!VIDEO https://www.youtube.com/embed/sMuJFKbylY4]
 
 En el episodio 6, el equipo finaliza la última semana de desarrollo, se prepara para dos semanas de trabajo polaco y refleja el progreso que han realizado.
 
-## <a name="ep-7-the-final-product"></a>EP 7: El producto final
+## <a name="ep-7-the-final-product"></a>EP 7: el producto final
 
 >[!VIDEO https://www.youtube.com/embed/HsnH2Q7HxOA]
 
@@ -89,10 +89,10 @@ Puede encontrar más información y lecciones sobre el desarrollo de Galaxy Expl
 
 ## <a name="meet-the-team"></a>Reunirse con el equipo
 
-![Equipo de desarrollo de Galaxy Explorer](images/syiteampic.jpg)<br>
+![equipo de desarrollo de Galaxy Explorer](images/syiteampic.jpg)<br>
 *Equipo de desarrollo de Galaxy Explorer*
 
-Hemos aprendido que la creación del equipo adecuado es una de las inversiones más importantes que podríamos tomar. Decidimos organizar de forma similar a Game Studio para aquellos con los que está familiarizado con ese modelo de desarrollo. Hemos optado por tener once miembros principales del equipo para controlar el ámbito, ya que disponíamos de un período de tiempo fijo (cree algo frío antes de la compilación el 30 de marzo).
+Hemos aprendido que la creación del equipo adecuado es una de las inversiones más importantes que podríamos tomar. Decidimos organizar de forma similar a Game Studio para aquellos con los que está familiarizado con ese modelo de desarrollo. Hemos optado por tener once miembros principales del equipo para controlar el ámbito, ya que disponíamos de un período de tiempo fijo (creamos algo frío antes de la compilación el 30 de marzo de 2016).
 
 Para este proyecto, comenzamos con un productor, Jessica quién llevó a cabo la planeación, la revisión del progreso y el mantenimiento de todo el día. Es la que tiene un pelo rosa. Teníamos un director de diseño (Jon) y un Diseñador Senior (Peter). Contenían la visión creativa del explorador de Galaxy. Jon es el en gafas de la fila de front-end y Peter es el segundo de la derecha de la parte posterior.
 
@@ -104,6 +104,6 @@ Tendremos un evaluador a tiempo completo: Lena, que probó nuestras compilacione
 
 Somos parte de un estudio más grande en Microsoft (piense en el equipo en el desarrollo que no es de juegos). También había una gran cantidad de personas involucradas: llamamos en el talento de nuestro Director de arte, el ingeniero de audio y el liderazgo de estudio con frecuencia a lo largo del proyecto, pero esas personas eran recursos compartidos con otros proyectos que el equipo más amplio tiene.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Caso práctico: creación de una galaxia en una realidad mixta](case-study-creating-a-galaxy-in-mixed-reality.md)
 * [Repositorio de GitHub de Galaxy Explorer](https://github.com/Microsoft/GalaxyExplorer)

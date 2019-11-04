@@ -1,17 +1,17 @@
 ---
 title: Cuentas en HoloLens
 description: Cómo configurar y administrar cuentas de usuario en HoloLens.
-author: ''
+author: tmlyon
 ms.author: toddly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, usuario, cuenta, AAD, ADFS, cuenta Microsoft, MSA, credenciales
-ms.openlocfilehash: 14f43b08b6ccb396bcf39c4082c840c65ac78cf9
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 5579cf53948b8bdbd4b41973dde7b8fc70a5aa31
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516815"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437083"
 ---
 # <a name="accounts-on-hololens"></a>Cuentas en HoloLens
 
@@ -40,7 +40,7 @@ Dentro de una sola cuenta de dispositivo, los usuarios pueden vincular credencia
 
 ## <a name="using-single-sign-on-within-an-app"></a>Uso del inicio de sesión único en una aplicación
 
-Como desarrollador de aplicaciones, puede aprovechar la posibilidad de tener una identidad conectada en HoloLens con las [API del administrador de cuentas de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), igual que haría en otros dispositivos Windows. Algunos ejemplos de código de estas API están disponibles [aquí](http://go.microsoft.com/fwlink/p/?LinkId=620621).
+Como desarrollador de aplicaciones, puede aprovechar la posibilidad de tener una identidad conectada en HoloLens con las [API del administrador de cuentas de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/windows.security.authentication.web.core.aspx), igual que haría en otros dispositivos Windows. Algunos ejemplos de código de estas API están disponibles [aquí](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
 Las interrupciones de cuenta que pueden producirse, como solicitar el consentimiento del usuario para la información de la cuenta, la autenticación en dos fases, etc., deben administrarse cuando la aplicación solicita un token de autenticación.
 
@@ -48,7 +48,7 @@ Si la aplicación requiere un tipo de cuenta específico que no se ha vinculado 
 
 ## <a name="enterprise-and-other-authentication"></a>Empresa y otra autenticación
 
-Si la aplicación hace uso de otros tipos de autenticación, como NTLM, básico o Kerberos, puede usar la interfaz de usuario de credenciales de [Windows](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) para recopilar, procesar y almacenar las credenciales del usuario. La experiencia del usuario para recopilar estas credenciales es muy similar a otras interrupciones de cuentas controladas por la nube y se mostrarán como una aplicación secundaria en la parte superior de la aplicación 2D, o bien suspenderán brevemente una aplicación de Unity para mostrar la interfaz de usuario.
+Si la aplicación hace uso de otros tipos de autenticación, como NTLM, básico o Kerberos, puede usar la interfaz de usuario de [credenciales de Windows](https://msdn.microsoft.com/library/windows/apps/windows.security.credentials.ui.aspx) para recopilar, procesar y almacenar las credenciales del usuario. La experiencia del usuario para recopilar estas credenciales es muy similar a otras interrupciones de cuentas controladas por la nube y se mostrarán como una aplicación secundaria en la parte superior de la aplicación 2D, o bien suspenderán brevemente una aplicación de Unity para mostrar la interfaz de usuario.
 
 ## <a name="deprecated-apis"></a>API en desuso
 

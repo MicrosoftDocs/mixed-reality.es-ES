@@ -1,24 +1,24 @@
 ---
-title: Agregar entornos de inicio personalizados
+title: Diseñe sus propios entornos envolventes
 description: Además de los entornos de inicio de la realidad mixta de Windows que proporcionamos, puede experimentar con la creación y el uso de los suyos propios.
 author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Home, entornos personalizados, lugares, acantilado House, Skyloft, User, Create
-ms.openlocfilehash: d0cdb878f1994cb5f898f06b98d74dee3dd4fdf1
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e133e1438410540592a51f54ed136aecd04c6244
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024532"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437081"
 ---
-# <a name="add-custom-home-environments"></a>Agregar entornos de inicio personalizados
+# <a name="design-your-own-immersive-environments"></a>Diseñe sus propios entornos envolventes
 
 >[!NOTE]
 >Se trata de una característica experimental. Pruébelo y disfrute de divertido, pero no se sorprenda si todo no funciona de la manera esperada. Estamos evaluando la viabilidad de esta característica y nos interesa usarla, así que díganos su experiencia (y los errores que encuentre) en los [foros para desarrolladores](https://forums.hololens.com/categories/custom-home-environments).
 
-A partir de la [actualización del 2018 de abril de Windows 10](#release-notes-april-2018.md), hemos habilitado una característica experimental que le permite agregar entornos personalizados al selector de ubicaciones (en el menú Inicio) para usarlos como [Página principal de Windows Mixed Reality](#navigating-the-windows-mixed-reality-home.md). Windows Mixed Reality tiene dos entornos predeterminados, acantilado House y Skyloft, que puede elegir como su hogar. La creación de entornos personalizados le permite expandir esa lista con sus propias creaciones. Estamos haciendo que esté disponible en un estado temprano para evaluar el interés de los creadores y desarrolladores, ver qué tipos de mundos crea y comprender cómo trabaja con diferentes herramientas de creación.
+A partir de la [actualización del 2018 de abril de Windows 10](release-notes-april-2018.md), hemos habilitado una característica experimental que le permite agregar entornos personalizados al selector de ubicaciones (en el menú Inicio) para usarlos como [Página principal de Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md). Windows Mixed Reality tiene dos entornos predeterminados, acantilado House y Skyloft, que puede elegir como su hogar. La creación de entornos personalizados le permite expandir esa lista con sus propias creaciones. Estamos haciendo que esté disponible en un estado temprano para evaluar el interés de los creadores y desarrolladores, ver qué tipos de mundos crea y comprender cómo trabaja con diferentes herramientas de creación.
 
 Al usar un entorno personalizado, observará que el telepuerto, la interacción con las aplicaciones y la colocación de hologramas funciona igual que en la casa del acantilado y Skyloft. Puede explorar la web en un panorama de fantasía o rellenar una ciudad futurista con hologramas; las posibilidades son infinitas.
 
@@ -31,7 +31,7 @@ Al usar un entorno personalizado, observará que el telepuerto, la interacción 
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -45,9 +45,9 @@ Al usar un entorno personalizado, observará que el telepuerto, la interacción 
 ## <a name="trying-a-sample-environment"></a>Probar un entorno de ejemplo
 
 Hemos creado un entorno de ejemplo que muestra algunas de las posibilidades creativas de entornos domésticos personalizados. Siga estos pasos para probarlo:
-1. [Descargar nuestro entorno de ejemplo](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) de la isla de fantasía (los vínculos apuntan al archivo ejecutable autoextraíble).
+1. [Descargue nuestro entorno de ejemplo](https://download.microsoft.com/download/B/2/5/B25C1AEF-40CD-4B03-A596-4BCA3D33035A/Fantasy_Island.exe) de la isla de fantasía (vínculo apunta al archivo ejecutable autoextraíble).
 
-    ![Entorno de ejemplo de isla de fantasía](images/FantasyLand.jpg)<br>
+    ![entorno de ejemplo de isla de fantasía](images/FantasyLand.jpg)<br>
     *Entorno de ejemplo de isla de fantasía*<br>
 
 2. Ejecute el archivo **Fantasy_Island. exe** que acaba de descargar.
@@ -55,7 +55,7 @@ Hemos creado un entorno de ejemplo que muestra algunas de las posibilidades crea
     > [!NOTE]
     > Al intentar ejecutar un archivo. exe descargado de la web (como este), es posible que aparezca un mensaje emergente "Windows protegió su PC". Para ejecutar Fantasy_Island. exe desde esta ventana emergente, seleccione **más información** y, a continuación, **ejecute de todos modos**. Esta configuración de seguridad está destinada a protegerle de la descarga de archivos que no quiera confiar, por lo que solo debe elegir esta opción cuando confíe en el origen del archivo.
 
-3. Abra el **Explorador de archivos** y vaya a la carpeta entornos; para ello, pegue lo siguiente en `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`la barra de direcciones:.
+3. Abra el **Explorador de archivos** y vaya a la carpeta entornos; para ello, pegue lo siguiente en la barra de direcciones: `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`.
 4. Copie el entorno de ejemplo que descargó en esta carpeta.
 5. Reinicie el **portal de realidad mixta**. Esto actualizará la lista de entornos en el selector de ubicaciones.
 6. Coloque el casco. Una vez que esté en el hogar, abra el **menú Inicio** con el botón Windows del controlador.
@@ -123,7 +123,7 @@ El nombre de archivo de la carpeta entornos se usará en el selector de lugares.
 
 ### <a name="how-do-i-remove-custom-environments-from-my-places-picker"></a>Cómo quitar entornos personalizados del selector My Places?
 
-Para quitar un entorno personalizado, abra la carpeta entornos en el equipo (`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`) y elimine el entorno. Una vez que reinicie el portal de realidad mixta, este entorno ya no aparecerá en el selector de lugares. 
+Para quitar un entorno personalizado, abra la carpeta entornos en su PC (`%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState`) y elimine el entorno. Una vez que reinicie el portal de realidad mixta, este entorno ya no aparecerá en el selector de lugares. 
 
 ### <a name="how-do-i-default-to-my-favorite-custom-environment"></a>¿Cómo predeterminada a mi entorno personalizado favorito?
 
@@ -149,6 +149,6 @@ La ubicación de generación predeterminada se encuentra en 0, 0, 0 en el entorn
 
 Al crear el entorno personalizado, utilizará una simulación de representación acústica que no coincide con el espacio físico que ha creado. El sonido puede proponerse de direcciones equivocadas y puede sonar silenciado. 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Convertidor de activos de Windows Mixed Reality (en GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
 

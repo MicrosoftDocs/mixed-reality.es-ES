@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, simulación, pruebas
-ms.openlocfilehash: 8152181bdbe8c83d2b706b34f1f2fb5d51f4c880
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: 503533bc5a2e9307b7c5217632d42670285aac0a
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414532"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437549"
 ---
 # <a name="perception-simulation"></a>Simulación de percepción
 
@@ -27,18 +27,18 @@ Para empezar a usar la simulación en el código, empiece por crear un objeto IP
 3. Agregue los siguientes archivos binarios al proyecto como referencias (proyecto-> referencia del complemento de >...). Puede encontrarlos en% ProgramFiles (x86)% \ Microsoft XDE\\(versión), como **% ProgramFiles (x86)% \ Microsoft XDE\\10.0.18362.0** para el emulador de HoloLens 2.  (Nota: aunque los archivos binarios forman parte del emulador de HoloLens 2, también funcionan para Windows Mixed Reality en el escritorio). un. PerceptionSimulationManager. Interop. dll: contenedor C# administrado para la simulación de percepción.
     b. PerceptionSimulationRest. dll-Library para configurar un canal de comunicación de socket web a HoloLens o emulador.
     c. SimulationStream. Interop. dll: tipos compartidos para la simulación.
-4. Agregue el archivo binario de implementación PerceptionSimulationManager. dll al proyecto a. Agréguelo primero como un archivo binario al proyecto (proyecto-> Agregar > elemento existente...). Guárdelo como un vínculo para que no lo copie en la carpeta de origen del proyecto. ![Agregue PerceptionSimulationManager. dll al proyecto como un vínculo](images/saveaslink.png) b. Después, asegúrese de que se copia en la carpeta de salida en la compilación. Está en la hoja de propiedades del archivo binario. ![Marque PerceptionSimulationManager. dll para copiarlo en el directorio de salida](images/copyalways.png)
+4. Agregue el archivo binario de implementación PerceptionSimulationManager. dll al proyecto a. Agréguelo primero como un archivo binario al proyecto (proyecto-> Agregar > elemento existente...). Guárdelo como un vínculo para que no lo copie en la carpeta de origen del proyecto. ![agregar PerceptionSimulationManager. dll al proyecto como un vínculo](images/saveaslink.png) b. Después, asegúrese de que se copia en la carpeta de salida en la compilación. Está en la hoja de propiedades del archivo binario. ![marcar PerceptionSimulationManager. dll para copiarlo en el directorio de salida](images/copyalways.png)
 5. Establezca la plataforma de soluciones activa en x64.  (Utilice la Configuration Manager para crear una entrada de plataforma para x64 si aún no existe ninguna).
 
 ## <a name="creating-an-iperceptionsimulation-manager-object"></a>Creación de un objeto de administrador de IPerceptionSimulation
 
 Para controlar la simulación, emitirá actualizaciones de los objetos recuperados de un objeto IPerceptionSimulationManager. El primer paso es obtener ese objeto y conectarlo al dispositivo o emulador de destino. Para obtener la dirección IP del emulador, haga clic en el botón portal de dispositivos en la [barra de herramientas](using-the-hololens-emulator.md) .
 
-![Abra el icono](images/emulator-deviceportal.png) del portal de dispositivos **abrir portal de dispositivos**: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.  En el caso de Windows Mixed Reality, puede recuperarse en la aplicación de configuración en "actualizar & seguridad" y luego en "para desarrolladores" en la sección "conectar usando:" en "habilitar el portal de dispositivos".  Asegúrese de anotar la dirección IP y el puerto.
+![icono abrir el portal de dispositivos](images/emulator-deviceportal.png) **abrir el portal**de dispositivos: Abra el portal de dispositivos de Windows para el sistema operativo HoloLens en el emulador.  En el caso de Windows Mixed Reality, puede recuperarse en la aplicación de configuración en "actualizar & seguridad" y luego en "para desarrolladores" en la sección "conectar usando:" en "habilitar el portal de dispositivos".  Asegúrese de anotar la dirección IP y el puerto.
 
 En primer lugar, llame a RestSimulationStreamSink. Create para obtener un objeto RestSimulationStreamSink. Este es el dispositivo de destino o el emulador que controlará la conexión http. Los comandos se pasarán y controlarán en el [portal de dispositivos de Windows](using-the-windows-device-portal.md) que se ejecuta en el dispositivo o emulador. Los cuatro parámetros que necesitará para crear un objeto son:
-* URI del URI: dirección IP del dispositivo de destino (por ejemplo,"http://123.123.123.123" o "http://123.123.123.123:50080")
-* Credenciales de System .net. NetworkCredential: nombre de usuario/contraseña para conectarse al [portal de dispositivos de Windows](using-the-windows-device-portal.md) en el emulador o dispositivo de destino. Si se va a conectar al emulador a través de su dirección local (por ejemplo,*168.* . *) en el mismo equipo, se aceptarán las credenciales.
+* URI del URI: dirección IP del dispositivo de destino (por ejemplo, "https://123.123.123.123" o "https://123.123.123.123:50080")
+* Credenciales de System .net. NetworkCredential: nombre de usuario/contraseña para conectarse al [portal de dispositivos de Windows](using-the-windows-device-portal.md) en el emulador o dispositivo de destino. Si se va a conectar al emulador a través de su dirección local (por ejemplo,*168...* *) en el mismo equipo, se aceptarán las credenciales.
 * bool normal: true para la prioridad normal; false para la prioridad baja. Por lo general, desea establecer este valor en *true* para los escenarios de prueba, lo que permite que la prueba tome el control.  El emulador y la simulación de Windows Mixed Reality usan conexiones de baja prioridad.  Si la prueba también usa una conexión de prioridad baja, la conexión establecida más recientemente tendrá el control.
 * System. Threading. CancellationToken token-token para cancelar la operación asincrónica.
 
@@ -78,7 +78,7 @@ namespace ConsoleApplication1
                 {
                     sink = await RestSimulationStreamSink.Create(
                         // use the IP address for your device/emulator
-                        new Uri("http://169.254.227.115"),
+                        new Uri("https://169.254.227.115"),
                         // no credentials are needed for the emulator
                         new System.Net.NetworkCredential("", ""),
                         // normal priorty
@@ -134,7 +134,7 @@ namespace ConsoleApplication1
                 {
                     sink = await RestSimulationStreamSink.Create(
                         // use the IP address for your device/emulator
-                        new Uri("http://169.254.227.115"),
+                        new Uri("https://169.254.227.115"),
                         // no credentials are needed for the emulator
                         new System.Net.NetworkCredential("", ""),
                         // normal priorty

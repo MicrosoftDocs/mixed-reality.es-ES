@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/10/2019
 ms.topic: article
 keywords: solución de problemas, problema conocido, ayuda
-ms.openlocfilehash: 80bd7499c0075399e516648dd92b7515fdba753a
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: fe4e83764433cea5a772b26796d79ac156a59c5d
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122130"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434258"
 ---
 # <a name="hololens-known-issues"></a>Problemas conocidos de HoloLens
 
@@ -24,7 +24,7 @@ Esta es la lista actual de problemas conocidos de HoloLens que afectan a los des
 
 Visual Studio ha publicado VS 2019 versión 16,2, que incluye una corrección para este problema. Se recomienda actualizar a esta versión más reciente para evitar que se produzca este error.
 
-Causa raíz del problema: Los usuarios que usaron Visual Studio 2015 o versiones anteriores de Visual Studio 2017 para implementar y depurar aplicaciones en HoloLens y, posteriormente, usar las versiones más recientes de Visual Studio 2017 o Visual Studio 2019 con el mismo HoloLens se verán afectados. Las versiones más recientes de Visual Studio implementan una nueva versión de un componente, pero los archivos de la versión anterior se dejan en el dispositivo, lo que provoca un error en la versión más reciente.  Esto produce el siguiente mensaje de error: DEP0100: Asegúrese de que el dispositivo de destino tiene habilitado el modo de desarrollador. No se pudo obtener una licencia de <ip> Desarrollador en debido al error 80004005.
+Problema raíz: los usuarios que usaron Visual Studio 2015 o versiones anteriores de Visual Studio 2017 para implementar y depurar aplicaciones en HoloLens y, posteriormente, usar las versiones más recientes de Visual Studio 2017 o Visual Studio 2019 con el mismo HoloLens serán Qué. Las versiones más recientes de Visual Studio implementan una nueva versión de un componente, pero los archivos de la versión anterior se dejan en el dispositivo, lo que provoca un error en la versión más reciente.  Esto produce el siguiente mensaje de error: DEP0100: Asegúrese de que el dispositivo de destino tiene habilitado el modo de desarrollador. No se pudo obtener una licencia de Desarrollador en <ip> debido al error 80004005.
  
 **Solución**: 
 
@@ -44,7 +44,7 @@ Aunque este problema se ha corregido en Visual Studio 2019 16,2, los desarrollad
  
 6. Haga clic con el botón derecho en el proyecto en Explorador de soluciones y elija Agregar > elemento existente.
  
-7. Vaya a C:\Archivos de programa (x86) \Windows Kits\10\bin\10.0.18362.0\x86 y cambie el filtro a "todos los\*archivos\*(.)".
+7. Vaya a C:\Archivos de programa (x86) \Windows Kits\10\bin\10.0.18362.0\x86 y cambie el filtro a "todos los archivos (\*.\*) "
  
 8. Seleccione SirepClient. dll y SshClient. dll y haga clic en "agregar".
  
@@ -98,7 +98,7 @@ Para ver si el dispositivo puede realizar la actualización, haga lo siguiente:
 3.  Si está disponible la actualización a 17763,380, actualice a esta compilación para recibir la corrección del error de bloqueo de la aplicación.
 4.  Al actualizar a esta versión del sistema operativo, las aplicaciones deben funcionar según lo previsto.
 
-Además, como hacemos con cada versión del sistema operativo HoloLens, hemos publicado la imagen de FFU en el centro de descarga https://aka.ms/hololensdownload/10.0.17763.380 de Microsoft en. 
+Además, como hacemos con cada versión del sistema operativo HoloLens, hemos publicado la imagen de FFU en el centro de descarga de Microsoft en https://aka.ms/hololensdownload/10.0.17763.380. 
 
 Si no desea realizar la actualización, hemos publicado una nueva versión de la aplicación Microsoft Store UWP a partir de 3/29. Una vez que tenga la versión actualizada del almacén:
 
@@ -110,12 +110,12 @@ Si no desea realizar la actualización, hemos publicado una nueva versión de la
 
 Si el dispositivo sigue sin poder cargar aplicaciones, puede transferir localmente una versión del marco de trabajo de .NET Native y el tiempo de ejecución a través del centro de descarga haciendo lo siguiente:
 
-1)  Descargue [este archivo zip](http://download.microsoft.com/download/8/5/C/85C23745-794C-419D-B8D7-115FBCCD6DA7/netfx_1.7.zip) del centro de descarga de Microsoft.  La descompresión producirá dos archivos.  Microsoft. NET. Native. Runtime. 1.7. appx y Microsoft. NET. Native. Framework. 1.7. appx
-2)  Compruebe que el dispositivo está desbloqueado.  Si no lo ha hecho antes de las instrucciones que debe hacer [aquí](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fmixed-reality%2Fusing-the-windows-device-portal&data=02%7C01%7Cjalynch%40microsoft.com%7C3622a462ebd04870fccb08d6ae94cad6%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636888351416725140&sdata=ZB6Zdx9GV95PcU6FAVgWaP3eQNMsyIc%2FbNDEby3Sb8A%3D&reserved=0).
-3)  A continuación, desea entrar en el portal de dispositivos de Windows.  Nuestra recomendación es hacer esto a través de USB y lo haría escribiendo http://127.0.0.1:10080 en el explorador.  
+1)  Descargue [este archivo zip](https://download.microsoft.com/download/8/5/C/85C23745-794C-419D-B8D7-115FBCCD6DA7/netfx_1.7.zip) del centro de descarga de Microsoft.  La descompresión producirá dos archivos.  Microsoft. NET. Native. Runtime. 1.7. appx y Microsoft. NET. Native. Framework. 1.7. appx
+2)  Compruebe que el dispositivo está desbloqueado.  Si no lo ha hecho antes de las instrucciones que debe hacer [aquí](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2F%2Fwindows%2Fmixed-reality%2Fusing-the-windows-device-portal&data=02%7C01%7Cjalynch%40microsoft.com%7C3622a462ebd04870fccb08d6ae94cad6%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636888351416725140&sdata=ZB6Zdx9GV95PcU6FAVgWaP3eQNMsyIc%2FbNDEby3Sb8A%3D&reserved=0).
+3)  A continuación, desea entrar en el portal de dispositivos de Windows.  Nuestra recomendación es hacer esto a través de USB y lo haría escribiendo https://127.0.0.1:10080 en el explorador.  
 4)  Una vez que tenga el portal de dispositivos de Windows, necesitará "cargar" los dos archivos que descargó.  Para ello, debe ir a la barra lateral izquierda hasta llegar a la sección "aplicaciones" y hacer clic en "aplicaciones".
 5)  Verá una pantalla similar a la siguiente.  Quiere ir a la sección en la que se indica "instalar aplicación" y buscar dónde descomprimió esos dos archivos APPX.  Solo puede realizar una sola vez, por lo que después de seleccionar la primera, haga clic en "ir" en la sección implementar.  A continuación, haga esto para el segundo archivo APPX. 
-  ![Windows Device portal para instalar la aplicación de instalación de prueba](images/20190322-DevicePortal.png)<br>
+  ![el portal de dispositivos de Windows para instalar](images/20190322-DevicePortal.png) de aplicación de carga<br>
 6)  En este punto creemos que las aplicaciones deben empezar a funcionar de nuevo y que también puede acceder a la tienda.
 7)  En algunos casos, es necesario ejecutar el paso adicional de iniciar la aplicación de visor 3D antes de que se inicien las aplicaciones afectadas. 
 
@@ -128,14 +128,14 @@ Durante la configuración de OOBE &, hay un tiempo de espera de credencial de 2 
 Se recomienda usar un teclado Bluetooth para escribir contraseñas largas.
 
 >[!NOTE]
-> Si se selecciona la red incorrecta durante la OOBE, el dispositivo deberá restablecerse por completo. Las instrucciones se pueden encontrar [aquí.](https://docs.microsoft.com/en-us/windows/mixed-reality/reset-or-recover-your-hololens#perform-a-full-device-recovery) 
+> Si se selecciona la red incorrecta durante la OOBE, el dispositivo deberá restablecerse por completo. Las instrucciones se pueden encontrar [aquí.](https://docs.microsoft.com//windows/mixed-reality/reset-or-recover-your-hololens#perform-a-full-device-recovery) 
 
 ## <a name="device-update"></a>Actualización del dispositivo
 * 30 segundos después de una nueva actualización, el shell puede desaparecer una vez. Realice el gesto de **floración** para reanudar la sesión.
 
-## <a name="visual-studio"></a>Programa para la mejora
+## <a name="visual-studio"></a>Visual Studio
 * Vea [instalar las herramientas](install-the-tools.md) para la versión más actualizada de Visual Studio recomendada para el desarrollo de HoloLens.
-* Al implementar una aplicación desde Visual Studio a HoloLens, es posible que vea el error: **La operación solicitada no se puede realizar en un archivo con una sección asignada por el usuario abierta. (Excepción de HRESULT: 0x800704C8)** . Si esto ocurre, inténtelo de nuevo y la implementación se realizará normalmente.
+* Al implementar una aplicación desde Visual Studio a HoloLens, es posible que vea el error: **no se puede realizar la operación solicitada en un archivo con una sección asignada por el usuario abierta. (Excepción de HRESULT: 0x800704C8)** . Si esto ocurre, inténtelo de nuevo y la implementación se realizará normalmente.
 
 ## <a name="emulator"></a>Emulador
 * No todas las aplicaciones del Microsoft Store son compatibles con el emulador. Por ejemplo, los conkers y los fragmentos jóvenes no se pueden reproducir en el emulador.
@@ -144,7 +144,7 @@ Se recomienda usar un teclado Bluetooth para escribir contraseñas largas.
 
 ## <a name="unity"></a>Unity
 * Vea [instalar las herramientas](install-the-tools.md) para la versión más actualizada de Unity recomendada para el desarrollo de HoloLens.
-* Los problemas conocidos de la versión preliminar técnica de Unity HoloLens se documentan en los [foros de Unity de hololens](http://forum.unity3d.com/threads/known-issues.394627/).
+* Los problemas conocidos de la versión preliminar técnica de Unity HoloLens se documentan en los [foros de Unity de hololens](https://forum.unity3d.com/threads/known-issues.394627/).
 
 ## <a name="windows-device-portal"></a>Windows Device Portal
 * La característica de vista previa dinámica de la captura de realidad mixta puede presentar varios segundos de latencia.

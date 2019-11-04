@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidad mixta, localizador espacial, marco de referencia espacial, sistema de coordenadas espaciales, fase espacial, código de ejemplo, estabilización de imágenes, delimitador espacial, almacén de delimitador espacial, pérdida de seguimiento, tutorial
-ms.openlocfilehash: 5a48e0a829ba8647718e28ec20760d8a764b13fe
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65628972"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436226"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemas de coordenadas en DirectX
 
@@ -37,7 +37,7 @@ La aplicación no debe crear SpatialCoordinateSystems directamente, sino que se 
 
 Todos los sistemas de coordenadas devueltos por estos objetos son zurdos, con + y hacia arriba, + x a la derecha y + z hacia atrás. Puede recordar en qué dirección apunta el eje z positivo apuntando los dedos de la mano izquierda o derecha en la dirección x positiva y enrollándose en la dirección y positiva. La dirección a la que apunta el pulgar (acercándose o alejándose de ti) es la dirección que el eje z positivo apunta para ese sistema de coordenadas. La siguiente ilustración muestra estos dos sistemas de coordenadas.
 
-![Sistemas de coordenadas del lado izquierdo y derecho](images/left-hand-right-hand.gif)<br>
+![los sistemas de coordenadas del lado izquierdo y derecho](images/left-hand-right-hand.gif)<br>
 *Sistemas de coordenadas del lado izquierdo y derecho*
 
 Para arrancar en un SpatialCoordinateSystem en función de la posición de un HoloLens, use la clase <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> para crear un marco de referencia adjunto o estacionario, como se describe en las secciones siguientes.
@@ -48,7 +48,7 @@ Se tiene acceso al sistema de coordenadas para los auriculares con forma de la r
 
 En primer lugar, se obtiene la fase espacial y se suscriben las actualizaciones a ella: 
 
-Código para la inicialización de la **fase espacial**
+Código para la **inicialización de la fase espacial**
 
 ```
 SpatialStageManager::SpatialStageManager(
@@ -175,7 +175,7 @@ void SpatialStageManager::OnCurrentChanged(Object^ /*o*/)
 El conjunto de vértices que definen el límite de la fase se proporciona en el orden de las agujas del reloj. El shell de Windows Mixed Reality dibuja una barrera en el límite cuando el usuario la trata; es posible que desee triangular el área que se puede examinar para sus propios fines. El siguiente algoritmo se puede usar para triangular de la fase.
 
 
-Código para triangulación en la **fase espacial**
+Código para **triangulación en la fase espacial**
 
 ```
 std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<float3> const& vertices)
@@ -313,17 +313,17 @@ Use la propiedad [RawCoordinateSystem](https://msdn.microsoft.com/library/window
 
 Puede conservar un SpatialAnchor localmente mediante la clase [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx) y, a continuación, recuperarlo en una sesión de aplicación futura en el mismo dispositivo HoloLens.
 
-Mediante el uso de anclajes espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure</a>, puede crear un delimitador de la nube durable desde un SpatialAnchor local, que la aplicación puede ubicar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física.  Esto permite compartir experiencias en tiempo real.
+Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a>, puede crear un delimitador de la nube durable desde un SpatialAnchor local, que la aplicación puede ubicar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física.  Esto permite compartir experiencias en tiempo real.
 
 También se puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para la persistencia de hologramas asincrónicos en dispositivos Android, iOS y HoloLens.  Al compartir un delimitador espacial en la nube duradera, varios dispositivos pueden observar el mismo holograma persistente a lo largo del tiempo, aunque los dispositivos no estén presentes juntos simultáneamente.
 
-Para empezar a crear experiencias compartidas en la aplicación de HoloLens, pruebe la guía de <a href="https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens" target="_blank">Inicio rápido de hololens</a>de 5 minutos de delimitadores espaciales de Azure.
+Para empezar a crear experiencias compartidas en la aplicación de HoloLens, pruebe la guía de inicio rápido de HoloLens de 5 minutos de <a href="https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens" target="_blank">delimitadores espaciales de Azure</a>.
 
 Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-cpp-winrt" target="_blank">crear y buscar delimitadores en HoloLens</a>.  También hay tutoriales disponibles para <a href="https://docs.microsoft.com/azure/spatial-anchors/create-locate-anchors-overview" target="_blank">Android e iOS</a> , lo que le permite compartir los mismos delimitadores en todos los dispositivos.
 
 ### <a name="create-spatialanchors-for-holographic-content"></a>Crear SpatialAnchors para contenido holográfica
 
-En este ejemplo de código, se modificó la plantilla de aplicación de Windows Holographic para crear delimitadores cuando se detecta el gesto presionado. Después, el cubo se coloca en el delimitador durante la fase de representación.
+En este ejemplo de código, se modificó la plantilla de aplicación de Windows Holographic para crear delimitadores cuando se detecta el gesto **presionado** . Después, el cubo se coloca en el delimitador durante la fase de representación.
 
 Dado que la clase auxiliar admite varios delimitadores, se pueden colocar tantos cubos como se deseen con este ejemplo de código.
 
@@ -549,7 +549,7 @@ Con nuestra clase auxiliar, casi innecesaria para encapsular la función Clear. 
    }
 ```
 
-### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>Ejemplo: Relación entre los sistemas de coordenadas de anclaje y los sistemas de coordenadas de fotogramas de referencia estacionario
+### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>Ejemplo: vinculación de sistemas de coordenadas de anclaje a sistemas de coordenadas de fotogramas de referencia estacionales
 
 Supongamos que tiene un delimitador y quiere relacionar algo en el sistema de coordenadas del delimitador con el SpatialStationaryReferenceFrame que ya está usando para la mayor parte de su contenido. Puede usar [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) para obtener una transformación del sistema de coordenadas del delimitador al marco de referencia estacionaria:
 
@@ -616,7 +616,7 @@ Durante la actualización, ahora obtenemos el sistema de coordenadas en la marca
 
 ### <a name="get-a-spatial-pointer-pose-and-follow-the-users-gaze"></a>Obtener una pose de puntero espacial y seguir el
 
-Queremos que el holograma de ejemplo siga la [mirada](gaze.md)del usuario, de forma similar a cómo el shell holográfica puede seguir a la mirada del usuario. Para ello, es necesario obtener el SpatialPointerPose de la misma marca de tiempo.
+Queremos que el holograma de ejemplo siga la [mirada](gaze-and-commit.md)del usuario, de forma similar a cómo el shell holográfica puede seguir a la mirada del usuario. Para ello, es necesario obtener el SpatialPointerPose de la misma marca de tiempo.
 
 ```
 SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordinateSystem, prediction->Timestamp);
@@ -730,7 +730,7 @@ Desde **HolographicTagAlongSampleMain:: Render**:
        );
 ```
 
-Ya está. Ahora, el holograma "persecución" es una posición de 2 metros delante de la dirección del usuario.
+Eso es todo. Ahora, el holograma "persecución" es una posición de 2 metros delante de la dirección del usuario.
 
 >[!NOTE]
 >En este ejemplo también se carga contenido adicional; Consulte StationaryQuadRenderer. cpp.
@@ -794,7 +794,7 @@ Desde **AppMain. cpp:**
 
 Las API de [asignación espacial](spatial-mapping-in-directx.md) hacen uso de los sistemas de coordenadas para obtener las transformaciones del modelo para las mallas de superficie.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Delimitadores espaciales](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

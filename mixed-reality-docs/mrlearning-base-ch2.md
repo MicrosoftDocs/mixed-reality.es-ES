@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 45833ba22305acedb45bfdc9752c0b278a693190
-ms.sourcegitcommit: 9636573eabdc78db6875e831a9c894a2ff173a99
+ms.openlocfilehash: 6ce5d96e98fd5489632f942c9b9f4885a7aa1480
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629181"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437780"
 ---
-# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta 
+# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta 
 
-En la lección anterior, aprendió sobre algunas de las funcionalidades que el kit de herramientas de realidad mixta (MRTK) tiene que ofrecer al iniciar su primera aplicación para HoloLens 2. En la siguiente lección aprenderá a crear y organizar botones junto con los paneles de texto de la interfaz de usuario y a usar interacción predeterminada (Touch) para interactuar con cada botón. También explorarás la incorporación de acciones y efectos sencillos, como cambiar el tamaño, el sonido y color de los objetos. Este módulo presentará conceptos básicos sobre la modificación de perfiles de MRTK, empezando por desactivar la visualización de malla espacial. 
+En la lección anterior, aprendió sobre algunas de las funcionalidades que el kit de herramientas de realidad mixta (MRTK) tiene que ofrecer al iniciar su primera aplicación para HoloLens 2. En la siguiente lección aprenderá a crear y organizar botones junto con los paneles de texto de la interfaz de usuario y a usar interacción predeterminada (Touch) para interactuar con cada botón. También explorarás la incorporación de acciones y efectos sencillos, como cambiar el tamaño, el sonido y color de los objetos. Este módulo presentará conceptos básicos sobre la modificación de perfiles de MRTK, empezando por desactivar la visualización de la malla de [asignación espacial](spatial-mapping.md) . 
 
 ## <a name="objectives"></a>Objetivos
 
@@ -32,7 +32,7 @@ En esta sección, aprenderá a personalizar y configurar los perfiles predetermi
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step1im.PNG)
 
->Nota: De forma predeterminada, los perfiles de MRTK no son editables. Estas son plantillas de perfil predeterminadas que puede copiar y personalizar. Existen varios niveles de personalización y perfiles. Por lo tanto, es una práctica estándar copiar y personalizar varios perfiles al configurar una o más opciones.
+>Nota: de forma predeterminada, los perfiles de MRTK no son editables. Estas son plantillas de perfil predeterminadas que puede copiar y personalizar. Existen varios niveles de personalización y perfiles. Por lo tanto, es una práctica estándar copiar y personalizar varios perfiles al configurar una o más opciones.
 >
 >Para obtener más información sobre los perfiles de MRTK y su arquitectura, visite la [documentación de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html>).
 
@@ -50,13 +50,13 @@ En esta sección, aprenderá a personalizar y configurar los perfiles predetermi
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step4im.PNG)
 
-5. A continuación, vas a ajustar la configuración de la opción de visualización a "Occlusión" (Oclusión). Esto hace que la malla espacial sea invisible, pero todavía oculta objetos de juego detrás de la malla espacial, también conocido como oclusión.
+5. A continuación, vas a ajustar la configuración de la opción de visualización a "Occlusión" (Oclusión). Esto hace que la malla de asignación espacial sea invisible, pero todavía oculta objetos de juego detrás de la malla de asignación espacial, también conocida como oclusión.
 
 ![MR213_BuildSettings](images/mrlearning-base-ch2-1step5im.PNG)
 
->Nota: Aunque la malla de asignación espacial no está visible, sigue existiendo y puedes interactuar con ella. Los hologramas detrás de la malla de asignación espacial, como un holograma detrás de la pared visible, no estarán visibles debido a la configuración de la oclusión.
+>Nota: aunque la malla de asignación espacial no está visible, sigue estando presente y puede interactuar con ella. Los hologramas detrás de la malla de asignación espacial, como un holograma detrás de la pared visible, no estarán visibles debido a la configuración de la oclusión.
 
-¡Enhorabuena! Acabas de aprender a modificar una configuración en el perfil de MRTK. Como puedes ver, para modificar la configuración de MRTK debes crear copias de los perfiles predeterminados para poder editarlos. Siempre tendrá los perfiles predeterminados, que no son editables, para volver a si desea crear un perfil con una nueva configuración o puede volver a consultar los perfiles predeterminados. Hay numerosas opciones que puedes ajustar. Para obtener una referencia completa a la configuración de perfiles de MRTK, consulta la documentación de MRTK aquí: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html.
+Enhorabuena. Acabas de aprender a modificar una configuración en el perfil de MRTK. Como puedes ver, para modificar la configuración de MRTK debes crear copias de los perfiles predeterminados para poder editarlos. Siempre tendrá los perfiles predeterminados, que no son editables, para volver a si desea crear un perfil con una nueva configuración o puede volver a consultar los perfiles predeterminados. Hay numerosas opciones que puedes ajustar. Para obtener una referencia completa a la configuración de perfiles de MRTK, consulta la documentación de MRTK aquí: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html.
 
 ### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Botones de interacción y gestos de seguimiento de la mano
 En esta sección, aprenderá a usar el seguimiento de manos para presionar un botón que se puede presionar.
@@ -83,7 +83,7 @@ En esta sección, aprenderá a usar el seguimiento de manos para presionar un bo
 
 6. Agrega un cubo a la escena. Haga clic con el botón derecho en el área jerarquía, seleccione un objeto 3D y, a continuación, haga clic en cubo. Ahora, debe aparecer un cubo en la pantalla. Aparecerá muy grande. Puede ajustar las coordenadas (mientras el cubo todavía está seleccionado en el área de jerarquía) para reducir el tamaño. Establece los valores de escala en x = 0,1, y = 0,1 y z = 0,1. Asegúrate de colocar el cubo en la escena cerca del botón que se puede presionar, pero sin que se solape con él. En la imagen siguiente, la posición del cubo es x = 0, y = 0,2 y z = 1. 
 
-   > Nota: En general, 1 unidad en Unity equivale aproximadamente a 1 metro en el mundo físico. Existen excepciones a esto, por ejemplo, cuando los objetos son elementos secundarios de los objetos con escala.
+   > Nota: en general, 1 unidad en Unity es aproximadamente equivalente a 1 metro en el mundo físico. Existen excepciones a esto, por ejemplo, cuando los objetos son elementos secundarios de los objetos con escala.
    
    ![MR213_BuildSettings](images/mrlearning-base-ch2-1step6ima.PNG)
 
@@ -143,7 +143,7 @@ El componente de colección de objetos de cuadrícula permite organizar botones 
 
 ![Mrlearning Base Ch2 3Step5im](images/mrlearning-base-ch2-3step5im.PNG)
 
->Nota: Según la orientación de los objetos secundarios o del objeto primario, es probable que debas ajustar la orientación de manera diferente en futuros proyectos. También, puede que los campos de ancho y alto de celda se deban definir de forma diferente, según el tamaño de los objetos de la colección.
+>Nota: en función de la orientación de los objetos secundarios o del objeto primario, es probable que tenga que ajustar la configuración de orientación de manera diferente en proyectos futuros. También, puede que los campos de ancho y alto de celda se deban definir de forma diferente, según el tamaño de los objetos de la colección.
 
 ### <a name="adding-text-into-your-scene"></a>Adición de texto a la escena
 
@@ -168,7 +168,7 @@ En esta sección, aprenderás a agregar texto a tus experiencias de realidad mix
 ![Lección 2, capítulo 4, paso 5](images/Lesson2_Chapter4_Step5.JPG)
 
 ## <a name="congratulations"></a>Enhorabuena
-En esta lección, has aprendido a copiar, personalizar y configurar un perfil de MRTK (es decir, la visibilidad de la malla de orientación espacial). También has aprendido a interactuar con un botón para desencadenar eventos mediante manos con seguimiento en HoloLens 2. Por último, has aprendido a crear una sencilla interfaz de usuario mediante el componente de colección de objetos de cuadrícula de MRTK de Text Mesh Pro de Unity.
+En esta lección, aprendió a copiar, personalizar y configurar una configuración de Perfil de MRTK (es decir, visibilidad espacial de la malla). También ha aprendido a interactuar con un botón para desencadenar eventos mediante las manos con seguimiento en HoloLens 2. Por último, has aprendido a crear una sencilla interfaz de usuario mediante el componente de colección de objetos de cuadrícula de MRTK de Text Mesh Pro de Unity.
 
-[Siguiente lección: 4. Colocación del contenido dinámico y uso de solucionadores](mrlearning-base-ch3.md)
+[Lección siguiente: 4. colocar contenido dinámico y usar solucionadores](mrlearning-base-ch3.md)
 

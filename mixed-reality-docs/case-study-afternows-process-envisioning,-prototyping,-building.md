@@ -1,19 +1,19 @@
 ---
-title: 'Caso práctico: AfterNow de procesos, creación de prototipos y compilación'
+title: 'Caso práctico: proceso de AfterNow'
 description: 'Proceso: previsión, creación de prototipos y generación de AfterNow'
 author: rwinj
 ms.author: randyw
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, AfterNow, previsión, creación de prototipos, compilación
-ms.openlocfilehash: 778ce2ff8ff69a5cdff1cc22b192100a9ab33347
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d555c61c5c8ba917c99a94da594551658a717e70
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63523491"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436936"
 ---
-# <a name="case-study---afternows-process---envisioning-prototyping-building"></a>Caso práctico: AfterNow de procesos, creación de prototipos y compilación
+# <a name="case-study---afternows-process"></a>Caso práctico: proceso de AfterNow
 
 En [AfterNow](https://www.afternow.io/), trabajamos con usted para convertir sus ideas y aspiraciones en productos y experiencias totalmente operativas y listos para el mercado. Pero antes de escribir una sola línea de código, creamos un plano a través de un proceso denominado Envisioning.
 
@@ -67,7 +67,7 @@ El objetivo de este ejercicio es mejorar nuestra comprensión colectiva del prob
 
 Nuestro procedimiento recomendado para este proceso se produce cuando tomamos notas individuales en la forma en que podríamos (HMW). HMW es una técnica desarrollada por P & G en 70s. Se trata de un método que toma nota en forma de una pregunta que, en última instancia, da como resultado notas organizadas y con prioridades. Nos centraremos en una idea por nota adhesiva que comienza con la frase "¿cómo podríamos." Por ejemplo, ¿cómo se pueden comunicar los valores de [su compañía] en la realidad mixta?
 
-![Organizar y decidir](images/organize-and-decide-640px.png)<br>
+![organizar y decidir](images/organize-and-decide-640px.png)<br>
 *Organizar y decidir*
 
 **Organizar notas de HMW**
@@ -104,7 +104,7 @@ Dedicamos ocho minutos a crear ocho fotogramas. Aquí es donde se esboza rápida
 
 Dedicamos 30 minutos a esbozar guiones gráficos. Tomamos las mejores variaciones de ideas de 8S y creamos un guion gráfico de tres paneles de la idea.
 
-![Esbozar guiones gráficos](images/sketching-storyboards-640px.png)<br>
+![dibujar guiones gráficos](images/sketching-storyboards-640px.png)<br>
 *Esbozar guiones gráficos*
 
 ## <a name="day-3---decide"></a>DÍA 3: decidir

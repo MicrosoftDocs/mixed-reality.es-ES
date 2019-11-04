@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: tutorial, comando de voz, frase, reconocimiento, voz, DirectX, plataforma, Cortana, Windows Mixed Reality
-ms.openlocfilehash: 728457a495616e5f65ec3986dfb6ac60231f9e46
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: be8c0e570a0e112e01b580ad571c06fe3482ff9f
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548666"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437193"
 ---
 # <a name="voice-input-in-directx"></a>Entrada de voz en DirectX
 
@@ -22,7 +22,7 @@ En este tema se explica cómo implementar [comandos de voz](voice-input.md)y el 
 
 ## <a name="use-a-speechrecognizer-for-continuous-recognition-of-voice-commands"></a>Usar un SpeechRecognizer para el reconocimiento continuo de comandos de voz
 
-En esta sección, se describe cómo usar el reconocimiento de voz continuo para habilitar comandos de voz en la aplicación. En este tutorial se usa el código del ejemplo [HolographicVoiceInput](http://go.microsoft.com/fwlink/p/?LinkId=844964) . Cuando se esté ejecutando el ejemplo, hable el nombre de uno de los comandos de color registrados para cambiar el color del cubo giratorio.
+En esta sección, se describe cómo usar el reconocimiento de voz continuo para habilitar comandos de voz en la aplicación. En este tutorial se usa el código del ejemplo [HolographicVoiceInput](https://go.microsoft.com/fwlink/p/?LinkId=844964) . Cuando se esté ejecutando el ejemplo, hable el nombre de uno de los comandos de color registrados para cambiar el color del cubo giratorio.
 
 En primer lugar, cree una nueva instancia de **Windows:: media:: SpeechRecognition:: SpeechRecognizer** .
 
@@ -252,7 +252,7 @@ catch (Exception^ exception)
    });
 ```
 
-**NOTA:** Hay varios [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) predefinidos disponibles para optimizar el reconocimiento de voz.
+**Nota:** Hay varios [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) predefinidos disponibles para optimizar el reconocimiento de voz.
 * Si desea optimizar el dictado, use el escenario de dictado:
 
 ```
@@ -426,7 +426,7 @@ catch (Exception^ exception)
    });
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Diseño de aplicaciones de voz](https://msdn.microsoft.com/library/dn596121.aspx)
 * [Sonido espacial en DirectX](spatial-sound-in-directx.md)
 * [Ejemplo de SpeechRecognitionAndSynthesis](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

@@ -6,17 +6,17 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 9d42811157db108baad51eab3f367a06a11b7f7b
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 5d8194e9a51bdb0ce32f345b4adfbfaf408c5396
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701978"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438383"
 ---
-# <a name="2-getting-unity-ready-for-development"></a>2. Preparar Unity para el desarrollo 
+# <a name="2-getting-unity-ready-for-development"></a>2. obtener Unity listo para el desarrollo 
 
 
-En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de aplicaciones, incluida la importación del kit de herramientas de realidad mixta, la configuración de las opciones de compilación y la preparación de la escena.
+En este tutorial, obtendrá información sobre cómo preparar y configurar Unity para el desarrollo de aplicaciones, incluida la importación del kit de herramientas de realidad mixta, la configuración de las opciones de compilación y la preparación de la escena.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -34,13 +34,13 @@ En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de
 
 ![Module3Chapter2step2im](images/module3chapter2step2im.PNG)
 
-3. Seleccione el paquete de Unity que acaba de descargar del vínculo proporcionado en el paso 1. Una vez que aparezca la ventana emergente importar en Unity, haga clic en el botón importar para iniciar la importación. La importación de MRTK puede tardar varios minutos.
+3. Seleccione el paquete de Unity que acaba de descargar del vínculo proporcionado en el paso 1. Una vez que aparezca la ventana emergente importar en Unity, haga clic en el botón importar para empezar a importar el MRTK. Esto puede tardar varios minutos.
 
 ![Module3Chapter2step3im](images/module3chapter2step3im.PNG)
 
-> Nota: El paquete descargado se encuentra en la carpeta local donde ha guardado el archivo. La imagen anterior no indica dónde encontrará el paquete.
+> Nota: el paquete descargado se encuentra en la carpeta local, donde se guardó el archivo. La imagen anterior no indica dónde encontrará el paquete.
 
-4. Cree una nueva escena. Para ello, haga clic en archivo y seleccione nueva escena "). Guarde la escena como HLSharedProjectMain.
+4. Cree una nueva escena. Para ello, haga clic en archivo y seleccione nueva escena ". Guárdelo como HLSharedProjectMain.
 
 > Nota: es posible que reciba un elemento emergente que tenga un aspecto similar a la imagen siguiente. Por ahora, haga clic en no.
 >
@@ -58,7 +58,7 @@ En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de
 
 ![Module3Chapter2step6imc](images/module3chapter2step6imc.PNG)
 
-7. Desplácese hacia abajo y desactive habilitar el sistema de diagnósticos si desea ocultar la ventana de diagnóstico. Se recomienda mantener la ventana de diagnósticos habilitada durante el desarrollo de aplicaciones para supervisar el rendimiento y deshabilitarlo durante las demostraciones de producción o de aplicación. 
+7. Desplácese hacia abajo y desactive habilitar el sistema de diagnósticos si desea ocultar la ventana de diagnóstico. Se recomienda mantener la ventana de diagnósticos habilitada durante el desarrollo de la aplicación para supervisar el rendimiento y, a continuación, deshabilitarla durante las demostraciones de producción o de aplicación. 
 
 ![Module3Chapter2step7ima](images/module3chapter2step7ima.PNG)
 
@@ -66,7 +66,7 @@ En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de
 
 ![Module3Chapter2step8im](images/module3chapter2step8im.PNG)
 
-9. Una vez que haya finalizado, haga clic en el cuadro que indica agregar escenas abiertas. Ahora, vaya al panel Inspector y asegúrese de que esté activada la casilla situada a la derecha de realidad virtual (como se muestra en la imagen siguiente). Asegúrese también de que la casilla situada junto a Scenes/HLSharedProjectMain también se comprueba como se muestra en la imagen siguiente.
+9. Una vez que haya finalizado, haga clic en el cuadro denominado agregar escenas abiertas. Ahora, vaya al panel Inspector y asegúrese de que esté activada la casilla situada a la derecha de realidad virtual (como se muestra en la imagen siguiente). Asegúrese también de que la casilla situada junto a Scenes/HLSharedProjectMain también está activada, como se muestra en la imagen siguiente.
 
 ![Module3Chapter2step9im](images/module3chapter2step9im.PNG)
 
@@ -74,15 +74,15 @@ En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de
 
 ![Module3Chapter2step9imb](images/module3chapter2step9imb.PNG)
 
-11. Importe el paquete personalizado llamado SharingAssetCollection que puede descargarse [aquí.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
+11. Importe el paquete personalizado denominado SharingAssetCollection, que se puede descargar [aquí.](https://github.com/microsoft/MixedRealityLearning/releases/tag/development)
 
 ![Module3Chapter2step12im](images/module3chapter2step11im.PNG)
 
-12. En el panel Proyecto, vaya a la carpeta Prefabs. En los siguientes pasos, se implementan algunos Prefabs en la escena. En la carpeta Prefabs, haga clic y arrastre la ventana de depuración recurso prefabricado a la jerarquía. Una vez finalizado, guarde el proyecto haciendo clic en archivo, luego en guardar o presione Control + S.
+12. En el panel Proyecto, vaya a la carpeta Prefabs. En los pasos siguientes, se implementarán algunas Prefabs en la escena. En la carpeta Prefabs, haga clic y arrastre la ventana de depuración recurso prefabricado a la jerarquía. Una vez finalizado, guarde el proyecto haciendo clic en archivo, luego en guardar o presione Control + S.
 
 ![Module3Chapter2step12im](images/module3chapter2step12im.PNG)
 
-   > Nota: Es posible que observe que aparece una ventana emergente al hacer clic en el recurso prefabricado, donde se le pregunta sobre TMP Essentials. Haga clic en importar TMP Essentials según sea necesario. Si aparece esta ventana emergente, es posible que tenga que eliminar el recurso prefabricado de la jerarquía y volver a arrastrarlo a la jerarquía para evitar posibles errores relacionados con el texto.
+   > Nota: es posible que observe que aparece una ventana emergente al hacer clic en el recurso prefabricado, donde se le pregunta sobre TMP Essentials. Haga clic en importar TMP Essentials según sea necesario. Si aparece esta ventana emergente, es posible que tenga que eliminar el recurso prefabricado de la jerarquía y volver a arrastrarlo a la jerarquía para evitar posibles errores relacionados con el texto.
    >
 >![Module3Chapter2note2im](images/module3chapter2note2im.PNG)
 
@@ -91,5 +91,5 @@ En este tutorial, aprendemos a preparar y configurar Unity para el desarrollo de
 
 El proyecto de Unity ya está listo para Photon. En los tutoriales venideros, se basará en esta escena y nuestro proyecto de Unity en una experiencia completa compartida.
 
-[Siguiente tutorial: 3. Conexión de varios usuarios](mrlearning-sharing(photon)-ch3.md)
+[Siguiente tutorial: 3. conectar varios usuarios](mrlearning-sharing(photon)-ch3.md)
 

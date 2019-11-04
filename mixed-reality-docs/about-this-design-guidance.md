@@ -6,12 +6,12 @@ ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, introducción, guía
-ms.openlocfilehash: 0e5601898c2b1f351b5ab2aaa491a7c64ae57f7e
-ms.sourcegitcommit: d8700260f349a09c53948e519bd6d8ed6f9bc4b4
+ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414159"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437097"
 ---
 # <a name="about-this-design-guidance"></a>Acerca de esta guía de diseño
 
@@ -27,16 +27,14 @@ Siempre que sea posible, ofreceremos orientación de diseño accionable con cód
 
 Y sabemos que muchas innovaciones se generarán en la comunidad de diseño de mayor tamaño. Por lo tanto, esperamos tener noticias suyas, aprender de usted y trabajar en estrecha colaboración con usted. En nuestro caso, haremos todo lo posible para compartir la información, incluso si son exploratorios y pronto con el propósito de permitir a los desarrolladores y diseñadores el diseño del diseño, los procedimientos recomendados y los controles de código abierto, los patrones y las aplicaciones de ejemplo relacionados que puede usar. directamente en su propio trabajo.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
-A continuación se muestra una introducción rápida de cómo se organiza esta guía de diseño. Encontrará secciones para cada una de estas áreas con vínculos a varios artículos.
-* Introducción al **[diseño](mixed-reality.md)** : Lea nuestras ideas de alto nivel y comprenda los principios que seguimos.
-* **[Interacciones de instinctual](interaction-fundamentals.md)** : Obtenga información sobre los aspectos básicos de la interacción de entrada, comandos, navegación y otros conceptos para diseñar aplicaciones.
-* **[Estilo](typography.md)** : haga que su aplicación sea agradables mediante el uso de color, tipografía y movimiento.
-* **[Patrones](types-of-mixed-reality-apps.md)** de aplicaciones: Obtenga información sobre cómo las aplicaciones pueden abarcar escenarios en entornos de solo lectura y del mundo real.
-* **[Controles](interactable-object.md)** : Use controles y patrones como bloques de creación para crear su propia experiencia de la aplicación.
-* **[Aplicaciones de ejemplo](design.md#sample-apps)** : cree experiencias excelentes a partir de los ejemplos diseñados y creados por nuestro equipo.
-* **[Herramientas de diseño y recursos](design.md#design-tools)** : inicie el proyecto con plantillas y herramientas de diseño.
+A continuación se muestra una introducción rápida de cómo se organiza esta guía de diseño. 
+* **[Información general](design.md)** : Obtenga información sobre el proceso de diseño, los conceptos básicos y los factores de interacción que se deben tener en cuenta.
+* **[Conceptos básicos](core-concepts-landingpage.md)** : Obtenga información sobre la comodidad, el marco holográfica, la asignación espacial y otros conceptos básicos a tener en cuenta.
+* **[Modelos de interacción](interaction-fundamentals.md)** : esta guía está estructurada en torno a tres modelos de interacción principales.
+* **[Elementos](app-patterns-landingpage.md)** de la experiencia de usuario: Use controles y comportamientos como bloques de creación para crear su propia experiencia de la aplicación.
+* **[Recursos](design.md#choose-a-prototyping-option)** : inicie el proyecto con las herramientas de diseño y las opciones de prototipo.
 
 Para todo lo anterior, nos esforzamos por ofrecer la combinación correcta de texto, ilustraciones y diagramas, y vídeos, por lo que nos vemos experimentando con distintos formatos y técnicas, todo ello con la intención de ofrecer lo que necesita. Y, en los próximos meses, ampliaremos esta taxonomía para incluir un conjunto más amplio de temas de diseño. Siempre que sea posible, le daremos un aviso sobre lo que va a continuación, por lo que debe volver a realizar la comprobación.
 
@@ -72,7 +70,7 @@ Uno de los desafíos de ofrecer instrucciones de diseño en este nuevo medio 3D 
 
 ![El equilibrio derecho del diseño global y local](images/500px-fluentdesign.jpg) <br>
 
-Ofreceremos dos niveles de orientación de diseño: global y local. Nuestra guía de diseño "global" se incorpora en el [sistema de diseño fluida](http://fluent.microsoft.com). Información fluida sobre aspectos básicos como la luz, la profundidad, el movimiento, el material y la escala en todo el diseño de Microsoft, nuestros dispositivos, productos, herramientas y servicios. Dicho esto, existen importantes diferencias específicas del dispositivo en este sistema más grande. Por lo tanto, nuestra guía de diseño "local" para las pantallas montadas por el cabezal describe el diseño de dispositivos holográficas y envolventes que suelen tener distintos métodos de entrada y salida, así como diferentes necesidades y escenarios de usuario. La guía de diseño local trata los temas exclusivos de HMDs. Por ejemplo: entornos y objetos 3D; entornos compartidos; el uso de sensores, seguimiento ocular y asignación espacial; y las oportunidades de audio espacial. A lo largo de nuestras instrucciones, probablemente nos referiremos a ambos aspectos globales y locales. Espero que esto le ayude a realizar su trabajo en una base más grande del diseño mientras aprovecha las diferencias de diseño entre dispositivos específicos.
+Ofreceremos dos niveles de orientación de diseño: global y local. Nuestra guía de diseño "global" se incorpora en el [sistema de diseño fluida](https://fluent.microsoft.com). Información fluida sobre aspectos básicos como la luz, la profundidad, el movimiento, el material y la escala en todo el diseño de Microsoft, nuestros dispositivos, productos, herramientas y servicios. Dicho esto, existen importantes diferencias específicas del dispositivo en este sistema más grande. Por lo tanto, nuestra guía de diseño "local" para las pantallas montadas por el cabezal describe el diseño de dispositivos holográficas y envolventes que suelen tener distintos métodos de entrada y salida, así como diferentes necesidades y escenarios de usuario. La guía de diseño local trata los temas exclusivos de HMDs. Por ejemplo: entornos y objetos 3D; entornos compartidos; el uso de sensores, seguimiento ocular y asignación espacial; y las oportunidades de audio espacial. A lo largo de nuestras instrucciones, probablemente nos referiremos a ambos aspectos globales y locales. Espero que esto le ayude a realizar su trabajo en una base más grande del diseño mientras aprovecha las diferencias de diseño entre dispositivos específicos.
 
 ### <a name="have-a-discussion"></a>Tener una discusión
 

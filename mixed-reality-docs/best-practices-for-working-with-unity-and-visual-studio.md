@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: implementación, Unity, Visual Studio, HoloLens, HoloLens 2, auriculares envolventes
-ms.openlocfilehash: b2c345a8cc9bddcbc447531eb5f6cdacc62f2e98
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f897c9280505b1e84f8e6342729f1598d4b2f559
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522312"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436965"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Prácticas recomendadas para trabajar con Unity y Visual Studio
 
@@ -25,17 +25,17 @@ La compatibilidad con el back-end de scripting de .NET en Unity está en desuso 
 2) Deshabilitar exámenes de software antimalware para el proyecto & carpetas de compilación
    - Abrir **protección contra amenazas de Virus &** en la aplicación de configuración de Windows 10
    - Seleccione **Administrar configuración** en **configuración de protección contra amenazas de virus &**
-   - Seleccione **Agregar o quitar exclusiones** en la  sección Exclusiones.
+   - Seleccione **Agregar o quitar exclusiones** en la sección **exclusiones** .
    - Haga clic en **Agregar una exclusión** y seleccione la carpeta que contiene el código del proyecto de Unity y las salidas de compilación
 3) Uso de SSD para compilar
 
-Consulte optimización de los [tiempos de compilación de IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obtener más información. Consulte también depuración [en el back-end de scripting de IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
+Consulte optimización de los [tiempos de compilación de IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obtener más información. Consulte también [depuración en el back-end de scripting de IL2CPP](https://docs.unity3d.com/Manual/windowsstore-debugging-il2cpp.html).
 
 Además, considere la posibilidad de instalar la [extensión de Visual Studio *UnityScriptAnalyzer* ](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer). Esta herramienta analiza los scripts C# de Unity en busca de código que pueda escribirse de forma más optimizada.
 
 ## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools para Unity
 
-Descargar [Visual Studio Tools para Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
+Descargar [Visual Studio Tools para Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity?view=vs-2019)
 
 **Ventajas de Visual Studio Tools para Unity**
 * Depure el modo de reproducción en el editor de Unity desde Visual Studio colocando puntos de interrupción, evaluando variables y expresiones complejas.
@@ -55,9 +55,9 @@ Las soluciones de Visual Studio de UWP protegidas en el control de código fuent
 
 ## <a name="use-text-format-assets-for-easy-comparison-of-content-changes"></a>Usar recursos en formato de texto para facilitar la comparación de los cambios de contenido
 
-El almacenamiento de recursos en formato de texto permite revisar más fácilmente las diferencias de cambio de contenido en Visual Studio. Puede habilitarlo en "Editar > configuración del proyecto > Editor" cambiando el modo de serialización de **activos** para forzar el **texto**. Sin embargo, la combinación de cambios en el archivo de recursos de texto es propensa a errores y no se recomienda, por lo que considere habilitar desprotecciones binarias exclusivas en el sistema de control de código fuente.
+El almacenamiento de recursos en formato de texto permite revisar más fácilmente las diferencias de cambio de contenido en Visual Studio. Puede habilitarlo en "Editar > configuración del proyecto > Editor" cambiando el modo de **serialización de activos** para **forzar el texto**. Sin embargo, la combinación de cambios en el archivo de recursos de texto es propensa a errores y no se recomienda, por lo que considere habilitar desprotecciones binarias exclusivas en el sistema de control de código fuente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 - [Visual Studio Tools para Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)
 - [Optimizar los tiempos de compilación para IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html)
 - [*UnityScriptAnalyzer* Extensión de Visual Studio](https://github.com/Microsoft/MixedRealityCompanionKit/tree/master/UnityScriptAnalyzer)

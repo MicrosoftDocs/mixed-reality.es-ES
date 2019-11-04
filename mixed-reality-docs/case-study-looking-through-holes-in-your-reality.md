@@ -2,16 +2,16 @@
 title: 'Caso práctico: búsqueda de agujeros en su realidad'
 description: En este caso práctico se explica cómo implementar el efecto "Magic Window" en HoloLens, lo que permite al usuario ver detrás de las paredes, debajo del suelo, y en aperturas virtuales dentro de su entorno real.
 author: EricRehmeyer
-ms.author: ericrehm
-ms.date: 03/21/2018
+ms.author: bestruku
+ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, ventana mágica, Parallax
-ms.openlocfilehash: 945a09614fbc77400825b524f4e0b591bf7b1f6b
-ms.sourcegitcommit: 90ce9415889e7121dd2fd76a893dc3734672881b
+ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64873937"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436665"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Caso práctico: búsqueda de agujeros en su realidad
 
@@ -67,7 +67,7 @@ Lo que se ve en las capturas de pantalla y en el vídeo:
 ( Reality * ( 1 - hologram_alpha ) ) + Holograms * hologram_alpha
 ```
 
-En Inglés: Lo que se ve a través de HoloLens es una combinación sencilla de realidad oscura (por ejemplo, a través de vidrios de la luna) y los hologramas que quiere mostrar la aplicación. Pero cuando se realiza una captura de pantalla, la imagen de la cámara se combina con los hologramas de la aplicación de acuerdo con el valor de transparencia por píxel.
+En Inglés: lo que se ve a través de HoloLens es una combinación sencilla de realidad oscura (por ejemplo, a través de cristal de la luna) y los hologramas que la aplicación quiere mostrar. Pero cuando se realiza una captura de pantalla, la imagen de la cámara se combina con los hologramas de la aplicación de acuerdo con el valor de transparencia por píxel.
 
 Una manera de solucionar esto es cambiar el material de "Black Box" para escribir solo en el búfer de profundidad y ordenar con el resto de materiales opacos. Para obtener un ejemplo de esto, consulte el [archivo WindowOcclusion. Shader en MixedRealityToolkit en github](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Common/Shaders/WindowOcclusion.shader). Aquí se copian las líneas correspondientes:
 
@@ -93,7 +93,7 @@ Este es el secreto mundial de [Mr basics 101](holograms-101.md) como Unity lo di
 
 Al ver este modelo en el editor de Unity, se mostrará un cuadro negro grande alrededor de FLOWERPOT. En HoloLens, el cuadro desaparece, lo que permite un efecto de ventana mágica.
 
-Si quiere compilar una aplicación que use esta técnica, consulte el tutorial de los [conceptos básicos de MR 101](holograms-101.md) en los tutoriales de [realidad mixta](tutorials.md). El capítulo 7 finaliza con una explosión en el piso que revela un submundo oculto (como se muestra arriba). ¿Quién ha comentado que los tutoriales debían ser aburridos?
+Si quiere compilar una aplicación que use esta técnica, consulte el tutorial de los [conceptos básicos de MR 101](holograms-101.md) en los [tutoriales de realidad mixta](tutorials.md). El capítulo 7 finaliza con una explosión en el piso que revela un submundo oculto (como se muestra arriba). ¿Quién ha comentado que los tutoriales debían ser aburridos?
 
 A continuación se muestran algunas ideas de dónde puede adoptar esta idea:
 * Piense en formas de hacer que el contenido dentro del agujero virtual sea interactivo. El hecho de que los usuarios tengan algún impacto más allá de sus muros puede mejorar realmente el sentido de la pregunta que este truco puede proporcionar.
@@ -104,11 +104,11 @@ A continuación se muestran algunas ideas de dónde puede adoptar esta idea:
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Eric Rehmeyer" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Eric Rehmeyer</b><br>Ingeniero de software Senior@Microsoft</td>
+<td style="border-style: none"><b>Eric Rehmeyer</b><br>Ingeniero de software Senior @Microsoft</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [MR Basics 101: proyecto completo con dispositivo](holograms-101.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Delimitadores espaciales](spatial-anchors.md)

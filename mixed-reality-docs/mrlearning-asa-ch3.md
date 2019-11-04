@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 45a71cada97dff4a2fb32f2eaf7700816f2e0d42
-ms.sourcegitcommit: af1602710c1ccb7ed870a491923350d387706129
+ms.openlocfilehash: 77d639a88d8b4c71dc5fbe1c78565c4c3f91d36c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702029"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438417"
 ---
-# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Visualización de los comentarios del delimitador espacial de Azure
+# <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Mostrar comentarios del delimitador espacial de Azure
 
-En esta lección, aprenderá a proporcionar a los usuarios comentarios sobre la detección de delimitadores, los eventos y el estado al usar delimitadores espaciales de Azure.
+En esta lección, aprenderá a proporcionar a los usuarios comentarios sobre la detección de delimitadores, los eventos y el estado al usar los anclajes espaciales de Azure.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -27,12 +27,12 @@ En esta lección, aprenderá a proporcionar a los usuarios comentarios sobre la 
 
 ### <a name="set-up-asa-feedback-ui-panel"></a>Configuración del panel de interfaz de usuario de comentarios de ASA
 
-1. En esta lección, no vamos a usar los botones "SaveAnchorToDisk" y "ShareAnchor", por lo que debe seleccionar ambos botones y desactivar la casilla en el panel Inspector (como se muestra a continuación) para ocultar estos botones.
+1. En esta lección, no vamos a usar los botones "SaveAnchorToDisk" y "ShareAnchor", así que seleccione ambos botones y desactive la casilla en el panel del Inspector (como se muestra a continuación) para ocultar estos botones.
    
 
 ![module2chapter3step1im](images/module2chapter3step1im.PNG)
 
-2. A continuación, cree el panel de instrucciones. Para empezar, haga clic con el botón derecho en el botón "instrucciones", mantenga el mouse sobre "objeto 3D" y seleccione "textmeshpro-Text".
+2. Cree el panel de instrucciones. Para empezar, haga clic con el botón derecho en el botón "instrucciones", mantenga el mouse sobre "objeto 3D" y seleccione "textmeshpro-Text".
 
 ![module2chapter3step2im](images/module2chapter3step2im.PNG)
 
@@ -50,19 +50,19 @@ En esta lección, aprenderá a proporcionar a los usuarios comentarios sobre la 
 
 ![module2chapter3step4im](images/module2chapter3step5im.PNG)
 
-Ahora, haga clic [aquí](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) para descargar los archivos necesarios en los pasos siguientes.
+Haga clic [aquí](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&id=5B7335C4342BCB0E%21395636&cid=5B7335C4342BCB0E) para descargar los archivos necesarios en los pasos siguientes.
 
-6. Una vez que se abra el explorador, seleccione la carpeta Assets, la carpeta "ASAmodulesAssets" y copie los archivos de script del módulo de delimitador y los de la carpeta. 
+6. Una vez que se abra el explorador, seleccione la carpeta assets y, a continuación, la carpeta "ASAmodulesAssets" y copie los archivos de script del módulo de delimitador y los de la carpeta. 
 
 ![module2chapter3step5im](images/module2chapter3step6im.PNG)
 
-> Nota: Si aparece un mensaje emergente que le pregunta si desea sobrescribir el antiguo o conservar el antiguo, asegúrese de que selecciona sobrescribir.
+> Nota: Si recibe un mensaje emergente que le pregunta si desea sobrescribir el antiguo o conservar el antiguo, seleccione sobrescribir.
 
-7. Ahora vuelva a la carpeta assets. A continuación, vaya a la carpeta "AzureSpatialAnchorsPlugin", a continuación, a la carpeta Examples y, por último, a la carpeta scripts, y copie el contenedor de demostración de delimitadores espaciales de Azure en esa carpeta. 
+7. Vuelva a la carpeta assets. A continuación, vaya a la carpeta "AzureSpatialAnchorsPlugin", seguida de la carpeta Examples y, por último, la carpeta scripts. A continuación, copie el contenedor de demostración de anclajes espaciales de Azure en esa carpeta. 
 
 ![module2chapter3step8im](images/module2chapter3step7im.PNG)
 
-8. Ahora que los archivos se han cargado, asegúrese de que el texto "feedbackpanel" está seleccionado, en la jerarquía de ASA_feedback y haga clic en "Agregar componente" y agregue el script de comentarios de delimitador. para ello, búsquelo y selecciónelo cuando aparezca. 
+8. Ahora que los archivos se han cargado, asegúrese de que el texto "feedbackpanel" está seleccionado en la jerarquía de ASA_feedback, haga clic en "Agregar componente" y agregue el script de comentarios de delimitador buscándolo y seleccionándolo cuando aparezca. 
 
 ![module2chapter3step8im](images/module2chapter3step8im.PNG)
 
@@ -72,6 +72,6 @@ Ahora, haga clic [aquí](https://onedrive.live.com/?authkey=%21ABXEC8PvyQu8Qd8&i
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En esta lección se ha aprendido cómo crear un panel de interfaz de usuario para mostrar el estado actual de la experiencia de anclaje espacial de Azure para proporcionar a los usuarios comentarios en tiempo real.
+En esta lección, hemos aprendido a crear un panel de interfaz de usuario para mostrar el estado actual de la experiencia del anclaje espacial de Azure para proporcionar a los usuarios comentarios en tiempo real.
 
 

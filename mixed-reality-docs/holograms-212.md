@@ -3,22 +3,22 @@ title: Entrada MR 212-voz
 description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre los conceptos de voz.
 author: keveleigh
 ms.author: kurtie
-ms.date: 03/21/2018
+ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, voz
-ms.openlocfilehash: 7e792bf40c47d4e1d57898fbe75ad050a030b7e3
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 9db503ea4c7db9a3eb272ad9663024ca3a407dda
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522354"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73434600"
 ---
 >[!NOTE]
->Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
+>Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
 
 <br>
 
-# <a name="mr-input-212-voice"></a>Entrada MR 212: Voz
+# <a name="mr-input-212-voice"></a>Entrada MR 212: voz
 
 La [entrada de voz](voice-input.md) nos proporciona otro método para interactuar con los hologramas. Los comandos de voz funcionan de forma muy natural y sencilla. Diseñe los comandos de voz para que estén:
 
@@ -49,15 +49,15 @@ En este curso, volveremos a visitar el explorador de modelos, que hemos creado e
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td>Entrada MR 212: Voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Entrada MR 212: voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* Un equipo con Windows 10 configurado con las [herramientas](install-the-tools.md)correctas instaladas.
+* Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](install-the-tools.md).
 * Funcionalidad básica C# de programación.
 * Debe haber completado los [principios básicos 101](holograms-101.md).
 * Debe haber completado la [entrada MR 210](holograms-210.md).
@@ -74,7 +74,7 @@ En este curso, volveremos a visitar el explorador de modelos, que hemos creado e
 
 ### <a name="errata-and-notes"></a>Erratas y notas
 
-* "Habilitar Solo mi código" debe estar deshabilitado *(* desactivado) en Visual Studio en herramientas-> opciones-> depuración para alcanzar puntos de interrupción en el código.
+* "Habilitar Solo mi código" debe estar deshabilitado *(desactivado*) en Visual Studio en herramientas-> opciones-> depuración para alcanzar puntos de interrupción en el código.
 
 ## <a name="unity-setup"></a>Configuración de Unity
 
@@ -83,7 +83,7 @@ En este curso, volveremos a visitar el explorador de modelos, que hemos creado e
 1. Inicia Unity.
 2. Seleccione **abrir**.
 3. Vaya a la carpeta **HolographicAcademy-hologramas-212-Voice** que previamente eliminó de archivado.
-4. Busque y seleccione la carpeta de **Inicio**/del**Explorador de modelos** .
+4. Busque y seleccione la carpeta **inicio**/**Explorador de modelos** .
 5. Haga clic en el botón **Seleccionar carpeta** .
 6. En el panel **proyecto** , expanda la carpeta **escenas** .
 7. Haga doble clic en **ModelExplorer** Scene para cargarlo en Unity.
@@ -109,14 +109,14 @@ Si se implementa en HoloLens:
 1. Con la barra de herramientas superior de Visual Studio, cambie el destino de Debug a **Release** y de ARM a **x86**.
 2. Haga clic en la flecha desplegable situada junto al botón equipo local y seleccione **equipo remoto**.
 3. Escriba **la dirección IP del dispositivo HoloLens** y establezca el modo de autenticación en **universal (protocolo sin cifrar)** . Haga clic en **Seleccionar**. Si no conoce la dirección IP del dispositivo, consulte **configuración > redes & Internet > opciones avanzadas**.
-4. En la barra de menús superior, haga clic en depurar **-> iniciar sin** depurar o presione **Ctrl + F5**. Si esta es la primera vez que se implementa en el dispositivo, tendrá que [emparejarla con Visual Studio](using-visual-studio.md#pairing-your-device-hololens).
+4. En la barra de menús superior, haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**. Si esta es la primera vez que se implementa en el dispositivo, tendrá que [emparejarla con Visual Studio](using-visual-studio.md#pairing-your-device).
 5. Cuando la aplicación se haya implementado, descartará el **Fitbox** con un **gesto de selección**.
 
 Si se implementa en un auricular envolvente:
 
 1. Con la barra de herramientas superior de Visual Studio, cambie el destino de Debug a **Release** y de ARM a **x64**.
 2. Asegúrese de que el destino de implementación está establecido en **equipo local**.
-3. En la barra de menús superior, haga clic en depurar **-> iniciar sin** depurar o presione **Ctrl + F5**.
+3. En la barra de menús superior, haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**.
 4. Cuando la aplicación se haya implementado, descarte el **Fitbox** mediante la extracción del desencadenador en un controlador de movimiento.
 
 >[!NOTE]
@@ -138,13 +138,13 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
 
 #### <a name="do"></a>DO
 
-* Cree comandos concisos. No quiere usar *"reproducir el vídeo seleccionado actualmente"* , ya que ese comando no es conciso y el usuario lo olvidará fácilmente. En su lugar, debe usar: *"Reproducir vídeo"* , ya que es conciso y tiene varias sílabas.
-* Usar un vocabulario sencillo. Siempre intente usar palabras y frases comunes que resulten fáciles de detectar y recordar. Por ejemplo, si la aplicación tenía un objeto de nota que se podría mostrar u ocultar en la vista, no usaría el comando *"show letrero"* , ya que "letrero" es un término que rara vez se usa. En su lugar, usaría el comando: *"Mostrar nota"* para mostrar la nota en la aplicación.
+* Cree comandos concisos. No quiere usar *"reproducir el vídeo seleccionado actualmente"* , ya que ese comando no es conciso y el usuario lo olvidará fácilmente. En su lugar, debe usar: *"reproducir vídeo"* , ya que es conciso y tiene varias sílabas.
+* Usar un vocabulario sencillo. Siempre intente usar palabras y frases comunes que resulten fáciles de detectar y recordar. Por ejemplo, si la aplicación tenía un objeto de nota que se podría mostrar u ocultar en la vista, no usaría el comando *"show letrero"* , ya que "letrero" es un término que rara vez se usa. En su lugar, usaría el comando: *"show Note"* para mostrar la nota en la aplicación.
 * Ser coherente. Los comandos de voz deben mantenerse coherentes en toda la aplicación. Imagine que tiene dos escenas en la aplicación y ambas escenas contienen un botón para cerrar la aplicación. Si la primera escena usó el comando *"salir"* para desencadenar el botón, pero la segunda escena usaba el comando *"cerrar aplicación"* , el usuario se quedará muy confundido. Si la misma funcionalidad persiste en varias escenas, se debe usar el mismo comando de voz para desencadenarla.
 
-#### <a name="dont"></a>NO
+#### <a name="dont"></a>No
 
-* Use los comandos de una sola sílaba. Por ejemplo, si estuviera creando un comando de voz para reproducir un vídeo, debe evitar el uso del comando simple *"Play"* , ya que es una sola sílaba y el sistema puede perderlo fácilmente. En su lugar, debe usar: *"Reproducir vídeo"* , ya que es conciso y tiene varias sílabas.
+* Use los comandos de una sola sílaba. Por ejemplo, si estuviera creando un comando de voz para reproducir un vídeo, debe evitar el uso del comando simple *"Play"* , ya que es una sola sílaba y el sistema puede perderlo fácilmente. En su lugar, debe usar: *"reproducir vídeo"* , ya que es conciso y tiene varias sílabas.
 * Usar comandos del sistema. El sistema reserva el comando *"Select"* para desencadenar un evento TAP para el objeto que tiene actualmente el foco. No vuelva a usar el comando *"Select"* en una palabra clave o frase, ya que es posible que no funcione como se espera. Por ejemplo, si el comando de voz para seleccionar un cubo en la aplicación fuera *"seleccionar cubo"* , pero el usuario estaba examinando una esfera cuando creó el comando, la esfera se seleccionaría en su lugar. Igualmente, los comandos de la barra de la aplicación están habilitados para voz. No use los siguientes comandos de voz en la vista de CoreWindow:
     1. Volver
     2. Herramienta de desplazamiento
@@ -156,10 +156,10 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
 
 ### <a name="instructions"></a>Instrucciones
 
-* En el panel  de jerarquías de Unity, use la herramienta de búsqueda para buscar el objeto **holoComm_screen_mesh** .
+* En el panel de **jerarquías** de Unity, use la herramienta de búsqueda para buscar el objeto **holoComm_screen_mesh** .
 * Haga doble clic en el objeto **holoComm_screen_mesh** para verlo en la **escena**. Esta es la inspección de Astronaut, que responderá a los comandos de voz.
 * En el panel **Inspector** , busque el componente de **origen de entrada de voz (Script)** .
-* Expanda la sección **palabras clave** para ver el comando de voz admitido: **Abra Communicator**.
+* Expanda la sección **palabras clave** para ver el comando de voz admitido: **Open Communicator**.
 * Haga clic en engranaje en el lado derecho y, luego, seleccione **Editar script**.
 * Explore **SpeechInputSource.CS** para saber cómo usa **KeywordRecognizer** para agregar comandos de voz.
 
@@ -171,8 +171,8 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
 
 (Si ya ha creado o implementado este proyecto en Visual Studio durante la configuración, puede abrir esa instancia de VS y hacer clic en "recargar todo" cuando se le solicite).
 
-* En Visual Studio, haga clic en depurar **-> iniciar sin** depurar o presione **Ctrl + F5**.
-* Después de que la aplicación se implemente en HoloLens, descartará el cuadro de ajuste mediante el gesto [de punteo de aire](gestures.md#air-tap) .
+* En Visual Studio, haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**.
+* Después de que la aplicación se implemente en HoloLens, descartará el cuadro de ajuste mediante el gesto [de punteo de aire](gaze-and-commit.md#composite-gestures) .
 * Mira fijamente en la inspección de Astronaut.
 * Cuando el reloj tenga el foco, compruebe que el cursor cambia a un micrófono. Esto proporciona comentarios que la aplicación está escuchando para los comandos de voz.
 * Compruebe que aparece una información sobre herramientas en el reloj. Esto ayuda a los usuarios a detectar el comando *"abrir Communicator"* .
@@ -196,7 +196,7 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
 
 ### <a name="instructions"></a>Instrucciones
 
-* En el panel  de jerarquías de Unity, compruebe que está seleccionado el objeto **holoComm_screen_mesh** .
+* En el panel de **jerarquías** de Unity, compruebe que está seleccionado el objeto **holoComm_screen_mesh** .
 * En el panel **Inspector** , busque el componente **Astronaut Watch (Script)** .
 * Haga clic en el pequeño cubo azul que se establece como el valor de la propiedad **Communicator recurso prefabricado** .
 * En el panel **proyecto** , el recurso prefabricado de **Communicator** debería tener ahora el foco.
@@ -286,7 +286,7 @@ namespace Academy
         // Use this string to cache the text currently displayed in the text box.
         private StringBuilder textSoFar;
 
-        // Using an empty string specifies the default microphone. 
+        // Using an empty string specifies the default microphone.
         private static string deviceName = string.Empty;
         private int samplingRate;
         private const int messageLength = 10;
@@ -455,11 +455,11 @@ namespace Academy
 * Descartar el cuadro de ajuste con un gesto de punteo de aire.
 * Mira el Astronaut y di *"abrir Communicator"* .
 * Seleccione el botón **grabar** (micrófono) para grabar el mensaje.
-* Empiece a hablar. El  reconocedor de dictado interpretará su voz y mostrará el texto teórico en Communicator.
-* Intente decir *"Enviar mensaje"* mientras está grabando un mensaje. Observe que el reconocedor de **palabras clave** no responde  porque el reconocedor de dictado todavía está activo.
+* Empiece a hablar. El **reconocedor de dictado** interpretará su voz y mostrará el texto teórico en Communicator.
+* Intente decir *"Enviar mensaje"* mientras está grabando un mensaje. Observe que el **reconocedor de palabras clave** no responde porque el **reconocedor de dictado** todavía está activo.
 * Deje de hablar durante unos segundos. Observe que el reconocedor de dictado completa su hipótesis y muestra el resultado final.
-* Empiece a hablar y, a continuación, PAUSE durante 20 segundos. Esto hará que el  reconocedor de dictado agote el tiempo de espera.
-* Tenga en cuenta que el reconocedor de **palabras clave** se vuelve a habilitar después del tiempo de espera anterior. Communicator responderá ahora a los comandos de voz.
+* Empiece a hablar y, a continuación, PAUSE durante 20 segundos. Esto hará que el **reconocedor de dictado** agote el tiempo de espera.
+* Tenga en cuenta que el **reconocedor de palabras clave** se vuelve a habilitar después del tiempo de espera anterior. Communicator responderá ahora a los comandos de voz.
 * Por ejemplo, *"Enviar mensaje"* para enviar el mensaje a Astronaut.
 
 ## <a name="chapter-4---grammar-recognizer"></a>Capítulo 4: Reconocedor de gramática
@@ -484,23 +484,25 @@ namespace Academy
 3. Haga clic en el círculo pequeño situado a la derecha del **objeto para etiquetar a lo largo** del campo.
 4. En la ventana que aparece, busque **SRGSToolbox** y selecciónela en la lista.
 5. Eche un vistazo al archivo **SRGSColor. XML** de la carpeta **StreamingAssets** .
-* Las especificaciones de diseño de SRGS se pueden encontrar [aquí](https://www.w3.org/TR/speech-grammar/)en el sitio web de W3C.
-* En nuestro archivo SRGS, tenemos tres tipos de reglas:
-  * Una regla que le permite decir un color de una lista de doce colores.
-  * Tres reglas que escuchan una combinación de la regla de color y una de las tres formas.
-  * La regla raíz, colorChooser, que escucha cualquier combinación de las tres reglas de "color + forma". Las formas se pueden decir en cualquier orden y en cualquier cantidad de solo de una a las tres. Esta es la única regla que se escucha, ya que se especifica como la regla raíz en la parte superior del archivo en la etiqueta de &lt;gramática&gt; inicial.
+    1. Las especificaciones de diseño de SRGS se pueden encontrar [aquí](https://www.w3.org/TR/speech-grammar/)en el sitio web de W3C.
+
+En nuestro archivo SRGS, tenemos tres tipos de reglas:
+
+* Una regla que le permite decir un color de una lista de doce colores.
+* Tres reglas que escuchan una combinación de la regla de color y una de las tres formas.
+* La regla raíz, colorChooser, que escucha cualquier combinación de las tres reglas de "color + forma". Las formas se pueden decir en cualquier orden y en cualquier cantidad de solo de una a las tres. Esta es la única regla que se escucha, ya que se especifica como la regla raíz en la parte superior del archivo en la etiqueta inicial &lt;gramática&gt;.
 
 ### <a name="build-and-deploy"></a>Compilación e implementación
 
 * Vuelva a compilar la aplicación en Unity y luego compile e implemente desde Visual Studio para experimentar la aplicación en HoloLens.
 * Descartar el cuadro de ajuste con un gesto de punteo de aire.
 * Mira el jetpack del Astronaut y realiza un gesto de pulsación de aire.
-* Empiece a hablar. El reconocedor de **gramática** interpretará la voz y cambiará los colores de las formas en función del reconocimiento. Un comando de ejemplo es "círculo azul, cuadrado amarillo".
+* Empiece a hablar. El **reconocedor de gramática** interpretará la voz y cambiará los colores de las formas en función del reconocimiento. Un comando de ejemplo es "círculo azul, cuadrado amarillo".
 * Realice otro gesto de punteo de aire para descartar el cuadro de herramientas.
 
 ## <a name="the-end"></a>Fin
 
-¡Enhorabuena! Ya ha completado **la entrada Mr 212: Voz**.
+Enhorabuena. Ahora ha completado la **entrada MR 212: Voice**.
 
 * Conoce las dos y no los comandos de voz.
 * Vio cómo se empleó la información sobre herramientas para que los usuarios conozcan los comandos de voz.

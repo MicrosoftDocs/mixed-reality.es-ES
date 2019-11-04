@@ -6,12 +6,12 @@ ms.author: joekelly
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, sonido espacial, diseño, estilo
-ms.openlocfilehash: c758037300392d9365c16933677fb0f026976c2a
-ms.sourcegitcommit: c2a5bff423feba7d29d5431c870b6017c2fe1bc2
+ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66750304"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438289"
 ---
 # <a name="spatial-sound-design"></a>Diseño de sonido espacial
 
@@ -21,7 +21,7 @@ Si alguna vez ha jugado el número de [marco](https://en.wikipedia.org/wiki/Marc
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/aB3TDjYklmo]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -32,7 +32,7 @@ Si alguna vez ha jugado el número de [marco](https://en.wikipedia.org/wiki/Marc
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -100,12 +100,12 @@ La atenuación de distancia se produce rápidamente en el primer medidor del usu
 
 **Detección de objetos e interfaces de usuario**
 
-Al utilizar las señales de audio para dirigir la atención del usuario más allá de la vista actual, el sonido debe ser audible y destacado en la mezcla, por encima de los sonidos estéreo y de cualquier otro sonido espacial que pudiera distraerse de la señal de audio direccional. En el caso de los sonidos y la música que están asociados a un elemento de la interfaz de usuario (por ejemplo, un menú), el emisor de sonido se debe adjuntar a ese objeto. El sonido estéreo y otra reproducción de audio no posicional pueden dificultar la localización de los elementos espaciales (consulte más arriba: Evite el enmascaramiento espacial).
+Al utilizar las señales de audio para dirigir la atención del usuario más allá de la vista actual, el sonido debe ser audible y destacado en la mezcla, por encima de los sonidos estéreo y de cualquier otro sonido espacial que pudiera distraerse de la señal de audio direccional. En el caso de los sonidos y la música que están asociados a un elemento de la interfaz de usuario (por ejemplo, un menú), el emisor de sonido se debe adjuntar a ese objeto. El sonido estéreo y otra reproducción de audio no posicional pueden dificultar la búsqueda de elementos espaciales (vea más arriba: evitar el enmascaramiento espacial).
 
 **Usar el sonido espacial sobre el sonido 3D estándar lo máximo posible**
 
 En la realidad mixta, para obtener la mejor experiencia de usuario, el audio 3D se debe lograr utilizando un sonido espacial en lugar de tecnologías de audio 3D heredadas. En general, la espacialización mejorada merece la pena el pequeño costo de la CPU en comparación con el sonido 3D estándar. El audio 3D estándar se puede usar para sonidos de baja prioridad, sonidos que están espaciales pero no necesariamente asociados a un objeto físico o virtual, y objetos que el usuario nunca necesita buscar para interactuar con la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Sonido espacial](spatial-sound.md)
 * [Asignación espacial](spatial-mapping.md)

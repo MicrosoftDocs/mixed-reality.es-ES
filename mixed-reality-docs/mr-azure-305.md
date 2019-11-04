@@ -6,25 +6,25 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, funciones, almacenamiento, hololens, envolventes, VR
-ms.openlocfilehash: 5f3d0c6990249bc32e4c0f55c72dd884c4c2214e
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 79c276d45163465c9921d02343d41d52d5f094e7
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694556"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437988"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
 
 <br> 
 
-# <a name="mr-and-azure-305-functions-and-storage"></a>MR y Azure 305: Funciones y almacenamiento
+# <a name="mr-and-azure-305-functions-and-storage"></a>MR y Azure 305: funciones y almacenamiento
 
 ![Inicio del producto final](images/AzureLabs-Lab5-00.png)
 
 En este curso, aprenderá a crear y usar Azure Functions y almacenar datos con un recurso Azure Storage, dentro de una aplicación de realidad mixta.
 
-*Azure Functions* es un servicio de Microsoft, que permite a los desarrolladores ejecutar pequeños fragmentos de código, "funciones", en Azure. Esto proporciona una manera de delegar el trabajo en la nube, en lugar de la aplicación local, que puede tener muchas ventajas. *Azure Functions* admite varios lenguajes de desarrollo,\#como C\#, F, node. js, Java y php. Para obtener más información, visite el [artículo Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+*Azure Functions* es un servicio de Microsoft, que permite a los desarrolladores ejecutar pequeños fragmentos de código, "funciones", en Azure. Esto proporciona una manera de delegar el trabajo en la nube, en lugar de la aplicación local, que puede tener muchas ventajas. *Azure Functions* admite varios lenguajes de desarrollo, como C\#, F\#, node. js, Java y php. Para obtener más información, visite el [artículo Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
 *Azure Storage* es un servicio en la nube de Microsoft, que permite a los desarrolladores almacenar datos, con el seguro de que estará altamente disponible, seguro, duradero, escalable y redundante. Esto significa que Microsoft administrará todo el mantenimiento y los problemas críticos. Para obtener más información, visite el [artículo Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).
 
@@ -44,7 +44,7 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td>MR y Azure 305: Funciones y almacenamiento</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>MR y Azure 305: funciones y almacenamiento</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -67,7 +67,7 @@ Se recomienda el siguiente hardware y software para este curso:
 - Una suscripción a una cuenta de Azure para crear recursos de Azure
 - Acceso a Internet para la configuración de Azure y la recuperación de datos
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 
@@ -105,7 +105,7 @@ Para usar el **servicio Azure Storage**, debe crear y configurar una **cuenta de
 
     6.  En *rendimiento*, seleccione **estándar**.
 
-    7.  Deje la *transferencia segura requerida* como deshabilitada.
+    7.  Deje la *transferencia segura requerida* como **deshabilitada**.
 
     8.  Seleccione una *suscripción*.
 
@@ -115,7 +115,7 @@ Para usar el **servicio Azure Storage**, debe crear y configurar una **cuenta de
 
     10. También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.
 
-    11. Seleccione **Crear**.
+    11. Selecciona **Crear**.
 
         ![información del servicio de entrada](images/AzureLabs-Lab5-03.png)
 
@@ -127,7 +127,7 @@ Para usar el **servicio Azure Storage**, debe crear y configurar una **cuenta de
 
 7.  Haga clic en las notificaciones para explorar la nueva instancia de servicio.
 
-    ![Ir al recurso](images/AzureLabs-Lab5-05.png)
+    ![ir al recurso](images/AzureLabs-Lab5-05.png)
 
 8.  Haga clic en el botón **ir a recurso** de la notificación para explorar la nueva instancia de servicio. Se le dirigirá a la nueva instancia de servicio de la *cuenta de almacenamiento* .
 
@@ -223,7 +223,7 @@ Para crear una función de Azure:
         }
     ```
 
-13. Seleccione **Guardar**.
+13. Selecciona **Guardar**.
 
 14. El resultado debería ser similar a la imagen siguiente.
 
@@ -240,7 +240,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 Configure y pruebe sus auriculares de la realidad mixta.
 
 > [!NOTE]
-> **No** necesitará controladores de movimiento para este curso. Si necesita ayuda para configurar el casco inmersivo, [visite el artículo sobre la](https://support.microsoft.com/en-au/help/4043101/windows-10-set-up-windows-mixed-reality)configuración de la realidad mixta.
+> **No** necesitará controladores de movimiento para este curso. Si necesita ayuda para configurar el casco inmersivo, [visite el artículo sobre la](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality)configuración de la realidad mixta.
 
 1.  Abra Unity y haga clic en **nuevo**.
 
@@ -250,15 +250,15 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
     ![asignar un nombre al nuevo proyecto de Unity](images/AzureLabs-Lab5-18.png)
 
-3.  Con Unity abierto, merece la pena comprobar que el **Editor** de scripts predeterminado está establecido en **Visual Studio**. Vaya a **Editar** > **preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
+3.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio**. Vaya a **editar** > **preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
 
     ![establecer Visual Studio como editor de scripts](images/AzureLabs-Lab5-19.png)
 
-4.  A continuación, vaya a**configuración de compilación** de **archivos** > y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
+4.  A continuación, vaya a **archivo** > **configuración de compilación** y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
 
     ![cambiar la plataforma a UWP](images/AzureLabs-Lab5-20.png)
 
-5.  Vaya a**configuración de compilación** de **archivos** > y asegúrese de que:
+5.  Vaya a **archivo** > **configuración de compilación** y asegúrese de que:
 
     1. El **dispositivo de destino** se establece en **cualquier dispositivo**.
 
@@ -278,11 +278,11 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
             ![agregar escenas abiertas](images/AzureLabs-Lab5-21.png)
 
-        2.  Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre Scenes.
+        2.  Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre **Scenes**.
 
             ![crear carpeta de escenas](images/AzureLabs-Lab5-22.png)
 
-        3.  Abra la carpeta Scenes recién creada y, a continuación, en el campo **nombre de archivo:** , escriba **FunctionsScene**y, a continuación, presione **Guardar**.
+        3.  Abra la carpeta **Scenes** recién creada y, a continuación, en el campo **nombre de archivo:** , escriba **FunctionsScene**y, a continuación, presione **Guardar**.
 
             ![escena de Save Functions](images/AzureLabs-Lab5-23.png)
 
@@ -299,7 +299,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
     1.  En la pestaña **otros valores** :
 
         1.  La **versión de scripting en tiempo de ejecución** debe ser **Experimental** (.net 4,6 equivalente), lo que desencadenará una necesidad de reiniciar el editor.
-        2.  El **back-end** de scripting debe ser **.net**
+        2.  El **back-end de scripting** debe ser **.net**
         3.  El **nivel de compatibilidad de API** debe ser **.net 4,6**
 
     2.  En la pestaña **configuración de publicación** , en **capacidades**, seleccione:
@@ -318,7 +318,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
 10.  Cierre la ventana Configuración de compilación.
 
-11. Guarde la escena y el proyecto (**archivo** > **Guardar escena/archivo** > **Guardar proyecto**).
+11. Guarde la escena y el proyecto (**archivo** > **guardar la escena o el archivo** > **Guardar proyecto**).
 
 ## <a name="chapter-4---setup-main-camera"></a>Capítulo 4: configuración de la cámara principal
 
@@ -337,24 +337,24 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
     |         |    TRANSFORMACIÓN: POSICIÓN   |       |
     | :-----: | :-----------------------: | :----:|
-    | **X**   | **SÍ**                     | **Z** |
+    | **X1**   | **Sí**                     | **Z** |
     | 0       | 1                         | 0     |    
 
     |       | TRANSFORMACIÓN-GIRO |       |
     | :---: | :------------------: | :----:|
-    | **X** | **SÍ**                | **Z** |
+    | **X1** | **Sí**                | **Z** |
     | 0     | 0                    | 0     |
 
     |       | TRANSFORMACIÓN DE ESCALA |       |
     | :---: | :---------------: | :---: |
-    | **X** | **SÍ**             | **Z** |
+    | **X1** | **Sí**             | **Z** |
     | 1     | 1                 | 1     |
 
     ![establecer transformación de cámara](images/AzureLabs-Lab5-30.png)
 
 ## <a name="chapter-5---setting-up-the-unity-scene"></a>Capítulo 5: configuración de la escena de Unity
 
-1.  Haga clic con el botón secundario en un área vacía del *Panel*de jerarquías, en **objeto 3D**, agregar un **plano**.
+1.  Haga clic con el botón secundario en un área vacía del *Panel de jerarquías*, en **objeto 3D**, agregar un **plano**.
 
     ![crear nuevo plano](images/AzureLabs-Lab5-31.png)
 
@@ -362,12 +362,12 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
     |       | TRANSFORMACIÓN: POSICIÓN |       |
     | :---: | :------------------: | :---: |
-    | **X** | **SÍ**                | **Z** |
+    | **X1** | **Sí**                | **Z** |
     | 0     | 0                    | 4     |
 
     |       | TRANSFORMACIÓN DE ESCALA |       |
     | :---: | :---------------: | :---: |
-    | **X** | **SÍ**             | **Z** |
+    | **X1** | **Sí**             | **Z** |
     | 10    | 1                 | 10    |
 
     ![establecer la posición y la escala del plano](images/AzureLabs-Lab5-32.png)
@@ -382,7 +382,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
         |       | TRANSFORMACIÓN: POSICIÓN |       |
         | :---: | :------------------: |:-----:|
-        | **X** | **SÍ**                | **Z** |
+        | **X1** | **Sí**                | **Z** |
         | 0     | 3                    | 5     |
 
 
@@ -412,7 +412,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
         |       | TRANSFORMACIÓN: POSICIÓN |       |
         | :---: | :------------------: |:----: |
-        | **X** |**SÍ**                 | **Z** |
+        | **X1** |**Sí**                 | **Z** |
         | 0     | -1                   | 0     |
 
         ![transformación actualizar punto de generación de forma](images/AzureLabs-Lab5-40.png)
@@ -421,7 +421,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
 6.  A continuación, creará un objeto de **texto 3D** para proporcionar comentarios sobre el estado del servicio de Azure.
 
-    Vuelva a hacer clic con el botón derecho en **GazeButton** en el panel jerarquía y agregue un objeto **3D** > de**texto 3D** de objeto como *elemento secundario*.
+    Vuelva a hacer clic con el botón derecho en **GazeButton** en el panel jerarquía y agregue un **objeto 3D** > objeto de **texto 3D** como un *elemento secundario*.
 
     ![crear nuevo objeto de texto 3D](images/AzureLabs-Lab5-42.png)
 
@@ -431,12 +431,12 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
     |       | TRANSFORMACIÓN: POSICIÓN |       |
     | :---: | :------------------: | :---: |
-    | **X** | **SÍ**                | **Z** |
+    | **X1** | **Sí**                | **Z** |
     | 0     | 0                    | -0,6  |
 
     |       | TRANSFORMACIÓN DE ESCALA |       |
     | :---: | :---------------: | :---: |
-    | **X** | **SÍ**             | **Z** |
+    | **X1** | **Sí**             | **Z** |
     | 0,1   | 0,1               | 0,1   |
 
 
@@ -448,7 +448,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
     ![establecer componente de malla de texto](images/AzureLabs-Lab5-43.png)
 
     > [!TIP]
-    > El color seleccionado aquí es color Hex: **000000FF**, sin embargo, no dude en elegir el suyo propio, solo tiene que asegurarse de que es legible.
+    > El color seleccionado aquí es color Hex: **000000FF**, aunque no dude en elegir el suyo propio, solo tiene que asegurarse de que es legible.
 
 10. La estructura del panel de jerarquías debería tener ahora el siguiente aspecto:
 
@@ -467,9 +467,9 @@ Actualmente hay un problema conocido en Unity que requiere que los complementos 
 
 Para importar el SDK en su propio proyecto, asegúrese de que ha descargado el [". unitypackage Tools" más reciente de github](https://aka.ms/azstorage-unitysdk). A continuación, haga lo siguiente:
 
-1.  Agregue el **archivo. unitypackage Tools** a Unity mediante la opción de menú de**paquete personalizado** de**importación** > de **recursos** > .
+1.  Agregue el archivo **. unitypackage Tools** a Unity mediante la opción de menú **activos** > **importar paquete** > **paquete personalizado** .
 
-2.  En el cuadro **importar paquete Unity** que aparece, puede seleccionar todo en**almacenamiento**de **Complementos** > . Desactive todo lo demás, ya que no es necesario para este curso.
+2.  En el cuadro **importar paquete Unity** que aparece, puede seleccionar todo en **complemento** > **Storage**. Desactive todo lo demás, ya que no es necesario para este curso.
 
     ![importar a paquete](images/AzureLabs-Lab5-45.png)
 
@@ -477,10 +477,10 @@ Para importar el SDK en su propio proyecto, asegúrese de que ha descargado el [
 
 4.  Vaya a la carpeta *Storage* en *Complementos*, en la vista proyecto, y seleccione *solo*los siguientes complementos:
 
-    -   Microsoft.Data.Edm
-    -   Microsoft.Data.OData
+    -   Microsoft. Data. Edm
+    -   Microsoft. Data. OData
     -   Microsoft. WindowsAzure. Storage
-    -   Newtonsoft.Json
+    -   Newtonsoft. JSON
     -   System. espacial
 
         ![desactive cualquier plataforma](images/AzureLabs-Lab5-46.png)
@@ -519,7 +519,7 @@ La clase *AzureServices* se encargará de:
 
 Para crear esta clase:
 
-1.  Haga clic con el botón derecho en la carpeta de *recursos* , que se encuentra en el panel Proyecto, **crear** > **carpeta**. Asigne a la carpeta el nombre scripts.
+1.  Haga clic con el botón derecho en la carpeta de *recursos* , que se encuentra en el panel Proyecto, **cree** > **carpeta**. Asigne a la carpeta el nombre **scripts**.
 
     ![crear nueva carpeta](images/AzureLabs-Lab5-50.png)
 
@@ -527,7 +527,7 @@ Para crear esta clase:
 
 2.  Haga doble clic en la carpeta que acaba de crear para abrirla.
 
-3.  Haga clic con el botón derecho dentro de la carpeta, **crear**  >   **C# script**. Llame al script *AzureServices*.
+3.  Haga clic con el botón derecho dentro de la carpeta, **cree** >  **C# script**. Llame al script *AzureServices*.
 
 4.  Haga doble clic en la nueva clase *AzureServices* para abrirla con *Visual Studio*.
 
@@ -655,9 +655,9 @@ El siguiente script que se va a crear es la clase *ShapeFactory* . El rol de est
 
 Para crear esta clase:
 
-1.  Vaya a la  carpeta scripts que creó anteriormente.
+1.  Vaya a la carpeta **scripts** que creó anteriormente.
 
-2.  Haga clic con el botón derecho dentro de la carpeta, **crear**  >   **C# script**. Llame al script *ShapeFactory*.
+2.  Haga clic con el botón derecho dentro de la carpeta, **cree** >  **C# script**. Llame al script *ShapeFactory*.
 
 3.  Haga doble clic en el nuevo script *ShapeFactory* para abrirlo con *Visual Studio*.
 
@@ -765,11 +765,11 @@ Esta clase es responsable de crear un **Raycast** que se proyectará hacia delan
 
 Para crear esta clase:
 
-1.  Vaya a la  carpeta scripts que creó anteriormente.
+1.  Vaya a la carpeta **scripts** que creó anteriormente.
 
-2.  Haga clic con el botón derecho en el panel Proyecto, **crear**  >   **C# script**. Llame al script *fijamente*.
+2.  Haga clic con el botón derecho en el panel Proyecto, **cree** >  **C# script**. Llame al script *fijamente*.
 
-3.  Haga doble clic en el  nuevo script de miraciones para abrirlo con *Visual Studio.*
+3.  Haga doble clic en el nuevo script de *miraciones* para abrirlo con *Visual Studio.*
 
 4.  Asegúrese de que el siguiente espacio de nombres se incluye en la parte superior del script:
 
@@ -777,7 +777,7 @@ Para crear esta clase:
         using UnityEngine;
     ```
 
-5.  Después, agregue las siguientes variables dentro  de la clase mirate:
+5.  Después, agregue las siguientes variables dentro de la clase *mirate* :
 
     ```csharp
         /// <summary>
@@ -1157,7 +1157,7 @@ Con los demás scripts en su lugar, ahora es posible *completar* la clase *Azure
         }
     ```
 
-5.  Agregue un método para recuperar el texto almacenado en el archivo que se encuentra en el *archivo de Azure Storage* y deserializarlo en una lista.
+5.  Agregue un método para recuperar el texto almacenado en el archivo que se encuentra en el *archivo de Azure Storage* y *deserializarlo* en una lista.
 
 6.  Una vez completado este proceso, el método vuelve a habilitar la mirada para que el usuario pueda agregar más formas a la escena.
 
@@ -1197,7 +1197,7 @@ Con los demás scripts en su lugar, ahora es posible *completar* la clase *Azure
 
 Para comenzar el proceso de compilación:
 
-1.  Vaya a **archivos** > **configuración de compilación**.
+1.  Vaya a **archivo** > **configuración de compilación**.
 
     ![compilar la aplicación](images/AzureLabs-Lab5-54.png)
 
@@ -1215,15 +1215,15 @@ Para implementar la aplicación:
 
 2.  En la **plataforma**de la solución, seleccione **x86, equipo local**.
 
-3.  En la **configuración de soluciones** , seleccione Depurar.
+3.  En la **configuración de soluciones** , seleccione **depurar**.
 
     > En el caso de Microsoft HoloLens, es posible que le resulte más fácil establecer esto en el *equipo remoto*, de modo que no esté anclado al equipo. Sin embargo, también tendrá que hacer lo siguiente:
-    > - Conozca la **dirección IP** de HoloLens, que se encuentra en la red de **configuración** > &**Opciones avanzadas**de**Wi-Fi** > de**Internet** > ; la IPv4 es la dirección que debe usar. 
-    > - Asegurarse de que el **modo de desarrollador** está **activado**; se encuentra en **configuración** > **Actualizar & seguridad** > **para los desarrolladores**.
+    > - Conozca la **dirección IP** de HoloLens, que puede encontrarse en la **configuración** > **red & Internet** > **Wi-Fi** > **Opciones avanzadas**; IPv4 es la dirección que debe usar. 
+    > - Asegurarse de que el **modo de desarrollador** está **activado**; se encuentra en **configuración** > **Actualizar &**  > **de seguridad para desarrolladores**.
 
     ![implementar solución](images/AzureLabs-Lab5-55.png)
 
-4.  Vaya al menú  compilar y haga clic en **implementar solución** para transferir localmente la aplicación a la máquina.
+4.  Vaya al menú **compilar** y haga clic en **implementar solución** para transferir localmente la aplicación a la máquina.
 
 5.  La aplicación debe aparecer ahora en la lista de aplicaciones instaladas, lista para iniciarse y probarse.
 

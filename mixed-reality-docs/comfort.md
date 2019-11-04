@@ -6,37 +6,38 @@ ms.author: erpau
 ms.date: 04/5/2019
 ms.topic: article
 keywords: Realidad mixta, diseño, confort, HoloLens 2, HoloLens (1º gen)
-ms.openlocfilehash: e3a78e9a990d207b19b287e1897897a5d6dee3ca
-ms.sourcegitcommit: 150d258a23130026c8792da383a3993657841fb4
+ms.openlocfilehash: e71b8d73a37a5d10a07d37d91cf14c88b7a85687
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024443"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436386"
 ---
 # <a name="comfort"></a>Comodidad
 
-Durante la vista natural, el sistema visual humano se basa en varios orígenes de información o "indicaciones" para interpretar las formas 3D y las posiciones relativas de los objetos. Algunas pilas solo se basan en un solo ojo (guías de uso ocular), como [perspectiva lineal](https://en.wikipedia.org/wiki/Perspective_(graphical)), [tamaño conocido](https://en.wikipedia.org/wiki/Size#Perception_of_size), oclusión, desenfoque [de profundidad de campo](https://en.wikipedia.org/wiki/Depth_of_field)y [alojamiento](https://en.wikipedia.org/wiki/Accommodation_(eye)). Otros tipos de pila dependen de los ojos (señales binoculares) e incluyen [vergence](https://en.wikipedia.org/wiki/Vergence) (esencialmente las rotaciones relativas de los ojos necesarios para examinar un objeto) y la [disparidad binocular](https://en.wikipedia.org/wiki/Stereopsis) (el patrón de diferencias entre las proyecciones de la escena en el parte posterior de los dos ojos). Para garantizar la máxima comodidad en las pantallas montadas por el cabezal, es importante que los diseñadores y desarrolladores creen y presenten el contenido de una forma que imite cómo funcionan estas guías en el mundo natural. Desde una perspectiva física, también es importante diseñar contenido que no requiera movimiento de fatiguing del cuello o de los brazos. En este artículo, analizaremos las consideraciones clave que hay que tener en cuenta para lograr estos objetivos.
+Durante la vista natural, el sistema visual humano se basa en varios orígenes de información o "indicaciones" para interpretar las formas 3D y las posiciones relativas de los objetos. Algunas pilas solo se basan en un solo ojo (guías de uso ocular), como [perspectiva lineal](https://en.wikipedia.org/wiki/Perspective_(graphical)), [tamaño conocido](https://en.wikipedia.org/wiki/Size#Perception_of_size), oclusión, [desenfoque de profundidad de campo](https://en.wikipedia.org/wiki/Depth_of_field)y [alojamiento](https://en.wikipedia.org/wiki/Accommodation_(eye)). Otros tipos de pila dependen de los ojos (señales binoculares) e incluyen [vergence](https://en.wikipedia.org/wiki/Vergence) (esencialmente las rotaciones relativas de los ojos necesarios para examinar un objeto) y la [disparidad binocular](https://en.wikipedia.org/wiki/Stereopsis) (el patrón de diferencias entre las proyecciones de la escena en el parte posterior de los dos ojos). Para garantizar la máxima comodidad de los cascos de realidad virtual, es importante que los diseñadores y los desarrolladores puedan crear y presentar contenido imitando el funcionamiento de estas señales en el mundo real. Desde una perspectiva física, también es importante diseñar contenido que no requiera movimiento de fatiguing del cuello o de los brazos. En este artículo, analizaremos las consideraciones clave que hay que tener en cuenta para lograr estos objetivos.
 
 ## <a name="vergence-accommodation-conflict"></a>Vergence: conflicto de alojamiento
 
-Para ver claramente los objetos, los seres humanos deben [acomodar](https://en.wikipedia.org/wiki/Accommodation_%28eye%29) o ajustar el foco de los ojos a la distancia del objeto. Al mismo tiempo, el giro de ambos ojos debe [converger](https://en.wikipedia.org/wiki/Convergence_(eye)) en la distancia del objeto para evitar que aparezcan imágenes dobles. En la vista natural, se vinculan vergence y alojamientos. Al ver algo cercano (por ejemplo, un Housefly cerca de la nariz), los ojos se cruzan y se acomodan a un punto cercano. Por el contrario, si ve algo en infinito óptico (aproximadamente a partir de 6 m o más lejano para una visión normal), las líneas de visión de los ojos pasan a ser paralelas y los lentes de los ojos se acomodan al infinito. 
+Para ver claramente los objetos, los seres humanos deben [acomodar](https://en.wikipedia.org/wiki/Accommodation_%28eye%29)o ajustar el foco de los ojos a la distancia del objeto. Al mismo tiempo, el giro de ambos ojos debe [converger](https://en.wikipedia.org/wiki/Convergence_(eye)) en la distancia del objeto para evitar que aparezcan imágenes dobles. En la vista natural, se vinculan vergence y alojamientos. Al ver algo cercano (por ejemplo, un Housefly cerca de la nariz), los ojos se cruzan y se acomodan a un punto cercano. Por el contrario, si ve algo en infinito óptico (aproximadamente a partir de 6 m o más lejano para una visión normal), las líneas de visión de los ojos pasan a ser paralelas y los lentes de los ojos se acomodan al infinito. 
 
 En la mayoría de las pantallas de montaje, los usuarios siempre se acomodan a la distancia focal de la pantalla (para obtener una imagen nítida), pero convergen a la distancia del objeto de interés (para obtener una sola imagen). Cuando los usuarios se acomodan y convergen en distintas distancias, el vínculo natural entre las dos señales debe romperse y esto puede dar lugar a una molestia visual o una fatiga.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/-606oZKLa_s]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/-606oZKLa_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### <a name="guidance-for-holographic-devices"></a>Guía para dispositivos holográficas
 
 Las pantallas de HoloLens se corrigen a una distancia óptica de aproximadamente 2,0 m del usuario. Por lo tanto, los usuarios siempre deben acomodarse cerca de 2,0 m para mantener una imagen clara en el dispositivo. Los desarrolladores de aplicaciones pueden guiar el lugar en el que los usuarios convergen colocando contenido y hologramas en varias profundidades. La descomodidad del conflicto de alojamiento de vergence se puede evitar o minimizar manteniendo el contenido en el que los usuarios convergen lo más cerca posible de 2,0 m (es decir, en una escena con mucha profundidad, coloque las áreas de interés cerca de 2,0 m del usuario cuando sea posible). Cuando el contenido no se puede colocar cerca de 2,0 m, la molestia del conflicto de alojamiento de Vergence es mayor cuando los interruptores de los usuarios avanzan y retrocediendo entre distintas distancias. En otras palabras, es mucho más cómodo ver un holograma estacionario que se mantiene 50CM fuera de la vista de un holograma 50CM que se desplaza hacia el usuario con el tiempo.
 
-![Distancia óptima para colocar hologramas del usuario.](images/distanceguiderendering-950px.png)<br>
+![distancia óptima para colocar hologramas del usuario.](images/distanceguiderendering-950px.png)<br>
 *Distancia óptima para colocar hologramas del usuario*
 
 ### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Procedimientos recomendados para HoloLens (1ª generación) y HoloLens 2
 
-Para obtener la máxima comodidad, **la zona óptima para la colocación de hologramas es de entre 1,25 m y 5 m**. En todos los casos, los diseñadores deben intentar estructurar las escenas de contenido para animar a los usuarios a interactuar con 1m o más lejos del contenido (por ejemplo, ajustar [el tamaño del contenido y los parámetros de ubicación](gaze-targeting.md)predeterminados). 
+Para obtener la máxima comodidad, **la zona óptima para la colocación de hologramas es de entre 1,25 m y 5 m**. En todos los casos, los diseñadores deben intentar estructurar las escenas de contenido para animar a los usuarios a interactuar con 1m o más lejos del contenido (por ejemplo, ajustar [el tamaño del contenido y los parámetros de ubicación predeterminados](gaze-and-commit.md)). 
 
 Aunque en ocasiones es posible que sea necesario mostrar el contenido más cerca de 1 millón, se recomienda no presentar ningún holograma más cercano a 40cm. Por lo tanto, se recomienda empezar a **atenuar el contenido en 40cm y colocar un plano de recorte de representación en 30cm** para evitar cualquier objeto más cercano.
 
@@ -44,7 +45,7 @@ Los objetos que se mueven en profundidad son más probables que los objetos esta
 
 ### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Consideraciones adicionales para las distancias de interacción cercana y de HoloLens 2
 
-Al diseñar contenido para la interacción directa (cercana) en HoloLens 2 o **en cualquier aplicación en la que el contenido se debe colocar más cerca de 1 millón, se debe tener cuidado adicional para garantizar la comodidad del usuario**. La probabilidad de que se produzca la molestia debido al conflicto de alojamiento de vergence aumenta exponencialmente con una distancia de visualización decreciente. Además, los usuarios pueden experimentar un mayor desenfoque a la hora de ver el contenido en distancias cercanas a la interacción, por lo que se recomienda probar el contenido representado en la zona de la colocación óptima del holograma, así como más cerca (menos de 1,0 m hasta el plano de recorte). Asegúrese de que sigue siendo claro y cómodo de ver. 
+Al diseñar contenido para la interacción directa (cercana) en HoloLens 2 o **en cualquier aplicación en la que el contenido se debe colocar más cerca de 1 millón, se debe tener cuidado adicional para garantizar la comodidad del usuario**. La probabilidad de que se produzca la molestia debido al conflicto de alojamiento de vergence aumenta exponencialmente con una distancia de visualización decreciente. Además, los usuarios pueden experimentar un mayor desvanecimiento al ver el contenido a distancias de interacción cercanos, por lo que se recomienda probar el contenido representado tanto en la zona de la ubicación óptima del holograma como más cerca (menos de 1,0 m hasta el plano de recorte). Asegúrese de que sigue siendo claro y cómodo de ver. 
 
 Se **recomienda crear un "presupuesto de profundidad" para aplicaciones en función de la cantidad de tiempo que se espera que un usuario vea el contenido que está cerca (menos de 1,0 m) y que se mueve en profundidad**. Un ejemplo es evitar colocar el usuario en esas situaciones más del 25% del tiempo. Si se supera el presupuesto de profundidad, se recomienda realizar pruebas de usuario cuidadosas para asegurarse de que sigue siendo una experiencia cómoda. 
 
@@ -164,15 +165,15 @@ Para evitar que el contenido de la presión ocular y el cuello se haya diseñado
 
 El ángulo de miración óptimo (en adelante) se considera entre 10-20 grados por debajo de la horizontal, ya que el encabezado tiende a inclinarse hacia abajo ligeramente, especialmente durante las actividades.
 
-![Campo de vista (campo de visualización) permitido según lo determinado por el intervalo de movimiento del cuello](images/optimal-field-of-view-2-750px.png)<br>
+![campo de vista (hipercampo) permitido según lo determinado por el intervalo de movimiento de la](images/optimal-field-of-view-2.png)<br>
 *Campo de vista (campo de visualización) permitido según lo determinado por el intervalo de movimiento del cuello*
 
 ## <a name="arm-positions"></a>Posiciones de ARM
 
 Se puede acumular fatiga en los casos en los que se espera que los usuarios mantengan una mano a lo largo de la duración de una experiencia. También puede ser fatiguing para requerir que el usuario realice repetidas veces gestos de pulsaciones de aire durante largos períodos de tiempo. Por lo tanto, se recomienda que evite la necesidad de una entrada de gestos constante y repetida. Este objetivo puede lograrse mediante la incorporación de saltos cortos o la oferta de una combinación de entradas de gestos y voz para interactuar con la aplicación.
 
-## <a name="see-also"></a>Vea también
-* [Gaze](gaze.md)
+## <a name="see-also"></a>Consulta también
+* [Gaze](gaze-and-commit.md)
 * [Estabilidad de hologramas](hologram-stability.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Marco holográfico](holographic-frame.md)

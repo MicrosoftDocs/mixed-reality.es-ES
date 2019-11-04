@@ -6,20 +6,20 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escalado colocado, escalado permanente, escalado de habitación, escala mundial, grado de 360, colocado, permanente, de habitación, mundo, escala, posición, orientación, estacionaria, conectado, fase, delimitador, delimitador espacial, bloque mundial, bloqueo mundial, bloqueo de cuerpo, bloqueo de cuerpo, límites, persistencia, uso compartido, pérdida de seguimiento, delimitador espacial en la nube
-ms.openlocfilehash: f4b945a3ffb83b9ac0a94e0d793a19939aece3bb
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829862"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436148"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
-En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](hologram.md) en su mundo que buscan y suenan como objetos reales. Esto implica el posicionamiento y la orientación precisos de esos hologramas en lugares del mundo que son significativos para el usuario, tanto si el mundo es su habitación física como si es un dominio virtual que ha creado. Cuando se establece la razón de la posición y la orientación de los hologramas, o de cualquier otra geometría como [el rayo o](gaze.md) las posiciones de la [mano](gestures.md), Windows proporciona varios sistemas de coordenadas del mundo real en los que se puede expresar la geometría, conocida como  **sistemas de coordenadas espaciales**.
+En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](hologram.md) en su mundo que buscan y suenan como objetos reales. Esto implica el posicionamiento y la orientación precisos de esos hologramas en lugares del mundo que son significativos para el usuario, tanto si el mundo es su habitación física como si es un dominio virtual que ha creado. Cuando se establece la razón de la posición y la orientación de los hologramas, o de cualquier otra geometría como [el rayo o](gaze-and-commit.md) las posiciones de la [mano](hands-and-tools.md), Windows proporciona varios sistemas de coordenadas del mundo real en los que se puede expresar la geometría, conocida como  **sistemas de coordenadas espaciales**.
 
 <br>
 
->[!VIDEO https://www.youtube.com/embed/TneGSeqVAXQ]
+<iframe width="940" height="530" src="https://www.youtube.com/embed/TneGSeqVAXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -31,9 +31,9 @@ En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](hologram.
     <col width="20%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
-        <td><strong>HoloLens 2</strong></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
@@ -66,6 +66,12 @@ En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](hologram.
         <td>✔️</td>
         <td>❌</td>
     </tr>
+    <tr>
+        <td><a href="scene-understanding.md">Descripción de escenas</a></td>
+        <td>❌</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
 </table>
 
 ## <a name="mixed-reality-experience-scales"></a>Escalas de experiencia de realidad mixta
@@ -75,25 +81,25 @@ Las aplicaciones de realidad mixta pueden diseñar una amplia gama de experienci
 
 | Escala de experiencia | Requisitos | Experiencia de ejemplo | 
 |----------|----------|----------|
-|  **Solo orientación** |  **Orientación del casco** (con alineación de gravedad) |  visor de vídeo de 360 ° | 
+|  **Solo orientación** |  **Orientación de auriculares** (con alineación de gravedad) |  visor de vídeo de 360 ° | 
 |  **Escalado colocado** |  Por encima, más la **posición del casco** en relación con la posición cero |  Juego de carreras o simulador de espacio | 
 |  **Escalado permanente** |  Por encima, más el **origen del piso de fase** |  Juego de acciones en el que se coloca el pato y se sobreexpone  | 
 |  **Escala de sala** |  Anterior, más los **límites de fase de polígono** |  Juego puzzle donde se recorre el rompecabezas | 
-|  **Escala mundial** |  Delimitadores espaciales (y normalmente [asignación espacial](spatial-mapping.md)) |  Juego con enemigos procedentes de sus paredes reales, como [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
+|  **Escala mundial** |  **Delimitadores espaciales** (y normalmente [asignación espacial](spatial-mapping.md)) |  Juego con enemigos procedentes de sus paredes reales, como [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j) | 
 
 Estas escalas de experiencia siguen un modelo de "muñecas de anidamiento". El principio de diseño clave aquí para Windows Mixed Reality es que un casco determinado admite aplicaciones creadas para una escala de experiencia de destino, así como todas las escalas inferiores:
 <br>
 
 | seguimiento de 6DOF | Piso definido | seguimiento de 360 ° | Límites definidos | Delimitadores espaciales | Experiencia máxima | 
 |----------|----------|----------|----------|----------|----------|
-|  Sin |  - |  - |  - |  - |  **Solo orientación** | 
-|  **Sí** |  Sin |  - |  - |  - |  **Sentada** | 
-|  **Sí** |  **Sí** |  Sin |  - |  - |  **Hacia delante** | 
-|  **Sí** |  **Sí** |  **Sí** |  Sin |  - |  **Permanente: 360 °** | 
-|  **Sí** |  **Sí** |  **Sí** |  **Sí** |  Sin |  **Misma** | 
+|  No |  - |  - |  - |  - |  **Solo orientación** | 
+|  **Sí** |  No |  - |  - |  - |  **Sentada** | 
+|  **Sí** |  **Sí** |  No |  - |  - |  **Hacia delante** | 
+|  **Sí** |  **Sí** |  **Sí** |  No |  - |  **Permanente: 360 °** | 
+|  **Sí** |  **Sí** |  **Sí** |  **Sí** |  No |  **Misma** | 
 |  **Sí** |  **Sí** |  **Sí** |  **Sí** |  **Sí** |  **WWPN** | 
 
-Tenga en cuenta que el marco de fase de referencia todavía no se admite en HoloLens. Actualmente, una aplicación de escala de habitación de HoloLens debe usar la [asignación espacial](spatial-mapping.md) para buscar el piso y las paredes del usuario.
+Tenga en cuenta que el marco de fase de referencia todavía no se admite en HoloLens. Actualmente, una aplicación de escala de habitación de HoloLens debe usar la [asignación espacial](spatial-mapping.md) o la [comprensión de escenas](scene-understanding.md) para buscar el piso y las paredes del usuario.
 
 ## <a name="spatial-coordinate-systems"></a>Sistemas de coordenadas espaciales
 
@@ -109,7 +115,7 @@ En ambos tipos de sistemas de coordenadas, el eje X positivo apunta a la derecha
 
 ## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Creación de una experiencia de solo orientación o de escalado
 
-La clave para la [representación](rendering.md) holográfica es cambiar la vista de la aplicación de sus hologramas cada fotograma a medida que el usuario se desplaza, para que coincida con el movimiento de cabeza previsto. Puede crear **experiencias** de escalado colocadas que respeten los cambios en la posición principal y la orientación del encabezado del usuario mediante un **marco estacionario de referencia**.
+La clave para la [representación](rendering.md) holográfica es cambiar la vista de la aplicación de sus hologramas cada fotograma a medida que el usuario se desplaza, para que coincida con el movimiento de cabeza previsto. Puede crear **experiencias de escalado colocadas** que respeten los cambios en la posición principal y la orientación del encabezado del usuario mediante un **marco estacionario de referencia**.
 
 Algunos contenidos deben omitir las actualizaciones de la posición principal, que permanecen fijas en el encabezado y la distancia elegidos del usuario en todo momento. El ejemplo principal es el vídeo de 360 grados: dado que el vídeo se captura desde una sola perspectiva fija, estropearía la ilusión de que la posición de la vista se desplazará en relación con el contenido, aunque la orientación de la vista deba cambiar cuando el usuario se desplace. Puede compilar estas **experiencias solo de orientación** mediante un **marco de referencia asociado**.
 
@@ -179,7 +185,7 @@ Una buena regla general es asegurarse de que todo lo que se represente en funci�
 
 Los delimitadores espaciales también pueden permitir que la aplicación recuerde una ubicación importante incluso después de que la aplicación se suspenda o se apague el dispositivo.
 
-Puede guardar en el disco los delimitadores espaciales que crea la aplicación y, a continuación, volver a cargarlos más adelante, si los conserva en el **almacén**de delimitadores espaciales de la aplicación. Al guardar o cargar un delimitador, debe proporcionar una clave de cadena que sea significativa para la aplicación, con el fin de identificar el delimitador más adelante. Considere esta clave como el nombre de archivo del delimitador. Si desea asociar otros datos con ese delimitador, como un modelo 3D que el usuario colocó en esa ubicación, guárdelo en el almacenamiento local de la aplicación y asócielo con la clave que eligió.
+Puede guardar en el disco los delimitadores espaciales que crea la aplicación y, a continuación, volver a cargarlos más adelante, si los conserva en el **almacén de delimitadores espaciales**de la aplicación. Al guardar o cargar un delimitador, debe proporcionar una clave de cadena que sea significativa para la aplicación, con el fin de identificar el delimitador más adelante. Considere esta clave como el nombre de archivo del delimitador. Si desea asociar otros datos con ese delimitador, como un modelo 3D que el usuario colocó en esa ubicación, guárdelo en el almacenamiento local de la aplicación y asócielo con la clave que eligió.
 
 Al conservar los delimitadores en el almacén, los usuarios pueden colocar hologramas individuales o colocar un área de trabajo en torno a la cual una aplicación colocará sus distintos hologramas y, después, buscar esos hologramas más adelante donde los esperan, en muchos usos de la aplicación.
 
@@ -189,7 +195,7 @@ También se puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors
 
 La aplicación también puede compartir un delimitador espacial en tiempo real con otros dispositivos, lo que permite experiencias compartidas en tiempo real.
 
-Mediante el uso de anclajes espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure</a>, la aplicación puede compartir un anclaje espacial en varios dispositivos HoloLens, iOS y Android. Con la representación de un holograma mediante el mismo delimitador espacial en cada dispositivo, los usuarios verán el holograma aparecer en el mismo lugar en el mundo real.
+Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a>, la aplicación puede compartir un anclaje espacial en varios dispositivos HoloLens, iOS y Android. Con la representación de un holograma mediante el mismo delimitador espacial en cada dispositivo, los usuarios verán el holograma aparecer en el mismo lugar en el mundo real.
 
 ## <a name="avoid-head-locked-content"></a>Evitar el contenido bloqueado de encabezado
 
@@ -221,7 +227,7 @@ A veces, al empezar a usar un casco en un entorno que ha sufrido muchos cambios 
 
 A veces, un hogar u otro espacio puede tener dos áreas idénticas. Por ejemplo, dos salones de conferencia idénticos, dos áreas de esquina idénticas, dos pósteres idénticos de gran tamaño que cubren el campo de vista del dispositivo. En estos escenarios, el dispositivo puede, en ocasiones, confundirse entre las partes idénticas y marcarlas como las mismas en su representación interna. Esto puede hacer que los hologramas de algunas áreas aparezcan en otras ubicaciones. Es posible que el dispositivo empiece a perder el seguimiento con frecuencia, ya que la representación interna del entorno está dañada. En este caso, se recomienda restablecer el conocimiento medioambiental del sistema. Tenga en cuenta que al restablecer el mapa, se pierden todas las ubicaciones de anclaje espacial. Esto hará que los auriculares realicen el seguimiento bien en las áreas únicas del entorno. Sin embargo, el problema puede volver a producirse si el dispositivo se vuelve a confundir entre las mismas áreas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Presentación de GDC 2017 en sistemas de coordenadas espaciales y representación holográfica](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)
 * [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)

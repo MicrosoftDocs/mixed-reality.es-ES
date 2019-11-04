@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, estabilización, caso práctico
-ms.openlocfilehash: a084ede5f9bf3d5f058cc81ec75840e2c2e75af2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526254"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73436434"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Caso práctico: uso del plano de estabilización para reducir la turbulencia holográfica
 
@@ -19,7 +19,7 @@ Trabajar con hologramas puede resultar complicado. El hecho de que pueda desplaz
 
 ## <a name="the-tech"></a>La tecnología
 
-Para que los hologramas aparezcan como si realmente estuvieran compartiendo el espacio con usted, deben representarse correctamente, sin separación de colores. Esto se logra, en parte, mediante tecnología integrada en el hardware de HoloLens que mantiene los hologramas delimitados en lo que llamamos un [plano](hologram-stability.md#stabilization-plane)de estabilización.
+Para que los hologramas aparezcan como si realmente estuvieran compartiendo el espacio con usted, deben representarse correctamente, sin separación de colores. Esto se logra, en parte, mediante tecnología integrada en el hardware de HoloLens que mantiene los hologramas delimitados en lo que llamamos un [plano de estabilización](hologram-stability.md#reprojection).
 
 Un plano se define mediante un punto y un valor normal, pero como siempre queremos que el plano se enfrente a la cámara, estamos realmente interesados en configurar el punto del plano. Podemos indicar a HoloLens que apunte a centrar su procesamiento en para mantener todo el contenido anclado y estable, pero establecer este punto de enfoque es específico de la aplicación y puede hacer o interrumpir la aplicación en función del contenido.
 
@@ -29,21 +29,21 @@ En pocas palabras, los hologramas funcionan mejor cuando el plano de estabilizac
 
 Al desarrollar las siguientes aplicaciones, hemos observado que cuando no usamos el plano, los objetos se verían en Sway cuando nuestro cabezal se moviera y veremos la separación de colores con movimientos de encabezado rápido o de holograma. En el transcurso del período de tiempo de desarrollo, aprendimos a través de la evaluación y el error cómo usar mejor el plano de estabilización y cómo diseñar nuestras aplicaciones en torno a los problemas que no se pueden corregir.
 
-### <a name="galaxy-explorer-stationary-content-3d-interactivity"></a>Explorador de Galaxy: Contenido estacionario, interactividad 3D
+### <a name="galaxy-explorer-stationary-content-3d-interactivity"></a>Explorador de Galaxy: contenido estacionario, interactividad 3D
 
-El [Explorador de Galaxy](galaxy-explorer.md) tiene dos elementos principales en la escena: La vista principal del contenido de celestiales y la barra de herramientas de la interfaz de usuario pequeña que sigue a la mirada. En cuanto a la lógica de estabilización, veremos lo que su vector de miración actual intersecta con en cada fotograma para determinar si llega a todo en una capa de colisión especificada. En este caso, las capas que le interesan son los planetas, por lo que si mira fijamente en un planeta, el plano de estabilización se coloca allí. Si no se alcanza ninguno de los objetos de la capa de colisión de destino, la aplicación usa una capa "Plan B" secundaria. Si no se mira nada, el plano de estabilización se mantiene a la misma distancia que cuando se Gazing en el contenido. Las herramientas de interfaz de usuario se dejan como un destino de plano, ya que encontramos el salto entre Near y Far reduce la estabilidad de la escena global.
+El [Explorador de Galaxy](galaxy-explorer.md) tiene dos elementos principales en la escena: la vista principal del contenido de celestiales y la pequeña barra de herramientas de la interfaz de usuario que sigue a su mira. En cuanto a la lógica de estabilización, veremos lo que su vector de miración actual intersecta con en cada fotograma para determinar si llega a todo en una capa de colisión especificada. En este caso, las capas que le interesan son los planetas, por lo que si mira fijamente en un planeta, el plano de estabilización se coloca allí. Si no se alcanza ninguno de los objetos de la capa de colisión de destino, la aplicación usa una capa "Plan B" secundaria. Si no se mira nada, el plano de estabilización se mantiene a la misma distancia que cuando se Gazing en el contenido. Las herramientas de interfaz de usuario se dejan como un destino de plano, ya que encontramos el salto entre Near y Far reduce la estabilidad de la escena global.
 
 El diseño de Galaxy Explorer se presta bien para mantener las cosas estables y reducir el efecto de la separación de colores. Se recomienda al usuario que camine y órbita el contenido en lugar de moverlo de lado a lado, y que los planetas estén en órbitas lo suficientemente lentamente como para que la separación de colores no se aprecie. Además, se mantiene una constante de 60 FPS, que es una forma larga de evitar que se produzca la separación del color.
 
 Para desprotegerlo, busque un archivo llamado LSRPlaneModifier.cs en el código del [Explorador de Galaxy en github](https://github.com/Microsoft/GalaxyExplorer/tree/master/Assets/Scripts/Utilities).
 
-### <a name="holostudio-stationary-content-with-a-ui-focus"></a>HoloStudio: Contenido estacionario con el foco de la interfaz de usuario
+### <a name="holostudio-stationary-content-with-a-ui-focus"></a>HoloStudio: contenido estacionario con el foco de la interfaz de usuario
 
 En HoloStudio, pasa la mayor parte del tiempo examinando el mismo modelo en el que está trabajando. La mirada no mueve una cantidad significativa, excepto cuando se selecciona una nueva herramienta o se desea navegar por la interfaz de usuario, para que podamos mantener la lógica de la configuración del plano simple. Al examinar la interfaz de usuario, el plano se establece en el elemento de la interfaz de usuario al que se ajusta la mirada. Al examinar el modelo, el plano es una distancia fija, que se corresponde con la distancia predeterminada entre el usuario y el modelo.
 
 ![Plano de estabilización visualizado en HoloStudio cuando el usuario mira el botón Inicio](images/holostudio-stabilization-plane-500px.png)
 
-### <a name="holotour-and-3d-viewer-stationary-content-with-animation-and-movies"></a>HoloTour y visor 3D: Contenido estacionario con animaciones y películas
+### <a name="holotour-and-3d-viewer-stationary-content-with-animation-and-movies"></a>HoloTour y visor 3D: contenido estacionario con animaciones y películas
 
 En HoloTour y en el visor 3D, está examinando un objeto animado de solitarios o una película con efectos 3D agregados encima. La estabilización en estas aplicaciones se establece en lo que esté viendo actualmente.
 
@@ -51,13 +51,13 @@ HoloTour también evita que se aleje del mundo virtual, ya que se mueve con uste
 
 ![En este ejemplo de HoloTour, el plano de estabilización se establecería en esta película de Pantheon de Hadrian.](images/holotour-stabilization-plane-500px.jpg)
 
-### <a name="roboraid-dynamic-content-and-environmental-interactions"></a>RoboRaid: Contenido dinámico e interacciones de entornos
+### <a name="roboraid-dynamic-content-and-environmental-interactions"></a>RoboRaid: interacciones de contenido dinámico y de entorno
 
 Establecer el plano de estabilización en RoboRaid es sorprendentemente sencillo, a pesar de ser la aplicación que requiere el movimiento más repentino. El plano está orientado hacia las paredes o los objetos circundantes, y flotará a una distancia fija delante del usuario cuando esté lo suficientemente lejos de ellos.
 
 RoboRaid se diseñó pensando en el plano de estabilización. El retículo, que saca el máximo partido, ya que está bloqueado por el encabezado, lo evita usando solo rojo y azul, lo que minimiza cualquier sangrado de color. También contiene un poco de profundidad entre las partes, lo que minimiza cualquier sangrado de color que se produciría si se enmascara con un efecto de Parallax ya esperado. Los robots no se mueven muy rápidamente y solo viajan distancias cortas en intervalos regulares. Tienden a permanecer en torno a 2 metros delante de usted, donde la estabilización está establecida de forma predeterminada.
 
-### <a name="fragments-and-young-conker-dynamic-content-with-environmental-interaction"></a>Fragmentos y conkers jóvenes: Contenido dinámico con interacción del entorno
+### <a name="fragments-and-young-conker-dynamic-content-with-environmental-interaction"></a>Fragmentos y conkers jóvenes: contenido dinámico con interacción del entorno
 
 Escrito por Asobo Studio en C++, los fragmentos y los Conker jóvenes adoptan un enfoque diferente para establecer el plano de estabilización. Los puntos de interés (term) se definen en el código y se ordenan en términos de prioridad. Lo que es el contenido del juego, como el modelo Conker, en los conkers jóvenes, los menús, el retículo orientado y los logotipos. El recurso está intersectado por la mirada del usuario y el plano se establece en el centro del objeto con la prioridad más alta. Si no se produce ninguna intersección, el plano se establece en la distancia predeterminada.
 
@@ -93,11 +93,11 @@ Vaya a la derecha una vez más hasta que vea una nueva configuración de puntos.
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Ben Strukus" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Ben Strukus</b><br>Ingeniero de software@Microsoft</td>
+<td style="border-style: none"><b>Ben Strukus</b><br>@Microsoft de Ingeniero de software</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Vea también
-* [MR Basics 100: introducción a Unity](holograms-100.md)
+## <a name="see-also"></a>Consulta también
+* [Sr Basics 100: Introducción a Unity](holograms-100.md)
 * [Punto de enfoque en Unity](focus-point-in-unity.md)
 * [Estabilidad de hologramas](hologram-stability.md)

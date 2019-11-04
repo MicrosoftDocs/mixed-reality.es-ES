@@ -6,19 +6,19 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, reconocimiento facial, hololens, envolventes, VR
-ms.openlocfilehash: 7cd2a6683c80279129934c619a9b9cb857badf67
-ms.sourcegitcommit: 3b32339c5d5c79eaecd84ed27254a8f4321731f1
+ms.openlocfilehash: ef75be5485f85538eb8b3db3eebec63b166f7aa3
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70047182"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438496"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
 
 <br> 
 
-# <a name="mr-and-azure-304-face-recognition"></a>MR y Azure 304: Reconocimiento facial
+# <a name="mr-and-azure-304-face-recognition"></a>MR y Azure 304: reconocimiento facial
 
 ![resultado de la finalización de este curso](images/AzureLabs-Lab4-00.png)
 
@@ -43,7 +43,7 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 <tr>
 <th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td> MR y Azure 304: Reconocimiento facial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td> MR y Azure 304: reconocimiento facial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -66,7 +66,7 @@ Se recomienda el siguiente hardware y software para este curso:
 - Una cámara conectada al equipo (para el desarrollo de auriculares envolvente)
 - Acceso a Internet para la configuración y recuperación de Face API de Azure
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
@@ -112,11 +112,11 @@ Para usar el servicio de *face API* en Azure, tendrá que configurar una instanc
 
     6. También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.
 
-    7. Seleccione **crear*.**
+    7. Seleccione **crear *.**
 
         ![creación de un servicio facial API](images/AzureLabs-Lab4-03.png)
 
-5.  Una vez que ha hecho clic **crear*** tendrá que esperar para que se puede crear el servicio, esta operación puede tardar un minuto.
+5.  Una vez que haya hecho clic en **crear *,** tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.
 
 6.  Una vez que se crea la instancia de servicio, aparecerá una notificación en el portal.
 
@@ -169,7 +169,7 @@ Encargado de la ejecución de la **persona**:
 
 2.  Una vez abierta la *solución PersonMaker* , asegúrese de que:
 
-    1. La *configuración* de la solución estáestablecida en depurar.
+    1. La *configuración* de la solución está establecida en **depurar**.
 
     2. La *plataforma* de la solución está establecida en **x86**
 
@@ -227,7 +227,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
     ![Proporcione los detalles del nuevo proyecto de Unity.](images/AzureLabs-Lab4-09.png)
 
-3.  Con Unity abierto, merece la pena comprobar que el **Editor** de scripts predeterminado está establecido en **Visual Studio**. Vaya a **editar > preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
+3.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio**. Vaya a **editar > preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
 
     ![Actualice las preferencias del editor de scripts.](images/AzureLabs-Lab4-10.png)
 
@@ -255,7 +255,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
             ![Crear nueva carpeta de scripts](images/AzureLabs-Lab4-13.png)
 
-        3. Abra la carpeta Scenes recién creada y, a continuación, en el campo **nombre de archivo**:, escriba **FaceRecScene**y, a continuación, presione **Guardar**.
+        3. Abra la carpeta **Scenes** recién creada y, a continuación, en el campo **nombre de archivo**:, escriba **FaceRecScene**y, a continuación, presione **Guardar**.
 
             ![Asigne un nombre a la nueva escena.](images/AzureLabs-Lab4-14.png)
 
@@ -269,8 +269,8 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
     1. En la pestaña **otros valores** :
 
-        1. **Scripting** La **versión del tiempo de ejecución** debe ser **Experimental** (.net 4,6 equivalente). Al cambiar esto se desencadenará la necesidad de reiniciar el editor.
-        2. El **back-end** de scripting debe ser **.net**
+        1. La versión de **scripting** **en tiempo de ejecución** debe ser **experimental** (.net 4,6 equivalente). Al cambiar esto se desencadenará la necesidad de reiniciar el editor.
+        2. El **back-end de scripting** debe ser **.net**
         3. El **nivel de compatibilidad de API** debe ser **.net 4,6**
 
             ![Actualice otras opciones de configuración.](images/AzureLabs-Lab4-16.png)
@@ -305,7 +305,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
     3. Asegúrese de que la **posición de transformación** está establecida en **0, 0, 0**
 
-    4. Establecer **marcas** de borrado en **color sólido**
+    4. Establecer **marcas de borrado** en **color sólido**
 
     5. Establezca el color de **fondo** del componente de la cámara en **negro, alfa 0 (código hexadecimal: #00000000)**
 
@@ -344,7 +344,7 @@ Para crear la clase *FaceAnalysis* :
     ![Cree la clase FaceAnalysis.](images/AzureLabs-Lab4-22.png)
 
 2.  Haga doble clic en la carpeta que acaba de crear para abrirla. 
-3.  Haga clic con el botón derecho en la carpeta y después haga clic en **crear**  >   **C# script**. Llame al script *FaceAnalysis*. 
+3.  Haga clic con el botón derecho en la carpeta y, a continuación, haga clic en **crear** >  **C# script**. Llame al script *FaceAnalysis*. 
 4.  Haga doble clic en el nuevo script *FaceAnalysis* para abrirlo con Visual Studio 2017.
 5.  Escriba los siguientes espacios de nombres encima de la clase *FaceAnalysis* :
 
@@ -647,7 +647,7 @@ El propósito de la clase *ImageCapture* es hospedar los métodos necesarios par
 
 Para crear la clase *ImageCapture* :
  
-1.  Haga clic con el botón derecho dentro de la carpeta scripts que ha creado anteriormente y, a continuación, haga clic en **crear**,  **C# script**. Llame al script *ImageCapture*. 
+1.  Haga clic con el botón derecho dentro de la carpeta **scripts** que ha creado anteriormente y, a continuación, haga clic en **crear**,  **C# script**. Llame al script *ImageCapture*. 
 2.  Haga doble clic en el nuevo script *ImageCapture* para abrirlo con Visual Studio 2017.
 3.  Escriba los siguientes espacios de nombres encima de la clase ImageCapture:
 
@@ -825,16 +825,16 @@ Para implementar en HoloLens:
     5. Establezca el modo de Desarrollador en.
 
 2.  Vaya a la nueva compilación de Unity (la carpeta de la *aplicación* ) y abra el archivo de solución con *Visual Studio*.
-3.  En la configuración de soluciones, seleccione Depurar.
+3.  En la configuración de soluciones, seleccione **depurar**.
 4.  En la plataforma de la solución, seleccione **x86**, **equipo remoto**. 
 
     ![Implemente la solución desde Visual Studio.](images/AzureLabs-Lab4-26.png)
  
-5.  Vaya al **menú** compilar y haga clic en **implementar solución**para transferir localmente la aplicación a HoloLens.
+5.  Vaya al **menú compilar** y haga clic en **implementar solución**para transferir localmente la aplicación a HoloLens.
 6.  La aplicación debe aparecer ahora en la lista de aplicaciones instaladas en HoloLens, lista para su lanzamiento.
 
 > [!NOTE]
-> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en depurar, con *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú**compilar, seleccionando *implementar solución*. 
+> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local*y establezca la **configuración** en *depurar*, con *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú compilar**, seleccionando *implementar solución*. 
 
 
 ## <a name="chapter-10---using-the-application"></a>Capítulo 10: uso de la aplicación
@@ -864,4 +864,4 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el servic
 
 ### <a name="exercise-2"></a>Ejercicio 2
 
-**Azure Face API** también puede proporcionar todos los tipos de información de atributos. Integre esto en la aplicación. Esto podría ser aún más interesante, cuando se combina con el [Emotion API](https://azure.microsoft.com/en-au/services/cognitive-services/emotion/).
+**Azure Face API** también puede proporcionar todos los tipos de información de atributos. Integre esto en la aplicación. Esto podría ser aún más interesante, cuando se combina con el [Emotion API](https://azure.microsoft.com/services/cognitive-services/emotion/).

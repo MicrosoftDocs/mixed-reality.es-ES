@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, probar
-ms.openlocfilehash: b8c8e7ea8f90633cbb3b2aa01764398ef9a5c12a
-ms.sourcegitcommit: 76a7aa6e64e114b63ace058dd6d6d662b3c9f09e
+ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68507910"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437384"
 ---
 # <a name="testing-your-app-on-hololens"></a>Prueba de la aplicación en HoloLens
 
@@ -37,23 +37,21 @@ Las aplicaciones holográficas deben ejecutarse sin problemas en un conjunto div
 ![Matriz de pruebas de entorno para el desarrollo de aplicaciones de HoloLens](images/environment-matrix-600px.png)
 
 ## <a name="comfort"></a>Comodidad
-1. **Planos de recortes.** Debe ser Attentive donde [se representan](hologram-stability.md#hologram-render-distances)los hologramas.
+1. **Planos de recortes.** Debe ser Attentive donde [se representan los hologramas](hologram-stability.md#hologram-render-distances).
 2. **Evite el movimiento virtual incoherente con el movimiento de cabeza real.** Evite mover la cámara de forma que no sea representativa del movimiento real del usuario. Si su aplicación requiere mover el usuario a través de una escena, haga que el movimiento sea predecible, minimice la aceleración y deje que el usuario controle el movimiento.
-3. **Siga las instrucciones de calidad de los hologramas.** Es menos probable que las aplicaciones de rendimiento que implementan la [Guía de calidad](hologram-stability.md) de los hologramas resulten descomodidades del usuario.
+3. **Siga las instrucciones de calidad de los hologramas.** Es menos probable que las aplicaciones de rendimiento que implementan la guía de calidad de los [hologramas](hologram-stability.md) resulten descomodidades del usuario.
 4. **Distribuya los hologramas horizontalmente en lugar de verticalmente.** Forzar al usuario a dedicar períodos prolongados de tiempo buscando o baja puede provocar una fatiga en el cuello.
+
 
 ## <a name="input"></a>Entrada
 
-### <a name="gaze-and-gestures"></a>Miras y gestos
+### <a name="interaction-models"></a>Modelos de interacción
 
-[Mira](gaze.md) una forma básica de entrada en HoloLens que permite a los usuarios dirigirse a los hologramas y al entorno. Puede ver visualmente dónde se destina la mirada en función de la posición del cursor. Es habitual asociar el cursor de miración con un cursor del mouse.
-
-Los [gestos](gestures.md) son la forma de interactuar con los hologramas, como un clic del mouse. La mayoría de las veces, los comportamientos de mouse y táctil son los mismos, pero es importante comprender y validar cuando difieren.
+Asegúrese de que las interacciones de los hologramas funcionan con el [modelo de interacción](interaction-fundamentals.md)elegido.
+También es una buena idea validar con accesorios diferentes, como el mouse y el teclado, si se necesitan estos accesorios para admitir la accesibilidad.
 
 **Valide cuando la aplicación tenga un comportamiento diferente con Mouse y toque.** Esto identificará las incoherencias y ayuda a tomar decisiones de diseño para que la experiencia sea más natural para los usuarios. Por ejemplo, desencadenar una acción basada en el desplazamiento.
 
-> [!NOTE]
-> [Próximamente](index.md#news-and-notes) se ofrecerá orientación específica para HoloLens 2.
 
 ### <a name="custom-voice-commands"></a>Comandos de voz personalizados
 
@@ -114,5 +112,5 @@ Algunos desarrolladores de aplicaciones pueden querer automatizar las pruebas de
 
 Para proporcionar a la aplicación la mejor posibilidad de [publicarla en la tienda Windows](submitting-an-app-to-the-microsoft-store.md), valide y pruébelo localmente antes de enviarla para su certificación. Si la aplicación está destinada a la familia de dispositivos Windows. Holographic, el kit para la [certificación de aplicaciones de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) solo ejecutará pruebas de análisis estático local en su equipo. No se ejecutará ninguna prueba en HoloLens.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Envío de una aplicación a la tienda Windows](submitting-an-app-to-the-microsoft-store.md)

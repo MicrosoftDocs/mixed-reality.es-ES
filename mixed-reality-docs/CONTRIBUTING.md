@@ -5,22 +5,22 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: a6c2574a35ec1240c573532dabfdc6cec1696947
-ms.sourcegitcommit: 4ac761fed7a9570977f6d031ba4f870585d6630a
+ms.openlocfilehash: 934171f26571b3219bbe390aff44349fb6908f74
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861715"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437127"
 ---
 # <a name="contributing-to-windows-mixed-reality-developer-documentation"></a>Contribución a la documentación para desarrolladores de realidad mixta de Windows
 
 Este es el [repositorio público de la documentación para desarrolladores de Windows Mixed Reality](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs). Los artículos que cree o edite en este repositorio **serán visibles para el público.** 
 
-Los documentos de Windows Mixed Reality se encuentran ahora en la plataforma docs.microsoft.com, que usa el Markdown con tipo GitHub (con características Markdig). En esencia, el contenido que se edita en este repositorio se convierte en páginas con formato y estilizadas que https://docs.microsoft.com/windows/mixed-reality se muestran en. 
+Los documentos de Windows Mixed Reality se encuentran ahora en la plataforma docs.microsoft.com, que usa el Markdown con tipo GitHub (con características Markdig). En esencia, el contenido que se edita en este repositorio se convierte en páginas con formato y estilizadas que se muestran en https://docs.microsoft.com/windows/mixed-reality. 
 
 En esta página se describen los pasos básicos y las instrucciones para contribuir, así como vínculos a los conceptos básicos de Markdown. Gracias por su contribución.
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 Si aún no tiene una, deberá [crear una cuenta de github](https://github.com/join).
 
@@ -48,12 +48,12 @@ Use el siguiente flujo de trabajo para efectuar actualizaciones en *un artículo
    ![Edite un artículo.](images/editpage.png)
 3. Edite el contenido del artículo (consulte ["conceptos básicos de Markdown"](#markdown-basics) a continuación para obtener instrucciones).
 4. Actualice los metadatos como corresponda en la parte superior de cada artículo:
-   * Titulo Este es el título de la página que aparece en la pestaña del explorador cuando se está viendo el artículo. Como se usa para SEO e indexación, no debe cambiar el título a menos que sea necesario (aunque esto es menos crítico antes de que la documentación sea pública).
-   * description: Escriba una breve descripción del contenido del artículo. Esto ayuda en la SEO y la detección.
-   * frente Si es el propietario principal de la página, agregue aquí su alias de GitHub.
-   * MS. Author: Si es el propietario principal de la página, agregue aquí su alias de Microsoft (no es necesario @microsoft.com, solo el alias).
-   * MS. Date: Actualice la fecha Si va a agregar contenido principal a la página, pero no para correcciones como aclaración, formato, gramática o ortografía.
-   * palabra Palabras clave: ayuda en SEO (optimización del motor de búsqueda). Agregue palabras clave, separadas por una coma y un espacio, específicas de su artículo (pero sin puntuación después de la última palabra clave de la lista); no es necesario agregar palabras clave globales que se apliquen a todos los artículos, ya que se administran en otro lugar. 
+   * Título: este es el título de la página que aparece en la pestaña del explorador cuando se está viendo el artículo. Como se usa para SEO e indexación, no debe cambiar el título a menos que sea necesario (aunque esto es menos crítico antes de que la documentación sea pública).
+   * Descripción: escriba una breve descripción del contenido del artículo. Esto ayuda en la SEO y la detección.
+   * Autor: si es el propietario principal de la página, agregue aquí su alias de GitHub.
+   * MS. Author: si es el propietario principal de la página, agregue aquí su alias de Microsoft (no necesita @microsoft.com, solo el alias).
+   * MS. Date: actualice la fecha Si va a agregar contenido principal a la página, pero no para correcciones como aclaración, formato, gramática o ortografía.
+   * Palabras clave: ayuda de palabras clave en SEO (optimización del motor de búsqueda). Agregue palabras clave, separadas por una coma y un espacio, específicas de su artículo (pero sin puntuación después de la última palabra clave de la lista); no es necesario agregar palabras clave globales que se apliquen a todos los artículos, ya que se administran en otro lugar. 
 5. Cuando haya terminado de editar el artículo, desplácese hacia abajo y haga clic en el botón **proponer cambio de archivo** .
 6. En la página siguiente, haga clic en **crear solicitud de incorporación** de cambios para fusionar mediante combinación la rama creada automáticamente en ' maestra '.
 7. Repita los pasos anteriores para el siguiente artículo que desee editar.
@@ -62,7 +62,7 @@ Use el siguiente flujo de trabajo para efectuar actualizaciones en *un artículo
 
 Si el cambio cambiará el nombre o eliminará un artículo existente, asegúrese de agregar una redirección. De este modo, todos los usuarios con un vínculo al artículo existente seguirán en el lugar correcto. Las redirecciones se administran mediante el archivo. openpublishing. Redirection. JSON en la raíz del repositorio.
 
-Para agregar una redirección a. openpublishing. Redirection. JSON, agregue una entrada a la `redirections` matriz:
+Para agregar una redirección a. openpublishing. Redirection. JSON, agregue una entrada a la matriz de `redirections`:
 
 ```json
 {
@@ -74,9 +74,9 @@ Para agregar una redirección a. openpublishing. Redirection. JSON, agregue una 
         },
 ```
 
-- `source_path` Es la ruta de acceso relativa del repositorio al artículo anterior que se va a quitar. Asegúrese de que la ruta de `mixed-reality-docs` acceso comienza con `.md`y termina con.
-- `redirect_url` Es la dirección URL pública relativa del artículo anterior al nuevo artículo. Asegúrese de que esta dirección URL no contiene `mixed-reality-docs` o `.md`, ya que hace referencia a la dirección URL pública y no a la ruta de acceso del repositorio. Se permite la vinculación a una sección del `#section` nuevo artículo con. También puede usar una ruta de acceso absoluta a otro sitio, si es necesario.
-- `redirect_document_id`indica si desea conservar el identificador de documento del archivo anterior. De manera predeterminada, es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
+- La `source_path` es la ruta de acceso relativa del repositorio al artículo anterior que se va a quitar. Asegúrese de que la ruta de acceso comienza con `mixed-reality-docs` y termina con `.md`.
+- El `redirect_url` es la dirección URL pública relativa del artículo anterior al nuevo artículo. Asegúrese de que esta dirección **URL no contenga `mixed-reality-docs`** o `.md`, ya que hace referencia a la dirección URL pública y no a la ruta de acceso del repositorio. Se permite la vinculación a una sección del nuevo artículo mediante `#section`. También puede usar una ruta de acceso absoluta a otro sitio, si es necesario.
+- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. El valor predeterminado es `false`. Use `true` si desea conservar el valor de atributo de `ms.documentid` del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
 
 Si agrega un redireccionamiento, asegúrese de eliminar también el archivo antiguo.
 
@@ -84,7 +84,7 @@ Si agrega un redireccionamiento, asegúrese de eliminar también el archivo anti
 
 Use el siguiente flujo de trabajo para *crear nuevos artículos* en el repositorio de documentación a través de github en un explorador Web:
 
-1. Cree una bifurcación desconectada de la rama "principal" de MicrosoftDocs/Mixed reality (con el botón bifurcar en la parte superior derecha).
+1. Cree una bifurcación desconectada de la rama "principal" de MicrosoftDocs/Mixed Reality (con el botón **bifurcar** en la parte superior derecha).
 
    ![Bifurcar la bifurcación principal.](images/forkbranch.png)
 2. En la carpeta "Mixed Reality-docs", haga clic en el botón **crear nuevo archivo** en la parte superior derecha.
@@ -111,7 +111,7 @@ Use el siguiente flujo de trabajo para *crear nuevos artículos* en el repositor
 
 5. Rellene los campos de metadatos pertinentes según las instrucciones de la [sección anterior](#editing-an-existing-article).
 6. Escriba el contenido del artículo con los [conceptos básicos de Markdown](#markdown-basics).
-7. Agregue una `## See also` sección en la parte inferior del artículo con vínculos a otros artículos relevantes.
+7. Agregue una sección `## See also` en la parte inferior del artículo con vínculos a otros artículos relevantes.
 8. Cuando termine, haga clic en **confirmar nuevo archivo**.
 9. Haga clic en **nueva solicitud de incorporación** de cambios y mezcle la rama ' maestra ' de la bifurcación en MicrosoftDocs/mixed-reality ' maestra ' (Asegúrese de que la flecha señala la manera correcta).
 
@@ -127,7 +127,7 @@ Los siguientes recursos le ayudarán a aprender a editar la documentación con e
 
 ### <a name="adding-tables"></a>Agregar tablas
 
-Debido a la forma en que docs.microsoft.com las tablas de estilos, no tendrán bordes ni estilos personalizados, aunque pruebe CSS en línea. Parecerá que funciona durante un breve período de tiempo, pero finalmente la plataforma eliminará el estilo de la tabla. Por tanto, planee con facilidad y mantenga las tablas sencillas. [Este es un sitio que facilita las tablas de Markdown](http://www.tablesgenerator.com/markdown_tables).
+Debido a la forma en que docs.microsoft.com las tablas de estilos, no tendrán bordes ni estilos personalizados, aunque pruebe CSS en línea. Parecerá que funciona durante un breve período de tiempo, pero finalmente la plataforma eliminará el estilo de la tabla. Por tanto, planee con facilidad y mantenga las tablas sencillas. [Este es un sitio que facilita las tablas de Markdown](https://www.tablesgenerator.com/markdown_tables).
 
 La [extensión docs Markdown para Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) también facilita la generación de tablas si usa [Visual Studio Code (consulte a continuación)](#using-visual-studio-code) para editar la documentación.
 
@@ -152,7 +152,7 @@ Mientras edita en GitHub a través de un explorador Web, puede hacer clic en la 
 >[!NOTE]
 >La vista previa de los cambios en review.docs.microsoft.com solo está disponible para los empleados de Microsoft
 
-Empleados de Microsoft: una vez que las contribuciones se han combinado en la rama "principal", puede ver el aspecto que tendrá la documentación antes de https://review.docs.microsoft.com/windows/mixed-reality?branch=master que sea pública (busque el artículo mediante la tabla de contenido de la columna izquierda).
+Empleados de Microsoft: una vez que las contribuciones se han combinado en la rama "principal", puede ver el aspecto que tendrá la documentación antes de que sea pública en https://review.docs.microsoft.com/windows/mixed-reality?branch=master (busque el artículo con la tabla de contenido de la columna izquierda).
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Edición en el explorador frente a edición con un cliente de escritorio
 
@@ -168,7 +168,7 @@ Si prefiere no tratar estos problemas, es posible que prefiera usar un cliente d
 
 Por los motivos mencionados [anteriormente](#editing-in-the-browser-vs-editing-with-a-desktop-client), es posible que prefiera usar un cliente de escritorio para editar la documentación en lugar de un explorador Web. Se recomienda el uso de [Visual Studio Code](https://code.visualstudio.com/).
 
-### <a name="setup"></a>Programa de instalación
+### <a name="setup"></a>Configuración
 
 Siga estos pasos para configurar Visual Studio Code para trabajar con este repositorio:
 
@@ -206,7 +206,7 @@ Use el siguiente flujo de trabajo para realizar cambios en la documentación con
    3. **Confirmar todos** los cambios en el **control de código fuente** (escribir mensaje de confirmación cuando se le solicite).
       
       ![Elegir "confirmar todo" en el control de código fuente](images/source_control_commit.png)
-   4. Haga clic en el botón sincronizar para volver a sincronizar los cambios con el origen (la bifurcación en GitHub).
+   4. Haga clic en el botón **sincronizar** para volver a sincronizar los cambios con el origen (la bifurcación en GitHub).
       
       ![Haga clic en el botón sincronizar](images/sync_back.png)
 3. En un explorador Web, cree una solicitud de incorporación de cambios para sincronizar nuevos cambios en la bifurcación de nuevo en MicrosoftDocs/mixed-reality ' maestra ' (Asegúrese de que la flecha señala la manera correcta).
@@ -219,7 +219,7 @@ Las siguientes extensiones de Visual Studio Code son muy útiles al editar la do
 
 - La [extensión de Markdown de docs para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) : use **Alt + M** para abrir un menú de opciones de creación de docs como:
    - Imágenes de búsqueda y de referencia que ha cargado.
-   - Agregue formato como listas, tablas y llamadas específicas de documentos como `>[!NOTE]`.
+   - Agregue formato como listas, tablas y llamadas específicas de docs como `>[!NOTE]`.
    - Buscar y hacer referencia a vínculos internos y marcadores (vínculos a secciones específicas de una página).
    - Los errores de formato se resaltan (mantenga el mouse sobre el error para obtener más información).
 - [Corrector ortográfico de código](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) : las palabras mal escritas se subrayan; Haga clic con el botón derecho en una palabra mal escrita para cambiarla o guardarla en el diccionario.

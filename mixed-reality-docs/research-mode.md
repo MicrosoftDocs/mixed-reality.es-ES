@@ -6,24 +6,24 @@ ms.author: dgedye
 ms.date: 05/03/2018
 ms.topic: article
 keywords: modo de investigación, CV, RS4, Computer Vision, investigación, HoloLens
-ms.openlocfilehash: e9a7683f8d582b459185066e74655e8f2b236db4
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+ms.openlocfilehash: 307df0c226221422f13af09d8f4944c22ead3865
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829934"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438302"
 ---
 # <a name="hololens-research-mode"></a>Modo de investigación de HoloLens
 
 > [!NOTE]
 > Esta característica se agregó como parte de la [actualización 2018 de abril de Windows 10](release-notes-april-2018.md) para HoloLens y no está disponible en versiones anteriores.
 
-El modo de investigación es una nueva funcionalidad de HoloLens que proporciona acceso a las aplicaciones a los sensores de claves en el dispositivo. Entre ellas se incluyen las siguientes:
+El modo de investigación es una nueva funcionalidad de HoloLens que proporciona acceso a las aplicaciones a los sensores de claves en el dispositivo. Estos son:
 - Las cuatro cámaras de seguimiento del entorno utilizadas por el sistema para la creación de mapas y el seguimiento de encabezados.
-- Dos versiones de los datos de la cámara de profundidad: una para la detección en profundidad de alta frecuencia (30 FPS), que se usa habitualmente en el seguimiento de la mano, y la otra para la detección de la profundidad de baja frecuencia (1 FPS), usada actualmente por la asignación espacial,
+- Dos versiones de los datos de la cámara de profundidad: una para la detección en profundidad de alta frecuencia (30 FPS), que se usa habitualmente en el seguimiento de la mano y la otra para la detección de la profundidad de baja frecuencia (1-5 FPS), usada actualmente por la asignación espacial,
 - Dos versiones de una secuencia de reflexión de INFRARROJOs, que usa HoloLens para calcular la profundidad, pero valiosa en su propio derecho, ya que estas imágenes se iluminan desde HoloLens y razonablemente no se ven afectadas por la luz ambiente.
 
-![Captura de pantalla de la aplicación de modo de investigación](images/sensor-stream-viewer.jpg)<br>
+captura de pantalla de la aplicación de modo de ![Research](images/sensor-stream-viewer.jpg)<br>
 *Una captura de realidad mixta de una aplicación de prueba que muestra ocho flujos de sensor disponibles en el modo de investigación*
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
@@ -35,7 +35,7 @@ El modo de investigación es una nueva funcionalidad de HoloLens que proporciona
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -59,7 +59,7 @@ El modo de investigación es un submodo de modo de programador. En primer lugar,
 
 A continuación, use un explorador Web que esté conectado a la misma red Wi-Fi que HoloLens, vaya a la dirección IP de HoloLens (obtenida a través de la **configuración > red & las propiedades de hardware de Internet > Wi-Fi >** ). Este es el [portal de dispositivos](using-the-windows-device-portal.md)y encontrará una página "modo de investigación" en la sección "sistema" del portal:
 
-![Pestaña del modo de investigación del portal de dispositivos de HoloLens](images/ResearchModeDevPortal.png)<br>
+![pestaña del modo de investigación del portal de dispositivos de HoloLens](images/ResearchModeDevPortal.png)<br>
 *Modo de investigación en el portal de dispositivos de HoloLens*
 
 Después de seleccionar **permitir el acceso a las secuencias del sensor**, deberá reiniciar HoloLens. Puede hacerlo desde el portal de dispositivos, en el elemento de menú "energía" en la parte superior de la página.
@@ -78,7 +78,7 @@ Las aplicaciones de ejemplo que muestran cómo se obtiene acceso a los distintos
 
 Vea el [seguimiento de problemas](https://github.com/Microsoft/HololensForCV/issues) en el repositorio de HoloLensForCV.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Repositorio de GitHub de HoloLensForCV](https://github.com/Microsoft/HoloLensForCV)

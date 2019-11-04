@@ -6,19 +6,19 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto de enfoque, plano de enfoque, plano de estabilización, punto de estabilización, Reproyección, LSR, búfer de profundidad
-ms.openlocfilehash: 0f43c37df66ecada86dcb309fcd58d822f0f3481
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: d48f6f1878a68a17be263f10b809229dc2705c58
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525461"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435414"
 ---
 # <a name="focus-point-in-unity"></a>Punto de enfoque en Unity
 
-**System.IO** *UnityEngine. XR. WSA*<br>
+**Espacio de nombres:** *UnityEngine. XR. WSA*<br>
 **Tipo**: *HolographicSettings*
 
-Se puede establecer el [punto de enfoque](hologram-stability.md#stabilization-plane) para proporcionar a HoloLens una sugerencia sobre cómo realizar mejor la estabilización en los hologramas que se muestran actualmente.
+Se puede establecer el [punto de enfoque](hologram-stability.md#reprojection) para proporcionar a HoloLens una sugerencia sobre cómo realizar mejor la estabilización en los hologramas que se muestran actualmente.
 
 Si desea establecer el punto de enfoque en Unity, debe establecer cada fotograma mediante *HolographicSettings. SetFocusPointForFrame ()* . Si no se establece el punto de enfoque para un marco, se usará el plano de estabilización predeterminado.
 
@@ -50,5 +50,5 @@ void Update()
 
 Tenga en cuenta que el código anterior puede acabar reduciendo la estabilidad del holograma si el objeto que tiene el foco termina detrás del usuario.  Este es el motivo por el que normalmente debería establecer "habilitar el uso compartido del búfer de profundidad" en lugar de especificar manualmente un punto de enfoque.
 
-### <a name="see-also"></a>Vea también
-* [Plano de estabilización](hologram-stability.md#stabilization-plane)
+### <a name="see-also"></a>Consulta también
+* [Plano de estabilización](hologram-stability.md#reprojection)

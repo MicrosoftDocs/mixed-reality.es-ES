@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, patrones de aplicaciones, diseño, HoloLens, examen de salón, asignación espacial, reconstrucción superficial, malla
-ms.openlocfilehash: 09df4464ea4dac01dfad637886b07b861f468d4d
-ms.sourcegitcommit: 17f86fed532d7a4e91bd95baca05930c4a5c68c5
+keywords: Windows Mixed Reality, patrones de aplicaciones, diseño, HoloLens, examen de salón, asignación espacial, malla
+ms.openlocfilehash: bdb070407f27d04046bd022894c7a8a01b9658d1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829914"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437517"
 ---
 # <a name="room-scan-visualization"></a>Visualización del examen de salón
 
@@ -33,7 +33,7 @@ Tenga en cuenta que en todos estos casos los datos reales recopilados durante la
     <col width="33%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -72,7 +72,7 @@ En el caso de la asignación espacial almacenada en caché, la aplicación norma
 * Un único costo de tiempo en cualquier procesamiento posterior de los datos espaciales para la física, los gráficos y otros propósitos.
 
 **Desventajas**
-* El movimiento de objetos o personas reales no se refleja en los datos almacenados en caché. Por ejemplo, es posible que la aplicación considere una puerta abierta cuando realmente está cerrada.
+* El movimiento de objetos o personas reales no se refleja en los datos almacenados en caché. P. ej. es posible que la aplicación considere una puerta abierta cuando realmente está cerrada.
 * Posiblemente más memoria de la aplicación para mantener la versión en caché de los datos.
 
 Un buen caso para este método es un entorno controlado o una tabla principal del juego.
@@ -92,7 +92,7 @@ Algunas aplicaciones pueden basarse en el análisis continuo para actualizar los
 
 Un buen caso para este método es aquél en el que se espera que los hologramas interactúen con los objetos de movimiento, por ejemplo, un coche holográfica que las unidades del piso quieran golpear correctamente en una puerta en función de si está abierto o cerrado.
 
-## <a name="see-also"></a>Vea también
-* [Diseño de asignaciones espaciales](spatial-mapping-design.md)
+## <a name="see-also"></a>Consulta también
+* [Asignación espacial](spatial-mapping.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Diseño de sonido espacial](spatial-sound-design.md)

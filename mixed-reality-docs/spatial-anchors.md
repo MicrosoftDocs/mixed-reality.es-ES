@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: coordinate system, spatial coordinate system, world-scale, world, scale, position, orientation, anchor, spatial anchor, world-locked, world-locking, persistence, sharing
-ms.openlocfilehash: 27b1dcd86c7edba176ca54840bdd27550736a16d
-ms.sourcegitcommit: b0b1b8e1182cce93929d409706cdaa99ff24fdee
+ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387741"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438030"
 ---
 # <a name="spatial-anchors"></a>Delimitadores espaciales
 
@@ -19,14 +19,14 @@ Un delimitador espacial representa un punto importante del mundo en el que el si
 
 También puede conservar y compartir los delimitadores espaciales en las sesiones de aplicación y en los dispositivos:
 * Al guardar los delimitadores espaciales locales en el disco y volver a cargarlos más tarde, la aplicación puede calcular la misma ubicación en el mundo real en varias sesiones de aplicación en una sola HoloLens.
-* Mediante el uso de delimitadores espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure</a> para crear un delimitador de nube, la aplicación puede compartir un anclaje espacial en varios dispositivos de HoloLens, iOS y Android. Cuando cada dispositivo representa un holograma mediante el mismo delimitador espacial, los usuarios verán que el holograma aparece en el mismo lugar del mundo real. Esto permite compartir experiencias en tiempo real.
+* Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para crear un delimitador de nube, la aplicación puede compartir un anclaje espacial en varios dispositivos de HoloLens, iOS y Android. Cuando cada dispositivo representa un holograma mediante el mismo delimitador espacial, los usuarios verán que el holograma aparece en el mismo lugar del mundo real. Esto permite compartir experiencias en tiempo real.
 * También se puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para la persistencia de hologramas asincrónicos en dispositivos Android, iOS y HoloLens. Al compartir un delimitador espacial en la nube duradera, varios dispositivos pueden observar el mismo holograma persistente a lo largo del tiempo, aunque los dispositivos no estén presentes juntos simultáneamente.
 
-En el caso de las experiencias de escalado permanente o de escala de sala para auriculares de escritorio anclados que permanecerán dentro de un diámetro de 5 metros, puede usar el [marco de fase de referencia](coordinate-systems.md#stage-frame-of-reference) en lugar de los delimitadores espaciales, lo que proporciona un único sistema de coordenadas en el que representar todo el contenido. Sin embargo, si la aplicación intenta permitir que los usuarios pasen más de 5 metros en HoloLens, quizás funcionando en todo el piso de un edificio, necesitará anclajes espaciales para mantener el contenido estable.
+En el caso de las experiencias de escalado permanente o de escala de sala para auriculares de escritorio anclados que permanecerán dentro de un diámetro de 5 metros, normalmente puede usar el [marco de fase de referencia](coordinate-systems.md#stage-frame-of-reference) en lugar de los delimitadores espaciales, lo que proporciona un sistema de coordenadas único en el que representar todo el contenido. Sin embargo, si la aplicación intenta permitir que los usuarios pasen más de 5 metros en HoloLens, quizás funcionando en todo el piso de un edificio, necesitará anclajes espaciales para mantener el contenido estable.
 
 Aunque los delimitadores espaciales son estupendos para los hologramas que deben permanecer fijos en el mundo, una vez colocados, no se pueden mover. Hay alternativas a los delimitadores más adecuadas para los hologramas dinámicos que etiquetan junto con el usuario. Es mejor colocar hologramas dinámicos mediante un marco estático de referencia (la base de las coordenadas del mundo de Unity) o un marco de referencia adjunto.
 
-## <a name="best-practices"></a>Procedimientos recomendados
+## <a name="best-practices"></a>Procedimiento recomendado
 
 Estas directrices de delimitación espacial te ayudarán a representar hologramas estables que realizan un seguimiento preciso del mundo real.
 
@@ -34,7 +34,7 @@ Estas directrices de delimitación espacial te ayudarán a representar holograma
 
 Normalmente, los usuarios son los que colocan delimitadores espaciales de forma explícita.
 
-Por ejemplo, en HoloLens, una aplicación puede intersectar el [rayo del](gaze.md) usuario con la malla de [asignación espacial](spatial-mapping.md) para permitir que el usuario decida dónde colocar un holograma. Cuando el usuario puntea para colocar el holograma, cree un delimitador espacial en el punto de intersección y, a continuación, coloque el holograma en el origen del sistema de coordenadas del delimitador.
+Por ejemplo, en HoloLens, una aplicación puede intersectar el [rayo del](gaze-and-commit.md) usuario con la malla de [asignación espacial](spatial-mapping.md) para permitir que el usuario decida dónde colocar un holograma. Cuando el usuario puntea para colocar el holograma, cree un delimitador espacial en el punto de intersección y, a continuación, coloque el holograma en el origen del sistema de coordenadas del delimitador.
 
 Los delimitadores espaciales locales son sencillos y se pueden crear. El sistema consolidará sus datos internos si varios delimitadores pueden compartir sus datos subyacentes del sensor. Normalmente, debe crear un nuevo delimitador espacial local para cada holograma que un usuario coloque explícitamente, excepto en los casos descritos a continuación, como los grupos rígidos de hologramas.
 
@@ -71,7 +71,7 @@ Esto es especialmente importante para los delimitadores locales que hayas guarda
 
 Para los delimitadores espaciales en la nube, el almacenamiento puede escalar según las necesidades del escenario. Puede almacenar tantos delimitadores de nube como sea necesario y liberarlos solo cuando sepa que los usuarios no necesitarán localizar de nuevo los hologramas en ese anclaje.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

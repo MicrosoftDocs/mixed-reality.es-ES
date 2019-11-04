@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, asignación espacial, entorno, interacción, DirectX, winrt, API, código de ejemplo, UWP, SDK, tutorial
-ms.openlocfilehash: db3f1464158c04127e456cadd5fb633336909344
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63550694"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437447"
 ---
 # <a name="spatial-mapping-in-directx"></a>Asignación espacial en DirectX
 
@@ -21,6 +21,29 @@ En este tema se usa el código del ejemplo de código UWP [HolographicSpatialMap
 
 >[!NOTE]
 >Los fragmentos de código de este artículo muestran actualmente el uso C++de/CX en lugar de/WinRT compatible C++con C + +17, tal y como se usa en la [ C++ plantilla de proyecto holográfica](creating-a-holographic-directx-project.md).  Los conceptos son equivalentes para C++un proyecto de/WinRT, aunque tendrá que traducir el código.
+
+## <a name="device-support"></a>Compatibilidad con dispositivos
+
+<table>
+    <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    </colgroup>
+    <tr>
+        <td><strong>Ofrecen</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+        <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
+    </tr>
+     <tr>
+        <td>Asignación espacial</td>
+        <td>✔️</td>
+        <td>✔️</td>
+        <td>❌</td>
+    </tr>
+</table>
 
 ## <a name="directx-development-overview"></a>Información general sobre el desarrollo de DirectX
 
@@ -51,7 +74,7 @@ Al desarrollar una aplicación mediante estas API, el flujo del programa básico
   - Desde aquí, la aplicación puede realizar el análisis o el [procesamiento](spatial-mapping.md#mesh-processing) de los datos de la malla y usarlo para la [representación](spatial-mapping.md#rendering) y la raycasting física [y la colisión](spatial-mapping.md#raycasting-and-collision).
   - Un detalle importante a tener en cuenta es que debe aplicar una escala a las posiciones del vértice de la malla (por ejemplo, en el sombreador de vértices que se usa para representar las mallas), para convertirlas desde las unidades de enteros optimizadas en las que se almacenan en el búfer, hasta los medidores. Puede recuperar esta escala llamando a [VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx).
 
-### <a name="troubleshooting"></a>Solución de problemas
+### <a name="troubleshooting"></a>de solución de problemas
 * No olvide escalar las posiciones de los vértices de malla en el sombreador de vértices mediante la escala devuelta por [SpatialSurfaceMesh. VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)
 
 ## <a name="spatial-mapping-code-sample-walkthrough"></a>Tutorial de ejemplo de código de asignación espacial
@@ -62,7 +85,7 @@ Ahora, veremos cómo agregar funcionalidad de asignación de superficie a la apl
 
 ### <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configuración de la aplicación para usar la funcionalidad spatialPerception
 
-La aplicación debe poder usar la capacidad de asignación espacial. Esto es necesario porque la malla espacial es una representación del entorno del usuario, que puede considerarse como datos privados. Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación. Por ejemplo:
+La aplicación debe poder usar la capacidad de asignación espacial. Esto es necesario porque la malla espacial es una representación del entorno del usuario, que puede considerarse como datos privados. Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación. A continuación te mostramos un ejemplo:
 
 ```xml
 <Capabilities>
@@ -70,14 +93,14 @@ La aplicación debe poder usar la capacidad de asignación espacial. Esto es nec
 </Capabilities>
 ```
 
-La funcionalidad proviene del espacio de nombres **uap2** . Para obtener acceso a este espacio de nombres en el manifiesto, inclúyalo como un atributo *xlmns* en &lt;el elemento > del paquete. Por ejemplo:
+La funcionalidad proviene del espacio de nombres **uap2** . Para obtener acceso a este espacio de nombres en el manifiesto, inclúyalo como un atributo *xlmns* en el elemento &lt;paquete >. A continuación te mostramos un ejemplo:
 
 ```xml
 <Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+    xmlns="https://schemas.microsoft.com/appx/manifest/foundation/windows10"
+    xmlns:mp="https://schemas.microsoft.com/appx/2014/phone/manifest"
+    xmlns:uap="https://schemas.microsoft.com/appx/manifest/uap/windows10"
+    xmlns:uap2="https://schemas.microsoft.com/appx/manifest/uap/windows10/2"
     IgnorableNamespaces="uap uap2 mp"
     >
 ```
@@ -222,7 +245,7 @@ m_surfaceObserver->ObservedSurfacesChanged += ref new TypedEventHandler<SpatialS
 
 Nuestro ejemplo de código también está configurado para responder a estos eventos. Veamos cómo hacemos esto.
 
-**NOTA:** Es posible que esta no sea la forma más eficaz para que la aplicación controle los datos de malla. Este código se escribe para mayor claridad y no está optimizado.
+**Nota:** Es posible que esta no sea la forma más eficaz para que la aplicación controle los datos de malla. Este código se escribe para mayor claridad y no está optimizado.
 
 Los datos de la malla de superficie se proporcionan en un mapa de solo lectura que almacena los objetos [SpatialSurfaceInfo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.aspx) mediante [Platform:: GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931.aspx) como valores de clave.
 
@@ -367,7 +390,7 @@ CreateDirectXBuffer(device, D3D11_BIND_VERTEX_BUFFER, positions, m_vertexPositio
 }
 ```
 
-**NOTA:** Para la función auxiliar CreateDirectXBuffer utilizada en el fragmento de código anterior, vea el ejemplo de código de asignación de superficie: SurfaceMesh. cpp, GetDataFromIBuffer. h. Ahora se ha completado la creación de recursos de dispositivo y se considera que la malla está cargada y lista para su actualización y representación.
+**Nota:** Para la función auxiliar CreateDirectXBuffer utilizada en el fragmento de código anterior, vea el ejemplo de código de asignación de superficie: SurfaceMesh. cpp, GetDataFromIBuffer. h. Ahora se ha completado la creación de recursos de dispositivo y se considera que la malla está cargada y lista para su actualización y representación.
 
 ### <a name="update-and-render-surface-meshes"></a>Actualización y representación de mallas de superficie
 
@@ -474,7 +497,7 @@ else
 }
 ```
 
-Una vez hecho esto, se crea un bucle en nuestras mallas y se indica a cada uno que se dibuje a sí mismo. **NOTA:** Este código de ejemplo no está optimizado para usar cualquier tipo de selección de frustum, pero debe incluir esta característica en la aplicación.
+Una vez hecho esto, se crea un bucle en nuestras mallas y se indica a cada uno que se dibuje a sí mismo. **Nota:** Este código de ejemplo no está optimizado para usar cualquier tipo de selección de frustum, pero debe incluir esta característica en la aplicación.
 
 ```cpp
 std::lock_guard<std::mutex> guard(m_meshCollectionLock);
@@ -638,7 +661,7 @@ También podemos dibujar las mallas de superficie en los búferes de pantalla es
 Aquí, nuestro ejemplo de código indica al representador de malla que dibuje la colección. Esta vez no se especifica un paso de solo profundidad, por lo que se conectará un sombreador de píxeles y se completará la canalización de representación mediante los destinos que se especificaron para la cámara virtual actual.
 
 ```cpp
-// SR mesh rendering pass: Draw SR mesh over the world.
+// Spatial Mapping mesh rendering pass: Draw Spatial Mapping mesh over the world.
 context->ClearDepthStencilView(pCameraResources->GetSurfaceOcclusionDepthStencilView(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 // Set the render target to the current holographic camera's back buffer, and set the depth buffer.
@@ -650,6 +673,6 @@ context->OMSetRenderTargets(1, targets, pCameraResources->GetSurfaceDepthStencil
 m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Creación de un proyecto de DirectX holográfico](creating-a-holographic-directx-project.md)
 * [Windows. Perception. Spatial API](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)

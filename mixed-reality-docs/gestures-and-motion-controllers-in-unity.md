@@ -2,20 +2,20 @@
 title: Gestos y controladores de movimiento en Unity
 description: Hay dos formas clave de tomar medidas en su mirada en Unity, gestos de mano y controladores de movimiento.
 author: thetuvix
-ms.author: yoyoz
+ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mirados, entrada
-ms.openlocfilehash: f0d2835a08ef534af1310db35ccb81888e49aeb8
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525762"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73435227"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos y controladores de movimiento en Unity
 
-Hay dos formas clave de tomar medidas en su [mirada en Unity](gaze-in-unity.md), gestos de [mano](gestures.md) y [controladores de movimiento](motion-controllers.md) en HoloLens y HMDs envolventes. Puede tener acceso a los datos de los dos orígenes de entrada espacial a través de las mismas API en Unity.
+Hay dos formas clave de tomar medidas en su [mirada en Unity](gaze-in-unity.md), [gestos de mano](gaze-and-commit.md#composite-gestures) y [controladores de movimiento](motion-controllers.md) en HoloLens y HMDs envolventes. Puede tener acceso a los datos de los dos orígenes de entrada espacial a través de las mismas API en Unity.
 
 Unity proporciona dos maneras principales de tener acceso a los datos de entrada espaciales para Windows Mixed Reality, las API de *Input. GetButton/Input. GetAxis* comunes que funcionan a través de varios SDK de Unity XR y una API de *InteractionManager/GestureRecognizer* específica para Windows Mixed Reality que expone el conjunto completo de datos de entrada espaciales disponibles.
 
@@ -45,9 +45,9 @@ Las asignaciones de identificador de botón/eje para Windows Mixed Reality difie
 </tr><tr>
 <td> Botón de control presionado </td><td> Eje 11 = 1,0 (sin valores analógicos)<br />Botón 4 <i>(compatibilidad con el controlador de juegos)</i> </td><td> Eje 12 = 1,0 (sin valores analógicos)<br />Botón 5 <i>(compatibilidad con el controlador de juegos)</i> </td><td> entendido</td>
 </tr><tr>
-<td> Stick analógico <i>X (izquierda:-1,0, derecha: 1,0)</i> </td><td> Eje 1 </td><td> Eje 4 </td><td> thumbstickPosition. x</td>
+<td> Stick analógico X <i>(izquierda:-1,0, derecha: 1,0)</i> </td><td> Eje 1 </td><td> Eje 4 </td><td> thumbstickPosition. x</td>
 </tr><tr>
-<td> Stick analógico <i>Y (superior:-1,0, inferior: 1,0)</i> </td><td> Eje 2 </td><td> Eje 5 </td><td> thumbstickPosition. y</td>
+<td> Stickr Y <i>(superior:-1,0, inferior: 1,0)</i> </td><td> Eje 2 </td><td> Eje 5 </td><td> thumbstickPosition. y</td>
 </tr><tr>
 <td> Stick analógico presionado </td><td> Botón 8 </td><td> Botón 9 </td><td> thumbstickPressed</td>
 </tr><tr>
@@ -59,9 +59,9 @@ Las asignaciones de identificador de botón/eje para Windows Mixed Reality difie
 </tr><tr>
 <td> Touchpad presionado </td><td> Botón 16 * </td><td> Botón 17 * </td><td> touchpadPressed</td>
 </tr><tr>
-<td> replanteamiento de control de 6DoF o de puntero </td><td colspan="2"> Solo replanteamiento de <i>control</i> : <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. InputTracking.GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. InputTracking.GetLocalRotation</a></td><td> Pase el <i>control</i> o el <i>puntero</i> como argumento: SourceState. sourcePose. TryGetPosition<br />sourceState.sourcePose.TryGetRotation<br /></td>
+<td> replanteamiento de control de 6DoF o de puntero </td><td colspan="2"> El <i>puño</i> solo representa: <a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html">XR. InputTracking. GetLocalPosition</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalRotation.html">XR. InputTracking.GetLocalRotation</a></td><td> Pase el <i>control</i> o el <i>puntero</i> como argumento: SourceState. sourcePose. TryGetPosition<br />sourceState.sourcePose.TryGetRotation<br /></td>
 </tr><tr>
-<td> Estado de seguimiento </td><td colspan="2"> <i>Riesgo de pérdida y precisión de la posición solo disponible a través de la API específica de MR</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState.sourcePose.positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceState. properties. sourceLossRisk</a></td>
+<td> Estado de seguimiento </td><td colspan="2"> <i>La precisión de la posición y el riesgo de pérdida de origen solo están disponibles a través de la API específica de MR</i> </td><td> <a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourcePose-positionAccuracy.html">sourceState.sourcePose.positionAccuracy</a><br /><a href="https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionSourceProperties-sourceLossRisk.html">sourceState. properties. sourceLossRisk</a></td>
 </tr>
 </table>
 
@@ -78,13 +78,13 @@ Para representar mejor estos controladores, hay dos tipos de supuestos que puede
 
 El **puño** representa la ubicación de la palma de una mano detectada por una HoloLens o la palma que contiene un controlador de movimiento.
 
-En los auriculares envolventes, la representación del puño es la que mejor se usa para representar **la mano del usuario** o **un objeto que se mantiene en la mano del usuario**, como un arma o un cañón. La representación de control también se usa al visualizar un controlador de movimiento, ya que el **modelo** representable proporcionado por Windows para un controlador de movimiento utiliza la representación del puño como su origen y el centro de rotación.
+En los auriculares envolventes, la representación del puño es la que mejor se usa para representar **la mano del usuario** o **un objeto que se mantiene en la mano del usuario**, como un arma o un cañón. La representación de control también se usa al visualizar un controlador de movimiento, ya que el **modelo representable** proporcionado por Windows para un controlador de movimiento utiliza la representación del puño como su origen y el centro de rotación.
 
 La pose de control se define específicamente de la siguiente manera:
-* La **posición del puño**: La palma de centroide cuando mantiene el controlador de forma natural, se ajusta a la izquierda o a la derecha para centrar la posición dentro del control. En el controlador de movimiento de Windows Mixed Reality, esta posición generalmente se alinea con el botón de agarre.
-* **Eje derecho de la orientación del puño**: Cuando abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda, hacia atrás desde la mano derecha)
-* **Eje hacia delante de la orientación del puño**: Cuando cierre parcialmente la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
-* **Eje hacia arriba de la orientación del puño**: El eje hacia arriba implícito por las definiciones derecha y hacia delante.
+* La **posición del puño**: Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control. En el controlador de movimiento de Windows Mixed Reality, esta posición generalmente se alinea con el botón de agarre.
+* **Eje derecho de la orientación del puño**: cuando se abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda y hacia atrás desde la mano derecha)
+* El **eje hacia delante de la orientación del puño**: al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
+* **Eje hacia arriba de la orientación del puño**: el eje hacia arriba implícito por las definiciones derecha y hacia delante.
 
 Puede acceder a la representación del puño a través de la API de entrada entre proveedores (XR) de Unity *[. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation*) o a través de la API específica de Windows Mr (*SourceState. SourcePose. TryGetPosition/Rotation*, que solicita los datos de pose para el nodo de **control** ).
 
@@ -118,13 +118,13 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 <tr>
 <th> Estado de seguimiento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>Alta precisión</b> </td><td style="background-color: green; color: white"> &lt;1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td>   de <b>alta precisión</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Alta precisión (riesgo de pérdida)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Alta precisión (riesgo de pérdida)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> false</td>
+<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> falso</td>
 </tr>
 </table>
 
@@ -136,8 +136,8 @@ Estos Estados de seguimiento del controlador de movimiento se definen de la sigu
 
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>API de Unity comunes (Input. GetButton/GetAxis)
 
-**System.IO** *UnityEngine*, *UnityEngine. XR*<br>
-**Tipos**: *Entrada*, *XR. InputTracking*
+**Espacio de nombres:** *UnityEngine*, *UnityEngine. XR*<br>
+**Types**: *Input*, *XR. InputTracking*
 
 Unity usa actualmente sus API de *entrada general. GetButton/Input. GetAxis* para exponer la entrada para [el SDK de Oculus](https://docs.unity3d.com/Manual/OculusControllers.html), [el SDK de OpenVR](https://docs.unity3d.com/Manual/OpenVRControllers.html) y Windows Mixed Reality, incluidas las manos y los controladores de movimiento. Si la aplicación usa estas API para la entrada, puede admitir fácilmente controladores de movimiento en varios SDK de XR, incluido Windows Mixed Reality.
 
@@ -147,7 +147,7 @@ Para usar las API de entrada de Unity generales, normalmente se empieza por cone
 
 Por ejemplo, para asignar el botón de desencadenador del controlador de movimiento izquierdo a la acción de envío, vaya a **editar > configuración del proyecto > entrada** en Unity y expanda las propiedades de la sección enviar en ejes. Cambie el **botón de exposición** o la propiedad del **botón positivo alternativo** para leer el **botón 14 del joystick**, de la siguiente manera:
 
-![InputManager de Unity](images/unity-input-manager.png)<br>
+](images/unity-input-manager.png) InputManager de ![Unity<br>
 *InputManager de Unity*
 
 Después, el script puede comprobar la acción de envío mediante *Input. GetButton*:
@@ -186,7 +186,7 @@ Tenga en cuenta que la relación entre esta postura de control y el representado
 
 ## <a name="windows-specific-apis-xrwsainput"></a>API específicas de Windows (XR. WSA. Entradas
 
-**System.IO** *UnityEngine. XR. WSA. Input*<br>
+**Espacio de nombres:** *UnityEngine. XR. WSA. Input*<br>
 **Tipos**: *InteractionManager*, *InteractionSourceState*, *InteractionSource*, *InteractionSourceProperties*, *InteractionSourceKind*, *InteractionSourceLocation*
 
 Para obtener información más detallada sobre la entrada de mano de Windows Mixed Reality (para HoloLens) y los controladores de movimiento, puede optar por usar las API de entrada espacial específicas de Windows en el espacio de nombres *UnityEngine. XR. WSA. Input* . Esto le permite tener acceso a información adicional, como la precisión de la posición o el tipo de origen, lo que permite indicar a las manos y los controladores.
@@ -288,11 +288,11 @@ InteractionManager.InteractionSourcePressed -= InteractionManager_InteractionSou
 ### <a name="list-of-interaction-source-events"></a>Lista de eventos de origen de interacción
 
 Los eventos de origen de interacción disponibles son:
-* *InteractionSourceDetected* (el origen se convierte en activo)
+* *InteractionSourceDetected* (el origen se activa)
 * *InteractionSourceLost* (se convierte en inactivo)
-* *InteractionSourcePressed* (Puntee, presionar botón o "seleccionar")
-* *InteractionSourceReleased* (final de una pulsación, un botón liberado o el final de la "selección")
-* *InteractionSourceUpdated* (se mueve o cambia algún Estado)
+* *InteractionSourcePressed* (TAP, presionar botón o "seleccionar")
+* *InteractionSourceReleased* (final de una pulsación, botón liberado o final de "Select")
+* *InteractionSourceUpdated* (se mueve o cambia cualquier estado)
 
 ### <a name="events-for-historical-targeting-poses-that-most-accurately-match-a-press-or-release"></a>Los eventos de destinatarios históricos suponen que coinciden con más precisión con una prensa o una versión
 
@@ -305,7 +305,7 @@ Esto significa que el sondeo le proporciona una postura de origen o un represent
 Para establecer como destino con precisión en función de la intención original del usuario de una mano o de un controlador, debe usar la representación de origen histórica o la representación del encabezado de ese evento de entrada *InteractionSourcePressed* o *InteractionSourceReleased* .
 
 Puede tener como destino una imprenta o una versión con datos de pose históricos del encabezado del usuario o del controlador:
-* El encabezado se representa en el momento en que se produjo un gesto o un pulsador del controlador, que se puede usar para determinar el **destino** en el que se [Gazing](gaze.md) el usuario:
+* El encabezado se representa en el momento en que se produjo un gesto o un pulsador del controlador, que se puede usar para determinar el **destino** en el que se [Gazing](gaze-and-commit.md) el usuario:
 
    ```cs
    void InteractionManager_InteractionSourcePressed(InteractionSourcePressedEventArgs args) {
@@ -398,10 +398,10 @@ void InteractionManager_InteractionSourceUpdated(InteractionSourceUpdatedEventAr
 
 ## <a name="high-level-composite-gesture-apis-gesturerecognizer"></a>API de gesto compuesto de alto nivel (GestureRecognizer)
 
-**System.IO** *UnityEngine. XR. WSA. Input*<br>
+**Espacio de nombres:** *UnityEngine. XR. WSA. Input*<br>
 **Tipos**: *GestureRecognizer*, *GestureSettings*, *InteractionSourceKind*
 
-La aplicación también puede reconocer gestos compuestos de nivel superior para orígenes de entrada espaciales, puntear, retener, manipular y gestos de navegación. Puede reconocer estos gestos compuestos a través de las [manos](gestures.md) y [los controladores de movimiento](motion-controllers.md) mediante GestureRecognizer.
+La aplicación también puede reconocer gestos compuestos de nivel superior para orígenes de entrada espaciales, puntear, retener, manipular y gestos de navegación. Puede reconocer estos gestos compuestos a través de las [manos](gaze-and-commit.md#composite-gestures) y [los controladores de movimiento](motion-controllers.md) mediante GestureRecognizer.
 
 Cada evento de gesto en el GestureRecognizer proporciona el SourceKind para la entrada, así como el rayo del cabezal de destino en el momento del evento. Algunos eventos proporcionan información adicional específica del contexto.
 
@@ -476,7 +476,7 @@ void OnDestroy()
 
 ## <a name="rendering-the-motion-controller-model-in-unity"></a>Representación del modelo de controlador de movimiento en Unity
 
-![Modelo de controlador de movimiento y teleportabilidad](images/motioncontrollertest-teleport-1000px.png)<br>
+![modelo de controlador de movimiento y teleportabilidad](images/motioncontrollertest-teleport-1000px.png)<br>
 *Modelo de controlador de movimiento y teleportabilidad*
 
 Para representar los controladores de movimiento en la aplicación que coincidan con las controladoras físicas que están manteniendo los usuarios y articular a medida que se presionan varios botones, puede usar **MotionController recurso prefabricado** en el [Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity/).  Este recurso prefabricado carga dinámicamente el modelo de glTF correcto en tiempo de ejecución desde el controlador de controlador de movimiento instalado del sistema.  Es importante cargar estos modelos dinámicamente en lugar de importarlos manualmente en el editor, de modo que la aplicación muestre modelos 3D físicamente precisos para cualquier controlador actual y futuro que puedan tener los usuarios.
@@ -490,8 +490,8 @@ La generación de objetos en realidad es un problema más difícil, por lo que p
 
 Puede encontrar un ejemplo de cómo se recomienda implementar el lanzamiento [aquí](https://github.com/keluecke/MixedRealityToolkit-Unity/blob/master/External/Unitypackages/ThrowingStarter.unitypackage). Este ejemplo sigue estas cuatro instrucciones:
 * **Use la *velocidad* del controlador en lugar de la posición**. En la actualización de noviembre de Windows, se presentó un cambio de comportamiento en el [Estado de seguimiento posicional ' ' aproximado](motion-controllers.md#controller-tracking-state)' '. Cuando se encuentra en este estado, se seguirá informando de la información de velocidad de la controladora mientras creemos que es de alta precisión, lo que suele ser más largo que la posición.
-* **Incorpore la *velocidad angular* del controlador**. Esta lógica está contenida en `throwing.cs` el archivo en el `GetThrownObjectVelAngVel` método estático, dentro del paquete vinculado anteriormente:
-   1. A medida que se conserva la velocidad angular, el objeto producido debe mantener la misma velocidad angular que tenía en el momento del lanzamiento:`objectAngularVelocity = throwingControllerAngularVelocity;`
+* **Incorpore la *velocidad angular* del controlador**. Esta lógica está contenida en el archivo `throwing.cs` en el `GetThrownObjectVelAngVel` método estático, dentro del paquete vinculado anteriormente:
+   1. A medida que se conserva la velocidad angular, el objeto iniciado debe mantener la misma velocidad angular que tenía en el momento de la iniciación: `objectAngularVelocity = throwingControllerAngularVelocity;`
    2. Dado que es probable que el centro de la masa del objeto iniciado no sea el origen de la representación del puño, es probable que tenga una velocidad diferente a la del controlador en el marco de referencia del usuario. La parte de la velocidad del objeto aportada de esta manera es la velocidad tangencial instantánea del centro de la masa del objeto producido en torno al origen del controlador. Esta velocidad tangencial es el producto cruzado de la velocidad angular del controlador con el vector que representa la distancia entre el origen del controlador y el centro de la masa del objeto iniciado.
     
       ```cs
@@ -499,7 +499,7 @@ Puede encontrar un ejemplo de cómo se recomienda implementar el lanzamiento [aq
       Vector3 tangentialVelocity = Vector3.Cross(throwingControllerAngularVelocity, radialVec);
       ```
    
-   3. La velocidad total del objeto generado es, por tanto, la suma de la velocidad del controlador y esta velocidad tangencial:`objectVelocity = throwingControllerVelocity + tangentialVelocity;`
+   3. La velocidad total del objeto generado es, por lo tanto, la suma de la velocidad del controlador y esta velocidad tangencial: `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
 
 * **Preste mucha atención a la *hora* a la que se aplica la velocidad**. Cuando se presiona un botón, puede tardar hasta 20 ms para ese evento a pasar a través de Bluetooth al sistema operativo. Esto significa que, si sondea un cambio de estado del controlador de presionado a no presionado, o viceversa, el controlador de la información de la que se obtiene se obtiene en realidad de este cambio en el estado. Además, la causa del controlador presentada por nuestra API de sondeo se prevé para reflejar una posible suposición en el momento en que se muestra el fotograma, lo que podría ser más 20 MS en el futuro. Esto es adecuado para la *representación* de objetos retenidos, pero proporciona un problema de tiempo para el *objetivo* del objeto a medida que calculamos la trayectoria en el momento en que el usuario lanzó su lanzamiento. Afortunadamente, con la actualización de noviembre, cuando se envía un evento de Unity, como *InteractionSourcePressed* o *InteractionSourceReleased* , el estado incluye los datos del representador histórico cuando el botón se ha presionado o liberado realmente.  Para obtener la representación del controlador y el destino del controlador más precisos durante las throws, debe usar correctamente el sondeo y los eventos, según corresponda:
    * Para que el **controlador presente** cada fotograma, la aplicación debe colocar el *GameObject* del controlador en la representación del controlador de predicción para la hora de Photon del marco actual.  Estos datos se obtienen de las API de sondeo de Unity como *[XR. InputTracking. GetLocalPosition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* o *[XR. WSA. Input. InteractionManager. GetCurrentReading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)* .
@@ -519,15 +519,15 @@ Puede tener acceso al gesto y al controlador de movimiento desde el administrado
 
 Los tutoriales paso a paso, con ejemplos de personalización más detallados, están disponibles en la Academia de realidad mixta:
 
-- [MR Input 211: gesto](holograms-211.md)
-- [MR Input 213: controladores de movimiento](mixed-reality-213.md)
+- [Entrada MR 211: gesto](holograms-211.md)
+- [Entrada MR 213: Controladores de movimiento](mixed-reality-213.md)
 
-[![Entrada MR 213-controlador de movimiento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
+[Entrada MR ![213-controlador de movimiento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Entrada MR 213-controlador de movimiento*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
-* [Gestos](gestures.md)
+* [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Controladores de movimiento](motion-controllers.md)
 
 
