@@ -7,12 +7,12 @@ ms.author: jemccull
 ms.date: 02/25/2019
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 8d38d121ab76281497ab8d8ec11c096f9bc7cc71
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: f9f68962229bfc66bf07040b79ea07345dfd5378
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63526646"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438422"
 ---
 # <a name="mixed-reality-dev-days-faq"></a>Preguntas más frecuentes sobre los días de desarrollo de realidad mixta
 
@@ -40,7 +40,7 @@ ms.locfileid: "63526646"
 
     Hemos diseñado días de desarrollo de realidad mixta para usted: expertos en la realidad mixta y muchos aspectos de la tecnología de inteligencia artificial y en la nube que le acompañan, desde el equipo hasta la creación de hologramas. Si es un desarrollador de realidad mixta que quiere obtener entrenamiento en nuestra plataforma de desarrollo, herramientas, servicios y dispositivos, los días de desarrollo de la realidad mixta es una buena opción. 
 
-    [Microsoft Build](https://www.microsoft.com/en-us/build) aporta a los desarrolladores y expertos de los equipos de producto de toda la empresa. Se trata una amplia gama de tecnologías y patrones de aplicaciones. Este evento no reemplaza a build y, si es su atasco, le recomendamos que lo haga también. 
+    [Microsoft Build](https://www.microsoft.com//build) aporta a los desarrolladores y expertos de los equipos de producto de toda la empresa. Se trata una amplia gama de tecnologías y patrones de aplicaciones. Este evento no reemplaza a build y, si es su atasco, le recomendamos que lo haga también. 
 
 * **¿Cuánto cuesta el evento?**
 
@@ -64,4 +64,4 @@ ms.locfileid: "63526646"
 
 * **¿Con quién debo ponerme en contacto para obtener más información?**
 
-    Para obtener más información, envíe un correo electrónicoDevEvent@microsoft.com
+    Para obtener más información, envíe un correo electrónico DevEvent@microsoft.com
