@@ -1,182 +1,212 @@
 ---
 layout: LandingPage
-title: Documentación sobre Mixed Reality
-description: Aprende a crear experiencias de realidad mixta para HoloLens y auriculares envolventes.
-author: varnauld
-ms.author: vanesa
-ms.date: 02/24/2019
-ms.topic: article
+title: Introducción a Mixed Reality
+description: Para ayudar a un usuario nuevo en el ámbito de la realidad mixta, descubre qué es y comprende sus capacidades.
+author: grbury
+ms.author: grbury
+ms.date: 08/24/2019
+ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de inicio, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto
-ms.openlocfilehash: c39a5f2f31dc962758456f743e17aaf37fd4ed64
-ms.sourcegitcommit: 6a3b7d489c2aa3451b1c88c5e9542fbe1472c826
+ms.openlocfilehash: 1a5e4fcbb7704db6df59db9d01bb72a5b153b576
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817359"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73438080"
 ---
-# <a name="mixed-reality-documentation"></a>Documentación sobre Mixed Reality
+# <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 
-Mixed Reality mezcla contenido real y virtual en entornos híbridos donde coexisten e interactúan objetos físicos y digitales. Aprende a crear experiencias de realidad mixta para Microsoft HoloLens y cascos envolventes de Windows Mixed Reality (VR).
+## <a name="choose-your-track"></a>Elige tu opción
+
+
+:::row:::
+    :::column:::
+       [![Soy nuevo en el mundo de la realidad mixta](images/Tile-New.jpg)](index.md#understand-the-basics)<br>
+        **[Soy nuevo en el mundo de la realidad mixta](index.md#understand-the-basics)**<br>
+        Comprender los conceptos básicos
+    :::column-end:::
+    :::column:::
+       [![Soy diseñador](images/Tile-Create.jpg)](design.md)<br>
+        **[Soy diseñador](design.md)**<br>
+        Empezar a diseñar y a crear prototipos
+    :::column-end:::
+    :::column:::
+       [![Soy desarrollador](images/Tile-Develop.jpg)](development.md)<br>
+        **[Soy desarrollador](development.md)**<br>
+        Conocer las herramientas y la arquitectura
+    :::column-end:::
+    :::column:::
+       [![Empezar con Unity y MRTK](images/Tile-JumpIn.jpg)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)<br>
+        **[Empezar con Unity y MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)**<br>
+        Optimizar Unity para el desarrollo de MR
+    :::column-end:::
+:::row-end:::
+
 
 <br>
 
-<ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
-                            <li>
-                            <a href="design.md" title="Diseño de inicio" data-linktype="absolute-path">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="images/DesignIcon.png" alt="Design icon">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Diseño</h3>
-                                                    <p>Consiga orientaciones de diseño, cree una interfaz de usuario y aprenda sobre la interacción y la entrada de información.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                               </a>
-                            </li>
-                            <li>
-                             <a href="development.md" title="Desarrollo de inicio" data-linktype="absolute-path">
-                              <div class="cardSize">
-                                  <div class="cardPadding">
-                                      <div class="card">
-                                          <div class="cardImageOuter">
-                                              <div class="cardImage">
-                                                  <img src="images/DevelopIcon.png" alt="Develop icon">
-                                              </div>
-                                          </div>
-                                          <div class="cardText">
-                                              <h3>Desarrollo</h3>
-                                              <p>Consiga guías de desarrollo y conozca la tecnología y la ciencia subyacentes.</p>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                               </a>
-                            </li>
-                             <li>
-                              <a href="implementing-3d-app-launchers.md" title="Distribuir" data-linktype="absolute-path">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="images/DistributeIcon.png" alt="Distribute icon">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3 class="x-hidden-focus">Distribuir</h3>
-                                                  <p>Haga que la aplicación esté disponible para otros usuarios y considere la posibilidad de crear un iniciador 3D.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
- </ul>
+---
 
-<h2>Servicios</h2>
+<br>
 
-<ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
-                            <li>
-                              <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank" title="Azure Spatial Anchors" data-linktype="absolute-path">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="images/AzureSpatialAnchors.jpg" alt="Azure Spatial Anchors image">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3 class="x-hidden-focus">Azure Spatial Anchors</h3>
-                                                  <p>Spatial Anchors es un servicio multiplataforma para desarrolladores que le permite crear experiencias de realidad mixta mediante objetos que conservan su ubicación en los dispositivos y a lo largo del tiempo.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </a>
-                            </li>
-                            <li>
-                              <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/" target="_blank" title="Servicios de voz" data-linktype="absolute-path">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="images/speech.jpg" alt="Speech Services image">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3 class="x-hidden-focus">Servicios de voz</h3>
-                                                  <p>Conozca e integre en su aplicación las funcionalidades de voz con tecnología de Azure como, por ejemplo, conversión de voz a texto, reconocimiento del hablante o traducción de voz.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </a>
-                            </li>
-                             <li>
-                              <a href="https://docs.microsoft.com/azure/cognitive-services/computer-vision/" target="_blank" title="Servicios de visión" data-linktype="absolute-path">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="images/vision.jpg" alt="Vision Services image">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3 class="x-hidden-focus">Servicios de visión</h3>
-                                                  <p>Identifique y analice el contenido de sus imágenes o vídeos mediante servicios de visión como Computer Vision, detección de caras, reconocimiento de emociones o indexador de vídeo.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </a>
-                            </li>
-</ul>
+# <a name="understand-the-basics"></a>Comprender los conceptos básicos
 
-<h2>Introducción a HoloLens 2</h2>
+Si eres nuevo en el ámbito de la realidad mixta, descubrirás qué es y comprenderás sus capacidades.
 
-[![HoloLens 2](images/hololens2.jpg)](https://www.microsoft.com/hololens/hardware)
 
-[HoloLens 2](https://www.microsoft.com/hololens/hardware) ofrece la experiencia de realidad mixta más cómoda y envolvente disponible hoy en día, con soluciones que son líderes en el sector y que proporcionan valor en cuestión de minutos. Todo ello, respaldado por la confiabilidad, seguridad y escalabilidad de los servicios de nube y de inteligencia artificial de Microsoft. La edición [HoloLens 2 Development Edition](https://www.microsoft.com/en-us/hololens/developers) le ayuda a poner en marcha sus planes de realidad mixta con una oferta que combina HoloLens 2 con evaluaciones gratuitas del software de Unity y créditos de Azure para servicios en la nube.
+![espectro de la realidad mixta](images/RWtpZ1.jpeg)
 
-<h2>Noticias y notas</h2>
+## <a name="what-is-mixed-reality"></a>¿Qué es la realidad mixta?
 
-<h3>junio de 2019</h3>
 
-Como prometimos, nos complace poner a su disposición más ventajas de realidad mixta. Estamos deseando recibir sus comentarios y nos gustaría invitarle a que se [uniera a la conversación](https://holodevelopersslack.azurewebsites.net/) sobre los temas que le gustaría que se trataran, las personas a las que le gustaría escuchar, los tutoriales o guías de procedimientos que necesitaría, etc. Puede ponerse en contacto con nosotros a través de [Twitter](https://twitter.com/MxdRealityDev) y [unirse a nuestro programa de desarrollo](https://aka.ms/iwantmr) para recibir actualizaciones directas sobre nuevos documentos, herramientas, eventos, etc. Permanezca atento, todavía quedan muchas novedades.
+### <a name="mixed-reality-is-a-spectrummixed-realitymd"></a>[La realidad mixta es un espectro](mixed-reality.md)
+La realidad mixta es el resultado de fusionar el mundo físico con el mundo digital. Es el siguiente paso evolutivo en la interacción del ser humano, los equipos y el entornos. Ofrece posibilidades que hasta ahora solo eran posibles en nuestra imaginación.
 
-<table>
-<tr>
-<th style="width: 400px; text-align:left;">Contenido</th><th style="width: 125px; text-align:left;">Entrega</th><th style="width: 125px; text-align:left;">¡AHORA EN DIRECTO!</th>
-</tr> 
-<tr>
-<td><b>Guías de migración</b> <br>1. HoloToolKit (HTK)/Mixed Reality Toolkit (MRTK) a MRTK versión 2
-<br>2. HoloLens (primera generación) a HoloLens 2 (x86 a ARM, recomendaciones de interacción y diseño)
-</td></td><td>De marzo a mayo de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-porting-guide>Preparación de una aplicación existente para HoloLens 2</a><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html>HoloToolKit a las API MRTK</a></td>
-</tr>
-<tr>
-<td>Módulos mensuales para desarrolladores en código abierto (tutoriales y aplicaciones de ejemplo)</td><td>De marzo a junio de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrlearning-base-ch1>Módulo de base de aprendizaje de MR</a></td>
-</tr>
-<tr>
-<td>Versión preliminar de las nuevas funcionalidades de MRTK para HoloLens 2</td><td>Abril de 2019</td><td> <ul><li><a href=https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html>Documentación de MRTK</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-getting-started>Introducción a MRTK v2</a></td>
-</tr>
-<tr>
-<td>Guía de diseño y desarrollo de HoloLens 2</td><td>Abril de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/install-the-tools>Instalación de las herramientas</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/using-the-hololens-emulator>Emulador de HoloLens 2</a><li><a href=https://docs.microsoft.com/en-us/windows/mixed-reality/interaction-fundamentals>Guía de diseño de las interacciones instintivas</a></td>
-</tr>
-<tr>
-  <td>Más información sobre Unreal</td><td>Mayo de 2019</td><td> <ul><li><a href=https://www.unrealengine.com/en-US/blog/unreal-engine-4-support-for-hololens-2-released-in-early-access>Acceso anticipado a Unreal Engine 4</a></td>
-</tr>
-</table>
+<br>
+
+
+### <a name="what-is-a-hologramhologrammd"></a>[¿Qué es un holograma?](hologram.md)
+HoloLens te permite crear hologramas, que son objetos creados con luz y sonido que aparecen en el mundo que te rodea, como si fueran objetos reales. Los hologramas responden a la mirada, los gestos y los comandos de voz, y pueden interactuar con las superficies reales de tu entorno. Con los hologramas, puedes crear objetos digitales que formen parte de tu mundo.
+
+<br>
+
+
+---
+
+<br>
+
+![¿Qué puedes hacer con la realidad mixta?](images/HLS19_remoteAssistHologram_001.jpg)
+
+## <a name="what-can-you-do-with-mixed-reality"></a>¿Qué puedes hacer con la realidad mixta?
+
+### <a name="a-new-vision-for-workhttpsdynamicsmicrosoftcommixed-realityoverview"></a>[Una nueva visión del trabajo](https://dynamics.microsoft.com//mixed-reality/overview/)
+Internamente, en Microsoft, estamos creando aplicaciones de realidad mixta para empoderar a los empleados y optimizar las operaciones. El equipo de Dynamics 365 ha trabajado en una serie de proyectos que muestran las posibilidades: asistencia remota, diseño y guías.
+
+<br>
+
+### <a name="the-pursuit-of-more-personal-computingcase-study-the-pursuit-of-more-personal-computingmd"></a>[Intento de conseguir una informática más personal](case-study-the-pursuit-of-more-personal-computing.md)
+Las oportunidades del futuro se desvelan con los productos que creamos hoy. Las soluciones que estos productos proporcionan revelan qué necesitamos para avanzar en el futuro. Esto es especialmente cierto en la realidad mixta: Se obtienen conocimientos significativos al practicar con trabajo real: dispositivos reales, clientes reales y problemas reales.
+
+
+<br>
+
+
+
+## <a name="see-how-industry-partners-are-using-mixed-reality"></a>Observa cómo usan los asociados del sector la realidad mixta
+
+
+:::row:::
+    :::column:::
+       [![Bentley](images/Bentley-Synchro1.jpg)](https://binged.it/31AR3kP)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="view-complex-construction-projects-with-bentleys-digital-construction-softwarehttpsbingedit31ar3kp"></a>[Consultar proyectos de construcción complejos con el software de construcción digital de Bentley](https://binged.it/31AR3kP)
+        Synchro es una solución de software de construcción digital, que permite ver proyectos de construcción complejos en realidad mixta. Su plataforma de construcción digital en 4D combina la programación de CPM del diagrama de Gantt tradicional con funcionalidades de visualización en 4D integradas en tiempo real.
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+       [![Vuforia Studio de PTC](images/PTC-Vuforia-Studio1.jpg)](https://binged.it/31ARrjh)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="ptcs-vuforia-studio-authoring-solution-promotes-workforce-productivity-and-safetyhttpsbingedit31arrjh"></a>[La solución de creación Vuforia Studio de PTC promueve la productividad y la seguridad de los recursos](https://binged.it/31ARrjh)
+        La solución de creación de realidad mixta altamente eficaz Vuforia Studio promueve la productividad y la seguridad de los recursos, ya que ofrece información en el momento y el lugar en que los empleados más la necesitan: en el contexto real de su entorno de trabajo diario.
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+       [![Philips-Azurion](images/Philips-Azurion1.jpg)](https://binged.it/31B1RiR)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedureshttpsbingedit31b1rir"></a>[Philips dirige HoloLens en el dominio de los procedimientos guiados por imagen mínimamente invasivos](https://binged.it/31B1RiR)
+        Philips dirige HoloLens en el dominio de los procedimientos guiados por imagen mínimamente invasivos, durante los cuales los médicos confían en rayos X, ultrasonidos y otras fuentes de información en directo para "ver" el interior el paciente y guiar sus acciones.
+    :::column-end:::
+:::row-end:::
+
+<br>
+
+<br>
+
+---
+
+<br>
+
+![Vista expandida de HoloLens](images/HoloLens2_ExplodedView_8k.png)
+
+## <a name="what-are-the-capabilities-of-hololens"></a>¿Cuáles son las funcionalidades de HoloLens?
+
+### <a name="immersive-ergonomic-instinctual-and-untetheredhttpswwwmicrosoftcomhololenshardware"></a>[Dispositivo envolvente, ergonómico, instintivo y sin cables](https://www.microsoft.com//hololens/hardware)
+
+HoloLens 2 ofrece la experiencia de realidad mixta más cómoda y envolvente disponible hoy en día, con soluciones que son líderes en el sector y que proporcionan valor en cuestión de minutos y, todo ello, respaldado por la confiabilidad, seguridad y escalabilidad de los servicios de nube y de inteligencia artificial de Microsoft.
+
+<br>
+
+---
+
+<br>
+
+![Experiencias básicas](images/text_in_unity_viewingangle.jpg)
+
+## <a name="what-are-the-core-concepts-of-an-experience"></a>¿Cuáles son los conceptos básicos de una experiencia?
+
+### <a name="keep-the-user-comfortable---comfortcomfortmd"></a>[Preservar la comodidad del usuario (confort)](comfort.md)
+Para garantizar la máxima comodidad de los cascos de realidad virtual, es importante que los diseñadores y los desarrolladores puedan crear y presentar contenido imitando el funcionamiento de estas señales en el mundo real.
+
+<br>
+
+### <a name="how-the-user-sees-the-world---holographic-frameholographic-framemd"></a>[Cómo ve el mundo el usuario (trama holográfica)](holographic-frame.md)
+Los usuarios ven el mundo de la realidad mixta a través de una ventanilla rectangular que funciona con el casco. En el dispositivo HoloLens, esta área rectangular se denomina trama holográfica y permite a los usuarios ver contenido digital superpuesto en el mundo real que les rodea.
+
+<br>
+
+### <a name="making-holographic-objects-feel-real---spatial-mappingspatial-mappingmd"></a>[Hacer que objetos holográficos parezcan reales (asignación espacial)](spatial-mapping.md)
+La asignación espacial permite colocar objetos en superficies reales. Esto ayuda a anclar objetos en el mundo del usuario y aprovechar las indicaciones de profundidad del mundo real.
+
+<br>
+
+### <a name="suggesting-the-scale-of-an-object---scalescalemd"></a>[Sugerir la escala de un objeto (escala)](scale.md)
+Una clave para mostrar contenido que parezca real en forma de holograma es imitar las estadísticas visuales del mundo real de la manera más semejante posible. Esto implica incorporar tantas indicaciones visuales como sea posible, que nos ayudarán (en el mundo real) a entender dónde se encuentran los objetos, cuál es su tamaño y de qué material están hechos.
+
+
+<br>
+
+---
+
+## <a name="what-would-you-like-to-do-next"></a>¿Qué quieres hacer ahora?
+
+
+:::row:::
+    :::column:::
+       [![Probarlo](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
+        **[Probar Mixed Reality](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
+        Obtén una demostración de Mixed Reality y HoloLens en tu Microsoft Store local. 
+    :::column-end:::
+    :::column:::
+        [![Convertirme en creador](images/icon-design.jpg)](design.md)<br>
+        **[Convertirme en creador](design.md)**<br>
+        Conoce los conceptos básicos que necesitas para empezar a diseñar y a crear prototipos.
+    :::column-end:::
+    :::column:::
+        [![Asistir a un evento](images/icon-calendar.jpg)](sf-academy-events.md)<br>
+        **[Asistir a un evento](sf-academy-events.md)**<br>
+        Observa el hardware y obtén un tutorial práctico para crear tu primera aplicación de HoloLens 2.
+    :::column-end:::
+    :::column:::
+        [![Empezar a desarrollar](images/icon-developer.jpg)](development.md)<br>
+        **[Empezar a desarrollar](development.md)**<br>
+        Elige un método de desarrollo en función de tu nivel de aptitud, estilo de trabajo o preferencia de plataforma.
+    :::column-end:::
+:::row-end:::
+
+
+<br>
 
 <br>
 
