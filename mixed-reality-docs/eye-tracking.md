@@ -1,31 +1,25 @@
 ---
 title: Seguimiento de los ojos
-description: HoloLens 2 ofrece un nuevo nivel de conocimiento del contexto y del comportamiento humano dentro de la experiencia holográfica al proporcionar a los desarrolladores la capacidad de usar información sobre lo que están mirando los usuarios.
+description: HoloLens 2 permite un nuevo nivel de contexto y comprensión humana dentro de la experiencia holográfica, ya que proporciona a los desarrolladores la capacidad de usar información sobre lo que el usuario está examinando.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo y calibración
-ms.openlocfilehash: 60de5ceb9f55ca7e2f74856af9bd75567763e382
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441116"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641144"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
 
 ![Demostración de seguimiento ocular en MRTK](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 ofrece un nuevo nivel de conocimiento del contexto y del comportamiento humano dentro de la experiencia holográfica al proporcionar a los desarrolladores la capacidad de usar información sobre lo que están mirando los usuarios. En esta página se proporciona información general sobre esta nueva capacidad a los desarrolladores y diseñadores sobre cómo pueden beneficiarse del seguimiento ocular de varios casos de uso e instrucciones básicas para desarrolladores. 
+HoloLens 2 permite un nuevo nivel de contexto y comprensión humana dentro de la experiencia holográfica, ya que proporciona a los desarrolladores la capacidad de usar información sobre lo que el usuario está examinando. En esta página se proporciona información general sobre esta nueva capacidad a los desarrolladores y diseñadores sobre cómo pueden beneficiarse del seguimiento ocular de varios casos de uso e instrucciones básicas para desarrolladores. 
 
-
-## <a name="calibration"></a>Curva 
-Para que el seguimiento de los ojos funcione con precisión, cada usuario tiene que pasar por una [calibración de usuario de seguimiento ocular](calibration.md) en la que el usuario tiene que mirar un conjunto de destinos holográficas. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. El seguimiento ocular debe funcionar para la mayoría de los usuarios, pero hay casos poco frecuentes en los que es posible que un usuario no pueda calibrarse correctamente.
-Para obtener más información sobre la calibración y cómo garantizar una experiencia fluida, consulte nuestra página de [calibración de usuario de seguimiento ocular](calibration.md) .
-
-
-## <a name="device-support"></a>Compatibilidad con dispositivos
+### <a name="device-support"></a>Compatibilidad con dispositivos
 <table>
 <colgroup>
     <col width="25%" />
@@ -47,13 +41,31 @@ Para obtener más información sobre la calibración y cómo garantizar una expe
 </tr>
 </table>
 
+<br>
+
+## <a name="calibration"></a>Curva 
+Para que el seguimiento de los ojos funcione con precisión, cada usuario tiene que pasar por una [calibración de usuario de seguimiento ocular](calibration.md) en la que el usuario tiene que mirar un conjunto de destinos holográficas. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. 
+
+El seguimiento ocular debe funcionar para la mayoría de los usuarios, pero hay casos raros en los que es posible que un usuario no pueda calibrarse correctamente. Podría producirse un error en la calibración por varias razones, entre las que se incluyen, entre otras: 
+* El usuario previamente decidió salir del proceso de calibración
+* El usuario se ha retirado y no ha seguido los objetivos de calibración
+* El usuario tiene determinados tipos de lentes de contacto y gafas que el sistema todavía no admite 
+* El usuario tiene determinados physiologys oculares, condiciones oculares o ha tenido cirugía ocular que el sistema todavía no admite.  
+* Factores externos que impiden el seguimiento de ojos fiables, como manchas en el parasol o anteojos de HoloLens, luz solar directa y oclusión debido al pelo delante de los ojos
+
+Los desarrolladores deben asegurarse de proporcionar soporte técnico adecuado a los usuarios para los que es posible que los datos de seguimiento ocular no estén disponibles (que no pueden calibrarse correctamente). En la sección de la parte inferior de esta página se proporcionan recomendaciones para las soluciones de reserva. 
+
+Para obtener más información sobre la calibración y cómo garantizar una experiencia fluida, consulte nuestra página de [calibración de usuario de seguimiento ocular](calibration.md) .
+
+<br>
+
 ## <a name="available-eye-tracking-data"></a>Datos de seguimiento ocular disponibles
 Antes de entrar en detalles sobre los casos de uso específicos de la entrada ocular y mirarnos, queremos señalar brevemente las funcionalidades que proporciona la [API de seguimiento](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) de la vista de HoloLens 2. Los desarrolladores obtienen acceso a un solo rayo de mira fijamente (miran el origen y la dirección) a aproximadamente _30 fps (30 Hz)_ .
 Para obtener información más detallada sobre cómo obtener acceso a los datos de seguimiento de los ojos, consulte nuestras guías para desarrolladores sobre el uso de la mirada [en DirectX](gaze-in-directx.md) y la mirada a [la vista de Unity](https://aka.ms/mrtk-eyes).
 
 El ojo de miración predicho es aproximadamente de 1,5 grados en el ángulo visual alrededor del destino real (vea la ilustración siguiente). A medida que se esperan ligeras imprecisiones, los desarrolladores deben planear algún margen alrededor de este valor límite inferior (por ejemplo, 2,0-3.0 grados pueden dar lugar a una experiencia mucho más cómoda). Veremos cómo abordar la selección de destinos pequeños con más detalle a continuación. Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. 
 
-![Tamaño de objetivo óptimo a una distancia de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
+![Tamaño de destino óptimo a una distancia de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
 *Tamaño óptimo de destino a una distancia de 2 metros*
 
 <br>
@@ -103,35 +115,33 @@ Tenga cuidado de no abrumar al usuario a pesar de ello, eche un vistazo a las [d
 
 ## <a name="using-eye-gaze-for-interaction"></a>Uso de la mirada a la interacción
 Crear una interacción que aproveche los objetivos de vista rápida en movimiento puede ser un reto.
-Por un lado, los ojos se mueven tan rápido que debe tener cuidado al usar la entrada mirada, ya que, de lo contrario, el usuario puede encontrar la experiencia abrumadora o distraer. Por otro lado, también puede crear experiencias realmente mágicas que impedirán a los usuarios. Para ayudarle, eche un vistazo a nuestra información general sobre las ventajas principales, los desafíos y las recomendaciones de diseño para [la interacción](eye-gaze-interaction.md). 
+Por un lado, los ojos se mueven tan rápido que debe tener cuidado al usar la entrada mirada, ya que, de lo contrario, los usuarios pueden encontrar la experiencia abrumadora o distraer. Por otro lado, también puede crear experiencias realmente mágicas que impedirán a los usuarios. Para ayudarle, eche un vistazo a nuestra información general sobre las ventajas principales, los desafíos y las recomendaciones de diseño para [la interacción](eye-gaze-interaction.md). 
 
 <br>
  
-## <a name="dev-guidance-what-if-eye-tracking-is-not-available"></a>Guía para desarrolladores: ¿Qué ocurre si el seguimiento ocular no está disponible?
-Puede haber situaciones en las que la aplicación no recibirá ningún dato de seguimiento ocular debido a diversas razones, entre las que se incluyen las siguientes:
-* El usuario omitió la calibración del seguimiento de ojo.
-* El usuario ha calibrado, pero decidió no conceder permiso a la aplicación para que use los datos de seguimiento ocular.
-* El usuario tiene anteojos únicos o alguna condición de ojo que el sistema todavía no admite.
-* Factores externos que impiden el seguimiento de ojos fiables, como manchas en el parasol o anteojos de HoloLens, luz solar directa y oclusión, debido al pelo en la parte delantera de los ojos.
+## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Soluciones de reserva cuando el seguimiento ocular no está disponible
+En raras ocasiones, es posible que los datos de seguimiento de ojos no estén disponibles.
+Esto puede deberse a diferentes motivos entre los que se enumeran los más comunes:
+* El sistema no pudo [calibrar al usuario](calibration.md).
+* El usuario omitió la [calibración](calibration.md).   
+* El usuario está calibrado, pero decidió no conceder permiso a la aplicación para usar los datos de seguimiento ocular.    
+* El usuario tiene anteojos únicos o alguna condición de ojo que el sistema todavía no admite.    
+* Factores externos que impiden el seguimiento de ojos fiables, como manchas en el parasol o anteojos de HoloLens, luz solar directa y oclusión, debido al pelo en la parte delantera de los ojos.   
+Por lo tanto, los desarrolladores deben asegurarse de que hay compatibilidad de reserva adecuada para estos usuarios. En la página [seguimiento ocular en DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) , se explican las API necesarias para detectar si hay datos de seguimiento ocular disponibles. 
 
-Como desarrollador de aplicaciones, esto significa que debe tener en cuenta la compatibilidad con los usuarios para los que es posible que los datos de seguimiento ocular no estén disponibles. A continuación se explica en primer lugar cómo detectar si el seguimiento ocular está disponible y cómo solucionarlo cuando no está disponible para aplicaciones diferentes.
+Como se describió anteriormente, existen varios motivos por los que es posible que los datos de seguimiento ocular no estén disponibles.   
+Aunque algunos usuarios pueden haber decidido revocar el acceso a sus datos de seguimiento ocular y son correctos con la desventaja de una experiencia de usuario inferior a la privacidad de no proporcionar acceso a los datos de seguimiento ocular, en algunos casos esto puede ser involuntaria.  
+Por lo tanto, si la aplicación usa el seguimiento ocular y esta es una parte importante de la experiencia, recomendamos que se comunique claramente al usuario.     
+Informar a los usuarios de por qué el seguimiento ocular es fundamental para su aplicación (quizás incluso mostrar algunas características mejoradas) para experimentar todo el potencial de su aplicación puede ayudar al usuario a comprender mejor lo que están ofreciendo.    
+Ayudar al usuario a identificar por qué el seguimiento ocular puede no funcionar (en función de las comprobaciones anteriores) y ofrecer algunas sugerencias para solucionar rápidamente posibles problemas.  
+Por ejemplo, si puede detectar que el sistema admite el seguimiento ocular, el usuario está calibrado e incluso ha dado su permiso, pero no se reciben datos de seguimiento ocular, puede que esto señale a otros problemas, como manchas o ojos que se ocluidos.    
+No obstante, tenga en cuenta que hay casos poco frecuentes de usuarios para los que es posible que el seguimiento ocular simplemente no funcione.    
+Por lo tanto, sea respetuoso de eso permitiendo descartar o incluso deshabilitar recordatorios para habilitar el seguimiento ocular en la aplicación.
 
-### <a name="1-how-to-detect-that-eye-tracking-is-available"></a>1. Cómo detectar que el seguimiento ocular está disponible
-Hay algunas comprobaciones para determinar si los datos de seguimiento ocular están disponibles. Compruebe si...
-* ... el sistema admite el seguimiento ocular en absoluto. Llame al *método*siguiente: [Windows. percepción. people. EyesPose. IsSupported ()](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
-
-* ... se calibra el usuario. Llame a la *propiedad*siguiente: [Windows. imception. people. EyesPose. IsCalibrationValid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid)
-
-* ... el usuario ha dado permiso a la aplicación para usar los datos de seguimiento ocular: recuperar el _' GazeInputAccessStatus '_ actual. Un ejemplo de cómo hacerlo se explica cómo solicitar el [acceso a la entrada de mirada](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).
-
-Además, puede que desee comprobar que los datos de seguimiento ocular no están obsoletos agregando un tiempo de espera entre las actualizaciones de datos de seguimiento de ojos recibidos y, de lo contrario, reserva a Head-mira como se describe a continuación. 
-
-Como se describió anteriormente, existen varios motivos por los que es posible que los datos de seguimiento ocular no estén disponibles. Aunque algunos usuarios pueden haber decidido revocar el acceso a sus datos de seguimiento ocular y son correctos con la desventaja de una experiencia de usuario inferior a la privacidad de no proporcionar acceso a los datos de seguimiento ocular, en algunos casos esto puede ser involuntaria. Por lo tanto, si la aplicación usa el seguimiento ocular y esta es una parte importante de la experiencia, recomendamos que se comunique claramente al usuario. Informar a los usuarios de por qué el seguimiento ocular es fundamental para su aplicación (quizás incluso mostrar algunas características mejoradas) para experimentar todo el potencial de su aplicación puede ayudar al usuario a comprender mejor lo que están ofreciendo. Ayudar al usuario a identificar por qué el seguimiento ocular puede no funcionar (en función de las comprobaciones anteriores) y ofrecer algunas sugerencias para solucionar rápidamente posibles problemas. Por ejemplo, si puede detectar que el sistema admite el seguimiento ocular, el usuario está calibrado e incluso ha dado su permiso, pero no se reciben datos de seguimiento ocular, puede que esto señale a otros problemas, como manchas o ojos que se ocluidos. No obstante, tenga en cuenta que hay casos poco frecuentes de usuarios para los que es posible que el seguimiento ocular simplemente no funcione. Por lo tanto, sea respetuoso de eso permitiendo descartar o incluso deshabilitar recordatorios para habilitar el seguimiento ocular en la aplicación.
-
-### <a name="2-fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>2. reserva para aplicaciones con miras ocular como puntero de entrada principal
+### <a name="fallback-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Reserva para aplicaciones con miras ocular como puntero de entrada principal
 Si la aplicación usa la vista de puntero para seleccionar rápidamente los hologramas en toda la escena, aunque los datos de seguimiento ocular no están disponibles, se recomienda revertir al encabezado y empezar a mostrar el cursor de miras hacia abajo. Se recomienda utilizar un tiempo de espera (por ejemplo, 500 – 1500 MS) para determinar si se debe cambiar o no. Esto es para evitar que se extraiga un cursor cada vez que el sistema pierda el seguimiento debido a movimientos de ojos o guiños y parpadeos. Si es un desarrollador de Unity, la reserva automática para la cabeza de mira ya está controlada en el kit de herramientas de realidad mixta. Si es un desarrollador de DirectX, debe administrar este conmutador usted mismo.
 
-### <a name="3-fallback-for-other-eye-tracking-specific-applications"></a>3. reserva para otras aplicaciones específicas del seguimiento ocular
+### <a name="fallback-for-other-eye-tracking-specific-applications"></a>Reserva para otras aplicaciones específicas del seguimiento ocular
 La aplicación puede usar miradamente en una forma única que se adapte específicamente a los ojos; por ejemplo, para animar los ojos de un avatar o para mapas térmicosr la atención basada en el ojo con información precisa sobre la atención visual. En este caso, no hay ninguna reserva clara. Si el seguimiento ocular no está disponible, es posible que estas funcionalidades simplemente deban deshabilitarse.
 De nuevo, se recomienda comunicar esto al usuario que puede no ser consciente de que la funcionalidad no funciona.
 
