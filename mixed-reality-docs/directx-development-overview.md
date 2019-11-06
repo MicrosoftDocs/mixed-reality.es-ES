@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, representación holográfica, nativa, aplicación nativa, WinRT, aplicación WinRT, API de plataforma, motor personalizado, middleware
-ms.openlocfilehash: 698ccb57a39189b9c0634c47ad6cbd6325c06caa
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435584"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641090"
 ---
 # <a name="directx-development-overview"></a>Información general sobre el desarrollo de DirectX
 
@@ -49,7 +49,7 @@ Para habilitar la mejor experiencia posible para los usuarios de la appslication
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
 * [Manos y controladores de movimiento en DirectX](hands-and-motion-controllers-in-directx.md)
 * [Entrada de voz en DirectX](voice-input-in-directx.md)
-* [Sonido espacial en DirectX](spatial-sound-in-directx.md)
+* [Sonido espacial](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound)
 * [Asignación espacial en DirectX](spatial-mapping-in-directx.md)
 
 

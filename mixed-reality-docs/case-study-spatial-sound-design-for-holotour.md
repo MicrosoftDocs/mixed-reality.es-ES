@@ -6,12 +6,12 @@ ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, HoloTour, sonido espacial, caso práctico
-ms.openlocfilehash: eca675534dba12dd65a20fb9d85e4df57f725288
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: e1da80bd647084aa4d7839c0f1b1848b46c2b1b4
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522448"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641154"
 ---
 # <a name="case-study---spatial-sound-design-for-holotour"></a>Caso práctico: diseño de sonido espacial para HoloTour
 
@@ -33,7 +33,7 @@ Creamos experiencias de HoloTour de dos ubicaciones diferentes: Roma y Machu Pic
 
 En nuestro [caso práctico sobre la captura del contenido visual para HoloTour](case-study-capturing-and-creating-content-for-holotour.md), hablamos del diseño personalizado de la plataforma de la cámara. Constaba de 14 cámaras GoPro contenidas en una carcasa impresa en 3D, diseñada para las dimensiones específicas del trípode. Para capturar audio desde esta plataforma de pruebas, agregamos una matriz de micrófono cuádruple bajo las cámaras, que se incorporaron a una unidad de grabación de 4 canales compacta que se encuentra en la base del trípode. Hemos elegido los micrófonos que no solo se han realizado correctamente, pero que tenían una superficie muy pequeña, de modo que no tapaba la vista de la cámara.
 
-![Plataforma de micrófono y de cámara personalizada](images/camera-rig-microphones-300px.png)<br>
+![la plataforma de micrófono y la cámara personalizada](images/camera-rig-microphones-300px.png)<br>
 *Plataforma de micrófono y de cámara personalizada*
 
 Este programa de instalación capturó un sonido en cuatro direcciones desde la ubicación precisa de nuestra cámara, lo que nos proporciona información suficiente para volver a crear una panorámica aural 3D mediante el sonido espacial, que podríamos sincronizar posteriormente con el vídeo de 360 grados.
@@ -59,26 +59,25 @@ Un enfoque diferente implicaba la reproducción de un ambiente estéreo de bucle
 ## <a name="tips-and-tricks"></a>Sugerencias y trucos
 
 Al reunir audio para una escena, hay algunos métodos adicionales que puede usar para resaltar más la direccionalidad y la inmersión, lo que hace un uso completo de las capacidades de sonido espacial de HoloLens. Se proporciona una lista de algunos de los siguientes, que se escuchan la próxima vez que se intenta HoloTour.
-* **Buscar destinos**: Estos son sonidos que solo se desencadenan cuando se está mirando un objeto o área específica del marco holográfica. Por ejemplo, si mira la dirección del café de la calle del Piazza Navona de Roma, se desencadenarán sutilmente los sonidos de un restaurante ocupado.
-* **Visión local**: El viaje a través de HoloTour contiene ciertas pulsaciones en las que su guía de paseo, asistida por hologramas, explorará un tema en profundidad. Por ejemplo, a medida que la fachada del Pantheon se resuelve para mostrar el Oculus, la reverberación de audio colocada como un emisor 3D desde el interior de la Pantheon anima al usuario a explorar el modelo interior.
-* **Direccionalidad mejorada**: En muchas escenas, colocamos sonidos de varias maneras para agregarlos a la direccionalidad. En la escena de Pantheon, por ejemplo, el sonido de la fuente se colocó como una emisora independiente lo suficientemente cerca del usuario para que pudiera tener una idea de "Sonic Parallax", ya que recorren el espacio de la reproducción. En la escena de Salinas de Maras, la perspectiva individual de algunos de los pocos flujos se colocaba como emisores independientes para crear un entorno ambiente más envolvente, lo que rodea al usuario con los sonidos auténticos de esa ubicación.
+* **Buscar destinos**: Estos son sonidos que solo se desencadenan cuando se mira un objeto o un área específicos del marco holográfica. Por ejemplo, si mira la dirección del café de la calle del Piazza Navona de Roma, se desencadenarán sutilmente los sonidos de un restaurante ocupado.
+* **Visión local**: el viaje a través de HoloTour contiene ciertas pulsaciones donde la guía del paseo, asistida por hologramas, explorará un tema en profundidad. Por ejemplo, a medida que la fachada del Pantheon se resuelve para mostrar el Oculus, la reverberación de audio colocada como un emisor 3D desde el interior de la Pantheon anima al usuario a explorar el modelo interior.
+* **Direccionalidad mejorada**: en muchas escenas, colocamos sonidos de varias maneras para agregarlos a la direccionalidad. En la escena de Pantheon, por ejemplo, el sonido de la fuente se colocó como una emisora independiente lo suficientemente cerca del usuario para que pudiera tener una idea de "Sonic Parallax", ya que recorren el espacio de la reproducción. En la escena de Salinas de Maras, la perspectiva individual de algunos de los pocos flujos se colocaba como emisores independientes para crear un entorno ambiente más envolvente, lo que rodea al usuario con los sonidos auténticos de esa ubicación.
 * **Emisor de spline**: Este emisor de sonido espacial especial se mueve en el espacio 3D con respecto a la posición visual del objeto al que está asociado. Un ejemplo de esto era el tren en Machu Picchu, donde usamos un emisor de spline para dar una sensación distintiva de direccionalidad y movimiento.
-* **Música y SFX**: Algunos aspectos de HoloTour que representan un enfoque más estilizado o cinematográfico usan música y efectos sonoros para aumentar el impacto emocional. En la batalla de Gladiator al final del paseo de Roma, se usaron efectos especiales como whooshes o los separadores para ayudar a fortalecer el efecto de las etiquetas que aparecen en segundo plano.
+* **Music y SFX**: algunos aspectos de HoloTour que representan un enfoque más estilizado o cinematográfico usan música y efectos sonoros para aumentar el impacto emocional. En la batalla de Gladiator al final del paseo de Roma, se usaron efectos especiales como whooshes o los separadores para ayudar a fortalecer el efecto de las etiquetas que aparecen en segundo plano.
 
 ## <a name="about-the-author"></a>Acerca del autor
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Jason Syltebo" width="60" height="60" src="images/syltebo.png"></td>
-<td style="border-style: none"><b>Jason Syltebo</b><br>Diseñador de audio@Microsoft</td>
+<td style="border-style: none"><b>Jason Syltebo</b><br>@Microsoft del diseñador de audio</td>
 </tr>
 </table>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Sonido espacial](spatial-sound.md)
 * [Diseño de sonido espacial](spatial-sound-design.md)
 * [Sonido espacial en Unity](spatial-sound-in-unity.md)
-* [MR espacial 220](holograms-220.md)
 * [Vídeo: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)
 
  

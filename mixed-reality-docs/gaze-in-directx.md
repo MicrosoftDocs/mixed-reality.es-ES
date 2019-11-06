@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: miras hacia abajo, hacia abajo, seguimiento del cabezal, seguimiento ocular, DirectX, entrada, hologramas
-ms.openlocfilehash: 78a6190c18c8b92dd1d6f3d7a340b54d07b7feea
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 48188cc8c886b371847357701b42249f486bceac
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435341"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641119"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>Entrada de ojo y mira fijamente en DirectX
 
@@ -22,6 +22,34 @@ En Windows Mixed Reality, se usa la entrada de ojo y mirarnos para determinar lo
 **Ojo:** representa la dirección que miran los ojos del usuario. El origen se encuentra entre los ojos del usuario.  Está disponible en dispositivos de realidad mixta que incluyen un sistema de seguimiento ocular.
 
 Se puede acceder a los rayos de mira y hacia la vista a través de la API de [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) . Simplemente llame a [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) para recibir un nuevo objeto SpatialPointerPose en la marca de tiempo y el [sistema de coordenadas](coordinate-systems-in-directx.md)especificados. Este SpatialPointerPose contiene el origen y la dirección del encabezado. También contiene un origen y una dirección de mirada si el seguimiento ocular está disponible.
+
+### <a name="device-support"></a>Compatibilidad con dispositivos
+<table>
+<colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+</colgroup>
+<tr>
+     <td><strong>Ofrecen</strong></td>
+     <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+     <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+     <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
+</tr>
+<tr>
+     <td>Mirada con la cabeza</td>
+     <td>✔️</td>
+     <td>✔️</td>
+     <td>✔️</td>
+</tr>
+<tr>
+     <td>Miras hacia abajo</td>
+     <td>❌</td>
+     <td>✔️</td>
+     <td>❌</td>
+</tr>
+</table>
 
 ## <a name="using-head-gaze"></a>Uso del encabezado de mira
 
@@ -47,7 +75,8 @@ if (pointerPose)
 
 ## <a name="using-eye-gaze"></a>Uso de la mirada
 
-La API ocular es muy similar a la punta.  Usa la misma API de [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) , que proporciona un origen y una dirección de rayo que puede Raycast en la escena.  La única diferencia es que debe habilitar explícitamente el seguimiento ocular antes de usarlo. Para ello, debe realizar dos pasos:
+Tenga en cuenta que para que los usuarios usen la entrada ocular, cada usuario tiene que pasar por una [calibración de usuario de seguimiento de ojos](calibration.md) la primera vez que usa el dispositivo. La API ocular es muy similar a la punta.
+Usa la misma API de [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) , que proporciona un origen y una dirección de rayo que puede Raycast en la escena.  La única diferencia es que debe habilitar explícitamente el seguimiento ocular antes de usarlo. Para ello, debe realizar dos pasos:
 1. Solicitar permiso de usuario para usar el seguimiento ocular en la aplicación.
 2. Habilite la funcionalidad de "entrada de Miración" en el manifiesto del paquete.
 
@@ -71,7 +100,7 @@ std::thread requestAccessThread([this]()
 requestAccessThread.detach();
 
 ```
-Iniciar un subproceso desasociado es solo una opción para controlar las llamadas asincrónicas.  Como alternativa, puede usar la nueva funcionalidad de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) admitida C++por/WinRT.
+Iniciar un subproceso desasociado es solo una opción para controlar las llamadas asincrónicas. Como alternativa, puede usar la nueva funcionalidad de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) admitida C++por/WinRT.
 Este es otro ejemplo para pedir permiso de usuario:
 -   EyesPose:: IsSupported () permite que la aplicación desencadene el cuadro de diálogo de permiso solo si hay un seguimiento ocular.
 -   GazeInputAccessStatus m_gazeInputAccessStatus; Esto es para evitar la acumulación de la solicitud de permiso una y otra vez.
@@ -99,7 +128,6 @@ if (Windows::Perception::People::EyesPose::IsSupported() &&
 }
 
 ```
-
 
 ### <a name="declaring-the-gaze-input-capability"></a>Declarar la capacidad de *entrada de mira*
 
@@ -142,16 +170,39 @@ if (pointerPose)
 
 ```
 
-## <a name="correlating-gaze-with-other-inputs"></a>Correlacionar miradamente con otras entradas
+## <a name="fallback-when-eye-tracking-is-not-available"></a>Reserva cuando el seguimiento ocular no está disponible
+Tal y como se mencionó en nuestros [documentos de diseño de seguimiento ocular](eye-tracking.md#fallback-solutions-when-eye-tracking-is-not-available), tanto los diseñadores como los desarrolladores deben tener en cuenta que puede haber instancias en las que los datos de seguimiento ocular no estén disponibles para la aplicación.
+Hay varias razones por las que, desde un usuario que no se está calibrando, el usuario ha denegado el acceso a sus datos de seguimiento ocular o simplemente interferencias temporales (como manchas en el visor de HoloLens o pelo occluding). Aunque algunas de las API ya se han mencionado en este documento, en el siguiente se proporciona un resumen de cómo detectar que el seguimiento ocular está disponible como referencia rápida: 
 
+* Compruebe que el sistema admite el seguimiento ocular. Llame al *método*siguiente: [Windows. percepción. people. EyesPose. IsSupported ()](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.issupported#Windows_Perception_People_EyesPose_IsSupported)
+
+* Compruebe que el usuario está calibrado. Llame a la *propiedad*siguiente: [Windows. imception. people. EyesPose. IsCalibrationValid](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid) 
+
+* Compruebe que el usuario ha dado permiso a la aplicación para usar los datos de seguimiento ocular: recupere el _' GazeInputAccessStatus '_ actual. Un ejemplo de cómo hacerlo se explica cómo solicitar el [acceso a la entrada de mirada](https://docs.microsoft.com/windows/mixed-reality/gaze-in-directX#requesting-access-to-gaze-input).   
+
+Además, puede que desee comprobar que los datos de seguimiento ocular no están obsoletos agregando un tiempo de espera entre las actualizaciones de datos de seguimiento de ojos recibidos y, de lo contrario, reserva a Head-mira como se describe a continuación.  
+Para obtener más información, visite nuestras [consideraciones de diseño de reserva](eye-tracking.md#fallback-solutions-when-eye-tracking-is-not-available) .
+
+<br>
+
+## <a name="correlating-gaze-with-other-inputs"></a>Correlacionar miradamente con otras entradas
 En ocasiones, es posible que necesite un [SpatialPointerPose](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose) que se corresponda con un evento en el pasado. Por ejemplo, si el usuario realiza una pulsación aérea, es posible que la aplicación desee saber lo que estaba viendo. Con este propósito, simplemente el uso de [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) con el tiempo de fotograma previsto sería incorrecto debido a la latencia entre el procesamiento de la entrada del sistema y el tiempo de presentación. Además, si se usa la mirada ocular para el destino, nuestros ojos tienden a moverse incluso antes de finalizar una acción de confirmación. Se trata de un problema menos importante en el caso de una simple pulsación del aire, pero es más crítico cuando se combinan comandos de voz largos con movimientos oculares rápidos. Una manera de controlar este escenario consiste en realizar una llamada adicional a [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp), mediante una marca de tiempo histórica que se corresponda con el evento de entrada.  
 
 Sin embargo, para la entrada que enruta a través de SpatialInteractionManager, hay un método más sencillo. [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) tiene su propia función [TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.trygetpointerpose) . Llamar a que proporcionará un [SpatialPointerPose](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose) perfectamente correlacionado sin las conjeturas. Para obtener más información sobre cómo trabajar con SpatialInteractionSourceStates, eche un vistazo a los [controladores de manos y de movimiento de la documentación de DirectX](hands-and-motion-controllers-in-directx.md) .
 
+<br>
+
+## <a name="calibration"></a>Curva
+Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar un [seguimiento ocular](calibration.md)de la calibración del usuario. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. Los desarrolladores no tienen que hacer nada en su extremo para administrar la calibración del usuario. El sistema garantizará que se solicite al usuario que calibre el dispositivo en las siguientes circunstancias: * el usuario está usando el dispositivo por primera vez * el usuario ha deshabilitado anteriormente el proceso de calibración * el proceso de calibración no tuvo éxito el último hora en que el usuario usó el dispositivo
+
+Los desarrolladores deben asegurarse de proporcionar soporte técnico adecuado a los usuarios para los que es posible que los datos de seguimiento ocular no estén disponibles. Más información sobre las consideraciones sobre las soluciones de reserva en el [seguimiento de Hololens 2](eye-tracking.md).
+
+<br>
+
 ## <a name="see-also"></a>Consulta también
-* [Encabezado y el modelo de entrada de confirmación](gaze-and-commit.md)
-* [Miras a la vista de HoloLens 2](eye-tracking.md)
 * [Calibración](calibration.md)
 * [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)
-* [Entrada de voz en DirectX](voice-input-in-directx.md)
+* [Miras a la vista de HoloLens 2](eye-tracking.md)
+* [Miran y confirman el modelo de entrada](gaze-and-commit.md)
 * [Manos y controladores de movimiento en DirectX](hands-and-motion-controllers-in-directx.md)
+* [Entrada de voz en DirectX](voice-input-in-directx.md)
