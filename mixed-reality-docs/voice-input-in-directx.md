@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: tutorial, comando de voz, frase, reconocimiento, voz, DirectX, plataforma, Cortana, Windows Mixed Reality
-ms.openlocfilehash: be8c0e570a0e112e01b580ad571c06fe3482ff9f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0dcfaae13f763c9b8a06910f11558d2fd8e00276
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437193"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641084"
 ---
 # <a name="voice-input-in-directx"></a>Entrada de voz en DirectX
 
@@ -428,5 +428,4 @@ catch (Exception^ exception)
 
 ## <a name="see-also"></a>Consulta también
 * [Diseño de aplicaciones de voz](https://msdn.microsoft.com/library/dn596121.aspx)
-* [Sonido espacial en DirectX](spatial-sound-in-directx.md)
 * [Ejemplo de SpeechRecognitionAndSynthesis](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

@@ -1,111 +1,118 @@
 ---
-title: Diseño de sonido espacial
+title: Usar sonido en aplicaciones de realidad mixta
 description: El sonido espacial es una herramienta eficaz para la inmersión, accesibilidad y diseño de la experiencia del usuario en aplicaciones de realidad mixta.
-author: joekellyms
-ms.author: joekelly
-ms.date: 03/21/2018
+author: kegodin
+ms.author: kegodin
+ms.date: 11/02/2019
 ms.topic: article
 keywords: Windows Mixed Reality, sonido espacial, diseño, estilo
-ms.openlocfilehash: acc568eeb08d2a27574dcfbc9f132519e1e31843
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c069095808eaa9d31b1ffa41dbaa29c9f635837b
+ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438289"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73641064"
 ---
-# <a name="spatial-sound-design"></a>Diseño de sonido espacial
+# <a name="using-sound-in-mixed-reality-applications"></a>Usar sonido en aplicaciones de realidad mixta
 
-El sonido espacial es una herramienta eficaz para la inmersión, accesibilidad y diseño de la experiencia del usuario en aplicaciones de realidad mixta.
-
-Si alguna vez ha jugado el número de [marco](https://en.wikipedia.org/wiki/Marco_Polo_(game))o si alguien llama a su teléfono para ayudarle a encontrarlo, ya está familiarizado con la importancia del sonido espacial. Usamos señales sonoras en nuestras vidas diarias para buscar objetos, obtener la atención de un usuario u obtener una mejor comprensión de nuestro entorno. Cuanto más se comporta el sonido de la aplicación como lo hace en el mundo real, más convincente será el universo virtual.
+Use el sonido para informar y reforzar el modelo mental del usuario del estado de la aplicación. Use la espacialización, cuando corresponda, para colocar sonidos en el mundo mixto. La conexión del Auditor y el visual de esta manera profundiza en la naturaleza intuitiva de muchas interacciones y da lugar a una mayor confianza del usuario.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="device-support"></a>Compatibilidad con dispositivos
+## <a name="when-should-i-add-sounds"></a>¿Cuándo debo agregar sonidos?
+Las aplicaciones de realidad mixta suelen tener una mayor necesidad de sonidos que las aplicaciones en una pantalla 2D, debido a la falta de una interfaz física. Los sonidos deben agregarse cuando informan al usuario o refuerzan las interacciones.
 
-<table>
-    <colgroup>
-    <col width="33%" />
-    <col width="33%" />
-    <col width="33%" />
-    </colgroup>
-    <tr>
-        <td><strong>Ofrecen</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
-        <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
-    </tr>
-     <tr>
-        <td>Diseño de sonido espacial</td>
-        <td>✔️</td>
-        <td>✔️</td>
-    </tr>
-</table>
+### <a name="inform-and-reinforce"></a>Informar y reforzar
+* En el caso de los eventos no iniciados por el usuario, como las notificaciones, considere la posibilidad de agregar sonidos para informar al usuario de que se ha producido un cambio.
+* Las interacciones pueden tener varias fases. Considere la posibilidad de usar sonidos para reforzar las transiciones de fase.
+
+A continuación se muestran ejemplos de interacciones, eventos y características de sonido sugeridos.
+
+### <a name="exercise-restraint"></a>Retención de ejercicio
+Los usuarios no tienen una capacidad ilimitada para la información de audio:
+* Cada sonido debe comunicarse con datos valiosos específicos
+* Al reproducir sonidos diseñados para informar al usuario, reducir temporalmente el volumen de otros sonidos
+* En el caso de los sonidos de desplazamiento del botón (ver más abajo), agregue un retardo para evitar la activación excesiva de los sonidos
+
+### <a name="dont-rely-solely-on-sounds"></a>No confíe únicamente en sonidos
+Los sonidos que se usan bien serán valiosos cuando los usuarios puedan escucharlos, pero asegúrese de que la aplicación se pueda usar incluso con el sonido desactivado.
+* Los usuarios pueden tener dificultades auditivas
+* La aplicación se puede usar en un entorno de alta intensidad
+* Los usuarios pueden tener privacidad u otros motivos para deshabilitar el audio del dispositivo
+
+## <a name="how-should-i-sonify-interactions"></a>¿Cómo debo sonify interacciones?
+Los tipos de interacción en la realidad mixta incluyen gestos, manipulación directa y voz. Use las siguientes características sugeridas para seleccionar o diseñar sonidos para estas interacciones.
+
+### <a name="gesture-interactions"></a>Interacciones de gestos
+En realidad mixta, los usuarios pueden interactuar con los botones mediante un cursor. Normalmente, las acciones de botón se realizan cuando el usuario ha soltado el botón, en lugar de cuando se ha presionado, para permitir que el usuario cancele la interacción. Use sonidos para reforzar estas fases. Además, para ayudar a los usuarios a centrarse en botones distantes, considere la posibilidad de usar un sonido de desplazamiento del cursor.
+* Los sonidos de la pulsación de botones deben tener un clic corto y táctil. Ejemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* El botón despresionar sonidos debe tener una sensación similar. El hecho de tener un tono elevado frente al sonido de la prensa refuerza el sentido de la finalización. Ejemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* En el caso de los sonidos, considere la posibilidad de usar un sonido sutil y no amenazante, como un thud o golpe de baja frecuencia.
 
 
-## <a name="four-key-things-spatial-sound-does-for-mixed-reality-development"></a>Cuatro aspectos clave del sonido espacial para el desarrollo de la realidad mixta
+### <a name="direct-manipulation"></a>Manipulación directa
+En HoloLens 2, el seguimiento de mano articulado admite la manipulación directa de los elementos de la interfaz de usuario. Los sonidos son reemplazos importantes para la falta de comentarios físicos.
 
-De forma predeterminada, los sonidos se reproducen en estéreo. Esto significa que el sonido se reproducirá sin posición espacial, por lo que el usuario no sabe de dónde procede el sonido. El sonido espacial hace cuatro cosas clave para el desarrollo de la realidad mixta:
+Un sonido de **presionar un botón** es importante en la manipulación directa porque el usuario no tiene la indicación física de cuándo ha alcanzado la parte inferior del viaje de la clave. Los indicadores visuales de viajes clave pueden ser pequeños, sutiles y ocluidos. Al igual que con las interacciones de gestos, las pulsaciones de botón deben tener un sonido corto y táctil, como un clic, y las desimprentas deben tener un clic similar con un tono elevado.
+* Ejemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Ejemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
 
-**Tierra**
+La confirmación de una **captura** o **lanzamiento** en la manipulación directa es difícil de comunicarse visualmente. A menudo, la mano del usuario estará en la forma de cualquier efecto visual y los objetos de cuerpo rígido no tienen un aspecto visual del mundo real de "captación". En cambio, los sonidos pueden comunicar eficazmente las interacciones de captación y versión correctas.
+* Las acciones de captación deben tener un sonido de tacto corto y de un solo silenciado que confiere la idea de cerrar los dedos alrededor de un objeto. A veces, esto va acompañado de un sonido "whoosh" que conduce al impacto del sonido para comunicar el movimiento de la mano al captarla. Ejemplo: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* Las acciones de lanzamiento deben tener un sonido similar y de corta duración, que normalmente se han interrumpido del sonido de la toma y en un orden inverso en el tiempo, con un impacto y, a continuación, un "whoosh" para comunicar el objeto que se está deteniendo en su lugar. Ejemplo: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
-Sin sonido, los objetos virtuales dejan de existir de forma eficaz cuando se desactiva nuestra cabeza. Al igual que los objetos reales, se desea poder oír estos objetos incluso cuando no se pueden ver y se desea poder encontrarlos en cualquier lugar. Del mismo modo que los objetos virtuales deben basarse visualmente para combinarse con su mundo real, también deben estar en el nivel de forma audible. El sonido espacial combina sin problemas el entorno de audio del mundo real con el entorno de audio digital.
+Una interacción de **dibujo** debe tener un sonido persistente en bucle que tenga su volumen controlado por el movimiento de la mano del usuario, de modo que sea completamente silencioso cuando el usuario todavía esté disponible y en su volumen máximo cuando la mano del usuario se mueva rápidamente.
 
-**Atención del usuario**
 
-En el caso de las experiencias de realidad mixta, no puede asumir el lugar en el que está buscando el usuario y espera ver algo que usted coloca en el mundo visualmente. Sin embargo, los usuarios siempre pueden oír una reproducción de sonido incluso cuando el objeto que reproduce el sonido está detrás de ellos. Los usuarios se utilizan para que su atención se dibujen por sonido: instinctually buscar un objeto que nos encanta. Si desea dirigir la mirada de un usuario a un lugar determinado, en lugar de usar una flecha para apuntar visualmente, la colocación de un sonido en esa ubicación es una forma muy natural y rápida de guiarlos.
 
-**Profundidad**
+### <a name="voice-interactions"></a>Interacciones de voz
+A menudo, las interacciones de voz tienen elementos visuales sutiles. Refuerce las fases de interacción con sonidos. Considere la posibilidad de elegir más sonidos tonales para distinguirlos de los sonidos de manipulación y de gestos directos.
 
-Cuando los objetos se mueven o entran en conflicto, normalmente escuchan esas interacciones entre materiales. Por lo tanto, cuando los objetos no hacen el mismo sonido en el mundo real, se pierde un nivel de inmersión, como ver una película de miedo con el volumen todo el recorrido. Todos los sonidos del mundo real provienen de un punto determinado en el espacio: cuando se activan nuestros cabezales, se oye el cambio en el lugar en el que provienen esos sonidos con respecto a nuestros oídos, y podemos realizar un seguimiento de la ubicación de cualquier sonido de esta manera. Los sonidos espaciales componen la "sensación" de un lugar más allá de lo que podemos ver.
+* Use un tono de sonido positivo para las **confirmaciones**de comandos de voz. En este momento, los tonos que aumentan y los principales intervalos musicales son eficaces.
+* Use un tono de sonido más corto y menos positivo para el **error**de comando de voz. Evite sonidos negativos; en su lugar, use un sonido neutro más percussive para comunicar que la aplicación está pasando de la interacción.
+* Si la aplicación usa una palabra de reactivación, use un tono corto y suave cuando el dispositivo haya **empezado a escuchar**y un sonido de bucle sutil mientras la aplicación realiza escuchas. 
 
-**Diseño de interacción**
+### <a name="notifications"></a>Notificaciones
+Las notificaciones comunican los cambios de estado de la aplicación y otros eventos no iniciados por el usuario, como finalizaciones de procesos, mensajes y llamadas.
 
-En las experiencias interactivas más tradicionales, los sonidos de interacción como la interfaz de usuario se reproducen en mono o estéreo estándar. No obstante, dado que todo lo que hay en realidad está en el espacio 3D, incluida la interfaz de usuario, estos objetos se benefician de los sonidos espaciales. Cuando se presiona un botón en el mundo real, el sonido que se oye viene de ese botón. Mediante la espacialización de los sonidos de interacción, se proporciona una experiencia de usuario más natural y realista.
+En realidad mixta, los objetos que se mueven pueden salir del campo de vista del usuario. Acompañar **objetos animados** con un sonido espacial que dependa del objeto y la velocidad de movimiento.
+* También ayuda a reproducir un sonido espacial al final de una animación para informar al usuario de la nueva posición.
+* En el caso de movimientos graduales, un sonido "whoosh" durante el movimiento ayudará al usuario a realizar el seguimiento del objeto.
 
-## <a name="best-practices-when-using-spatial-sound"></a>Prácticas recomendadas al usar el sonido espacial
+Las **notificaciones de mensajes** probablemente se escucharán varias veces y, a veces, en una sucesión rápida. Es importante que no resalte ni suene demasiado intenso. Los sonidos tonales positivos de rango medio son efectivos aquí.
 
-**Los sonidos reales funcionan mejor que los sonidos sintetizados o no naturales**
+* Las llamadas deben tener calidades similares a las de un tono de teléfono móvil. Normalmente, suelen repetir frases musicales que se reproducen hasta que el usuario ha respondido a la llamada.
+* La conexión y desconexión de comunicación de voz deben tener un sonido corto y tonal. El sonido de conexión debe tener un tono positivo, que indica que la conexión se ha realizado correctamente, mientras que el sonido de desconexión debe ser un sonido neutro que indica la finalización de la llamada.
 
-Cuanto más familiar es el usuario con un tipo de sonido, más real se sentirá y cuanto más sencillo podrá encontrarlo en su entorno. Una voz humana, por ejemplo, es un tipo muy común de sonido y los usuarios la ubicarán tan pronto como una persona real en el salón hablando.
+## <a name="spatialization"></a>Espacialización
+La espacialización utiliza auriculares o altavoces estéreo para colocar sonidos en el mundo mixto.
 
-**La expectativa supera la simulación**
+### <a name="which-sounds-should-i-spatialize"></a>¿Qué sonidos debo espacialar?
+Un sonido debe ser espacial cuando está asociado a un evento que tiene una ubicación espacial. Esto incluye la interfaz de usuario, las voces de Ia incorporadas y los indicadores visuales.
 
-Si utiliza un sonido procedente de una dirección determinada, su atención se guiará en esa dirección independientemente de las indicaciones espaciales. Por ejemplo, la mayor parte del tiempo en el que escuchamos pájaros, están por encima de nosotros. La reproducción del sonido de un pájaro probablemente hará que el usuario realice una búsqueda, incluso si coloca el sonido por debajo de ellos. Esto suele ser confuso y se recomienda que trabaje con expectativas como estas en lugar de hacerlo para una experiencia más natural.
+La espacialización de los elementos de la **interfaz de usuario** ayuda a despejar el "espacio" de Sonic del usuario limitando el número de sonidos estéreo bloqueados a sus cabezas. Especialmente en las interacciones de manipulación directa, tocar, captar y soltar es más natural cuando se espacialen los comentarios de audio. Sin embargo, vea a continuación la atenuación de distancia de estos elementos.
 
-**La mayoría de los sonidos deben estar espaciales**
+La espacialización de **indicadores visuales** y la información sobre las voces de AI informa de forma intuitiva a los usuarios cuando están fuera del campo de la vista.
+    
+Por el contrario, evite la espacialización de voces de Ia sin **_caras_** y otros elementos sin una ubicación espacial bien definida. La espacialización sin un elemento visual relacionado puede distraer a los usuarios pensando que hay un elemento visual que no puede encontrar.
 
-Como se mencionó anteriormente, todo lo que se encuentra en Mixed Reality existe en el espacio 3D. Incluso la música a veces puede beneficiarse de la espacialización, especialmente cuando está asociada a un menú o a alguna otra interfaz de usuario.
+La adición de la espacialidad conlleva cierto costo de la CPU. Muchas aplicaciones tendrán, como máximo, dos sonidos que se reproducen simultáneamente. El costo de la espacialización en ese caso puede ser insignificante. Puede usar el monitor de velocidad de fotogramas de MRTK para juzgar el impacto de agregar la espacialización. 
 
-**Evitar emisores invisibles**
+### <a name="when-and-how-should-i-apply-distance-based-attenuation"></a>¿Cuándo y cómo se debe aplicar la atenuación basada en la distancia?
+En el mundo físico, los sonidos que están más lejos son más silenciosos. El motor de audio puede modelar esta atenuación en función de la distancia de origen. Use la atenuación basada en la distancia cuando comunique la información pertinente.
 
-Como nos hemos acondicionado para examinar los sonidos que nos oyen, puede ser una experiencia poco natural e incluso unnerving para localizar un sonido que no tenga ninguna presencia visual. Los sonidos del mundo real no provienen de un espacio vacío, por lo que debe asegurarse de que si se coloca un emisor de audio en el entorno inmediato del usuario, también puede verse.
+Las distancias a los **indicadores visuales**, los **hologramas animados**y otros sonidos informativos suelen ser relevantes para el usuario. Use la atenuación basada en la distancia para proporcionar esta indicación de manera intuitiva.
+* Ajuste la curva de atenuación de cada origen para ajustarse al tamaño de los espacios universales mixtos. La curva predeterminada del motor de audio suele estar pensada para espacios muy grandes (hasta el medio kilómetro).
 
-**Evitar el enmascaramiento espacial**
+Los sonidos que refuerzan las **fases progresivas de los botones** y otras interacciones no deben aplicar la atenuación. Los efectos de reforzamiento de estos sonidos suelen ser más importantes que la comunicación de la distancia con el botón. Las variaciones pueden distraerse, especialmente con los teclados, en los que muchos clics de botones se escucharán sucesivamente.
 
-El sonido espacial se basa en señales acústicas muy sutiles que pueden ser sobrealimentadas por otros sonidos. Si tiene música estéreo o sonidos ambientales, asegúrese de que son lo suficientemente bajas en la combinación para dar cabida a los detalles de los sonidos espaciales que permitirán a los usuarios encontrarlos fácilmente y mantenerlos más sólidos y naturales.
+### <a name="which-spatialization-technology-should-i-use"></a>¿Qué tecnología de espacialidad debo usar?
+Al usar auriculares o altavoces HoloLens, use tecnologías de espacialización basadas en HRTF (función de transferencia relacionada con el cabezal). Modelan la propagación de sonido en torno al cabezal del mundo físico. Incluso cuando un origen de sonido está lejos de un lado del cabezal, el sonido se propaga a la lengüeta distante con cierta atenuación y retraso. En cambio, el movimiento panorámico de los oradores solo se basa en la atenuación y aplica la atenuación total en el lengüeta izquierdo cuando los sonidos están en el lado derecho (y viceversa). Esto puede resultar incómodo para los agentes de escucha de audición normal y no accesible para los agentes de escucha con deficiencias auditivas en una lengüeta.
 
-## <a name="general-concepts-to-keep-in-mind-when-using-spatial-sound"></a>Conceptos generales que se deben tener en cuenta al usar el sonido espacial
+## <a name="next-steps"></a>Pasos siguientes
+* [Uso de sonido espacial en Unity](spatial-sound-in-unity.md)
+* [Caso práctico de Roboraid](case-study-using-spatial-sound-in-roboraid.md)
+* [Caso práctico de HoloTour](case-study-spatial-sound-design-for-holotour.md)
 
-**El sonido espacial es una simulación**
-
-El uso más frecuente del sonido espacial es que parece que es emanante de un objeto real o virtual del mundo. Por lo tanto, los sonidos espaciales pueden llegar a ser el más apropiado de estos objetos.
-
-Tenga en cuenta que la precisión percibida del sonido espacial significa que un sonido no debe emitir necesariamente desde el centro de un objeto, ya que la diferencia será apreciable en función del tamaño del objeto y de la distancia del usuario. Con los objetos pequeños, el punto central del objeto suele ser suficiente. En el caso de objetos grandes, puede que desee un emisor de sonido o varios emisores en la ubicación específica del objeto que se supone que está produciendo el sonido.
-
-**Normalizar todos los sonidos**
-
-La atenuación de distancia se produce rápidamente en el primer medidor del usuario, como en el mundo real. Todos los archivos de audio se deben normalizar para garantizar la atenuación física de la distancia y asegurarse de que se pueda oír un sonido cuando se encuentren varios medidores (cuando proceda). El motor de audio espacial controlará la atenuación necesaria para que un sonido "se sienta" como está a cierta distancia (con una combinación de atenuación e "indicaciones de distancia") y aplicar cualquier atenuación encima de eso podría reducir el efecto. Fuera de la simulación de un objeto real, es probable que la caída de la distancia inicial de los sonidos de *sonido espacial* sea lo suficientemente grande como para una combinación adecuada del audio.
-
-**Detección de objetos e interfaces de usuario**
-
-Al utilizar las señales de audio para dirigir la atención del usuario más allá de la vista actual, el sonido debe ser audible y destacado en la mezcla, por encima de los sonidos estéreo y de cualquier otro sonido espacial que pudiera distraerse de la señal de audio direccional. En el caso de los sonidos y la música que están asociados a un elemento de la interfaz de usuario (por ejemplo, un menú), el emisor de sonido se debe adjuntar a ese objeto. El sonido estéreo y otra reproducción de audio no posicional pueden dificultar la búsqueda de elementos espaciales (vea más arriba: evitar el enmascaramiento espacial).
-
-**Usar el sonido espacial sobre el sonido 3D estándar lo máximo posible**
-
-En la realidad mixta, para obtener la mejor experiencia de usuario, el audio 3D se debe lograr utilizando un sonido espacial en lugar de tecnologías de audio 3D heredadas. En general, la espacialización mejorada merece la pena el pequeño costo de la CPU en comparación con el sonido 3D estándar. El audio 3D estándar se puede usar para sonidos de baja prioridad, sonidos que están espaciales pero no necesariamente asociados a un objeto físico o virtual, y objetos que el usuario nunca necesita buscar para interactuar con la aplicación.
-
-## <a name="see-also"></a>Consulta también
-* [Sonido espacial](spatial-sound.md)
-* [Asignación espacial](spatial-mapping.md)
