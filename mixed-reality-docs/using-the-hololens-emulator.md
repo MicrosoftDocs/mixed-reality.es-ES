@@ -1,18 +1,18 @@
 ---
 title: Uso del emulador de HoloLens
-description: El emulador de HoloLens permite probar aplicaciones de realidad mixta en el PC sin un dispositivo HoloLens físico.
+description: Uso del emulador de HoloLens para probar aplicaciones de realidad mixta en el equipo sin un dispositivo HoloLens físico.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 08/14/2019
+ms.date: 09/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulator
-ms.openlocfilehash: 6c112b7706f1dfff7c4affbdb4ee7326f0e15c8a
-ms.sourcegitcommit: 06c27acdac24c845952f9c1d3611770756f25820
+ms.openlocfilehash: 455abfabede5bc1e646bd273afa09068feb886a1
+ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69030174"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73437359"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso del emulador de HoloLens
 
@@ -25,7 +25,7 @@ Si buscas desarrollar aplicaciones para cascos envolventes (VR) de Windows Mixed
 Descargue el emulador HoloLens.
 
 Versiones: 
-* [Emulador HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2101019).
+* [Emulador de HoloLens 2 (actualización de octubre de 2019)](https://go.microsoft.com/fwlink/?linkid=2106649).
 * [Emulador de HoloLens (Gen 1) y plantillas de proyecto holográficas](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Puedes encontrar compilaciones anteriores del emulador de HoloLens en la página [Archivo de emulador de HoloLens](hololens-emulator-archive.md).
@@ -40,7 +40,7 @@ El emulador de HoloLens usa Hyper-V con RemoteFx (emulador de Gen 1) o GPU-PV (e
 * CPU de 64 bits
 * CPU con 4 núcleos (o varias CPU con un total de 4 núcleos)
 * 8 GB de RAM o más
-* En el BIOS, las características siguientes deben estar [admitidas y habilitadas](http://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx):
+* En el BIOS, las características siguientes deben estar [admitidas y habilitadas](https://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx):
    * Virtualización asistida por hardware
    * Traducción de direcciones de segundo nivel (SLAT)
    * Prevención de ejecución de datos basada en hardware (DEP)
@@ -57,17 +57,17 @@ Si tu sistema cumple los requisitos indicados anteriormente, **asegúrate de que
 1. Carga la solución de aplicación en Visual Studio.
     >[!NOTE]
     >Al usar Unity, compila el proyecto desde Unity y, luego, carga la solución compilada en Visual Studio como de costumbre.
-2. Para el emulador de HoloLens (Gen 1), asegúrate de que la plataforma esté establecida en **x86**. Para el emulador de HoloLens 2, asegúrate de que la plataforma esté establecida en **x86** o **x64**.
+2. Para el emulador de HoloLens (1ª generación), asegúrate de que la plataforma esté establecida en **x86**. Para el emulador de HoloLens 2, asegúrate de que la plataforma esté establecida en **x86** o **x64**.
 3. Selecciona la versión de **emulador de HoloLens** deseada como dispositivo de destino para la depuración.
 4. Dirígete a **Depurar > Iniciar depuración** o presiona **F5** para iniciar el emulador e implementar la aplicación para la depuración.
 
-El emulador puede tardar un minuto o más en arrancar la primera vez que se inicia. Se recomienda mantener el emulador abierto durante la sesión de depuración para poder implementar rápidamente las aplicaciones en él.
+El emulador puede tardar un minuto o más en arrancar la primera vez que se inicia. Se recomienda mantener el emulador abierto durante la sesión de depuración para poder implementar rápidamente en él las aplicaciones.
 
 ## <a name="basic-emulator-input"></a>Entrada básica del emulador
 
 Controlar el emulador es muy parecido a muchos videojuegos 3D comunes. Hay opciones de entrada disponibles para usar el teclado, el mouse o el mando de Xbox. Para controlar el emulador, se dirigen las acciones de un usuario simulado que lleva un dispositivo HoloLens. Tus acciones desplazan el usuario simulado por el entorno. Las aplicaciones que se ejecutan en el emulador responden como lo harían en un dispositivo real.
 
-El cursor en HoloLens (Gen 1) sigue el movimiento y el giro de la cabeza. En el emulador de HoloLens 2, el cursor sigue el movimiento y la orientación de las manos.
+El cursor en HoloLens (1ª generación) sigue el movimiento y el giro de la cabeza. En el emulador de HoloLens 2, el cursor sigue el movimiento y la orientación de las manos.
 
 * **Andar hacia delante, hacia atrás, a la izquierda y a la derecha**: usa las teclas W, A, S y D del teclado o el stick izquierdo en un mando de Xbox.
 * **Mirar hacia arriba, hacia abajo, a la izquierda y a la derecha**: haz clic y arrastra el mouse, usa las teclas de dirección del teclado o el stick derecho en un mando de Xbox.
@@ -92,11 +92,11 @@ A la derecha de la ventana principal, se encuentra la barra de herramientas del 
 * ![Icono Zoom](images/emulator-zoom.png) **Zoom**: aumenta o reduce el emulador.
 * ![Icono Ayuda](images/emulator-help.png) **Ayuda**: abre la Ayuda del emulador.
 * ![Icono Abrir portal de dispositivos](images/emulator-deviceportal.png) **Abrir portal de dispositivos**: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.
-* ![Icono Herramientas](images/emulator-tools.png) **Herramientas**: abre el panel **Additional Tools** (Herramientas adicionales).
+* ![Icono Herramientas](images/emulator-tools.png) **Herramientas**: abre el panel **Herramientas adicionales**.
 
 ### <a name="simulation-control-panel"></a>Panel de control de simulación
 
-El panel de control de simulación permite ver la posición y la orientación actuales del humano y los dispositivos de entrada simulados. También permite configurar la entrada simulada, como mostrar u ocultar una o ambas manos, y los dispositivos usados para controlar la entrada simulada, como el teclado o el mouse del equipo o el controlador para juegos.
+El panel de control Simulación permite ver la posición y la orientación actuales del ser humano y los dispositivos de entrada simulados. También permite configurar la entrada simulada, como mostrar u ocultar una o ambas manos, y los dispositivos usados para controlar la entrada simulada, como el teclado o el mouse del equipo o el controlador para juegos.
 
 ![Panel de control de simulación](images/emulator-simulation-control-panel.png)
 
@@ -104,29 +104,65 @@ El panel de control de simulación permite ver la posición y la orientación ac
 * Mantén el puntero del mouse sobre un control o un campo para mostrar información sobre los controles de teclado, mouse y controlador para juegos de dicho control o campo.
 * Para mostrar u ocultar una mano, activa o desactiva el conmutador adecuado de mano izquierda o mano derecha.
 * Para controlar la mano, usa la tecla Alt izquierda o derecha del teclado o el gatillo izquierdo o derecho del controlador para juegos.
-* Para dirigir toda la entrada a una o ambas manos, haz clic en el botón de chincheta debajo del conmutador para alternar.  Esto es equivalente a mantener presionada la tecla Alt para la mano.
+* Para dirigir toda la entrada a una o ambas manos, haz clic en el botón de chincheta debajo del conmutador para alternar. Esto es equivalente a mantener presionada la tecla Alt para la mano.
 * Para controlar la dirección de la mirada con los ojos, haz clic en la chincheta en la sección Eyes (Ojos). Esto es equivalente a mantener presionada la tecla Y en el teclado.
 * Para cargar una grabación de habitación, haz clic en el botón "Load" (Cargar) en la sección "Recording" (Grabación). Para más información, consulta [Habitaciones simuladas](#simulated-rooms).
 * Para ajustar la velocidad a la que el humano o los dispositivos de entrada simulados se moverán o girarán en respuesta a una entrada del teclado, mouse o controlador para juegos, haz clic en el icono de engranaje junto a "Input settings" (Configuración de entrada) y ajusta los controles deslizantes.
-* De forma predeterminada, la entrada del teclado controla el humano simulado y la entrada simulada. Para que la entrada del teclado del equipo se envíe a HoloLens, desactiva la opción "Use keyboard for simulation" (Usar el teclado para la simulación).  F4 es la tecla de método abreviado para esta configuración.
+* De forma predeterminada, la entrada del teclado controla el humano simulado y la entrada simulada. Para que la entrada del teclado del equipo se envíe a HoloLens, desactiva la opción "Use keyboard for simulation" (Usar el teclado para la simulación). F4 es la tecla de método abreviado para esta configuración.
 * Si el panel de simulación ya está visible, al presionar F8 el foco del teclado se moverá a este.
 * Para desacoplar el panel de simulación de la ventana del emulador, haz clic en el botón de la parte inferior del panel o presiona F9 en el teclado.  Al cerrar la ventana o presionar de nuevo F9, se vuelve a la ventana del emulador.
 * El panel de control de simulación se puede iniciar como una aplicación independiente, que permite conectarse al emulador de HoloLens 2, un dispositivo de HoloLens 2 o una simulación de Windows Mixed Reality, y controlarlos, mediante la ejecución de PerceptionSimulationInput.exe desde %ProgramFiles(x86)%\Windows Kits\10\Microsoft XDE\10.0.18362.0\.
 
-### <a name="account-tab"></a>ficha Cuenta
+### <a name="account-tab"></a>Pestaña Cuenta
 
 La pestaña Account (Cuenta) permite configurar el emulador para iniciar sesión con una cuenta Microsoft. Es útil para probar las API que requieren que el inicio de sesión del usuario se realice con una cuenta. Para activar o desactivar esta opción, es necesario cerrar completamente y reiniciar el emulador de HoloLens para que la configuración surta efecto. Si esta opción está habilitada, en los posteriores inicios del emulador se te solicitará que inicies sesión, igual que cuando un usuario inicia por primera vez HoloLens. Para escribir las credenciales con el teclado del equipo, primero desactiva "Use keyboard for simulation" (Usar el teclado para la simulación) en el panel de control de simulación o presiona F4 en el teclado para activar o desactivar la configuración de teclado.
 
-### <a name="optional-settings-tab"></a>Pestaña de configuraciones opcional
+### <a name="optional-settings-tab"></a>Pestaña Configuración opcional
 
-La pestaña Optional Settings (Configuración opcional) muestra un control para habilitar o deshabilitar los gráficos acelerados de hardware. Los gráficos acelerados de hardware se usan de forma predeterminada si son compatibles con el controlador del adaptador de gráficos del equipo. Si el controlador del adaptador de gráficos no es compatible con GPU PV, esta opción no estará visible.
+En la pestaña Configuración opcional se muestra un control para habilitar o deshabilitar los gráficos acelerados de hardware. Los gráficos acelerados de hardware se usan de forma predeterminada, si son compatibles con el controlador del adaptador de gráficos del equipo. Si el controlador del adaptador de gráficos no es compatible con GPU PV, esta opción no estará visible.
 
-### <a name="diagnostics-tab"></a>Pestaña de diagnóstico
+### <a name="diagnostics-tab"></a>Pestaña Diagnóstico
 
 La pestaña Diagnostics (Diagnóstico) muestra la dirección IP del emulador en forma de un vínculo al Portal de dispositivos Windows junto con el estado de la GPU virtual.
 
+### <a name="network-tab"></a>Pestaña Red
 
-## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>Anatomía del emulador de HoloLens (Gen 1)
+En la pestaña Red se muestran los detalles del adaptador de red para el emulador, así como los detalles del adaptador de red para el equipo host. Ten en cuenta que, para el emulador de HoloLens 2, esta pestaña solo aparecerá al ejecutar el emulador en la Actualización de mayo de 2019 de Windows 10 o en una versión más reciente.
+
+### <a name="nat-configuration-tab"></a>Pestaña Configuración de NAT
+
+Esta pestaña solo aparecerá al ejecutar el emulador en la Actualización de mayo de 2019 de Windows 10 o en una versión más reciente.
+
+El emulador usa la conexión de red de tu PC y se asienta detrás de un NAT.  Esta pestaña te permite asignar puertos de tu PC host al emulador, lo que posibilita que dispositivos remotos se conecten a aplicaciones y servicios que se ejecutan en el emulador.
+
+Por ejemplo, si quieres acceder al Portal de dispositivos del emulador desde un equipo remoto:
+
+1. Agrega una entrada para el puerto 80 interno (el puerto en el que el Portal de dispositivos escucha) haciendo doble clic en una fila vacía de la tabla.  Para otras aplicaciones, escribe el número de puerto en el que la aplicación escucha.
+2. Elige cualquier puerto externo disponible.  En este ejemplo, usaremos el puerto 8080 como puerto externo.
+3. Selecciona el protocolo.  El valor predeterminado es TCP.  Dado que el Portal de dispositivos usa TCP, dejaremos el valor predeterminado.
+4. Haz clic en "Aplicar cambios" para habilitar la asignación.  "Estado" cambiará de "Pendiente" a "Activo".
+5. En el equipo remoto, abre un explorador y navega a (IP del equipo que ejecuta el emulador): 8080.  Aparecerá la interfaz del Portal de dispositivos.  Ten en cuenta que la dirección IP que uses en un equipo remoto debe ser la dirección IP del equipo en el que se ejecuta el emulador, no la del propio emulador.  Puedes recuperar la dirección IP a través de varios medios, como la aplicación de configuración del equipo en la categoría "Redes e Internet", "ipconfig" desde un símbolo del sistema y desde la pestaña Red del cuadro de diálogo de herramientas del emulador si buscas la entrada del adaptador de escritorio.
+
+Ten en cuenta también que, si agregas una asignación de puerto para el Portal de dispositivos, puedes controlar el emulador de forma remota mediante la herramienta de control de simulación de percepción incluida en la instalación del emulador o con las API de simulación de percepción conectándote a la dirección IP del equipo host y el puerto externo del Portal de dispositivos, como 8080 en el ejemplo anterior.  Al usar el control de simulación de percepción para conectarte y controlar el emulador de forma remota, especifica solo la dirección IP del equipo y el puerto configurado.  No incluyas "https://".
+
+No hay asignaciones de puerto predeterminadas.  Las asignaciones que configures serán persistentes entre inicios del emulador de HoloLens 2 y se habilitarán automáticamente cuando el emulador se haya arrancado por completo.
+
+Usa el botón "Exportar" para guardar las asignaciones en un archivo.  Después, puedes compartir este archivo con otros miembros del equipo que pueden usar el botón "Importar" para configurar automáticamente las mismas asignaciones.
+
+![Pestaña "Configuración de NAT" del emulador de HoloLens](images/emulator-natconfig-500px.png)
+
+### <a name="updates-tab"></a>Pestaña Actualizaciones
+
+Esta pestaña solo aparecerá al ejecutar el emulador en la Actualización de mayo de 2019 de Windows 10 o en una versión más reciente.
+
+En el inicio, el emulador comprobará si hay nuevas versiones.  Si está disponible una nueva versión, el emulador mostrará un mensaje que indicará la versión que tienes, junto con la versión disponible y preguntará si quieres actualizarla.  Si seleccionas "Sí", se descargará el instalador de la nueva versión.
+
+La pestaña Actualizaciones te permite controlar si el emulador debe comprobar o no las nuevas versiones activando la casilla "Buscar actualizaciones automáticamente" en esta pestaña.  También te permite ver y descargar otras versiones del emulador disponibles, a partir de la actualización de septiembre de 2019.  En el caso de versiones distintas de la que se está ejecutando actualmente, se proporciona un vínculo de descarga.  Al hacer clic en este vínculo, se descargará el instalador de esa versión.
+
+![Pestaña "Actualizaciones" del emulador de HoloLens](images/emulator-updates-500px.png)
+
+
+## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>Anatomía del emulador de HoloLens (1ª generación)
 
 ### <a name="main-window"></a>Ventana principal
 
@@ -141,17 +177,17 @@ A la derecha de la ventana principal, encontrarás la barra de herramientas del 
 * ![Icono Minimizar](images/emulator-minimize.png) **Minimizar**: minimiza la ventana del emulador.
 * ![Icono de entrada humana](images/emulator-control.png) **Entrada humana**: se usan el mouse y el teclado para simular la [entrada humana al emulador](#basic-emulator-input).
 * ![Icono de entrada de teclado y mouse](images/emulator-input.png) **Entrada de teclado y mouse**: la entrada de teclado y mouse se pasa directamente al sistema operativo de HoloLens como eventos de teclado y mouse, como si estuvieras conectado a un teclado y un mouse por Bluetooth.
-* ![Icono ajustar a la pantalla](images/emulator-fit.png) **Ajustar a la pantalla**: ajusta el emulador a la pantalla.
+* ![Icono Ajustar a la pantalla](images/emulator-fit.png) **Ajustar a la pantalla**: ajusta el emulador a la pantalla.
 * ![Icono Zoom](images/emulator-zoom.png) **Zoom**: aumenta o reduce el emulador.
 * ![Icono Ayuda](images/emulator-help.png) **Ayuda**: abre la Ayuda del emulador.
 * ![Icono Abrir portal de dispositivos](images/emulator-deviceportal.png) **Abrir portal de dispositivos**: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.
-* ![Icono Herramientas](images/emulator-tools.png) **Herramientas**: abre el panel **Additional Tools** (Herramientas adicionales).
+* ![Icono Herramientas](images/emulator-tools.png) **Herramientas**: abre el panel **Herramientas adicionales**.
 
 ### <a name="simulation-tab"></a>Pestaña de simulación
 
-La pestaña predeterminada dentro del panel **Additional Tools** (Herramientas adicionales) es la pestaña **Simulation** (Simulación).
+La pestaña predeterminada dentro del panel **Herramientas adicionales** es la pestaña **Simulación**.
 
-![Panel de herramientas adicionales del emulador de HoloLens](images/emulator-simulation-500px.png)
+![Panel "Herramientas adicionales" del emulador de HoloLens](images/emulator-simulation-500px.png)
 
 La pestaña Simulation (Simulación) muestra el estado actual de los sensores simulados usados para controlar el sistema operativo de HoloLens dentro del emulador. Al mantener el puntero del mouse sobre cualquier valor de esta pestaña, se proporciona información sobre herramientas que describe cómo controlar ese valor.
 
@@ -163,7 +199,7 @@ El emulador simula una entrada del mundo real en forma de una malla de asignaci�
 
 Para más información, consulta [Habitaciones simuladas](#simulated-rooms).
 
-### <a name="account-tab"></a>ficha Cuenta
+### <a name="account-tab"></a>Pestaña Cuenta
 
 La pestaña Account (Cuenta) permite configurar el emulador para iniciar sesión con una cuenta Microsoft. Esto es útil para probar las API que requieren que el inicio de sesión del usuario se realice con una cuenta. Después de activar la casilla de esta página, en los posteriores inicios del emulador se te solicitará que inicies sesión, igual que cuando se inicia HoloLens por primera vez.
 
@@ -176,13 +212,13 @@ Las habitaciones simuladas son útiles para probar la aplicación en varios ento
 * **GreatRoom.xef**: una habitación grande de espacios abiertos con salón, mesa de comedor y cocina.
 * **LivingRoom.xef**: un salón con chimenea, sofá, sillones y una mesita baja con un jarrón.
 
-También puedes grabar tus propias habitaciones para usar en el emulador mediante la página Simulation (Simulación) del [Portal de dispositivos Windows](using-the-windows-device-portal.md) de tu dispositivo HoloLens (Gen 1).
+También puedes grabar tus propias habitaciones para usar en el emulador mediante la página Simulación del [Portal de dispositivos Windows](using-the-windows-device-portal.md) de tu dispositivo HoloLens (1ª generación).
 
-En el emulador, solo verás los hologramas que representes. Sin embargo, no verás la habitación simulada detrás de los hologramas. Esto es diferente del dispositivo HoloLens real, donde puedes ver que ambos se fusionan. Si quieres ver la habitación simulada en el emulador de HoloLens, deberás actualizar la aplicación para representar la malla de asignación espacial en la escena.
+En el emulador, solo verás los hologramas que representes. Sin embargo, no verás la habitación simulada detrás de los hologramas. Esto es diferente del dispositivo HoloLens real, donde puedes ver que ambos se fusionan. Si quieres ver la habitación simulada en el emulador de HoloLens, debes actualizar la aplicación para representar la malla de asignación espacial en la escena.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Puede que al instalar el emulador recibas un error que indica que necesitas *"Visual Studio 2015 Update 1 y las herramientas de UWP, versión 1.2"* . Hay tres posibles causas de este error:
+Puede que al instalar el emulador recibas un mensaje de error, que indica que necesitas *"Visual Studio 2015 Update 1 y UWP Tools versión 1.2"* . Hay tres posibles causas de este error:
 * No tienes una versión de Visual Studio lo bastante reciente (Visual Studio 2019, Visual Studio 2017 o Visual Studio 2015 Update 1 o posterior). Para corregir este problema, instala la versión más reciente de Visual Studio.
 * Tienes una versión reciente de Visual Studio, pero no tienes instaladas las herramientas de la Plataforma universal de Windows (UWP). Esta es una característica opcional de Visual Studio.
 
@@ -190,8 +226,8 @@ Puede que también recibas un error al instalar el emulador en una SKU de Window
 * Lee la sección [Requisitos del sistema](#hololens-emulator-system-requirements) anterior para conocer el conjunto completo de requisitos.
 * Asegúrate también de que la característica Hyper-V se haya habilitado en el sistema.
 
-Si la instalación se completa correctamente, pero no te aparece el emulador de HoloLens como una opción para implementar y depurar, comprueba lo siguiente:
-* La configuración del proyecto de Visual Studio está establecida en x86 (HoloLens Gen 1) o en x86 o x64 (emulador de HoloLens 2).
+Si la instalación se completa correctamente, pero no aparece el emulador de HoloLens como una opción para implementar y depurar, comprueba lo siguiente:
+* La configuración del proyecto de Visual Studio está establecida en x86 (HoloLens 1ª generación) o en x86 o x64 (emulador de HoloLens 2).
 * Si usas Visual Studio 2019, el conjunto de herramientas de plataforma en la configuración del proyecto está establecido en v142.
 
 Si la instalación se completa correctamente, pero Visual Studio muestra un error al intentar iniciar el emulador de HoloLens, prueba lo siguiente:
