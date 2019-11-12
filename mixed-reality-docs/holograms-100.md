@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, inmersivo, VR, Mr, introducción, holograma, Academia, tutorial
-ms.openlocfilehash: 5e9a90af6b80333addbde2a2e11086372483b7c3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434775"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926640"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
@@ -156,7 +156,7 @@ Ahora que hemos creado el cubo, es el momento de realizar una comprobación ráp
 ### <a name="initial-setup"></a>Configuración inicial
 
 1. En el equipo de desarrollo, en Unity, Abra **archivo >** ventana de configuración de compilación.
-2. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar Platform**
+2. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**
 
 ### <a name="for-hololens-use-unity-remoting"></a>Para HoloLens, use Unity Remoting
 

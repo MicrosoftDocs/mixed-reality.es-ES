@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, machine learning, ml, machine learning Studio, hololens, envolventes, VR
-ms.openlocfilehash: c86c592573dd39d926869d8cce6025fa264cc90f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e302e287049cd746a436904c2af2bcc2b0835796
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437925"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926616"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -410,7 +410,7 @@ Para importar este paquete:
 
     ![Importación del paquete Unity de MLProducts](images/AzureLabs-Lab7-41.png)
 
-5.  En la carpeta **panel del proyecto** , haga clic en la carpeta **Scenes** y haga doble clic en la escena dentro de (llamada **MR_MachineLearningScene**). La escena se abrirá (consulte la imagen siguiente). Si faltan los rombos rojos, simplemente haga clic en el botón **Gizmos** , en la parte superior derecha del **Panel de juego**.
+5.  Dentro de la carpeta **panel del proyecto** , haga clic en la carpeta **escenas** y haga doble clic en la escena dentro de (llamado **MR_MachineLearningScene**). La escena se abrirá (consulte la imagen siguiente). Si faltan los rombos rojos, simplemente haga clic en el botón **Gizmos** , en la parte superior derecha del **Panel de juego**.
 
     ![Importación del paquete Unity de MLProducts](images/AzureLabs-Lab7-44.png)
 
@@ -731,7 +731,7 @@ Para crear esta clase:
 
             Debug.LogFormat("Score request built");
 
-            // Serialise the request
+            // Serialize the request
             string json = JsonConvert.SerializeObject(ro);
 
             using (UnityWebRequest www = UnityWebRequest.Post(serviceEndpoint, "POST"))
@@ -849,7 +849,7 @@ Para implementar la aplicación:
 
 1.  Vaya a la nueva compilación de Unity (la carpeta de la **aplicación** ) y abra el archivo de solución con **Visual Studio**.
 
-2.  Con Visual Studio abierto, debe restaurar los paquetes NuGet, que se pueden realizar a través del clic con el botón derecho en la solución MachineLearningLab_Build, desde el Explorador de soluciones (que se encuentra a la derecha de Visual Studio) y, a continuación, haciendo clic en restaurar paquetes NuGet:
+2.  Con Visual Studio abierto, debe restaurar los paquetes NuGet, lo que se puede hacer al hacer clic con el botón derecho en la solución de MachineLearningLab_Build, desde el Explorador de soluciones (que se encuentra a la derecha de Visual Studio) y, a continuación, hacer clic en restaurar paquetes NuGet:
 
     ![Agregar paquetes NuGet](images/AzureLabs-Lab7-57.png)
 

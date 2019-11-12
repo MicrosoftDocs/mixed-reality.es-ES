@@ -6,12 +6,12 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: a862fa52695c7bfb94b58c6c0b85606a112835da
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2861c780c5d7e516d5b7ddc757bbcba6da7e6559
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434275"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926668"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>Canales de datos personalizados de Holographic Remoting
 
@@ -38,7 +38,7 @@ winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnDataReceived_revoker
 winrt::Microsoft::Holographic::AppRemoting::IDataChannel::OnClosed_revoker m_customChannelClosedEventRevoker;
 ```
 
-Una vez establecida correctamente una conexión, la creación de nuevos canales de datos se puede iniciar desde el lado del host y/o el jugador. Tanto RemoteContext como PlayerContext proporcionan un método ```CreateDataChannel()``` para hacerlo. El primer parámetro es el identificador de canal que se usa para identificar el canal de datos en las operaciones de susequent. El segundo parámetro es la prioridad que especifica la prioridad con la que se transfieren los datos de este canal al otro lado. El intervalo válido para los ID. de canal es 0 hasta 63 para el lado del host y 64 hasta la 127 para el jugador incluido. Las prioridades válidas son ```Low```, ```Medium``` o ```High``` (en ambos lados).
+Una vez establecida correctamente una conexión, la creación de nuevos canales de datos se puede iniciar desde el lado del host y/o el jugador. Tanto RemoteContext como PlayerContext proporcionan un método ```CreateDataChannel()``` para hacerlo. El primer parámetro es el identificador de canal que se utiliza para identificar el canal de datos en operaciones posteriores. El segundo parámetro es la prioridad que especifica la prioridad con la que se transfieren los datos de este canal al otro lado. El intervalo válido para los ID. de canal es 0 hasta 63 para el lado del host y 64 hasta la 127 para el jugador incluido. Las prioridades válidas son ```Low```, ```Medium``` o ```High``` (en ambos lados).
 
 Para iniciar la creación de un canal de datos en el lado **host** :
 ```cpp
@@ -95,7 +95,7 @@ m_customChannelClosedEventRevoker = m_customDataChannel.OnClosed(winrt::auto_rev
 
 ## <a name="sending-data"></a>Envío de datos
 
-Para enviar datos a través de un canal de datos personalizado, use el método ```IDataChannel::SendData()```. El primer parámetro es una ```winrt::array_view<const uint8_t>``` a los datos que se deben enviar. El segundo parámetro especifica si se deben volver a enviar los datos, hasta que el otro lado confirme la recepción. 
+Para enviar datos a través de un canal de datos personalizado, use el método ```IDataChannel::SendData()```. El primer parámetro es una ```winrt::array_view<const uint8_t>``` a los datos que se deben enviar. El segundo parámetro especifica dónde se deben volver a enviar los datos, hasta que el otro lado confirme la recepción. 
 
 >[!IMPORTANT]
 >En caso de condiciones de red erróneas, el mismo paquete de datos podría llegar más de una vez. El código receptor debe ser capaz de controlar esta situación.

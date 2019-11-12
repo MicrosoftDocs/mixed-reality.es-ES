@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 04/06/2019
 ms.topic: article
 keywords: Realidad, presentación, calendario, Academia, programación, SF, San Francisco, reactor
-ms.openlocfilehash: ebecfa59d1c1b60ba7f3bf546816ed33b4910ad7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a7cecd4dcce63afb17c3f6d26596c138490f0181
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438323"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926845"
 ---
 # <a name="the-realities-show"></a>Los hechos que se muestran
 ![Diseño para realidad mixta](images/therealitiesshow.jpg)
@@ -31,11 +31,11 @@ Este episodio se refiere a la comprensión humana: interacciones cercanas, inter
 
 ___
 ## <a name="world-understanding---coming-soon"></a>**Conocimientos del mundo** : próximamente
-Cómo los dispositivos perimetrales inteligentes leveredge la capacidad de proceso de la nube para comprender el mundo. Incluye HoloLens 2, Computer Vision, el servicio de delimitador compartido, el etiquetado semántico y Azure Kinect DK.
+Cómo los dispositivos perimetrales inteligentes aprovechan la capacidad de proceso de la nube para comprender el mundo. Incluye HoloLens 2, Computer Vision, el servicio de delimitador compartido, el etiquetado semántico y Azure Kinect DK.
 
 ___
 ## <a name="mixedrealitytoolkit---coming-soon"></a>**MixedRealityToolkit** : próximamente
-MixedRealityToolkit (MRTK) proporciona un conjunto de componentes y características fundamentales para acelerar el desarrollo de aplicaciones MR. La versión más reciente de MRTK-Unity (V2) es compatible con las plataformas HoloLens/HoloLens 2, Windows Mixed Reality y OpenVR. Vamos a profundizar en el endineers y los diseñadores que se encuentran detrás.
+MixedRealityToolkit (MRTK) proporciona un conjunto de componentes y características fundamentales para acelerar el desarrollo de aplicaciones MR. La versión más reciente de MRTK-Unity (V2) es compatible con las plataformas HoloLens/HoloLens 2, Windows Mixed Reality y OpenVR. Vamos a profundizar en los ingenieros y diseñadores que lo respaldan.
 
 ___
 ## <a name="designing-for-hololens-2---coming-soon"></a>**Diseño para HoloLens 2** : próximamente

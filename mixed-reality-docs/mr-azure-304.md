@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, reconocimiento facial, hololens, envolventes, VR
-ms.openlocfilehash: ef75be5485f85538eb8b3db3eebec63b166f7aa3
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 23676684c2ec325f9d6f1924e7a0bad14d41f13e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438496"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926790"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -575,7 +575,7 @@ Para crear la clase *FaceAnalysis* :
             facesToIdentify.maxNumOfCandidatesReturned = 1;
             facesToIdentify.confidenceThreshold = 0.5;
 
-            // Serialise to Json format
+            // Serialize to Json format
             string facesToIdentifyJson = JsonConvert.SerializeObject(facesToIdentify);
             // Change the object into a bytes array
             byte[] facesData = Encoding.UTF8.GetBytes(facesToIdentifyJson);
@@ -769,7 +769,7 @@ Para crear la clase *ImageCapture* :
         }
 
         /// <summary>
-        /// Register the full execution of the Photo Capture. If successfull, it will begin the Image Analysis process.
+        /// Register the full execution of the Photo Capture. If successful, it will begin the Image Analysis process.
         /// </summary>
         void OnStoppedPhotoMode(PhotoCapture.PhotoCaptureResult result)
         {
@@ -809,7 +809,7 @@ Para comenzar el proceso de compilación:
 
     ![Implemente la solución desde Visual Studio.](images/AzureLabs-Lab4-25.png)
 
-7.  Abra la carpeta de la aplicación y, a continuación, abra la solución del nuevo proyecto (como se mostró anteriormente, MR_FaceRecognition. sln).
+7.  Abra la carpeta de la aplicación y, a continuación, abra la solución nuevo proyecto (como se ha indicado anteriormente, MR_FaceRecognition. sln).
 
 
 ## <a name="chapter-9---deploying-your-application"></a>Capítulo 9: implementación de la aplicación

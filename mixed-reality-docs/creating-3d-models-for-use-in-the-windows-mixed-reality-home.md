@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modelado, guía de modelado, requisitos de recursos, directrices de creación, iniciador, selector 3D, textura, materiales, complejidad, triángulos, malla, polígonos, polinúmero, límites
-ms.openlocfilehash: 73af40cf2915742cab612625c8243a36ee74d748
-ms.sourcegitcommit: f20beea6a539d04e1d1fc98116f7601137eebebe
+ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692286"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926579"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Crear modelos 3D para su uso en el hogar
 
@@ -60,14 +60,14 @@ La Página principal de Windows Mixed Reality no admite modelos con más de 10.0
 ### <a name="node-counts-and-submesh-limits"></a>Recuentos de nodos y límites de submallas
 La Página principal de Windows Mixed Reality no admite modelos con más de 64 nodos o submallas 32 por LOD. Los nodos son un concepto de la [especificación glTF](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) que define los objetos de la escena. Las submallas se definen en la matriz de [primitivas](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) de la malla en el objeto. 
 
-|  Característica |  Descripción  |  Compatibilidad máxima | Documentación |
+|  Función |  Descripción  |  Compatibilidad máxima | Documentación |
 |------|------|------|------|
 |  Nodos |  Objetos de la escena glTF |  64 por LOD | [Presenta](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy)|
 |  Submallas |  Suma de primitivas en todas las mallas |  32 por LOD | [Presenta](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes)|
 
 ## <a name="material-guidelines"></a>Directrices de materiales
 
-Las texturas se deben preparar mediante un flujo de trabajo de desbaste de metal. Empiece por crear un conjunto completo de texturas, como albedo, normal, oclusión, metálico y rugosidad. Windows Mixed Reality admite texturas con resoluciones de hasta 4096x4096, pero le recomendamos que cree en 512 x 512. Además, las texturas deben crearse en resoluciones en múltiplos de 4, ya que se trata de un requisito para el formato de compresión aplicado a las texturas en los pasos de exportación que se describen a continuación. Por último, cuando Gerating MIP Maps o una textura, el MIP más bajo debe ser un máximo de 4x4.
+Las texturas se deben preparar mediante un flujo de trabajo de desbaste de metal. Empiece por crear un conjunto completo de texturas, como albedo, normal, oclusión, metálico y rugosidad. Windows Mixed Reality admite texturas con resoluciones de hasta 4096x4096, pero le recomendamos que cree en 512 x 512. Además, las texturas deben crearse en resoluciones en múltiplos de 4, ya que se trata de un requisito para el formato de compresión aplicado a las texturas en los pasos de exportación que se describen a continuación. Por último, al generar mapas MIP o una textura, el MIP más bajo debe ser un máximo de 4x4.
 <br>
 
 |  Tamaño de textura recomendado  |  Tamaño máximo de textura | MIP más bajo
@@ -100,7 +100,7 @@ Windows Mixed Reality Home ofrece una serie de optimizaciones sobre la especific
 
 ### <a name="materials"></a>Prima
 
-Para mejorar el tiempo de carga de los recursos en entornos de realidad mixta, Windows MR admite la representación de texturas DDS comprimidas en función del esquema de empaquetado de textura definido en esta sección. Se hace referencia a las texturas DDS con la [extensión MSFT_texture_dds](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_texture_dds). Es muy recomendable comprimir las texturas. 
+Para mejorar el tiempo de carga de los recursos en entornos de realidad mixta, Windows MR admite la representación de texturas DDS comprimidas en función del esquema de empaquetado de textura definido en esta sección. Se hace referencia a las texturas DDS mediante la [extensión MSFT_texture_dds](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_texture_dds). Es muy recomendable comprimir las texturas. 
 
 #### <a name="hololens"></a>HoloLens
 
@@ -170,7 +170,7 @@ Windows MR usa el nodo de geometría LODs para representar modelos 3D en diferen
 |  LOD 1 |  5\.000  |  10.000 | 
 |  LOD 2 |  2\.500  |  10.000 | 
 
-Al usar LODs, especifique siempre 3 niveles de LOD. Si falta LODs, el modelo no se representará de forma inesperada, ya que el sistema LOD cambia al nivel de LOD que falta. glTF 2,0 no admite actualmente LODs como parte de la especificación principal. Por lo tanto, LODs debe definirse mediante la [extensión MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
+Al usar LODs, especifique siempre 3 niveles de LOD. Si falta LODs, el modelo no se representará de forma inesperada, ya que el sistema LOD cambia al nivel de LOD que falta. glTF 2,0 no admite actualmente LODs como parte de la especificación principal. por lo tanto, LODs debe definirse mediante la [extensión de MSFT_LOD](https://github.com/sbtron/glTF/tree/MSFT_lod/extensions/Vendor/MSFT_lod).
 
 ### <a name="screen-coverage"></a>Cobertura de pantalla
 
@@ -193,17 +193,17 @@ La Página principal de realidad mixta admite objetos glTF animados en cascos Ho
 
 ### <a name="tools"></a>Herramientas
 En primer lugar, descargue las herramientas siguientes si aún no las tiene. Estas herramientas facilitan el proceso de abrir cualquier modelo de glTF, obtener una vista previa del mismo, realizar cambios y volver a guardarlos como glTF o. glb:
-1. [Visual Studio Code](https://code.visualstudio.com/)
+1. [Visual Studio Code](https://code.visualstudio.com/)
 2. [Herramientas de glTF para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode)
 
 
 ### <a name="opening-and-previewing-the-model"></a>Abrir y obtener una vista previa del modelo
-Comience abriendo el modelo glTF en VSCode arrastrando el archivo. glTF a la ventana del editor. Tenga en cuenta que si tiene un. glb en lugar de un archivo. glTF, puede importarlo en VSCode con el complemento de herramientas de glTF que descargó. Vaya a "vista-> paleta de comandos" y, a continuación, empiece a escribir "glTF" en la paleta de comandos y seleccione "glTF: Importar desde glb ", que mostrará un selector de archivos para importar un. glb con. 
+Comience abriendo el modelo glTF en VSCode arrastrando el archivo. glTF a la ventana del editor. Tenga en cuenta que si tiene un. glb en lugar de un archivo. glTF, puede importarlo en VSCode con el complemento de herramientas de glTF que descargó. Vaya a "vista-> paleta de comandos" y, a continuación, empiece a escribir "glTF" en la paleta de comandos y seleccione "glTF: Import from glb", que mostrará un selector de archivos para que pueda importar un. glb con. 
 
-Una vez que haya abierto el modelo glTF, debería ver el archivo JSON en la ventana del editor. Tenga en cuenta que también puede obtener una vista previa del modelo en un visor 3D en directo con haciendo clic con el botón secundario en el nombre del archivo y seleccionando "glTF: Vista previa del modelo 3D "acceso directo del comando en el menú contextual. 
+Una vez que haya abierto el modelo glTF, debería ver el archivo JSON en la ventana del editor. Tenga en cuenta que también puede obtener una vista previa del modelo en un visor 3D dinámico con el haciendo clic con el botón secundario en el nombre de archivo y seleccionando el acceso directo del comando "glTF: Preview 3D Model" en el menú contextual. 
 
 ### <a name="adding-the-triggers"></a>Agregar los desencadenadores
-Los desencadenadores de animación se agregan al modelo JSON de glTF con la extensión de la asignación de animación. La extensión de la asignación de animación se documenta públicamente [aquí en github](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) (Nota: SE TRATA DE UNA EXTENSIÓN DE BORRADOR). Para agregar la extensión al modelo, solo tiene que desplazarse hasta el final del archivo glTF en el editor y agregar el bloque "extensionsUsed" y "Extensions" al archivo si aún no existen. En la sección "extensionsUsed", agregará una referencia a la extensión "EXT_animation_map" y en el bloque "Extensions" agregará las asignaciones a las animaciones del modelo.
+Los desencadenadores de animación se agregan al modelo JSON de glTF con la extensión de la asignación de animación. La extensión de la asignación de animación se documenta públicamente [aquí en github](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) (Nota: se trata de una extensión de borrador). Para agregar la extensión al modelo, solo tiene que desplazarse hasta el final del archivo glTF en el editor y agregar el bloque "extensionsUsed" y "Extensions" al archivo si aún no existen. En la sección "extensionsUsed", agregará una referencia a la extensión "EXT_animation_map" y en el bloque "Extensions" agregará las asignaciones a las animaciones del modelo.
 
 Como se indicó [en la especificación](https://github.com/msfeldstein/glTF/blob/04f7005206257cf97b215df5e3f469d7838c1fee/extensions/Vendor/FB_animation_map/README.md) , se define lo que desencadena la animación mediante la cadena "Semantic" en una lista de "animaciones", que es una matriz de índices de animación. En el ejemplo siguiente, hemos especificado la animación que se va a reproducir mientras el usuario está Gazing en el objeto:
 
@@ -223,22 +223,22 @@ Como se indicó [en la especificación](https://github.com/msfeldstein/glTF/blob
   }
 ```
 La siguiente animación desencadena semántica es compatible con la Página principal de Windows Mixed Reality.  
-* "SIEMPRE": Repetir una animación constantemente
-* "MANTENIDO": Se repite durante todo el tiempo que se captura un objeto.
-* "MIRA": En bucle mientras se examina un objeto
-* "PROXIMIDAD": En bucle mientras un visor está cerca de un objeto
-* "APUNTANDO": En bucle mientras un usuario señala a un objeto
+* "ALWAYS": repetir constantemente una animación
+* "Mantenida": bucle durante toda la duración de la captura de un objeto.
+* "Mira": bucle mientras se examina un objeto
+* "Proximidad": bucle mientras un visor está cerca de un objeto
+* "APUNTAndo": bucle mientras un usuario señala a un objeto
 
 ### <a name="saving-and-exporting"></a>Guardar y exportar
-Una vez realizados los cambios en el modelo glTF, puede guardarlos directamente como glTF o puede hacer clic con el botón derecho en el nombre del archivo en el editor y seleccionar "glTF: Exportar a GLB (archivo binario) "en su lugar, exporte a. glb. 
+Una vez realizados los cambios en el modelo de glTF, puede guardarlos directamente como glTF o puede hacer clic con el botón secundario en el nombre del archivo en el editor y seleccionar "glTF: Export to GLB (archivo binario)" para exportar a. glb. 
 
 ### <a name="restrictions"></a>Restricciones
-Las animaciones no pueden tener más de 20 minutos y no pueden contener más de 36.000 fotogramas clave (20 minutos a 30 FPS). Además, cuando se usan animaciones basadas en destino de transformación, no se superan los 8192 vértices de destino de transformación o menos. Si se supera este número, se hacerrá el recurso animado para que no se admita en la Página principal de Windows Mixed Reality. 
+Las animaciones no pueden tener más de 20 minutos y no pueden contener más de 36.000 fotogramas clave (20 minutos a 30 FPS). Además, cuando se usan animaciones basadas en destino de transformación, no se superan los 8192 vértices de destino de transformación o menos. Si se supera este recuento, el recurso animado no se admitirá en la Página principal de Windows Mixed Reality. 
 
-|Característica|Máximo|
+|Función|Máximo|
 |-----|-----|
-|Duration|20 minutos|
-|Fotogramas clave|36,000| 
+|Duración|20 minutos|
+|Fotogramas clave|36.000| 
 |Vértices de destino de transformación|8192|
 
 ## <a name="gltf-implementation-notes"></a>Notas sobre la implementación de glTF
@@ -251,17 +251,17 @@ El recurso glTF debe apuntar a la escena predeterminada con el atributo Scene qu
 
 Las siguientes propiedades de material se utilizan desde la especificación Core glTF 2,0, pero no son necesarias:
 * baseColorFactor, metallicFactor, roughnessFactor
-* baseColorTexture: Debe apuntar a una textura almacenada en DDS.
-* emissiveTexture: Debe apuntar a una textura almacenada en DDS.
+* baseColorTexture: debe apuntar a una textura almacenada en DDS.
+* emissiveTexture: debe apuntar a una textura almacenada en DDS.
 * emissiveFactor
 * alphaMode
 
 Las siguientes propiedades de material se omiten de la especificación principal:
 * Todos los UVs
-* metalRoughnessTexture: En su lugar, debe usar el empaquetado de textura optimizado de Microsoft definido a continuación
-* normalTexture: En su lugar, debe usar el empaquetado de textura optimizado de Microsoft definido a continuación
+* metalRoughnessTexture: debe usar en su lugar el empaquetado de textura optimizado de Microsoft que se define a continuación.
+* normalTexture: debe usar en su lugar el empaquetado de textura optimizado de Microsoft que se define a continuación.
 * normalScale
-* occlusionTexture: En su lugar, debe usar el empaquetado de textura optimizado de Microsoft definido a continuación
+* occlusionTexture: debe usar en su lugar el empaquetado de textura optimizado de Microsoft que se define a continuación.
 * occlusionStrength
 
 Windows MR no admite líneas y puntos de modo primitivo. 
@@ -277,7 +277,7 @@ Solo se admite un atributo de vértice UV.
 * [Especificación de extensiones de empaquetado de textura de realidad mixta de HoloLens](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Especificación de extensiones de Microsoft DDS Textures glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 * [Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)](implementing-3d-app-launchers.md)
 * [Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)](implementing-3d-app-launchers-win32.md)

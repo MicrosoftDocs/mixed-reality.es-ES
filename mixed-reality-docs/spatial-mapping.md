@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: asignación espacial, HoloLens, realidad mixta, reconstrucción superficial, malla
-ms.openlocfilehash: 2988056b5caf50a4428d39c725bfe5432867a9c0
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437458"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926733"
 ---
 # <a name="spatial-mapping"></a>Asignación espacial
 
@@ -64,13 +64,13 @@ Estos volúmenes pueden ser estacionarios (en una ubicación fija con respecto a
 
 A medida que HoloLens recopile nuevos datos sobre el entorno y, a medida que se produzcan cambios en el entorno, aparecerán las superficies espaciales, desaparecerán y cambiarán.
 
-## <a name="spatial-mapping-vs-scene-undesranding-worldmesh"></a>Asignación espacial frente a Undesranding de escenas WorldMesh
+## <a name="spatial-mapping-vs-scene-understanding-worldmesh"></a>Asignación espacial frente a WorldMesh de comprensión de escenas
 En el caso de HoloLens 2, es posible consultar una versión estática de los datos de asignación espacial mediante el [SDK de introducción de escenas](scene-understanding-SDK.md) (configuración de EnableWorldMesh). Estas son las diferencias entre dos formas de obtener acceso a los datos de asignación espacial:
 * API de asignación espacial:
    * Intervalo limitado: los datos de asignación espacial están disponibles para las aplicaciones en un tamaño limitado en caché de "burbuja" alrededor del usuario.
    * Proporciona actualizaciones de baja latencia de regiones de malla cambiadas a través de eventos SurfacesChanged.
    * Nivel variable de detalles controlado por triángulos por parámetro de medidor cúbico.
-* SDK de undestanding de escenas:
+* SDK de introducción de escenas:
    * Intervalo ilimitado: proporciona todos los datos de asignación espacial examinada dentro del radio de la consulta.
    * Proporciona una instantánea estática de los datos de asignación espacial. La obtención de los datos de la asignación espacial actualizada requiere la ejecución de una nueva consulta para toda la malla.
    * Nivel de detalles coherente controlado por la configuración de RequestedMeshLevelOfDetail.
@@ -366,7 +366,7 @@ Estos son algunos ejemplos de los diferentes tipos de procesamiento de mallas qu
 * Es una buena idea realizar pruebas con usuarios reales (y idealmente no dirigidos), ya que es posible que no usen HoloLens o su aplicación exactamente del mismo modo que lo hace. De hecho, puede sorprenderle de qué grado de comportamiento, conocimiento y suposiciones de las personas pueden ser divergentes.
 
 ## <a name="troubleshooting"></a>de solución de problemas
-* Para que las mallas de superficie se orienten correctamente, cada GameObject debe estar activo antes de enviarse a SurfaceObeserver para que se construya su malla. De lo contrario, las mallas se mostrarán en el espacio, pero girarán en ángulos extraños.
+* Para que las mallas de superficie se orienten correctamente, cada GameObject debe estar activo antes de enviarse a SurfaceObserver para que se construya su malla. De lo contrario, las mallas se mostrarán en el espacio, pero girarán en ángulos extraños.
 * El GameObject que ejecuta el script que se comunica con SurfaceObserver debe establecerse en el origen. De lo contrario, todos los GameObjects que cree y envíe a SurfaceObserver para que sus mallas se construyan tendrán un desplazamiento igual al desplazamiento del objeto primario Game. Esto puede hacer que las mallas muestren varios medidores, lo que hace que sea muy difícil depurar lo que está ocurriendo.
 
 ## <a name="see-also"></a>Consulta también

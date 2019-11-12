@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/25/2018
 ms.topic: article
 keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, portabilidad, capacidad, cámara, simulación, emulación, documentación
-ms.openlocfilehash: b78afb0cf6557ec9b61a029e2d557debbd0b6b46
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f9b314bfc7c58e72b11ecfd76fe7293ef2f6c11e
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437374"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926695"
 ---
 # <a name="unity-development-overview"></a>Introducción al desarrollo de Unity
 
@@ -37,7 +37,7 @@ Una vez que haya configurado MRTK V2 con el proyecto o configurado el proyecto t
 
 La adición de compatibilidad con las características de Windows Mixed Reality, como las [fases espaciales](coordinate-systems.md#spatial-coordinate-systems), [los gestos, los controladores de movimiento](gestures-and-motion-controllers-in-unity.md) o la [entrada de voz](voice-input-in-unity.md) se consigue mediante las API integradas directamente en Unity. 
 
-En primer lugar, revise las [escalas](coordinate-systems.md) de la experiencia que puede tener como destino su applicatioin:
+En primer lugar, revise las [escalas de experiencia](coordinate-systems.md) que puede tener la aplicación como destino:
 * Si está pensando en crear una experiencia **solo de orientación** o **de escalado ajustada**, deberá establecer el tipo de espacio de seguimiento de Unity en [estacionaria](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Si está pensando en crear una experiencia de escalado **permanente** o **de escalado de habitación**, deberá asegurarse de que el tipo de espacio de seguimiento de Unity se establece correctamente en [RoomScale](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience).
 * Si está pensando en crear una experiencia de **escala mundial** en HoloLens que permita a los usuarios moverse más allá de 5 metros, deberá usar el componente [WorldAnchor](coordinate-systems-in-unity.md#building-a-world-scale-experience) .

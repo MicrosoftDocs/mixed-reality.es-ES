@@ -6,12 +6,12 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 982a3f42014d8f5eb9ba181247fee9825fb78371
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1f8a0cbe0f6da88c0c5e5a695737d8694020635c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434313"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926654"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Escritura de una aplicación de reproductor remoto holográfica personalizada
 
@@ -27,7 +27,7 @@ Un reproductor remoto holográfica permite a la aplicación mostrar el contenido
 Un buen punto de partida es una aplicación UWP basada en DirectX que ya tiene como destino la API de Windows Mixed Reality. Para obtener más información, vea [Introducción al desarrollo de DirectX](directx-development-overview.md). Si no tiene una aplicación existente y desea comenzar desde el principio, la [ C++ plantilla de proyecto Holographic](creating-a-holographic-directx-project.md) es un buen punto de partida.
 
 >[!IMPORTANT]
->Cualquier aplicación que use la comunicación remota de Holographic debe crearse para usar un [Apartamento multiproceso](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments). El uso de un [Apartamento de un solo subproceso](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) es compatible, pero puede dar lugar a un rendimiento poco óptimo y posiblemente a la reproducción. Al usar C++/WinRT [WinRT:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) , un apartamento multiproceso es el valor predeterminado.
+>Cualquier aplicación que use la comunicación remota de Holographic debe crearse para usar un [Apartamento multiproceso](https://docs.microsoft.com//windows/win32/com/multithreaded-apartments). El uso de un [Apartamento de un solo subproceso](https://docs.microsoft.com//windows/win32/com/single-threaded-apartments) es compatible, pero puede dar lugar a un rendimiento poco óptimo y posiblemente a la reproducción. Al usar C++/WinRT [WinRT:: init_apartment](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/get-started) un apartamento multiproceso es el valor predeterminado.
 
 ## <a name="get-the-holographic-remoting-nuget-package"></a>Obtención del paquete NuGet de Holographic Remoting
 
@@ -122,7 +122,7 @@ catch(winrt::hresult_error& e)
 ```
 
 >[!IMPORTANT]
->Como con cualquier C++```Connect``` API de/WinRT, es posible que se produzca una excepción WinRT:: hresult_error que debe controlarse.
+>Al igual que C++con cualquier API de/WinRT ```Connect``` podría producir un WinRT:: hresult_error que debe controlarse.
 
 La escucha de las conexiones entrantes en la aplicación del reproductor puede realizarse llamando al método ```Listen```. El puerto de enlace y el puerto de transporte se pueden especificar durante esta llamada. El puerto de enlace se usa para el protocolo de enlace inicial. A continuación, los datos se envían a través del puerto de transporte. De forma predeterminada, se usan el número de puerto **8265** y **8266** .
 
@@ -200,7 +200,7 @@ Si se ejecuta correctamente, ```BlitRemoteFrame()``` devuelve ```BlitResult::Suc
 
 ## Opcional: establecer BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
 >[!IMPORTANT]
-> ```PlayerContext::BlitRemoteFrameTimout``` se admite a partir de la versión [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
+> ```PlayerContext::BlitRemoteFrameTimeout``` se admite a partir de la versión [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
 
 La propiedad ```PlayerContext::BlitRemoteFrameTimeout``` especifica la cantidad de tiempo que se reutiliza un marco remoto si no se recibe un nuevo marco remoto. 
 

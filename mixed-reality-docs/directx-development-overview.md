@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: DirectX, representación holográfica, nativa, aplicación nativa, WinRT, aplicación WinRT, API de plataforma, motor personalizado, middleware
-ms.openlocfilehash: e77ee5053e69aef502481d18618e604c6bfb5939
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 0af73314c3c93d230ef87ed468f718f5b3e1813c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641090"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926627"
 ---
 # <a name="directx-development-overview"></a>Información general sobre el desarrollo de DirectX
 
@@ -44,7 +44,7 @@ En los temas siguientes se describen los requisitos básicos para agregar compat
 
 ## <a name="adding-mixed-reality-capabilities-and-inputs"></a>Agregar capacidades y entradas de realidad mixta
 
-Para habilitar la mejor experiencia posible para los usuarios de la appslication envolvente, querrá admitir los siguientes bloques de creación de claves:
+Para habilitar la mejor experiencia posible para los usuarios de la aplicación envolvente, querrá admitir los siguientes bloques de creación de claves:
 
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
 * [Manos y controladores de movimiento en DirectX](hands-and-motion-controllers-in-directx.md)

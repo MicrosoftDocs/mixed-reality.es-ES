@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 7ee0cf3af8012a053733896a8bf92192306b7f8b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437499"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926918"
 ---
 # <a name="scene-understanding"></a>Conocimiento de escenas
 
@@ -95,7 +95,7 @@ La generación de las mallas de navegación precisas aún requiere un procesamie
 
 ### <a name="visualization"></a>Visualiza
 
-Aunque se puede usar la visualización de la [asignación espacial](spatial-mapping.md#visualization) para los comentarios en tiempo real del entorno, hay muchos escenarios en los que la simplicidad de los objetos planos y estancos proporciona más rendimiento o calidad visual. Las técnicas de proyección de instantáneas y de uso de las bases que se describen mediante la asignación espacial pueden ser más agradables si se proyectan en las superficies planas que proporcionan cuádruples o la malla estanca plana. Esto es especialmente cierto en entornos o escenarios en los que el análisis previo no es óptimo debido al hecho de que la escena se inferirá, y los entornos completos y las suposiciones planas minimizarán los artefactos.
+Aunque se puede usar la visualización de la [asignación espacial](spatial-mapping.md#visualization) para los comentarios en tiempo real del entorno, hay muchos escenarios en los que la simplicidad de los objetos planos y estancos proporciona más rendimiento o calidad visual. Las técnicas de proyección de instantáneas y de uso de las bases que se describen mediante la asignación espacial pueden ser más agradables si se proyectan en las superficies planas que proporcionan cuádruples o la malla estanca plana. Esto es especialmente cierto en entornos o escenarios en los que el análisis previo exhaustivo no es óptimo debido al hecho de que la escena se inferirá, y los entornos completos y las suposiciones planas minimizarán los artefactos.
 
 Además, el número total de superficies devueltas por la asignación espacial está limitado por la memoria caché espacial interna, mientras que la versión de la malla de la asignación espacial puede tener acceso a datos de asignación espacial que no están almacenados en caché. Por este motivo, la comprensión de la escena es más adecuada para capturar representaciones de malla para espacios más grandes (por ejemplo, más de una habitación) para la visualización o el procesamiento de malla adicional. La malla mundial devuelta con EnableWorldMesh tendrá un nivel de detalle coherente en todo el mundo, lo que puede dar lugar a una visualización más agradable si se representa como trama de alambres.
 

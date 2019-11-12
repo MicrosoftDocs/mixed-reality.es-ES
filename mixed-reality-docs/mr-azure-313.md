@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realidad mixta, Academia, Edge, IOT Edge, tutorial, API, notificación, funciones, tablas, hololens, inmersivo, VR, IOT, máquina virtual, Ubuntu, Python
-ms.openlocfilehash: 7f56c7931bb036d14ab3aa9156706b1f6247195c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: bfb1518869892ed4899019d7b9c504a960e7db3f
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437967"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926835"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -890,7 +890,7 @@ Vuelva a Azure portal, donde creará un servicio de tablas de Azure, mediante la
 
 9. En la página información general, en la parte derecha, haga clic en **tablas**.
     
-    ![Tablas](images/AzureLabs-Lab313-40.png)
+    ![tablas](images/AzureLabs-Lab313-40.png)
 
 10. El panel de la derecha cambiará para mostrar la información del **servicio tabla** , en la que es necesario agregar una nueva tabla. Para ello, haga clic en el botón **+ tabla** en la esquina superior izquierda.
 

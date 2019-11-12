@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño
-ms.openlocfilehash: b46f642babb18387da2e76d5bdbb7631577c85de
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439826"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926727"
 ---
 # <a name="system-gesture"></a>Gestos del sistema
 
@@ -62,7 +62,7 @@ Para abrir el menú Inicio en HoloLens (1ª generación), hemos diseñado "flora
     :::column-end:::
     :::column:::
         ![abierto con floración](images/bloom-open.png)<br>
-        **Paso 2: Palm con las manos**<br>
+        **Paso 2: Palm up con la mano**<br>
     :::column-end:::
 :::row-end:::
 

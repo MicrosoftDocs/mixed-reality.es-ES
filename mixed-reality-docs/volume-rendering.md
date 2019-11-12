@@ -6,29 +6,29 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: imagen volumétrica, representación por volumen, rendimiento, realidad mixta
-ms.openlocfilehash: dc0e75b916ab7cc96be1eccb4ad32ac71f5b75ff
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548632"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926678"
 ---
 # <a name="volume-rendering"></a>Representación de volumen
 
 En el caso de los volúmenes de resonancia médica o de ingeniería, consulte [representación de volumen en Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering). Estas ' imágenes volumétricas ' contienen información enriquecida con opacidad y color en todo el volumen que no se puede expresar fácilmente como superficies como [mallas poligonales](https://en.wikipedia.org/wiki/Polygon_mesh).
 
 Soluciones clave para mejorar el rendimiento
-1. N Enfoque Naive: Mostrar todo el volumen, normalmente se ejecuta demasiado lentamente
-2. APROPIADO Plano de corte: Mostrar solo un único segmento del volumen
-3. APROPIADO Corte del Subvolumen: Mostrar solo algunas capas del volumen
-4. APROPIADO Disminución de la resolución de la representación de volumen (consulte "representación de escenas de resolución mixta")
+1. BAD: Naive enfoque: Mostrar todo el volumen; por lo general, se ejecuta demasiado lentamente.
+2. BUENA: plano de corte: mostrar solo un segmento del volumen
+3. BUENO: recortar el Subvolumen: mostrar solo algunas capas del volumen
+4. BUENA: reducir la resolución de la representación de volumen (consulte "representación de escenas de resolución mixta")
 
 Solo hay una cierta cantidad de información que se puede transferir desde la aplicación a la pantalla en cualquier fotograma determinado, es el ancho de banda total de la memoria. Además, cualquier procesamiento (o ' sombreado ') necesario para transformar los datos para la presentación también requiere tiempo. Las principales consideraciones a la hora de realizar la representación de volúmenes son las siguientes:
 * Screen-width * Screen-height * Screen-Count * Volume-Layers-on-pixel = total-Volume-samples-per-Frame
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (volumen de res completo: demasiados ejemplos)
-* 1028 * 720 * 2 * 1 = 1480320 (0,3% de Full) (segmento fino: 1 muestra por píxel y se ejecuta sin problemas)
-* 1028 * 720 * 2 * 10 = 14803200 (3,9% de Full) (segmento de Subvolumen: 10 muestras por píxel, se ejecuta de forma bastante fluida, parece 3D)
-* 200 * 200 * 2 * 256 = 20480000 (5% de Full) (volumen de res inferior: menos píxeles, volumen completo, apariencia 3D pero un poco desenfoque)
+* 1028 * 720 * 2 * 1 = 1480320 (0,3% de Full) (segmento fino: 1 muestra por píxel, se ejecuta sin problemas)
+* 1028 * 720 * 2 * 10 = 14803200 (3,9% de Full) (segmento de Subvolumen: 10 muestras por píxel, se ejecuta con bastante suavidad, parece 3D)
+* 200 * 200 * 2 * 256 = 20480000 (5% de Full) (volumen de res inferior: menos píxeles, volumen completo, apariencia 3D pero un poco borroso)
 
 ## <a name="representing-3d-textures"></a>Representar texturas 3D
 

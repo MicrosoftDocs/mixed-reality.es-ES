@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, inmersivo, controlador de movimiento, Academia, tutorial
-ms.openlocfilehash: e2199c3afed21f9396ed84f71093a8b2fb3bb23b
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 273d1bf384d588ab24bfe29e30f299b7a41fe541
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438546"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926817"
 ---
 >[!NOTE]
 >Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
@@ -197,7 +197,7 @@ En un capítulo posterior, se aprenderá a usar estos scripts para adjuntar elem
 
 Podrá ver la escena con controladores de movimiento en el casco. Puede ver animaciones detalladas para los clics de botón, el movimiento del stick analógico y el resaltado táctil de Touchpad.
 
-![Visualización predeterminada de MR213_Controller](images/mr213-controllervisualizationdefault-500px.jpg)
+![MR213_Controller valor predeterminado de visualización](images/mr213-controllervisualizationdefault-500px.jpg)
 
 ## <a name="chapter-2---attaching-ui-elements-to-the-controller"></a>Capítulo 2: adjuntar elementos de la interfaz de usuario al controlador
 
@@ -277,7 +277,7 @@ private void AttachElementToController(MotionControllerInfo newController)
 }
 ```
 
-La manera más sencilla de usar el script **AttachToController** es heredar de él, como hemos hecho en el caso de **ColorPickerWheel.** Simplemente invalide las funciones **OnAttachToController** y **OnDetatchFromController** para realizar la instalación o el desglose cuando el controlador se detecta o se desconecta.
+La manera más sencilla de usar el script **AttachToController** es heredar de él, como hemos hecho en el caso de **ColorPickerWheel.** Simplemente invalide las funciones **OnAttachToController** y **OnDetachFromController** para realizar la instalación o el desglose cuando el controlador se detecta o se desconecta.
 
 **Las**
 
@@ -294,7 +294,7 @@ Dado que **ColorPickerWheel** hereda **AttachToController**, muestra la **mano**
 
 ![Script ColorPickerWheel](images/mr213-attachtocontroller-300px.jpg)
 
-**ColorPickerWheel** invalida **OnAttachToController** y **OnDetatchFromController** para suscribirse al evento de entrada que se usará en el capítulo siguiente para la selección de color con entrada de Touchpad.
+**ColorPickerWheel** invalida **OnAttachToController** y **OnDetachFromController** para suscribirse al evento de entrada que se usará en el capítulo siguiente para la selección de color con entrada de Touchpad.
 
 ```cs
 public class ColorPickerWheel : AttachToController, IPointerTarget
@@ -346,7 +346,7 @@ private IEnumerator Start() {
 ### <a name="instructions"></a>Instrucciones
 
 * En el panel **jerarquía** , haga clic en **ColorPickerWheel**
-* En el panel **Inspector** , en **Animatior**, haga doble clic en **ColorPickerWheelController**
+* En el panel **Inspector** , en **animación**, haga doble clic en **ColorPickerWheelController**
 * Podrá ver la pestaña **animador** abierta
 
 **Mostrar u ocultar la interfaz de usuario con el controlador de animación de Unity**
@@ -624,7 +624,7 @@ private void SpawnObject()
 {
     // Instantiate the spawned object
     GameObject newObject = Instantiate(displayObject.gameObject, spawnParent);
-    // Detatch the newly spawned object
+    // Detach the newly spawned object
     newObject.transform.parent = null;
     // Reset the scale transform to 1
     scaleParent.localScale = Vector3.one;
@@ -801,7 +801,7 @@ El **borrador** es un tipo especial de pincel que reemplaza la función **DrawOv
 
 ## <a name="advanced-design---teleportation-and-locomotion"></a>Diseño avanzado: teleportabilidad y Locomotion
 
-Si desea permitir que el usuario se mueva por la escena con la teleportabilidad mediante el Stick, use **MixedRealityCameraParent** en lugar de **MixedRealityCamera**. También debe agregar **InputManager** y **DefaultCusor**. Dado que **MixedRealityCameraParent** ya incluye **MotionControllers** y el **límite** como componentes secundarios, debe quitar **MotionControllers** y recurso prefabricado de **entorno** existentes.
+Si desea permitir que el usuario se mueva por la escena con la teleportabilidad mediante el Stick, use **MixedRealityCameraParent** en lugar de **MixedRealityCamera**. También debe agregar **InputManager** y **DefaultCursor**. Dado que **MixedRealityCameraParent** ya incluye **MotionControllers** y el **límite** como componentes secundarios, debe quitar **MotionControllers** y recurso prefabricado de **entorno** existentes.
 
 ### <a name="instructions"></a>Instrucciones
 
@@ -834,7 +834,7 @@ Ya está listo para empezar a crear su propia experiencia envolvente con los con
 ## <a name="completed-scenes"></a>Escenas completadas
 
 * En el panel del **proyecto** de Unity, haga clic en la carpeta **Scenes** .
-* Encontrará dos sceens **MixedReality213** y **MixedReality213Advanced**de Unity.
+* Encontrará dos escenas de Unity **MixedReality213** y **MixedReality213Advanced**.
     * **MixedReality213**: escena completada con un solo pincel
     * **MixedReality213Advanced**: escena completada con varios pinceles en el ejemplo de la cantidad de imprenta del botón seleccionar
 

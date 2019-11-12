@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos de Windows, HoloLens
-ms.openlocfilehash: cc83a4e987d77be53222b8e9537eeec359446465
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 972fe2e828a0a054925a45b4f6965c668f6da078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438214"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926744"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portal de dispositivos de Windows
 
@@ -45,7 +45,7 @@ Esta documentación trata específicamente sobre el portal de dispositivos de Wi
 1. [Conecte su HoloLens a Wi-Fi](connecting-to-wi-fi-on-hololens.md).
 2. Buscar la dirección IP del dispositivo.
    * Busque la dirección IP en el dispositivo en **configuración > red & Internet > Wi-Fi > opciones avanzadas**.
-3. Desde un explorador Web en su equipo, vaya a https:/< YOUR_HOLOLENS_IP_ADDRESS >
+3. Desde un explorador Web en su equipo, vaya a https://< YOUR_HOLOLENS_IP_ADDRESS >
    * El explorador mostrará el siguiente mensaje: "hay un problema con el certificado de seguridad de este sitio web". Esto ocurre porque el certificado emitido en Device Portal es un certificado de prueba. Puedes ignorar este error de certificado por ahora y continuar.
 
 ## <a name="connecting-over-usb"></a>Conexión a través de USB

@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo activo, vínculo profundo, secondarytile, icono secundario, UWP
-ms.openlocfilehash: be47b590e4fd1a847ac47d9cfbcbe824c544dd59
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 5d18f699792760c39df4f814bde470fb9f889db7
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438020"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926767"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)
 
@@ -164,7 +164,7 @@ Un cuadro de límite se puede usar para agregar una región de búfer adicional 
 > [!NOTE]
 > Esta característica se admitirá a partir de la actualización de RS4 de Windows. Asegúrese de que la aplicación tenga como destino una versión de la Windows SDK mayor o igual que 10.0.17125 si tiene previsto usar esta característica.
 
-Puede definir el comportamiento de activación de un secondaryTile de 3D para controlar cómo reacciona cuando un usuario lo selecciona. Se puede usar para colocar objetos 3D en la Página principal de la realidad mixta que son Purley informativas o decorativas. Se admiten los siguientes tipos de comportamiento de activación:
+Puede definir el comportamiento de activación de un secondaryTile de 3D para controlar cómo reacciona cuando un usuario lo selecciona. Se puede usar para colocar objetos 3D en la Página principal de la realidad mixta que son meramente informativas o decorativas. Se admiten los siguientes tipos de comportamiento de activación:
 1. Valor predeterminado: cuando un usuario selecciona el secondaryTile 3D, se activa la aplicación
 2. Ninguno: cuando los usuarios seleccionan el secondaryTile 3D, no sucede nada y la aplicación no está activada.
 

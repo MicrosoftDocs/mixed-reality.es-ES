@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/26/2019
 ms.topic: article
 keywords: HoloLens, emulador, simulación, Windows Mixed Reality
-ms.openlocfilehash: 01277e4b00dafaecdfd4e5205feccbf055e0caf5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c5601ae2caf235cb22248ce7c6bf7e29225ade2c
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437062"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926594"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Emulador de HoloLens avanzado y entrada del simulador de realidad mixta
 
@@ -34,7 +34,7 @@ Los gestos y la entrada del controlador de movimiento se asignan estrechamente a
 * **Acción**: esto simula la acción de presionar índice al control de posición o de extraer el botón de acción de un controlador. Por ejemplo, la entrada de acción se puede usar para simular el gesto de punteo de aire, desplazarse por el contenido y mantener presionado.
 * **Gesto o inicio del/System de [floración](system-gesture.md#bloom)** : el gesto de la floración/del sistema de HoloLens o el botón Inicio de un controlador se usa para volver al shell y realizar acciones del sistema.
 
-Las manos tienen un reprresentation rico en HoloLens 2.  Además de ser sometidos a seguimiento y sin seguimiento, y que se pueden usar para llevar a cabo gestos, ahora tienen un modelo de esqueleto articulado y se exponen al desarrollador.  Esto introduce 26 puntos de seguimiento en cada mano.  
+Las manos tienen una representación enriquecida en HoloLens 2.  Además de ser sometidos a seguimiento y sin seguimiento, y que se pueden usar para llevar a cabo gestos, ahora tienen un modelo de esqueleto articulado y se exponen al desarrollador.  Esto introduce 26 puntos de seguimiento en cada mano.  
 * **Conjunto**: una de las veinte posiciones de las que se ha realizado un seguimiento para una mano controlada determinada. Esto tendrá un punto con el espacio 3D asociado.
 * **Pose**: colección completa de todas las uniones en una mano A la que se ha realizado un seguimiento. En este momento, se trata de una colección de 26 uniones. 
 
@@ -76,11 +76,11 @@ En la tabla siguiente se muestra cómo se asignan los tipos de entrada al teclad
 |  Llevar |  T o F3 |  |  Botón X | 
 
 
-Nota: los botones del controlador pueden estar dirigidos a una mano o un controlador, o al otro mediante los modificadores de destino de la mano.
+Nota: los botones del controlador pueden tener como destino una mano o un controlador, o el otro, mediante los modificadores de destino de la mano.
 
 ## <a name="targeting"></a>Selección de destino 
 
-Algunos de los conceptos de entrada anteriores se destacan por sí mismos.  Acción, floración/sistema, restablecimiento y seguimiento son conceptos completos, no necesitan y no se ven afectados por ningún modificador adicional para el destino.  Sin embargo, los conceptos restantes se pueden aplicar a uno de varios destinos. Hemos introducido maneras de especificar el destino al que debe aplicarse el comando.  En todos los casos, es posible especificar a través de la interfaz de usuario o a través de las pulsaciones de teclado, el objeto que se va a targtet.  En algunos casos, también es posible especificar con el controlador Xbox directamente. 
+Algunos de los conceptos de entrada anteriores se destacan por sí mismos.  Acción, floración/sistema, restablecimiento y seguimiento son conceptos completos, no necesitan y no se ven afectados por ningún modificador adicional para el destino.  Sin embargo, los conceptos restantes se pueden aplicar a uno de varios destinos. Hemos introducido maneras de especificar el destino al que debe aplicarse el comando.  En todos los casos, es posible especificar a través de la interfaz de usuario o a través de las pulsaciones de teclado, a qué objeto se va a dirigir.  En algunos casos, también es posible especificar con el controlador Xbox directamente. 
 
 En la tabla siguiente se describen las opciones de destino y la manera de activar cada una de ellas.
 
