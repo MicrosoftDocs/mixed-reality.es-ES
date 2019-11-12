@@ -6,12 +6,12 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Criterios de calidad de la aplicación, realidad mixta, aplicación de realidad mixta
-ms.openlocfilehash: f98111ebe9aacc30778e86501be41e6ac5f6d165
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d167e141b536f9247d22e40afefa718ecc399f5a
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437049"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926588"
 ---
 # <a name="app-quality-criteria"></a>Criterios de calidad de la aplicación
 
@@ -124,7 +124,7 @@ Con el dispositivo y la visualización de la experiencia:
 * Desplazarse por los hologramas y el entorno, busque comportamientos como nadar y salto. Este tipo de movimiento probablemente se debe a que el dispositivo no realiza un seguimiento del entorno o a la distancia al delimitador espacial.
 * Si hay varios hologramas en el marco, observe el comportamiento de holograma en varias profundidades al mover la posición principal de lado a lado, en caso de que la irregularidad parezca que esto se debe a un plano de estabilización.
 
-### <a name="recomendations"></a>Recomendaciones
+### <a name="recommendations"></a>Recomendaciones
 
 * Agregue un contador de velocidad de fotogramas al principio del trabajo de desarrollo.
 * Use el plano de estabilización.
@@ -188,7 +188,7 @@ Las alineaciones de los hologramas con objetos físicos (si se prevé que se col
 * El mapa espacial resulta útil para colocar objetos en superficies cuando no se requiere precisión.
 * Para obtener la mejor precisión, use marcadores o pósteres para establecer los hologramas y un controlador de Xbox (o algún mecanismo de alineación manual) para la calibración final.
 * Considere la posibilidad de dividir los hologramas extra grandes en partes lógicas y alinear cada parte en la superficie.
-* La Interpupilary distancia establecida correctamente (IPD) también puede afectar a la alineación de los hologramas. Configure siempre HoloLens en el del usuario.
+* La Interpupillary distancia establecida correctamente (IPD) también puede afectar a la alineación de los hologramas. Configure siempre HoloLens en el del usuario.
 
 ### <a name="resources"></a>Recursos
 

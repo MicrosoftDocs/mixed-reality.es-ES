@@ -6,18 +6,21 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo y calibración
-ms.openlocfilehash: 63520ee8d7d3ce73405776fccc62290cbbadd0a8
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 88c1827d3656ceb851e8f778daa2303b88dd17c8
+ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641144"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73913220"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
 
 ![Demostración de seguimiento ocular en MRTK](images/mrtk_et_scenemenu.jpg)
 
-HoloLens 2 permite un nuevo nivel de contexto y comprensión humana dentro de la experiencia holográfica, ya que proporciona a los desarrolladores la capacidad de usar información sobre lo que el usuario está examinando. En esta página se proporciona información general sobre esta nueva capacidad a los desarrolladores y diseñadores sobre cómo pueden beneficiarse del seguimiento ocular de varios casos de uso e instrucciones básicas para desarrolladores. 
+HoloLens 2 permite un nuevo nivel de contexto y comprensión humana dentro de la experiencia holográfica, ya que proporciona a los desarrolladores la capacidad de usar información sobre lo que el usuario está examinando. En esta página se indica a los desarrolladores cómo pueden beneficiarse del seguimiento ocular de varios casos de uso, así como qué buscar al diseñar interacciones de usuario basadas en el ojo. 
+
+La API de seguimiento ocular se ha diseñado pensando en la privacidad del usuario, evitando pasar cualquier información identificable, especialmente cualquier biometría. En el caso de las aplicaciones compatibles con el seguimiento ocular, el usuario debe conceder permiso a la aplicación para usar la información de seguimiento ocular. 
+
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 <table>
@@ -94,13 +97,16 @@ A continuación, se indican algunos otros casos de uso para _acciones implícita
 - **Attentive hologramas:** Hologramas que reaccionan sutilmente cuando se miran. Esto puede oscilar entre elementos de la interfaz de usuario ligeramente iluminados, una flor de floración lenta hasta un perro virtual que empieza a volver al usuario y wagging su cola. Esta interacción podría proporcionar una sensación interesante de conectividad y satisfacción en la aplicación.
 
 ### <a name="attention-tracking"></a>Seguimiento de la atención   
-Información sobre dónde o qué ven los usuarios es una herramienta enormemente eficaz para evaluar la facilidad de uso de los diseños y para identificar problemas en flujos de trabajo eficientes. La visualización y el análisis de seguimiento ocular son una práctica común en diversas áreas de la aplicación. Con HoloLens 2, se proporciona una nueva dimensión para esta comprensión, ya que los hologramas 3D se pueden colocar en contextos reales y evaluarse como corresponda. El [Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) proporciona ejemplos básicos para registrar y cargar datos de seguimiento ocular y cómo visualizarlos.
+La información sobre dónde o qué ven los usuarios puede ser una herramienta enormemente eficaz: puede ayudar a evaluar la facilidad de uso de los diseños e identificar problemas en los flujos de trabajo para que sean más eficientes.
+La visualización y el análisis de seguimiento ocular son una práctica común en diversas áreas de la aplicación. Con HoloLens 2, se proporciona una nueva dimensión para esta comprensión, ya que los hologramas 3D se pueden colocar en contextos reales y evaluarse como corresponda. El [Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html) proporciona ejemplos básicos para registrar y cargar datos de seguimiento ocular y cómo visualizarlos.
+Microsoft está dedicado a facilitar la innovación, a la vez que garantiza que los usuarios reciban una experiencia informada y transparente con respecto al uso de su información de seguimiento ocular.  Trabajaremos con nuestros desarrolladores y equipos de la experiencia de usuario para proporcionar orientación a terceros que garanticen que las experiencias están centradas en el usuario.  
+
 
 Algunas aplicaciones en esta área son las siguientes: 
--   **Visualización de ojo remoto:** Visualice los colaboradores remotos que buscan para aumentar la comprensión compartida.
--   **Estudios de investigación de usuarios:** El seguimiento de atención puede ayudarle a comprender mejor cómo se perciben y se relacionan con nuestro entorno, lo que puede ayudar en mejores modelos de intención humana para más interacciones de equipos humanos instinctual. 
--   **Entrenamiento:** Entrenamiento mejorado de los Novices al comprender mejor los patrones de búsqueda visual de los expertos y su coordinación ocular a mano para tareas complejas, como el análisis de datos médicos o la maquinaria operativa.
--   **Diseñe evaluaciones e investigación de mercado:** El seguimiento ocular es una herramienta común para la investigación de mercado al evaluar los diseños de productos y sitios Web. Con HoloLens 2, podemos ampliar esto a espacios 3D mediante la combinación de variantes de diseño de productos digitales con el entorno físico. 
+-   **Visualización de ojo remoto:** Visualizaciones oculares y miras remotas: visualice qué colaboradores remotos están examinando para poder proporcionar comentarios inmediatos y facilitar el procesamiento de información más preciso.
+-   **Estudios de investigación de usuarios:** El seguimiento de atención puede ayudar a los investigadores a obtener más información sobre cómo los usuarios perciben y desarrollan entornos naturales, sin interferir, para diseñar más interacciones de equipos humanos instinctual. El seguimiento ocular puede proporcionar información que no está directamente articulada por los participantes del estudio, ya que, de lo contrario, el investigador podría omitirla fácilmente. 
+-   **Supervisión de aprendizaje y rendimiento:** Practicar y optimizar la ejecución de tareas mediante la identificación más eficaz de los cuellos de botella en el flujo de ejecución. El seguimiento ocular puede proporcionar información natural, en tiempo real y objetiva para ayudar a mejorar el entrenamiento, la productividad y la seguridad en el lugar de trabajo. 
+-   **Diseñe evaluaciones, marketing e investigación de consumidores:** El seguimiento ocular permite a las empresas comerciales realizar estudios de marketing y de consumidores en entornos reales o analizar lo que capta la atención del usuario para mejorar el diseño del producto o el espacio. 
 
 ### <a name="additional-use-cases"></a>Casos de uso adicionales
 - **Juegos:** ¿Alguna vez quería tener superalimentación? Esta es tu oportunidad. Puede levitater los hologramas mediante la estrella. Capte vigas láser de los ojos: pruébelos en [RoboRaid para HoloLens 2](https://www.microsoft.com/p/roboraid/9nblggh5fv3j).
@@ -116,10 +122,9 @@ Tenga cuidado de no abrumar al usuario a pesar de ello, eche un vistazo a las [d
 ## <a name="using-eye-gaze-for-interaction"></a>Uso de la mirada a la interacción
 Crear una interacción que aproveche los objetivos de vista rápida en movimiento puede ser un reto.
 Por un lado, los ojos se mueven tan rápido que debe tener cuidado al usar la entrada mirada, ya que, de lo contrario, los usuarios pueden encontrar la experiencia abrumadora o distraer. Por otro lado, también puede crear experiencias realmente mágicas que impedirán a los usuarios. Para ayudarle, eche un vistazo a nuestra información general sobre las ventajas principales, los desafíos y las recomendaciones de diseño para [la interacción](eye-gaze-interaction.md). 
-
-<br>
  
 ## <a name="fallback-solutions-when-eye-tracking-is-not-available"></a>Soluciones de reserva cuando el seguimiento ocular no está disponible
+
 En raras ocasiones, es posible que los datos de seguimiento de ojos no estén disponibles.
 Esto puede deberse a diferentes motivos entre los que se enumeran los más comunes:
 * El sistema no pudo [calibrar al usuario](calibration.md).
@@ -127,9 +132,9 @@ Esto puede deberse a diferentes motivos entre los que se enumeran los más comun
 * El usuario está calibrado, pero decidió no conceder permiso a la aplicación para usar los datos de seguimiento ocular.    
 * El usuario tiene anteojos únicos o alguna condición de ojo que el sistema todavía no admite.    
 * Factores externos que impiden el seguimiento de ojos fiables, como manchas en el parasol o anteojos de HoloLens, luz solar directa y oclusión, debido al pelo en la parte delantera de los ojos.   
+
 Por lo tanto, los desarrolladores deben asegurarse de que hay compatibilidad de reserva adecuada para estos usuarios. En la página [seguimiento ocular en DirectX](gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) , se explican las API necesarias para detectar si hay datos de seguimiento ocular disponibles. 
 
-Como se describió anteriormente, existen varios motivos por los que es posible que los datos de seguimiento ocular no estén disponibles.   
 Aunque algunos usuarios pueden haber decidido revocar el acceso a sus datos de seguimiento ocular y son correctos con la desventaja de una experiencia de usuario inferior a la privacidad de no proporcionar acceso a los datos de seguimiento ocular, en algunos casos esto puede ser involuntaria.  
 Por lo tanto, si la aplicación usa el seguimiento ocular y esta es una parte importante de la experiencia, recomendamos que se comunique claramente al usuario.     
 Informar a los usuarios de por qué el seguimiento ocular es fundamental para su aplicación (quizás incluso mostrar algunas características mejoradas) para experimentar todo el potencial de su aplicación puede ayudar al usuario a comprender mejor lo que están ofreciendo.    
@@ -153,10 +158,10 @@ Esperamos que esta página le haya proporcionado una buena introducción para em
 ## <a name="see-also"></a>Consulta también
 * [Calibración](calibration.md)
 * [Comodidad](comfort.md)
-* [Interacción con miras oculares](eye-gaze-interaction.md)
+* [Interacción basada en el control con los ojos](eye-gaze-interaction.md)
 * [Miras a la vista en DirectX](gaze-in-directx.md)
 * [Mirada a la vista de Unity (kit de herramientas de realidad mixta)](https://aka.ms/mrtk-eyes)
-* [Miras y confirmaciones](gaze-and-commit.md)
+* [Mirada y confirmación](gaze-and-commit.md)
 * [Entrada de voz](voice-design.md)
 
 

@@ -6,18 +6,18 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b83c7ac39d522fc2b799591fa02608d5fc5cc930
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9d76d5323705c001dbafe4411a9334dd3403d0ca
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437570"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926237"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrar los anclajes espaciales de Azure en una experiencia compartida
 
 En esta lección, aprenderá a integrar anclajes espaciales de Azure (ASA) en nuestra experiencia compartida. ASA permite que varios dispositivos colocalizados tengan una referencia común si su entorno físico va a delimitar experiencias virtuales de forma que todos los participantes vean objetos en la misma ubicación física.
 
-Antes de continuar con esta lección, es necesario completar el módulo de aprendizaje de ASA, que tratará los conceptos básicos de ASA, la creación de cuentas y recursos de Azure y otros bloques de edificios fundamentales necesarios antes de que podamos integrar ASA en nuestra experiencia compartida.
+Antes de continuar con esta lección, deberá completar el módulo de aprendizaje de ASA, que tratará los conceptos básicos de ASA, la creación de cuentas y recursos de Azure, así como otros bloques de creación fundamentales necesarios antes de integrar ASA en nuestra experiencia compartida.
 
 Objetivos
 
@@ -37,11 +37,11 @@ Objetivos
 
 ![Module3hapter5step5im](images/module3chapter5step5im.PNG)
 
-4. Ahora, en la jerarquía, seleccione ShareAzureAnchorButton y desplace su atención al panel de inestado. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente, seleccione AnchorModuleScript y haga clic en ShareAnchorNetework ().
+4. Ahora, en la jerarquía, seleccione ShareAzureAnchorButton y desplace su atención al panel del inspector. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente, seleccione AnchorModuleScript y haga clic en ShareAnchorNetwork ().
 
 ![Module3hapter5step6im](images/module3chapter5step6im.PNG)
 
-5. Seleccione GetAzureAnchorButton (consulte el paso 4) y vuelva a llamar al panel Inspector. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente y seleccione AnchorModuleScript, y haga clic en GetSharedAnchorNetwork () y en guardar.
+5. Seleccione GetAzureAnchorButton (consulte el paso 4) y vuelva a llamar al panel Inspector. Desplácese hacia abajo hasta el menú desplegable que se muestra en la imagen siguiente, seleccione AnchorModuleScript, haga clic en GetSharedAnchorNetwork () y en guardar.
 
 ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
@@ -55,5 +55,5 @@ Objetivos
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En esta lección ha aprendido a integrar los nuevos delimitadores espaciales de Azure para alinear dispositivos colocalizados en una experiencia compartida. Esto también concluye el módulo de uso compartido. Hemos aprendido a configurar una nueva cuenta de Photon, a integrar Photon y BURDO en una nueva aplicación de Unity, a configurar avatares y a objetos compartidos y, por último, a alinear varios participantes con ASA. 
+En esta lección, ha aprendido a integrar los nuevos delimitadores espaciales de Azure para alinear dispositivos colocalizados en una experiencia compartida. Esto también concluye el módulo de uso compartido. Hemos aprendido a configurar una nueva cuenta de Photon, a integrar Photon y BURDO en una nueva aplicación de Unity, a configurar avatares y a objetos compartidos y, por último, a alinear varios participantes con ASA. 
 

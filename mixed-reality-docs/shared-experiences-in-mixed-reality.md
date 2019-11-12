@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: experiencia compartida, realidad mixta, holograma, delimitador espacial, multiusuario, múltiple
-ms.openlocfilehash: 4e71bdefa32d2f6cf3b85b074c3d9fcbdb6aa909
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c846bcd8c9c52f1f169d306df3afd4f982656078
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437468"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926928"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>Experiencias compartidas en realidad mixta
 
@@ -166,7 +166,7 @@ Aproveche [MixedReality-WebRTC](https://github.com/microsoft/mixedreality-webrtc
 
 ## <a name="presenter-spectator-applications-and-demos"></a>Presenter: aplicaciones y demostraciones de Spectator
 
-Aproveche [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) para incorporar la [funcionalidad de visualización de specator](spectator-view.md) a la aplicación.  Habilite otros dispositivos (cámaras HL, Android, iOS y vídeo) para ver qué ve HoloLens desde una perspectiva diferente en la misma ubicación y recibir actualizaciones de las interacciones del usuario de HoloLens del host que interactúa con los hologramas.  Vea, tome fotografías y grabe vídeo sobre lo que hace el host con los hologramas en la aplicación desde su propia perspectiva espacial con el complemento Spectator de la misma aplicación.
+Aproveche [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality-SpectatorView) para incorporar la [funcionalidad de visualización de Spectator](spectator-view.md) a la aplicación.  Habilite otros dispositivos (cámaras HL, Android, iOS y vídeo) para ver qué ve HoloLens desde una perspectiva diferente en la misma ubicación y recibir actualizaciones de las interacciones del usuario de HoloLens del host que interactúa con los hologramas.  Vea, tome fotografías y grabe vídeo sobre lo que hace el host con los hologramas en la aplicación desde su propia perspectiva espacial con el complemento Spectator de la misma aplicación.
 
 **Nota:** Las imágenes se realizan a través de la captura de pantalla en dispositivos iOS/Android.
 

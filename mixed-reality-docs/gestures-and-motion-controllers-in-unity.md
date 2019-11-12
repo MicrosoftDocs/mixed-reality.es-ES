@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mirados, entrada
-ms.openlocfilehash: a7ca5a895015ba0458f0f64f1422612e797f5067
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435227"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926570"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos y controladores de movimiento en Unity
 
@@ -145,7 +145,7 @@ Unity usa actualmente sus API de *entrada general. GetButton/Input. GetAxis* par
 
 Para usar las API de entrada de Unity generales, normalmente se empieza por conectar botones y ejes a nombres lógicos en el [Administrador de entrada de Unity](https://docs.unity3d.com/Manual/ConventionalGameInput.html), enlazando un botón o ID. de eje a cada nombre. Después, puede escribir código que haga referencia a ese botón o nombre de eje lógico.
 
-Por ejemplo, para asignar el botón de desencadenador del controlador de movimiento izquierdo a la acción de envío, vaya a **editar > configuración del proyecto > entrada** en Unity y expanda las propiedades de la sección enviar en ejes. Cambie el **botón de exposición** o la propiedad del **botón positivo alternativo** para leer el **botón 14 del joystick**, de la siguiente manera:
+Por ejemplo, para asignar el botón de desencadenador del controlador de movimiento izquierdo a la acción de envío, vaya a **editar > configuración del proyecto > entrada** en Unity y expanda las propiedades de la sección enviar en ejes. Cambie el botón **positivo** o la propiedad del **botón positivo alternativo** para leer el **botón 14 del joystick**, de la siguiente manera:
 
 ](images/unity-input-manager.png) InputManager de ![Unity<br>
 *InputManager de Unity*
@@ -446,7 +446,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>Iniciar la captura de gestos
 
-De forma predeterminada, un *GestureRecognizer* no supervisa la entrada hasta que se llama a *StartCapturingGestures ()* . Es posible que se genere un evento de gesto después de que se llame a *StopCapturingGestures ()* si la entrada se realizó antes que el marco en el que se procesó *StopCapturingGestures ()* . El *GestureRecognizer* recordará si está activado o desactivado durante el fotograma Previou en el que se ha producido realmente el gesto y, por tanto, es confiable iniciar y detener la supervisión de gestos según el destino de la mirada a este fotograma.
+De forma predeterminada, un *GestureRecognizer* no supervisa la entrada hasta que se llama a *StartCapturingGestures ()* . Es posible que se genere un evento de gesto después de que se llame a *StopCapturingGestures ()* si la entrada se realizó antes que el marco en el que se procesó *StopCapturingGestures ()* . El *GestureRecognizer* recordará si está activado o desactivado durante el fotograma anterior en el que se ha producido realmente el gesto y, por tanto, es confiable iniciar y detener la supervisión de gestos según el destino de la mirada a este fotograma.
 
 ```cs
 recognizer.StartCapturingGestures();

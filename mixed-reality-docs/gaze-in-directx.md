@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 05/09/2019
 ms.topic: article
 keywords: miras hacia abajo, hacia abajo, seguimiento del cabezal, seguimiento ocular, DirectX, entrada, hologramas
-ms.openlocfilehash: 48188cc8c886b371847357701b42249f486bceac
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: 664657b9ab01530a608e31091823e828cc99d0cd
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641119"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926560"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>Entrada de ojo y mira fijamente en DirectX
 
@@ -100,10 +100,10 @@ std::thread requestAccessThread([this]()
 requestAccessThread.detach();
 
 ```
-Iniciar un subproceso desasociado es solo una opción para controlar las llamadas asincrónicas. Como alternativa, puede usar la nueva funcionalidad de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) admitida C++por/WinRT.
+Iniciar un subproceso desasociado es solo una opción para controlar las llamadas asincrónicas. Como alternativa, puede usar la nueva funcionalidad de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) compatible con C++/WinRT.
 Este es otro ejemplo para pedir permiso de usuario:
 -   EyesPose:: IsSupported () permite que la aplicación desencadene el cuadro de diálogo de permiso solo si hay un seguimiento ocular.
--   GazeInputAccessStatus m_gazeInputAccessStatus; Esto es para evitar la acumulación de la solicitud de permiso una y otra vez.
+-   M_gazeInputAccessStatus GazeInputAccessStatus; Esto es para evitar la acumulación de la solicitud de permiso una y otra vez.
 
 ```cpp
 GazeInputAccessStatus m_gazeInputAccessStatus; // This is to prevent popping up the permission prompt over and over again.
@@ -144,7 +144,7 @@ Esto agrega las líneas siguientes a la sección *Package* del archivo appxmanif
 
 ### <a name="getting-the-eye-gaze-ray"></a>Obtención del rayo ojo
 Una vez que haya recibido el acceso a ET, tendrá la libertad de captar el rayo cada fotograma.
-Del mismo modo que con el encabezado de la mirada, obtenga el [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) llamando a [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) con una marca de tiempo y un sistema de coordenadas deseados. SpatialPointerPose contiene un objeto [EyesPose](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose) a través de la propiedad [Eyes](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes) . No es null solo si está habilitado el seguimiento ocular. Desde allí, puede comprobar si el usuario del dispositivo tiene una calibración de seguimiento de ojo llamando a [EyesPose:: IsCalibrationValid](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid).  A continuación, use la propiedad [fijamente](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) para obtener una [SpatialRay](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialray) contianing la posición y la dirección de la vista. A veces, la propiedad fijamente puede ser null, por lo que debe asegurarse de comprobarlo. Esto puede ocurrir si un usuario calibrado cierra temporalmente sus ojos.
+Del mismo modo que con el encabezado de la mirada, obtenga el [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) llamando a [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) con una marca de tiempo y un sistema de coordenadas deseados. SpatialPointerPose contiene un objeto [EyesPose](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose) a través de la propiedad [Eyes](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.eyes) . No es null solo si está habilitado el seguimiento ocular. Desde allí, puede comprobar si el usuario del dispositivo tiene una calibración de seguimiento de ojo llamando a [EyesPose:: IsCalibrationValid](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.iscalibrationvalid#Windows_Perception_People_EyesPose_IsCalibrationValid).  A continuación, use la propiedad [fijamente](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.gaze#Windows_Perception_People_EyesPose_Gaze) para obtener el [SpatialRay](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialray) que contiene la posición y la dirección de la mirada. A veces, la propiedad fijamente puede ser null, por lo que debe asegurarse de comprobarlo. Esto puede ocurrir si un usuario calibrado cierra temporalmente sus ojos.
 
 En el código siguiente se muestra cómo tener acceso al rayo ojo.
 
@@ -193,7 +193,10 @@ Sin embargo, para la entrada que enruta a través de SpatialInteractionManager, 
 <br>
 
 ## <a name="calibration"></a>Curva
-Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar un [seguimiento ocular](calibration.md)de la calibración del usuario. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. Los desarrolladores no tienen que hacer nada en su extremo para administrar la calibración del usuario. El sistema garantizará que se solicite al usuario que calibre el dispositivo en las siguientes circunstancias: * el usuario está usando el dispositivo por primera vez * el usuario ha deshabilitado anteriormente el proceso de calibración * el proceso de calibración no tuvo éxito el último hora en que el usuario usó el dispositivo
+Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar un [seguimiento ocular](calibration.md)de la calibración del usuario. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. Los desarrolladores no tienen que hacer nada en su extremo para administrar la calibración del usuario. El sistema garantizará que se solicite al usuario que calibre el dispositivo en las siguientes circunstancias:
+* El usuario está usando el dispositivo por primera vez
+* El usuario previamente decidió salir del proceso de calibración
+* El proceso de calibración no se realizó correctamente la última vez que el usuario usaba el dispositivo
 
 Los desarrolladores deben asegurarse de proporcionar soporte técnico adecuado a los usuarios para los que es posible que los datos de seguimiento ocular no estén disponibles. Más información sobre las consideraciones sobre las soluciones de reserva en el [seguimiento de Hololens 2](eye-tracking.md).
 
