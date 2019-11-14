@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 32a77d6032335ab3ae769b85c5f947440658743f
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: ade7a839e03a306332bf18f1db49805f59c71429
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913547"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064255"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. colocar contenido dinámico y usar solucionadores
 
@@ -72,7 +72,7 @@ En esta sección, configuraremos el objeto de juego de cubos que se creó anteri
 
     ![mrlearning-base-CH3-3-step2b. png](images/mrlearning-base-ch3-3-step2b.png)
 
-3. Establezca las distancias máxima y mínima de la vista radial en 0 para que el cubo no tenga ninguna distancia entre él y la muñeca del usuario. Una vez establecido, el cubo se alinea perfectamente con la muñeca. También puede ajustar el campo Dirección de referencia para ajustar el comportamiento de la orientación del cubo, como, por ejemplo, si desea permitir que el objeto rote con la muñeca del usuario estableciendo la dirección de referencia para orientarse con el objeto al que se realiza el seguimiento.
+3. Establezca las distancias máxima y mínima de la vista radial en 0 para que el cubo no tenga ninguna distancia entre él y la muñeca del usuario. Una vez establecido, el cubo se alinea perfectamente con la muñeca. También puede ajustar el campo Dirección de referencia para ajustar el comportamiento de la orientación del cubo, por ejemplo, si desea permitir que el objeto rote con la muñeca del usuario estableciendo la dirección de referencia en orientado a objetos.
 
     ![mrlearning-base-CH3-3-Step3. png](images/mrlearning-base-ch3-3-step3.png)
 

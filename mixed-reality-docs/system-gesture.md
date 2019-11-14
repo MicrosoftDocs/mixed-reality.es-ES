@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño
-ms.openlocfilehash: ba543ffe0802d0b95cc539fb0e73c0b4e51fc186
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
+ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926727"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064238"
 ---
 # <a name="system-gesture"></a>Gestos del sistema
 
@@ -98,7 +98,7 @@ También hemos diseñado una solución de una sola mano para facilitar el acceso
     :::column-end:::
     :::column:::
         ![botón de la muñeca](images/wrist-button-pinch.png)<br>
-        **Paso: mire fijamente en el botón y luego en Pinch**<br>
+        **Paso 2: mira fijamente en el botón y luego en Pinch**<br>
     :::column-end:::
 :::row-end:::
 
