@@ -3,16 +3,16 @@ title: Preparar una aplicación existente para HoloLens 2
 description: Diseñado para desarrolladores que ya tienen una aplicación en HoloLens (1.ª generación) o una versión anterior de MRTK, y quieren realizar la portabilidad a MRTK versión 2 y HoloLens 2.
 author: grbury
 ms.author: grbury
-ms.date: 10/14/19
+ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: e1256cfaf9253a31161a836f75a90c64d17cf093
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
+ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438357"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926211"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Preparar una aplicación existente para HoloLens 2
 
@@ -129,7 +129,7 @@ Cada aplicación y escenario son diferentes, y vamos a seguir mejorando y public
 
 - Las aplicaciones directas de Unity son sencillas porque puedes compilar un paquete de aplicaciones de ARM o realizar la implementación directamente en el dispositivo para que se ejecute la agrupación. Algunos complementos nativos de Unity pueden presentar ciertos desafíos de desarrollo. Por este motivo, debes actualizar todos los complementos nativos de Unity a Visual Studio 2019 y, a continuación, volver a generarlos para ARM.
 
-- Una aplicación usó el complemento AudioKinetic Wwise de Unity y esa versión de Unity no tenía un complemento de ARM para UWP, lo que exigió un esfuerzo considerable para volver a crear las funcionalidades de sonido en la aplicación en cuestión para su ejecución en ARM. Asegúrate de que todos los complementos necesarios para tus planes de desarrollo están instalados y disponibles en Unity.
+- Una aplicación usó el complemento AudioKinetic Wwise de Unity y esa versión de Unity no tenía ningún complemento de ARM para UWP, lo que exigió un esfuerzo considerable para volver a crear las funcionalidades de sonido en la aplicación en cuestión para su ejecución en ARM. Asegúrate de que todos los complementos necesarios para tus planes de desarrollo están instalados y disponibles en Unity.
 
 - En algunos casos, puede que no exista un complemento de UWP/ARM para los complementos necesarios para la aplicación, lo que bloquea la capacidad de portar la aplicación y ejecutarla en HoloLens 2. Ponte en contacto con tu proveedor de complementos para resolver el problema y obtener compatibilidad con ARM.
 
