@@ -6,14 +6,16 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada
-ms.openlocfilehash: 1b0a57ad680b7f779201e99dea24bfe746820c44
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437147"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105770"
 ---
 # <a name="voice-input"></a>Entrada de voz
+
+![Entrada de voz](images/UX/UX_Hero_VoiceCommand.jpg)
 
 Voice es una de las formas clave de entrada en HoloLens. Permite comandos directamente de un holograma sin tener que usar [gestos de mano](gaze-and-commit.md#composite-gestures). La entrada de voz puede ser una forma natural de comunicar su intención. La voz es especialmente adecuada en el recorrido de interfaces complejas, ya que permite a los usuarios cortar menús anidados con un comando.
 
@@ -275,7 +277,7 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 
 En el caso de las aplicaciones que desean aprovechar las opciones de procesamiento de entrada de audio personalizadas proporcionadas por HoloLens, es importante comprender las distintas [categorías de flujo de audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) que puede consumir la aplicación. Windows 10 admite varias categorías de secuencias diferentes y HoloLens usa tres de ellas para habilitar el procesamiento personalizado con el fin de optimizar la calidad de audio del micrófono adaptada a la voz, la comunicación y otras que se pueden usar para el audio del entorno ambiente. escenarios de captura (es decir, "videocámara").
 * La categoría AudioCategory_Communications Stream está personalizada para escenarios de calidad y narración de llamadas y proporciona al cliente una secuencia de audio mono 16kHz 24bit de la voz del usuario
-* La categoría AudioCategory_Speech Stream está personalizada para el motor de voz HoloLens (Windows) y le proporciona un flujo mono 16kHz 24bit de la voz del usuario. Los motores de voz de terceros pueden usar esta categoría si es necesario.
+* La categoría AudioCategory_Speech Stream está personalizada para el motor de voz de HoloLens (Windows) y le proporciona una secuencia de 16kHz 24bit mono de la voz del usuario. Los motores de voz de terceros pueden usar esta categoría si es necesario.
 * La categoría AudioCategory_Other Stream está personalizada para la grabación de audio del entorno ambiente y proporciona al cliente una secuencia de audio estéreo de 24 bits de 48 bits.
 
 Todo este procesamiento de audio se acelera en hardware, lo que significa que las características agotan una gran cantidad de energía que si se realizara el mismo procesamiento en la CPU de HoloLens. Evite ejecutar otro procesamiento de entrada de audio en la CPU para maximizar la duración de la batería del sistema y aprovechar el procesamiento de entrada de audio descargado integrado.
@@ -290,8 +292,20 @@ Si tiene algún problema con "Select" y "Hola Cortana", intente cambiar a un esp
 
 En el caso de la versión 2017 de Windows Mixed Reality Developer Edition, la lógica de administración de puntos de conexión de audio funcionará bien (siempre) después de cerrar la sesión y volver a iniciarla en el escritorio del equipo después de la conexión inicial de HMD. Antes de ese primer evento de cierre de sesión/en el momento de pasar a través de WMR OOBE, el usuario podría experimentar varios problemas de funcionalidad de audio que van desde sin audio hasta sin conmutación de audio, en función de cómo se haya configurado el sistema antes de conectarse a HMD por primera vez.
 
+<br>
+
+---
+
+## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Entrada de voz en MRTK (kit de herramientas de realidad mixta) para Unity
+Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede asignar fácilmente comandos de voz en cualquier objeto. Use el **Perfil de entrada de voz** de MRTK para definir sus palabras clave. Mediante la asignación del script **SpeechInputHandler** , puede hacer que cualquier objeto responda a las palabras clave definidas en el perfil de entrada de voz. SpeechInputHandler también proporciona una etiqueta de confirmación de voz para mejorar la confianza del usuario.
+
+* [Comando MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
+
+
+---
+
 ## <a name="see-also"></a>Consulta también
-* [Miras y confirmaciones](gaze-and-commit.md)
+* [Mirada y confirmación](gaze-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Entrada MR 212: voz](holograms-212.md)
 * [Entrada de voz en DirectX](voice-input-in-directx.md)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: da485f167ef3902dd75adf8da8181504fbc6c6df
-ms.sourcegitcommit: b6b76275fad90df6d9645dd2bc074b7b2168c7c8
+ms.openlocfilehash: cf51505cab2db765325c2e7b78a52e4b790845c9
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73913164"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105957"
 ---
 # <a name="speech-sdk-learning-module---rocket-launcher-control-using-speech-commands"></a>Módulo de aprendizaje de Speech SDK: control selector de Rocket con comandos de voz
 
@@ -24,7 +24,7 @@ En esta lección, usaremos la característica de intención del servicio de voz 
 
 ## <a name="instructions"></a>Instrucciones
 
-1. En este tutorial, vamos a usar un recurso "BaseModule" para integrar Rocket Launcher con los comandos de voz. Para ello, es necesario importar el recurso en el proyecto. Puede descargar el recurso "Rocket Launcher" mediante este [vínculo](https://github.com/Developer-OI/MixedRealityLearning/releases/download/1.2.1/BaseModuleAssets-1.2.1.unitypackage).
+1. En este tutorial, vamos a usar un recurso "BaseModule" para integrar Rocket Launcher con los comandos de voz. Para ello, es necesario importar el recurso en el proyecto. Puede descargar el recurso "Rocket Launcher" mediante este [vínculo](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage).
 
 2. Para importar el recurso, vaya a activos-> Importar paquete personalizado >-> navegue hasta el archivo descargado y haga clic en importar.
 

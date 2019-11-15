@@ -6,19 +6,16 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barra de aplicaciones, cuadro de límite
-ms.openlocfilehash: f09187bc2a3969a8f844711052e15433f5449d6d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437055"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105760"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cuadro de límite y barra de la aplicación
-![El límite es la interfaz estándar para la manipulación de objetos en la realidad mixta.](images/640px-boundingbox-hero.jpg)<br>
-
+![límite es la interfaz estándar para la manipulación de objetos en la realidad mixta.](images/640px-boundingbox-hero.jpg)<br>
 <br>
-
----
 
 ## <a name="what-is-the-bounding-box"></a>¿Cuál es el cuadro de límite?
 
@@ -95,15 +92,33 @@ La barra de la aplicación es un menú de nivel de objeto que contiene una serie
 <br>
 
 
+## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Cuadro de límite en MRTK (kit de herramientas de realidad mixta) para Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts y Prefabs para el cuadro de límite y la barra de la aplicación. Para agregar un cuadro de límite, basta con asignar el script BoundingBox.cs a cualquier objeto.
 
-**Para el desarrollo de aplicaciones de Unity, consulte [App bar en el kit de herramientas de realidad mixta (Unity).](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_AppBar.html)**
+* [MRTK: cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+
 
 <br>
 
 ---
 
+
 ## <a name="see-also"></a>Consulta también
+
+* [Cursores](cursors.md)
+* [Rayo de mano](point-and-commit.md)
+* [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
-* [Texto en Unity](text-in-unity.md)
+* [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
+* [Manipula](direct-manipulation.md)
+* [Menú Mano](hand-menu.md)
+* [Menú Near](near-menu.md)
 * [Colección de objetos](object-collection.md)
+* [Comando de voz](voice-input.md)
+* [Teclado](keyboard.md)
+* [Herramienta](tooltip.md)
+* [Tabletas](slate.md)
+* [Control deslizante](slider.md)
+* [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
+* [Magnetismo de superficie](surface-magnetism.md)

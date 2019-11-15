@@ -6,14 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens (1ª generación), HoloLens 2, realidad mixta, cursores, destinatarios, mirados, gestos
-ms.openlocfilehash: ef011d8400de1e23db3d6fb4b0f2a853d787ae86
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 719e7a573e8c8bc682ec0f960d9f3c8f8c8e5a4a
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435756"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105742"
 ---
 # <a name="cursors"></a>Cursores
+
+![Cursores](images/UX/UX_Hero_Cursor.jpg)
 
 Un cursor, o indicador del vector de destinatarios actual, proporciona comentarios continuos para que el usuario comprenda Dónde está el foco actual en ese momento. El cursor permite al usuario comprender su punto de destino actual y actúa como comentario para indicar qué área, holograma o punto responderá a la entrada. Es la representación digital de dónde el dispositivo entiende la atención del usuario (aunque es posible que no sea el mismo que determinar nada sobre sus intenciones).
 
@@ -154,6 +156,15 @@ Se recomienda diseñar sin un cursor cuando el sentido de la inmersión es un co
 
 ---
 
+## <a name="cursor-in-mrtkmixed-reality-toolkit-for-unity"></a>Cursor en MRTK (kit de herramientas de realidad mixta) para Unity
+De forma predeterminada, **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona un cursor recurso prefabricado ([DefaultCursor. recurso prefabricado](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) que tiene el mismo estado visual que el cursor del sistema del shell. Se asigna en el perfil de entrada de MRTK, en punteros. Puede reemplazar o personalizar este cursor para su experiencia. Para la experiencia con la entrada de seguimiento ocular, MRTK también proporciona EyeGazeCursor que tiene un efecto visual sutil para minimizar la distracción.
+
+* [MRTK: Perfil de puntero](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK: sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK: punteros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
+
+---
 
 ## <a name="see-also"></a>Consulta también
 * [Gestos](gaze-and-commit.md#composite-gestures)

@@ -6,16 +6,16 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, controles, diseño
-ms.openlocfilehash: 8f3629c6d9465383efc901ed784a3719cd6fdfb2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 98fec76558502658511faf3f18d623bfa5a49dc2
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438171"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74106002"
 ---
 # <a name="object-collection"></a>Colección de objetos
 
-![Colección de objetos utilizada en la tabla periódica de la aplicación Elements](images/640px-objectcollection-hero-640px.jpg)<br>
+![Colección de objetos utilizada en la tabla periódica de la aplicación Elements](images/UX/UX_Hero_ObjectCollection.jpg)<br>
 
 
 Colección de objetos es un control de diseño que ayuda a diseñar una matriz de objetos en una forma tridimensional predefinida. Admite varios estilos de superficie: **plano, cilindro, esfera** y **radial**. Puede ajustar el radio y el tamaño de los objetos y el espacio que hay entre ellos. La colección de objetos admite cualquier objeto de Unity, tanto en 2D como en 3D. En el **[Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** , hemos creado scripts de Unity y ejemplos que le ayudarán a crear una colección de objetos.
@@ -44,7 +44,36 @@ También puede usar imágenes 2D con la colección de objetos. En los siguientes
 ![un ejemplo de imágenes 2D con colección de objetos](images/940px-layout-2dimages.jpg)<br>
 *Ejemplos de uso de colecciones de objetos con imágenes 2D*
 
+<br>
+
+---
+
+## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Colección de objetos en MRTK (kit de herramientas de realidad mixta) para Unity
+
+* [MRTK: colección de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
+
+
+<br>
+
+---
+
+
 ## <a name="see-also"></a>Consulta también
-* [Scripts y Prefabs para la colección de objetos en el kit de herramientas de realidad mixta en GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_ObjectCollection.md)
+
+* [Cursores](cursors.md)
+* [Rayo de mano](point-and-commit.md)
+* [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
-* [Cuadro de límite](app-bar-and-bounding-box.md)
+* [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
+* [Manipula](direct-manipulation.md)
+* [Menú Mano](hand-menu.md)
+* [Menú Near](near-menu.md)
+* [Colección de objetos](object-collection.md)
+* [Comando de voz](voice-input.md)
+* [Teclado](keyboard.md)
+* [Herramienta](tooltip.md)
+* [Tabletas](slate.md)
+* [Control deslizante](slider.md)
+* [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
+* [Indicación del progreso](progress.md)
+* [Magnetismo de superficie](surface-magnetism.md)

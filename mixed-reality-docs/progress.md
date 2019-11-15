@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, IU, experiencia de usuario
-ms.openlocfilehash: 43b4802e7c821c98c847509ace950f381da12f95
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: aafcd8eebbabfc5b53d09348d513f62def909da6
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437540"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105978"
 ---
-# <a name="displaying-progress"></a>Mostrar progreso
+# <a name="progress-indicator"></a>Indicador de progreso
 
 <br>
 
-<img src="images/HoloLens2_Loader.gif" alt="Progress ring example in HoloLens" width="940px">
+<img src="images/UX/MRTK_ProgressIndicator.gif" alt="Progress ring example in HoloLens" width="940px">
 
 Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga. Esto puede significar que el usuario no puede interactuar con la aplicación cuando el indicador de progreso está visible y también puede indicar el tiempo de espera aproximado, según el indicador que usa.
 
@@ -88,9 +88,32 @@ Es importante proporcionar información de usuario sobre lo que está ocurriendo
 
 ---
 
+## <a name="progress-indicator-in-mrtkmixed-reality-toolkit-for-unity"></a>Indicador de progreso en MRTK (kit de herramientas de realidad mixta) para Unity
+
+* [MRTK: indicador de progreso Prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/ProgressIndicators)
+* [MRTK: servicio de transición de escenas](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.html)
+
+
+<br>
+
+---
+
 ## <a name="see-also"></a>Consulta también
-* [Scripts de progreso y Prefabs en el kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Loader)
-* [Cuadro de límite](app-bar-and-bounding-box.md)
+
+* [Cursores](cursors.md)
+* [Rayo de mano](point-and-commit.md)
+* [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
+* [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
+* [Manipula](direct-manipulation.md)
+* [Menú Mano](hand-menu.md)
+* [Menú Near](near-menu.md)
 * [Colección de objetos](object-collection.md)
+* [Comando de voz](voice-input.md)
+* [Teclado](keyboard.md)
+* [Herramienta](tooltip.md)
+* [Tabletas](slate.md)
+* [Control deslizante](slider.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
+* [Indicación del progreso](progress.md)
+* [Magnetismo de superficie](surface-magnetism.md)
