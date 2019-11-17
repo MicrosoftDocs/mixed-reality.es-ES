@@ -5,27 +5,27 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: 91046dd5bbf7bdc692e4ff26c19bda59af31876e
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: 901e0408071161a827c0f60a229a6f73a440ac2d
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106194"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143221"
 ---
 # <a name="slider"></a>Control deslizante
 
 ![Control deslizante](images/UX/UX_Hero_Slider.jpg)
 
-Los controles deslizantes son componentes de interfaz de usuario que permiten cambiar un valor continuamente moviendo un control deslizante en una pista. El control deslizante de pinch se puede desplazar directamente, ya sea directamente o a la distancia. Los controles deslizantes funcionan con varios tipos de entrada, como mira fijamente y con la pulsación aérea, así como con el controlador de movimiento.
+Sliders are UI components that allow you to continuously change a value by moving a slider on a track. The Pinch Slider can be moved by directly grabbing the slider, either directly or at a distance. Sliders work with various input types such as gaze and air-tap as well as the motion controller.
 
 <br>
 
 ---
 
-## <a name="slider-in-mrtkmixed-reality-toolkit-for-unity"></a>Control deslizante en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="slider-in-mrtkmixed-reality-toolkit-for-unity"></a>Slider in MRTK(Mixed Reality Toolkit) for Unity
 
-* [MRTK: control deslizante](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Sliders.html)
+* [MRTK - Slider](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Sliders.html)
 
 <br>
 
@@ -34,19 +34,20 @@ Los controles deslizantes son componentes de interfaz de usuario que permiten ca
 ## <a name="see-also"></a>Consulta también
 
 * [Cursores](cursors.md)
-* [Rayo de mano](point-and-commit.md)
+* [Hand ray](point-and-commit.md)
 * [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Manipula](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menú Mano](hand-menu.md)
-* [Menú Near](near-menu.md)
+* [Near menu](near-menu.md)
 * [Colección de objetos](object-collection.md)
-* [Comando de voz](voice-input.md)
+* [Voice command](voice-input.md)
 * [Teclado](keyboard.md)
-* [Herramienta](tooltip.md)
-* [Tabletas](slate.md)
+* [Tooltip](tooltip.md)
+* [Slate](slate.md)
 * [Control deslizante](slider.md)
+* [Shader](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
-* [Magnetismo de superficie](surface-magnetism.md)
+* [Surface magnetism](surface-magnetism.md)

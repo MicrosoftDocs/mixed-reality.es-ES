@@ -5,28 +5,28 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: 6be1574e6127b5640dd5e6c12a9efd16009325ba
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: 15116a01845ea58b8664ed3f64e668854bb2ecb7
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106264"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143236"
 ---
 # <a name="keyboard"></a>Teclado
 
 ![Teclado](images/UX/UX_Hero_Keyboard.jpg)
 
-La aplicación de realidad mixta puede invocar el teclado del sistema en cualquier momento. Tenga en cuenta que el teclado del sistema se comportará de acuerdo con las capacidades de la plataforma de destino; por ejemplo, el teclado de HoloLens 2 admitiría interacciones de manos directas, mientras que el teclado de HoloLens (1º gen) admitiría la entrada de gestos de toque y de pulsación de aire.
+Your mixed reality application can invoke the system keyboard at any time. Note that the system keyboard will behave according to the target platform's capabilities, for example the keyboard on HoloLens 2 would support direct hand interactions, while the keyboard on HoloLens (1st gen) would support gaze and air-tap gesture input.
 
 
 <br>
 
 ---
 
-## <a name="system-keyboard-in-mrtkmixed-reality-toolkit-for-unity"></a>Teclado del sistema en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="system-keyboard-in-mrtkmixed-reality-toolkit-for-unity"></a>System keyboard in MRTK(Mixed Reality Toolkit) for Unity
 
-* [MRTK-teclado del sistema](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html)
+* [MRTK - System keyboard](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html)
 
 <br>
 
@@ -35,19 +35,20 @@ La aplicación de realidad mixta puede invocar el teclado del sistema en cualqui
 ## <a name="see-also"></a>Consulta también
 
 * [Cursores](cursors.md)
-* [Rayo de mano](point-and-commit.md)
+* [Hand ray](point-and-commit.md)
 * [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Manipula](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menú Mano](hand-menu.md)
-* [Menú Near](near-menu.md)
+* [Near menu](near-menu.md)
 * [Colección de objetos](object-collection.md)
-* [Comando de voz](voice-input.md)
+* [Voice command](voice-input.md)
 * [Teclado](keyboard.md)
-* [Herramienta](tooltip.md)
-* [Tabletas](slate.md)
+* [Tooltip](tooltip.md)
+* [Slate](slate.md)
 * [Control deslizante](slider.md)
+* [Shader](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
-* [Magnetismo de superficie](surface-magnetism.md)
+* [Surface magnetism](surface-magnetism.md)

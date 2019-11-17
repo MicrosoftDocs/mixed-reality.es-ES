@@ -1,31 +1,31 @@
 ---
-title: Menú Near
+title: Near menu
 description: ''
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: 696aa516aa51f32ee0d687338c9783d2b4d46afb
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: 693516285457885f62fe96e6a20d829b007d80fc
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106234"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143212"
 ---
-# <a name="near-menu"></a>Menú Near
+# <a name="near-menu"></a>Near menu
 
-![Menú Near](images/UX/UX_Hero_NearMenu.jpg)
+![Near menu](images/UX/UX_Hero_NearMenu.jpg)
 
-El menú Near es una colección de los botones en un panel que sigue con el comportamiento de etiqueta. Permanece en cierto intervalo de distancia y ángulo para que pueda interactuar con el contenido. Puede usar el botón anclar o arrastrar y colocar el menú para que esté bloqueado en el mundo y deshabilitar el comportamiento de la etiqueta. Esto le permite centrarse en el contenido de destino sin que se moleste en el menú flotante.
+Near menu is a collection of the buttons on a panel that follows you with tag-along behavior. It stays in a certain range of distance and angle to allow you to interact with content. You can use the pin button or grab and place the menu to make it world-locked and disable the tag-along behavior. This allows you to focus on the target content without being disturbed by the floating menu.
 
-Puede volver a habilitar la etiqueta; para ello, presione el botón anclar y haga que el menú siga de nuevo.
+You can re-enable the tag-along by pressing the pin button and make the menu follow you again.
 
 <br>
 
 ---
 
-## <a name="near-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Menú Near en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="near-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Near menu in MRTK(Mixed Reality Toolkit) for Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios ejemplos de recurso prefabricado de menú cercanos.
 
 * [MRTK: menú Near](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)
@@ -52,6 +52,7 @@ Puede volver a habilitar la etiqueta; para ello, presione el botón anclar y hag
 * [Herramienta](tooltip.md)
 * [Tabletas](slate.md)
 * [Control deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
 * [Magnetismo de superficie](surface-magnetism.md)

@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: 07433b3749ca6dc62edbc2b7a29f72d582ba5396
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+keywords: Mixed Reality, Controls, interaction, ui, ux
+ms.openlocfilehash: 2c3c1a8550a3ae953f0e6af942159e958d560eec
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74106204"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143096"
 ---
 # <a name="surface-magnetism"></a>Magnetismo de superficie
 
@@ -50,6 +50,7 @@ Con la técnica de Surface magnetismo, puede colocar objetos en la superficie f�
 * [Herramienta](tooltip.md)
 * [Tabletas](slate.md)
 * [Control deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
 * [Magnetismo de superficie](surface-magnetism.md)

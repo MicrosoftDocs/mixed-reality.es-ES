@@ -1,36 +1,36 @@
 ---
 title: Cuadro de límite y barra de la aplicación
-description: La barra de la aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestran en el borde inferior de los límites de un holograma.
+description: The App bar is a object-level menu containing a series of buttons that displays on the bottom edge of a hologram's bounds.
 author: radicalad
 ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barra de aplicaciones, cuadro de límite
-ms.openlocfilehash: 97afc0df02fd8460547e955d4fcf3e33a4e9f566
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: e4f519cba459efac25f6c1370b07fcda4def30a1
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105760"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143174"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cuadro de límite y barra de la aplicación
-![límite es la interfaz estándar para la manipulación de objetos en la realidad mixta.](images/640px-boundingbox-hero.jpg)<br>
+![límite es la interfaz estándar para la manipulación de objetos en la realidad mixta.](images/UX/UX_Hero_BoundingBox.jpg)<br>
 <br>
 
 ## <a name="what-is-the-bounding-box"></a>¿Cuál es el cuadro de límite?
 
-El límite es la interfaz estándar para la manipulación de objetos en la realidad mixta. Proporciona al usuario una asequibilidad de que el objeto es ajustable actualmente. En HoloLens 2, el cuadro de límite funciona con la manipulación directa y responde a la proximidad del finger's del usuario. Muestra comentarios visuales para ayudar al usuario a percibir la distancia desde el objeto.
+El límite es la interfaz estándar para la manipulación de objetos en la realidad mixta. Proporciona al usuario una asequibilidad de que el objeto es ajustable actualmente. En HoloLens 2, el cuadro de límite funciona con la manipulación directa y responde a la proximidad del finger's del usuario. It shows visual feedback to help the user perceive the distance from the object.
 
 :::row:::
     :::column:::
-        ### <a name="scaling-an-objectbr"></a>Escalado de un objeto<br>
-        Las esquinas del cuadro de límite indican al usuario que el objeto se puede escalar. Los identificadores siguen un patrón muy entendido para ajustar la escala. Esta prestación visual muestra a los usuarios el área total del objeto, aunque no sea visible fuera de un modo de ajuste. Esto es especialmente importante porque, si no estuviera allí, es posible que un objeto ajustado a otro objeto o superficie parezca que se comporte como si hubiera espacio alrededor que no debiera estar ahí.<br>
+        ### <a name="scaling-an-objectbr"></a>Scaling an object<br>
+        The corners of the bounding box tell the user that the object can scale. The handles follow a widely understood pattern for adjusting scale. This visual affordance shows users the total area of the object – even if it’s not visible outside of an adjustment mode. This is especially important because if it weren’t there, an object snapped to another object or surface may appear to behave as if there was space around it that shouldn’t be there.<br>
         <br>
-        *Bucle de vídeo: escalado de un objeto a través del cuadro de límite*
+        *Video loop: Scaling an object via bounding box*
     :::column-end:::
         :::column:::
         espacio ![](images/spacer-20x582.png)<br>
-       ![punto de vista de HoloLens de escalado de un objeto a través del cuadro de límite](images/HoloLens2_BoundingBox.gif)<br>
+       ![HoloLens point-of-view of scaling an object via bounding box](images/HoloLens2_BoundingBox.gif)<br>
     :::column-end:::
 :::row-end:::
 
@@ -38,14 +38,14 @@ El límite es la interfaz estándar para la manipulación de objetos en la reali
 
 :::row:::
     :::column:::
-        ### <a name="rotating-an-objectbr"></a>Girar un objeto<br>
-        Las prestaciones rectangulares verticales en los bordes del cuadro de límite son indicadores de rotación. Esto proporciona al usuario un ajuste más preciso sobre sus hologramas colocados. No solo se pueden ajustar y escalar, sino que ahora giran.<br>
+        ### <a name="rotating-an-objectbr"></a>Rotating an object<br>
+        The vertical rectangular affordances on the edges of the bounding box are rotation indicators. This gives the user more fine adjustment over their placed holograms. Not only can they adjust and scale, but now rotate as well.<br>
         <br>
-        *Bucle de vídeo: girar un objeto a través del cuadro de límite*
+        *Video loop: Rotating an object via bounding box*
     :::column-end:::
         :::column:::
         espacio ![](images/spacer-20x582.png)<br>
-       ![punto de vista de HoloLens de girar un objeto a través del cuadro de límite](images/HoloLens2_BoundingBox_Rotate.gif)<br>
+       ![HoloLens point-of-view of rotating an object via bounding box](images/HoloLens2_BoundingBox_Rotate.gif)<br>
     :::column-end:::
 :::row-end:::
 
@@ -53,49 +53,49 @@ El límite es la interfaz estándar para la manipulación de objetos en la reali
 
 :::row:::
     :::column:::
-        ### <a name="visual-feedback-on-hand-proximity-on-hololens-2br"></a>Comentarios visuales sobre la proximidad en HoloLens 2<br>
-        En HoloLens 2, hay una indicación visual adicional que puede ayudar a la percepción del usuario de la profundidad. Se muestra un anillo cerca de su dedo y se reduce verticalmente a medida que la mano se acerca al objeto. El anillo finalmente converge en un punto cuando se alcanza el estado presionado. Esta prestación visual ayuda al usuario a comprender hasta qué punto proceden del objeto.<br>
+        ### <a name="visual-feedback-on-hand-proximity-on-hololens-2br"></a>Visual feedback on hand proximity on HoloLens 2<br>
+        On HoloLens 2, there is an additional visual cue which can help the user's perception of depth. A ring near their fingertip shows up and scales down as the fingertip gets closer to the object. The ring eventually converges into a dot when the pressed state is reached. This visual affordance helps the user understand how far they are from the object.<br>
         <br>
-        *Bucle de vídeo: ejemplo de comentarios visuales basados en proximidad a un cuadro de límite*
+        *Video loop: Example of visual feedback based on proximity to a bounding box*
     :::column-end:::
         :::column:::
         espacio ![](images/spacer-20x582.png)<br>
-       ![comentarios visuales sobre la proximidad](images/HoloLens2_Proximity.gif)<br>
+       ![Visual feedback on hand proximity](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
 
 <br>
 
-**Para el desarrollo de aplicaciones de Unity, consulte [cuadro de límite en el kit de herramientas de realidad mixta (Unity).](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)**
+**For Unity app development, see [Bounding box in the Mixed Reality Toolkit-Unity.](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)**
 
 <br>
 
 ---
 
-## <a name="what-is-the-app-bar"></a>¿Qué es la barra de la aplicación?
+## <a name="what-is-the-app-bar"></a>What is the App bar?
 
-La barra de la aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestran en el borde inferior de los límites de un holograma. Este patrón se usa normalmente para proporcionar a los usuarios la capacidad de quitar y ajustar los hologramas. La barra de la aplicación se diseñó principalmente como una manera de administrar objetos colocados en el entorno de un usuario. Junto con el cuadro de límite, un usuario tiene control total sobre dónde y cómo se orientan los objetos en realidad mixta.
+The App bar is a object-level menu containing a series of buttons that displays on the bottom edge of a hologram's bounds. This pattern is commonly used to give users the ability to remove and adjust holograms. The App bar was designed primarily as a way to manage placed objects in a user's environment. Coupled with the bounding box, a user has full control over where and how objects are oriented in mixed reality.
 
 :::row:::
     :::column:::
-        ### <a name="the-app-bar-follows-the-userbr"></a>La barra de la aplicación sigue al usuario<br>
-        Puesto que este patrón se usa con objetos que están bloqueados por todo el mundo, a medida que un usuario se desplaza por el objeto, la barra de la aplicación siempre se mostrará en el lado de los objetos más cercano al usuario. Aunque esto no se está desformando, se consigue el mismo resultado; impedir que la posición de un usuario tapaba o bloquee la funcionalidad que, de otro modo, estará disponible desde una ubicación diferente en su entorno. <br>
+        ### <a name="the-app-bar-follows-the-userbr"></a>The App bar follows the user<br>
+        Since this pattern is used with objects that are world locked, as a user moves around the object the App bar will always display on the objects' side closest to the user. While this isn't billboarding, it effectively achieves the same result; preventing a user's position to occlude or block functionality that would otherwise be available from a different location in their environment. <br>
         <br>
-        *Bucle de vídeo: desplazarse por un holograma, la barra de la aplicación sigue*
+        *Video loop: Walking around a hologram, the App bar follows*
     :::column-end:::
         :::column:::
         espacio ![](images/spacer-20x582.png)<br>
-       ![recorrer un holograma. A continuación se muestra la barra de la aplicación.](images/HoloLens2_AppBarFollowing.gif)<br>
+       ![Walking around a hologram. The App bar follows.](images/HoloLens2_AppBarFollowing.gif)<br>
     :::column-end:::
 :::row-end:::
 
 <br>
 
 
-## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Cuadro de límite en MRTK (kit de herramientas de realidad mixta) para Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts y Prefabs para el cuadro de límite y la barra de la aplicación. Para agregar un cuadro de límite, basta con asignar el script BoundingBox.cs a cualquier objeto.
+## <a name="bounding-box-in-mrtkmixed-reality-toolkit-for-unity"></a>Bounding box in MRTK(Mixed Reality Toolkit) for Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** provides scripts and prefabs for the Bounding box and App bar. You can add a Bounding box by simply assigning the BoundingBox.cs script onto any object.
 
-* [MRTK: cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+* [MRTK - Bounding Box](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
 
 
 <br>
@@ -119,6 +119,7 @@ La barra de la aplicación es un menú de nivel de objeto que contiene una serie
 * [Herramienta](tooltip.md)
 * [Tabletas](slate.md)
 * [Control deslizante](slider.md)
+* [Sombreador](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
 * [Magnetismo de superficie](surface-magnetism.md)

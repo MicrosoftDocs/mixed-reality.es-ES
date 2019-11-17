@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menú, botón, acceso rápido, diseño
-ms.openlocfilehash: b4ea7411be22633e82a88d1c91b6b2b1edbea735
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c53fdc4ea6f3243cf906ee1916a9c234d0fce6ca
+ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105637"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74143180"
 ---
 # <a name="hand-menu"></a>Menú de la mano
 
@@ -141,19 +141,20 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
 ## <a name="see-also"></a>Consulta también
 
 * [Cursores](cursors.md)
-* [Rayo de mano](point-and-commit.md)
+* [Hand ray](point-and-commit.md)
 * [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Manipula](direct-manipulation.md)
+* [Manipulation](direct-manipulation.md)
 * [Menú Mano](hand-menu.md)
-* [Menú Near](near-menu.md)
+* [Near menu](near-menu.md)
 * [Colección de objetos](object-collection.md)
-* [Comando de voz](voice-input.md)
+* [Voice command](voice-input.md)
 * [Teclado](keyboard.md)
-* [Herramienta](tooltip.md)
-* [Tabletas](slate.md)
+* [Tooltip](tooltip.md)
+* [Slate](slate.md)
 * [Control deslizante](slider.md)
+* [Shader](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
-* [Magnetismo de superficie](surface-magnetism.md)
+* [Surface magnetism](surface-magnetism.md)
