@@ -84,6 +84,7 @@
 #### [Información sobre herramientas](tooltip.md)
 #### [Claqueta](slate.md)
 #### [Control deslizante](slider.md)
+#### [Sombreador](shader.md)
 #### [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 #### [Indicación del progreso](progress.md)
 #### [Magnetismo de superficie](surface-magnetism.md)
