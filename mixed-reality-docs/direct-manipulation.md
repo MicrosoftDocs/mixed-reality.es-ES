@@ -7,14 +7,17 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: ed3b25fe9a7dd404d07073b578b8da13e1984cab
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435918"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105944"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
+
+![Botón](images/UX/UX_Hero_Manipulation.jpg)
+
 La manipulación directa es un modelo de entrada de datos que implica tocar hologramas directamente con las manos. La idea que impulsa este concepto es que los objetos se comporten exactamente igual que lo hacen en el mundo real. Para activar los botones no hay más que presionarlos, para elegir los objetos no hay más que agarrarlos y el contenido 2D se comporta como una pantalla táctil virtual. Por eso a los usuarios les resulta muy fácil y divertido aprender la manipulación directa. Se considera un modelo de entrada "cercano" porque se usa con preferencia para interactuar con contenido que está al alcance de los brazos.
 
 La manipulación directa utiliza prestaciones, lo que significa que es fácil de usar. No hay que enseñar ningún gesto simbólico a los usuarios. Todas las interacciones se crean en torno a un elemento visual que se puede tocar o agarrar.
@@ -296,12 +299,6 @@ Por ejemplo, si se anima al usuario a arrastrar un objeto o un punto de control 
 
 Es posible que hayas observado que hay paralelos de interacción que podemos dibujar en AR y controladores de movimiento en VR. Las dos entradas pueden usarse para desencadenar manipulaciones directas en sus respectivos entornos. En HoloLens 2, la realización de las operaciones de agarrar y arrastrar con las manos a corta distancia funciona de forma muy parecida a como lo hace el botón de agarrar en los controladores de movimiento de WMR. Esto proporciona a los usuarios familiaridad en la interacción entre las dos plataformas, que puede resultar útil si alguna vez decides portar la aplicación de una plataforma a la otra.
 
-
-<br>
-
----
-
-
 <br>
 
 ---
@@ -324,6 +321,18 @@ Al hacerlo, mueves la mano accidentalmente por unos botones holográficos intera
 * **A dónde**: usa información acerca de lo que mira un usuario con gestos que se realizan rápidamente. Agarra un holograma y tíralo hacia su destino previsto.  
 
     Aunque es posible que a veces esto funcione, la realización rápida de gestos con la mano puede dar lugar a destinos muy imprecisos. Sin embargo, el seguimiento de los ojos podría mejorar la precisión del gesto.
+
+<br>
+
+---
+
+## <a name="manipulation-in-mrtkmixed-reality-toolkit-for-unity"></a>Manipulación en MRTK (Mixed Reality Toolkit) para Unity
+Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede conseguir un comportamiento de manipulación común con el script **ManipulationHandler**. Con ManipulationHandler, puede agarrar y mover objetos directamente con las manos o con el haz de mano. También admite la manipulación con dos manos para escalar y girar un objeto.
+
+* [MRTK: manipulación](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+
+
+---
 
 ## <a name="see-also"></a>Consulte también
 

@@ -7,14 +7,16 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, interacción, diseño, HoloLens, manos, lejos, apuntar y confirmar
-ms.openlocfilehash: e454b7f26b402d5c168323762865d10f7feb8a17
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
+ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437647"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74105989"
 ---
 # <a name="point-and-commit-with-hands"></a>Apuntar y confirmar con las manos
+
+![Cursores](images/UX/UX_Hero_HandRay.jpg)
 
 Apuntar y confirmar con las manos es un modelo de entrada que permite a los usuarios seleccionar como destino, seleccionar y manipular contenidos 2D y objetos 3D que están fuera de su alcance. Esta técnica de interacción "lejana" es única de la realidad mixta y no es la forma en que los seres humanos interactúan de forma natural con el mundo real. Por ejemplo, en la película de superhéroes *X-Men*, el personaje [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) es capaz de llegar a objetos lejanos y manipularlos a distancia con las manos. Esto no es algo que los seres humanos pueden hacer en el mundo real. Tanto en HoloLens (AR) como en Mixed Reality (MR), dotamos a los usuarios con poderes mágicos y eliminamos la limitación física del mundo real, no solo para tener una magnífica experiencia con contenido holográfico, sino también para aumentar la eficacia y eficiencia de las interacciones.
 
@@ -195,6 +197,17 @@ El concepto de apuntar y confirmar para la interacción lejana se creó y defini
 :::row-end:::
 
 <br>
+
+
+---
+
+## <a name="hand-ray-in-mrtkmixed-reality-toolkit-for-unity"></a>Haz de mano en MRTK (Mixed Reality Toolkit) para Unity
+De forma predeterminada, MRTK proporciona un haz de mano prefabricado ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) que tiene el mismo estado visual que el haz de mano del sistema del shell. Se asigna en el perfil de entrada de MRTK, en Punteros. En el casco envolvente de Windows Mixed Reality, se usan los mismos haces para los controladores de movimiento también.
+
+* [MRTK: perfil de puntero](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK: sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
+* [MRTK: punteros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+
 
 ---
 
