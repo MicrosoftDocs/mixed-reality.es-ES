@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 04/30/2019
 ms.topic: article
 keywords: manos, controladores de movimiento, DirectX, entrada, hologramas
-ms.openlocfilehash: 7b8222e5e539eb95b07cc24d6b49106bd174b490
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 54eaacc3f0dccf728b5438c020a5efd7e0788251
+ms.sourcegitcommit: 4081dc2356fec0ea3625f1d989689cfbbb3fcf5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435195"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74203336"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>Controladores de manos y movimiento en DirectX
 
@@ -99,10 +99,10 @@ Esto conduce a las siguientes prácticas recomendadas al representar y destinar 
 ## <a name="cross-device-input-properties"></a>Propiedades de entrada entre dispositivos
 La API de SpatialInteractionSource admite controladores y sistemas de seguimiento de mano con una amplia gama de funcionalidades. Una serie de estas funcionalidades son comunes entre los tipos de dispositivo. Por ejemplo, el seguimiento de mano y los controladores de movimiento proporcionan una acción "Select" y una posición 3D. Siempre que sea posible, la API asigna estas funciones comunes a las mismas propiedades en el SpatialInteractionSource.  Esto permite a las aplicaciones admitir más fácilmente una amplia gama de tipos de entrada. En la tabla siguiente se describen las propiedades que se admiten y cómo se comparan entre los tipos de entrada.
 
-| Propiedad | Descripción | Gestos de HoloLens | Controladores de movimiento | Manos articuladas|
+| Propiedad | Descripción | Gestos de HoloLens (primera generación) | Controladores de movimiento | Manos articuladas|
 |--- |--- |--- |--- |--- |
 | [SpatialInteractionSource::**Handl**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Mano derecha o izquierda/controlador. | No se admite | Se admite | Se admite |
-| [SpatialInteractionSourceState::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Estado actual del botón principal. | TAP del aire | Activado | Pulsación aérea relajada (bajo contacto vertical) |
+| [SpatialInteractionSourceState::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Estado actual del botón principal. | TAP del aire | Desencadenador | Pulsación aérea relajada (bajo contacto vertical) |
 | [SpatialInteractionSourceState::**IsGrasped**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | Estado actual del botón de arrastre. | No se admite | Botón de arrastre | Alejar o cerrar mano |
 | [SpatialInteractionSourceState::**IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | Estado actual del botón de menú.    | No se admite | Botón de menú | No se admite |
 | [SpatialInteractionSourceLocation::**Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | Ubicación XYZ de la mano o posición del puño en el controlador. | Ubicación de Palm | Posición de la postura de control | Ubicación de Palm |
@@ -122,7 +122,7 @@ Puede tener acceso a la **pose de control** a través de [SpatialInteractionSour
 * El **eje hacia delante de la orientación del puño**: al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
 * **Eje hacia arriba de la orientación del puño**: el eje hacia arriba implícito por las definiciones derecha y hacia delante.
 
-Puede tener acceso al **replanteamiento del puntero** a través de [SpatialInteractionSourceState::P ropiedades:: TryGetLocation (...):: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) o [SpatialInteractionSourceState:: TryGetPointerPose (...):: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_) .
+Puede tener acceso al **replanteamiento del puntero** a través de [SpatialInteractionSourceState::P ropiedades:: TryGetLocation (...):: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) o [SpatialInteractionSourceState:: TryGetPointerPose (...):: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_).
 
 ## <a name="controller-specific-input-properties"></a>Propiedades de entrada específicas del controlador
 En el caso de los controladores, SpatialInteractionSource tiene una propiedad de controlador con capacidades adicionales.
@@ -195,7 +195,7 @@ std::thread createObserverThread([this, currentState]()
 });
 createObserverThread.detach();
 ```
-Iniciar un subproceso desasociado es solo una opción para controlar las llamadas asincrónicas.  Como alternativa, puede usar la nueva funcionalidad de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) admitida C++por/WinRT.
+Iniciar un subproceso desasociado es solo una opción para controlar las llamadas asincrónicas.  Como alternativa, puede usar la nueva funcionalidad de [co_await](https://docs.microsoft.com//windows/uwp/cpp-and-winrt-apis/concurrency) compatible con C++/WinRT.
 
 Una vez que tenga un objeto HandMeshObserver, debe mantenerlo durante el tiempo que su SpatialInteractionSource correspondiente esté activo.  A continuación, cada fotograma, puede solicitarle el búfer de vértices más reciente que representa la mano llamando a [GetVertexStateForPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handmeshobserver.getvertexstateforpose) y pasando una instancia de [HandPose](https://docs.microsoft.com//uwp/api/windows.perception.people.handpose) que representa el supuesto para el que desea los vértices.  Cada vértice del búfer tiene una posición y un normal.  Este es un ejemplo de cómo obtener el conjunto actual de vértices para una malla de mano.  Al igual que antes, la variable *CurrentState* representa una instancia de [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate).
 
@@ -228,7 +228,7 @@ Para usar SpatialGestureRecognizer, controle el evento [InteractionDetected](htt
 
 En HoloLens (primera generación), las interacciones y gestos generalmente deben derivar sus destinatarios del encabezado del usuario, en lugar de intentar representar o interactuar directamente en la ubicación de la mano. Una vez que se ha iniciado una interacción, se pueden usar movimientos relativos de la mano para controlar el gesto, al igual que con la manipulación o el gesto de navegación.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
 * [Modelo de entrada de manipulación directa](direct-manipulation.md)
 * [Modelo de entrada de punto y confirmación](point-and-commit.md)
