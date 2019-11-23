@@ -47,7 +47,7 @@ Como prometimos, nos complace poner a su disposición más ventajas de realidad 
 <td>Guía de diseño y desarrollo de HoloLens 2</td><td>2019 de octubre</td><td> <ul><li>Información general sobre <a href=https://docs.microsoft.com/windows/mixed-reality/>Mixed Reality</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/design>Diseño y prototipo</a><li><a href=https://docs.microsoft.com/windows/mixed-reality/development>Arquitectura y herramientas de desarrollo</a></td>
 </tr>
 <tr>
-  <td>Nueva información sobre no real</td><td>2019 de octubre</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Información general sobre el desarrollo no real</a></td>
+  <td>Nueva información sobre no real</td><td>2019 de octubre</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Introducción al desarrollo de Unreal</a></td>
 </tr>
 <tr>
   <td>Diseño de Microsoft Fluent</td><td>2019 de octubre</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>página de diseño de realidad mixta</a></td>

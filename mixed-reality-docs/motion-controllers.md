@@ -40,7 +40,7 @@ ms.locfileid: "73437859"
     <col width="25%" />
 </colgroup>
 <tr>
-     <td><strong>Ofrecen</strong></td>
+     <td><strong>Característica</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -64,12 +64,12 @@ Los controladores de movimiento de Windows Mixed Reality ofrecen un seguimiento 
 
 **Dispone**
 * Seguimiento óptico
-* Activado
+* Desencadenador
 * Botón de arrastre
 * Palanca
 * Panel táctil
 
-## <a name="setup"></a>Configuración
+## <a name="setup"></a>Instalación
 
 ### <a name="before-you-begin"></a>Antes de comenzar
 
@@ -142,12 +142,12 @@ Si los controladores están desactivados después del emparejamiento, su estado 
 
 * Compruebe que los controladores funcionan correctamente:
     1. Inicie el **portal de realidad mixta** y escriba su hogar de realidad mixta.
-    2. Mueva los controladores y compruebe el seguimiento, los botones de prueba y la comprobación de la [teleportabilidad](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) . Si no es así, consulte [solución de problemas del controlador de movimiento](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers).
+    2. Mueva los controladores y compruebe el seguimiento, los botones de prueba y la comprobación de la [teleportabilidad](navigating-the-windows-mixed-reality-home.md#getting-around-your-home). Si no es así, consulte [solución de problemas del controlador de movimiento](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers).
 
 ## <a name="gazing-and-pointing"></a>Gazing y apuntando
 
 Windows Mixed Reality admite dos modelos clave para la interacción, **mirarlas y confirmar** y **apuntar y confirmar**:
-* Con las opciones de **mirar y confirmar**, los usuarios destinan un objeto con su [miración](gaze-and-commit.md) y, a continuación, seleccionan objetos con pulsaciones aéreas, un controlador para juegos, un clic o la voz.
+* Con las opciones de **mirar y confirmar**, los usuarios destinan un objeto con su [mirada](gaze-and-commit.md) y, a continuación, seleccionan objetos con pulsaciones aéreas, un controlador para juegos, un clic o la voz.
 * Con **Point y commit**, un usuario puede dirigirse a un controlador de movimiento compatible con el puntero en el objeto de destino y, a continuación, seleccionar objetos con el desencadenador del controlador.
 
 Las aplicaciones que admiten apuntar a controladores de movimiento también deben habilitar las interacciones basadas en la mirada siempre que sea posible, para ofrecer a los usuarios la posibilidad de elegir los dispositivos de entrada que usan.
@@ -203,9 +203,9 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 <tr>
 <th> Estado de seguimiento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td>   de <b>alta precisión</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
+<td>   de <b>alta precisión</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Alta precisión (riesgo de pérdida)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Alta precisión (riesgo de pérdida)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
@@ -218,7 +218,7 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 Estos Estados de seguimiento del controlador de movimiento se definen de la siguiente manera:
 * **Alta precisión:** Aunque el controlador de movimiento está en el campo de vista del casco, normalmente proporcionará posiciones de alta precisión en función del seguimiento visual. Tenga en cuenta que un controlador de movimiento que deja momentáneamente el campo de vista o que se oculta momentáneamente de los sensores de auriculares (por ejemplo, por la otra mano del usuario) seguirá devolviendo supuestos de alta precisión durante un breve período de tiempo, en función del seguimiento inerte del controlador. propio.
 * **Alta precisión (riesgo de pérdida):** Cuando el usuario mueve el controlador de movimiento más allá del borde del campo de vista del casco, el casco pronto no podrá realizar un seguimiento visual de la posición del controlador. La aplicación sabe cuándo el controlador ha alcanzado este límite de hiperapartados; para ello, vea el **SourceLossRisk** Reach 1,0. En ese momento, la aplicación puede optar por pausar los gestos del controlador que requieren un flujo estable de planteamientos de alta calidad.
-* **Precisión aproximada:** Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar de la manera normal, pero con una precisión aproximada sin que los usuarios lo noten. Las aplicaciones con requisitos de entrada más pesados pueden optar por detectar este descenso de **alta** precisión a una precisión **aproximada** mediante la inspección de la propiedad **PositionAccuracy** , por ejemplo, para ofrecer al usuario una hitbox más amplia en los destinos fuera de la pantalla. durante este tiempo.
+* **Precisión aproximada:** Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar de la manera normal, pero con una precisión aproximada sin que los usuarios lo noten. Las aplicaciones con requisitos de entrada más pesados pueden optar por detectar este descenso de **alta** precisión a una precisión **aproximada** mediante la inspección de la propiedad **PositionAccuracy** , por ejemplo, para proporcionar al usuario una hitbox más amplia en los destinos de la pantalla durante este tiempo.
 * **Ninguna posición:** Aunque el controlador puede funcionar con una precisión aproximada durante mucho tiempo, a veces el sistema sabe que incluso una posición bloqueada por el cuerpo no es significativa en este momento. Por ejemplo, un controlador que se acaba de activar puede que nunca se haya observado visualmente, o que un usuario pueda poner un controlador que recoja otro usuario. En ese momento, el sistema no proporcionará ninguna posición a la aplicación y **TryGetPosition** devolverá FALSE.
 
 ## <a name="interactions-low-level-spatial-input"></a>Interacciones: entrada espacial de bajo nivel
@@ -251,7 +251,7 @@ Para más información sobre cómo cargar modelos de controlador de forma dinám
  
 [Imagen de los controladores de movimiento de resolución completa en ' ' ' negro ' ' '](images/motioncontrollers-black.png)
 
-## <a name="faq"></a>Preguntas frecuentes
+## <a name="faq"></a>Preguntas más frecuentes
 
 ### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>¿Puedo emparejar controladores de movimiento a varios equipos?
 
@@ -269,7 +269,7 @@ En la [Página principal de Windows Mixed Reality](navigating-the-windows-mixed-
 
 No para aplicaciones universales de Windows.
 
-## <a name="troubleshooting"></a>de solución de problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Consulte [solución de problemas del controlador de movimiento](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) en la guía de entusiastas.
 
@@ -277,7 +277,7 @@ Consulte [solución de problemas del controlador de movimiento](https://docs.mic
 
 Envíenos [sus comentarios](give-us-feedback.md) en la central de comentarios, usando la categoría de entrada de > de realidad mixta.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [Gestos y controladores de movimiento en Unity](gestures-and-motion-controllers-in-unity.md)
 * [Manos y controladores de movimiento en DirectX](hands-and-motion-controllers-in-directx.md)
 * [Gestos](gaze-and-commit.md#composite-gestures)

@@ -17,11 +17,11 @@ ms.locfileid: "73926570"
 
 Hay dos formas clave de tomar medidas en su [mirada en Unity](gaze-in-unity.md), [gestos de mano](gaze-and-commit.md#composite-gestures) y [controladores de movimiento](motion-controllers.md) en HoloLens y HMDs envolventes. Puede tener acceso a los datos de los dos orígenes de entrada espacial a través de las mismas API en Unity.
 
-Unity proporciona dos maneras principales de tener acceso a los datos de entrada espaciales para Windows Mixed Reality, las API de *Input. GetButton/Input. GetAxis* comunes que funcionan a través de varios SDK de Unity XR y una API de *InteractionManager/GestureRecognizer* específica para Windows Mixed Reality que expone el conjunto completo de datos de entrada espaciales disponibles.
+Unity proporciona dos formas principales de acceder a los datos de entrada espacial para Windows Mixed Reality, las API de *Input. GetButton/Input. GetAxis* comunes que funcionan en varios SDK de Unity XR y una API de *InteractionManager/GestureRecognizer* específica de Windows Mixed Reality que expone el conjunto completo de datos de entrada espaciales disponibles.
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Tabla de asignación de ejes y botones de Unity
 
-Los identificadores de botón y de eje de la tabla siguiente se admiten en el administrador de entrada de Unity para los controladores de movimiento de Windows Mixed Reality a través de las API *Input. GetButton/GetAxis* , mientras que la columna "específico de Windows Mr" hace referencia a las propiedades disponibles en el Tipo *InteractionSourceState* . Cada una de estas API se describe en detalle en las secciones siguientes.
+Los identificadores de botón y de eje de la tabla siguiente se admiten en el administrador de entrada de Unity para controladores de movimiento de Windows Mixed Reality a través de las API *Input. GetButton/GetAxis* , mientras que la columna "específico de Windows Mr" hace referencia a las propiedades disponibles del tipo *InteractionSourceState* . Cada una de estas API se describe en detalle en las secciones siguientes.
 
 Las asignaciones de identificador de botón/eje para Windows Mixed Reality suelen coincidir con los identificadores del botón o del eje Oculus.
 
@@ -118,9 +118,9 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 <tr>
 <th> Estado de seguimiento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td>   de <b>alta precisión</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
+<td>   de <b>alta precisión</b></td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Alta precisión (riesgo de pérdida)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alta </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Alta precisión (riesgo de pérdida)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
 <td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
@@ -131,7 +131,7 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 Estos Estados de seguimiento del controlador de movimiento se definen de la siguiente manera:
 * **Alta precisión:** Aunque el controlador de movimiento está en el campo de vista del casco, normalmente proporcionará posiciones de alta precisión en función del seguimiento visual. Tenga en cuenta que un controlador de movimiento que deja momentáneamente el campo de vista o que se oculta momentáneamente de los sensores de auriculares (por ejemplo, por la otra mano del usuario) seguirá devolviendo supuestos de alta precisión durante un breve período de tiempo, en función del seguimiento inerte del controlador. propio.
 * **Alta precisión (riesgo de pérdida):** Cuando el usuario mueve el controlador de movimiento más allá del borde del campo de vista del casco, el casco pronto no podrá realizar un seguimiento visual de la posición del controlador. La aplicación sabe cuándo el controlador ha alcanzado este límite de hiperapartados; para ello, vea el **SourceLossRisk** Reach 1,0. En ese momento, la aplicación puede optar por pausar los gestos del controlador que requieren un flujo estable de planteamientos de alta calidad.
-* **Precisión aproximada:** Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar de la manera normal, pero con una precisión aproximada sin que los usuarios lo noten. Las aplicaciones con requisitos de entrada más pesados pueden optar por detectar este descenso de **alta** precisión a una precisión **aproximada** mediante la inspección de la propiedad **PositionAccuracy** , por ejemplo, para ofrecer al usuario una hitbox más amplia en los destinos fuera de la pantalla. durante este tiempo.
+* **Precisión aproximada:** Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar de la manera normal, pero con una precisión aproximada sin que los usuarios lo noten. Las aplicaciones con requisitos de entrada más pesados pueden optar por detectar este descenso de **alta** precisión a una precisión **aproximada** mediante la inspección de la propiedad **PositionAccuracy** , por ejemplo, para proporcionar al usuario una hitbox más amplia en los destinos de la pantalla durante este tiempo.
 * **Ninguna posición:** Aunque el controlador puede funcionar con una precisión aproximada durante mucho tiempo, a veces el sistema sabe que incluso una posición bloqueada por el cuerpo no es significativa en este momento. Por ejemplo, un controlador que se acaba de activar puede que nunca se haya observado visualmente, o que un usuario pueda poner un controlador que recoja otro usuario. En ese momento, el sistema no proporcionará ninguna posición a la aplicación y *TryGetPosition* devolverá FALSE.
 
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>API de Unity comunes (Input. GetButton/GetAxis)
@@ -525,7 +525,7 @@ Los tutoriales paso a paso, con ejemplos de personalización más detallados, es
 [Entrada MR ![213-controlador de movimiento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Entrada MR 213-controlador de movimiento*
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Controladores de movimiento](motion-controllers.md)

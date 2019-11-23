@@ -33,7 +33,7 @@ Para usar la asignación espacial en la aplicación, debe establecerse la funcio
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -352,7 +352,7 @@ Las funciones de contenedor se proporcionan en el módulo Unity para facilitar l
 
 ### <a name="object-placement-solver"></a>Selección de ubicación de objetos
 
-La selección de ubicación de objetos se puede usar para identificar las ubicaciones ideales en la habitación física para colocar los objetos. El Solver encontrará la ubicación más adecuada en función de las reglas y restricciones del objeto. Además, las consultas de objeto se conservan hasta que el objeto se quita con llamadas "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite la selección de ubicación de varios objetos restringidos. Las consultas de selección de ubicación de objetos constan de tres partes: tipo de ubicación con parámetros, una lista de reglas y una lista de restricciones. Para ejecutar una consulta, use la siguiente API.
+La selección de ubicación de objetos se puede usar para identificar las ubicaciones ideales en la habitación física para colocar los objetos. El Solver encontrará la ubicación más adecuada en función de las reglas y restricciones del objeto. Además, las consultas de objeto se conservan hasta que se quita el objeto con llamadas "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite la selección de ubicación de varios objetos restringidos. Las consultas de selección de ubicación de objetos constan de tres partes: tipo de ubicación con parámetros, una lista de reglas y una lista de restricciones. Para ejecutar una consulta, use la siguiente API.
 
 ```cpp
 public static int Solver_PlaceObject(
@@ -470,14 +470,14 @@ La dll de comprensión almacena internamente el Playspace como una cuadrícula d
 ![malla generada producida a partir del volumen voxel](images/su-custommesh.jpg)<br>
 *Malla generada generada a partir del volumen voxel*
 
-## <a name="troubleshooting"></a>de solución de problemas
+## <a name="troubleshooting"></a>Solución de problemas
 * Asegúrese de que ha establecido la funcionalidad [SpatialPerception](#setting-the-spatialperception-capability)
 * Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en el kit de herramientas de realidad mixta
 Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [MR espacial 230: asignación espacial](holograms-230.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)

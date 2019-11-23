@@ -94,7 +94,7 @@ Antes de cargar en su carpeta de OneDrive, siga los pasos que se indican a conti
 >[!IMPORTANT]
 >Actualmente, la creación de paquetes de activos es compatible con la versión de Unity 5.4.5 F1.
 
-1. Descargue y abra el proyecto de Unity ["AssetBunlder_Unity"](https://github.com/Microsoft/MRDesignLabs/tree/master/ReleasedApps/HoloSketch/AssetBundler_Unity). Este proyecto de Unity incluye el script para la generación de recursos de agrupación.
+1. Descargue y abra el proyecto de Unity [' AssetBunlder_Unity '](https://github.com/Microsoft/MRDesignLabs/tree/master/ReleasedApps/HoloSketch/AssetBundler_Unity). Este proyecto de Unity incluye el script para la generación de recursos de agrupación.
 2. Cree un nuevo GameObject.
 3. Asigne el nombre GameObject a la base de contenido.
 4. En el panel Inspector, haga clic en ' Agregar componente ' y en Agregar ' Box Colisionador '. 
@@ -126,7 +126,7 @@ Antes de cargar en su carpeta de OneDrive, siga los pasos que se indican a conti
    ![en el menú activos, seleccione ' compilar AssetBundles ' para generar el archivo.](images/holosketch-15a-assetbundles.png)
 
 
-13. **Cargue el archivo generado en la carpeta/Files/Documents/HoloSketch en OneDrive.** Cargue solo el archivo asset_unique_name. No es necesario cargar los archivos de manifiesto o el archivo AssetBundles. <br>
+13. **Cargue el archivo generado en la carpeta/Files/Documents/HoloSketch en OneDrive.** Cargue solo el archivo de asset_unique_name. No es necesario cargar los archivos de manifiesto o el archivo AssetBundles. <br>
 ![agregar archivos a archivos/documentos/HoloSketch/carpeta](images/holosketch-onedriveupload-1000px.png)
 ![verá el objeto 3D agregado en el menú de OneDrive de HoloSketch](images/holosketch-14-onedriveexample-1000px.jpg)
 
