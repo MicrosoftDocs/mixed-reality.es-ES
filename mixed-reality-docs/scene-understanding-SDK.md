@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: b7d4103697d94f5e59c77237b4948f62e4e4b621
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
-ms.translationtype: MT
+ms.openlocfilehash: f38145c4124a9f162e58188c6179dc29c22e864e
+ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926906"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491120"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
 
@@ -122,7 +122,7 @@ SceneObjects puede tener cualquiera de las siguientes opciones:
 <tr><td>Background</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
 <tr><td>Reloj</td><td>Una pared física. Se supone que las paredes son estructuras de entorno inmóviles.</td></tr>
 <tr><td>palabra</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no están en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
-<tr><td>umbral</td><td>La superficie superior de una habitación.</td></tr>
+<tr><td>Umbral</td><td>La superficie superior de una habitación.</td></tr>
 <tr><td>Plataforma</td><td>Una superficie plana grande en la que se pueden colocar hologramas. Tienden a representar las tablas, los extremos y otras superficies horizontales grandes.</td></tr>
 <tr><td>Mundo</td><td>Etiqueta reservada para los datos geométricos que es independiente de la etiqueta. La malla generada al establecer la marca de actualización EnableWorldMesh se clasificaría como World.</td></tr>
 <tr><td>Unknown</td><td>Este objeto de escena todavía se puede clasificar y asignar a un tipo. Esto no se debe confundir con el fondo, ya que este objeto podría ser cualquier cosa, el sistema no ha incorporado todavía una clasificación suficientemente fuerte para él.</td></tr>
@@ -133,9 +133,19 @@ SceneObjects puede tener cualquiera de las siguientes opciones:
 
 Un SceneMesh es un SceneComponent que se aproxima a la geometría de objetos geométricos arbitrarios mediante una lista de triángulos. SceneMeshes se usan en varios contextos diferentes, pueden representar componentes de la estructura de celda estanca o como WorldMesh que representa la malla de asignación espacial sin enlazar asociada a la escena. Los datos de índice y vértices que se proporcionan con cada malla usan el mismo diseño conocido que los [búferes de vértices y de índices](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) que se usan para representar mallas de triángulo en todas las API de representación modernas. Tenga en cuenta que, en la descripción de la escena, las mallas usan índices de 32 bits y es posible que necesiten dividirse en fragmentos para determinados motores de representación.
 
+#### <a name="winding-order-and-coordinate-systems"></a>Orden de bobinado y sistemas de coordenadas
+
+Se espera que todas las mallas generadas por el conocimiento de escenas devuelvan mallas en un sistema de coordenadas de la mano a la derecha con el orden de bobinado. 
+
+Nota: las compilaciones del sistema operativo anteriores a. 191105 pueden tener un error conocido en el que las mallas "mundiales" devolvían en el orden de bobinado en sentido contrario, que se ha corregido posteriormente.
+
 ### <a name="scenequad"></a>SceneQuad
 
 Un SceneQuad es un SceneComponent que representa superficies 2D que ocupan el mundo 3D. SceneQuads se puede usar de forma similar a los planos ARKit ARPlaneAnchor o ARCore, pero ofrecen más funcionalidad de alto nivel que los lienzos 2D que usarán las aplicaciones planas o la experiencia de usuario aumentada. se proporcionan API específicas de 2D para cuádruples que facilitan el uso de la ubicación y el diseño, y el desarrollo (con la excepción de la representación) con cuatros se siente más parecido al trabajo con lienzos 2D que las mallas 3D.
+
+#### <a name="scenequad-shape"></a>Forma SceneQuad
+
+SceneQuads define una superficie rectangular limitada en 2D. Sin embargo, los SceneQuads representan superficies con formas arbitrarias y potencialmente complejas (por ejemplo, una tabla con forma de anillo). Para representar la forma compleja de la superficie de una cuádruple, puede usar la API GetSurfaceMask para representar la forma de la superficie en un búfer de imagen que proporcione. Si el SceneObject que tiene el cuádruple también tiene una malla, los triángulos de la malla deben ser equivalentes a esta imagen representada, ambos representan la geometría real de la superficie, simplemente en coordenadas 2D o 3D.
 
 ## <a name="scene-understanding-sdk-details-and-reference"></a>Detalles y referencia del SDK de la escena
 
@@ -255,7 +265,7 @@ Observe que es el SceneObject que tiene la transformación relativa al origen de
 
 La comprensión de la escena ha realizado un intento deliberado de alinearse con representaciones de escenas 3D tradicionales al tratar con transformaciones. Por lo tanto, cada escena se limita a un sistema de coordenadas único, de forma muy similar a la mayoría de las representaciones comunes del entorno 3D. Cada SceneObjects proporciona su ubicación como posición y orientación dentro de ese sistema de coordenadas. Si la aplicación trata de escenas que amplían el límite de lo que proporciona un único origen, puede delimitar SceneObjects a SpatialAnchors, o generar varias escenas y combinarlas juntas, pero para simplificar, se supone que las escenas estancas existen en su propio origen localizado por un NodeId definido por Scene. OriginSpatialGraphNodeId.
 
-El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas. Consulte [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) y [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obtener más información sobre las API de percepción de Windows y los [objetos nativos de realidad mixta en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obtener más información sobre cómo obtener una SpatialCoordinateSystem que se corresponda con Unity. origen mundial, así como el método de extensión `.ToUnity()` para la conversión entre `System.Numerics.Matrix4x4` y `UnityEngine.Matrix4x4`.
+El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas. Vea [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) y [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obtener más información sobre las API de percepción de Windows y los [objetos nativos de realidad mixta en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obtener más información sobre cómo obtener una SpatialCoordinateSystem que se corresponda con el origen mundial de Unity, así como el método de extensión `.ToUnity()` para la conversión entre `System.Numerics.Matrix4x4` y `UnityEngine.Matrix4x4`.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -358,7 +368,7 @@ Los búferes de índice/vértices se deben > = los recuentos de índice o vérti
 
 En este momento, debe comprender los principales bloques de creación de la escena que comprende el tiempo de ejecución y el SDK. La mayor parte de la eficacia y la complejidad radica en los patrones de acceso, la interacción con Marcos 3D y las herramientas que se pueden escribir sobre estas API para realizar tareas más avanzadas, como la planeación espacial, el análisis de salas, la navegación, la física, etc. Esperamos que se capturen en ejemplos que deberían ser de esperar en la dirección adecuada para que los escenarios se muestren. Si hay ejemplos/escenarios que no abordamos, háganoslo saber e intentaremos documentar o crear prototipos de lo que necesita.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Asignación espacial](spatial-mapping.md)
 * [Descripción de escenas](scene-understanding.md)

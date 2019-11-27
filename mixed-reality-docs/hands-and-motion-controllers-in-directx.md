@@ -17,7 +17,7 @@ ms.locfileid: "74203336"
 
 En Windows Mixed Reality, la entrada de [controlador de movimiento](motion-controllers.md) y la mano se administra a través de las API de entrada espaciales, que se encuentran en el espacio de nombres [Windows. UI. Input. Spatial](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial) . Esto le permite controlar fácilmente acciones comunes, como **selecciones** , de la misma manera en los controladores de manos y de movimiento.
 
-## <a name="getting-started"></a>Tareas iniciales
+## <a name="getting-started"></a>Introducción
 
 Para tener acceso a la entrada espacial en Windows Mixed Reality, empiece con la interfaz SpatialInteractionManager.  Puede tener acceso a esta interfaz mediante una llamada a [SpatialInteractionManager:: GetForCurrentView](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionmanager.getforcurrentview), normalmente durante el inicio de la aplicación.
 
