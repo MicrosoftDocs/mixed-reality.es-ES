@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 0595010a0b443d88e3f208b785903e3f6cc99295
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926527"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539746"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta
 
@@ -29,7 +29,7 @@ En la lección anterior, aprendió sobre algunas de las funcionalidades que el k
 
 En esta sección, aprenderá a personalizar y configurar los perfiles predeterminados de MRTK ajustando la opción de visualización de la malla de reconocimiento espacial. Puedes seguir estos mismos principios para ajustar cualquier parámetro o valor de los perfiles de MRTK.
 
-1. Seleccione el kit de herramientas de realidad mixta (MRTK) de la jerarquía de BaseScene. En el panel Inspector, busque el script Mixed Reality Toolkit y seleccione el perfil activo como se muestra en la ilustración siguiente. Haz doble clic en él para abrirlo.
+1. Seleccione el kit de herramientas de realidad mixta (MRTK) de la jerarquía de BaseScene. En el panel Inspector, busque el script Mixed Reality Toolkit y seleccione el perfil activo como se muestra en la ilustración siguiente. Haga doble clic para abrirlo.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step1.png)
 
@@ -46,7 +46,7 @@ En esta sección, aprenderá a personalizar y configurar los perfiles predetermi
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-1-step2b.png)
 
-    Haga clic en **clonar** para crear una copia del perfil de MRTK. Con tu propia copia del perfil de MRTK, ahora tienes la posibilidad de personalizar cualquier configuración de este perfil. También deberá repetir el paso copiar y personalizar para cualquier perfil adicional anidado bajo este perfil, tal como se describe en los pasos siguientes.
+    Haga clic en **clonar** para crear una copia del perfil de MRTK. Con su propia copia del perfil de MRTK, ahora tiene la capacidad de personalizar cualquier configuración en este perfil. También deberá repetir el paso copiar y personalizar para cualquier perfil adicional anidado bajo este perfil, tal como se describe en los pasos siguientes.
 
 3. Deshabilita la visibilidad de la malla de orientación espacial. Para ello, busque la configuración del sistema de reconocimiento espacial tal como se muestra en la imagen siguiente. Asegúrese de que la opción **Habilitar sistema de reconocimiento espacial** está activada. Haga clic en el botón **clonar** a la derecha del perfil del sistema de reconocimiento espacial para reemplazar el perfil predeterminado por una copia personalizable. En la ventana emergente que aparece, presione el botón **clonar** , tal como se muestra en la segunda imagen siguiente.
 
@@ -90,7 +90,7 @@ En esta sección, aprenderá a usar el seguimiento de manos para presionar un bo
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step3.png)
 
-4. Agrega un cubo a la escena. Haga clic con el botón derecho en el área jerarquía, seleccione un objeto 3D y, a continuación, haga clic en cubo.
+4. Agrega un cubo a la escena. Haga clic con el botón secundario en el área jerarquía, seleccione un objeto 3D y, a continuación, haga clic en cubo.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
@@ -99,13 +99,13 @@ En esta sección, aprenderá a usar el seguimiento de manos para presionar un bo
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
     >[!NOTE]
-    >En general, 1 unidad en Unity equivale aproximadamente a 1 metro en el mundo físico. Existen excepciones a esto, por ejemplo, cuando los objetos son elementos secundarios de los objetos con escala.
+    >En general, 1 unidad en Unity equivale aproximadamente a 1 metro en el mundo físico. Hay excepciones a esto; por ejemplo, cuando los objetos son elementos secundarios de objetos escalados.
 
-5. Con el objeto de juego PressableButtonHoloLens2 seleccionado, en el inspector Desplácese hacia la parte inferior para encontrar la sección eventos del componente interactuable (Script).
+5. Con el objeto de juego PressableButtonHoloLens2 seleccionado, desplácese hacia la parte inferior del inspector para buscar la sección de eventos del componente interactuable (Script).
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step4.png)
 
-6. Modificaremos el evento existente para dar al botón un evento al que responder cuando se inserte. Como puede ver, el tipo de receptor de eventos se establece en InteractableOnPressReceiver. Esto permite que el botón responda a un evento presionado cuando una mano con seguimiento presiona el botón. En este momento, también debe cambiar el filtro de interacción a Near y Far.
+6. Modificaremos el evento existente para dar al botón un evento al que responder cuando se inserte. Como puede ver, el tipo de receptor de eventos se establece en InteractableOnPressReceiver. Esto permite que el botón responda a un evento presionado cuando una mano con seguimiento presiona el botón. En este punto, también debe cambiar el filtro de interacción a Near y Far.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step5.png)
 
@@ -123,17 +123,17 @@ En esta sección, aprenderá a usar el seguimiento de manos para presionar un bo
 
     El evento ahora está establecido para que cuando se presiona el botón, el cubo cambie de color según el material especificado. En este ejemplo, el cubo cambiará al color aguamarina.
 
-8. A continuación, vas a configurar la acción de liberación para que tras esta, el botón vuelva a su color predeterminado. Repita el paso 7 anterior. Pero esta vez con el evento de lanzamiento en lugar del material de MRTK_Standard_LightGray de imprenta, tal y como se muestra en la imagen siguiente.
+8. A continuación, va a configurar la acción de lanzamiento para que, en el momento de la versión, el botón vuelva a su color predeterminado. Repita el paso 7 anterior. Sin embargo, esta vez con el evento de lanzamiento en lugar de en el material de MRTK_Standard_LightGray Press, tal y como se muestra en la imagen siguiente.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step8.png)
 
-    Ahora, cuando se presiona el botón, cambia a un nuevo color, aguamarina. Al soltar el botón, se volverá a cambiar al color predeterminado especificado (por ejemplo, gris claro). Presione el botón reproducir en la parte superior de la pantalla para probarlo en el editor o realice la implementación en HoloLens 2 para probarlo. Para obtener más información sobre la simulación en el editor, incluida la simulación manual, lea la [Página de documentación de la simulación de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
+    Ahora, cuando se presiona el botón, cambia a un nuevo color. color. Al soltar el botón, se volverá a cambiar al color predeterminado especificado (por ejemplo, gris claro). Haga clic en el botón reproducir en la parte superior de la pantalla para probarlo en el editor o en la implementación en HoloLens 2 para realizar la prueba. Para obtener más información sobre la simulación en el editor, incluida la simulación manual, lea la [Página de documentación de la simulación de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
 ### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Creación de un panel de botones con la colección de objetos de cuadrícula de MRTK
 
 En esta sección, aprenderá a alinear automáticamente varios botones en una interfaz de usuario ordenada mediante la herramienta GridObjectCollection de MRTK.
 
-1. Duplique el botón de la sección anterior hasta que tenga cinco botones. Hay varias maneras de hacerlo: haga clic con el botón derecho en el botón y haga clic en copiar. Después, vaya a debajo del botón y haga clic con el botón derecho de nuevo y haga clic en pegar.
+1. Duplique el botón de la sección anterior hasta que tenga cinco botones. Hay varias maneras de hacerlo: haga clic con el botón derecho en el botón y haga clic en copiar. Después, vaya a debajo del botón y haga clic con el botón derecho de nuevo y, después, haga clic en pegar.
     -Haga clic con el botón derecho en el botón y haga clic en duplicar.
     -Use el comando de teclado haciendo clic en el cubo y presionando Ctrl D en el teclado.
 
@@ -141,7 +141,7 @@ En esta sección, aprenderá a alinear automáticamente varios botones en una in
 
     ![Mrlearning Base Ch2 3Step1im](images/mrlearning-base-ch2-3step1im.PNG)
 
-2. Agrupa los botones debajo de un objeto de juego primario. Para tener los botones en la colección de cuadrículas, debe agrupar los botones en un objeto primario común. Haga clic con el botón derecho en hiearachy y haga clic en crear vacío. Se crea un objeto de juego vacío en el que colocar todos los botones. Se muestra como gameObject. Haga clic con el botón derecho y cambie el nombre por ButtonCollection.
+2. Agrupa los botones debajo de un objeto de juego primario. Para tener los botones en la colección de cuadrículas, debe agrupar los botones en un objeto primario común. Haga clic con el botón secundario en hiearachy y haga clic en crear vacío. Se crea un objeto de juego vacío en el que colocar todos los botones. Se muestra como gameObject. Haga clic con el botón secundario y cambie su nombre, ButtonCollection.
 
     ![Mrlearning Base Ch2 3Step2im](images/mrlearning-base-ch2-3step2im.PNG)
 
@@ -164,7 +164,7 @@ En esta sección, aprenderá a alinear automáticamente varios botones en una in
 
 ### <a name="adding-text-into-your-scene"></a>Adición de texto a la escena
 
-En esta sección, aprenderás a agregar texto a tus experiencias de realidad mixta y a editarlo. Si no lo has hecho ya, asegúrate de tener habilitado TextMeshPro en Unity mediante las instrucciones [aquí](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation) descritas.
+En esta sección, aprenderás a agregar texto a tus experiencias de realidad mixta y a editarlo. Si aún no lo ha hecho, asegúrese de que ha habilitado TextMeshPro en Unity siguiendo [estas instrucciones.](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation)
 
 1. Seleccione el objeto primario ButtonCollection y haga clic con el botón secundario en la colección. Expanda objeto 3D en el menú desplegable. A continuación, seleccione TextMeshPro-Text. Debería ver un objeto TextMeshPro en la colección de botones, tal como se muestra en la imagen siguiente.
 
@@ -174,7 +174,7 @@ En esta sección, aprenderás a agregar texto a tus experiencias de realidad mix
 
     ![Lesson2 Chapter4 Step3](images/mrlearning-base-ch2-4-step3.png)
 
-3. En el campo de texto del componente TextMeshPro en el panel Inspector, escriba "texto de la colección de botones" y ajuste las propiedades de alineación de centro y parte superior, tal como se muestra en la imagen siguiente.
+3. En el campo de texto del componente TextMeshPro del panel Inspector, escriba "texto de la colección de botones" y ajuste las propiedades de alineación en Center y Top, tal como se muestra en la imagen siguiente.
 
     ![Lesson2 Chapter4 Paso4](images/mrlearning-base-ch2-4-step4.png)
 

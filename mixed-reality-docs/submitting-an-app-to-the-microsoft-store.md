@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización
-ms.openlocfilehash: 63377239498319e84666ba0dbdbe36ce626901c5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f2eb4093a2bea51d8c39b94d23777e426810981e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437436"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539610"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Enviar una aplicación a la Microsoft Store
 
@@ -76,6 +76,14 @@ Si la aplicación se crea para **hololens**, puede asegurarse de que solo se ins
 </Dependencies>
 ```
 
+Si su aplicación requiere la funcionalidad de **HoloLens 2** específicamente, como seguimiento de ojo o seguimiento de mano, puede asegurarse de que está destinada a las versiones de Windows 18362 o superior especificando una familia de dispositivos de destino de "Windows. Holographic" y MinVersion 10.0.18362.0. 
+
+```
+<Dependencies>
+   <TargetDeviceFamily Name="Windows.Holographic" MinVersion="10.0.18362.0" MaxVersionTested="10.0.18362.0" />
+</Dependencies>
+```
+
 Si la aplicación se crea para **auriculares con Windows Mixed Reality**, puede asegurarse de que solo está instalado en equipos con Windows 10 con Windows 10 Fall Creators Update (necesario para Windows Mixed Reality) mediante la especificación de una familia de dispositivos de destino de " Windows. Desktop "y MinVersion de" 10.0.16299.0 ".
 
 ```
@@ -119,6 +127,11 @@ La guía general es que el paquete de número de versión más alto que se aplic
 Si hay un paquete de Windows. universal y un paquete de Windows. Holographic y el paquete de Windows. universal tiene un número de versión superior, un usuario de HoloLens descargará el paquete Windows. universal con el número de versión más alto en lugar de Windows. Holographic configura. Hay varias soluciones para este problema:
 1. Asegúrese de que los paquetes específicos de la plataforma como Windows. Holographic siempre tienen un número de versión mayor que los paquetes independientes de la plataforma, como Windows. universal.
 2. No empaquete aplicaciones como Windows. universal si también tiene paquetes específicos de la plataforma. en su lugar, empaquete el paquete Windows. universal para las plataformas específicas en las que desea que esté disponible.
+
+>[!NOTE]
+> Para admitir la aplicación en HoloLens (1º gen) y HoloLen 2, deberá cargar dos paquetes de aplicaciones. uno que contiene x86 para HoloLens (1º gen) y otro que contiene ARM o ARM64 para HoloLens 2. 
+> 
+> Si incluye ARM y ARM64 en el paquete, se usará la versión de ARM64 en HoloLens 2. 
 
 >[!NOTE]
 > Puede declarar un único paquete para que sea aplicable a varias familias de dispositivos de destino.

@@ -6,14 +6,16 @@ ms.author: branbray
 ms.date: 03/21/2018
 ms.topic: article
 keywords: mixed reality, Holographic, ar, VR, Mr, XR, realidad aumentada, realidad virtual, explicación
-ms.openlocfilehash: 601e42c03e827f0f531f9dcf937a0dd34b008dc3
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 65588902565ee0c5a1710f823311ccdecc23230e
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926777"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539552"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es la realidad mixta?
+
+![Point and commit con las manos de HoloLens 2](images/02_MixedRealitySlashMixedReality.png)
 
 La realidad mixta es el resultado de fusionar el mundo físico con el mundo digital. La realidad mixta es el siguiente paso evolutivo en la interacción del ser humano, los equipos y el entornos. Ofrece posibilidades que antes solo eran posibles en nuestra imaginación. Es posible gracias a los avances en Computer Vision, la potencia de procesamiento gráfico, la tecnología de pantalla y los sistemas de entrada. El término *Mixed Reality* se presentó originalmente en un papel de 1994 de Paul Milgram y Fumio Kishino, "se[muestra una taxonomía de la realidad visual de la realidad mixta](https://etclab.mie.utoronto.ca/people/paul_dir/IEICE94/ieice.html)". En este documento se ha introducido el concepto de *continuum de virtualización*y se ha centrado en cómo se muestra la categorización de la taxonomía aplicada. Desde entonces, la aplicación de realidad mixta va más allá de las pantallas. También incluye la entrada del entorno, el sonido espacial y la ubicación.
 

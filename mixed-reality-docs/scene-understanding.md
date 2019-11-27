@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: fdfe40571ac8893dcb3a3ba8fe3bb12707c800e4
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926918"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539702"
 ---
 # <a name="scene-understanding"></a>Conocimiento de escenas
 
@@ -19,7 +19,29 @@ La comprensión de la escena proporciona a los desarrolladores de realidad mixta
 
 ![Malla de asignación espacial, superficie plana etiquetada, malla estanca](images/SUScenarios.png)
 
-Este documento está pensado para proporcionar información general sobre el escenario y para aclarar la relación que la comprensión de escenas y la asignación espacial comparten. Para más información sobre cómo funciona la comprensión de escenas y cómo desarrollarla, consulte la documentación de [Introducción al SDK](scene-understanding-SDK.md) de la escena.
+Este documento está pensado para proporcionar información general sobre el escenario y para aclarar la relación que la comprensión de escenas y la asignación espacial comparten.
+
+## <a name="developing-with-scene-understanding"></a>Desarrollo con conocimiento de escenas
+
+Este artículo solo sirve para introducir la escena que comprende el tiempo de ejecución y los conceptos. Si busca documentación sobre cómo desarrollar con conocimiento de escenas, puede que le interese lo siguiente:
+
+[Información general del SDK de introducción a la escena](scene-understanding-SDK.md)
+
+Puede descargar la aplicación de ejemplo de descripción de la escena en el sitio de GitHub de ejemplo:
+
+[Ejemplo de información de escena](https://github.com/sceneunderstanding-microsoft/unitysample)
+
+Si no tiene un dispositivo y desea tener acceso a escenas de ejemplo para probar la introducción de escenas, hay escenas en la carpeta de recursos de ejemplo:
+
+[Escenas de ejemplo de la escena](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+
+### <a name="sdk"></a>SDK
+
+Si busca detalles específicos sobre cómo desarrollar para Understandiing de escenas, para obtener detalles sobre cómo funciona la comprensión de escenas y cómo desarrollar para ella, consulte la documentación de [Introducción al SDK](scene-understanding-SDK.md) de la escena.
+
+
+### <a name="sample"></a>Muestra
+
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
