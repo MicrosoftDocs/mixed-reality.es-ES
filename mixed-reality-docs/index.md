@@ -8,12 +8,12 @@ ms.date: 08/24/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de inicio, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto
-ms.openlocfilehash: 1a5e4fcbb7704db6df59db9d01bb72a5b153b576
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438080"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539634"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 
@@ -55,7 +55,7 @@ ms.locfileid: "73438080"
 Si eres nuevo en el ámbito de la realidad mixta, descubrirás qué es y comprenderás sus capacidades.
 
 
-![espectro de la realidad mixta](images/RWtpZ1.jpeg)
+![Colibrí virtual con mano humana](images/01_MixedReality.png)
 
 ## <a name="what-is-mixed-reality"></a>¿Qué es la realidad mixta?
 

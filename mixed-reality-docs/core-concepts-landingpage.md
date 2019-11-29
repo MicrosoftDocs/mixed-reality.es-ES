@@ -7,14 +7,17 @@ ms.author: grbury
 ms.date: 10/02/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, diseño, patrones de aplicaciones, controles, estilo, HoloLens, interacción, elementos de experiencia del usuario, comportamientos, bloques de creación
-ms.openlocfilehash: 5f5f97d3f4a34e0d88c781df494a4afc2ee0b992
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: d8f904183e51943246613e99a805bee1518523c8
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439436"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539539"
 ---
 # <a name="core-concepts-overview"></a>Información general sobre conceptos básicos
+
+![Manipulación directa con las manos](images/05_CoreConcepts.png)
+
 
 Antes de profundizar en el diseño de su experiencia, es útil comprender algunos conceptos básicos. Cada tema siguiente es un factor subyacente que afecta fundamentalmente y contribuye a la calidad de la experiencia de realidad mixta que está creando para el usuario. 
 
