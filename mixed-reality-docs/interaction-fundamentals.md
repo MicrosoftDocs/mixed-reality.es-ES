@@ -7,14 +7,16 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hololens, MMR, multimodal
-ms.openlocfilehash: abd82947be08a2f6aecc4462abc34c4674abfb7a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6b54d6e844c1b501a0835fc3a48deb4932ba551d
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437976"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539735"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instintivas
+
+![Manipulación lejana con las manos](images/04_InteractionFundamentals.png)
 
 La filosofía de interacciones simples e instintivas está integrada en toda la plataforma de realidad integrada (MR). Hemos dado tres pasos para garantizar que los desarrolladores y diseñadores de aplicaciones puedan proporcionar interacciones sencillas e intuitivas a sus clientes. 
 
