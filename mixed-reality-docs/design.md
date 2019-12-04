@@ -8,17 +8,17 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de aterrizaje, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto, conceptos principales, interacción
-ms.openlocfilehash: 2bd2b3fef713bfe74f91714be100c7a02e46f8ac
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 92af4ddba96f659f0af812672599d4a90bf00224
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435739"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74539602"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos
 
 
-![Conceptos principales](images/text_in_unity_viewingangle.jpg)
+![Imagen de malla 3D](images/03_Design.png)
 
 ## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -98,6 +98,10 @@ Una clave para que el contenido visualizado parezca real en forma de holograma e
 ### <a name="clear-and-readable-typographytypographymd"></a>[Tipografía clara y legible](typography.md)
 Al igual que la tipografía en las pantallas 2D, el objetivo es que sea clara y legible. Con el aspecto tridimensional de la realidad mixta, existe la posibilidad de que el impacto sea aún mayor para el texto y la experiencia general del usuario.
 
+<br>
+
+### <a name="ux-elements-for-the-mixed-realityapp-patterns-landingpagemd"></a>[Elementos de la experiencia de usuario para la realidad mixta](app-patterns-landingpage.md)
+Obtén información sobre los bloques de creación para las interacciones espaciales y la interfaz de usuario en la realidad mixta.
 <br>
 
 
