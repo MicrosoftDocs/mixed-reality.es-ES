@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de introducción: 2. Inicialización de tu proyecto y primera aplicación'
-description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+description: Haz este curso para aprender a implementar el reconocimiento facial de Azure en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: realidad mixta, unity, tutorial, hololens
-ms.openlocfilehash: d4e58e2c9236ba35b4394fd80cde3843edaa6f57
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.openlocfilehash: cae2398582d399f2bad56b354694f7e99ef8681c
+ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491203"
+ms.locfileid: "74539687"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicialización de tu proyecto y primera aplicación
 
@@ -48,7 +48,7 @@ En esta primera lección, obtendrás información sobre algunas de las funcional
 ![Lección1 Sección2 Paso1](images/mrlearning-base-ch1-2-step1.JPG)
 2. Selecciona *Plataforma universal de Windows* y haz clic en el botón **Switch Platform** (Cambiar plataforma) para cambiar de plataforma. Las aplicaciones que se ejecutan en HoloLens 2 tienen que ser compatibles con la Plataforma universal de Windows (UWP).
 ![Lección1 Sección2 Paso2](images/mrlearning-base-ch1-2-step2.JPG)
-3. Para habilitar la realidad virtual, haz clic en **Configuración del Reproductor** en la ventana de compilación y, a continuación, en el panel del inspector, habilita la casilla *Virtual Reality Supported* (Se admite la realidad virtual) en XR Settings (Configuración de XR), tal como se muestra en la imagen siguiente. Ten en cuenta que es posible que necesites arrastrar la ventana *Build Settings* (Configuración de compilación) a un lado para ver el panel del inspector. La casilla *Virtual Reality Supported* (Se admite la realidad virtual) también se aplica a los cascos de realidad mixta y realidad aumentada porque hace referencia a la habilitación de la visión estereoscópica (representación de imágenes diferentes para cada ojo). ![Lección1 Sección2 Paso3](images/mrlearning-base-ch1-2-step3.JPG)
+3. Para habilitar la realidad virtual, haz clic en el botón **Configuración del Reproductor** de la ventana de compilación y, a continuación, en el panel del inspector, habilita la casilla *Virtual Reality Supported* (Se admite la realidad virtual) en XR Settings (Configuración de XR), tal como se muestra en la imagen siguiente. Ten en cuenta que es posible que necesites arrastrar la ventana *Build Settings* (Configuración de compilación) a un lado para ver el panel del inspector. La casilla *Virtual Reality Supported* (Se admite la realidad virtual) también se aplica a los cascos de realidad mixta y realidad aumentada porque hace referencia a la habilitación de la visión estereoscópica (representación de imágenes diferentes para cada ojo). ![Lección1 Sección2 Paso3](images/mrlearning-base-ch1-2-step3.JPG)
 4. También en XR Settings (Configuración de XR), cambia *Stereo Rendering Mode* (Modo de representación estereoscópico) a *Single Pass Instanced* (Instancia de paso único). Este [estilo de canalización de representación](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) suele ofrecer el mejor rendimiento para HoloLens 2. Si te interesan otras configuraciones de rendimiento para tu entorno de Unity, sigue [estas instrucciones](recommended-settings-for-unity.md).
 ![Lección1 Sección2 Paso4](images/mrlearning-base-ch1-2-step4.jpg)
 5. En el mismo panel del inspector, comprueba que la casilla *Spatial Perception* (Percepción espacial) en la sección de funcionalidades esté habilitada en *Configuración de publicación*. La percepción espacial nos permite ver la malla de asignación espacial en un dispositivo de realidad mixta, como HoloLens 2. La opción Configuración de publicación se encuentra en el panel del inspector, sobre de XR Settings (Configuración de XR) y bajo Otra configuración.
@@ -74,7 +74,7 @@ En esta primera lección, obtendrás información sobre algunas de las funcional
 
 ### <a name="configure-the-mixed-reality-toolkit"></a>Configuración de Mixed Reality Toolkit
 
-1. Para agregar *Mixed Reality Toolkit* a la escena actual, selecciona **Mixed Reality Toolkit** > **Add to Scene and Configure...** (Agregar a la escena y configurar...) en la barra de menús. Si no ves este elemento de menú después de importar Mixed Reality Toolkit, reinicia Unity.
+1. Para agregar *Mixed Reality Toolkit* a la escena actual, selecciona **Mixed Reality Toolkit** > **Add to Scene and Configure...** (Agregar a la escena y configurar...) en la barra de menús. Si no ves este elemento de menú después de importar el kit de herramientas de realidad virtual, reinicia Unity.
     ![Lección1 Sección4 Paso1](images/mrlearning-base-ch1-4-step1.JPG)
 
     > [!NOTE]
@@ -97,14 +97,14 @@ En esta primera lección, obtendrás información sobre algunas de las funcional
     ![Lección1 Sección5 Paso4](images/mrlearning-base-ch1-5-step4.JPG)
 
   > [!IMPORTANT]
-  > Si se produce un error en la compilación, intenta volver a compilar o reinicia Unity y vuelve a compilar. Es posible que veas un error como "Error: CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?)" [Error: CS0246 = No se encontró el nombre de espacio de nombres o tipo "XX" (¿te falta una directiva de uso o una referencia de ensamblado?)]". Si es el caso, es posible que debas instalar [SDK de Windows 10 (10.0.18362.0)](https://developer.microsoft.com//windows/downloads/windows-10-sdk).
+  > Si se produce un error en la compilación, intenta volver a compilar o reinicia Unity y vuelve a compilar. Es posible que veas un error como "Error: CS0246 = The type or namespace name “XX” could not be found (are you missing a using directive or an assembly reference?)" [Error: CS0246 = No se encontró el nombre de espacio de nombres o tipo "XX" (¿te falta una directiva de uso o una referencia de ensamblado?)]". Si es el caso, es posible que debas instalar el [SDK de Windows 10 (10.0.18362.0)](https://developer.microsoft.com//windows/downloads/windows-10-sdk).
 
 5. Una vez finalizada la compilación, abre la carpeta recién creada que contiene los archivos de la aplicación que acabas de crear. Haz doble clic en la solución *MixedRealityBase.sln* (o el nombre correspondiente, si has utilizado un nombre alternativo para el proyecto) para abrir el archivo de la solución en Visual Studio.
 
     > [!NOTE]
     > Asegúrate de abrir la carpeta recién creada (es decir, la carpeta *Aplicación*, si has seguido las convenciones de nomenclatura de los pasos anteriores), ya que habrá un archivo .sln con un nombre similar fuera de esa carpeta que no debes confundir con el archivo .sln de dentro de la carpeta de compilación. La estructura de carpetas debería tener un aspecto similar a la imagen siguiente.
     >
-    > Si Visual Studio te pide que instales nuevos componentes, dedica un momento a comprobar que todos los componentes de requisitos previos estén instalados, tal como se especifica en la [página "Instalación de las herramientas"](install-the-tools.md).
+    > Si Visual Studio te pide que instales nuevos componentes, dedica un momento a comprobar que todos los componentes de los requisitos previos estén instalados, tal como se especifica en la [página "Instalación de las herramientas"](install-the-tools.md).
 
     ![Lección1 Sección5 Paso5](images/mrlearning-base-ch1-5-step5.JPG)
 
