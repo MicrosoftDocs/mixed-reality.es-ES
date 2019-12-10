@@ -3,15 +3,15 @@ title: Archivo del emulador de HoloLens
 description: Lista de las compilaciones publicadas del emulador de Microsoft HoloLens.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 11/11/2019
+ms.date: 12/5/2019
 ms.topic: article
 keywords: HoloLens, emulador, compilaciones, versiones
-ms.openlocfilehash: f9ce72febfd07b7dc743b9ee202e8c4353f1de96
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 3061c97e0e945bf9d829e2259533c7d32683d581
+ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064225"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74940803"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archivo de emulador de HoloLens 2
 
@@ -19,12 +19,12 @@ Las compilaciones del emulador de HoloLens (1ª generación) y de HoloLens 2 se 
 
 |  Versión |  Fecha de lanzamiento |  Notas | 
 |----------|----------|----------|
-|  [10.0.18362.1039 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2110553) | 11 de noviembre de 2019 | Compilación de la versión 2019 de HoloLens de noviembre 2. |
+|  [10.0.18362.1042 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2112589) | 6 de diciembre de 2019 | Compilación de diciembre de 2019 HoloLens 2.  Soluciona un problema en el que una aplicación holográfica que se ejecuta en el emulador se suspenderá de forma inesperada al mostrar el panel de PIN.  Habilita la conectividad a un emulador remoto cuando se usa la API de simulación de percepción o la aplicación de control de simulación de percepción.  Para ver las notas de la versión de HoloLens 2 generales, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1034 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2106649) | 8 de octubre de 2019 | Compilación de la versión 2019 de HoloLens de octubre 2.  El emulador le pedirá que actualice a una nueva versión cuando ejecute una versión anterior a la más reciente disponible.  Al usar el emulador en la actualización de Windows 10 de mayo de 2019 o posterior, la nueva pestaña de configuración de NAT permite a los desarrolladores abrir puertos para aplicaciones que se ejecutan en dispositivos independientes para conectarse al emulador y la pestaña actualizaciones muestra las versiones de emulador disponibles.  Consulte la [documentación del emulador de HoloLens](using-the-hololens-emulator.md) para obtener más detalles. |
 |  [10.0.18362.1031 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2103724) | 11 de septiembre de 2019 | Compilación 2019 de HoloLens de septiembre 2.  La pestaña Red aparecerá en la ventana herramientas del emulador al ejecutar el emulador en la actualización de Windows 10 de mayo de 2019 o más reciente. |
 |  [10.0.18362.1028 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2101019) | 14 de agosto de 2019 | Compilación de agosto de 2019 HoloLens 2.  Las plantillas de aplicación holográfica ya no se incluyen, pero están disponibles en el Visual Studio Marketplace.  El emulador ahora funcionará cuando se instalen los SDK en una ubicación personalizada. |
 |  [10.0.18362.1021 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2098508) | 8 de julio de 2019 | Soluciona un problema de firma con DiskStream. dll |
-|  [10.0.18362.1019 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junio de 2019 | Ya no es necesario ejecutar como administrador.  Acceso directo del menú Inicio agregado. |
+|  [10.0.18362.1019 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junio de 2019 | Ya no es necesario ejecutar como administrador.  Acceso directo del menú Inicio agregado. |
 |  [10.0.18362.1005 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 de abril de 2019 |  |
 
 ## <a name="hololens-emulator-1st-gen-archive"></a>Archivo del emulador de HoloLens (1º generación)

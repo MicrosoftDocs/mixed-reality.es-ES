@@ -5,17 +5,19 @@ author: MikeRiches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, hologramas, representación, gráficos 3D, HolographicFrame, bucle de representación, bucle de actualización, tutorial, código de ejemplo
-ms.openlocfilehash: 6edcaf808f2d7d48f480169e5579adb8984678a0
-ms.sourcegitcommit: 45676da11ebe33a2aa3dccec0e8ad7d714420853
+keywords: Windows Mixed Reality, hologramas, representación, gráficos 3D, HolographicFrame, bucle de representación, bucle de actualización, tutorial, código de ejemplo, Direct3D
+ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
+ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629035"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74940873"
 ---
 # <a name="rendering-in-directx"></a>Representación en DirectX
 
 Windows Mixed Reality se basa en DirectX para generar experiencias gráficas 3D enriquecidas para los usuarios. La abstracción de representación se encuentra justo encima de DirectX y permite que una aplicación tenga en la posición y la orientación de uno o más observadores de una escena holográfica, tal y como lo predice el sistema. A continuación, el desarrollador puede localizar sus hologramas en relación con cada cámara, lo que permite que la aplicación represente estos hologramas en varios sistemas de coordenadas espaciales a medida que el usuario se desplaza.
+
+Nota: en este tutorial se describe la representación holográfica en Direct3D 11. También se proporciona una plantilla de aplicación de Windows mixed reality de Direct3D 12 con la extensión de plantillas de aplicación de realidad mixta.
 
 ## <a name="update-for-the-current-frame"></a>Actualizar para el marco actual
 
@@ -306,7 +308,7 @@ context->VSSetConstantBuffers(
 
 Es conveniente comprobar que **TryGetViewTransform** se ha ejecutado correctamente antes de intentar usar los datos de vista o proyección, porque si el sistema de coordenadas no es localizable (por ejemplo, se interrumpió el seguimiento), la aplicación no se puede representar con él para ese marco. La plantilla solo llama a **Render** en el cubo giratorio Si la clase **CameraResources** indica una actualización correcta.
 
-Para mantener los hologramas donde un desarrollador o un usuario los pone en el mundo, Windows Mixed Reality incluye características para la estabilización de la [imagen](hologram-stability.md). La estabilización de imágenes ayuda a ocultar la latencia inherente en una canalización de representación para garantizar las mejores experiencias holográficas para los usuarios. se puede especificar un punto de enfoque para mejorar la estabilización de la imagen aún más, o se puede proporcionar un búfer de profundidad para calcular la estabilización de la imagen optimizada en tiempo real.
+Para mantener los hologramas donde un desarrollador o un usuario los pone en el mundo, Windows Mixed Reality incluye características para la [estabilización](hologram-stability.md)de la imagen. La estabilización de imágenes ayuda a ocultar la latencia inherente en una canalización de representación para garantizar las mejores experiencias holográficas para los usuarios. se puede especificar un punto de enfoque para mejorar la estabilización de la imagen aún más, o se puede proporcionar un búfer de profundidad para calcular la estabilización de la imagen optimizada en tiempo real.
 
 Para obtener los mejores resultados, la aplicación debe proporcionar un búfer de profundidad mediante la API de <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> . Windows Mixed Reality puede usar la información de geometría del búfer de profundidad para optimizar la estabilización de la imagen en tiempo real. La plantilla de aplicación de Windows Holographic confirma el búfer de profundidad de la aplicación de forma predeterminada, lo que ayuda a optimizar la estabilidad del holograma.
 
@@ -457,7 +459,7 @@ VertexShaderOutput main(VertexShaderInput input)
 }
 ```
 
-Si desea usar las técnicas de dibujo con instancias existentes con este método de dibujo en una matriz de destino de representación estéreo, lo único que tiene que hacer es dibujar el doble del número de instancias que tiene normalmente. En el sombreador, divida **Input. instId** por 2 para obtener el identificador de instancia original, que se puede indizar en (por ejemplo,) un búfer de datos por objeto:`int actualIdx = input.instId / 2;`
+Si desea usar las técnicas de dibujo con instancias existentes con este método de dibujo en una matriz de destino de representación estéreo, lo único que tiene que hacer es dibujar el doble del número de instancias que tiene normalmente. En el sombreador, divida **Input. instId** por 2 para obtener el identificador de instancia original, que se puede indizar en (por ejemplo,) un búfer de datos por objeto: `int actualIdx = input.instId / 2;`
 
 ### <a name="important-note-about-rendering-stereo-content-on-hololens"></a>Nota importante sobre la representación de contenido estéreo en HoloLens
 
@@ -553,7 +555,7 @@ if (!m_usingVprtShaders)
 }
 ```
 
-**NOTA HLSL**: En este caso, también debe cargar un sombreador de vértices ligeramente modificado que pase el índice de la matriz de destino de representación al sombreador de geometría mediante una semántica de sombreador siempre permitida, como TEXCOORD0. El sombreador de geometría no tiene que hacer ningún trabajo; el sombreador de geometría de la plantilla pasa todos los datos, con la excepción del índice de la matriz de destino de representación, que se usa para establecer la semántica de SV_RenderTargetArrayIndex.
+**Nota HLSL**: en este caso, también debe cargar un sombreador de vértices ligeramente modificado que pase el índice de la matriz de destino de representación al sombreador de geometría mediante una semántica de sombreador siempre permitida, como TEXCOORD0. El sombreador de geometría no tiene que hacer ningún trabajo; el sombreador de geometría de la plantilla pasa todos los datos, con la excepción del índice de la matriz de destino de representación, que se usa para establecer la semántica SV_RenderTargetArrayIndex.
 
 Código de plantilla de aplicación para **GeometryShader. HLSL**:
 
@@ -706,7 +708,7 @@ const HRESULT hr = D3D11CreateDevice(
 
 El uso de Media Foundation en sistemas híbridos puede causar problemas en los que el vídeo no se represente o que la textura de vídeo esté dañada. Esto puede ocurrir porque Media Foundation tiene como valor predeterminado un comportamiento del sistema, como se mencionó anteriormente. En algunos escenarios, se requiere la creación de un ID3D11Device independiente para admitir el subprocesamiento múltiple y se establecen las marcas de creación correctas.
 
-Al inicializar ID3D11Device, se debe definir la marca D3D11_CREATE_DEVICE_VIDEO_SUPPORT como parte de D3D11_CREATE_DEVICE_FLAG. Una vez creado el dispositivo y el contexto, llame a <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> para habilitar el multithreading. Para asociar el dispositivo a <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>, use la función <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: ResetDevice</a> .
+Al inicializar ID3D11Device, se debe definir D3D11_CREATE_DEVICE_VIDEO_SUPPORT marca como parte de la D3D11_CREATE_DEVICE_FLAG. Una vez creado el dispositivo y el contexto, llame a <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> para habilitar el multithreading. Para asociar el dispositivo a <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>, use la función <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: ResetDevice</a> .
 
 Código para **asociar un ID3D11Device con IMFDXGIDeviceManager**:
 
@@ -741,6 +743,6 @@ if (FAILED(hr))
     return hr;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)
 * [Uso del emulador HoloLens](using-the-hololens-emulator.md)
