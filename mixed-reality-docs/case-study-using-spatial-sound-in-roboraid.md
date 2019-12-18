@@ -6,16 +6,16 @@ ms.author: hakons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, RoboRaid, sonido espacial
-ms.openlocfilehash: 9be5c461c1546d241e559f6b2f874656a29b019a
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 1482c914d261cae698a1460873b217b0683cd16b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436498"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181945"
 ---
 # <a name="case-study---using-spatial-sound-in-roboraid"></a>Caso práctico: uso de sonido espacial en RoboRaid
 
-Charles Sinex, responsable de audio en el equipo de experiencia de Microsoft HoloLens, habla sobre los desafíos únicos que encontró al crear audio para [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), un shootje de primera persona de realidad mixta.
+En este artículo se describen los desafíos únicos que el equipo de experiencia de Microsoft HoloLens encontró al crear audio para [RoboRaid](https://www.microsoft.com/p/roboraid/9nblggh5fv3j), un Shooto de primera persona de realidad mixta.
 
 ## <a name="the-tech"></a>La tecnología
 
@@ -35,7 +35,7 @@ El sonido espacial puede ser exigente en la CPU. En el caso de una experiencia d
 
 El mecánico de dodging es uno de los aspectos más importantes del juego en RoboRaid y también algo que pensamos que era realmente único para la experiencia de HoloLens. Por lo tanto, queríamos realizar grandes sobreexposicións en el reproductor. Obtuvimos el Doppler "Whizz-by" para que suene bastante atractivo en el desarrollo. Inicialmente, mi plan era usar un bucle y manipularlo en tiempo real mediante el volumen, el paso y el filtro. La implementación de esto iba a ser muy elaborada, por lo que antes de confirmar los recursos para compilar realmente esto, creamos un prototipo barato con un recurso con el efecto Doppler que se preparaba para averiguar cómo lo sentía. Nuestro desarrollo de talentos lo hizo para que este recurso whizzdo se reproduzca exactamente 0,7 segundos antes de que el proyectil pase por los oídos del jugador y los resultados se sentían realmente increíbles. No es necesario decir que se ha reparado la solución más compleja y se ha implementado el prototipo.
 
-\* * (Si desea obtener más información acerca de la creación de un recurso de audio con el efecto Doppler integrado, consulte un artículo con el diseñador de sonido Charles Deenan llamado [100 Whooshes en 2 minutos](https://designingsound.org/2010/02/charles-deenen-special-100-whooshes-in-2-minutes/)). *
+*(Para obtener más información sobre la creación de un recurso de audio con el efecto Doppler integrado, vea [100 Whooshes en 2 minutos](http://designingsound.org/2010/02/26/charles-deenen-special-100-whooshes-in-2-minutes/)).*  
 <br>
 ![dodging correctamente, el proyectil de un enemigo recompensa al jugador con un sonido Whizz satisfactorio.](images/successful-dodge-roboraid-500px.jpg)
 
@@ -83,14 +83,7 @@ Puede probar esto con los recursos de audio siguientes:
 2. Reproduzca este recurso y compárelo con el evento del escenario 1.
 3. Pruebe un equilibrio diferente de archivos mono y estéreo.
 
-## <a name="about-the-author"></a>Acerca del autor
 
-<table style="border-collapse:collapse">
-<tr>
-<td style="border-style: none" width="60px"><img alt="Picture of Charles Sinex" width="60" height="60" src="images/genericusertile.jpg"></td>
-<td style="border-style: none"><b>Charles Sinex</b><br>@Microsoft de ingeniería de audio</td>
-</tr>
-</table>
 
 ## <a name="see-also"></a>Consulta también
 * [Sonido espacial](spatial-sound.md)

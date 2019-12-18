@@ -6,17 +6,26 @@ ms.author: nopohl
 ms.date: 10/21/2019
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 9ff6a5f7594eb67dd4c1c8690812ab724cac9012
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: f051dbf24cab550470a312933ffb99e1ba595257
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926647"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181965"
 ---
 # <a name="holographic-remoting-version-history"></a>Historial de versiones de Holographic Remoting
 
 > [!IMPORTANT]
 > Esta guía es específica de Holographic Remoting en HoloLens 2.
+
+## Versión 2.0.18.0 (17 de diciembre de 2019)<a name="v2.0.18"></a>
+* Compatibilidad agregada para HolographicViewConfiguration: https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration
+* Se corrigieron varios errores que provocan bloqueos.
+* Se corrigió un error en el que se necesitaba una devolución de llamada HolographicSpace. CameraAdded para que un HolographicCamera se aceptara y se mostrara como una cámara agregada en el HoloraphicFrame.
+
+## Versión 2.0.16 (11 de noviembre de 2019)<a name="2.0.16"></a>
+* Se corrigió el interbloqueo en el seguimiento del código QR.
+* Excepción de unhandeled corregida debido a una espera de bloqueo en el subproceso principal.
 
 ## Versión 2.0.14 (26 de octubre de 2019)<a name="v2.0.14"></a>
 * Compatibilidad con las nuevas API de PerceptionDevice (actualización 2019 de noviembre de Windows 10).
