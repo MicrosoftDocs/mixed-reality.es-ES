@@ -64,10 +64,13 @@
 ## Elementos de la experiencia del usuario
 ### [Introducción](app-patterns-landingpage.md)
 ### Estilo
-#### [Color, luz y materiales](color,-light-and-materials.md)
+#### [Color, luz y materiales](color-light-and-materials.md)
 #### [Escalar](scale.md)
-#### [Diseño de sonido espacial](spatial-sound-design.md)
 #### [Tipografía](typography.md)
+### Sonido espacial
+#### [Diseño de sonido espacial](spatial-sound-design.md)
+#### [Caso práctico: Holotour ](case-study-spatial-sound-design-for-holotour.md)
+#### [Caso práctico: Roboraid](case-study-using-spatial-sound-in-roboraid.md)
 
 ### Controles y comportamientos
 #### [Cursores](cursors.md)
@@ -126,6 +129,12 @@
 ###### [3. Conexión de varios usuarios](mrlearning-sharing(photon)-ch3.md)
 ###### [4. Uso compartido de movimientos de objetos con varios usuarios](mrlearning-sharing(photon)-ch4.md)
 ###### [5. Integración de Azure Spatial Anchors en una experiencia compartida](mrlearning-sharing(photon)-ch5.md)
+##### Tutoriales de audio espacial
+###### [1. Agregar audio espacial al proyecto](unity-spatial-audio-ch1.md)
+###### [2. Sonidos de interacción del botón de espacialización](unity-spatial-audio-ch2.md)
+###### [3. Espacialización del audio de un vídeo](unity-spatial-audio-ch3.md)
+###### [4. Habilitar y deshabilitar el audio espacial en tiempo de ejecución](unity-spatial-audio-ch4.md)
+###### [5. Usar la reverberación para agregar distancia al audio espacial](unity-spatial-audio-ch5.md)
 #### Aplicaciones de ejemplo de código abierto de HoloLens (1ª gen)
 ##### [Tabla periódica de elementos](periodic-table-of-the-elements.md)
 ##### [Módulo lunar](lunar-module.md)
@@ -208,7 +217,7 @@
 #### [Asignación espacial](spatial-mapping-in-directx.md)
 #### [Descripción de escenas](scene-understanding-sdk.md)
 #### [Delimitadores espaciales compartidos](shared-spatial-anchors-in-directx.md)
-#### [Entrada del teclado, el ratón y el controlador](keyboard,-mouse,-and-controller-input-in-directx.md)
+#### [Entrada del teclado, el ratón y el controlador](keyboard-mouse-and-controller-input-in-directx.md)
 #### [Uso de XAML con aplicaciones holográficas](using-xaml-with-holographic-directx-apps.md)
 #### [Seguimiento de códigos QR](qr-code-tracking.md)
 ### [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
