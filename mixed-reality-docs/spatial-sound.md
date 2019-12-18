@@ -6,26 +6,26 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: sonido espacial, sonido envolvente, audio 3D, sonido 3D, audio espacial
-ms.openlocfilehash: 1930017903439aee3ac53b6c4be344fdc44c356f
-ms.sourcegitcommit: 2e54d0aff91dc31aa0020c865dada3ae57ae0ffc
+ms.openlocfilehash: b939433daf80a95a11bc0e1ac2ffd75dfe0cf299
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73641116"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75181985"
 ---
 # <a name="audio-in-mixed-reality"></a>Audio en realidad mixta
-El audio es una parte esencial del diseño y la productividad en la realidad mixta y puede:
-* Aumentar la confianza del usuario en las interacciones basadas en gestos y en voz
-* Guiar a los usuarios a pasos siguientes
-* Combinar objetos virtuales de forma eficaz con el mundo real
+El audio es una parte esencial del diseño y la productividad en la realidad mixta. El sonido puede:
+* Aumentar la confianza del usuario en las interacciones de gestos y voz.
+* Guiar a los usuarios a pasos siguientes.
+* Combinar objetos virtuales de forma eficaz con el mundo real.
 
-El seguimiento de los cabezales de baja latencia de los auriculares de realidad mixta, incluido HoloLens, permite el uso de la espacialización basada en HRTF de alta calidad. La espacialización del audio en la aplicación puede:
-* Llamar la atención sobre los elementos visuales
-* Ayudar a los usuarios a mantener el conocimiento de su entorno del mundo real
+El seguimiento de los cabezales de baja latencia de los auriculares de realidad mixta, incluido HoloLens, admite la espacialización basada en HRTF de alta calidad. Puede espacialar el audio de la aplicación para:
+* Llame la atención a los elementos visuales.
+* Ayudar a los usuarios a mantener el conocimiento de su entorno real.
 
-La adición de acústicas conecta con mayor profundidad los hologramas al mundo mixto y puede proporcionar indicaciones sobre el entorno y el estado del objeto.
+Las acústicas conectan con mayor profundidad los hologramas al mundo de la realidad mixta. Proporciona indicaciones sobre el entorno y el estado de los objetos.
 
-Para obtener ejemplos más detallados de diseño con audio, consulte [diseño de sonido](spatial-sound-design.md).
+Vea ejemplos detallados [de diseño que usa audio](spatial-sound-design.md).
 
 <br>
 
@@ -41,8 +41,8 @@ Para obtener ejemplos más detallados de diseño con audio, consulte [diseño de
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
-        <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><strong>Característica</strong></td>
+        <td><a href="hololens-hardware-details.md"><strong>HoloLens (primera generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -60,39 +60,42 @@ Para obtener ejemplos más detallados de diseño con audio, consulte [diseño de
     </tr>
 </table>
 
-## <a name="using-sounds-in-mixed-reality"></a>Usar sonidos en realidad mixta
-El [uso de sonidos en la realidad mixta](spatial-sound-design.md) puede requerir un enfoque diferente que en las aplicaciones táctiles y de teclado y de mouse. Entre las decisiones clave de diseño sólido se incluyen los sonidos que se deben espaciales y las interacciones que se van a sonify. Estas decisiones pueden tener un efecto fuerte en la confianza de los usuarios, la productividad y la curva de aprendizaje.
+## <a name="use-of-sounds-in-mixed-reality"></a>Uso de sonidos en realidad mixta
+El [uso de sonidos en la realidad mixta](spatial-sound-design.md) requiere un enfoque diferente que en aplicaciones táctiles y de teclado y de mouse. Entre las decisiones clave de diseño sólido se incluyen los sonidos que se deben espaciales y las interacciones que se van a sonify. Estas decisiones afectan seriamente a la confianza de los usuarios, la productividad y la curva de aprendizaje.
 
 ### <a name="case-studies"></a>Casos prácticos
-HoloTour virtualmente lleva a los usuarios a sitios turísticos e históricos en todo el mundo. En el siguiente caso práctico se describe el diseño de sonido de HoloTour: [diseño de sonido para HoloTour](case-study-spatial-sound-design-for-holotour.md). Se usó un micrófono y una configuración de representación especiales para capturar los espacios de asunto.
+HoloTour virtualmente lleva a los usuarios a sitios turísticos e históricos en todo el mundo. Vea el caso práctico [de diseño de sonido para HoloTour](case-study-spatial-sound-design-for-holotour.md) . Se usó un micrófono y una configuración de representación especiales para capturar los espacios de asunto.
 
-RoboRaid es un Reactivador de alta energía para HoloLens. En el caso práctico siguiente se describen las opciones de diseño que se han realizado para garantizar que el audio espacial se ha usado para obtener el máximo efecto drástico: [diseño de sonido para RoboRaid](case-study-using-spatial-sound-in-roboraid.md).
+RoboRaid es un Reactivador de alta energía para HoloLens. En el caso práctico [de diseño de RoboRaid](case-study-using-spatial-sound-in-roboraid.md) , se describen las opciones de diseño que se realizaron para garantizar el uso del audio espacial al efecto más drástico.
 
 ## <a name="spatialization"></a>Espacialización
-La espacialización es el componente direccional del audio espacial. Cuando se usa una instalación de 7,1 Home Theater, la espacialización es tan sencilla como la panorámica entre altavoces de alta intensidad. Pero con los auriculares en realidad mixta es fundamental usar una tecnología basada en HRTF para obtener precisión y comodidad. Windows ofrece la espacialización basada en HRTF y esta compatibilidad se acelera mediante hardware en HoloLens 2.
+La espacialización es el componente direccional del audio espacial. En el caso de una instalación de 7,1 Home Theater, la espacialización es tan sencilla como la panorámica entre los altavoces. Sin embargo, en el caso de los auriculares mixtos, es fundamental usar una tecnología basada en HRTF para obtener precisión y comodidad. Windows ofrece la espacialización basada en HRTF y esta compatibilidad se acelera mediante hardware en HoloLens 2.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/aB3TDjYklmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### <a name="should-i-spatialize"></a>¿Se debe Spatial?
-Muchos sonidos en aplicaciones de realidad mixta se benefician de la espacialización, lo que saca un sonido del encabezado del agente de escucha y lo coloca en el mundo. Consulte [diseño de sonido espacial](spatial-sound-design.md) para obtener sugerencias sobre los usos más efectivos de la espacialización en la aplicación.
+La espacialización puede mejorar muchos sonidos en aplicaciones de realidad mixta. La espacialización saca un sonido del encabezado del agente de escucha y lo coloca en el mundo. Para obtener sugerencias sobre el uso eficaz de la espacialización en la aplicación, consulte [diseño de sonido espacial](spatial-sound-design.md).
 
 ### <a name="spatializer-personalization"></a>Personalización de Spatializer
-HRTFs manipulan las diferencias de nivel y fase entre los oídos en el espectro de frecuencias. Se basan en modelos físicos y medidas de las formas de cabeza humana, torso y EAR (pinnae). Nuestro cerebro responde a estas diferencias para dar lugar a una percepción de la dirección en sonido. 
+HRTFs manipulan las diferencias de nivel y fase entre los oídos en el espectro de frecuencias. Se basan en modelos físicos y medidas de las formas de cabeza humana, torso y EAR (pinnae). Nuestro cerebro responde a estas diferencias para proporcionar una dirección perceptible en el sonido.
 
-Cada persona tiene una forma de lengüeta única, el tamaño del cabezal y la posición del oído, por lo que los mejores HRTFs son los que se ajustan a usted. HoloLens aumenta la precisión de la espacialización mediante el uso de la distancia entre pupilary (IPD) del casco que se muestra para ajustar el HRTFs para el tamaño de la cabeza.
+Cada persona tiene una forma de EAR única, el tamaño del cabezal y la posición del oído. Por lo tanto, el mejor HRTFs es su utilidad. Para aumentar la precisión de la espacialización, HoloLens usa la distancia entre pupilary (IPD) del casco que se muestra para ajustar el HRTFs para el tamaño de la cabeza.
 
 ### <a name="spatializer-platform-support"></a>Compatibilidad con la plataforma Spatializer
 Windows ofrece la espacialización, incluido HRTFs, a través de la [API de ISpatialAudioClient](https://docs.microsoft.com/windows/win32/coreaudio/spatial-sound). Esta API expone la aceleración de hardware de HoloLens 2 HRTF a las aplicaciones.
 
 ### <a name="spatializer-middleware-support"></a>Compatibilidad con middleware de Spatializer
-La compatibilidad con Windows ' HRTFs está disponible para algunos motores de audio de terceros:
-* Un complemento del [motor de audio de Unity](spatial-sound-in-unity.md) llama a la HRTF XAPO
-* Un [complemento de Wwise Audio Engine](https://www.audiokinetic.com/products/plug-ins/msspatial/) llama a la API ISpatialAudioClient
+La compatibilidad con Windows ' HRTFs está disponible para los siguientes motores de audio de terceros.
+* Un [complemento de motor de audio de Unity](spatial-sound-in-unity.md)
+* Un [complemento de Wwise Audio Engine](https://www.audiokinetic.com/products/plug-ins/msspatial/)
 
 ## <a name="acoustics"></a>Acústicas
-El audio espacial puede ser más que una dirección. Otras dimensiones, como oclusión, obstrucción, reverberación, agrupación en el portal y modelos de origen, se conocen colectivamente como ' acústicas '. Sin acústica, los sonidos espaciales carecen de una distancia percibida.
+El audio espacial está sobre más que la dirección. Otras dimensiones incluyen las oclusión, los obstáculos, la reverberación, el portal y el modelado de origen. Colectivamente, estas dimensiones se denominan *acústicas*. Sin acústica, los sonidos espaciales carecen de distancia aparente.
 
-El tratamiento acústico puede oscilar entre simple y muy complejo. Mediante el uso de una reverberación simple, como la que se admite en cualquier motor de audio, se pueden introducir sonidos espaciales en el entorno que rodea al agente de escucha. Los sistemas acústicos, como los [acústicos del proyecto](https://aka.ms/acoustics), ofrecen un tratamiento acústico más completo y atractivo. La acústica del proyecto puede modelar el efecto de las paredes, las puertas y otras geometrías de la escena en un sonido, y es una opción eficaz para los casos en los que se conoce la geometría de la escena correspondiente en tiempo de desarrollo.
+Los tratamientos acústicos van desde simple a muy complejo. Puede usar una reverberación simple compatible con cualquier motor de audio para enviar sonidos espaciales en el entorno del agente de escucha. Los sistemas acústicos, como los [acústicos del proyecto](https://aka.ms/acoustics) , proporcionan un tratamiento acústico más rico y atractivo. Los sonidos acústicos del proyecto pueden modelar el efecto de las paredes, las puertas y otras geometrías de la escena en un sonido. Es una opción eficaz para los casos en los que la geometría de la escena pertinente se conoce en tiempo de desarrollo.
 
+## <a name="next-steps"></a>Pasos siguientes
+- [Sonido espacial en Unity](spatial-sound-in-unity.md)
+- [Cómo usar sonido en aplicaciones de realidad mixta](spatial-sound-design.md)

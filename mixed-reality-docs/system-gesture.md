@@ -6,12 +6,12 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño
-ms.openlocfilehash: 417811fff9d98e459dc0047d46ea065acfced4ef
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064238"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182005"
 ---
 # <a name="system-gesture"></a>Gestos del sistema
 
@@ -27,13 +27,13 @@ El gesto del sistema es un gesto de mano que se usa para invocar el menú Inicio
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
-        <td>Flores</td>
+        <td>Eclosión</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ El gesto del sistema es un gesto de mano que se usa para invocar el menú Inicio
     </tr>
 </table>
 
-## <a name="bloom"></a>Flores
+## <a name="bloom"></a>Eclosión
 Para abrir el menú Inicio en HoloLens (1ª generación), hemos diseñado "floración", que es un gesto simbólico que imita el Blossom de la flor. Es distintivo para la interacción con Surefooted, fácil de realizar y rápida recuperación. Para llevar a cabo el gesto de floración en HoloLens (1ª generación), mantenga su mano con su mano y cerca de la mano y, a continuación, abra la mano mediante la distribución de los dedos.
 
 :::row:::
@@ -70,7 +70,7 @@ Para abrir el menú Inicio en HoloLens (1ª generación), hemos diseñado "flora
 
 ---
 
-## <a name="wrist-button"></a>Botón de muñeca
+## <a name="start-gesture"></a>Movimiento de inicio
 En HoloLens 2, reemplazamos el gesto de floración con un botón de muñeca virtual que permite más interacciones de instinctual que no requieren ninguna enseñanza adicional. Al mostrar a los usuarios el botón de la muñeca, pueden ponerse en contacto de forma intuitiva y presionarlo con la mano.
 
 :::row:::
@@ -89,8 +89,15 @@ En HoloLens 2, reemplazamos el gesto de floración con un botón de muñeca virt
 ---
 
 
-## <a name="eye-gaze-and-palm-up-pinch"></a>Mira fijamente y contacto con Palm up
-También hemos diseñado una solución de una sola mano para facilitar el acceso en HoloLens 2. Este gesto requiere que los usuarios miren el botón de la muñeca y, a continuación, usar la misma mano para realizar un toque de mano con el dedo y el dedo del índice.<br>
+## <a name="one-handed-start-gesture"></a>Gesto de inicio con una sola mano
+
+> [!IMPORTANT]
+> Para que funcione el gesto de inicio con una sola mano:
+>
+> 1. Debe actualizar a la actualización de noviembre de 2019 (compilación 18363,1039) o posterior.
+> 1. Los ojos deben calibrarse en el dispositivo para que el seguimiento ocular funcione correctamente. Si no ve puntos en órbita alrededor del icono de inicio al mirarlo, los ojos no se calibrarán en el dispositivo.
+
+También puede realizar el gesto de inicio con una sola mano. Para ello, mantenga su mano con la palma y mire el **icono de inicio** en su muñeca interna. **Mientras mantiene el ojo del icono**, acerque el dedo y el dedo del índice.<br>
 :::row:::
     :::column:::
         ![botón de muñeca listo](images/wrist-button-ready.png)<br>

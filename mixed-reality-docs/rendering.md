@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: representación, holograma
-ms.openlocfilehash: 9c32d8ddf5a1fb9e9d991211756ba1306f4d3fa9
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
+ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926861"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "75182035"
 ---
 # <a name="rendering"></a>Representación
 
@@ -27,7 +27,7 @@ La representación holográfica permite a la aplicación dibujar un holograma en
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -76,24 +76,28 @@ Consulte el artículo sobre [representación en DirectX](rendering-in-directx.md
 
 Windows Mixed Reality presenta el concepto de una **cámara holográfica**. Las cámaras holográficas son similares a la cámara tradicional que se encuentra en los textos de gráficos 3D: definen las propiedades extrínsecos (posición y orientación) y de cámara intrínseca. (Por ejemplo:, el campo de vista se usa para ver una escena 3D virtual). A diferencia de las cámaras 3D tradicionales, la aplicación no tiene el control de la posición, la orientación y las propiedades intrínsecas de la cámara. En su lugar, el movimiento del usuario controla implícitamente la posición y la orientación de la cámara holográfica. El movimiento del usuario se retransmite a la aplicación de forma fotograma a fotograma a través de una transformación de vista. Del mismo modo, las propiedades intrínsecas de la cámara se definen mediante los dispositivos ópticos calibrados del dispositivo y el marco por fotograma retransmitido a través de la transformación de proyección.
 
-En general, la aplicación se representará para una sola cámara estéreo. Sin embargo, un bucle de representación sólido será compatible con varias cámaras y admitirá cámaras mono y estéreo. Por ejemplo, el sistema puede pedir a la aplicación que se represente desde una perspectiva alternativa cuando el usuario activa una característica como [captura de realidad mixta](mixed-reality-capture.md) (MRC), dependiendo de la forma de los auriculares en cuestión. Las aplicaciones que pueden admitir varias cámaras las obtienen al [participar en el](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de cámaras que pueden admitir.
+En general, la aplicación se representará para una sola cámara estéreo. Sin embargo, un bucle de representación sólido será compatible con varias cámaras y admitirá cámaras mono y estéreo. Por ejemplo, el sistema puede pedir a la aplicación que se represente desde una perspectiva alternativa cuando el usuario activa una característica como [captura de realidad mixta](mixed-reality-capture.md) (MRC), dependiendo de la forma de los auriculares en cuestión. Las aplicaciones que pueden admitir varias cámaras las obtienen al [participar](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) en el [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de cámaras que pueden admitir.
 
 ## <a name="volume-rendering"></a>Representación de volumen
 
 Al representar volúmenes médicos MRIs o de ingeniería en 3D, a menudo se utilizan técnicas de [representación por volumen](volume-rendering.md) . Estas técnicas pueden ser especialmente interesantes en la realidad mixta, donde los usuarios pueden ver de forma natural dicho volumen desde ángulos clave, simplemente moviendo su principal.
 
 ## <a name="supported-resolutions-on-hololens-1st-gen"></a>Resoluciones admitidas en HoloLens (1ª generación)
-> [!NOTE]
-> Próximamente habrá más actualizaciones. [Ver la lista de actualizaciones](release-notes-april-2018.md)
 
-* Las resoluciones actuales y máximas admitidas son las propiedades de la configuración de la [vista](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). HoloLens se establece en la resolución máxima, que es 720p (1268x720), de forma predeterminada.
-* El tamaño de ventanilla compatible más bajo es el 50% de 720p, que es 360p (634x360). En HoloLens, se trata de un ViewportScaleFactor de 0,5.
-* **No se recomienda** nada inferior a 540P debido a la degradación visual, pero se puede usar para identificar cuellos de botella en la velocidad de relleno de píxeles.
+* El tamaño máximo de la ventanilla es una propiedad de [HolographicDisplay](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay). HoloLens se establece en el tamaño máximo de la ventanilla, que es 720p (1268x720), de forma predeterminada.
+* El tamaño de la ventanilla se puede cambiar estableciendo ViewportScaleFactor en HolographicCamera. Este factor de escala está en el intervalo de 0 a 1.
+* El tamaño de ventanilla compatible más bajo de HoloLens (1ª generación) es el 50% de 720p, que es 360p (634x360). Se trata de un ViewportScaleFactor de 0,5.
+* No se recomienda nada inferior a 540P debido a la degradación visual, pero se puede usar para identificar cuellos de botella en la velocidad de relleno de píxeles.
 
 ## <a name="supported-resolutions-on-hololens-2"></a>Resoluciones admitidas en HoloLens 2
 
-> [!NOTE]
-> [Próximamente](news.md)se ofrecerá orientación específica para HoloLens 2.
+* Los tamaños de destino de representación actuales y máximos admitidos son propiedades de la configuración de la [vista](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). HoloLens 2 se establece en el tamaño máximo de destino de representación, que es 1440x936, de forma predeterminada.
+* Las aplicaciones pueden cambiar el tamaño de los búferes de destino de representación llamando al método RequestRenderTargetSize para solicitar un nuevo tamaño de destino de representación. Se elegirá un nuevo tamaño de destino de representación que cumpla o supere el tamaño de destino de representación solicitado. Esta API cambia el tamaño del búfer de destino de representación, que requiere la reasignación de memoria en la GPU. Las implicaciones de esto incluyen: el tamaño del destino de representación se puede reducir verticalmente para reducir la presión de memoria en la GPU y este método no se debe llamar a alta frecuencia.
+* Las aplicaciones todavía pueden cambiar el tamaño de la ventanilla de la misma forma que lo hacían para HoloLens 1. Esto no produce una reasignación de memoria en la GPU, por lo que se puede cambiar con una frecuencia alta, pero no se puede usar para reducir la presión de memoria en la GPU.
+* El tamaño de ventanilla compatible más bajo de HoloLens 2 es 634x412. Se trata de un ViewportScaleFactor de aproximadamente 0,44 cuando el tamaño de destino de representación predeterminado está en uso.
+* Si se proporciona un tamaño de destino de representación que es menor que el tamaño de ventanilla compatible más bajo, se omitirá el factor de escala de la ventanilla.
+* No se recomienda nada inferior a 540P debido a la degradación visual, pero se puede usar para identificar cuellos de botella en la velocidad de relleno de píxeles.
+
 
 
 ## <a name="see-also"></a>Consulta también
