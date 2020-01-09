@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
 keywords: HoloLens, MRTK, kit de herramientas de realidad mixta, Windows Mixed Reality, diseño, aplicación de ejemplo, controles
-ms.openlocfilehash: 95c81442cc390da8ac7c9a8de218341cb5e7c948
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: ad9d2755522c2610ae051fa61f96605e49404d2d
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439656"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623498"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-basic-interactions-hololens-2-hololens-windows-mixed-reality-openvr"></a>MRTK 101: Cómo usar el kit de herramientas de realidad mixta Unity para interacciones básicas (HoloLens 2, HoloLens, Windows Mixed Reality y Open VR)
 
@@ -55,7 +55,7 @@ ManipulationHandler.cs admite el escalado o la rotación bidireccionales. Esto f
 <img alt="NearInteractionGrabbable and ManipulationHandler.cs assigned to an object" width="800" src="images/MRTK101/MRTK_ManipulationHandler.gif">
 
 ## <a name="how-to-move-or-rotate-an-object-with-precision"></a>¿Cómo se mueve o gira un objeto con precisión?
-Asigne BoundingBox.cs a un objeto para usar el cuadro de límite, que es la interfaz para el escalado y la rotación de un objeto. De forma predeterminada, se muestran los controladores y los cables de color azul de HoloLens 1. Para usar controladores animados basados en proximidad de estilo de HoloLens 2, debe asignar Prefabs y materiales. Consulte la documentación del cuadro de límite y la escena de BoundingBoxExamples. Unity para obtener los detalles de configuración.
+Asigne BoundingBox.cs a un objeto para usar el cuadro de límite, que es la interfaz para el escalado y la rotación de un objeto. De forma predeterminada, se muestran los controladores y los cables de color azul de HoloLens 1. Para usar controladores animados basados en proximidad de estilo de HoloLens 2, debe asignar Prefabs y materiales. Consulte la [documentación del cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) y la escena de BoundingBoxExamples. Unity para obtener los detalles de configuración.
 
 <img alt="BoundingBox.cs assigned to an object" width="800" src="images/MRTK101/MRTK_BoundingBox.png">
 

@@ -6,12 +6,12 @@ ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: imagen volumétrica, representación por volumen, rendimiento, realidad mixta
-ms.openlocfilehash: 1b3ec59adf4f6449ed3f12d7f98f329c4e963ea5
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 04931df5e4225225e4c11c3f6d72801e2d58f646
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926678"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503838"
 ---
 # <a name="volume-rendering"></a>Representación de volumen
 
@@ -23,7 +23,7 @@ Soluciones clave para mejorar el rendimiento
 3. BUENO: recortar el Subvolumen: mostrar solo algunas capas del volumen
 4. BUENA: reducir la resolución de la representación de volumen (consulte "representación de escenas de resolución mixta")
 
-Solo hay una cierta cantidad de información que se puede transferir desde la aplicación a la pantalla en cualquier fotograma determinado, es el ancho de banda total de la memoria. Además, cualquier procesamiento (o ' sombreado ') necesario para transformar los datos para la presentación también requiere tiempo. Las principales consideraciones a la hora de realizar la representación de volúmenes son las siguientes:
+Solo hay una cierta cantidad de información que se puede transferir desde la aplicación a la pantalla en cualquier fotograma determinado, que es el ancho de banda total de la memoria. Además, cualquier procesamiento (o ' sombreado ') necesario para transformar los datos para la presentación requiere tiempo. Las principales consideraciones a la hora de realizar la representación de volúmenes son las siguientes:
 * Screen-width * Screen-height * Screen-Count * Volume-Layers-on-pixel = total-Volume-samples-per-Frame
 * 1028 * 720 * 2 * 256 = 378961920 (100%) (volumen de res completo: demasiados ejemplos)
 * 1028 * 720 * 2 * 1 = 1480320 (0,3% de Full) (segmento fino: 1 muestra por píxel, se ejecuta sin problemas)
@@ -98,7 +98,7 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-En muchas de nuestras aplicaciones almacenamos en nuestro volumen un valor de intensidad sin procesar y un "índice de segmentación" (para segmentar partes diferentes, como la piel y el hueso, estos segmentos suelen ser creados por expertos en herramientas dedicadas). Se puede combinar con el enfoque anterior para colocar un color diferente o incluso una rampa de color diferente para cada índice de segmento:
+En muchas de nuestras aplicaciones, almacenamos en nuestro volumen un valor de intensidad sin procesar y un "índice de segmentación" (para segmentar partes diferentes, como la piel y el hueso; estos segmentos suelen ser creados por expertos en herramientas dedicadas). Se puede combinar con el enfoque anterior para colocar un color diferente o incluso una rampa de color diferente para cada índice de segmento:
 
 ```
 // Change color to match segment index (fade each segment towards black):
@@ -122,7 +122,7 @@ Un primer paso es crear un "plano de segmentación" que pueda desplazarse por el
 
 ## <a name="volume-tracing-in-shaders"></a>Seguimiento de volumen en sombreadores
 
-Cómo usar la GPU para realizar el seguimiento de subvolumens (recorre unos cuantos voxelss en profundidad en los datos de vuelta al frente):
+Cómo usar la GPU para realizar el seguimiento de subvolumens (recorra unos pocos voxels y, a continuación, capas en los datos de vuelta al frente):
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -166,7 +166,7 @@ float4 AlphaBlend(float4 dst, float4 src) {
 
 ## <a name="whole-volume-rendering"></a>Representación de todo el volumen
 
-La modificación del código del Subvolumen anterior se obtiene:
+Al modificar el código del Subvolumen anterior, obtenemos lo siguiente:
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -181,11 +181,11 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
 
 Cómo representar una parte de la escena con una resolución baja y volver a colocarla en su lugar:
 1. Configuración de dos cámaras fuera de pantalla, una para cada ojo que actualice cada fotograma
-2. Configurar dos destinos de representación de baja resolución (por ejemplo, 200 x 200), que las cámaras representan en
+2. Configuración de dos destinos de representación de baja resolución (es decir, 200 x 200 cada uno) que las cámaras representan en
 3. Configurar un cuádruple que se mueva delante del usuario
 
 Cada fotograma:
 1. Dibuje los objetivos de representación de cada ojo a baja resolución (datos de volumen, sombreadores costosos, etc.).
 2. Dibuje la escena normalmente como resolución completa (mallas, interfaz de usuario, etc.).
-3. Dibuje un cuádruple delante del usuario, a través de la escena, y el proyecto de las representaciones de baja resolución.
-4. Resultado: combinación visual de elementos de resolución completa con datos de volumen de baja resolución pero de alta densidad.
+3. Dibuje un cuádruple delante del usuario, a través de la escena, y el proyecto de las representaciones de baja res en ese
+4. Resultado: combinación visual de elementos de resolución completa con datos de volumen de baja resolución pero de alta densidad

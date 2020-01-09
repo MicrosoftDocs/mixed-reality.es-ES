@@ -1,31 +1,31 @@
 ---
-title: Near menu
-description: ''
+title: Menú Near
+description: Un menú Near es una colección de botones de un panel que le siguen con el comportamiento de etiqueta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Mixed Reality, Controls, interaction, ui, ux
-ms.openlocfilehash: 693516285457885f62fe96e6a20d829b007d80fc
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
+ms.openlocfilehash: afd3215a90f6cbdd918475d011ba57c7b86a7694
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143212"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694129"
 ---
-# <a name="near-menu"></a>Near menu
+# <a name="near-menu"></a>Menú Near
 
-![Near menu](images/UX/UX_Hero_NearMenu.jpg)
+![Menú Near](images/UX/UX_Hero_NearMenu.jpg)
 
-Near menu is a collection of the buttons on a panel that follows you with tag-along behavior. It stays in a certain range of distance and angle to allow you to interact with content. You can use the pin button or grab and place the menu to make it world-locked and disable the tag-along behavior. This allows you to focus on the target content without being disturbed by the floating menu.
+Un menú Near es una colección de botones de un panel que le siguen con el [comportamiento de etiqueta](billboarding-and-tag-along.md#what-is-a-tag-along). Permanece en cierto intervalo de distancia y ángulo para que pueda interactuar con el contenido. Puede usar el botón anclar o arrastrar y colocar el menú para que esté bloqueado en el mundo y deshabilitar el comportamiento de la etiqueta. Esto le permite centrarse en el contenido de destino sin que se moleste en el menú flotante.
 
-You can re-enable the tag-along by pressing the pin button and make the menu follow you again.
+Puede volver a habilitar la etiqueta; para ello, presione el botón anclar y haga que el menú siga de nuevo.
 
 <br>
 
 ---
 
-## <a name="near-menu-in-mrtkmixed-reality-toolkit-for-unity"></a>Near menu in MRTK(Mixed Reality Toolkit) for Unity
+## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menú Near en MRTK (kit de herramientas de realidad mixta) para Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios ejemplos de recurso prefabricado de menú cercanos.
 
 * [MRTK: menú Near](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)
@@ -39,18 +39,18 @@ You can re-enable the tag-along by pressing the pin button and make the menu fol
 ## <a name="see-also"></a>Consulta también
 
 * [Cursores](cursors.md)
-* [Rayo de mano](point-and-commit.md)
+* [Haces de mano](point-and-commit.md)
 * [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Manipula](direct-manipulation.md)
+* [Manipulación](direct-manipulation.md)
 * [Menú Mano](hand-menu.md)
-* [Menú Near](near-menu.md)
+* [Menú Cerca](near-menu.md)
 * [Colección de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Herramienta](tooltip.md)
-* [Tabletas](slate.md)
+* [Información sobre herramientas](tooltip.md)
+* [Claqueta](slate.md)
 * [Control deslizante](slider.md)
 * [Sombreador](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)

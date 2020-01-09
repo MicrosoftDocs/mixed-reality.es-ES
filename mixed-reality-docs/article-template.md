@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: ninguno
-ms.openlocfilehash: b443e48f96b6fb978fdf487c6eea7e6c804c9e70
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 314d07292a679eefb22583d522ff9bd4182a0832
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439556"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694019"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>Título (sea lo más específico posible, utilice términos humanos) 
 
@@ -31,14 +31,14 @@ ms.locfileid: "73439556"
     <col width="22%" />
 </colgroup>
 <tr>
-     <td><strong>Ofrecen</strong></td>
+     <td><strong>Característica</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
 </tr>
 <tr>
      <td>Título del artículo o tema</td>
-     <td>❌ no compatible</td>
+     <td>❌ No se admite</td>
      <td>✔️ Se recomienda</td>
      <td>✔️ Se recomienda</td>
 </tr>
@@ -192,7 +192,7 @@ Los Nabis de la acción de fotoel mundo de la pintura pintan el campo de color c
 
 Neo: estructural del usuario geográfico posterior a impressionism Die Brücke existentialism superplana, neo-Data idealmente Gründerzeit.
 
-| Posición | Ángulo de visualización | Size |
+| Distancia | Ángulo de visualización | Tamaño |
 |---------|---------|---------|
 | 45cm  | no menor que 2 ° | 1,6 x 1,6 cm |
 
@@ -237,7 +237,4 @@ Establezca iframe en width = "940" height = "530".
 
 * [Nombre del artículo 1 relacionado](design.md)
 * [Nombre del artículo 2 relacionado](design.md)
-* [Nombre del artículo 3 relacionado](design.md)
-
-
-
+* [Nombre del artículo 3 relacionado: vínculo a una sección específica](design.md#what-are-the-core-concepts-of-an-experience)

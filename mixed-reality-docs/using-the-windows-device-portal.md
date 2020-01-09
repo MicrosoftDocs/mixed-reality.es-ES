@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos de Windows, HoloLens
-ms.openlocfilehash: 9bb8116330d88c532b955ef497d29fe98c86fddb
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 17ed27653c8e3ec19c8c42b625fbd12cde2c5d84
+ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182025"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623321"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portal de dispositivos de Windows
 
@@ -75,7 +75,7 @@ Si desea cambiar este nombre de usuario o contraseña en cualquier momento, pued
 
 ## <a name="security-certificate"></a>Certificado de seguridad
 
-Si ves un "error de certificado" en el explorador, puedes corregirlo mediante la creación de una relación de confianza con el dispositivo.
+Si ve un error de certificado en el explorador, puede corregirlo mediante la creación de una relación de confianza con el dispositivo.
 
 Cada HoloLens genera un certificado autofirmado único para su conexión de SSL. De manera predeterminada, este certificado no es de confianza por parte del explorador web de tu equipo y puede que recibas un "error de certificado". Al descargar este certificado desde HoloLens (a través de USB o una red Wi-Fi en la que confíes) y confiar en el equipo, puedes conectarte a tu dispositivo de forma segura.
 1. **Asegúrese de que se encuentre en una red segura (USB o una red Wi-Fi en la que confíe).**
@@ -84,7 +84,7 @@ Cada HoloLens genera un certificado autofirmado único para su conexión de SSL.
 3. Instale el certificado en el almacén "entidades de certificación raíz de confianza" en su equipo.
    * En el menú Windows, escriba: Manage Computer Certificates e inicie el applet.
    * Expanda la carpeta **entidad de certificación raíz de confianza** .
-   * Haga clic en la carpeta **certificados** .
+   * Haga clic en la carpeta **Certificados**.
    * En el menú Acción, selecciona: Todas las tareas > Importar...
    * Completa el Asistente para importación de certificados con el archivo de certificado descargado desde Device Portal.
 4. Reinicia el explorador.
@@ -136,7 +136,7 @@ Usa la página Vista 3D para ver cómo HoloLens interpreta el entorno. Navega po
   * **Mostrar anclajes espaciales**: muestra los anclajes espaciales de la aplicación activa. Debe hacer clic en el botón actualizar para obtener y actualizar los delimitadores.
   * **Mostrar detalles**: muestra las posiciones de la mano, las cuaternas de rotación del encabezado y el vector de origen del dispositivo cuando cambian en tiempo real.
   * **Botón Pantalla completa**: muestra la vista 3D en modo de pantalla completa. Presiona ESC para salir de la vista de pantalla completa.
-* **Reconstrucción de superficie**: haga clic o pulse en **Actualizar** para mostrar la malla de asignación espacial más reciente desde el dispositivo. Un recorrido completo puede tardar unos segundos en completarse. La malla no se actualiza automáticamente en la vista 3D y debe hacer clic manualmente en **Actualizar** para obtener la malla más reciente del dispositivo. Haga clic en **Guardar** para guardar la malla de asignación espacial actual como un archivo OBJ en su PC.
+* **Reconstrucción de superficie**: haga clic o pulse en **Actualizar** para mostrar la malla de asignación espacial más reciente desde el dispositivo. Un paso completo puede tardar un tiempo en completarse (hasta unos segundos). La malla no se actualiza automáticamente en la vista 3D y debe hacer clic manualmente en **Actualizar** para obtener la malla más reciente del dispositivo. Haga clic en **Guardar** para guardar la malla de asignación espacial actual como un archivo OBJ en su PC.
 * **Delimitadores espaciales**: haga clic en actualizar para mostrar o actualizar los delimitadores espaciales de la aplicación activa.
 
 ### <a name="mixed-reality-capture"></a>Captura de realidad mixta
@@ -177,7 +177,7 @@ Capture los seguimientos de la [grabadora de rendimiento de Windows](https://msd
 * **Available profiles**: selecciona el perfil de WPR en la lista desplegable y pulsa o haz clic en **Inicio** para iniciar el seguimiento.
 * **Custom profiles**: haz clic o pulsa en **Examinar** para elegir un perfil de WPR desde tu equipo. Haz clic o pulsa en **Cargar e iniciar** para iniciar el seguimiento.
 
-Para detener el seguimiento, haz clic en el vínculo de detención. Permanezca en esta página hasta que se complete la descarga del archivo de seguimiento.
+Para detener el seguimiento, haga clic en el vínculo detener. Permanezca en esta página hasta que se complete la descarga del archivo de seguimiento.
 
 Los archivos ETL se pueden abrir para realizar análisis en [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx).
 
@@ -256,14 +256,14 @@ Haz clic o pulsa en **Activar** para iniciar el seguimiento. El proveedor se agr
 * **Proveedores personalizados**: selecciona un proveedor ETW personalizado y el nivel de seguimiento. Identifica el proveedor por su GUID. No incluyas corchetes en el GUID.
 * **Proveedores habilitados**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
 * **Providers history**: muestra los proveedores ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
-* **Eventos**: enumera los eventos ETW de los proveedores seleccionados en formato de tabla. Esta tabla se actualiza en tiempo real. Debajo de la tabla, haga clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV de forma local.
+* **Eventos**: enumera los eventos ETW de los proveedores seleccionados en formato de tabla. Esta tabla se actualiza en tiempo real. Debajo de la tabla, haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV de forma local.
 * **Filtros**: le permite filtrar los eventos ETW recopilados por el identificador, la palabra clave, el nivel, el nombre del proveedor, el nombre de la tarea o el texto. Puede combinar varios criterios juntos:
-   1. En el caso de los criterios que se aplican a la misma propiedad, los eventos pueden cumplir uno de estos criterios.
-   2. Para los criterios que se aplican a diferentes eventos de propiedad, debe cumplir todos los criterios.
+   1. En el caso de los criterios que se aplican a la misma propiedad, se muestran los eventos que pueden cumplir alguno de estos criterios.
+   2. En el caso de los criterios que se aplican a una propiedad diferente, los eventos deben cumplir todos los criterios.
 
 Por ejemplo, puede especificar los criterios *(el nombre de tarea contiene ' foo ' o ' bar ') y (el texto contiene ' error ' o ' Warning ')*
 
-### <a name="simulation"></a>Simulation
+### <a name="simulation"></a>Simulación
 
 ![página de simulación en Windows Device portal en Microsoft HoloLens](images/windows-device-portal-simulation-page-1000px.png)<br>
 *Página de simulación en Windows Device portal en Microsoft HoloLens*

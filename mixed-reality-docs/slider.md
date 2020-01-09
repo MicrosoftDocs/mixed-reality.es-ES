@@ -1,31 +1,31 @@
 ---
 title: Control deslizante
-description: ''
+description: Un control deslizante es un componente de interfaz de usuario que le permite establecer un valor moviendo un botón o una palanca en una pista.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Mixed Reality, Controls, interaction, ui, ux
-ms.openlocfilehash: 901e0408071161a827c0f60a229a6f73a440ac2d
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
+ms.openlocfilehash: 8a2ec075b0b73c2cf3b73759ccbb5ee44ca4da34
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143221"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694159"
 ---
 # <a name="slider"></a>Control deslizante
 
 ![Control deslizante](images/UX/UX_Hero_Slider.jpg)
 
-Sliders are UI components that allow you to continuously change a value by moving a slider on a track. The Pinch Slider can be moved by directly grabbing the slider, either directly or at a distance. Sliders work with various input types such as gaze and air-tap as well as the motion controller.
+Un control deslizante es un componente de interfaz de usuario que se usa para establecer un valor. Proporciona una indicación visual del contenido ajustable, así como la configuración actual en el intervalo total de contenido. Se muestra como una pista con opciones en cualquier lado. Un botón o palanca se arrastra hasta un extremo o el otro para tomar la decisión, lo que indica el valor actual. El control deslizante de pinch se puede desplazar directamente, ya sea directamente o a la distancia. Los controles deslizantes funcionan con varios tipos de entrada, como mira fijamente y el toque de aire, así como un controlador de movimiento.
 
 <br>
 
 ---
 
-## <a name="slider-in-mrtkmixed-reality-toolkit-for-unity"></a>Slider in MRTK(Mixed Reality Toolkit) for Unity
+## <a name="slider-in-mrtk-mixed-reality-toolkit-for-unity"></a>Control deslizante en MRTK (kit de herramientas de realidad mixta) para Unity
 
-* [MRTK - Slider](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Sliders.html)
+* [MRTK: control deslizante](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Sliders.html)
 
 <br>
 
@@ -34,20 +34,20 @@ Sliders are UI components that allow you to continuously change a value by movin
 ## <a name="see-also"></a>Consulta también
 
 * [Cursores](cursors.md)
-* [Hand ray](point-and-commit.md)
+* [Haces de mano](point-and-commit.md)
 * [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Manipulation](direct-manipulation.md)
+* [Manipulación](direct-manipulation.md)
 * [Menú Mano](hand-menu.md)
-* [Near menu](near-menu.md)
+* [Menú Cerca](near-menu.md)
 * [Colección de objetos](object-collection.md)
-* [Voice command](voice-input.md)
+* [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Tooltip](tooltip.md)
-* [Slate](slate.md)
+* [Información sobre herramientas](tooltip.md)
+* [Claqueta](slate.md)
 * [Control deslizante](slider.md)
-* [Shader](shader.md)
+* [Sombreador](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
-* [Surface magnetism](surface-magnetism.md)
+* [Magnetismo de superficie](surface-magnetism.md)

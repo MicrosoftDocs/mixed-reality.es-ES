@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: representación, holograma
-ms.openlocfilehash: 8984a16d92ed2f2b72d99e103eaae81b8eba742b
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 544e43ced57309cfe2628cbea65d07e94563eb41
+ms.sourcegitcommit: 317653cd8500563c514464f0337c1f230a6f3653
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182035"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75503823"
 ---
 # <a name="rendering"></a>Representación
 
-La representación holográfica permite a la aplicación dibujar un holograma en una ubicación precisa del mundo alrededor del usuario, independientemente de si está colocado exactamente en el mundo físico o en un dominio virtual que haya creado. Los [hologramas](hologram.md) son objetos que se componen de sonido y luz. La representación permite que la aplicación agregue la luz.
+La representación holográfica permite a la aplicación dibujar un holograma en una ubicación precisa del mundo alrededor del usuario, ya sea de forma precisa en el mundo físico o en un dominio virtual que haya creado. Los [hologramas](hologram.md) son objetos que se componen de sonido y luz. La representación permite que la aplicación agregue la luz.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -42,9 +42,9 @@ La representación holográfica permite a la aplicación dibujar un holograma en
 
 ## <a name="holographic-rendering"></a>Representación holográfica
 
-La clave para la representación holográfica es saber si está representando una pantalla de visualización a través como HoloLens que permite al usuario ver el mundo físico y los hologramas juntos, o una pantalla opaca como un casco de realidad de Windows mezclado que se bloquea. el mundo.
+La clave para la representación holográfica es saber si está representando una pantalla de visualización a través como HoloLens que permite al usuario ver el mundo físico y los hologramas juntos, o una pantalla opaca como un casco de realidad mixta de Windows que bloquea el WWPN.
 
-Los dispositivos con **visualizaciones de consulta**, como [HoloLens](hololens-hardware-details.md), agregan luz al mundo. Los píxeles negros son completamente transparentes, mientras que los píxeles más brillantes son cada vez más opacos. Dado que la luz de las pantallas se agrega a la luz del mundo real, los píxeles blancos son en cierto modo translúcidos.
+Los dispositivos con **pantallas de consulta**, como [HoloLens](hololens-hardware-details.md), agregan Light al mundo. Los píxeles negros son completamente transparentes, mientras que los píxeles más brillantes son cada vez más opacos. Dado que la luz de las pantallas se agrega a la luz del mundo real, los píxeles blancos son en cierto modo translúcidos.
 
 Aunque la representación de Stereoscopic proporciona una indicación de profundidad para los hologramas, la adición de efectos de la [base](interaction-fundamentals.md) puede ayudar a los usuarios a ver con más facilidad qué superficie tiene un holograma. Una técnica de base consiste en agregar un resplandor alrededor de un holograma en la superficie cercana y, a continuación, representar una sombra en este resplandor. De este modo, parece que la sombra resta luz del entorno. El [sonido espacial](spatial-sound.md) es otra pista de profundidad extremadamente importante que permite a los usuarios conocer la distancia y la ubicación relativa de un holograma.
 
@@ -52,11 +52,11 @@ Los dispositivos con **pantallas opacas**, como las de [Windows Mixed Reality co
 
 ## <a name="predicted-rendering-parameters"></a>Parámetros de representación de predicción
 
-Los auriculares de realidad mixta (tanto HoloLens como con auriculares envolvente) realizan un seguimiento continuo de la posición y la orientación del cabezal del usuario con respecto a su entorno. A medida que la aplicación comienza a preparar el siguiente fotograma, el sistema predice dónde estará el encabezado del usuario en el momento exacto en que se muestra el fotograma en las pantallas. En función de esta predicción, el sistema calcula las transformaciones de vista y proyección que se van a usar para ese marco. La aplicación **debe usar estas transformaciones para generar resultados correctos**. Si no se utilizan transformaciones proporcionadas por el sistema, la imagen resultante no se alineará con el mundo real, lo que provocará la molestia del usuario.
+Los auriculares de realidad mixta (tanto HoloLens como con auriculares envolvente) realizan un seguimiento continuo de la posición y la orientación del cabezal del usuario con respecto a su entorno. A medida que la aplicación comienza a preparar el siguiente fotograma, el sistema predice dónde estará el encabezado del usuario en el momento exacto en que se muestra el fotograma en las pantallas. En función de esta predicción, el sistema calcula la vista y las transformaciones de proyección que se van a usar para ese marco. La aplicación **debe usar estas transformaciones para generar resultados correctos**. Si no se utilizan transformaciones proporcionadas por el sistema, la imagen resultante no se alineará con el mundo real, lo que provocará la molestia del usuario.
 
 Tenga en cuenta que para predecir con precisión cuándo un nuevo fotograma llegará a las pantallas, el sistema medirá constantemente la latencia de extremo a extremo efectiva de la canalización de representación de la aplicación. Mientras el sistema se ajusta a la longitud de la canalización de representación, puede mejorar la estabilidad del holograma manteniendo la canalización lo más corta posible.
 
-Las aplicaciones que utilizan técnicas avanzadas para aumentar la predicción del sistema pueden invalidar la vista del sistema y las transformaciones de proyección. Estas aplicaciones deben seguir usando transformaciones proporcionadas por el sistema como base para sus transformaciones personalizadas con el fin de generar resultados significativos.
+Las aplicaciones que utilizan técnicas avanzadas para aumentar la predicción del sistema pueden invalidar la vista del sistema y las transformaciones de proyección. Estas aplicaciones todavía deben usar transformaciones proporcionadas por el sistema como base para sus transformaciones personalizadas con el fin de generar resultados significativos.
 
 ## <a name="other-rendering-parameters"></a>Otros parámetros de representación
 
@@ -74,7 +74,7 @@ Consulte el artículo sobre [representación en DirectX](rendering-in-directx.md
 
 ## <a name="holographic-cameras"></a>Cámaras holográficas
 
-Windows Mixed Reality presenta el concepto de una **cámara holográfica**. Las cámaras holográficas son similares a la cámara tradicional que se encuentra en los textos de gráficos 3D: definen las propiedades extrínsecos (posición y orientación) y de cámara intrínseca. (Por ejemplo:, el campo de vista se usa para ver una escena 3D virtual). A diferencia de las cámaras 3D tradicionales, la aplicación no tiene el control de la posición, la orientación y las propiedades intrínsecas de la cámara. En su lugar, el movimiento del usuario controla implícitamente la posición y la orientación de la cámara holográfica. El movimiento del usuario se retransmite a la aplicación de forma fotograma a fotograma a través de una transformación de vista. Del mismo modo, las propiedades intrínsecas de la cámara se definen mediante los dispositivos ópticos calibrados del dispositivo y el marco por fotograma retransmitido a través de la transformación de proyección.
+Windows Mixed Reality presenta el concepto de una **cámara holográfica**. Las cámaras holográficas son similares a la cámara tradicional que se encuentra en los textos de gráficos 3D; definen las propiedades extrínsecos (posición y orientación) y de cámara intrínseca. (Por ejemplo:, el campo de vista se usa para ver una escena 3D virtual). A diferencia de las cámaras 3D tradicionales, la aplicación no tiene el control de la posición, la orientación y las propiedades intrínsecas de la cámara. En su lugar, el movimiento del usuario controla implícitamente la posición y la orientación de la cámara holográfica. El movimiento del usuario se retransmite a la aplicación de forma fotograma a fotograma a través de una transformación de vista. Del mismo modo, las propiedades intrínsecas de la cámara se definen mediante los dispositivos ópticos calibrados del dispositivo y el marco por fotograma retransmitido a través de la transformación de proyección.
 
 En general, la aplicación se representará para una sola cámara estéreo. Sin embargo, un bucle de representación sólido será compatible con varias cámaras y admitirá cámaras mono y estéreo. Por ejemplo, el sistema puede pedir a la aplicación que se represente desde una perspectiva alternativa cuando el usuario activa una característica como [captura de realidad mixta](mixed-reality-capture.md) (MRC), dependiendo de la forma de los auriculares en cuestión. Las aplicaciones que pueden admitir varias cámaras las obtienen al [participar](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration) en el [tipo](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfigurationKind#Windows_Graphics_Holographic_HolographicViewConfigurationKind) de cámaras que pueden admitir.
 
@@ -92,7 +92,7 @@ Al representar volúmenes médicos MRIs o de ingeniería en 3D, a menudo se util
 ## <a name="supported-resolutions-on-hololens-2"></a>Resoluciones admitidas en HoloLens 2
 
 * Los tamaños de destino de representación actuales y máximos admitidos son propiedades de la configuración de la [vista](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic.HolographicViewConfiguration#Windows_Graphics_Holographic_HolographicViewConfiguration). HoloLens 2 se establece en el tamaño máximo de destino de representación, que es 1440x936, de forma predeterminada.
-* Las aplicaciones pueden cambiar el tamaño de los búferes de destino de representación llamando al método RequestRenderTargetSize para solicitar un nuevo tamaño de destino de representación. Se elegirá un nuevo tamaño de destino de representación que cumpla o supere el tamaño de destino de representación solicitado. Esta API cambia el tamaño del búfer de destino de representación, que requiere la reasignación de memoria en la GPU. Las implicaciones de esto incluyen: el tamaño del destino de representación se puede reducir verticalmente para reducir la presión de memoria en la GPU y este método no se debe llamar a alta frecuencia.
+* Las aplicaciones pueden cambiar el tamaño de los búferes de destino de representación llamando al método RequestRenderTargetSize para solicitar un nuevo tamaño de destino de representación. Se elegirá un nuevo tamaño de destino de representación, que cumple o supera el tamaño de destino de presentación solicitado. Esta API cambia el tamaño del búfer de destino de representación, que requiere la reasignación de memoria en la GPU. Las implicaciones de esto incluyen: el tamaño del destino de representación se puede reducir verticalmente para reducir la presión de memoria en la GPU y este método no se debe llamar a alta frecuencia.
 * Las aplicaciones todavía pueden cambiar el tamaño de la ventanilla de la misma forma que lo hacían para HoloLens 1. Esto no produce una reasignación de memoria en la GPU, por lo que se puede cambiar con una frecuencia alta, pero no se puede usar para reducir la presión de memoria en la GPU.
 * El tamaño de ventanilla compatible más bajo de HoloLens 2 es 634x412. Se trata de un ViewportScaleFactor de aproximadamente 0,44 cuando el tamaño de destino de representación predeterminado está en uso.
 * Si se proporciona un tamaño de destino de representación que es menor que el tamaño de ventanilla compatible más bajo, se omitirá el factor de escala de la ventanilla.
