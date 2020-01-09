@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto de enfoque, plano de enfoque, plano de estabilización, punto de estabilización, Reproyección, LSR, búfer de profundidad
-ms.openlocfilehash: d48f6f1878a68a17be263f10b809229dc2705c58
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 9a7f30b552242b24a9a7b260b6574690a27d2c1d
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73435414"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502626"
 ---
 # <a name="focus-point-in-unity"></a>Punto de enfoque en Unity
 
@@ -27,11 +27,11 @@ Si desea establecer el punto de enfoque en Unity, debe establecer cada fotograma
 > * En un casco de escritorio envolvente, esto habilitará la Reproyección basada en profundidad por píxel.
 > * En una HoloLens que ejecute la actualización de abril de 2018 de Windows 10 o posterior, se analizará el búfer de profundidad para elegir un plano de estabilización óptimo automáticamente.
 >
-> Cualquier enfoque debe proporcionar una calidad de imagen incluso mejor sin que la aplicación Seleccione un punto de enfoque cada fotograma.  Tenga en cuenta que si proporciona un punto de enfoque manualmente, se invalidará el comportamiento automático descrito anteriormente y se reducirá la estabilidad del holograma.  Por lo general, solo debe especificar un punto de enfoque manual cuando la aplicación se ejecuta en una HoloLens que todavía no se ha actualizado a la actualización 2018 de abril de Windows 10.
+> Cualquier enfoque debe proporcionar una calidad de imagen incluso mejor sin que la aplicación proporcione un trabajo explícito para seleccionar un punto de enfoque para cada fotograma.  Tenga en cuenta que si proporciona un punto de enfoque manualmente, se invalidará el comportamiento automático descrito anteriormente y se reducirá la estabilidad del holograma.  Por lo general, solo debe especificar un punto de enfoque manual cuando la aplicación se ejecuta en una HoloLens que todavía no se ha actualizado a la actualización 2018 de abril de Windows 10.
 
 ### <a name="example"></a>Ejemplo
 
-Hay muchas maneras de establecer el punto de enfoque, como se sugiere por las sobrecargas disponibles en la función estática *SetFocusPointForFrame* . A continuación se muestra un ejemplo sencillo para establecer el plano de enfoque en el objeto proporcionado en cada fotograma:
+Hay muchas maneras de establecer el punto de enfoque, como se sugiere por las sobrecargas disponibles en la función estática *SetFocusPointForFrame* . A continuación se muestra un ejemplo sencillo para establecer el plano de enfoque en el objeto proporcionado para cada fotograma:
 
 ```cs
 public GameObject focusedObject;

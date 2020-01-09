@@ -6,16 +6,16 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: bacec5e6a9bfda49d4ad6d3dd849156c9cc09add
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539702"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502676"
 ---
 # <a name="scene-understanding"></a>Conocimiento de escenas
 
-La comprensión de la escena proporciona a los desarrolladores de realidad mixta una representación de entorno estructurada de alto nivel diseñada para facilitar el desarrollo de aplicaciones con conciencia del entorno. La comprensión de la escena realiza esto combinando la eficacia de los tiempos de ejecución de la realidad mixta existentes, como la [asignación espacial](spatial-mapping.md) menos precisa y los nuevos tiempos de ejecución controlados por AI. Mediante la combinación de estas tecnologías, la comprensión de escenas genera representaciones de entornos 3D que son similares a los que se han usado en marcos como Unity o ARKit/ARCore. El punto de entrada que comprende la escena comienza con un observador de escenas al que llama su aplicación para calcular una nueva escena. Hoy en día, la tecnología es capaz de generar 3 categorías de objetos distintas pero relacionadas: mallas de entornos estancos simplificados que infieren la estructura del salón plano sin desorden, regiones de plano para la selección de ubicación a las que llamamos cuádruples y una instantánea del [ malla de asignación espacial](spatial-mapping.md) que se alinea con los datos de cuatro o estancos que se muestran.
+La comprensión de la escena proporciona a los desarrolladores de realidad mixta una representación de entorno estructurada de alto nivel diseñada para facilitar el desarrollo de aplicaciones con conciencia del entorno. La comprensión de la escena realiza esto combinando la eficacia de los tiempos de ejecución de la realidad mixta existentes, como la [asignación espacial](spatial-mapping.md) menos precisa y los nuevos tiempos de ejecución controlados por AI. Mediante la combinación de estas tecnologías, la comprensión de escenas genera representaciones de entornos 3D que son similares a los que se han usado en marcos como Unity o ARKit/ARCore. El punto de entrada que comprende la escena comienza con un observador de escenas, al que llama su aplicación para calcular una nueva escena. En la actualidad, la tecnología es capaz de generar 3 categorías de objetos distintas pero relacionadas: mallas de entornos estancos simplificados que infieren la estructura de habitación plana sin desorden, regiones de plano para la selección de ubicación a las que llamamos cuádruples y una instantánea de la malla de [asignación espacial](spatial-mapping.md) que se alinea con los datos de cuádruples y estancos que se muestran.
 
 ![Malla de asignación espacial, superficie plana etiquetada, malla estanca](images/SUScenarios.png)
 
@@ -23,7 +23,7 @@ Este documento está pensado para proporcionar información general sobre el esc
 
 ## <a name="developing-with-scene-understanding"></a>Desarrollo con conocimiento de escenas
 
-Este artículo solo sirve para introducir la escena que comprende el tiempo de ejecución y los conceptos. Si busca documentación sobre cómo desarrollar con conocimiento de escenas, puede que le interese lo siguiente:
+Este artículo solo sirve para introducir la escena que comprende el tiempo de ejecución y los conceptos. Si busca documentación sobre cómo desarrollar con la comprensión de escenas, puede que le interese lo siguiente:
 
 [Información general del SDK de introducción a la escena](scene-understanding-SDK.md)
 
@@ -37,7 +37,7 @@ Si no tiene un dispositivo y desea tener acceso a escenas de ejemplo para probar
 
 ### <a name="sdk"></a>SDK
 
-Si busca detalles específicos sobre cómo desarrollar para Understandiing de escenas, para obtener detalles sobre cómo funciona la comprensión de escenas y cómo desarrollar para ella, consulte la documentación de [Introducción al SDK](scene-understanding-SDK.md) de la escena.
+Si busca detalles específicos sobre cómo desarrollar para la comprensión de escenas o detalles sobre cómo funciona la comprensión de escenas y cómo desarrollar para ello, consulte la documentación de [información general sobre el SDK de introducción](scene-understanding-SDK.md) a la escena.
 
 
 ### <a name="sample"></a>Muestra
@@ -53,7 +53,7 @@ Si busca detalles específicos sobre cómo desarrollar para Understandiing de es
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -73,9 +73,9 @@ Si busca detalles específicos sobre cómo desarrollar para Understandiing de es
 
 <br>
 
-Muchos de los escenarios principales para las aplicaciones compatibles con el entorno (selección de ubicación, oclusión, física, etc.) son direccionables por la asignación espacial y la comprensión de escenas, en esta sección se resaltan estas diferencias. Una diferencia principal entre la comprensión de escenas y la asignación espacial es un equilibrio entre la precisión máxima y la latencia y la estructura y simplicidad. Si su aplicación requiere la menor latencia posible y requiere triángulos de malla solo, querrá acceder directamente a la asignación espacial; sin embargo, si va a realizar un procesamiento de nivel superior, puede considerar la posibilidad de cambiar al modelo de comprensión de la escena como debe proporcionar un superconjunto de funcionalidad. Tenga en cuenta también que, dado que la comprensión de la escena proporciona la malla de asignación espacial como parte de su representación, siempre tendrá acceso a los datos de asignación espacial más completos y precisos posibles.
+Muchos de los escenarios principales para las aplicaciones compatibles con el entorno (selección de ubicación, oclusión, física, etc.) son direccionables por la asignación espacial y la comprensión de escenas, y en esta sección se resaltan estas diferencias. Una diferencia principal entre la comprensión de escenas y la asignación espacial es un equilibrio entre la precisión máxima y la latencia y la estructura y simplicidad. Si su aplicación requiere los triángulos de malla posible y de menor latencia que solo desea acceder directamente a la asignación espacial pero está realizando un procesamiento de mayor nivel, puede considerar la posibilidad de cambiar al modelo de comprensión de la escena, tal como debe proporcionar. con un superconjunto de funcionalidad. Tenga en cuenta también que, dado que la comprensión de la escena proporciona la malla de asignación espacial como parte de su representación, siempre tendrá acceso a los datos de asignación espacial más completos y precisos posibles.
 
- En las secciones siguientes se vuelven a visitar los escenarios principales de asignación espacial en el contexto de la nueva escena que comprende el SDK.
+En las secciones siguientes se vuelven a visitar los escenarios principales de asignación espacial en el contexto de la nueva escena que comprende el SDK.
 
 ### <a name="placement"></a>Colocación
 
@@ -103,11 +103,11 @@ Si la aplicación intenta colocar hologramas 2D o 3D en estructuras rígidas de 
 
 La [oclusión de asignación espacial](spatial-mapping.md#occlusion) sigue siendo la manera menos latente de capturar el estado en tiempo real del entorno. Aunque esto puede ser útil para proporcionar la oclusión en escenas muy dinámicas, es posible que desee considerar la posibilidad de realizar una comprensión de la escena por varias razones. Si usa la malla de asignación espacial generada por la comprensión de la escena, puede solicitar datos de la asignación espacial que no se almacenarán en la memoria caché local y, por lo tanto, no estarán disponibles en las API de percepción. El uso de la asignación espacial para la oclusión junto con las mallas estancas proporcionará un valor adicional, la finalización específica de la estructura de sala sin explorar.
 
-Si sus requisitos pueden tolerar el aumento de la latencia de la comprensión de la escena, los desarrolladores de aplicaciones deben considerar la posibilidad de usar la escena para comprender la malla estanca y, presumiblemente, la malla de asignación espacial al unísono con representaciones planas. Esto proporcionaría "lo mejor de ambos mundos", en el que la oclusión estanca simplificada se casado con geometría no plana más precisa que proporciona los mapas de oclusión más realistas posibles.
+Si sus requisitos pueden tolerar el aumento de la latencia de la comprensión de la escena, los desarrolladores de aplicaciones deben considerar la posibilidad de usar la escena para comprender la malla estanca y, presumiblemente, la malla de asignación espacial al unísono con representaciones planas. Esto proporcionaría un escenario "lo mejor de ambos mundos" en el que la oclusión estanca simplificada se casado con geometría no plana más precisa que proporciona los mapas de oclusión más realistas posibles.
 
-### <a name="physics"></a>Efectos
+### <a name="physics"></a>Física
 
-La comprensión de escenas genera mallas estancos que descomponen espacio con semántica específica para abordar muchas limitaciones de la física que imponen las mallas de asignación espacial. Las estructuras estancas garantizan que siempre se alcanzan las conversiones de rayos físicos y la descomposición semántica permite una generación más sencilla de mallas de navegación para la navegación en interiores. Tal y como se describe en la [sección sobre la creación de una](#occlusion) escena con EnableSceneObjectMeshes y EnableWorldMesh, se producirá la malla completa más física posible. La propiedad estanca de la malla del entorno impedirá que las pruebas de posicionamiento no se realicen en las superficies de posicionamiento y los datos de la malla garantizarán que la física interactúe con todos los objetos de la escena, y no solo con la estructura de la habitación.
+La comprensión de escenas genera mallas estancos que descomponen el espacio con semántica, específicamente para abordar muchas limitaciones de la física que imponen las mallas de asignación espacial. Las estructuras estancas garantizan que siempre se alcanzan las conversiones de rayos físicos y la descomposición semántica permite una generación más sencilla de mallas de navegación para la navegación en interiores. Como se describe en la sección sobre la [oclusión](#occlusion), la creación de una escena con EnableSceneObjectMeshes y EnableWorldMesh producirá la malla más completa posible. La propiedad estanca de la malla del entorno impedirá que las pruebas de posicionamiento no se realicen en las superficies de posicionamiento y los datos de la malla garantizarán que la física interactúe con todos los objetos de la escena, y no solo con la estructura de la habitación.
 
 ### <a name="navigation"></a>Navegación
 
@@ -115,7 +115,7 @@ Las mallas planas descompuestas por la clase semántica son construcciones ideal
 
 La generación de las mallas de navegación precisas aún requiere un procesamiento posterior, es decir, las aplicaciones deben seguir proyectando occluders en el piso para asegurarse de que la navegación no pase por desorden/tablas, etc. La forma más precisa de lograrlo es proyectar los datos de malla mundial que se proporcionan si la escena se calcula con la marca EnableWorldMesh.
 
-### <a name="visualization"></a>Visualiza
+### <a name="visualization"></a>Visualización
 
 Aunque se puede usar la visualización de la [asignación espacial](spatial-mapping.md#visualization) para los comentarios en tiempo real del entorno, hay muchos escenarios en los que la simplicidad de los objetos planos y estancos proporciona más rendimiento o calidad visual. Las técnicas de proyección de instantáneas y de uso de las bases que se describen mediante la asignación espacial pueden ser más agradables si se proyectan en las superficies planas que proporcionan cuádruples o la malla estanca plana. Esto es especialmente cierto en entornos o escenarios en los que el análisis previo exhaustivo no es óptimo debido al hecho de que la escena se inferirá, y los entornos completos y las suposiciones planas minimizarán los artefactos.
 

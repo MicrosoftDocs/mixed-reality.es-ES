@@ -6,12 +6,12 @@ ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, estabilización, caso práctico
-ms.openlocfilehash: d31f3128ba10d6fc7bd57f3068db3dd16b23f901
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 039b8f671f02a27393c30c7954cf0e2925635ad0
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436434"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597658"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Caso práctico: uso del plano de estabilización para reducir la turbulencia holográfica
 
@@ -65,7 +65,7 @@ Los fragmentos y conkers jóvenes también diseñan alrededor de los hologramas 
 
 ## <a name="do-it-yourself"></a>Hágalo usted mismo
 
-Si tiene HoloLens y le gustaría experimentar con los conceptos que he descrito, puede descargar una escena de prueba y probar los ejercicios siguientes. Usa la API de Gizmo integrada de Unity y debe ayudarle a visualizar dónde se establece el plano. Este código también se utilizó para capturar las capturas de pantallas en este caso práctico.
+Si tiene HoloLens y le gustaría experimentar con los conceptos de este artículo, puede descargar una escena de prueba y probar los ejercicios siguientes. Usa la API de Gizmo integrada de Unity y debe ayudarle a visualizar dónde se establece el plano. Este código también se utilizó para capturar las capturas de pantallas en este caso práctico.
 1. Sincronice la versión más reciente de [MixedRealityToolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity).
 2. Abra la escena [HoloToolkit-examples/Utilities/Scenes/StabilizationPlaneSetting. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Utilities/Scenes/StabilizationPlaneSetting.unity) .
 3. Compilar y configurar el proyecto generado.
@@ -73,17 +73,17 @@ Si tiene HoloLens y le gustaría experimentar con los conceptos que he descrito,
 
 ### <a name="exercise-1"></a>Ejercicio 1
 
-Verá varios puntos blancos en torno a las distintas orientaciones. Delante, verá tres puntos en profundidades diferentes. Pulse para cambiar el punto en el que se establece el plano. Para este ejercicio, y para los otros dos, desplazarse por el espacio mientras Gazing en los puntos. Gire el cabezal a la izquierda, a la derecha, hacia arriba y hacia abajo. Muévase más cerca de los puntos. Vea cómo reaccionan cuando el plano de estabilización se establece en diferentes destinos.
+Verá varios puntos blancos en torno a las distintas orientaciones. Delante, verá tres puntos en profundidades diferentes. Pulse para cambiar el punto en el que se establece el plano. Para este ejercicio, y para los otros dos, desplazarse por el espacio mientras Gazing en los puntos. Gire el cabezal a la izquierda, a la derecha, hacia arriba y hacia abajo. Desplácese hacia abajo y más lejos de los puntos. Vea cómo reaccionan cuando el plano de estabilización se establece en diferentes destinos.
 
 ### <a name="exercise-2"></a>Ejercicio 2
 
-Ahora, vaya a su derecha hasta que vea dos puntos móviles, uno oscilante en una ruta de acceso horizontal y otro en un trazado vertical. Una vez más, pulse para cambiar el punto en el que se establece el plano. Observe cómo se reduce la separación de colores en el punto que está conectado al plano. Puntee de nuevo para usar la velocidad del punto en la función de configuración del plano. Este parámetro ofrece una sugerencia a HoloLens sobre el movimiento previsto del objeto. Es importante saber cuándo usar esto, ya que observará que la velocidad se usa en un punto; el otro punto en movimiento mostrará una separación de colores mayor. Tenga esto en cuenta al diseñar las aplicaciones: tener un flujo cohesivo al movimiento de los objetos puede ayudar a evitar que aparezcan los artefactos.
+Ahora, vaya a su derecha hasta que vea dos puntos móviles, uno oscilante en una ruta de acceso horizontal y otro en un trazado vertical. Una vez más, pulse para cambiar el punto en el que se establece el plano. Observe cómo se reduce la separación de colores y aparece en el punto que está conectado al plano. Puntee de nuevo para usar la velocidad del punto en la función de configuración del plano. Este parámetro ofrece una sugerencia a HoloLens sobre el movimiento previsto del objeto. Es importante saber cuándo usar esto, ya que observará que la velocidad se usa en un punto; el otro punto en movimiento mostrará una separación de colores mayor. Tenga esto en cuenta al diseñar las aplicaciones: tener un flujo cohesivo al movimiento de los objetos puede ayudar a evitar que aparezcan los artefactos.
 
 ### <a name="exercise-3"></a>Ejercicio 3
 
 Vaya a la derecha una vez más hasta que vea una nueva configuración de puntos. En este caso, hay puntos en la distancia y un punto en espiral hacia delante y hacia delante. Air TAP para cambiar el punto en el que se establece el plano, alternando entre los puntos del fondo y el punto en movimiento. Observe que la configuración de la posición del plano y la velocidad en la del punto en espiral hace que los artefactos aparezcan en todas partes.
 
-**Útiles**
+**Sugerencias**
 * Mantenga la lógica de la configuración del plano simple. Como ha visto, no necesita algoritmos complejos de configuración de plano para crear una experiencia envolvente. El plano de estabilización es solo una parte del rompecabezas.
 * Cuando sea posible, mueva siempre el plano entre los destinos sin problemas. Cambiar de forma instantánea los destinos lejanos puede interrumpir visualmente la escena.
 * Considere la posibilidad de tener una opción en la lógica de configuración del plano para bloquear en un destino muy específico. De este modo, puede hacer que el plano esté bloqueado en un objeto, como un logotipo o una pantalla de título, si es necesario.

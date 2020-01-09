@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 04/15/2018
 ms.topic: article
 keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto
-ms.openlocfilehash: af30cf91eda1b654bea6048c34f63c61238626c7
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 99c72f2d9d900c8a05fb7d8b9b8de10d657fdd13
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437114"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502656"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configuración de un nuevo proyecto de Unity para Windows Mixed Reality 
 
@@ -29,7 +29,7 @@ Para tener como destino Windows Mixed Reality, primero debe configurar el proyec
 5. Establecer el **tipo de compilación** en **D3D**
 6. Establecimiento del **SDK de UWP** en la **versión más reciente instalada**
 
-A continuación, necesitamos que Unity sepa que la aplicación que se está intentando exportar debe crear una [vista envolvente](app-views.md) en lugar de una vista 2D. Lo hacemos habilitando "realidad virtual admitida":
+A continuación, debe dejar que Unity sepa que la aplicación que está intentando exportar debe crear una [vista envolvente](app-views.md) en lugar de una vista 2D. Para ello, habilite "realidad virtual admitida":
 1. En la ventana **configuración de compilación...** , Abra **configuración del reproductor...**
 2. Seleccione la **configuración de plataforma universal de Windows** pestaña
 3. Expandir el grupo de **configuración de XR**
@@ -69,7 +69,7 @@ Una vez habilitada la casilla "se admite Virtual Reality", el componente de [cá
 
 Si su aplicación tiene como destino HoloLens específicamente, hay algunas opciones de configuración que deben cambiarse para optimizar las pantallas transparentes del dispositivo, por lo que la aplicación se mostrará a través del mundo físico:
 1. En la **jerarquía**, seleccione la **cámara principal** .
-2. En el panel **Inspector** , establezca la **posición** de la transformación en **0, 0, 0** para que la ubicación del encabezado de los usuarios se inicie en el origen del mundo de Unity.
+2. En el panel **Inspector** , establezca la **posición** de la transformación en **0, 0, 0** para que la ubicación del encabezado del usuario se inicie en el origen del mundo Unity.
 3. Cambie las **marcas de borrado** a **color sólido**.
 4. Cambie el color de **fondo** a **RGBA 0, 0, 0 y 0**. Los negros se representan como transparentes en HoloLens.
 5. Cambiar los **planos de recorte, cerca** de [HoloLens recomendado](camera-in-unity.md#clip-planes) 0,85 (metros).
@@ -78,5 +78,5 @@ Si elimina y crea una nueva cámara, asegúrese de que la cámara esté **etique
 
 
 ## <a name="see-also"></a>Consulta también
-* [Kit de herramientas de realidad mixta V2](mrtk-getting-started.md)
+* [Mixed Reality Toolkit v2](mrtk-getting-started.md)
 * [Introducción al desarrollo de Unity](unity-development-overview.md)

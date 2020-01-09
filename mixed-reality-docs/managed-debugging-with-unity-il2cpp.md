@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Unity, Visual Studio, depuración, il2cpp
-ms.openlocfilehash: fd09c3ca1bd410c56e46eb8e8815742f87482d08
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 970d3000df995e7c6e331a41d10e25dc5aa370a8
+ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73439636"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502666"
 ---
 # <a name="managed-debugging-with-unity-il2cpp"></a>Depuración administrada con Unity IL2CPP
 
@@ -33,10 +33,10 @@ Siga estos pasos para asociar un depurador administrado a la compilación de UWP
 1. Compile e implemente desde la solución de Visual Studio en el dispositivo. Debe compilar con las configuraciones de **depuración** o de **lanzamiento** . La configuración **maestra** deshabilita el generador de perfiles de Unity y puede impedir la depuración óptima. Opcionalmente, compruebe **Internet (cliente & servidor)** y **redes privadas (servidor de & de cliente)** en la lista de capacidades de Package. appxmanifest en la solución.
 1. Inicie la aplicación en el dispositivo. Asegúrese de que el dispositivo está conectado a la misma red que el equipo.
 1. Asegúrese de que el dispositivo **no está** conectado al equipo a través de USB.
-1. Vaya a la solución de Visual Studio que se crea al hacer doble clic en un script en Unity, donde puede ver y editar C# los scripts.
+1. Vaya a la solución de Visual Studio que se crea al hacer doble clic en un script en Unity, donde puede ver y editar los C# scripts.
 1. Debug: > adjuntar el depurador de Unity.
 
-    ![Adjuntar el depurador de Unity](images/il2cpp-debugging-attach.png)
+    ![Adjuntar depurador de Unity](images/il2cpp-debugging-attach.png)
 
 1. Seleccione el dispositivo en la lista y haga clic en "Aceptar" para adjuntarlo.
 

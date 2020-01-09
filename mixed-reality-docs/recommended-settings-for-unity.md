@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configuración, realidad mixta
-ms.openlocfilehash: 2f2f823fe7192bd92e038d58901cb7098d2f4d64
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
+ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438103"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75597638"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -40,7 +40,7 @@ Lea la [iluminación global desde Unity](https://docs.unity3d.com/Manual/GIIntro
 
 ### <a name="single-pass-instancing-rendering-path"></a>Ruta de representación de instancia de un solo paso
 
-En las aplicaciones de realidad mixta, la escena se representa dos veces, una vez para cada ojo al usuario. En comparación con el desarrollo en 3D tradicional, esto duplica en efecto la cantidad de trabajo que se debe calcular. Por lo tanto, es importante seleccionar la ruta de acceso de representación más eficaz en Unity para ahorrar en el tiempo de CPU y GPU. La representación con instancia de un solo paso optimiza la canalización de representación de Unity para aplicaciones de realidad mixta y, por lo tanto, se recomienda habilitar esta opción de forma predeterminada para cada proyecto.
+En las aplicaciones de realidad mixta, la escena se representa dos veces, una vez para cada ojo al usuario. En comparación con el desarrollo 3D tradicional, esto duplica efectivamente la cantidad de trabajo que se debe calcular. Por lo tanto, es importante seleccionar la ruta de acceso de representación más eficaz en Unity para ahorrar en el tiempo de CPU y GPU. La representación con instancia de un solo paso optimiza la canalización de representación de Unity para aplicaciones de realidad mixta y, por lo tanto, se recomienda habilitar esta opción de forma predeterminada para cada proyecto.
 
 Para habilitar esta característica en el proyecto de Unity
 
@@ -68,12 +68,12 @@ Para habilitar esta característica en el proyecto de Unity
 
 Además, se recomienda seleccionar profundidad de **16 bits** en la configuración de **formato de profundidad** de este panel, especialmente para el desarrollo de HoloLens. Si selecciona 16 bits en comparación con 24 bits, se reducirán significativamente los requisitos de ancho de banda, ya que será necesario desplace o procese menos datos.
 
-Para que la plataforma Windows Mixed Reality optimice la estabilidad del holograma, se basa en el búfer de profundidad para que sea preciso y coincida con cualquier holograma representado en la pantalla. Por lo tanto, con el uso compartido de búfer de profundidad en, es importante al representar el color, también la profundidad de representación. En Unity, la mayoría de los materiales opacos o TransparentCutouts representarán la profundidad de forma predeterminada, pero los objetos transparentes y de texto no suelen representar la profundidad, aunque esto es dependiente del sombreador, etc.
+Para que la plataforma Windows Mixed Reality optimice la estabilidad del holograma, se basa en el búfer de profundidad para que sea preciso y coincida con cualquier holograma representado en la pantalla. Por lo tanto, con el uso compartido de búfer de profundidad en, es importante al representar el color, para representar también la profundidad. En Unity, la mayoría de los materiales opacos o TransparentCutouts representarán la profundidad de forma predeterminada, pero los objetos transparentes y de texto no suelen representar la profundidad, aunque esto es dependiente del sombreador, etc.
 
 Si usa el [sombreador estándar del kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md), para representar la profundidad de los objetos transparentes:
 
 1) Seleccione el material transparente que usa el sombreador estándar de MRTK y abra la ventana del editor del inspector.
-2) Seleccione el botón **corregir ahora** dentro de la advertencia de uso compartido de búfer de profundidad. Esto también puede realizarse manualmente si se establece **el modo de representación** en **personalizado** y, a continuación, se establece el **modo** en **transparente** y, por último, se establece la **escritura de profundidad** **en activado** .
+2) Seleccione el botón **corregir ahora** dentro de la advertencia de uso compartido de búfer de profundidad. Esto también puede realizarse manualmente si se establece el **modo de representación** en **personalizado**; a continuación, establezca el **modo** en **transparente** y, por último, establezca **escritura de profundidad** en **activado** .
 
 > [!IMPORTANT]
 > Los desarrolladores deben tener cuidado con las supuestos Z al cambiar estos valores junto con la configuración de plano Near/Far de la cámara. La lucha por Z se produce cuando dos GameObjects intentan representarse en el mismo píxel y debido a las limitaciones de la fidelidad del búfer de profundidad (es decir, profundidad z), Unity no puede discernir qué objeto está delante del otro. Los desarrolladores notarán un parpadeo entre dos objetos de juego mientras *luchan* por el mismo valor de profundidad z. Esto se puede resolver cambiando al formato de profundidad de 24 bits, ya que habrá un intervalo mayor de valores para cada objeto que se va a calcular en función de la profundidad de z de la cámara.
@@ -85,14 +85,14 @@ Si usa el [sombreador estándar del kit de herramientas de realidad mixta](https
 
 ### <a name="building-for-il2cpp"></a>Compilar para IL2CPP
 
-Unity ha dejado de admitir el back-end de scripting de .NET y, por tanto, se recomienda a los desarrolladores que usen **IL2CPP** para sus compilaciones de Visual Studio de UWP. Aunque esto aporta varias ventajas, la compilación de la solución de Visual Studio desde Unity para **Il2CPP** puede ser significativamente más lenta que el anterior método de .net. Por lo tanto, se recomienda encarecidamente seguir los procedimientos recomendados para crear **IL2CPP** para ahorrar en el tiempo de iteración de desarrollo.
+Unity ha dejado de admitir el back-end de scripting de .NET y, por tanto, recomienda que los desarrolladores usen **IL2CPP** para sus compilaciones de Visual Studio de UWP. Aunque esto aporta varias ventajas, la compilación de la solución de Visual Studio desde Unity para **Il2CPP** puede ser significativamente más lenta que el anterior método de .net. Por lo tanto, se recomienda encarecidamente seguir los procedimientos recomendados para crear **IL2CPP** para ahorrar en el tiempo de iteración de desarrollo.
 
 1) Aproveche las compilaciones incrementales compilando el proyecto en el mismo directorio cada vez, reutilizando los archivos creados previamente
 2) Deshabilitar exámenes de software antimalware para el proyecto & carpetas de compilación
    - Abrir **protección contra amenazas de Virus &** en la aplicación de configuración de Windows 10
    - Seleccione **Administrar configuración** en **configuración de protección contra amenazas de virus &**
    - Seleccione **Agregar o quitar exclusiones** en la sección **exclusiones** .
-   - Haga clic en **Agregar una exclusión** y seleccione la carpeta que contiene el código del proyecto de Unity y las salidas de compilación
+   - Haga clic en **Agregar una exclusión** y seleccione la carpeta que contiene el código del proyecto de Unity y las salidas de compilación.
 3) Uso de SSD para compilar
 
 Consulte optimización de los [tiempos de compilación de IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html) para obtener más información.
@@ -116,9 +116,9 @@ Para alternar la pantalla de presentación de Holographic:
 
 |  Pantalla de presentación de mostrar Unity  |  Imagen de bienvenida holográfica  |  Comportamiento |
 |----------|----------|----------|
-|  En  |  Ninguno  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  En  |  Ninguna  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 |  En  |  Personalizados  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Desactivada  |  Ninguno  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
+|  Desactivada  |  Ninguna  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
 |  Desactivada  |  Personalizados  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 
 Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
@@ -141,7 +141,7 @@ Es posible que algunas aplicaciones no requieran seguimiento (por ejemplo, [apli
 
 Para no participar en el comportamiento de pausa automática:
 
-1) Vaya a **editar** > **configuración del proyecto** > página del **reproductor**
+1) Vaya a la página **editar** > **configuración del proyecto** > **Player** .
 2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
 3) Modifique la casilla **de verificación de Windows Holographic > en el seguimiento de pérdida y Mostrar imagen** .
 
@@ -156,7 +156,7 @@ Para que una aplicación aproveche ciertas funciones, debe declarar las capacida
 Las capacidades se pueden habilitar para una aplicación de realidad mixta:
 
 1) Vaya a **editar** > **configuración del proyecto** > página del **reproductor**
-2) Haga clic en la pestaña **tienda Windows** y abra la sección **configuración de publicación** y busque la lista de **capacidades** .
+2) Haga clic en la pestaña **tienda Windows** , abra la sección **configuración de publicación** y busque la lista de **capacidades** .
 
 Las funcionalidades aplicables para habilitar las API de uso frecuente para aplicaciones holográficas son:
 <br>
