@@ -1,17 +1,17 @@
 ---
 title: 'Tutoriales de introducción: 6. Explorar opciones de entrada avanzadas'
-description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+description: Realiza este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b740c463e3d73d5df9b996562e9ff0a1952703f0
-ms.sourcegitcommit: f2b7c6381006fab6d0472fcaa680ff7fb79954d6
+ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74064323"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334358"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. explorar opciones de entrada avanzadas
 
@@ -23,9 +23,7 @@ En este tutorial, se exploran varias opciones de entrada avanzadas para HoloLens
 - Usar manos con seguimiento para panorámicas y objetos 3D con manos con seguimiento
 - Aproveche las capacidades de seguimiento ocular de HoloLens 2 para seleccionar objetos
 
-## <a name="instructions"></a>Instrucciones
-
-### <a name="enabling-voice-commands"></a>Habilitar comandos de voz
+## <a name="enabling-voice-commands"></a>Habilitar comandos de voz
 
 En esta sección, se implementan dos comandos de voz. En primer lugar, la capacidad de alternar el panel de diagnósticos de velocidad de fotogramas se introduce indicando "alternar diagnósticos". En segundo lugar, se explora la capacidad de reproducir un sonido con un comando de voz. En primer lugar, se revisan los perfiles y configuraciones de MRTK responsables de la configuración de comandos de voz.
 
@@ -108,7 +106,7 @@ En esta sección, se implementan dos comandos de voz. En primer lugar, la capaci
 
     ![Lesson5 archivo chapter1 Step16im](images/Lesson5_chapter1_step16im.PNG)
 
-### <a name="the-pan-gesture"></a>Gesto de desplazamiento panorámico
+## <a name="the-pan-gesture"></a>Gesto de desplazamiento panorámico
 
 En esta sección, aprenderá a usar el gesto de panorámica. Esto resulta útil para desplazarse con el dedo o la mano para desplazarse por el contenido. También puede usar el gesto de panorámica para girar objetos, recorrer una colección de objetos 3D o incluso desplazarse por una interfaz de usuario 2D.
 
@@ -194,7 +192,7 @@ En esta sección, aprenderá a usar el gesto de panorámica. Esto resulta útil 
 
     ![mrlearning-base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
 
-### <a name="eye-tracking"></a>Seguimiento de los ojos
+## <a name="eye-tracking"></a>Seguimiento de los ojos
 
 En esta sección, veremos cómo habilitar el seguimiento ocular en nuestra demostración. Giraremos lentamente los elementos de menú 3D cuando se encuentren al mirarnos con la mirada. También vamos a desencadenar un divertido efecto cuando se seleccione el elemento con la mirada.
 

@@ -1,17 +1,17 @@
 ---
 title: 'Tutoriales de introducción: 3. Crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta'
-description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+description: Realiza este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: f0a54bb591479dbe8ffa719cb5e6a9d846f67f9e
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.openlocfilehash: e961238b8fc7f2ef15bea5f25eba8a8e9eb2ef3e
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539746"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334396"
 ---
 # <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta
 
@@ -23,9 +23,7 @@ En la lección anterior, aprendió sobre algunas de las funcionalidades que el k
 * Interacción con hologramas mediante elementos y botones de la interfaz de usuario
 * Entrada e interacciones básicas del seguimiento de la mano
 
-## <a name="instructions"></a>Instrucciones
-
-### <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Configuración de los perfiles de kit de herramientas de realidad mixta (cambiar la opción de visualización de reconocimiento espacial)
+## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Configuración de los perfiles de kit de herramientas de realidad mixta (cambiar la opción de visualización de reconocimiento espacial)
 
 En esta sección, aprenderá a personalizar y configurar los perfiles predeterminados de MRTK ajustando la opción de visualización de la malla de reconocimiento espacial. Puedes seguir estos mismos principios para ajustar cualquier parámetro o valor de los perfiles de MRTK.
 
@@ -73,7 +71,7 @@ En esta sección, aprenderá a personalizar y configurar los perfiles predetermi
 
 Enhorabuena. Acabas de aprender a modificar una configuración en el perfil de MRTK. Como puedes ver, para modificar la configuración de MRTK debes crear copias de los perfiles predeterminados para poder editarlos. Siempre tendrá los perfiles predeterminados, que no son editables, para volver a si desea crear un perfil con una nueva configuración o puede volver a consultar los perfiles predeterminados. Hay numerosas opciones que puedes ajustar. Para obtener una referencia completa a la configuración del perfil de MRTK, consulte la documentación de MRTK aquí: [https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 
-### <a name="hand-tracking-gestures-and-interactable-buttons"></a>Botones de interacción y gestos de seguimiento de la mano
+## <a name="hand-tracking-gestures-and-interactable-buttons"></a>Botones de interacción y gestos de seguimiento de la mano
 
 En esta sección, aprenderá a usar el seguimiento de manos para presionar un botón que se puede presionar.
 
@@ -94,7 +92,7 @@ En esta sección, aprenderá a usar el seguimiento de manos para presionar un bo
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6a.png)
 
-    Ahora, debe aparecer un cubo en la pantalla. Aparecerá muy grande. Puede ajustar las coordenadas (mientras el cubo todavía está seleccionado en el área de jerarquía) para reducir el tamaño. Establezca los valores de escala en x = 0,02, y = 0,02 y z = 0,02. Asegúrese de colocar el cubo en la escena cerca del botón, pero no superpuesto. En la imagen siguiente, la posición del cubo es x = 0, y = 0,4 y z = 0,2.
+    Ahora, debe aparecer un cubo en la pantalla. Aparecerá muy grande. Puede ajustar las coordenadas (mientras el cubo todavía está seleccionado en el área de jerarquía) para reducir el tamaño. Establezca los valores de escala en x = 0,02, y = 0,02 y z = 0,02. Asegúrese de colocar el cubo en la escena cerca del botón, pero no superpuesto. En la imagen siguiente, la posición del cubo es x = 0, y = 0,04 y z = 0,2.
 
     ![MR213_BuildSettings](images/mrlearning-base-ch2-2-step6b.png)
 
@@ -129,7 +127,7 @@ En esta sección, aprenderá a usar el seguimiento de manos para presionar un bo
 
     Ahora, cuando se presiona el botón, cambia a un nuevo color. color. Al soltar el botón, se volverá a cambiar al color predeterminado especificado (por ejemplo, gris claro). Haga clic en el botón reproducir en la parte superior de la pantalla para probarlo en el editor o en la implementación en HoloLens 2 para realizar la prueba. Para obtener más información sobre la simulación en el editor, incluida la simulación manual, lea la [Página de documentación de la simulación de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/InputSimulation/InputSimulationService.html>).
 
-### <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Creación de un panel de botones con la colección de objetos de cuadrícula de MRTK
+## <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Creación de un panel de botones con la colección de objetos de cuadrícula de MRTK
 
 En esta sección, aprenderá a alinear automáticamente varios botones en una interfaz de usuario ordenada mediante la herramienta GridObjectCollection de MRTK.
 
@@ -162,7 +160,7 @@ En esta sección, aprenderá a alinear automáticamente varios botones en una in
     >[!NOTE]
     >Según la orientación de los objetos secundarios o del objeto primario, es probable que debas ajustar la orientación de manera diferente en futuros proyectos. También, puede que los campos de ancho y alto de celda se deban definir de forma diferente, según el tamaño de los objetos de la colección.
 
-### <a name="adding-text-into-your-scene"></a>Adición de texto a la escena
+## <a name="adding-text-into-your-scene"></a>Adición de texto a la escena
 
 En esta sección, aprenderás a agregar texto a tus experiencias de realidad mixta y a editarlo. Si aún no lo ha hecho, asegúrese de que ha habilitado TextMeshPro en Unity siguiendo [estas instrucciones.](https://docs.unity3d.com/Packages/com.unity.textmeshpro@2.0/manual/index.html#installation)
 

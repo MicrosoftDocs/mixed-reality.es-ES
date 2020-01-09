@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: e0b0e6273917df071f49eb0108039ebe204bbc12
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: d263c84d306a2ece3783c2e7fb0e3f599dec49eb
+ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105944"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694179"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
 
@@ -178,14 +178,14 @@ Con el dedo de colisión, los usuarios ya están listos para interactuar con el 
 
 ## <a name="2d-slate-interaction"></a>Interacción con una tableta táctil 2D
 
-Una tableta táctil 2D es un contenedor holográfico que hospeda contenido de aplicaciones 2D, como un explorador web. El concepto de diseño para interactuar con una tableta táctil 2D mediante la manipulación directa es aprovechar el modelo mental de interactuar con una pantalla táctil física.
+Una [tableta táctil](slate.md) 2D es un contenedor holográfico que hospeda contenido de aplicaciones 2D, como un explorador web. El concepto de diseño para interactuar con una tableta táctil 2D mediante la manipulación directa es aprovechar el modelo mental de interactuar con una pantalla táctil física.
 
 ### <a name="to-interact-with-the-slate-contact"></a>Para interactuar con el contacto de la tableta táctil
 
 :::row:::
     :::column:::
-       ![Función táctil](images/2d-slate-interaction-touch.jpg)<br>
-       **Función táctil**<br>
+       ![Tocar](images/2d-slate-interaction-touch.jpg)<br>
+       **Tocar**<br>
        Utiliza el dedo índice para presionar un botón o un hipervínculo.
     :::column-end:::
     :::column:::
@@ -334,7 +334,7 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede c
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Apuntar y confirmar con las manos](point-and-commit.md)

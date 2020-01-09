@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, interacción, diseño, HoloLens, manos, lejos, apuntar y confirmar
-ms.openlocfilehash: 77c596f5250240d436529e879434a8f508b06732
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: c7952338c6937e42889a08ee37f6ce8bc1bb9ad3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105989"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334066"
 ---
 # <a name="point-and-commit-with-hands"></a>Apuntar y confirmar con las manos
 
@@ -211,7 +211,7 @@ De forma predeterminada, MRTK proporciona un haz de mano prefabricado ([DefaultC
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Manipulación directa con las manos](direct-manipulation.md)
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Manos: manipulación directa](direct-manipulation.md)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: b033e4f9a379fb1778da3d94da70262e073d141b
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 3127ffceea08202fe9d978ad77f8fddb6fba60a3
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926517"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334378"
 ---
 # <a name="7-creating-a-lunar-module-sample-application"></a>7. crear una aplicación de ejemplo de módulo lunar
 
@@ -25,9 +25,7 @@ En este tutorial, se combinan varios conceptos de lecciones anteriores para crea
 - Usar la física y la fuerza de los cuerpos rígidos
 - Explorar el uso de la información sobre herramientas
 
-## <a name="instructions"></a>Instrucciones
-
-### <a name="configuring-the-lunar-module"></a>Configuración del módulo lunar
+## <a name="configuring-the-lunar-module"></a>Configuración del módulo lunar
 
 En esta sección, se presentan los distintos componentes necesarios para crear nuestra experiencia de ejemplo.
 
@@ -38,7 +36,7 @@ En esta sección, se presentan los distintos componentes necesarios para crear n
 
     ![Imagen de la lección 6, capítulo 1, paso 1](images/Lesson6_Chapter1_step1im.PNG)
 
-    Si expande el objeto Rocket Launcher_Tutorial Game en la jerarquía y expande aún más el objeto de módulo lunar, encontrará varios objetos secundarios que tienen un material denominado "x-Ray". El material "x-Ray" permite un color ligeramente translúcido que se usará como sugerencias de selección de ubicación para el usuario. 
+    Si expande el objeto Rocket Launcher_Tutorial Game en la jerarquía y expande aún más el objeto de módulo lunar, encontrará varios objetos secundarios que tienen un material denominado "x-Ray". El material "x-Ray" permite un color ligeramente translúcido que se usará como sugerencias de selección de ubicación para el usuario.
 
     ![Lesson6 archivo chapter1 Noteaim](images/Lesson6_Chapter1_noteaim.PNG)
 
@@ -81,7 +79,7 @@ En esta sección, se presentan los distintos componentes necesarios para crear n
 
     ![Imagen de la lección 6, capítulo 1, paso 6](images/Lesson6_Chapter1_step6im.PNG)
 
-### <a name="lunar-module-parts-overview"></a>Información general sobre los elementos del módulo lunar
+## <a name="lunar-module-parts-overview"></a>Información general sobre los elementos del módulo lunar
 
 El objeto primario de los elementos de módulo lunar es la colección de los objetos con los que el usuario interactúa. Los nombres de los objetos de juego con la escena con la etiqueta nombres entre paréntesis se muestran en la lista siguiente:
 
@@ -106,7 +104,7 @@ El objeto de información sobre herramientas es la etiqueta de información sobr
 
 El origen de audio se captura automáticamente.
 
-### <a name="configuring-the-placement-hints-button"></a>Configuración del botón sugerencias de selección de ubicación
+## <a name="configuring-the-placement-hints-button"></a>Configuración del botón sugerencias de selección de ubicación
 
 En la [Lección 2](mrlearning-base-ch2.md), ha aprendido a colocar y configurar botones para realizar acciones como cambiar el color de un elemento o hacer que se reproduzca un sonido al insertarlo. Seguiremos utilizando estos principios a medida que configuramos nuestros botones para alternar las sugerencias de colocación.
 
@@ -120,7 +118,7 @@ El objetivo es configurar nuestro botón para que cada vez que el usuario presio
 
     ![Lesson6 Chapter3 Step2im](images/Lesson6_Chapter3_step2im.PNG)
 
-### <a name="configuring-the-reset-button"></a>Configuración del botón restablecer
+## <a name="configuring-the-reset-button"></a>Configuración del botón restablecer
 
 Habrá situaciones en las que el usuario comete un error, produce accidentalmente el objeto o simplemente desea restablecer la experiencia. El botón Restablecer agrega la posibilidad de reiniciar la experiencia.
 
@@ -137,7 +135,7 @@ Habrá situaciones en las que el usuario comete un error, produce accidentalment
     >[!NOTE]
     >Tenga en cuenta que, de forma predeterminada, GameObject. BroadcastMessage se configura como ResetPlacement. Esto difunde un mensaje denominado ResetPlacement para cada objeto secundario del RocketLauncher_Tutorial. Cualquier objeto que tenga un método para ResetPlacement () responde a ese mensaje restableciendo su posición.
 
-### <a name="configuring-the-launch-button"></a>Configuración del botón Launch
+## <a name="configuring-the-launch-button"></a>Configuración del botón Launch
 
 En esta sección se explica cómo configurar el botón Launch, que permite al usuario presionar el botón e iniciar el módulo lunar en el espacio.
 
@@ -161,6 +159,6 @@ En esta sección se explica cómo configurar el botón Launch, que permite al us
 
     ![Lesson6 Chapter5 Step6im](images/Lesson6_Chapter5_step6im.PNG)
 
-### <a name="congratulations"></a>Enhorabuena
+## <a name="congratulations"></a>Enhorabuena
 
 Ha configurado completamente esta aplicación. Ahora, cuando presione reproducir, puede ensamblar completamente el módulo lunar, alternar sugerencias, iniciar el módulo lunar y restablecerlo para que se inicie de nuevo.

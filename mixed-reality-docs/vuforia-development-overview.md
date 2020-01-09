@@ -3,15 +3,15 @@ title: Uso de Vuforia con Unity
 description: Aproveche Vuforia para compilar aplicaciones de Windows Mixed Reality en Unity.
 author: thetuvix
 ms.author: alexturn
-ms.date: 01/28/2019
+ms.date: 12/20/2019
 ms.topic: article
 keywords: Vuforia, marcadores, coordenadas, marco de referencia, seguimiento
-ms.openlocfilehash: bae5d0eb04ab9434dd3e72674686743779a8f70c
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 2d7cc27cd9a5fe9bb6502edaa6df0b7a80755049
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003194"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334478"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Uso del motor Vuforia con Unity
 
@@ -22,7 +22,7 @@ Para una mayor flexibilidad a la hora de desarrollar experiencias de AR, el moto
 Las aplicaciones de Vuforia Engine existentes que se compilaron para teléfonos y tabletas se pueden configurar fácilmente en Unity para que se ejecuten en HoloLens. Incluso puede usar el motor Vuforia para realizar la nueva aplicación de HoloLens en tabletas con Windows 10, como el libro de Surface Pro y Surface.
 
 
-## <a name="get-the-tools"></a>取得工具
+## <a name="get-the-tools"></a>Conseguir las herramientas
 
 [Instale las versiones recomendadas](install-the-tools.md) de Visual Studio y Unity y, después, configure Unity para usar Visual Studio y el IDE y el compilador preferidos. 
 
@@ -80,7 +80,7 @@ El motor de Vuforia funde automáticamente las supuestos del seguimiento de la c
 Dado que el proceso se controla automáticamente, no requiere que el desarrollador programe ninguna programación.
 
 
-**Esto es lo que sucede...**
+**La siguiente es una descripción de alto nivel del proceso:**
 1. El rastreador de destino de Vuforia reconoce el destino
 2. A continuación, se inicializa el seguimiento de destino
 3. La posición y la rotación del destino se analizan para proporcionar una estimación de postura sólida para HoloLens
@@ -104,7 +104,7 @@ Para cambiar el modo de rendimiento en Unity, vaya a configuración de Vuforia (
 *   Seleccione el menú desplegable para el modo de dispositivo de cámara y seleccione una de las tres opciones.
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>Consulta también
 * [Instalación de las herramientas](install-the-tools.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Asignación espacial](spatial-mapping.md)

@@ -1,17 +1,17 @@
 ---
 title: 'Tutoriales de anclaje espacial de Azure: 1. Introducción a los delimitadores espaciales de Azure'
-description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+description: Realiza este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 861c42f9449fcb3cf038258af91088fc927941e5
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: e62d3626ec6f2dbf8b66378212afab7db2f56422
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74941143"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334453"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a los anclajes espaciales de Azure
 
@@ -32,9 +32,17 @@ En el tercer tutorial, en el que se [muestran los comentarios del delimitador es
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Cumpla los requisitos enumerados en la sección de [requisitos previos](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#prerequisites) del tutorial de [Inicio rápido: creación de una aplicación de HoloLens de Unity que usa delimitadores espaciales de Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
+>[!TIP]
+>Si aún no ha completado la serie de [tutoriales de introducción](mrlearning-base.md) , se recomienda que complete los tutoriales en primer lugar.
+
+* Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](install-the-tools.md)
+* SDK de Windows 10 10.0.18362.0 o posterior
+* Cierta capacidad C# de programación básica
+* Un dispositivo HoloLens 2 [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode)
 * Complete la sección [creación de un recurso de anclajes espaciales](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) de la guía de [Inicio rápido: creación de una aplicación de HoloLens en Unity que usa anclajes espaciales de Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
-* Si aún no ha completado la serie de [tutoriales de introducción](mrlearning-base.md) , se recomienda que complete los tutoriales en primer lugar.
+
+>[!IMPORTANT]
+>Esta serie de tutoriales requiere <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> y la versión recomendada es Unity 2019.1.14. Esto sustituye a los requisitos de versión de Unity o a las recomendaciones descritas en los requisitos previos vinculados anteriormente.
 
 ## <a name="creating-the-unity-project"></a>Crear el proyecto de Unity
 

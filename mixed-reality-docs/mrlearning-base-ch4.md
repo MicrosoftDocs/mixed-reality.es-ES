@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 8c60d8291ede123817c93458fff003891169840c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
+ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105971"
+ms.lasthandoff: 12/24/2019
+ms.locfileid: "75334382"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interactuar con objetos 3D
 
@@ -30,9 +30,7 @@ En este tutorial, obtendrá información sobre el contenido 3D básico y la expe
 * Explorar la interacción próxima y lejana
 * Más información acerca de los gestos de seguimiento de la mano, como captar y tocar
 
-## <a name="instructions"></a>Instrucciones
-
-### <a name="organizing-3d-objects-in-a-collection"></a>Organización de los objetos 3D en una colección
+## <a name="organizing-3d-objects-in-a-collection"></a>Organización de los objetos 3D en una colección
 
 1. Haga clic con el botón derecho en la jerarquía y seleccione crear vacío para crear un objeto de juego vacío, cambie su nombre a 3DObjectCollection y asegúrese de que está colocado en x = 0, y = 0 y z = 0.
 
@@ -70,7 +68,7 @@ En este tutorial, obtendrá información sobre el contenido 3D básico y la expe
     >[!NOTE]
     >Es posible que observe que algunos de los objetos están fuera del centro, como los objetos de la imagen anterior. Esto se debe a que los recursos prefabricados o los objetos pueden tener objetos secundarios sin alinear. Puedes realizar los ajustes de posición necesarios en los objetos o los objetos secundarios para alinear la cuadrícula correctamente.
 
-### <a name="manipulating-3d-objects"></a>Manipulación de objetos 3D
+## <a name="manipulating-3d-objects"></a>Manipulación de objetos 3D
 
 1. Agrega la capacidad de manipular un cubo. Para agregar la capacidad de manipular objetos 3D, haga lo siguiente:
     * Seleccione el objeto 3D que desea manipular en la jerarquía (es decir, uno de los cubos).
@@ -132,7 +130,7 @@ En este tutorial, obtendrá información sobre el contenido 3D básico y la expe
     >[!NOTE]
     >Esta configuración es útil en escenarios como, por ejemplo, la creación de una bola que puede iniciar. Manteniendo la velocidad adecuada y la velocidad angular para asegurarse de que una vez que se suelta la bola, continuará avanzando a la velocidad en la que se lanzó; similar al comportamiento de una bola física.
 
-### <a name="adding-bounding-boxes"></a>Agregar rectángulos de selección
+## <a name="adding-bounding-boxes"></a>Agregar rectángulos de selección
 
 Los cuadros de límite facilitan y simplifican la manipulación de objetos con una mano para la manipulación directa (cerca de la interacción) y la manipulación basada en rayos (interacción lejana). Los cuadros de límite proporcionan controladores que se pueden capturar para escalar y girar objetos a lo largo de un eje específico.
 
@@ -180,7 +178,7 @@ Los cuadros de límite facilitan y simplifican la manipulación de objetos con u
     >[!NOTE]
     >Las visualizaciones de cuadro de límite solo aparecen en el modo de reproducción.
 
-### <a name="adding-touch-effects"></a>Agregar efectos de toque
+## <a name="adding-touch-effects"></a>Agregar efectos de toque
 
 En este ejemplo vamos a reproducir un efecto de sonido al tocar un objeto con la mano.
 
