@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, controles, diseño
-ms.openlocfilehash: 9a111fcbe4c49972cc5ef22fb647f89544188af5
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: ec41cfad77617a90d02e7b23a2334249aa430190
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143147"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723224"
 ---
 # <a name="object-collection"></a>Colección de objetos
 
@@ -48,7 +48,7 @@ También puede usar imágenes 2D con la colección de objetos. En los siguientes
 
 ---
 
-## <a name="object-collection-in-mrtkmixed-reality-toolkit-for-unity"></a>Colección de objetos en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="object-collection-in-mrtk-mixed-reality-toolkit-for-unity"></a>Colección de objetos en MRTK (kit de herramientas de realidad mixta) para Unity
 
 * [MRTK: colección de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
 
@@ -61,18 +61,18 @@ También puede usar imágenes 2D con la colección de objetos. En los siguientes
 ## <a name="see-also"></a>Consulta también
 
 * [Cursores](cursors.md)
-* [Rayo de mano](point-and-commit.md)
+* [Haces de mano](point-and-commit.md)
 * [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Manipula](direct-manipulation.md)
+* [Manipulación](direct-manipulation.md)
 * [Menú Mano](hand-menu.md)
-* [Menú Near](near-menu.md)
+* [Menú Cerca](near-menu.md)
 * [Colección de objetos](object-collection.md)
 * [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Herramienta](tooltip.md)
-* [Tabletas](slate.md)
+* [Información sobre herramientas](tooltip.md)
+* [Claqueta](slate.md)
 * [Control deslizante](slider.md)
 * [Sombreador](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)

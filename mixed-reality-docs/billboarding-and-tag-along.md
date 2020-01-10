@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, la cartelera, el etiquetado
-ms.openlocfilehash: ff2b1ce20174b1b9aecbb90b1d1dc3e8896b3761
-ms.sourcegitcommit: 17427d4d8c3723d53540f1b7f5bc061bba08c1d6
+ms.openlocfilehash: 24c4ca8bdc3c6ea1081311102204d4a7f5a95425
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74143129"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723184"
 ---
 # <a name="billboarding-and-tag-along"></a>Acerca de la cartelera y la etiqueta
 
@@ -46,8 +46,8 @@ Al igual que el contenido bloqueado realmente por el encabezado, los objetos de 
 
 ---
 
-## <a name="billboarding-and-tag-along-in-mrtkmixed-reality-toolkit-for-unity"></a>La cartelera y la etiqueta en MRTK (kit de herramientas de realidad mixta) para Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts para el comportamiento de la cartelera y la etiqueta. Simplemente asigne el script Billboard.cs a cualquier objeto para agregar el comportamiento de la cartelera y hacer que el objeto siempre se enfrente a usted. Para agregar el comportamiento de etiqueta, use el script RadialView.cs. Puede ajustar varias opciones, como lerping Time, Distance y degree.
+## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>La cartelera y la etiqueta en MRTK (kit de herramientas de realidad mixta) para Unity
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts para el comportamiento de la cartelera y la etiqueta. Basta con asignar el script Billboard.cs a cualquier objeto para agregar el comportamiento de la cartelera y hacer que el objeto siempre se enfrente a usted. Para agregar el comportamiento de etiqueta, use el script RadialView.cs. Puede ajustar varias opciones, como lerping Time, Distance y degree.
 
 * [MRTK: Solver de vista radial](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html#radialview)
 * [MRTK: script de la cartelera](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
@@ -60,20 +60,20 @@ Al igual que el contenido bloqueado realmente por el encabezado, los objetos de 
 ## <a name="see-also"></a>Consulta también
 
 * [Cursores](cursors.md)
-* [Hand ray](point-and-commit.md)
+* [Haces de mano](point-and-commit.md)
 * [Button](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
-* [Manipulation](direct-manipulation.md)
+* [Manipulación](direct-manipulation.md)
 * [Menú Mano](hand-menu.md)
-* [Near menu](near-menu.md)
+* [Menú Cerca](near-menu.md)
 * [Colección de objetos](object-collection.md)
-* [Voice command](voice-input.md)
+* [Comando de voz](voice-input.md)
 * [Teclado](keyboard.md)
-* [Tooltip](tooltip.md)
-* [Slate](slate.md)
+* [Información sobre herramientas](tooltip.md)
+* [Claqueta](slate.md)
 * [Control deslizante](slider.md)
-* [Shader](shader.md)
+* [Sombreador](shader.md)
 * [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 * [Indicación del progreso](progress.md)
-* [Surface magnetism](surface-magnetism.md)
+* [Magnetismo de superficie](surface-magnetism.md)

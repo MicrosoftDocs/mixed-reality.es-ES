@@ -6,18 +6,18 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada
-ms.openlocfilehash: 7264b0b8882928f64860bc5a30b97683306cb19c
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105770"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723194"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
 ![Entrada de voz](images/UX/UX_Hero_VoiceCommand.jpg)
 
-Voice es una de las formas clave de entrada en HoloLens. Permite comandos directamente de un holograma sin tener que usar [gestos de mano](gaze-and-commit.md#composite-gestures). La entrada de voz puede ser una forma natural de comunicar su intención. La voz es especialmente adecuada en el recorrido de interfaces complejas, ya que permite a los usuarios cortar menús anidados con un comando.
+La voz es una de las formas clave de entrada en HoloLens. Permite comandos directamente de un holograma sin tener que usar [gestos de mano](gaze-and-commit.md#composite-gestures). La entrada de voz es una manera natural de comunicar tus intenciones. La voz es especialmente adecuada en el recorrido de interfaces complejas, ya que permite a los usuarios cortar menús anidados con un comando.
 
 La entrada de voz se basa en el [mismo motor](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) que admite la voz en todas las demás _aplicaciones universales de Windows_. En HoloLens, el reconocimiento de voz siempre funcionará en el idioma de visualización de Windows configurado en configuración. 
 
@@ -42,7 +42,7 @@ Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -121,7 +121,7 @@ También puede decir "Hola Cortana" para abrir Cortana en cualquier momento. No 
         *Imagen: un usuario puede decir el comando "ajustar" que ve en la barra de la aplicación para ajustar la posición de la aplicación*
     :::column-end:::
         :::column:::
-        espacio ![](images/spacer-20x582.png)<br>
+        ![space](images/spacer-20x582.png)<br>
         ![al mirar una ventana de la aplicación o un holograma, un usuario puede decir el comando "ajustar" que aparecen en la barra de la aplicación para ajustar la posición de la aplicación en el mundo](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -296,7 +296,7 @@ En el caso de la versión 2017 de Windows Mixed Reality Developer Edition, la l�
 
 ---
 
-## <a name="voice-input-in-mrtkmixed-reality-toolkit-for-unity"></a>Entrada de voz en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Entrada de voz en MRTK (kit de herramientas de realidad mixta) para Unity
 Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede asignar fácilmente comandos de voz en cualquier objeto. Use el **Perfil de entrada de voz** de MRTK para definir sus palabras clave. Mediante la asignación del script **SpeechInputHandler** , puede hacer que cualquier objeto responda a las palabras clave definidas en el perfil de entrada de voz. SpeechInputHandler también proporciona una etiqueta de confirmación de voz para mejorar la confianza del usuario.
 
 * [Comando MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)

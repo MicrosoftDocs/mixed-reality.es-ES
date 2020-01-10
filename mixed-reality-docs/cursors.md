@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens (1ª generación), HoloLens 2, realidad mixta, cursores, destinatarios, mirados, gestos
-ms.openlocfilehash: 719e7a573e8c8bc682ec0f960d9f3c8f8c8e5a4a
-ms.sourcegitcommit: 781e47db2ca2f2c792c95e76ac309b44b3535555
+ms.openlocfilehash: 969906cb09e100dbdd289d78baba722a4bd32537
+ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74105742"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75723244"
 ---
 # <a name="cursors"></a>Cursores
 
@@ -34,7 +34,7 @@ Hay 3 tipos de cursores: **Finger, Ray**y **Head-mirate**. Estos cursores de se�
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -156,10 +156,10 @@ Se recomienda diseñar sin un cursor cuando el sentido de la inmersión es un co
 
 ---
 
-## <a name="cursor-in-mrtkmixed-reality-toolkit-for-unity"></a>Cursor en MRTK (kit de herramientas de realidad mixta) para Unity
-De forma predeterminada, **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona un cursor recurso prefabricado ([DefaultCursor. recurso prefabricado](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) que tiene el mismo estado visual que el cursor del sistema del shell. Se asigna en el perfil de entrada de MRTK, en punteros. Puede reemplazar o personalizar este cursor para su experiencia. Para la experiencia con la entrada de seguimiento ocular, MRTK también proporciona EyeGazeCursor que tiene un efecto visual sutil para minimizar la distracción.
+## <a name="cursor-in-mrtk-mixed-reality-toolkit-for-unity"></a>Cursor en MRTK (kit de herramientas de realidad mixta) para Unity
+De forma predeterminada, [MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona un cursor recurso prefabricado ([DefaultCursor. recurso prefabricado](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Cursors)) que tiene el mismo estado visual que el cursor del sistema del shell. Se asigna en el perfil de entrada de MRTK, en Punteros. Puede reemplazar o personalizar este cursor para su experiencia. Para la experiencia con la entrada de seguimiento ocular, MRTK también proporciona EyeGazeCursor que tiene un efecto visual sutil para minimizar la distracción.
 
-* [MRTK: Perfil de puntero](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
+* [MRTK: perfil de puntero](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
 * [MRTK: sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
 * [MRTK: punteros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
 
