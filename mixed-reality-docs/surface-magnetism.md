@@ -1,23 +1,23 @@
 ---
 title: Magnetismo de superficie
-description: Con la técnica de Surface magnetismo, puede colocar objetos holográficas en una superficie física real.
+description: Con la técnica de Surface magnetismo, puede colocar un objeto holográfica en una superficie física del mundo real.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: 17015fef7a73930109844a48d6017230a4efecd5
-ms.sourcegitcommit: 270ca09ec61e1153a83cf44942d7ba3783ef1805
+ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
+ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694149"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901436"
 ---
 # <a name="surface-magnetism"></a>Magnetismo de superficie
 
 ![Magnetismo de superficie](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Con la técnica de Surface magnetismo, puede colocar objetos holográficas en una superficie física real. Al alinear la orientación del objeto con la superficie del mundo real, puede crear una experiencia más envolvente y natural.
+Con la técnica de Surface magnetismo, puede colocar un objeto holográfica en una superficie física del mundo real. Al alinear la orientación del objeto con la superficie del mundo real, puede crear una experiencia más envolvente y natural.
 
 <br>
 
