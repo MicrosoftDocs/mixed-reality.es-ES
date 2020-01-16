@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: bc9c8a36f110010270ca7dadbd8655f29af25f32
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 9de4cc1a7a015f85be54b4b9ff6188a7e9d02e85
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901436"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036372"
 ---
 # <a name="surface-magnetism"></a>Magnetismo de superficie
 
 ![Magnetismo de superficie](images/UX/MRTK_SurfaceMagnetism.gif)
 
-Con la técnica de Surface magnetismo, puede colocar un objeto holográfica en una superficie física del mundo real. Al alinear la orientación del objeto con la superficie del mundo real, puede crear una experiencia más envolvente y natural.
+Con la técnica de Surface magnetismo, puede colocar un objeto holográfica en una superficie física del mundo real. Al alinear la orientación del objeto con la superficie del mundo real, puede crear una experiencia más envolvente y natural para el usuario.
 
 <br>
 

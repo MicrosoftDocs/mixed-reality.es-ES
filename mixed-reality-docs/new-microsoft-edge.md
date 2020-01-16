@@ -1,25 +1,30 @@
 ---
 title: Windows Mixed Reality y el nuevo Microsoft Edge
-description: Cómo contribuir a la documentación de Windows Mixed Reality.
+description: Prepárese para el nuevo Microsoft Edge en Windows Mixed Reality. Incluye los cambios que se esperan, las actualizaciones que se deben tener en cuenta y los problemas conocidos.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 01/07/2020
+ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, nuevo, Web envolvente, Microsoft Edge, explorador, VR
-ms.openlocfilehash: cb0f96069ffaa8f7d40b64bae55ab2749f5f02c6
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
+ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727052"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76040999"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality y el nuevo Microsoft Edge
 
-Como podría haber escuchado, pronto estará [disponible el nuevo Microsoft Edge](https://blogs.windows.com/windowsexperience/2019/11/04/introducing-the-new-microsoft-edge-and-bing/). Con la disponibilidad general destinada al 15 de enero de 2020, queríamos permitir que los clientes de Windows Mixed Reality VR con auriculares sepan qué esperar del nuevo Microsoft Edge e informarle de algunas actualizaciones pendientes que mejorarán la experiencia de exploración Web en Windows Mixed. Realidad.
+El [nuevo Microsoft Edge ya está disponible para su descarga](https://blogs.windows.com/windowsexperience/?p=173496), pero los clientes también pueden [esperar a que se instale en una actualización futura de Windows 10](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/), siguiendo un enfoque de implementación medido en los próximos meses. 
+
+Con esta noticia, **queríamos que los clientes de Windows Mixed Reality VR con auriculares sepan qué esperar del nuevo Microsoft Edge y le informan de algunas actualizaciones pendientes que mejorarán la experiencia de exploración Web en Windows Mixed Reality**.
 
 ## <a name="introducing-the-new-microsoft-edge"></a>Presentación del nuevo Microsoft Edge
 
 El nuevo Microsoft Edge [adopta el proyecto de código abierto de cromo](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) en el escritorio para crear una mejor compatibilidad web para los clientes y menos fragmentación de la web para todos los desarrolladores Web. También admitirá WebXR en el lanzamiento, el nuevo estándar para crear experiencias Web envolventes para los auriculares VR en lugar de WebVR.
+
+>[!IMPORTANT]
+>Al instalar Microsoft Edge en un dispositivo de Windows 10 actualizado, se reemplazará la versión anterior (heredada) del equipo.
 
 ## <a name="getting-ready-for-the-new-microsoft-edge"></a>Preparación para el nuevo Microsoft Edge
 
@@ -45,7 +50,7 @@ Para obtener la mejor experiencia posible de Microsoft Edge en la Página princi
 
 -   Los sitios web abiertos en Windows Mixed Reality se perderán cuando se cierre el portal de realidad mixta, aunque las ventanas de Microsoft Edge permanecerán donde se colocaron en la Página principal de la realidad mixta.
 -   El audio de las ventanas de Microsoft Edge no está espacial.
--   Abrir un vídeo 360 de YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. Actualizar la página del vídeo de YouTube y volver a iniciar el vídeo 360 debe corregir el problema.
+-   Abrir un vídeo 360 de YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. Actualizar la página del vídeo de YouTube y volver a iniciar el vídeo 360 *puede* solucionar el problema, pero hemos escuchado comentarios que el problema puede persistir.
 -   Durante las sesiones de realidad mixta de Windows, los monitores virtuales aparecerán como monitores físicos genéricos en Configuración > pantalla de > del sistema.
 
 
