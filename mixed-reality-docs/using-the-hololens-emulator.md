@@ -3,16 +3,16 @@ title: Uso del emulador de HoloLens
 description: Uso del emulador de HoloLens para probar aplicaciones de realidad mixta en el equipo sin un dispositivo HoloLens físico.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 12/5/2019
+ms.date: 1/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulator
-ms.openlocfilehash: 49b67530d46edda3c38efd74f03f730c2b2247bd
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 7cbddae7cc5088bc8be7187e8b2dff3249e9d265
+ms.sourcegitcommit: 542a481b00b36d92633c64a6189ea989551bab3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940893"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036458"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso del emulador de HoloLens
 
@@ -25,7 +25,7 @@ Si buscas desarrollar aplicaciones para cascos envolventes (VR) de Windows Mixed
 Descargue el emulador HoloLens.
 
 Versiones: 
-* [Emulador de HoloLens 2 (actualización de diciembre de 2019)](https://go.microsoft.com/fwlink/?linkid=2112589).
+* [Emulador de HoloLens 2 (actualización de enero de 2020)](https://go.microsoft.com/fwlink/?linkid=2114824).
 * [Emulador de HoloLens (Gen 1) y plantillas de proyecto holográficas](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Puedes encontrar notas de la versión y compilaciones anteriores del emulador de HoloLens en la página [Archivo del emulador de HoloLens](hololens-emulator-archive.md).
@@ -43,7 +43,7 @@ El emulador de HoloLens usa Hyper-V con RemoteFx (emulador de Gen 1) o GPU-PV (e
 * En el BIOS, las características siguientes deben estar [admitidas y habilitadas](https://blogs.technet.com/b/iftekhar/archive/2010/08/09/enable-hardware-settings-in-bios-to-run-hyper-v.aspx):
    * Virtualización asistida por hardware
    * Traducción de direcciones de segundo nivel (SLAT)
-   * Prevención de ejecución de datos basada en hardware (DEP)
+   * Prevención de ejecución de datos (DEP) basada en hardware
 * Requisitos de GPU
    * DirectX 11.0 o versiones posteriores
    * Controlador de gráficos WDDM 1.2 o posterior (1.ª generación)
@@ -91,7 +91,7 @@ A la derecha de la ventana principal, se encuentra la barra de herramientas del 
 * ![Icono Ajustar a la pantalla](images/emulator-fit.png) **Ajustar a la pantalla**: ajusta el emulador a la pantalla.
 * ![Icono Zoom](images/emulator-zoom.png) **Zoom**: aumenta o reduce el emulador.
 * ![Icono Ayuda](images/emulator-help.png) **Ayuda**: abre la Ayuda del emulador.
-* ![Icono Abrir portal de dispositivos](images/emulator-deviceportal.png) **Abrir portal de dispositivos**: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.
+* ![Icono Open device portal](images/emulator-deviceportal.png) (Abrir portal de dispositivos) **Open Device Portal** (Abrir portal de dispositivos): abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.
 * ![Icono Herramientas](images/emulator-tools.png) **Herramientas**: abre el panel **Herramientas adicionales**.
 
 ### <a name="simulation-control-panel"></a>Panel de control de simulación
@@ -175,12 +175,12 @@ Cuando se inicie el emulador, verás una ventana que muestra el sistema operativ
 A la derecha de la ventana principal, encontrarás la barra de herramientas del emulador. La barra de herramientas contiene los siguientes botones:
 * ![Icono Cerrar](images/emulator-close.png) **Cerrar**: cierra el emulador.
 * ![Icono Minimizar](images/emulator-minimize.png) **Minimizar**: minimiza la ventana del emulador.
-* ![Icono de entrada humana](images/emulator-control.png) **Entrada humana**: se usan el mouse y el teclado para simular la [entrada humana al emulador](#basic-emulator-input).
-* ![Icono de entrada de teclado y mouse](images/emulator-input.png) **Entrada de teclado y mouse**: la entrada de teclado y mouse se pasa directamente al sistema operativo de HoloLens como eventos de teclado y mouse, como si estuvieras conectado a un teclado y un mouse por Bluetooth.
+* ![Icono Human input](images/emulator-control.png) (Entrada humana) **Human input** (Entrada humana): se usan el mouse y el teclado para simular la [entrada humana al emulador](#basic-emulator-input).
+* ![Icono Entrada mediante teclado y mouse](images/emulator-input.png) **Entrada mediante teclado y mouse**: la entrada de teclado y mouse se pasa directamente al sistema operativo de HoloLens como eventos de teclado y mouse, como si estuvieras conectado a un teclado y un mouse por Bluetooth.
 * ![Icono Ajustar a la pantalla](images/emulator-fit.png) **Ajustar a la pantalla**: ajusta el emulador a la pantalla.
 * ![Icono Zoom](images/emulator-zoom.png) **Zoom**: aumenta o reduce el emulador.
 * ![Icono Ayuda](images/emulator-help.png) **Ayuda**: abre la Ayuda del emulador.
-* ![Icono Abrir portal de dispositivos](images/emulator-deviceportal.png) **Abrir portal de dispositivos**: abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.
+* ![Icono Open device portal](images/emulator-deviceportal.png) (Abrir portal de dispositivos) **Open Device Portal** (Abrir portal de dispositivos): abre el Portal de dispositivos Windows correspondiente al sistema operativo de HoloLens en el emulador.
 * ![Icono Herramientas](images/emulator-tools.png) **Herramientas**: abre el panel **Herramientas adicionales**.
 
 ### <a name="simulation-tab"></a>Pestaña de simulación
@@ -216,7 +216,7 @@ También puedes grabar tus propias habitaciones para usar en el emulador mediant
 
 En el emulador, solo verás los hologramas que representes. Sin embargo, no verás la habitación simulada detrás de los hologramas. Esto es diferente del dispositivo HoloLens real, donde puedes ver que ambos se fusionan. Si quieres ver la habitación simulada en el emulador de HoloLens, debes actualizar la aplicación para representar la malla de asignación espacial en la escena.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 Puede que al instalar el emulador recibas un mensaje de error, que indica que necesitas *"Visual Studio 2015 Update 1 y UWP Tools versión 1.2"* . Hay tres posibles causas de este error:
 * No tienes una versión de Visual Studio lo bastante reciente (Visual Studio 2019, Visual Studio 2017 o Visual Studio 2015 Update 1 o posterior). Para corregir este problema, instala la versión más reciente de Visual Studio.
@@ -243,7 +243,7 @@ Si la lista de destinos de depuración de Visual Studio está vacía (por ejemp
 Si el sistema se bloquea cuando se inicia el emulador, deshabilita la aceleración de hardware para los gráficos del emulador.
 * Crea un valor DWORD del Registro llamado "DisableGPU" en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0 y establece su valor en 1.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Introducción de datos avanzada en el emulador de HoloLens y el simulador de realidad mixta](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
 * [Historial de software del emulador de HoloLens](hololens-emulator-archive.md)
 * [Asignación espacial en Unity](spatial-mapping-in-unity.md)
