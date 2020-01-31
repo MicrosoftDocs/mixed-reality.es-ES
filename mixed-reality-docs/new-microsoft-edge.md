@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, nuevo, Web envolvente, Microsoft Edge, explorador, VR
-ms.openlocfilehash: e38cd83cef274281f0d36ae8714ea82aac5f0c65
-ms.sourcegitcommit: e9e4e722f4b607888ce69185f8bda9549ad526ad
+ms.openlocfilehash: 2576762786c9234377308f226036c830e01d9133
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76040999"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885623"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality y el nuevo Microsoft Edge
 
@@ -46,11 +46,11 @@ Para obtener la mejor experiencia posible de Microsoft Edge en la Página princi
 - La aplicación WebVR Showcase está presente en la Página principal de la realidad mixta, a pesar de que WebVR ya no se admite.
 - Mejoras generales en el inicio del teclado y los objetos visuales.
 
-### <a name="additional-known-issues"></a>Otros problemas conocidos
+### <a name="additional-known-issues"></a>Problemas conocidos adicionales
 
 -   Los sitios web abiertos en Windows Mixed Reality se perderán cuando se cierre el portal de realidad mixta, aunque las ventanas de Microsoft Edge permanecerán donde se colocaron en la Página principal de la realidad mixta.
 -   El audio de las ventanas de Microsoft Edge no está espacial.
--   Abrir un vídeo 360 de YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. Actualizar la página del vídeo de YouTube y volver a iniciar el vídeo 360 *puede* solucionar el problema, pero hemos escuchado comentarios que el problema puede persistir.
+-   Se **corrigió en la versión de extensión de 360 Viewer 2.3.8**: abrir un vídeo de 360 desde YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. El reinicio de Edge debe actualizar de manera invisible la extensión del visor de 360 para resolver este problema. Puede confirmar qué versión de la extensión tiene escribiendo `edge://system/` en la barra de direcciones y seleccionando el botón de **expansión** junto a "extensiones".
 -   Durante las sesiones de realidad mixta de Windows, los monitores virtuales aparecerán como monitores físicos genéricos en Configuración > pantalla de > del sistema.
 
 

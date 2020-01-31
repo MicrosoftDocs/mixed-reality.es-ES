@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: f1bcbbd368635c25207127142f21ff50f26a7b58
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: 56f7c767323285453cbeea9034f97a7c14e92359
+ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901490"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76885628"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. compartir movimientos de objetos con varios usuarios
 
@@ -74,6 +74,12 @@ En este tutorial, aprenderá a compartir los movimientos de objetos para que tod
 11. En el panel Proyecto de la carpeta Prefabs, arrastre la tabla recurso prefabricado hasta el objeto secundario "TableAnchor" que acaba de crear.
 
     ![Module3Chapter4step8im](images/module3chapter4step8im.PNG)
+   
+12. Abra "Rocket Launcher_Complete Variant" recurso prefabricado from assets-> Resources-> Prefabs.
+
+13. Seleccione el GameObject "LunarModule" y agregue los dos componentes siguientes: "Photon Transform View" y "Photon View".
+
+14. Con el GameObject "LunarModule" todavía seleccionado, arrastre el componente "vista de transformación de Photon" a la ranura "componentes observados" del componente "vista Photon".
 
 ## <a name="congratulations"></a>Enhorabuena
 
