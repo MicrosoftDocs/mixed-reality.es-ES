@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Mixed reality, Community, MVP, Meetup
-ms.openlocfilehash: 7cdbebc63cc04d2e3c2913662ed29e65880da727
-ms.sourcegitcommit: 48e12b342a50b9777330392db74d462ead5a8012
+ms.openlocfilehash: 486a099cb38a99975171cb7ec4a6754b1c0b682f
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75662435"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092079"
 ---
 # <a name="mixed-reality-community"></a>Comunidad de realidad mixta
 
@@ -19,10 +19,10 @@ En Microsoft, creemos que tener acceso a las grandes comunidades es esencial par
 
 ## <a name="online-communities"></a>Comunidades en línea
 
-|Nombre de comunidad  |Vincular  |Descripción  |
+|Nombre de comunidad  |Vínculo  |Descripción  |
 |---------|---------|---------|
 |**Margen de HoloDevelopers**|[Únase aquí](https://aka.ms/holodevelopers)|El margen de demora HoloDevelopers se creó inicialmente como un lugar para que los desarrolladores exploren HoloLens para conocerlo, formar amistades, crear confianza y obtener ayuda entre sí.  Ha crecido en una comunidad que se encuentra aún centrada en estas, pero las conversaciones que se producen allí cubren el espectro de realidad mixta en muchas plataformas, dispositivos y compañías.|
-|**Desbordamiento de pila**|[Preguntas de MR](https://stackoverflow.com/questions/tagged/windows-mixed-reality)||
+|**Stack Overflow**|[Preguntas de MR](https://stackoverflow.com/questions/tagged/windows-mixed-reality)||
 |**Auriculares WMR Reddit**|[WMR subreddit](https://www.reddit.com/r/WindowsMR/)|         |
 |**Reddit HoloLens**|[Subreddit de HoloLens](https://www.reddit.com/r/HoloLens/)|         |
 
@@ -31,9 +31,9 @@ En Microsoft, creemos que tener acceso a las grandes comunidades es esencial par
 ## <a name="local-communities"></a>Comunidades locales
 Si ejecuta una comunidad que le gustaría incluir en esta página, envíe un [correo electrónico aquí](mailto:jemccull@microsoft.com) con los detalles.
 
-|Nombre de comunidad|País|Ciudad|Vincular|
+|Nombre de comunidad|País|Ciudad|Vínculo|
 |---------|---------|---------|---------|
-|**Nite de Chicago AWE**|EE. UU.|Chicago|[Vínculo](https://www.meetup.com/AWENiteChicago/)|
+|**Nite de Chicago AWE**|Unidos|Chicago|[Vínculo](https://www.meetup.com/AWENiteChicago/)|
 <!-- 
 |Row2     |         |         |         |
 |Row3     |         |         |         |
@@ -48,7 +48,7 @@ Si ejecuta una comunidad que le gustaría incluir en esta página, envíe un [co
 
 |||||
 |---------|---------|---------|---------|
-|<!-- ![Daniel Escudero](images/BiographyImages/) --></br>**Daniel Escudero**</br>*Diseñador jefe de la Academia MR*| |San Francisco, CA|[Email](mailto:daescu@microsoft.com)|
+|<![Daniel Escudero](images/BiographyImages/DanielEscudero_270x270.jpg)</br>**Daniel Escudero**</br>*Diseñador jefe de la Academia MR*|Diseñador interactivo, prototipo y codificador, especializado en la realidad mixta, con más de 15 años de experiencia de diseño de interacción. En la actualidad, diseña y crea prototipos de nuevas formas de interacción para la realidad mixta, así como para crear talleres y hackathons con asociados de área de San Francisco Bay y la comunidad MR/VR/AR. Mentor y orador para el diseño de la realidad mixta en varios eventos y conferencias de MR/VR/AR.|San Francisco, CA|[Email](mailto:daescu@microsoft.com)|
 |<!-- ![Daniel Gonzalez](images/BiographyImages/) --></br>**Daniel Gonzalez**</br>*Administrador de programas II*| |Redmond, WA|[Email](mailto:dgonza@microsoft.com)|
 |<!-- ![Jane Fang](images/BiographyImages/) --></br>**Jane Fang**</br>*Responsable principal del administrador de programas*| |San Francisco, CA|[Email](mailto:jafang@microsoft.com)|
 |![Jesse McCulloch](images/BiographyImages/JesseMcCulloch270x270.png)</br>**Jesse McCulloch**</br>*Administrador de programas II*|Jesse es un administrador de programas en el equipo del ecosistema de desarrolladores de realidad mixta en Microsoft. A menudo se encuentra fuera de los grupos de margen de demora del desarrollador, en Twitter intentando mantenerse al día de todo lo que pasa en este espacio en constante crecimiento, o en un tubo de gran metal que dirige a través del aire a su camino para ponerse en contacto con los desarrolladores del mundo real.|Redmond, WA|[Email](mailto:jemccull@microsoft.com)|

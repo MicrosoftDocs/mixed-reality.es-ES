@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menú, botón, acceso rápido, diseño
-ms.openlocfilehash: c0e1800be69a15706e17f40b1601fc79d05e5d75
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 41a936d6041438c1cf1d8e4d4cc8cc30a5167491
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723264"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092059"
 ---
 # <a name="hand-menu"></a>Menú de la mano
 
@@ -26,7 +26,7 @@ A continuación se muestran los procedimientos recomendados para los menús de l
 ---
 
 ## <a name="behavior-best-practices"></a>Prácticas recomendadas de comportamiento
-**A. mantener el número de botones pequeños:** debido a la distancia de cierre entre un menú bloqueado a mano y los ojos, y también la tendencia del usuario a centrarse en un área visual relativamente pequeña en cualquier momento (el cono de visión es aproximadamente de 10 grados), se recomienda mantener el número de botones pequeños. En función de la exploración, una columna con tres botones funciona bien manteniendo todo el contenido dentro del campo de vista (campo de contenido) incluso cuando los usuarios mueven sus manos al centro del campo de campo. 
+**A. mantener el número de botones pequeños:** debido a la distancia de cierre entre un menú bloqueado a mano y los ojos, y también la tendencia del usuario a centrarse en un área visual relativamente pequeña en cualquier momento (el cono de visión es aproximadamente de 10 grados), se recomienda mantener el número de botones pequeños. En función de la exploración, una columna con tres botones funciona bien manteniendo todo el contenido dentro del campo de vista (campo de visualización) incluso cuando un usuario mueve sus manos al centro del campo de contenido. 
 
 **B. usar el menú de la mano para una acción rápida:** la elevación de un brazo y el mantenimiento de la posición pueden provocar una fatiga ARM. Use un método bloqueado manualmente para el menú que requiera una breve interacción. Si el menú es complejo y requiere tiempos de interacción extendidos, considere la posibilidad de usar en su lugar el uso de bloqueos internacionales o del cuerpo. 
 
@@ -88,8 +88,8 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
     :::column:::
         ![sobre los dedos](images/AboveFingers.gif)<br>
         **Los dedos anteriores**<br>
-        fatiga de 1 mano debido a la entrega de la mano durante mucho tiempo<br>
-        2-problemas de seguimiento en el índice y el dedo central
+        la fatiga de 1 mano debido a la falta de mano durante mucho tiempo<br>
+        2-problemas de seguimiento en el índice y los dedos del centro
     :::column-end:::
 :::row-end:::
 
@@ -105,7 +105,7 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
     :::column:::
         ![primera mano](images/TopFingerTip.gif) **primera mano**<br>
         1-problemas de seguimiento de la mano<br>
-        fatiga de 2 manos manteniendo la mano por encima de la postura normal<br>
+        la fatiga de 2 manos desde la mano por encima de la postura normal<br>
         3-problemas al presionar botones con otros dedos por accidente debido a un espacio limitado entre los dedos
     :::column-end:::
 :::row-end:::
@@ -117,7 +117,7 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
         ![parte posterior del brazo](images/BackOfTheArm.gif)<br>
         **Parte posterior del brazo**<br>
         1-puede desencadenar el botón Inicio por accidente<br>
-        2-no es una posición natural o cómoda para los usuarios
+        2-no es una posición natural o cómoda
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -138,11 +138,11 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
 ---
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)
-* [Button](button.md)
+* [Botón](button.md)
 * [Objeto con el que se puede interactuar](interactable-object.md)
 * [Cuadro de límite y barra de la aplicación](app-bar-and-bounding-box.md)
 * [Manipulación](direct-manipulation.md)
