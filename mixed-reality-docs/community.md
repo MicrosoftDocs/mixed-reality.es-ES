@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Mixed reality, Community, MVP, Meetup
-ms.openlocfilehash: 486a099cb38a99975171cb7ec4a6754b1c0b682f
-ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
-ms.translationtype: MT
+ms.openlocfilehash: 1b140fffdda91fca0a73ae6d4309c518efd6660c
+ms.sourcegitcommit: 567bcb7019820ac933834087d77b01d684b5cc7b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77092079"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125212"
 ---
 # <a name="mixed-reality-community"></a>Comunidad de realidad mixta
 
@@ -34,8 +34,8 @@ Si ejecuta una comunidad que le gustaría incluir en esta página, envíe un [co
 |Nombre de comunidad|País|Ciudad|Vínculo|
 |---------|---------|---------|---------|
 |**Nite de Chicago AWE**|Unidos|Chicago|[Vínculo](https://www.meetup.com/AWENiteChicago/)|
-<!-- 
-|Row2     |         |         |         |
+|**VR Filipinas**|Philoppines|N/D|[Vínculo](https://www.facebook.com/vrphilippines/)|
+<!--
 |Row3     |         |         |         |
 |Row4     |         |         |         |
 |Row5     |         |         |         |
@@ -90,6 +90,7 @@ Los profesionales más valiosos de Microsoft, o MVP, son expertos tecnológicos 
 |---------|---------|---------|
 |![Aleksandr Kudishov](images/BiographyImages/aleksandr_kudishov_270_270.png)</br>**Aleksandr Kudishov**</br>*Rusia*|MVP se centra en el desarrollo de juegos & desarrollo de Windows, VR/AR/MR. Productor de juegos, evangelista de tecnología, desarrollador de Holographic, cliente potencial de MSP del desarrollo de juegos.|[Email](mailto:draconifore@gmail.com)|
 |![Alexander Meijers](images/BiographyImages/AlexanderMeijers_270x270.png)</br>**Alexander Meijers**</br>*Los países bajos, Rijswijk*|Un profesional que inspira, motiva y educa a las empresas sobre cómo sacar provecho de las tecnologías emergentes mediante la realidad virtual, aumentada y mixta en su viaje a la innovación digital. Tiene un gran nivel de conocimientos sobre SharePoint, Office 365 y Microsoft Azure y está trabajando con machine learning, inteligencia artificial y servicios cognitivos.</br></br>Centrado principalmente en la fabricación, la construcción, la industria, la logística y el mar/internacional, su objetivo es ayudar a las empresas a obtener más información sobre la creación, la mejora, la smartening y la reducción de procesos empresariales mediante servicios, aplicaciones y dispositivos como HoloLens y Kinect para Azure.|[Email](mailto:alexander@appzinside.com)|
+|![Bronwen Zande](images/BiographyImages/BronwenZande_270x270.png)</br>**Bronwen Zande**</br>*Brisbane, Australia*|Bronwen Zande es un director de soluciones esencias que ha dedicado más tiempo como desarrollador que no.</br></br>Es un profesional a largo plazo (MVP) de Microsoft al que se le ha otorgado el estado de MVP para el desarrollo de Windows, experiencias emergentes, Kinect, Bing Maps y Live Services.</br></br>Bronwen es un miembro de la comunidad activo implicado en promoverlo como una carrera profesional con su participación en la opinión de Imagine Cup, los exploradores y la tecnología de TIC jóvenes le lleva en cualquier lugar. Bronwen era miembro fundador de las cenas de los fanáticos de las cenas, el organizador del desarrollador, el desarrollador, el desarrollador de Brisbane (ahora DDD Brisbane) y un activador australiano de varios años para SheEO.</br></br>Es un viajero de Avid y, cuando no se encuentra detrás de la lente de una cámara, a menudo puede encontrarse en un grupo de Meetup o usuario local mientras viaja.|[Email](mailto:bronwen@soulsolutions.com.au)
 |![Bruno Anjos](images/BiographyImages/BrunoAnjos_270x270.jpg)</br>**Bruno Anjos**</br>*Brasil*|Innovation Manager, trabaja en la administración y la arquitectura de las páginas digitales Innovation Projects, con la experiencia de la realidad aumentada en XR, las plataformas mixtas y de realidad virtual. Microsoft MVP en Mixed Reality 2020-2021 en Mixed Reality, trabajo como experto en el desarrollo y planeación de soluciones de realidad mixta: centrándose en Microsoft HoloLens. Experiencia con el desarrollo de juegos y aplicaciones, así como la creación de recursos y el contenido multimedia.|[Email](mailto:brunof.anjos@outlook.com)|
 |![Clemente Giorio](images/BiographyImages/ClementeGiorio_270x270.png)</br>**Clemente Giorio**</br>*Torino, Italia*|"Hacker, experto, creador, investigador, innovador, profesor, desarrollador...</br>Ha hecho su pasión en la ciencia y la tecnología, aparte de su trabajo.</br>Sigue muchas comunidades y a menudo participa activamente como orador y organizador de eventos en especial: codificación de desarrolladores de gimnasio, DotNetPodcast, FabLabNapoli, DotNetCampania y HoloLens.</br>Sus platos de firma, lejos del horno, son: inteligencia artificial, Computer Vision, Internet de las cosas, interfaz de usuario natural y realidad mixta.</br>El software de Microsoft MVP y Intel innovador, funciona como jefe de desarrollo & desarrollo para Deltatre, donde desarrolla prototipos de software.|[Email](mailto:tinuxnet@hotmail.com)|
 |![Dave Smit](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smit**</br>*Amersfoort, Países Bajos*|Dave Smit es MVP de Microsoft desde 2014 y trabajando con HoloLens desde la primera versión iniciada. Ha realizado varios proyectos para que los clientes comiencen con modelos simples a aplicaciones que incluían sensores de seguimiento de movimiento que se van a usar en hologramas.|[Email](mailto:dave@familie-smits.com)|
@@ -106,3 +107,5 @@ Los profesionales más valiosos de Microsoft, o MVP, son expertos tecnológicos 
 |![Takahiro Miyaura](images/BiographyImages/TakahiroMiyaura_270x270.jpg)</br>**Takahiro Miyaura**</br>*Nara, Japón*|Estoy trabajando como Ingeniero de software y Desarrollador en el sector de ti. En concreto, he estado realizando investigación XR (VR/AR/MR, etc.). ) y diversas tecnologías (AI, IoT, etc.) que pueden beneficiarse de XR.|[Email](mailto:cafe.kobe@gmail.com)|
 |![Tamás Deme](images/BiographyImages/tamasdeme_270.png)</br>**Tamás Deme**</br>*Budapest, Hungría*|Tamás es un ingeniero de realidad mixta que trabaja en la VIM basada en Atlanta, donde desarrolla soluciones para dispositivos que van desde servidores hasta un casco que muestra hologramas. Es una 5 veces MVP de Microsoft en desarrollo de Windows, interesado en proyectos de código abierto, enseñanza y tutoría. Puede encontrarlo en línea en [https://tomzorz.me](https://tomzorz.me) o en twitter en [https://twitter.com/tomzorz_](https://twitter.com/tomzorz_).|[Email](mailto:mixedreality@tomzorz.me)|
 |![Tatsuro Ueda](images/BiographyImages/TatsuroUeda_270x270.png)</br>**Tatsuro Ueda**</br>*Mie, Japón*|MR educador de física en 5 países, incluido Afrika, Presidente de sentirse física|[Email](mailto:tatsuro.ueda@feel-physics.jp)|
+|![Vincent Guigui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**Vincent Guigui**</br>*París, Francia*|A cargo de la innovadora División de interacciones en la tecnología OCTO, ayudamos a nuestros clientes a desarrollar nuevas interacciones entre el mundo humano y digital.</br></br>Soy un profesor sobre temas de innovación e interfaces de usuario naturales, hablando de experiencias envolventes (VR/AR/MR), interfaces de conversación (bot) y el futuro potencial de las interfaces de usuario...</br></br>Desde 2013, Microsoft ha recibido como uno de los expertos líderes europeos en Kinect, interfaces de usuario naturales y HoloLens (Premio profesional más valioso).|[Email](mailto:vincent@guigui.fr)|
+
