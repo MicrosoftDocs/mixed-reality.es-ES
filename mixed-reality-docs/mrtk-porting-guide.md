@@ -7,12 +7,12 @@ ms.date: 10/14/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: 41e6f8b3632a53663f237deb54a3144fb8ad79e8
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.openlocfilehash: 8e0c66a1c3d8ebd5422d19a02f313147ecf76653
+ms.sourcegitcommit: 40b37104b0aec4554502dcc7dc430e340a6fa46a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926211"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77092039"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Preparar una aplicación existente para HoloLens 2
 
@@ -22,7 +22,7 @@ En las secciones siguientes se detalla la información de cada fase:
 
 | Paso 1 | Paso 2 | Paso 3 | Paso 4 |
 |----------|-------------------|-------------------|-------------------|
-| ![Logotipo de Visual Studio](images/visualstudio_logo.png) | ![Logotipo de Unity](images/unity_logo.png)| ![Icono de Unity](images/hololens2_icon.jpg) | ![Logotipo de MRTK](images/MRTKIcon.jpg) |
+| ![Logotipo de Visual Studio](images/visualstudio_logo.png) | ![Logotipo de Unity](images/final_unity_logo.png)| ![Icono de Unity](images/hololens2_icon.jpg) | ![Logotipo de MRTK](images/final_mrtk-small_logo.png) |
 | Descarga de las herramientas más recientes | Actualización del proyecto de Unity | Compilación para ARM | Migración a versión 2 de MRTK
 
 Requisitos previos:
@@ -47,7 +47,7 @@ Los desarrolladores deben evaluar cualquier [ dependencia de complemento](https:
 |----------|-------------------|
 | Compatibilidad con la compilación ARM32 | Compatibilidad con la compilación ARM32 y ARM64 |
 | Versión de la compilación LTS estable | Estabilidad beta |
-| [Back-end del scripting de .NET](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *en desuso* | [Back-end del scripting de .NET](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *eliminado* |
+| [Back-end del scripting de .NET](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *en desuso* | [Back-end del scripting de .NET](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *en desuso* |
 | Redes UNET *en desuso* | Redes UNET *en desuso* |
 
 ## <a name="update-sceneproject-settings-in-unity"></a>Actualización de la configuración de la escena o proyecto en Unity
@@ -92,7 +92,7 @@ Después de importar la [versión 2 de MRTK](https://github.com/microsoft/MixedR
 
 Para más información sobre las diferencias de API específicas entre HTK/MRTK y MRTK v2, consulta la guía de migración en la [wiki de la versión 2 de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html).
 
-### <a name="best-practices"></a>Procedimiento recomendado
+### <a name="best-practices"></a>Procedimientos recomendados
 
 - Da preferencia al uso del [sombreador MRTK Standard](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html).
 - Trabaja en un solo tipo de cambio importante a la vez (por ejemplo: IFocusable a [IMixedRealityFocusHandler](https://microsoft.github.io/MixedRealityToolkit-Unity/api/Microsoft.MixedReality.Toolkit.Input.IMixedRealityFocusHandler.html)).
@@ -141,7 +141,7 @@ Cada aplicación y escenario son diferentes, y vamos a seguir mejorando y public
 
 - El compilador del sombreador en ARM se ejecuta durante la primera llamada draw, después de que el sombreador se haya cargado, o algo en lo que se basa sombreador haya cambiado, no en el tiempo de carga de sombreador. El impacto en la velocidad de fotogramas puede ser muy notable, dependiendo de cuántos sombreadores tengan que compilarse. Esto cambia la forma de controlar, empaquetar o actualizar los sombreadores en HoloLens 2 en comparación con HoloLens (1.ª generación).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Instalación de las herramientas](install-the-tools.md)
 * [Introducción a MRTK v2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)
 * [API de HTK para las API de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/HTKToMRTKPortingGuide.html)
