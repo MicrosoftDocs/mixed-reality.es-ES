@@ -1,243 +1,267 @@
 ---
 title: 'Tutoriales de introducción: 6. Explorar opciones de entrada avanzadas'
-description: Realiza este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 75a14697953026474d8ca00e6473145d7b12a482
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 18bcbc95746a2e66b88d83f279603aa7f171bbcb
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334358"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77129666"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. explorar opciones de entrada avanzadas
 
-En este tutorial, se exploran varias opciones de entrada avanzadas para HoloLens 2, incluido el uso de comandos de voz, gestos de movimiento panorámico y seguimiento ocular. 
+En este tutorial, explorará algunas opciones de entrada avanzadas para HoloLens 2, incluido el uso de comandos de voz, gestos de movimiento panorámico y seguimiento ocular.
 
 ## <a name="objectives"></a>Objetivos
 
-- Desencadenar eventos mediante comandos de voz y palabras clave
-- Usar manos con seguimiento para panorámicas y objetos 3D con manos con seguimiento
-- Aproveche las capacidades de seguimiento ocular de HoloLens 2 para seleccionar objetos
+* Desencadenar eventos mediante comandos de voz y palabras clave
+* Usar manos con seguimiento para panorámicas y objetos 3D con manos con seguimiento
+* Aproveche las capacidades de seguimiento ocular de HoloLens 2 para seleccionar objetos
 
 ## <a name="enabling-voice-commands"></a>Habilitar comandos de voz
+<!-- TODO: Consider changing to 'Enabling Speech Commands -->
 
-En esta sección, se implementan dos comandos de voz. En primer lugar, la capacidad de alternar el panel de diagnósticos de velocidad de fotogramas se introduce indicando "alternar diagnósticos". En segundo lugar, se explora la capacidad de reproducir un sonido con un comando de voz. En primer lugar, se revisan los perfiles y configuraciones de MRTK responsables de la configuración de comandos de voz.
+En esta sección, implementará un comando de voz para que el usuario pueda reproducir un sonido en el objeto OCTA. Para ello, creará un nuevo comando de voz y, a continuación, configurará el evento para que desencadene la acción deseada cuando se pronuncia la palabra clave de comando de voz.
 
-1. En la jerarquía BaseScene, seleccione MixedRealityToolkit. A continuación, en el panel Inspector, seleccione INPUT (entrada) y haga clic en el botón pequeño Clone situado a la izquierda de DefaultMixedRealityInputSystemProfile para abrir el menú emergente Clone Profile (clonar perfil). En el menú emergente, haga clic en clonar para crear un nuevo perfil MixedRealityInputSystemProfile.
+Los principales pasos que se deben seguir para lograrlo son:
 
-    ![mrlearning-base-CH5-1-step1a. png](images/mrlearning-base-ch5-1-step1a.png)
+1. Clonar el perfil del sistema de entrada predeterminado
+2. Clonar el perfil predeterminado de comandos de voz
+3. Crear un nuevo comando de voz
+4. Agregar y configurar el componente de controlador de entrada de voz (Script)
+5. Implementar el evento de respuesta para el comando de voz
 
-    También se rellenará automáticamente el MixedRealityToolkitConfigurationProfile con la MixedRealityInputSystemProfile recién creada.
+### <a name="1-clone-the-default-input-system-profile"></a>1. clonar el perfil del sistema de entrada predeterminado
 
-    ![mrlearning-base-CH5-1-step1b. png](images/mrlearning-base-ch5-1-step1b.png)
+En la ventana jerarquía, seleccione el objeto **MixedRealityToolkit** y, a continuación, en la ventana del inspector, seleccione la pestaña **entrada** y Clone el **DefaultHoloLens2InputSystemProfile** para reemplazarlo por su propio perfil de **sistema de entrada**personalizable:
 
-2. En el perfil del sistema de entrada, hay una variedad de opciones de configuración. En el caso de los comandos de voz, expanda la sección voz y siga el mismo proceso que en el paso anterior para clonar el DefaultMixedRealitySpeechCommandsProfile y reemplazarlo por su propia copia modificable.
+![mrlearning: base](images/mrlearning-base/tutorial5-section1-step1-1.png)
 
-    ![mrlearning-base-CH5-1-Step2. png](images/mrlearning-base-ch5-1-step2.png)
+> [!TIP]
+> Para obtener un recordatorio sobre cómo clonar perfiles de MRTK, puede consultar las instrucciones de [configuración de los perfiles de el kit de herramientas de realidad mixta](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) .
 
-    En el perfil de comando de voz, observará una variedad de opciones de configuración. Para obtener una descripción completa de estas opciones, consulte la [documentación de MRTK Speech](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html>).
+### <a name="2-clone-the-default-speech-commands-profile"></a>2. clonar el perfil predeterminado de comandos de voz
 
-    de forma predeterminada, el comportamiento general es el inicio automático. Si lo desea, puede cambiar a manual-Start. Pero en este ejemplo, manténgalo en el inicio automático. MRTK incluye varios comandos de voz predeterminados, como menú, alternancia de diagnóstico y alternancia de Profiler. Usaremos la palabra clave "alternar diagnósticos" para activar y desactivar el contador de velocidad de fotogramas de diagnóstico. También vamos a agregar un nuevo comando de voz en los pasos siguientes.
+Expanda la sección **voz** y Clone el **DefaultMixedRealitySpeechCommandsProfile** para reemplazarlo por su perfil personalizado de **comandos de voz**.
 
-3. Agrega un nuevo comando de voz. Para ello, haga clic en el botón + Agregar un nuevo comando de voz. Verá una nueva línea que aparece debajo de la lista de comandos de voz existentes. Escriba el comando de voz que desea usar. En este ejemplo, use el comando "reproducir música".
+![mrlearning: base](images/mrlearning-base/tutorial5-section1-step2-1.png)
 
-    ![mrlearning-base-CH5-1-Step3. png](images/mrlearning-base-ch5-1-step3.png)
+### <a name="3-create-a-new-speech-command"></a>3. crear un nuevo comando de voz
 
-    >[!NOTE]
-    >también puedes establecer un código de teclas para los comandos de voz. Esto permite que los comandos de voz desencadenen eventos al presionar una tecla del teclado.
+En la **sección comandos de voz** , haga clic en el botón **+ Agregar un nuevo comando de voz** para agregar un nuevo comando de voz a la parte inferior de la lista de comandos de voz existentes y, a continuación, en el campo **palabra clave** escriba una palabra o frase adecuada, por ejemplo **reproducir música**:
 
-4. Agrega la posibilidad de responder a comandos de voz. Seleccione cualquier objeto de la jerarquía de BaseScene que no tenga ningún otro script de entrada asociado, por ejemplo, el objeto de juego MixedRealityPlayspace. En el panel Inspector, haga clic en Agregar componente, busque "voz" y seleccione el script controlador de entrada de voz.
+![mrlearning: base](images/mrlearning-base/tutorial5-section1-step3-1.png)
 
-    ![mrlearning-base-CH5-1-Step4. png](images/mrlearning-base-ch5-1-step4.png)
+> [!TIP]
+> Si el equipo no tiene micrófono y desea probar el comando de voz mediante la simulación en el editor, puede asignar un KeyCode al comando de voz que le permitirá desencadenarlo cuando se presione la tecla correspondiente.
 
-    De forma predeterminada, verá dos casillas. Una es la casilla es necesario el foco. Por lo tanto, siempre que apunte al objeto con un rayo mirada, una mirada hacia abajo, un controlador o una mirada a mano, se desencadenará el comando de voz. Desactive esta casilla para que el usuario no tenga que mirar el objeto para usar el comando de voz.
+### <a name="4-add-and-configure-the-speech-input-handler-script-component"></a>4. agregar y configurar el componente de controlador de entrada de voz (Script)
 
-5. Agrega la posibilidad de responder a un comando de voz. Para ello, haga clic en el botón + que se encuentra en el controlador de entrada de voz.
+En la ventana jerarquía, seleccione el objeto **OCTA** y agregue el componente **controlador de entrada de voz (Script)** al objeto OCTA. A continuación, desactive la casilla **se requiere el foco** para que el usuario no tenga que ver el objeto OCTA para desencadenar el comando de voz:
 
-    ![mrlearning-base-CH5-1-Step5. png](images/mrlearning-base-ch5-1-step5.png)
+![mrlearning: base](images/mrlearning-base/tutorial5-section1-step4-1.png)
 
-6. Junto a palabra clave, verá un menú desplegable. Seleccione alternar diagnósticos para que cada vez que el usuario diga la frase "alternar diagnósticos", desencadene una acción. Tenga en cuenta que es posible que tenga que expandir el elemento 0 presionando la flecha situada junto a él.
+### <a name="5-implement-the-response-event-for-the-speech-command"></a>5. implementar el evento de respuesta para el comando de voz
 
-    ![mrlearning-base-CH5-1-Step6. png](images/mrlearning-base-ch5-1-step6.png)
+En el componente de controlador de entrada de voz (Script), haga clic en el botón Small **+** para agregar una palabra clave y, a continuación, en la lista desplegable **palabra** clave, elija la palabra clave **Play Music** que creó anteriormente:
 
-    >[!NOTE]
-    >Estas palabras clave se rellenan según el perfil que editó en el paso 3.
+![mrlearning: base](images/mrlearning-base/tutorial5-section1-step5-1.png)
 
-7. Agregue el script Diagnostics System Voice Controls para activar y desactivar el diagnóstico del contador de velocidad de fotogramas. Para ello, presione Agregar componente, busque el script Diagnostics System Voice Controls y agréguelo desde el menú. Este script se puede agregar a cualquier objeto, pero por motivos de simplicidad, se agregará al mismo objeto que el controlador de entrada de voz.
+> [!NOTE]
+> Las palabras clave de la lista desplegable palabra clave se rellenan en función de las palabras clave definidas en la lista comandos de voz en el perfil comandos de voz.
 
-    ![mrlearning-base-CH5-1-STEP7. png](images/mrlearning-base-ch5-1-step7.png)
+Cree un nuevo evento **Response ()** , configure el objeto **OCTA** para recibir el evento, defina **AudioSource. PlayOneShot** como la acción que se va a desencadenar y asigne un clip de audio adecuado al campo **clip de audio** , por ejemplo, el MRTK_Gem clip de audio:
 
-8. Agregue una nueva respuesta en el controlador de entrada de voz. Para ello, haga clic en el icono "+" para agregar una nueva respuesta a la lista de respuestas.
+![mrlearning: base](images/mrlearning-base/tutorial5-section1-step5-2.png)
 
-    ![mrlearning-base-CH5-1-step8. png](images/mrlearning-base-ch5-1-step8.png)
-
-9. Arrastre el objeto que tiene el script Diagnostics System Voice Controls a la nueva respuesta que acaba de crear en el paso anterior.
-
-    ![mrlearning-base-CH5-1-step9. png](images/mrlearning-base-ch5-1-step9.png)
-
-10. Haga clic en la lista desplegable función (donde indica que no hay función), luego en controles de voz del sistema de diagnóstico y seleccione la función ToggleDiagnostics () que activa y desactiva los diagnósticos.
-
-    ![mrlearning-base-CH5-1-step10. png](images/mrlearning-base-ch5-1-step10.png)
-
-    >[!IMPORTANT]
-    > Antes de compilar en el dispositivo, debe habilitar la configuración de MIC. Para ello, haga clic en archivo y vaya a configuración de compilación, configuración del reproductor y asegúrese de que esté establecida la capacidad del micrófono.
-
-    A continuación, agregue la capacidad de reproducir un archivo de audio desde el comando Voice mediante el objeto OCTA. Recuerde de la [Lección 4](mrlearning-base-ch4.md) que se ha agregado la capacidad de reproducir un clip de audio al tocar el objeto OCTA. Vamos a aprovechar este mismo origen de audio para nuestro comando de voz de música.
-
-11. Seleccione el objeto OCTA en la jerarquía de BaseScene.
-
-12. Agregue otro controlador de entrada de voz (Repita los pasos 4 y 5), pero con el objeto OCTA.
-
-13. En lugar de agregar el comando alternar diagnóstico de voz desde el paso 6, agregue el comando reproducir música Voice como se muestra en la imagen siguiente.
-
-    ![mrlearning-base-CH5-1-step13. png](images/mrlearning-base-ch5-1-step13.png)
-
-14. Al igual que con los pasos 8 y 9, agregue una nueva respuesta y arrastre el objeto OCTA, el objeto que tiene el script Diagnostics System Voice Controls, a la ranura de respuesta vacía.
-
-15. Seleccione el menú desplegable que indica que no hay ninguna función. A continuación, seleccione origen de audio, seguido de PlayOneShot (AudioClip).
-
-    ![Imagen de la lección 5, capítulo 1, paso 15](images/Lesson5_chapter1_step15im.PNG)
-
-16. En este ejemplo, vamos a usar el mismo clip de audio de la [Lección 4](mrlearning-base-ch4.md). Vaya al panel del proyecto, busque el clip de audio "MRTK_Gem" y arrástrelo a la ranura de origen de audio, tal como se muestra en la imagen siguiente. Ahora la aplicación responderá a los comandos de voz "alternar diagnósticos" para alternar el panel de contadores de velocidad de fotogramas y reproducir música para reproducir la MRTK_Gem canción.
-
-    ![Lesson5 archivo chapter1 Step16im](images/Lesson5_chapter1_step16im.PNG)
+> [!TIP]
+> Para obtener un recordatorio sobre cómo implementar eventos y asignar un clip de audio, puede hacer referencia a las instrucciones para [implementar el evento on Touch Started](mrlearning-base-ch4.md#4-implement-the-on-touch-started-event) .
 
 ## <a name="the-pan-gesture"></a>Gesto de desplazamiento panorámico
 
-En esta sección, aprenderá a usar el gesto de panorámica. Esto resulta útil para desplazarse con el dedo o la mano para desplazarse por el contenido. También puede usar el gesto de panorámica para girar objetos, recorrer una colección de objetos 3D o incluso desplazarse por una interfaz de usuario 2D.
+El movimiento panorámico es útil para desplazarse por el dedo o la mano para desplazarse por el contenido. En este ejemplo, primero aprenderá a desplazarse por una interfaz de usuario 2D y, a continuación, a expandir esa para poder desplazarse por una colección de objetos 3D.
 
-1. Creación de un cuadrángulo. En la jerarquía de BaseScene, haga clic con el botón derecho en, seleccione "objeto 3D" seguido de cuatro.
+Los principales pasos que se deben seguir para lograrlo son:
 
-    ![Imagen de la lección 5, capítulo 2, paso 2](images/Lesson5_chapter2_step2im.PNG)
+1. Crear un objeto cuádruple que se puede usar para la panorámica
+2. Adición del componente de la interacción táctil (Script) de Near Interaction
+3. Adición del componente de zoom de pan de interacción manual (Script)
+4. Agregar contenido 2D que se va a desplazar
+5. Agregar contenido 3D que se va a desplazar
+6. Agregar el componente mover con pan (Script)
 
-2. Cambie la posición de la cuádruple, según corresponda. En nuestro ejemplo, se establece x = 0, y = 0 y z = 1,5 fuera de la cámara para una posición cómoda de HoloLens 2.
+> [!NOTE]
+> El componente de movimiento con pan (Script) no forma parte de MRTK. Se proporcionó con los recursos de este tutorial.
 
-    >[!NOTE]
-    >Si los bloques cuádruples o están delante de cualquier contenido de las lecciones anteriores, asegúrese de moverlo para que no bloquee ninguno de los demás objetos.
+### <a name="1-create-a-quad-object-that-can-be-used-for-panning"></a>1. crear un objeto cuádruple que se puede usar para la panorámica
 
-3. Aplica un material al cuadrángulo. Este material será de lo que se desplazará con el gesto de panorámica.
+En la ventana jerarquía, haga clic con el botón secundario en un área vacía y seleccione **objeto 3d** > **cuádruple** para agregar un cuádruple a la escena. Asígnele un nombre adecuado, por ejemplo, **PanGesture**, y colóquelo en una ubicación adecuada, por ejemplo, X = 0, y =-0,2, Z = 2.
 
-    ![Imagen de la lección 5, capítulo 2, paso 3](images/Lesson5_chapter2_step3im.PNG)
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step1-1.png)
 
-4. En el panel proyectos, escriba "panorama del contenido" en el cuadro de búsqueda. Arrastre ese material a la cuádruple de la escena.
+> [!TIP]
+> Para obtener un recordatorio sobre cómo agregar primitivas de Unity, como un 3D cuádruple, a la escena, puede hacer referencia a las instrucciones para [Agregar un cubo a la escena](mrlearning-base-ch2.md#2-add-a-cube-to-the-scene) .
 
-    >[!NOTE]
-    >El material de PanContent no forma parte de MRTK, pero se incluye con el recurso BaseModuleAssets importado en la lección anterior.
+Como con cualquier otra interacción, el movimiento panorámico también requiere un Colisionador. De forma predeterminada, un cuádruple tiene un Colisionador de malla. Sin embargo, el Colisionador de malla no es idóneo porque es extremadamente fino. Para que sea más fácil para el usuario interactuar con el Colisionador, se reemplazará el Colisionador de malla por un Colisionador de caja.
 
-    Para usar los gestos de desplazamiento panorámico, necesitarás un colisionador en el objeto. Puede ver que el cuadrángulo ya tiene un colisionador de malla. Sin embargo, este no es el ideal ya que es extremadamente fino y difícil de seleccionar. Se recomienda reemplazar el colisionador de malla por un colisionador de cuadro.
+Con el objeto PanGesture aún seleccionado, haga clic en el icono de **configuración** del componente de **Colisionador de malla** y seleccione **quitar componente** para quitar el Colisionador de malla:
 
-5. Haga clic con el botón derecho en el Colisionador de malla que se encuentra en la cuádruple del panel Inspector. A continuación, quítelo haciendo clic en quitar componente.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step1-2.png)
 
-    ![Lesson5 Chapter2 Step5im](images/Lesson5_chapter2_step5im.PNG)
+En la ventana del inspector, use el botón **Agregar componente** para agregar un **Colisionador de cuadro**y, a continuación, cambie el **tamaño** de colisionador de caja Z a 0,15 para aumentar el grosor del Colisionador de caja:
 
-6. Ahora, agregue el Colisionador de Box; para ello, haga clic en Agregar componente y busque "Colisionador de cuadro". El Colisionador de cuadro agregado predeterminado todavía es demasiado fino, así que haga clic en el botón Editar Colisionador para editarlo. Al presionarlo, puedes ajustar el tamaño con los valores x, y, y z o con los elementos del editor de escenas. En nuestro ejemplo, queremos ampliar el colisionador de cuadro un poco por detrás del cuadrángulo. En el editor de escenas, arrastra el colisionador de cuadro desde la parte posterior hacia el exterior (mira la imagen siguiente). Esto permite que el usuario no solo use el dedo, sino todo su mano para desplazarse.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step1-3.png)
 
-    ![Lesson5 Chapter2 Step6im](images/Lesson5_chapter2_step6im.PNG)
+### <a name="2-add-the-near-interaction-touchable-script-component"></a>2. agregar el componente de secuencia de comandos táctil de interacción cercana
 
-7. Hazlo interactivo. Puesto que queremos interactuar directamente con el cuádruple, queremos usar el componente táctil de la interacción cercana que usamos en la lección 4 para reproducir música desde el objeto OCTA. Haga clic en Agregar componente, busque "near Interaction Touchable" y selecciónelo tal como se muestra en las imágenes siguientes.
+Con el objeto **PanGesture** aún seleccionado, agregue el componente de **secuencia de comandos táctil (Script) cerca** de la interacción al objeto PanGesture y, a continuación, haga clic en los botones **corregir límites** y **centro de corrección** para actualizar el centro local y las propiedades de los límites del elemento táctil de interacción cercana (Script) para que coincida con BoxCollider:
 
-    ![mrlearning-base-CH5-2-step7a. png](images/mrlearning-base-ch5-2-step7a.png)
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step2-1.png)
 
-    Si ve una advertencia amarilla sobre los límites y/o el centro que no coinciden con el tamaño y/o centro de BoxCollider, haga clic en los botones corregir límites y/o centro de corrección para actualizar los valores del centro y los límites.
+### <a name="3-add-the-hand-interaction-pan-zoom-script-component"></a>3. agregar el componente zoom de pan de interacción (Script)
 
-    ![mrlearning-base-CH5-2-step7b. png](images/mrlearning-base-ch5-2-step7b.png)
+Con el objeto **PanGesture** aún seleccionado, agregue el componente **zoom de pan de interacción a mano (Script)** al objeto PanGesture y, a continuación, active la casilla **bloquear horizontalmente** para permitir solo el desplazamiento vertical:
 
-8. Agrega la posibilidad de reconocer el gesto de desplazamiento panorámico. Haga clic en Agregar componente, escriba "interacción con la mano" en el campo de búsqueda y agregue el componente de script zoom de panorámica de interacción con la mano.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step3-1.png)
 
-    ![mrlearning-base-CH5-2-step8a. png](images/mrlearning-base-ch5-2-step8a.png)
+### <a name="4-add-2d-content-to-be-scrolled"></a>4. agregar el contenido 2D que se va a desplazar
 
-    Y con eso, tiene una cuádruple habilitada para pan.
+En el panel Proyecto, busque el material **PanContent** y, a continuación, haga clic en-y arrástrelo hasta la propiedad 0 del elemento de **material** del representador de malla del objeto **PanGesture** :
 
-    Como puede ver, el componente de script zoom de pan de interacción manual tiene varias configuraciones, como un ejercicio opcional, no dude en experimentar con ellas.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step4-1.png)
 
-    ![mrlearning-base-CH5-2-step8b. png](images/mrlearning-base-ch5-2-step8b.png)
+En la ventana del inspector, expanda el componente material de **PanContent** recién agregado y, a continuación, cambie su valor y de **mosaico** a 0,5 para que coincida con el valor X y los mosaicos aparezcan cuadrados:
 
-9. A continuación, vamos a aprender cómo realizar movimientos panorámicos de objetos 3D.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step4-2.png)
 
-    En la jerarquía, haga clic con el botón secundario en el objeto cuádruple para abrir el menú contextual y, a continuación, seleccione **objeto 3d** > **cubo** para agregar un cubo a la escena.
+Si ahora entra en el modo de juego, puede probar el desplazamiento del contenido 2D mediante el gesto de panorámica en la simulación en el editor:
 
-    Asegúrese de que la **posición** del cubo está establecida en _0, 0, 0_ , por lo que se coloca en el interior del cuádruple. Escale el cubo hasta una **escala** de _0,1, 0,1 y 0,1_.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step4-3.png)
 
-    ![mrlearning-base-CH5-2-step9. png](images/mrlearning-base-ch5-2-step9.png)
+### <a name="5-add-3d-content-to-be-scrolled"></a>5. agregar contenido 3D que se va a desplazar
 
-    Duplique el cubo tres veces; para ello, haga clic con el botón secundario en el cubo para abrir el menú contextual y seleccione **duplicar**.
+En la ventana de jerarquía, **cree cuatro cubos** como objetos secundarios de **PanContent** y establezca su **escala** de transformación en X = 0,15, y = 0,15, Z = 0,15:
 
-    Espaciar los cubos de forma uniforme. La escena debe ser similar a la imagen siguiente.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step5-1.png)
 
-10. Agregue el script MoveWithPan a todos los cubos manteniendo presionada la tecla CTRL mientras selecciona cada objeto de **cubo** en el panel jerarquía. En el panel Inspector, haga clic en Agregar componente y busque y seleccione la secuencia de comandos **mover con panorámica** para agregarla a todos los cubos.
+Para espaciar los cubos de forma uniforme y ahorrar tiempo, agregue el componente de la colección de objetos de cuadrícula (Script) al objeto primario de los cubos, es decir, el objeto PanGesture y configure la colección de objetos Grid (Script) de la manera siguiente:
 
-    ![mrlearning-base-CH5-2-step10a. png](images/mrlearning-base-ch5-2-step10a.png)
+* Cambie **NUM Rows** a 1 para que todos los cubos estén alineados en una sola fila.
+* Cambiar el **ancho de celda** a 0,25 para espaciar los cubos dentro de la fila
 
-    >[!NOTE]
-    >El script MoveWithPan no forma parte de MRTK, pero se incluye con el recurso BaseModuleAssets importado en la lección anterior.
+A continuación, haga clic en el botón **Actualizar colección** para aplicar la nueva configuración:
 
-    Con los cubos aún seleccionados, arrastre el objeto **cuádruple** desde el panel jerarquía hasta el campo **origen de entrada de pan** del componente **mover con** el script pan.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step5-2.png)
 
-    ![mrlearning-base-CH5-2-step10b. png](images/mrlearning-base-ch5-2-step10b.png)
+### <a name="6-add-the-move-with-pan-script-component"></a>6. agregar el componente de movimiento con pan (Script)
 
-    Ahora, los cubos se moverán con el gesto de pan.
+En la ventana jerarquía, seleccione todos los **objetos secundarios del cubo**y, a continuación, en la ventana del inspector, use el botón **Agregar componente** para agregar el componente **mover con pan (Script)** a todos los cubos:
 
-    >[!TIP]
-    >La instancia de MoveWithPan en cada cubo realiza escuchas para el evento PanUpdated enviado desde la instancia de HandInteractionPanZoom en el objeto cuádruple, que se ha agregado al campo de origen de entrada de pan en cada cubo y actualiza la posición del objeto de cubo correspondiente en consecuencia.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step6-1.png)
 
-    Con los cubos aún seleccionados, muévalos hacia delante a lo largo de su eje Z, de modo que la malla de cada cubo se encuentre dentro del **Colisionador de caja** **cuádruple**cambiando sus valores de **posición Z** a _0,7_.
+> [!TIP]
+> En el caso de un recordatorio sobre cómo seleccionar varios objetos en la ventana jerarquía, las CDU pueden hacer referencia al [componente agregar el controlador de manipulación (Script) a todas las](mrlearning-base-ch4.md#1-add-the-manipulation-handler-script-component-to-all-the-objects) instrucciones de objetos.
 
-    ![mrlearning-base-CH5-2-step10c. png](images/mrlearning-base-ch5-2-step10c.png)
+Con todos los cubos aún seleccionados, haga clic y arrastre el objeto **PanGesture** al campo **origen de entrada de pan** :
 
-    Ahora, si deshabilita el componente del **representador de mallas** de **cuatro**en el panel Inspector, tendrá un cuádruple invisible donde puede desplazarse por una lista de objetos 3D.
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step6-2.png)
 
-    ![mrlearning-base-CH5-2-step10d. png](images/mrlearning-base-ch5-2-step10d.png)
+> [!TIP]
+> El componente mover con pan (Script) de cada cubo realiza escuchas para el evento de panorámica actualizado enviado por el componente HandInteractionPanZoom (Script) en el objeto PanGesture, que se asignó como el origen de entrada de pan en el paso anterior, y actualiza la posición de cada cubo. cambia.
+
+En la ventana jerarquía, seleccione el objeto **PanGesture** y, a continuación, en el inspector, **desactive** la casilla **representador de malla** para deshabilitar el componente de representador de malla:
+
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step6-3.png)
+
+Si ahora entra en el modo de juego, puede probar el desplazamiento del contenido 3D con el gesto de panorámica en la simulación en el editor:
+
+![mrlearning: base](images/mrlearning-base/tutorial5-section2-step6-4.png)
 
 ## <a name="eye-tracking"></a>Seguimiento de los ojos
 
-En esta sección, veremos cómo habilitar el seguimiento ocular en nuestra demostración. Giraremos lentamente los elementos de menú 3D cuando se encuentren al mirarnos con la mirada. También vamos a desencadenar un divertido efecto cuando se seleccione el elemento con la mirada.
+En esta sección, aprenderá a habilitar el seguimiento ocular en el proyecto. En este ejemplo, implementará la funcionalidad para hacer que cada objeto del 3DObjectCollection gire lentamente mientras se mira en el ojo del usuario, así como en desencadenar un efecto de señal cuando el objeto que se está buscando está seleccionado por el comando TAP o Speech.
 
-1. Asegúrese de que los perfiles de MRTK estén configurados correctamente para el seguimiento ocular. Para ello, vaya a la [Introducción a seguimiento de ojo en las instrucciones de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html) y compruebe que el seguimiento ocular está configurado correctamente revisando los pasos de la sección configuración de [seguimiento de ojos paso a paso](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#setting-up-eye-tracking-step-by-step) . Complete los pasos restantes de la documentación.
+Los principales pasos que se deben seguir para lograrlo son:
 
-    >[!NOTE]
-    >Si usó DefaultHoloLens2InputSystemProfile, tal y como se indicó en la lección [configurar el kit de herramientas de realidad mixta](https://docs.microsoft.com/windows/mixed-reality/mrlearning-base-ch1#configure-the-mixed-reality-toolkit) , para clonar el perfil de configuración de MRTK personalizado, el seguimiento ocular está habilitado de forma predeterminada en el proyecto de Unity, pero todavía tendrá que configurar la simulación de seguimiento para el editor de Unity y configurar Visual Studio para permitir el seguimiento ocular de la compilación.
+1. Agregar el componente de destino de seguimiento ocular (Script) a todos los objetos de destino
+2. Agregar el componente de demostración del tutorial de seguimiento de ojo (Script) a todos los objetos de destino
+3. Implementar mientras se examina el evento de destino
+4. Implementar el en el evento seleccionado
+5. Habilitación del seguimiento ocular simulado para simulaciones en el editor
+6. Habilitar la entrada de fijamente en las funcionalidades de la aplicación del proyecto de Visual Studio
 
-    El vínculo anterior proporciona instrucciones breves para:
+### <a name="1-add-the-eye-tracking-target-script-component-to-all-target-objects"></a>1. agregar el componente de destino de seguimiento ocular (Script) a todos los objetos de destino
 
-    - Crear el proveedor de datos de mirada a la realidad mixta de Windows para su uso en el perfil de MRTK
-    - Habilitación del seguimiento ocular en el proveedor de miras adjuntado a la cámara
-    - Configuración de una simulación de seguimiento de ojo en el editor de Unity
-    - Editar las funcionalidades de la solución Visual Studio para permitir el seguimiento de los ojos en la aplicación integrada
+En la ventana de jerarquía, expanda el objeto **3DObjectCollection** y seleccione todos los **objetos secundarios**y, a continuación, en la ventana del inspector, use el botón **Agregar componente** para agregar el componente de **destino de seguimiento ocular (Script)** a todos los objetos secundarios:
 
-2. Agrega el componente Eye Tracking Target (Destino del seguimiento de los ojos) a los objetos de destino. Para permitir que un objeto responda a los eventos de ojo, debemos agregar el componente EyeTrackingTarget en cada objeto con el que queremos interactuar mediante la vista de ojo. Agrega este componente a cada uno de los nueve objetos 3D que forman parte de la colección de la cuadrícula.
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step1-1.png)
 
-    >[!TIP]
-    >Puede utilizar las teclas Mayús y/o Ctrl para seleccionar varios elementos de la jerarquía y, a continuación, agregar de forma masiva el componente EyeTrackingTarget.
+Con todos los **objetos secundarios** todavía seleccionados, configure el componente de **destino de seguimiento ocular (Script)** como se indica a continuación:
 
-    ![Lesson5 Chapter3 paso 2](images/Lesson5Chapter3Step2.JPG)
+* Cambie **Seleccionar acción** a **seleccionar**para definir la acción de punteo de aire para este objeto como SELECT.
+* Expanda **Voice seleccione** y establezca el **tamaño** de la lista de comandos de voz en 1 y, a continuación, en la lista de nuevos elementos que aparece, cambie el **elemento 0** a **Select**para definir la acción de comando de voz para este objeto como SELECT.
 
-3. A continuación, agregaremos el script EyeTrackingTutorialDemo para algunas interacciones emocionantes. Para cada objeto 3D de la colección de cuadrículas, agregue el script EyeTrackingTutorialDemo buscando el componente en el menú Agregar componente.
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step1-2.png)
 
-    ![Lesson5 Chapter3 Step3](images/Lesson5Chapter3Step3.JPG)
+### <a name="2-add-the-eye-tracking-tutorial-demo-script-component--to-all-target-objects"></a>2. agregar el componente de demostración del tutorial de seguimiento de ojo (Script) a todos los objetos de destino
 
-    >[!NOTE]
-    >El material del script de EyeTrackingTutorialDemo no forma parte de MRTK, pero se incluye con el recurso BaseModuleAssets importado en la lección anterior.
+Con todos los **objetos secundarios** todavía seleccionados, use el botón **Agregar componente** para agregar el componente de **demostración del tutorial de seguimiento de ojo (Script)** a todos los objetos secundarios:
 
-4. Gira el objeto al examinar el destino. Queremos configurar nuestros objetos 3D para que giren mientras se examinan. Para ello, inserte un nuevo campo en la sección al mirar el destino () del componente EyeTrackingTarget, tal y como se muestra en la imagen siguiente.
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step2-1.png)
 
-    ![Lesson5 Chapter3 Step4a](images/Lesson5Chapter3Step4a.JPG)
+> [!NOTE]
+> El componente objetivo de seguimiento ocular (Script) no forma parte de MRTK. Se proporcionó con los recursos de este tutorial.
 
-    En el campo recién creado, agregue el objeto de juego actual al campo vacío y seleccione EyeTrackingTutorialDemo > RotateTarget (), tal como se muestra en la imagen siguiente. Ahora el objeto 3D está configurado para girar cuando se le observa con seguimiento de los ojos.
+### <a name="3-implement-the-while-looking-at-target-event"></a>3. implementar mientras se examina el evento de destino
 
-    ![Lesson5 Chapter3 Step4b](images/Lesson5Chapter3Step4b.JPG)
+En la ventana jerarquía, seleccione el objeto de **queso** , cree un nuevo **mientras mira el evento () de destino** , configure el objeto de **queso** para recibir el evento y defina **EyeTrackingTutorialDemo. RotateTarget** como la acción que se va a desencadenar:
 
-5. Agregue la capacidad de "destino de señalización", que se mira al seleccionarse por vía aérea o a "seleccionar". Al igual que en el paso 4, queremos desencadenar EyeTrackingTutorialDemo > BlipTarget () asignándole el campo Select () del objeto Game del componente EyeTrackingTarget, como se muestra en la ilustración siguiente. Ahora que ya está configurado, observará una ligera señalización en el objeto de juego siempre que desencadene una acción de selección, como la pulsación aérea o el comando de voz "seleccionar".
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step3-1.png)
 
-    ![Lesson5 Chapter3 Paso5](images/Lesson5Chapter3Step5.JPG)
+**Repita el procedimiento** para cada uno de los objetos secundarios de 3DObjectCollection.
 
-6. Asegúrate de que las funcionalidades de seguimiento de los ojos están configuradas correctamente antes de empezar a crear en HoloLens 2. En el momento de redactar este documento, Unity todavía no tiene la capacidad de establecer la entrada mirada para las funcionalidades de seguimiento ocular. La configuración de esta funcionalidad es necesaria para que el seguimiento ocular funcione en HoloLens 2. Siga las instrucciones para [probar la aplicación de Unity en una instrucción de HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2) para habilitar la capacidad de entrada de fijamente.
+> [!TIP]
+> Para obtener un recordatorio sobre cómo implementar eventos, puede consultar las instrucciones de [gestos de seguimiento de mano e](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) interactivos.
+
+### <a name="4-implement-the-on-selected-event"></a>4. implementar el en el evento seleccionado
+
+En la ventana jerarquía, seleccione el objeto **queso** y, a continuación, cree un nuevo en el evento **seleccionado ()** , configure el objeto **queso** para recibir el evento y defina **EyeTrackingTutorialDemo. RotateTarget** como la acción que se va a desencadenar:
+
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step4-1.png)
+
+**Repita el procedimiento** para cada uno de los objetos secundarios de 3DObjectCollection.
+
+### <a name="5-enable-simulated-eye-tracking-for-in-editor-simulations"></a>5. habilitar el seguimiento ocular simulado para simulaciones en el editor
+
+En la ventana jerarquía, seleccione el objeto **MixedRealityToolkit** y, a continuación, en la ventana del inspector, seleccione la pestaña **entrada** , expanda la sección proveedores de **datos de entrada** y, a continuación, la sección servicio de simulación de **entrada** y Clone el **DefaultMixedRealityInputSimulationProfile** para reemplazarlo por su propio perfil de **simulación de entrada**personalizable:
+
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step5-1.png)
+
+> [!TIP]
+> Para obtener un recordatorio sobre cómo clonar perfiles de MRTK, puede consultar las instrucciones de [configuración de los perfiles de el kit de herramientas de realidad mixta](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) .
+
+En la sección **simulación ocular** , active la casilla **simular posición ocular** para habilitar la simulación de seguimiento ocular:
+
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step5-2.png)
+
+Si ahora entra en el modo de juego, puede probar los efectos de giro y señalización que ha implementado ajustando la vista para que el cursor toque uno de los objetos y use la interacción a mano o el comando de voz para seleccionar el objeto:
+
+![mrlearning: base](images/mrlearning-base/tutorial5-section3-step5-3.png)
+
+> [!NOTE]
+> Si no usó DefaultHoloLens2ConfigurationProfile para clonar el perfil de configuración de MRTK personalizable, como se indica en las instrucciones de configuración [del kit de herramientas de realidad mixta](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) , puede que el seguimiento ocular no esté habilitado en el proyecto y deberá habilitarse. Para ello, puede consultar las instrucciones [Getting Started with Eye Tracking en MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html) .
+
+### <a name="6-enable-gaze-input-in-the-visual-studio-projects-app-capabilities"></a>6. habilitar la entrada fijamente en las funcionalidades de la aplicación del proyecto de Visual Studio
+
+Antes de compilar e implementar la aplicación desde Visual Studio en el dispositivo, se debe habilitar la entrada de mirada en las funcionalidades de la aplicación del proyecto. Para ello, puede seguir la prueba de la [aplicación de Unity en las instrucciones de HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_BasicSetup.html#testing-your-unity-app-on-a-hololens-2) .
 
 ## <a name="congratulations"></a>Enhorabuena
 
-Ha agregado correctamente las funciones básicas de seguimiento de los ojos a la aplicación. Estas acciones son solo el comienzo de un mundo lleno de posibilidades relacionadas con el seguimiento de los ojos. En este capítulo también concluye la lección 5, donde se ha aprendido sobre la funcionalidad de entrada avanzada, como comandos de voz, gestos de movimiento panorámico y seguimiento ocular.
+Ha agregado correctamente las funciones básicas de seguimiento de los ojos a la aplicación. Estas acciones son solo el comienzo de un mundo lleno de posibilidades relacionadas con el seguimiento de los ojos. En este tutorial, también aprendió sobre otras características de entrada avanzadas, como comandos de voz y gestos de movimiento panorámico.
 
 [Lección siguiente: 7. crear una aplicación de ejemplo de módulo lunar](mrlearning-base-ch6.md)

@@ -6,222 +6,284 @@ ms.author: jemccull
 ms.date: 05/02/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: fe068d0cfcea369f10e6fa636eb73fecb3002fa7
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: a1b26d56b4693ef23f2d77ba53e0961693489a3a
+ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334382"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77130286"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. interactuar con objetos 3D
 
-En este tutorial, obtendrá información sobre el contenido 3D básico y la experiencia del usuario, por ejemplo:
-
-* Organizar objetos 3D como parte de una colección
-* Cuadros de límite para la manipulación básica
-* Interacción cercana y lejana
-* Gestos táctiles y de agarre con seguimiento manual
+En este tutorial, obtendrá información sobre el contenido 3D básico y la experiencia del usuario, como la organización de objetos 3D como parte de una colección, los cuadros de límite para la manipulación básica, la interacción aproximada y lejana, y los gestos táctiles y de agarre con seguimiento manual.
 
 ## <a name="objectives"></a>Objetivos
 
-* Obtenga información sobre cómo organizar el contenido 3D con la colección de objetos Grid de MRTK
+* Crear un panel de objetos 3D que se usará para los otros objetivos de aprendizaje
 * Implementar rectángulos de selección
-* Configurar objetos 3D para la manipulación básica: movimiento, rotación y escala
+* Configurar objetos 3D para la manipulación básica, como movimiento, rotación y escala
 * Explorar la interacción próxima y lejana
 * Más información acerca de los gestos de seguimiento de la mano, como captar y tocar
 
-## <a name="organizing-3d-objects-in-a-collection"></a>Organización de los objetos 3D en una colección
+## <a name="importing-the-tutorial-assets"></a>Importar los activos del tutorial
 
-1. Haga clic con el botón derecho en la jerarquía y seleccione crear vacío para crear un objeto de juego vacío, cambie su nombre a 3DObjectCollection y asegúrese de que está colocado en x = 0, y = 0 y z = 0.
+Descargue e importe el paquete personalizado de Unity:
 
-    ![mrlearning-base-CH4-1-STEP1. png](images/mrlearning-base-ch4-1-step1.png)
+* [MRTK. HoloLens2. Unity. tutoriales. assets. GettingStarted. 2.2.0.0. unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.2.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.2.0.0.unitypackage)
 
-2. Descargue el paquete Unity [Unity. HoloLens2. gettingstarted. tutoriales. Asset. 2.1.0.0](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.1.0.0/Unity.HoloLens2.GettingStarted.Tutorials.Asset.2.1.0.0.unitypackage) e impórtelo con las mismas instrucciones para importar los paquetes personalizados descritos en [Lesson1](mrlearning-base-ch1.md). Este paquete incluye modelos 3D y otros recursos útiles que se usan en este tutorial.
+Después de haber importado los recursos del tutorial, la ventana del proyecto debería tener un aspecto similar al siguiente:
 
-3. En el panel Proyecto, vaya a activos > BaseModuleAssets > módulo base Prefabs y busque "incompleto", se usarán algunos de estos Prefabs.
+![mrlearning: base](images/mrlearning-base/tutorial4-section1-step1-1.png)
 
-    ![mrlearning-base-CH4-1-Step3. png](images/mrlearning-base-ch4-1-step3.png)
+> [!TIP]
+> Para obtener un recordatorio sobre cómo importar un paquete personalizado de Unity, puede consultar las instrucciones para [importar el kit de herramientas de realidad mixta](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) .
 
-4. Arrastre la taza de café al objeto de juego 3DObjectCollection del paso 1. Ahora la taza de café será un elemento secundario de la colección.
+## <a name="decluttering-the-scene-view"></a>Desenredo de la vista de escena
 
-    ![mrlearning-base-CH4-1-Step4. png](images/mrlearning-base-ch4-1-step4.png)
+Para que resulte más fácil trabajar con la escena, establezca la visibilidad de la **escena** del cubo y los objetos ButtonCollection en OFF; para ello, haga clic en el icono de **ojo** situado a la izquierda de los objetos. Esto oculta el objeto en la ventana de la escena sin cambiar su visibilidad en el juego:
 
-5. A continuación, agregará más objetos 3D a la escena siguiendo el mismo proceso que en el paso anterior. A continuación se muestra una lista de los objetos que se van a agregar en este ejemplo. A medida que agrega los objetos, es posible que aparezcan en la escena en varios tamaños. Ajuste la escala de cada modelo 3D en configuración de transformación en el panel Inspector. Los ajustes recomendados para este ejemplo se muestran con los objetos siguientes.
+![mrlearning: base](images/mrlearning-base/tutorial4-section2-step1-1.png)
 
-    * Cheese_BaseModuleIncomplete. Escala: x = 0,05, y = 0,05, z = 0,05.
-    * CoffeeCup_BaseModuleIncomplete. Escala: x = 0,1, y = 0,1, z = 0,1.
-    * EarthCore_BaseModuleIncomplete. Escala: x = 50,0 y = 50,0, z = 50,0.
-    * Model_Platonic_BaseModuleIncomplete. Escala: x = 0,13, y = 0,13, z = 0,13.
-    * Octa_BaseModuleIncomplete. Escala: x = 0,13. y = 0.13; z =0.13.
-    * TheModule_BaseModuleIncomplete. Escala: x = 0,03, y = 0,03, z = 0,03.
+> [!TIP]
+> Para obtener más información sobre los controles de visibilidad de escenas y cómo puede usarlos para optimizar la vista de escenas y el flujo de trabajo, puede visitar la documentación de visibilidad de la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">escena</a> de Unity.
 
-    ![mrlearning-base-CH4-1-Step5. png](images/mrlearning-base-ch4-1-step5.png)
+## <a name="organizing-3d-objects-in-a-collection"></a>Organizar objetos 3D en una colección
 
-6. Agregue tres cubos a la escena. Haga clic con el botón secundario en el objeto 3DObjectCollection, seleccione objeto 3D y, a continuación, seleccione cubo. Establece la escala en x = 0.14; y = 0.14; z = 0.14. Repita este paso dos veces más para crear un total de tres cubos. Como alternativa, puede duplicar el cubo dos veces para un total de tres cubos. También puedes usar los tres cubos prefabricados preparados de Assets>BaseModuleAssets>Base Module Prefabs (Recursos>RecursosDeMóduloBase>Objetos prefabricados del módulo base) y seleccionar GreenCube_BaseModuleIncomplete, BlueCube_BaseModuleIncomplete y OrangeCube_BaseModuleIncomplete.
+En esta sección, creará un panel de objetos 3D que se utilizará al explorar varias formas de interactuar con objetos 3D en las siguientes secciones de este tutorial. En concreto, configurará los objetos 3D para que se coloquen en una cuadrícula de 3 x 3.
 
-    ![mrlearning-base-CH4-1-Step6. png](images/mrlearning-base-ch4-1-step6.png)
+Del mismo modo que cuando se [crea un panel de botones](mrlearning-base-ch2.md#creating-a-panel-of-buttons-using-mrtks-grid-object-collection), los principales pasos que se deben seguir para lograrlo son:
 
-7. Organice la colección de objetos para formar una cuadrícula, a través del procedimiento descrito en la [Lección 2](mrlearning-base-ch2.md), mediante la colección de objetos Grid de MRTK. Consulte la imagen siguiente para obtener un ejemplo de la configuración de los objetos en una cuadrícula de 3x3.
+1. Parent los objetos 3D a un objeto primario
+2. Agregar y configurar el componente de colección de objetos de cuadrícula (Script)
 
-    ![mrlearning-base-CH4-1-STEP7. png](images/mrlearning-base-ch4-1-step7.png)
+### <a name="1-parent-the-3d-objects-to-a-parent-object"></a>1. Parent los objetos 3D a un objeto primario
 
-    >[!NOTE]
-    >Es posible que observe que algunos de los objetos están fuera del centro, como los objetos de la imagen anterior. Esto se debe a que los recursos prefabricados o los objetos pueden tener objetos secundarios sin alinear. Puedes realizar los ajustes de posición necesarios en los objetos o los objetos secundarios para alinear la cuadrícula correctamente.
+En la ventana jerarquía, **cree un objeto vacío**, asígnele un nombre adecuado, por ejemplo, **3DObjectCollection**, y colóquelo en una ubicación adecuada, por ejemplo, X = 0, y =-0,2, Z = 2.
 
-## <a name="manipulating-3d-objects"></a>Manipulación de objetos 3D
+En la ventana del proyecto, vaya a **activos** > **MRTK. Tutoriales. GettingStarted** > **Prefabs**y, a continuación, el **elemento primario** del Prefabs siguiente al **3DObjectCollection**:
 
-1. Agrega la capacidad de manipular un cubo. Para agregar la capacidad de manipular objetos 3D, haga lo siguiente:
-    * Seleccione el objeto 3D que desea manipular en la jerarquía (es decir, uno de los cubos).
-    * Haga clic en Agregar componente.
-    * Buscar "manipulación"
-    * Seleccionar controlador de manipulación
-    * Repita el procedimiento con todos los objetos 3D del objeto 3DObjectCollection, pero no con el propio 3DObjectCollection.
-    * Asegúrese de que todos los objetos 3D tengan un Colisionador de cuadro o Colisionador (agregar Colisionador de cuadro de > de componentes).
+* Quesos
+* CoffeeCup
+* EarthCore
+* Octa
+* Platonic
+* Módulo
 
-    ![Imagen de la lección 4, capítulo 2, paso 1](images/Lesson4_chapter2_step1im.PNG)
+![mrlearning: base](images/mrlearning-base/tutorial4-section3-step1-1.png)
 
-    >[!NOTE]
-    >El controlador de manipulación es un componente que le permite ajustar la configuración de cómo se comportan los objetos cuando se manipulan. Esto incluye la rotación, el escalado, el movimiento y la restricción de movimiento en un eje específico.
+En la ventana de jerarquía, **cree tres cubos** como objetos secundarios de **3DObjectCollection** y establezca su **escala** de transformación en X = 0,15, y = 0,15, Z = 0,15:
 
-2. Restringe un cubo para que solo se pueda escalar. Seleccione un cubo en el objeto 3DObjectCollection. En el panel Inspector, junto a tipo de manipulación dos manos, haga clic en el menú desplegable y seleccione escalar. Esto hace que el usuario solo pueda cambiar del cubo el tamaño.
+![mrlearning: base](images/mrlearning-base/tutorial4-section3-step1-2.png)
 
-    ![Imagen de la lección 4, capítulo 2, paso 2](images/Lesson4_Chapter2_step2im.PNG)
+<!-- TODO: Finish -->
+> [!TIP]
+> Para obtener un recordatorio sobre cómo realizar los pasos indicados anteriormente, puede consultar el tutorial creación de la [interfaz de usuario y configuración del kit de herramientas de realidad mixta](mrlearning-base-ch2.md) .
 
-3. Cambia el color de cada cubo para que los podemos diferenciar.
-    * Vaya al panel Proyecto y desplácese hacia abajo hasta que vea MixedRealityToolkit. SDK y, a continuación, selecciónelo.
-    * Seleccione la carpeta activos estándar.
-    * Haga clic en la carpeta materiales.
-    * Arrastra un material distinto a cada cubo.
+Cambie la posición de los cubos para que pueda ver cada cubo:
 
-    >[!NOTE]
-    >Para los cubos, puedes elegir cualquier color. En este ejemplo, se usan glowingcyan, glowingorange y Green. Puedes también experimentar con otros colores. Para agregar el color al cubo, haga clic en el cubo que desea cambiar y, a continuación, arrastre el material al campo material del representador de malla en el panel Inspector del cubo.
+![mrlearning: base](images/mrlearning-base/tutorial4-section3-step1-3.png)
 
-    ![Imagen de la lección 4, capítulo 2, paso 3](images/Lesson4_Chapter2_step3im.PNG)
+En la ventana del proyecto, vaya a **activos** > **MixedRealityToolkit. SDK** > **StandardAssets** > **material** para ver los materiales proporcionados con el MRTK.
 
-4. Seleccione otro cubo en el objeto 3DObjectCollection y conviértalo de modo que su movimiento esté restringido a una distancia fija desde el encabezado. Para ello, a la derecha de la etiqueta en movimiento de restricción, haga clic en el menú desplegable y seleccione corregir distancia en el encabezado. Esto ajusta el cubo para que se encuentre dentro de su campo de visión.
+**Haga clic y arrastre** un material adecuado a la propiedad 0 del elemento de **materiales** del representador de la malla del cubo, por ejemplo:
 
-    ![Imagen de la lección 4, capítulo 2, paso 4](images/Lesson4_chapter2_step4im.PNG)
+* MRTK_Standard_GlowingCyan
+* MRTK_Standard_GlowingOrange
+* MRTK_Standard_Green:
 
-    El objetivo de los siguientes pasos es habilitar la captación e interacción con nuestros objetos 3D y la aplicación de diferentes configuraciones de manipulación.
+![mrlearning: base](images/mrlearning-base/tutorial4-section3-step1-4.png)
 
-5. Seleccione el objeto queso y, a continuación, haga clic en Agregar componente en el panel Inspector.
+### <a name="2-add-and-configure-the-grid-object-collection-script-component"></a>2. agregar y configurar el componente de colección de objetos de cuadrícula (Script)
 
-6. Busque en el cuadro de búsqueda para que se capte la interacción cercana y seleccione el script. Este componente permite a los usuarios ponerse en contacto con los objetos con manos con seguimiento. Los objetos también se pueden manipular desde una distancia, a menos que la casilla permitir manipulación lejana esté desactivada, tal como se indica en un círculo verde en la imagen siguiente.
+Agregue un componente de la **colección de objetos de cuadrícula (Script)** al objeto 3DObjectCollection y configúrelo de la siguiente manera:
 
-    ![Imagen de la lección 4, capítulo 2, paso 6](images/Lesson4_Chapter2_step6im.PNG)
+* Cambie **tipo de ordenación** a orden secundario para asegurarse de que los objetos secundarios se ordenan en el orden en el que los colocó en el objeto primario.
 
-7. Agregue Near Interaction captable al objeto OCTA, el objeto Platonic, Earth Core, el módulo lunar y la taza de café repitiendo los pasos 5 y 6 en esos objetos.
+A continuación, haga clic en el botón **Actualizar colección** para aplicar la nueva configuración:
 
-8. Deshabilita la manipulación lejana para el objeto Octa. Para ello, seleccione el OCTA en la jerarquía y desactive la casilla permitir la manipulación lejana (marcada con un círculo verde). Esto hace que los usuarios solo puedan interactuar con el OCTA directamente mediante las manos con seguimiento.
+![mrlearning: base](images/mrlearning-base/tutorial4-section3-step2-1.png)
 
-    >[!NOTE]
-    >Para obtener la documentación completa del componente de controlador de manipulación y su configuración asociada, consulte la [documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html).
+## <a name="manipulating-3d-objects"></a>Manipular objetos 3D
 
-9. Asegúrese de que se ha agregado a la tierra Core, el módulo lunar y la taza de café (consulte el paso 7).
+En esta sección, agregará la capacidad de manipular todos los objetos 3D del panel que creó en la sección anterior. Además, en el caso de los objetos recurso prefabricado, permitirá que los usuarios accedan a los objetos y los capten con manos con seguimiento. A continuación, explorará algunos comportamientos de manipulación que puede aplicar a los objetos.
 
-10. Para el módulo lunar, cambie la configuración del controlador de manipulación de modo que gire alrededor del centro del objeto para la interacción cercana y lejana, tal como se muestra en la imagen siguiente.
+Los principales pasos que se deben seguir para lograrlo son:
 
-    ![Imagen de la lección 4, capítulo 2, paso 10](images/Lesson4_chapter2_step10im.PNG)
+1. Agregar el componente de controlador de manipulación (Script) a todos los objetos
+2. Agregar el componente de captura de interacción cercana (Script) a los objetos recurso prefabricado
+3. Configurar el componente de controlador de manipulación (Script)
 
-11. En el núcleo de la tierra, cambie el comportamiento de la versión a nada. Esto lo convierte en una vez que el núcleo de la tierra se suelta del agarre del usuario, no se sigue moviendo.
+> [!IMPORTANT]
+> Para poder **manipular un objeto**, el objeto debe tener los siguientes componentes:
+>
+> * Componente de **Colisionador** , por ejemplo, un Colisionador de caja
+> * Componente de **controlador de manipulación (Script)**
+>
+> Para poder **manipular** y **captar un objeto con manos sometidas a seguimiento**, el objeto debe tener los siguientes componentes:
+>
+> * Componente de **Colisionador** , por ejemplo, un Colisionador de caja
+> * Componente de **controlador de manipulación (Script)**
+> * Componente de captura de la **interacción cercana (Script)**
 
-    ![Imagen de la lección 4, capítulo 2, paso 11](images/Lesson4_Chapter2_step11im.PNG)
+### <a name="1-add-the-manipulation-handler-script-component-to-all-the-objects"></a>1. Agregue el componente de controlador de manipulación (Script) a todos los objetos.
 
-    >[!NOTE]
-    >Esta configuración es útil en escenarios como, por ejemplo, la creación de una bola que puede iniciar. Manteniendo la velocidad adecuada y la velocidad angular para asegurarse de que una vez que se suelta la bola, continuará avanzando a la velocidad en la que se lanzó; similar al comportamiento de una bola física.
+En la ventana jerarquía, seleccione el objeto **queso** , mantenga presionada la tecla **MAYÚS** y, a continuación, seleccione el objeto **Cube ()** y agregue el componente de **controlador de manipulación (Script)** a todos los objetos:
 
-## <a name="adding-bounding-boxes"></a>Agregar rectángulos de selección
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step1-1.png)
 
-Los cuadros de límite facilitan y simplifican la manipulación de objetos con una mano para la manipulación directa (cerca de la interacción) y la manipulación basada en rayos (interacción lejana). Los cuadros de límite proporcionan controladores que se pueden capturar para escalar y girar objetos a lo largo de un eje específico.
+> [!NOTE]
+> En este tutorial, los colisionadores ya se han agregado a Prefabs. En el caso de los primitivos de Unity, como los objetos de cubo, el componente de Colisionador se agrega automáticamente cuando se crea el objeto. En la imagen anterior, los colisionadores se representan mediante los contornos verdes. Para más información sobre los colisionadores, puede visitar la documentación del <a href="https://docs.unity3d.com/Manual/CollidersOverview.html" target="_blank">Colisionador</a> de Unity.
 
->[!NOTE]
->Antes de poder agregar un cuadro de límite a un objeto, primero debe tener un Colisionador en el objeto (por ejemplo, un Colisionador de cuadro), como se explicó anteriormente en esta lección. Se pueden agregar colisiones seleccionando el objeto y, en el panel Inspector del objeto, seleccionando Agregar componente > Box Colisionador.
+### <a name="2-add-the-near-interaction-grabbable-script-component-to-the-prefab-objects"></a>2. agregar el componente de captura de interacción cercana (Script) a los objetos recurso prefabricado
 
-1. Agregue un Colisionador de cuadro al objeto de la tierra, si aún no existe uno. El Colisionador de Box y el programa de instalación no son necesarios, si se usa el recurso prefabricado proporcionado en la carpeta de recursos del módulo base según las instrucciones proporcionadas. En el caso de la tierra Core, agregamos el Colisionador de cajas al objeto, node_id30, que se encuentra debajo del núcleo de la tierra, tal como se muestra en la imagen siguiente. Seleccione node_id30 en la pestaña inspector del objeto, haga clic en Agregar componente y busque Box Colisionador.
+En la ventana de jerarquía, seleccione el objeto de **queso** , mantenga presionada la tecla **MAYÚS** y, a continuación, seleccione el objeto **módulo** y agregue el componente de **captura de interacción cercana (Script)** a todos los objetos:
 
-    ![Imagen de la lección 4, capítulo 3, paso 1](images/Lesson4_Chapter3_step1im.PNG)
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step2-1.png)
 
-    ![Imagen de la lección 4, capítulo 3, paso 2](images/Lesson4_chapter3_step2im.PNG)
+### <a name="3-configure-the-manipulation-handler-script-component"></a>3. configurar el componente de controlador de manipulación (Script)
 
-    >[!NOTE]
-    >Asegúrese de ajustar el tamaño del Colisionador de caja para que no sea demasiado grande o demasiado pequeño. Debe ser aproximadamente del mismo tamaño que el objeto que rodea (en este ejemplo, el Earth Core). Ajuste el Colisionador de Box según sea necesario; para ello, seleccione la opción Editar Colisionador en el Colisionador de Box. Puede cambiar los valores x, y y z o arrastrar los controladores de rectángulo de selección en la ventana de escena del editor.
+#### <a name="default-manipulation"></a>Manipulación predeterminada
 
-    ![Imagen de la lección 4, capítulo 3, nota](images/Lesson4_Chapter3_noteim.PNG)
+Para el objeto de **cubo** , deje todas las propiedades en el valor predeterminado para experimentar el comportamiento de manipulación predeterminado:
 
-2. Agregue un cuadro de límite al objeto de node_id30 de la base de la tierra. Para ello, seleccione el objeto de node_id30 de 3DObjectCollection. En la pestaña inspector, haga clic en Agregar componente y busque cuadro de límite. Asegúrate de que el rectángulo de selección, el colisionador de cuadro y los scripts de manipulación (Manipulation Handler [Controlador de manipulación] y Near Interaction Grabbable [Interacción próxima: agarrar]) se encuentran en el mismo objeto del juego.
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step3-1.png)
 
-3. En la sección comportamiento del cuadro de límite, seleccione Activar al iniciar en la lista desplegable activación. Para revisar detalles adicionales relacionados con las distintas opciones de activación y otras opciones del cuadro de límite, consulte la [documentación del cuadro de límite de MRTK](<https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html>)
+> [!TIP]
+> Para restablecer los valores predeterminados de un componente, puede seleccionar el icono de configuración del componente y seleccionar restablecer.
 
-    *En los siguientes pasos, también cambiaremos el aspecto del cuadro de límite ajustando el material del cuadro predeterminado, el material mientras se está captando, así como la visualización de los manipuladores de la esquina y del lado. MRTK contiene varias opciones para personalizar el cuadro de límite.*
+#### <a name="restrict-manipulation-to-scale-only"></a>Restringir la manipulación solo a escala
 
-4. En el panel Proyecto, busque "BoundingBox" y verá una lista de materiales indicados por una esfera azul en los resultados de la búsqueda como se muestra en la imagen siguiente.
+En el caso del objeto **Cube (1)** , cambie el **tipo de manipulación dos manos** a escala para permitir solo al usuario cambiar el tamaño del objeto:
 
-5. Arrastre el material BoundingBox a la ranura de material del cuadro en el componente del cuadro de límite. También puede captar el material boundingboxgrabbed y colocarlo en la ranura de material captada por Box del componente de cuadro de límite.
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step3-2.png)
 
-    ![mrlearning-base-CH4-3-Step5. png](images/mrlearning-base-ch4-3-step5.png)
+#### <a name="constrain-the-movement-to-a-fixed-distance-from-the-user"></a>Restringir el movimiento a una distancia fija del usuario
 
-6. Arrastre el MRTK_BoundingBox_ScaleHandle recurso prefabricado a la ranura de recurso prefabricado de control de escala y el recurso prefabricado de la MRTK_BoundingBox_RotateHandle a la ranura del controlador de rotación en el componente del cuadro de enlace.
+Para el objeto **Cube (2)** , cambie **Constraint en** Move para corregir la distancia desde Head, de modo que cuando se mueva el objeto se mantenga a la misma distancia del usuario:
 
-    ![mrlearning-base-CH4-3-Step6. png](images/mrlearning-base-ch4-3-step6.png)
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step3-3.png)
 
-7. Asegúrate de que el rectángulo de selección apunta al objeto correcto. En el componente de cuadro de límite, hay el objeto de destino y los límites invalidan los scripts. Arrastre el objeto que tiene el cuadro de límite alrededor a ambas ranuras. En este ejemplo, arrastre el objeto node_id30 a ambas ranuras, tal como se muestra en la imagen siguiente.
+#### <a name="default-grabbable-manipulation"></a>Manipulación capturable predeterminada
 
-    ![mrlearning-base-CH4-3-STEP7. png](images/mrlearning-base-ch4-3-step7.png)
+En el caso de los objetos **queso**, **CoffeCup**y **EarthCore** , deje todas las propiedades en el valor predeterminado para experimentar el comportamiento de la manipulación de capturas predeterminada:
 
-    >[!NOTE]
-    >Al iniciar o reproducir la aplicación, el objeto estará rodeado por un marco azul. Puedes arrastrar las esquinas de este para cambiar el tamaño del objeto. Si desea que los manipuladores de escalado y los controladores de giro sean más grandes y más visibles, se recomienda usar la configuración predeterminada del cuadro de límite (evitando los pasos del 4 al 6).
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step3-4.png)
 
-8. Para volver a la visualización predeterminada del cuadro de límite, en el panel Inspector del objeto del cuadro de límite, seleccione el controlador de giro recurso prefabricado y presione SUPR para quitarlo. Al entrar en el modo de reproducción, Wou verá una visualización de cuadro de límite similar a la imagen siguiente.
+#### <a name="remove-the-ability-of-far-manipulation"></a>Eliminación de la capacidad de manipulación lejana
 
-    ![mrlearning-base-CH4-3-step8. png](images/mrlearning-base-ch4-3-step8.png)
+Para el objeto **OCTA** , desactive la casilla **permitir la manipulación lejana** para que el usuario solo pueda interactuar con el objeto directamente mediante las manos controladas:
 
-    >[!NOTE]
-    >Las visualizaciones de cuadro de límite solo aparecen en el modo de reproducción.
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step3-5.png)
+
+#### <a name="make-an-object-rotate-around-its-center"></a>Hacer que un objeto gire alrededor de su centro
+
+En el caso del objeto **Platonic** , cambie el **modo de rotación de una mano cerca** del **modo de rotación de una mano** hacia la gira sobre el centro de objetos para que sea así cuando el usuario gire el objeto con una mano, se rote alrededor del centro del objeto:
+
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step3-6.png)
+
+#### <a name="prevent-movement-after-object-is-released"></a>Impedir el movimiento después de liberar el objeto
+
+En el caso del objeto de **módulo** , cambie el comportamiento de la **versión** a nada para que una vez que el objeto se libere de la mano del usuario, no siga moviendo:
+
+![mrlearning: base](images/mrlearning-base/tutorial4-section4-step3-7.png)
+
+Para obtener más información sobre el componente de controlador de manipulación y sus propiedades asociadas, puede visitar la guía de [control de manipulaciones](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+
+## <a name="adding-bounding-boxes"></a>Agregar cuadros de límite
+
+Los cuadros de límite facilitan y simplifican la manipulación de objetos con una mano para una interacción cercana y lejana al proporcionar controladores que se pueden usar para el escalado y la rotación.
+
+En este ejemplo, agregará un cuadro de límite al objeto EarthCore, por lo que ahora se puede interactuar con este objeto con la manipulación de objetos configurada en la sección anterior, así como, escalado y girado con los manipuladores del cuadro de límite.
+
+> [!IMPORTANT]
+> Para poder utilizar un cuadro de **límite**, el objeto debe tener los siguientes componentes:
+>
+> * Componente de **Colisionador** , por ejemplo, un Colisionador de caja
+> * Componente de **cuadro de límite (Script)**
+
+### <a name="1-add-the-bounding-box-script-component-to-the-earthcore-object"></a>1. Agregue el componente de cuadro de límite (Script) al objeto EarthCore
+
+En la ventana del inspector, seleccione el objeto **EarthCore** y agregue el componente del **cuadro de límite (Script)** al objeto EarthCore:
+
+![mrlearning: base](images/mrlearning-base/tutorial4-section5-step1-1.png)
+
+> [!NOTE]
+> Las visualizaciones del cuadro de límite se crean en tiempo de ejecución y, por tanto, no son visibles antes de entrar en el modo de juego.
+
+### <a name="2-visualize-and-test-the-bounding-box-using-the-in-editor-simulation"></a>2. visualizar y probar el cuadro de límite mediante la simulación en el editor
+
+Presione el botón reproducir para entrar en el modo de juego. A continuación, mantenga presionada la barra espaciadora para abrir la mano y use el mouse para interactuar con el cuadro de límite:
+
+![mrlearning: base](images/mrlearning-base/tutorial4-section5-step2-1.png)
+
+Para obtener más información acerca del componente de cuadro de límite y sus propiedades asociadas, puede visitar la guía del [cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) en el portal de [documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
 ## <a name="adding-touch-effects"></a>Agregar efectos de toque
 
-En este ejemplo vamos a reproducir un efecto de sonido al tocar un objeto con la mano.
+En este ejemplo, permitirá que los eventos se desencadenen al tocar un objeto con la mano. En concreto, configurará el objeto OCTA para que se produzca un efecto sonoro cuando el usuario lo toque.
 
-1. Agrega un componente de origen de audio al objeto de juego. Seleccione el objeto OCTA en la jerarquía de la escena. En el panel Inspector, haga clic en el botón Agregar componente, busque y seleccione origen de audio. Usaremos este origen de audio para reproducir un efecto de sonido más adelante.
+Los principales pasos que se deben seguir para lograrlo son:
 
-    >[!NOTE]
-    >Asegúrese de que el objeto OCTA tiene un Colisionador de cuadro en él.
+1. Agregar un componente de origen de audio al objeto
+2. Agregar el componente de la interacción táctil (Script) cerca del objeto
+3. Agregar el componente de interacción a mano (Script) al objeto
+4. Implementar el evento on Touch Started
+5. Prueba de la interacción táctil mediante la simulación en el editor
 
-2. Agregue el componente que se toque en la interacción cercana. Haga clic en el botón Agregar componente en el panel Inspector y busque Near Interaction Touchable. Selecciónalo para agregar el componente.
+> [!IMPORTANT]
+> Para poder **desencadenar eventos táctiles**, el objeto debe tener los siguientes componentes:
+>
+> * Componente de **Colisionador** , preferiblemente un Colisionador de caja
+> * Componente de la **interacción táctil (Script) cercano**
+> * Componente de **toque de interacción manual (Script)**
 
-    >[!NOTE]
-    >Anteriormente, agregamos Near Interaction acpuesto. La diferencia entre este y el toque de interacción cercano es que la interacción capturable está pensada para que un objeto se capte y se interactúe con él. El componente táctil está pensado para el objeto que se va a tocar. Ambos componentes se pueden usar conjuntamente para una combinación de interacciones.
+> [!NOTE]
+> El componente de interacción manuscrita de mano (Script) no forma parte de MRTK. Se importó con los recursos de este tutorial y parte originalmente de los ejemplos de Unity de MixedReality Toolkit.
 
-    ![Imagen de la lección 4, capítulo 4, pasos 1-2](images/Lesson4_chapter4_step1-2im.PNG)
+### <a name="1-add-an-audio-source-component-to-the-object"></a>1. agregar un componente de origen de audio al objeto
 
-3. Agregue el script Touch de interacción táctil. Al igual que en el paso anterior, haga clic en Agregar componente y busque el toque de interacción manual para agregarlo.
+En la ventana de jerarquía, seleccione el objeto **OCTA** , agregue un componente de **origen de audio** al objeto OCTA y, a continuación, cambie la **mezcla espacial** a 1 para habilitar el audio espacial:
 
-    Tenga en cuenta que tiene tres opciones con el script:
-    * En Touch Completed: se desencadena cuando se toca y libera el objeto
-    * En Touch Started: se desencadena cuando se toca el objeto
-    * En Touch Updated: se desencadena periódicamente mientras su mano toca el objeto
+![mrlearning: base](images/mrlearning-base/tutorial4-section6-step1-1.png)
 
-    En este ejemplo, vamos a trabajar con la opción on Touch Started.
+### <a name="2-add-the-near-interaction-touchable-script-component-to-the-object"></a>2. agregar el componente de la interacción táctil (Script) cerca del objeto
 
-    >[!NOTE]
-    >Este script se incluye con el paquete BaseModuleAssets Unity que importó al principio de este tutorial y no se incluye en el MRTK original.
+Con el objeto **OCTA** aún seleccionado, agregue el componente de **secuencia de comandos táctil (Script) cerca** de la interacción al objeto OCTA y, a continuación, haga clic en los botones **corregir límites** y **centro de corrección** para actualizar el centro local y las propiedades de los límites del elemento táctil de interacción cercana (Script) para que coincida con BoxCollider:
 
-4. Haga clic en el botón + en la opción on Touch Started y arrastre el objeto OCTA al campo vacío.
+![mrlearning: base](images/mrlearning-base/tutorial4-section6-step2-1.png)
 
-    ![mrlearning-base-CH4-4-Step4. png](images/mrlearning-base-ch4-4-step4.png)
+### <a name="3-add-the-hand-interaction-touch-script-component-to-the-object"></a>3. agregar el componente de toque de interacción de mano (Script) al objeto
 
-5. En la lista desplegable que indica que no hay función, seleccione AudioSource > PlayOneShot. Agregaremos un clip de audio a este campo con los siguientes conceptos:
+Con el objeto **OCTA** aún seleccionado, agregue el componente de **toque de interacción de mano (Script)** al objeto OCTA:
 
-    * MRTK proporcionan una pequeña lista de clips de audio. No dude en explorarlas en el panel del proyecto. Los encontrará en los activos > MixedRealityToolkit. SDK > recursos estándar > carpeta de audio.
-    * En este ejemplo, vamos a usar el clip de audio MRTK_Gem.
-    * Para agregar un clip de audio, simplemente arrastre el clip que desee desde el panel Proyecto hasta el campo AudioSource. PlayOneShot.
+![mrlearning: base](images/mrlearning-base/tutorial4-section6-step3-1.png)
 
-    ![mrlearning-base-CH4-4-Step5. png](images/mrlearning-base-ch4-4-step5.png)
+### <a name="4-implement-the-on-touch-started-event"></a>4. implementar el evento on Touch Started
 
-   Ahora, cuando el usuario llegue y toque el objeto OCTA, se reproducirá la pista de audio MRTK_Gem. El script Touch de interacción táctil también ajustará el color del objeto cuando se toca.
+En el componente de toque de interacción de mano (Script), haga clic en el icono de **+** pequeño para crear un nuevo evento **on Touch Started ()** . A continuación, configure el objeto **OCTA** para recibir el evento y defina **AudioSource. PlayOneShot** como la acción que se va a desencadenar:
+
+![mrlearning: base](images/mrlearning-base/tutorial4-section6-step4-1.png)
+
+Vaya a **activos** > **MixedRealityToolkit. SDK** > **StandardAssets** > material para ver los clips de audio que se proporcionan con el MRTK y, a continuación, asigne un clip de audio adecuado al campo **clip de audio** , por ejemplo, el clip de audio MRTK_Gem:
+
+![mrlearning: base](images/mrlearning-base/tutorial4-section6-step4-2.png)
+
+> [!TIP]
+> Para obtener un recordatorio sobre cómo implementar eventos, puede consultar las instrucciones de [gestos de seguimiento de mano e](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) interactivos.
+
+### <a name="5-test-the-touch-interaction-using-the-in-editor-simulation"></a>5. probar la interacción táctil mediante la simulación en el editor
+
+Presione el botón reproducir para entrar en el modo de juego. A continuación, mantenga presionada la barra espaciadora para abrir la mano y use el mouse para tocar el objeto OCTA y desencadenar el efecto de sonido:
+
+![mrlearning: base](images/mrlearning-base/tutorial4-section6-step5-1.png)
+
+> [!NOTE]
+> Como vio al probar la interacción táctil y como se muestra en la imagen anterior, el objeto OCTA color pulsated mientras se toca. Este efecto está codificado de forma rígida en el componente de toque de interacción (Script) de mano y no en el resultado de la configuración de eventos completada en los pasos anteriores.
+>
+> Si desea deshabilitar este efecto, puede, por ejemplo, comentar como comentario o la línea 32 ' TargetRenderer = GetComponentInChildren<Renderer>(); ', lo que dará lugar a que el TargetRenderer quede nulo y el color no sea pulsating.
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En este tutorial, aprendió a organizar objetos 3D en una colección de cuadrículas y cómo manipular estos objetos (escalado, rotación y movimiento) mediante la interacción aproximada (captando directamente con manos sometidas a seguimiento) e interacción lejana (mediante rayos de miración o rayos de mano). También ha aprendido a colocar rectángulos de selección alrededor de objetos 3D y ha aprendido a usar y personalizar Gizmos en los cuadros de límite. Por último, has aprendido a desencadenar eventos al tocar objetos.
+En este tutorial, aprendió a organizar objetos 3D en una colección de cuadrículas y cómo manipular estos objetos (escalado, rotación y movimiento) mediante la interacción aproximada (captando directamente con manos sometidas a seguimiento) e interacción lejana (mediante rayos de miración o rayos de mano). También ha aprendido cómo colocar los rectángulos de selección alrededor de los objetos 3D, y ha aprendido a usar y personalizar los controladores en los cuadros de límite. Por último, has aprendido a desencadenar eventos al tocar objetos.
 
 [Lección siguiente: 6. explorar opciones de entrada avanzadas](mrlearning-base-ch5.md)

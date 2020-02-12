@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Mixed reality, Community, MVP, Meetup
-ms.openlocfilehash: 1b140fffdda91fca0a73ae6d4309c518efd6660c
-ms.sourcegitcommit: 567bcb7019820ac933834087d77b01d684b5cc7b
-ms.translationtype: HT
+ms.openlocfilehash: 191c80c0429370f7864f5826c538296306e26e8d
+ms.sourcegitcommit: f5d6dd420aa347acf1de4798f4e3e0f6a11d19cc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125212"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155512"
 ---
 # <a name="mixed-reality-community"></a>Comunidad de realidad mixta
 
@@ -34,7 +34,7 @@ Si ejecuta una comunidad que le gustaría incluir en esta página, envíe un [co
 |Nombre de comunidad|País|Ciudad|Vínculo|
 |---------|---------|---------|---------|
 |**Nite de Chicago AWE**|Unidos|Chicago|[Vínculo](https://www.meetup.com/AWENiteChicago/)|
-|**VR Filipinas**|Philoppines|N/D|[Vínculo](https://www.facebook.com/vrphilippines/)|
+|**VR Filipinas**|Filipinas|N/D|[Vínculo](https://www.facebook.com/vrphilippines/)|
 <!--
 |Row3     |         |         |         |
 |Row4     |         |         |         |
@@ -107,5 +107,5 @@ Los profesionales más valiosos de Microsoft, o MVP, son expertos tecnológicos 
 |![Takahiro Miyaura](images/BiographyImages/TakahiroMiyaura_270x270.jpg)</br>**Takahiro Miyaura**</br>*Nara, Japón*|Estoy trabajando como Ingeniero de software y Desarrollador en el sector de ti. En concreto, he estado realizando investigación XR (VR/AR/MR, etc.). ) y diversas tecnologías (AI, IoT, etc.) que pueden beneficiarse de XR.|[Email](mailto:cafe.kobe@gmail.com)|
 |![Tamás Deme](images/BiographyImages/tamasdeme_270.png)</br>**Tamás Deme**</br>*Budapest, Hungría*|Tamás es un ingeniero de realidad mixta que trabaja en la VIM basada en Atlanta, donde desarrolla soluciones para dispositivos que van desde servidores hasta un casco que muestra hologramas. Es una 5 veces MVP de Microsoft en desarrollo de Windows, interesado en proyectos de código abierto, enseñanza y tutoría. Puede encontrarlo en línea en [https://tomzorz.me](https://tomzorz.me) o en twitter en [https://twitter.com/tomzorz_](https://twitter.com/tomzorz_).|[Email](mailto:mixedreality@tomzorz.me)|
 |![Tatsuro Ueda](images/BiographyImages/TatsuroUeda_270x270.png)</br>**Tatsuro Ueda**</br>*Mie, Japón*|MR educador de física en 5 países, incluido Afrika, Presidente de sentirse física|[Email](mailto:tatsuro.ueda@feel-physics.jp)|
-|![Vincent Guigui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**Vincent Guigui**</br>*París, Francia*|A cargo de la innovadora División de interacciones en la tecnología OCTO, ayudamos a nuestros clientes a desarrollar nuevas interacciones entre el mundo humano y digital.</br></br>Soy un profesor sobre temas de innovación e interfaces de usuario naturales, hablando de experiencias envolventes (VR/AR/MR), interfaces de conversación (bot) y el futuro potencial de las interfaces de usuario...</br></br>Desde 2013, Microsoft ha recibido como uno de los expertos líderes europeos en Kinect, interfaces de usuario naturales y HoloLens (Premio profesional más valioso).|[Email](mailto:vincent@guigui.fr)|
+|![Vincent Guigui](images/BiographyImages/VincentGuigui_270x270.jpg)</br>**Vincent Guigui**</br>*París, Francia*|A cargo de la innovadora División de interacciones en la [tecnología Octo](https://www.octo.com), ayudamos a nuestros clientes a desarrollar nuevas interacciones entre el mundo humano y digital.</br></br>Soy un profesor sobre temas de innovación e interfaces de usuario naturales, hablando de experiencias envolventes (VR/AR/MR), interfaces de conversación (bot) y el futuro potencial de las interfaces de usuario...</br></br>Desde 2013, Microsoft ha recibido como uno de los expertos líderes europeos en Kinect, interfaces de usuario naturales y HoloLens (Premio profesional más valioso).|[Email](mailto:vincent@guigui.fr)|
 
