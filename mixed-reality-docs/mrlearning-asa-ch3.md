@@ -6,49 +6,53 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 19529cbfebd74938395545c329097d42b5af9ff9
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
+ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334407"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250716"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Mostrar comentarios del delimitador espacial de Azure
 
-En esta lección, aprenderá a proporcionar a los usuarios comentarios sobre la detección de delimitadores, los eventos y el estado al usar los anclajes espaciales de Azure.
+En este tutorial, obtendrá información sobre cómo proporcionar a los usuarios comentarios sobre la detección de delimitadores, los eventos y el estado al usar delimitadores espaciales (ASA) de Azure.
 
 ## <a name="objectives"></a>Objetivos
 
 * Obtenga información sobre cómo configurar un panel de interfaz de usuario que muestre información importante sobre la sesión actual de ASA.
-
 * Comprenda y explore los elementos de comentarios que el SDK de ASA pone a disposición de los usuarios
 
 ## <a name="set-up-asa-feedback-ui-panel"></a>Configuración del panel de interfaz de usuario de comentarios de ASA
 
-1. En esta lección, no vamos a usar los botones "SaveAnchorToDisk" y "ShareAnchor", así que seleccione ambos botones y desactive la casilla en el panel del Inspector (como se muestra a continuación) para ocultar estos botones.
+En la ventana jerarquía, haga clic con el botón derecho en las **instrucciones** > objeto **TextContent** y seleccione **objeto 3D** > **Text-TextMeshPro** para crear un objeto de texto TextMeshPro como un elemento secundario de las instrucciones > objeto TextContent y asígnele un nombre adecuado, por ejemplo, **feedback**:
 
-    ![module2chapter3step1im](images/module2chapter3step1im.PNG)
+![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
-2. Cree el panel de instrucciones. Para empezar, haga clic con el botón derecho en el botón "instrucciones", mantenga el mouse sobre "objeto 3D" y seleccione "textmeshpro-Text".
+> [!TIP]
+> Para que sea más fácil trabajar con la escena, haga clic en el icono de ojo situado a la izquierda del objeto para establecer la visibilidad de la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">escena</a> del objeto ParentAnchor en OFF. Esto oculta el objeto en la ventana de la escena sin cambiar su visibilidad en el juego.
 
-    ![module2chapter3step2im](images/module2chapter3step2im.PNG)
+Con el objeto de **comentarios** aún seleccionado, en la ventana del inspector cambie su posición y el tamaño para que se coloquen en un lugar inferior al texto de la instrucción, por ejemplo:
 
-3. Ajuste la escala y la posición del texto para que coincida con las instrucciones de la escena. Además, asegúrese de que la alineación para todo el texto está centrada. A continuación, elimine el texto de ejemplo del editor de texto, tal como se muestra en la imagen siguiente.
+* Cambie la transformación de rectángulo **Y** a-0,24
+* Cambiar el **ancho** de la transformación Rect a 0,555
+* Cambiar el **alto** de la transformación Rect a 0,1
 
-    ![module2chapter3step3im](images/module2chapter3step3im.PNG)
+A continuación, elija Propiedades de fuente para que el texto se ajuste perfectamente dentro del área de texto, por ejemplo:
 
-4. Cambie el nombre del objeto TextMeshPro a "FeedbackPanel".
+* Cambiar el **estilo de fuente** de la malla de texto Pro (Script) a negrita
+* Cambiar el **tamaño de fuente** de la malla de texto Pro (Script) a 0,17
+* Cambiar la **alineación** de la malla de texto Pro (Script) al centro y el medio
 
-    ![module2chapter3step4im](images/module2chapter3step4im.PNG)
+![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
-5. Asegúrese de que el texto "feedbackpanel" está seleccionado en la jerarquía de ASA_feedback, haga clic en "Agregar componente" y agregue el script de comentarios del delimitador buscándolo y selecciónelo cuando aparezca.
+Con el objeto de **comentarios** aún seleccionado, en la ventana del inspector, use el botón **Agregar componente** para agregar el componente **script de comentarios de delimitador (Script)** al objeto de comentarios:
 
-    ![module2chapter3step8im](images/module2chapter3step8im.PNG)
+![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-6. Arrastre el objeto de texto "feedbackPanel" desde la jerarquía de ASA_Feedback hasta la ranura vacía situada debajo del script, tal como se muestra en la figura siguiente.
+Asigne el objeto de **comentarios** al campo de **texto de comentarios** del componente script de **comentarios de delimitador (Script)** :
 
-    ![module2chapter3step9im](images/module2chapter3step9im.PNG)
+![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En esta lección, hemos aprendido a crear un panel de interfaz de usuario para mostrar el estado actual de la experiencia del anclaje espacial de Azure para proporcionar a los usuarios comentarios en tiempo real.
+En este tutorial, ha aprendido a crear un panel de interfaz de usuario para mostrar el estado actual de la experiencia del anclaje espacial de Azure para proporcionar a los usuarios comentarios en tiempo real.
