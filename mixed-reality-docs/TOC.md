@@ -198,7 +198,7 @@
 ## Unreal
 ### [Introducción al desarrollo de Unreal](unreal-development-overview.md)
 ## WebVR
-### [Uso de WebVR en Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
+### [Uso de WebVR en Microsoft Edge con Windows Mixed Reality](using-webvr-in-edge-with-windows-mixed-reality.md)
 ## Nativo
 ### [Introducción al desarrollo nativo](directx-development-overview.md)
 ### Introducción
