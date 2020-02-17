@@ -50,7 +50,7 @@ Para obtener la mejor experiencia posible de Microsoft Edge en la Página princi
 
 -   Los sitios web abiertos en Windows Mixed Reality se perderán cuando se cierre el portal de realidad mixta, aunque las ventanas de Microsoft Edge permanecerán donde se colocaron en la Página principal de la realidad mixta.
 -   El audio de las ventanas de Microsoft Edge no está espacial.
--   Se **corrigió en la versión de extensión de 360 Viewer 2.3.8**: abrir un vídeo de 360 desde YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. El reinicio de Edge debe actualizar de manera invisible la extensión del visor de 360 para resolver este problema. Puede confirmar qué versión de la extensión tiene escribiendo `edge://system/` en la barra de direcciones y seleccionando el botón de **expansión** junto a "extensiones".
+-   Se **corrigió en la versión de extensión de 360 Viewer 2.3.8**: abrir un vídeo de 360 desde YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. El reinicio de Microsoft Edge debe actualizar de manera invisible la extensión del visor de 360 para resolver este problema. Puede confirmar qué versión de la extensión tiene escribiendo `edge://system/` en la barra de direcciones y seleccionando el botón de **expansión** junto a "extensiones".
 -   Durante las sesiones de realidad mixta de Windows, los monitores virtuales aparecerán como monitores físicos genéricos en Configuración > pantalla de > del sistema.
 
 
