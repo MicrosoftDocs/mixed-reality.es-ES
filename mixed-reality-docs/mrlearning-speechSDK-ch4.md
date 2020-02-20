@@ -17,13 +17,13 @@ ms.locfileid: "75003214"
 
 En esta lección, explorará la característica de intención del servicio de voz de Azure. La característica de intención le permite equipar nuestra aplicación con comandos de voz con tecnología de inteligencia artificial, donde los usuarios pueden indicar comandos de voz no específicos y seguir teniendo la intención entendida por el sistema. En esta lección, se configurará nuestro portal de LUIS de Azure, se configurará nuestra intención/entidades/grabaciones, se publicará nuestro recurso de intención, se conectará la aplicación de Unity a nuestro recurso de intención y se realizará nuestra primera llamada de API de intención.
 
-## <a name="objectives"></a>目標
+## <a name="objectives"></a>Objetivos
 
 - Obtenga información sobre cómo configurar la intención y el lenguaje natural en nuestra aplicación.
 - Aprenda a configurar el portal de LUIS de Azure
 - Aprenda a configurar la intención, las entidades y los grabaciones en Azure
 
-## <a name="instructions"></a>指示
+## <a name="instructions"></a>Instrucciones
 
 1. Permita que el equipo habilite el dictado. Para ello, vaya a configuración de Windows, seleccione "privacidad", "voz", seguido de "entrada manuscrita & escribiendo" y active los servicios de voz y sugerencias de escritura.
 
@@ -33,7 +33,7 @@ En esta lección, explorará la característica de intención del servicio de vo
 
     ![Module4Chapter4step1cim](images/module4chapter4step1cim.PNG)
 
-2. 登入 [Azure 入口網站](https://portal.azure.com/)。 Una vez que haya iniciado sesión, haga clic en crear un recurso, busque "Language Understanding" y haga clic en entrar.
+2. Inicie sesión en el [portal de Azure](https://portal.azure.com/). Una vez que haya iniciado sesión, haga clic en crear un recurso, busque "Language Understanding" y haga clic en entrar.
 
     ![mrlearning-Speech-CH4-1-Step2. png](images/mrlearning-speech-ch4-1-step2.png)
 
@@ -161,6 +161,6 @@ En esta lección, explorará la característica de intención del servicio de vo
     >
     >![Module4Chapter4step24im](images/module4chapter4note2im.PNG)
 
-## <a name="congratulations"></a>恭喜！
+## <a name="congratulations"></a>Enhorabuena
 
 En esta lección ha aprendido a agregar comandos de voz con tecnología de AI. Ahora el programa puede reconocer la intención de los usuarios, incluso si no son comandos de voz precisos.

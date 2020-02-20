@@ -184,9 +184,9 @@ Cualquier función de devolución de llamada de Unity repetida (es decir, Update
 
 4) **Evite pasar Structs por valor**
 
-    A diferencia de las clases, las estructuras son tipos de valor y, cuando se pasan directamente a una función, su contenido se copia en una instancia recién creada. Esta copia agrega costo de CPU, así como memoria adicional en la pila. En el caso de las estructuras pequeñas, el efecto es normalmente muy mínimo y, por tanto, aceptable. Sin embargo, para las funciones invocadas repetidamente cada fotograma y las funciones que toman estructuras grandes, si es posible, modifique la definición de función para que pase por referencia. [在這裡深入了解](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
+    A diferencia de las clases, las estructuras son tipos de valor y, cuando se pasan directamente a una función, su contenido se copia en una instancia recién creada. Esta copia agrega costo de CPU, así como memoria adicional en la pila. En el caso de las estructuras pequeñas, el efecto es normalmente muy mínimo y, por tanto, aceptable. Sin embargo, para las funciones invocadas repetidamente cada fotograma y las funciones que toman estructuras grandes, si es posible, modifique la definición de función para que pase por referencia. [Más información aquí](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method)
 
-#### <a name="miscellaneous"></a>其他
+#### <a name="miscellaneous"></a>Varios
 
 1) **Efectos**
 
@@ -232,7 +232,7 @@ Lea los siguientes artículos de Unity para obtener más información sobre este
 
 #### <a name="static-batching"></a>Procesamiento por lotes estático
 
-Unity puede procesar por lotes muchos objetos estáticos para reducir las llamadas de dibujo a la GPU. El procesamiento por lotes estático funciona para la mayoría de los objetos de [representador](https://docs.unity3d.com/ScriptReference/Renderer.html) en Unity que **1) comparten el mismo material** y **2) se marcan como *estáticos*** (Seleccione un objeto en Unity y haga clic en la casilla situada en la parte superior derecha del inspector). Los GameObjects marcados como *static* no se pueden transferir a lo largo del tiempo de ejecución de la aplicación. Por lo tanto, el procesamiento por lotes estático puede ser difícil de aprovechar en HoloLens, donde prácticamente todos los objetos deben colocarse, moverse, escalarse, etc. En el caso de los auriculares más envolventes, el procesamiento por lotes estático puede reducir drásticamente las llamadas a Draw y mejorar el rendimiento.
+Unity puede procesar por lotes muchos objetos estáticos para reducir las llamadas de dibujo a la GPU. El procesamiento por lotes estático funciona para la mayoría de los objetos de [representador](https://docs.unity3d.com/ScriptReference/Renderer.html) en Unity que **1) comparten el mismo material** y **2) se marcan como *estáticos***  (seleccione un objeto en Unity y haga clic en la casilla situada en la parte superior derecha del inspector). Los GameObjects marcados como *static* no se pueden transferir a lo largo del tiempo de ejecución de la aplicación. Por lo tanto, el procesamiento por lotes estático puede ser difícil de aprovechar en HoloLens, donde prácticamente todos los objetos deben colocarse, moverse, escalarse, etc. En el caso de los auriculares más envolventes, el procesamiento por lotes estático puede reducir drásticamente las llamadas a Draw y mejorar el rendimiento.
 
 Lea *procesamiento por lotes estático* en [procesamiento por lotes de llamadas en Unity](https://docs.unity3d.com/Manual/DrawCallBatching.html) para obtener más detalles.
 
@@ -329,7 +329,7 @@ Por lo general, el sobredibujo se puede mitigar Reseleccionando los objetos ante
 
 Una asignación de memoria excesiva & las operaciones de desasignación pueden tener efectos negativos en la aplicación holográfica, lo que produce un rendimiento incoherente, fotogramas inmovilizados y otro comportamiento perjudicial. Es especialmente importante comprender las consideraciones de memoria al desarrollar en Unity, ya que la administración de la memoria se controla mediante el recolector de elementos no utilizados.
 
-#### <a name="garbage-collection"></a>記憶體回收
+#### <a name="garbage-collection"></a>Colección de elementos no utilizados
 
 Las aplicaciones holográficas perderán el procesamiento del tiempo de proceso en el recolector de elementos no utilizados (GC) cuando se active el GC para analizar los objetos que ya no están en el ámbito durante la ejecución y se debe liberar su memoria, por lo que puede estar disponible para su reutilización. Normalmente, las asignaciones y desasignaciones constantes requerirán que el recolector de elementos no utilizados se ejecute con más frecuencia, con lo que se perjudica el rendimiento y la experiencia del usuario.
 
@@ -349,13 +349,13 @@ La agrupación de objetos es una técnica popular para reducir el costo de las a
 
 - [Tutorial de agrupación de objetos en Unity](https://unity3d.com/learn/tutorials/topics/scripting/object-pooling) 
 
-## <a name="startup-performance"></a>啟動效能
+## <a name="startup-performance"></a>Rendimiento de inicio
 
 Considere la posibilidad de iniciar la aplicación con una escena más pequeña y luego use *[SceneManager. LoadSceneAsync](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadSceneAsync.html)* para cargar el resto de la escena. Esto permite a la aplicación acceder a un estado interactivo lo más rápido posible. Tenga en cuenta que puede haber un gran aumento de la CPU mientras se activa la nueva escena y que cualquier contenido representado puede producir un error o una dificultad. Una manera de solucionar este aspecto es establecer la propiedad AsyncOperation. allowSceneActivation en "false" en la escena que se está cargando, esperar a que se cargue la escena, borrar la pantalla a negro y volver a establecerla en "true" para completar la activación de la escena.
 
 Recuerde que mientras se carga la escena de inicio, se mostrará la pantalla de presentación holográfica al usuario.
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>Vea también
 - [Optimización de la representación de gráficos en juegos de Unity](https://unity3d.com/learn/tutorials/temas/performance-optimization/optimizing-graphics-rendering-unity-games?playlist=44069)
 - [Optimizar la recolección de elementos no utilizados en juegos de Unity](https://unity3d.com/learn/tutorials/topics/performance-optimization/optimizing-garbage-collection-unity-games?playlist=44069)
 - [Prácticas recomendadas de la física [Unity]](https://unity3d.com/learn/tutorials/topics/physics/physics-best-practices)
