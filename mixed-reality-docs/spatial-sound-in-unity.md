@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
 keywords: Unity, sonido espacial, HRTF, tamaño de sala
-ms.openlocfilehash: 3e7d0ea231545d5112d182dffbc02f217ca4a4a7
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 6720eac30c69ebfcd0f003cf131f60295818d676
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181995"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553703"
 ---
 # <a name="spatial-sound-in-unity"></a>Sonido espacial en Unity
 
@@ -30,10 +30,11 @@ En el caso de las nuevas aplicaciones, se recomienda *Microsoft Spatializer*.
 
 ## <a name="enable-spatialization"></a>Habilitar la espacialización
 
-Use [NuGet para Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) para instalar _Microsoft. SpatialAudio. Spatializer. Unity_ y elija **Microsoft Spatializer** en la configuración de audio del proyecto. En ese caso:
+Use [NuGet para Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest) para instalar _Microsoft. SpatialAudio. Spatializer. Unity_ y elija **Microsoft Spatializer** en la configuración de audio del proyecto. A continuación:
 * Adjuntar un **origen de audio** a un objeto de la jerarquía
 * Active la casilla **Habilitar la espacialización**
 * Mueve el control deslizante de **mezcla espacial** a ' 1 '
+* Asegúrese de que el audio espacial está habilitado en la estación de trabajo del desarrollador. Habilítelo haciendo clic con el botón derecho en el icono de volumen en la barra de tareas y asegurándose de que el sonido espacial esté establecido en un valor distinto de "desactivado". Para obtener la mejor representación de lo que escuchará en HoloLens 2, elija **Windows Sonic para auriculares**.
 
 Para obtener más información, vea:
 * [Repositorio de GitHub de Microsoft spatializer](https://github.com/microsoft/spatialaudio-unity)
@@ -41,7 +42,7 @@ Para obtener más información, vea:
 * [Documentación del origen de audio de Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html)
 * [Documentación de spatializer de Unity](https://docs.unity3d.com/Manual/VRAudioSpatializer.html)
 
-## <a name="distance-based-attenuation"></a>Atenuación basada en la distancia
+## <a name="distance-based-attenuation"></a>Atenuación basada en distancia
 La decadencia basada en la distancia predeterminada de Unity tiene una distancia mínima de 1 metro y una distancia máxima de 500 metros, con una rolloff logarítmica. Es posible que esta configuración funcione para su escenario, o puede que los orígenes se expongan demasiado rápido o demasiado lentamente. Para obtener más información, vea:
 * [Diseño sonoro en la realidad mixta](spatial-sound-design.md) para la configuración recomendada.
 * [Documentación de origen de audio de Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/class-AudioSource.html) para obtener instrucciones sobre cómo establecer estas curvas.

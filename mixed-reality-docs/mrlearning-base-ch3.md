@@ -1,17 +1,17 @@
 ---
 title: 'Tutoriales de introducción: 4. Colocar contenido dinámico y usar solucionadores'
-description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+description: Realiza este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 8275d5a97d7827d34ed3926cabe4032cc7f4cfac
-ms.sourcegitcommit: cc61f7ac08f9ac2f2f04e8525c3260ea073e04a7
+ms.openlocfilehash: 5463f363291790fd5e5d76ffa322a61ca7bf8e31
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77129351"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553908"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. colocar contenido dinámico y usar solucionadores
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -28,7 +28,7 @@ Los hologramas llegan a la vida en HoloLens 2 cuando siguen de forma intuitiva a
 
  Los solucionadores de MRTK se encuentran en la carpeta MRTK SDK. Para ver las resoluciones disponibles en el proyecto, en la ventana proyecto, vaya a **activos** > **MixedRealityToolkit. SDK** > **features** > **Utilities** > **resolvetions**:
 
-![mrlearning: base](images/mrlearning-base/tutorial3-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section1-step1-1.png)
 
 En este tutorial, revisaremos la implementación del Solver orbital y el Solver de la vista radial. Para obtener más información acerca de la gama completa de solucionadores disponibles en MRTK, puede visitar la guía de [soluciones](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
@@ -58,11 +58,11 @@ Configurar el componente de **controlador de Solver (Script)** :
 
 Configure el componente **orbital (Script)** :
 
-* Cambiar el **tipo de orientación** a seguimiento del **objeto controlado**
+* Comprobar que el **tipo de orientación** está establecido en seguimiento del **objeto controlado**
 * Restablecer **desplazamiento local** a X = 0, y = 0, Z = 0
 * Cambiar el **desplazamiento de mundo** a X = 0, y =-0,4, Z = 0,3
 
-![mrlearning: base](images/mrlearning-base/tutorial3-section2-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step2-1.png)
 
 ### <a name="3-test-the-orbital-solver-using-the-in-editor-simulation"></a>3. probar el Solver orbital mediante la simulación en el editor
 
@@ -71,7 +71,7 @@ Presione el botón reproducir para entrar en el modo de juego y mantenga presion
 * La posición de transformación de ButtonCollection ahora está controlada por la configuración de Solver
 * El cubo, que no se ve afectado por el Solver, permanece en la misma posición
 
-![mrlearning: base](images/mrlearning-base/tutorial3-section2-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section2-step3-1.png)
 
 > [!TIP]
 > Si no ve el rayo de la cámara en la ventana de la escena, asegúrese de que el menú de Gizmos está habilitado. Para más información sobre el menú Gizmos y cómo puede usarlo para optimizar la vista de escenas, puede visitar la documentación del <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">menú Gizmos</a> de Unity.
@@ -104,13 +104,13 @@ Configure el componente de **vista radial (Script)** :
 * Cambiar la **dirección de referencia** a **orientada a objetos**y activar la casilla **orientar a la dirección de referencia**
 * Cambiar la **distancia mínima** y la **distancia máxima** a 0
 
-![mrlearning: base](images/mrlearning-base/tutorial3-section3-step2-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step2-1.png)
 
 ### <a name="3-test-the-radial-view-solver-using-the-in-editor-simulation"></a>3. probar la vista radial Solver mediante la simulación en el editor
 
 Presione el botón reproducir para entrar en el modo de juego y, a continuación, mantenga presionada la barra espaciadora para abrirla. Mueva el cursor del mouse para mover la mano y haga clic y mantenga presionado el botón primario del mouse para girar la mano:
 
-![mrlearning: base](images/mrlearning-base/tutorial3-section3-step3-1.png)
+![mrlearning-base](images/mrlearning-base/tutorial3-section3-step3-1.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 

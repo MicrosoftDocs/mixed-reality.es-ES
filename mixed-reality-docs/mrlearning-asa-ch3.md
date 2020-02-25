@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: f4f609a71b05a52e8761e282763a540b42e9f7f5
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 3d762950ea8e211fd5a8e4cf8af717674d3fe7e1
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250716"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553959"
 ---
 # <a name="3-displaying-azure-spatial-anchor-feedback"></a>3. Mostrar comentarios del delimitador espacial de Azure
 
@@ -26,7 +26,7 @@ En este tutorial, obtendrá información sobre cómo proporcionar a los usuarios
 
 En la ventana jerarquía, haga clic con el botón derecho en las **instrucciones** > objeto **TextContent** y seleccione **objeto 3D** > **Text-TextMeshPro** para crear un objeto de texto TextMeshPro como un elemento secundario de las instrucciones > objeto TextContent y asígnele un nombre adecuado, por ejemplo, **feedback**:
 
-![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-1.png)
 
 > [!TIP]
 > Para que sea más fácil trabajar con la escena, haga clic en el icono de ojo situado a la izquierda del objeto para establecer la visibilidad de la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">escena</a> del objeto ParentAnchor en OFF. Esto oculta el objeto en la ventana de la escena sin cambiar su visibilidad en el juego.
@@ -43,15 +43,15 @@ A continuación, elija Propiedades de fuente para que el texto se ajuste perfect
 * Cambiar el **tamaño de fuente** de la malla de texto Pro (Script) a 0,17
 * Cambiar la **alineación** de la malla de texto Pro (Script) al centro y el medio
 
-![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-2.png)
 
 Con el objeto de **comentarios** aún seleccionado, en la ventana del inspector, use el botón **Agregar componente** para agregar el componente **script de comentarios de delimitador (Script)** al objeto de comentarios:
 
-![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-3.png)
 
-Asigne el objeto de **comentarios** al campo de **texto de comentarios** del componente script de **comentarios de delimitador (Script)** :
+Asigne el objeto de **comentarios** en el campo de **texto de comentarios** del componente **script de comentarios delimitadores (Script)** :
 
-![mrlearning: base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
+![mrlearning-base](images/mrlearning-asa/tutorial3-section1-step1-4.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 

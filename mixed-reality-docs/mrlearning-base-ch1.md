@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: d3392df9bfad5938d71d3a01999be51834a98a5d
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373445"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554405"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicialización de tu proyecto y primera aplicación
 
@@ -154,13 +154,13 @@ En la ventana Import Unity Package (Importar paquete de Unity), haz clic en el b
 
 Descarga el paquete personalizado de Unity:
 
-* [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.2.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage)
+* [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage)
 
 En el menú de Unity, selecciona **Assets** (Recursos) > **Import Package** (Importar paquete) > **Custom Package...** (Paquete personalizado) para abrir la ventana Importar paquete...:
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-1.png)
 
-En la ventana de importación de paquetes, selecciona el paquete **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.2.0.unitypackage** que descargaste y haz clic en el botón **Open** (Abrir):
+En la ventana de importación de paquetes, selecciona el paquete **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage** que descargaste y haz clic en el botón **Open** (Abrir):
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-2.png)
 
@@ -190,15 +190,18 @@ En el menú de Unity, selecciona **Mixed Reality Toolkit** > **Add to Scene and 
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-1.png)
 
-Con el objeto MixedRealityToolkit seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, cambia el perfil de configuración de Mixed Reality Toolkit a **DefaultHoloLens2ConfigurationProfile**:
+Con el objeto MixedRealityToolkit seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, comprueba que el perfil de configuración de Mixed Reality Toolkit se haya definido como **DefaultMixedRealityToolkitConfigurationProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-2.png)
+
+> [!IMPORTANT]
+> Normalmente, se usa el perfil DefaultHoloLens2ConfigurationProfile para desarrollar para HoloLens 2. Sin embargo, para este tutorial, usarás DefaultMixedRealityToolkitConfigurationProfile y, a continuación, en el siguiente tutorial, [Crear la interfaz de usuario y configurar Mixed Reality Toolkit](mrlearning-base-ch2.md), cambiarás a DefaultHoloLens2ConfigurationProfile.
 
 En el menú de Unity, selecciona **File** (Archivo) > **Save As...** (Guardar como...) para abrir la ventana Save Scene (Guardar escena):
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-3.png)
 
-En la ventana Save Scene (Guardar escena), desplázate hasta la carpeta **Scenes** (Escenas) del proyecto, asígnale un nombre adecuado (por ejemplo, _Introducción_), y haz clic en el botón **Save** (Guardar) para guardar la escena:
+En la ventana Save Scene (Guardar escena), desplázate hasta la carpeta **Scenes** (Escenas) del proyecto, asígnale un nombre adecuado (por ejemplo, _GettingStarted_), y haz clic en el botón **Save** (Guardar) para guardar la escena:
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-4.png)
 

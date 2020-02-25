@@ -6,16 +6,16 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: efa03c49a9a083d2b8e591e03bccbeb776bb57b2
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: d879144c7097d8b3873618f986b9f169e8553fa8
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901472"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553823"
 ---
 # <a name="1-setting-up-photon-unity-networking"></a>1. configuración de redes Photon Unity
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 En este tutorial, obtendrá información sobre cómo prepararse para crear una experiencia compartida mediante la importación de Photon Unity Networking (BURDO) en el proyecto de Unity. Photon es una de las diversas opciones de red disponibles para que los desarrolladores de realidad mixta creen experiencias compartidas. Obtendrá información sobre cómo crear una cuenta de Photon, importar Photon y crear un servidor local opcional.
 
@@ -30,13 +30,13 @@ En este tutorial, obtendrá información sobre cómo prepararse para crear una e
 >[!TIP]
 >Si aún no ha completado los [tutoriales de introducción](mrlearning-base.md) y la serie de tutoriales de los [delimitadores espaciales de Azure](mrlearning-asa-ch1.md) , se recomienda que complete los tutoriales en primer lugar.
 
-* Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](install-the-tools.md)
-* SDK de Windows 10 10.0.18362.0 o posterior
-* Cierta capacidad C# de programación básica
-* Un dispositivo HoloLens 2 [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode)
+* Un equipo Windows 10 configurado con las [herramientas instaladas](install-the-tools.md) correctas
+* SDK de Windows 10 10.0.18362.0 o posterior
+* Capacidad básica para programar con C#
+* Un dispositivo HoloLens 2 [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode)
 
 >[!IMPORTANT]
->Esta serie de tutoriales requiere <a href="https://unity3d.com/get-unity/download/archive" target="_blank">unity 2019,1</a> y la versión recomendada es Unity 2019.1.14. Esto sustituye a los requisitos de versión de Unity o a las recomendaciones descritas en los requisitos previos vinculados anteriormente.
+> La versión de Unity recomendada para esta serie de tutoriales es Unity 2019.2.X. Esta sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
 
 ## <a name="setting-up-photon"></a>Configuración de Photon
 

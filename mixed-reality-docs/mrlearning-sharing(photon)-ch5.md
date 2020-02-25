@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: a3b136023b0beea7cf6eecd52a9a21447576d482
-ms.sourcegitcommit: 2bfe9b1af4ee2cc0d668caeccb8ebc3137cbc20b
+ms.openlocfilehash: c1b64b9d32409d61284f21ca216417ece4767d1b
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901466"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553813"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. integrar los anclajes espaciales de Azure en una experiencia compartida
 
@@ -42,11 +42,17 @@ En esta lección, aprenderá a integrar anclajes espaciales de Azure (ASA) en nu
 
     ![Module3hapter5step7im](images/module3chapter5step7im.PNG)
 
-6. Para probar el módulo de uso compartido, haga clic en el botón "iniciar sesión de Azure ASA", que iniciará la sesión de anclajes espaciales de Azure y luego cree el anclaje de Azure haciendo clic en el botón "crear anclaje de Azure". Espere a que se cree el delimitador de Azure. Una vez creado el delimitador de Azure, haga clic en el botón "compartir el anclaje de Azure" para compartir el anclaje de Azure creado desde HoloLens.
+6. Repita el paso 4 para enlazar la función StartAzureSession () a StartAzureSessionButton.
 
-7. Para recibir el delimitador de Azure compartido en otro HoloLens, haga clic en "iniciar sesión de Azure ASA" para empezar a trabajar en la sesión de ASA actual.
+7. Repita el paso 4 para enlazar la función CreateAzureAnchor () a CreateAzureAnchorButton y comprobar que el objeto TableAnchor está asignado al campo ' Game Object ' del parámetro de la función.
 
-8. Haga clic en el botón "obtener anclaje de Azure" para obtener el anclaje compartido de Azure desde el otro HoloLens.
+8. Siga las instrucciones de [conexión de la escena a recursos de Azure](mrlearning-asa-ch1.md#4-connect-the-scene-to-the-azure-resource) para agregar sus credenciales del servicio de anclaje espacial de Azure.
+
+9. Para probar el módulo de uso compartido, haga clic en el botón "iniciar sesión de Azure ASA", que iniciará la sesión de anclajes espaciales de Azure y luego cree el anclaje de Azure haciendo clic en el botón "crear anclaje de Azure". Espere a que se cree el delimitador de Azure. Una vez creado el delimitador de Azure, haga clic en el botón "compartir el anclaje de Azure" para compartir el anclaje de Azure creado desde HoloLens.
+
+10. Para recibir el delimitador de Azure compartido en otro HoloLens, haga clic en "iniciar sesión de Azure ASA" para empezar a trabajar en la sesión de ASA actual.
+
+11. Haga clic en el botón "obtener anclaje de Azure" para obtener el anclaje compartido de Azure desde el otro HoloLens.
 
 ## <a name="congratulations"></a>Enhorabuena
 

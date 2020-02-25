@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: e712fc2fd66b1add5b16b7dd8e6c37551aefe43a
-ms.sourcegitcommit: 9005b3fdfa87ac8fdc18a594a681e25c00ac5ce1
+ms.openlocfilehash: 8805fa6410e882bce2f0fe8da780dfd5f794cc74
+ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75003214"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77554011"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. configuración del propósito y comprensión del lenguaje natural
 
@@ -147,14 +147,22 @@ En esta lección, explorará la característica de intención del servicio de vo
 
     ![Module4Chapter4step23im](images/module4chapter4step23im.PNG)
 
-23. En el campo punto de conexión Luis de "LunarcomIntentRecognizer" en el panel Inspector, escriba la dirección URL del punto de conexión que guardó en el paso 22.
+23. En el campo punto de conexión Luis de "LunarcomIntentRecognizer" en el panel Inspector, escriba la dirección URL del punto de conexión que guardó en el paso 21.
 
     ![Module4Chapter4step24im](images/module4chapter4step24im.PNG)
 
     >[!NOTE]
     >En el componente "LunarcomOfflineRecognizer" del panel Inspector, asegúrese de que está seleccionado "Deshabilitar" para "SimulateOfflineMode"; de lo contrario, no funcionará la prueba del programa.
 
-24. Presione el botón reproducir en el editor de Unity y haga clic en el botón Rocket para iniciar el reconocimiento de intenciones. En la frase, haga clic en el botón iniciar Rocket.
+24. En la ventana de proyecto, navegue a los recursos > MRTK. Tutoriales. GettingStarted > Prefabs > carpeta RocketLauncher, arrastre el RocketLauncher_Complete recurso prefabricado a la ventana de jerarquía y colóquelo delante del objeto Lunarcom_Base.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing01.png)
+
+25. En la ventana jerarquía, seleccione el objeto Lunarcom_Base y busque el componente reconocedor de intención de Lunarcom (Script) y, a continuación, expanda el objeto de botón RocketLauncher_Complete > y asigne cada uno de los objetos de botón a los botones del selector lunar correspondientes. campo.
+
+    ![Module4Chapter4step24im](images/module4chapter4step24im-missing02.png)
+
+26. Presione el botón reproducir en el editor de Unity y haga clic en el botón Rocket para iniciar el reconocimiento de intenciones. En la frase, haga clic en el botón iniciar Rocket.
 
     >[!NOTE]
     >La aplicación reconoció la función deseada y activó el botón Rocket.
