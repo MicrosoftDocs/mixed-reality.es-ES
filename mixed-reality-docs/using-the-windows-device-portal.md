@@ -6,18 +6,18 @@ ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos de Windows, HoloLens
-ms.openlocfilehash: b22c70305076e3b2c18f880878b48c3142efdbfe
-ms.sourcegitcommit: cf3b662cfcf3fb05a554c302e595eb018f01abf2
+ms.openlocfilehash: 43ecfead7d2882d3624809bc05184f74131b8594
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76521696"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202725"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso del portal de dispositivos de Windows
 
 <table>
 <tr>
-<th>Función</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª generación)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª generación)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"><a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Portal de dispositivos Windows</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"></td>
 </tr>
@@ -81,6 +81,8 @@ Cada HoloLens genera un certificado autofirmado único para su conexión de SSL.
 1. **Asegúrese de que se encuentre en una red segura (USB o una red Wi-Fi en la que confíe).**
 2. Descargue el certificado de este dispositivo en la página "seguridad" en el portal de dispositivos.
    * Vaya a: https://< YOUR_HOLOLENS_IP_ADDRESS >/devicepair.htm
+   * Abra el nodo para las preferencias del > del sistema. 
+   * Desplácese hacia abajo hasta seguridad del dispositivo y haga clic en el botón "descargar el certificado de este dispositivo".
 3. Instale el certificado en el almacén "entidades de certificación raíz de confianza" en su equipo.
    * En el menú Windows, escriba: Manage Computer Certificates e inicie el applet.
    * Expanda la carpeta **entidad de certificación raíz de confianza** .
@@ -88,6 +90,10 @@ Cada HoloLens genera un certificado autofirmado único para su conexión de SSL.
    * En el menú Acción, selecciona: Todas las tareas > Importar...
    * Completa el Asistente para importación de certificados con el archivo de certificado descargado desde Device Portal.
 4. Reinicia el explorador.
+
+>[!NOTE]
+> Este certificado solo será de confianza para el dispositivo y el usuario tendrá que volver a realizar el proceso si el dispositivo se ha desactivado.
+
 
 ## <a name="device-portal-pages"></a>Páginas de Device Portal
 
@@ -110,7 +116,7 @@ La barra de herramientas de la parte superior de la página proporciona acceso a
 En la página principal se muestra la siguiente información:
 * **Estado del dispositivo:** supervisa el estado del dispositivo e informa de los errores críticos.
 * **Información de Windows:** muestra el nombre de HoloLens y la versión de Windows instalada actualmente.
-* La sección **Preferencias** contiene las siguientes opciones:
+* La sección **Preferencias** contiene las siguientes configuraciones:
    * **IPD**: establece la distancia interpupilar (IPD), que es la distancia, en milímetros, entre el centro de las pupilas del usuario cuando mira al frente. La configuración surte efecto inmediatamente. El valor predeterminado se calculó automáticamente al configurar el dispositivo.
    * **Nombre del dispositivo**: asigna un nombre a HoloLens. Debes reiniciar el dispositivo después de cambiar este valor para que surta efecto. Después de hacer clic en **Guardar**, se le preguntará si desea reiniciar el dispositivo inmediatamente o reiniciarlo más tarde.
    * **Configuración de suspensión**: establece el período de tiempo de espera antes de que el dispositivo entre en el modo de suspensión cuando está conectado y cuando funciona con batería.
@@ -181,7 +187,7 @@ Para detener el seguimiento, haga clic en el vínculo detener. Permanezca en est
 
 Los archivos ETL se pueden abrir para realizar análisis en [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx).
 
-### <a name="processes"></a>Processes
+### <a name="processes"></a>Procesos
 
 Página de ![procesos de Windows Device portal en Microsoft HoloLens](images/windows-device-portal-running-processes-page-1000px.png)<br>
 *Página procesos en Windows Device portal en Microsoft HoloLens*
@@ -196,7 +202,7 @@ Muestra detalles acerca de los procesos que se ejecutan actualmente. Esto incluy
 Muestra gráficos en tiempo real de la información de diagnóstico del sistema, como el uso de energía, la velocidad de fotogramas y la carga de la CPU.
 
 Estas son las métricas disponibles:
-* **SoC power**: uso de energía instantánea de sistema en un chip (SoC), con una media superior a un minuto
+* **SoC power**: uso de energía instantánea system-on-chip, con una media superior a un minuto
 * **Energía del sistema**: uso de energía instantánea del sistema, con una media superior a un minuto
 * **Velocidad de fotogramas**: fotogramas por segundo, intervalos en blanco verticales perdidos por segundo y perdidos consecutivos
 * **GPU**: uso del motor de la GPU, porcentaje del total disponible
@@ -214,7 +220,7 @@ Administra las aplicaciones que están instaladas en HoloLens.
 * **Aplicaciones instaladas**: quita e inicia aplicaciones.
 * **Aplicaciones en ejecución**: enumera las aplicaciones que se ejecutan actualmente.
 * **Instalar aplicación**: seleccione paquetes de aplicaciones para la instalación desde una carpeta de su equipo o red.
-* **Dependencia**: agrega las dependencias de la aplicación que se va a instalar.
+* **Dependencia**: agrega las dependencias de la aplicación que pretendes instalar.
 * **Implementar**: implemente la aplicación y las dependencias seleccionadas en HoloLens.
 
 ### <a name="app-crash-dumps"></a>Volcados de memoria de la aplicación
@@ -231,7 +237,7 @@ En esta página puedes recopilar los volcados de memoria de las aplicaciones tra
 
 Use el explorador de archivos para examinar, cargar y descargar archivos. Puede trabajar con archivos en la carpeta documentos, en la carpeta imágenes y en las carpetas de almacenamiento local para las aplicaciones que implementó desde Visual Studio o desde el portal de dispositivos.
 
-### <a name="kiosk-mode"></a>Pantalla completa
+### <a name="kiosk-mode"></a>Modo de quiosco
 
 >[!NOTE]
 >El modo de quiosco solo está disponible con [Microsoft HoloLens Commercial Suite](commercial-features.md).
@@ -249,12 +255,12 @@ Active **ocultar proveedores** para mostrar solo la lista de **eventos** .
 * **Registered providers**: selecciona el proveedor ETW y el nivel de seguimiento. El nivel de seguimiento es uno de estos valores:
    1. Terminación o salida anómala
    2. Errores graves
-   3. Warnings
+   3. Advertencias
    4. Advertencias sin errores
 
 Haz clic o pulsa en **Activar** para iniciar el seguimiento. El proveedor se agrega a la lista desplegable de **Proveedores habilitados**.
 * **Proveedores personalizados**: selecciona un proveedor ETW personalizado y el nivel de seguimiento. Identifica el proveedor por su GUID. No incluyas corchetes en el GUID.
-* **Proveedores habilitados**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
+* **Enabled providers**: enumera los proveedores habilitados. Selecciona un proveedor de la lista desplegable y haz clic o pulsa en **Desactivar** para detener el seguimiento. Haz clic o pulsa en **Detener todo** para suspender todos los seguimientos.
 * **Providers history**: muestra los proveedores ETW que estaban habilitados durante la sesión actual. Haz clic o pulsa en **Activar** para activar un proveedor deshabilitado. Haz clic o pulsa en **Borrar** para borrar el historial.
 * **Eventos**: enumera los eventos ETW de los proveedores seleccionados en formato de tabla. Esta tabla se actualiza en tiempo real. Debajo de la tabla, haz clic en el botón **Borrar** para eliminar todos los eventos ETW de la tabla. Esta acción no deshabilita ningún proveedor. Puedes hacer clic en **Guardar en archivo** para exportar los eventos ETW recopilados actualmente en un archivo CSV de forma local.
 * **Filtros**: le permite filtrar los eventos ETW recopilados por el identificador, la palabra clave, el nivel, el nombre del proveedor, el nombre de la tarea o el texto. Puede combinar varios criterios juntos:
@@ -263,7 +269,7 @@ Haz clic o pulsa en **Activar** para iniciar el seguimiento. El proveedor se agr
 
 Por ejemplo, puede especificar los criterios *(el nombre de tarea contiene ' foo ' o ' bar ') y (el texto contiene ' error ' o ' Warning ')*
 
-### <a name="simulation"></a>Simulación
+### <a name="simulation"></a>Simulation
 
 ![página de simulación en Windows Device portal en Microsoft HoloLens](images/windows-device-portal-simulation-page-1000px.png)<br>
 *Página de simulación en Windows Device portal en Microsoft HoloLens*
@@ -274,7 +280,7 @@ Te permite grabar y reproducir datos de entrada para las pruebas.
 * **Reproducción**: haga clic o pulse en **cargar grabación** para seleccionar un archivo de XEF desde su equipo y enviar los datos a HoloLens.
 * **Modo de control**: seleccione el **valor predeterminado** o **simulación** en la lista desplegable y haga clic o pulse en el botón **establecer** para seleccionar el modo en HoloLens. Si eliges "Simulación", se deshabilitan los sensores reales de HoloLens y se usan los datos simulados cargados en su lugar. Si cambias a "Simulación", HoloLens no responderá al usuario real hasta que vuelva al "Valor predeterminado".
 
-### <a name="networking"></a>Funciones de red de
+### <a name="networking"></a>Funciones de red
 
 ![página redes de Windows Device portal en Microsoft HoloLens](images/windows-device-portal-networking-page-1000px.png)<br>
 *Página de redes en Windows Device portal en Microsoft HoloLens*

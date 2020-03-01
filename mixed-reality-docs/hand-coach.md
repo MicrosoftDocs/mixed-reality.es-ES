@@ -1,19 +1,19 @@
 ---
-title: Guía de diseño del autocar de MRTK
+title: Autocar manual
 description: manos 3D que se desencadenan cuando el sistema no detecta las manos del usuario para ayudarles.
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, autocar de mano, auriculares envolvente, MRTK, manos, ayudando a manos
-ms.openlocfilehash: dc04f8f77548b226a822576befd60be107f4d3fb
-ms.sourcegitcommit: 87aca9c2b73b0e83cb70a46443dcdb08c3621005
+ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
+ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77373526"
+ms.lasthandoff: 03/01/2020
+ms.locfileid: "78202745"
 ---
-# <a name="hand-coach-design-guidance"></a>Guía de diseño de autocar
+# <a name="hand-coach"></a>Autocar manual
 
 El autocar de mano es una práctica con modelo 3D que se desencadena cuando el sistema no detecta las manos del usuario. Esto se implementa como un componente de "enseñanza" que ayuda a guiar al usuario cuando no se ha impartido el gesto. Si los usuarios no han realizado el gesto especificado durante un período, las manos se repetirán con un retraso. El autocar manual se puede usar para representar presionar un botón o recoger un holograma.  
 
