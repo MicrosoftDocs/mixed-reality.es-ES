@@ -86,6 +86,7 @@
 #### [Claqueta](slate.md)
 #### [Control deslizante](slider.md)
 #### [Sombreador](shader.md)
+#### [Asesor manual](hand-coach.md)
 #### [Etiquetado y vista frontal continua](billboarding-and-tag-along.md)
 #### [Indicación del progreso](progress.md)
 #### [Magnetismo de superficie](surface-magnetism.md)
