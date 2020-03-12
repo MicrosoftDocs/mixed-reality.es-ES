@@ -1,25 +1,32 @@
 ---
 title: Historial de versiones de Holographic Remoting
 description: Historial de versiones de Holographic Remoting en HoloLens 2.
-author: NPohl-MSFT
-ms.author: nopohl
-ms.date: 10/21/2019
+author: FlorianBagarMicrosoft
+ms.author: flbagar
+ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: f051dbf24cab550470a312933ffb99e1ba595257
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 62f54dbcf5327cdd5f13622704684a2cb0606d7d
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181965"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092307"
 ---
 # <a name="holographic-remoting-version-history"></a>Historial de versiones de Holographic Remoting
 
 > [!IMPORTANT]
 > Esta guía es específica de Holographic Remoting en HoloLens 2.
 
-## Versión 2.0.18.0 (17 de diciembre de 2019)<a name="v2.0.18"></a>
-* Compatibilidad agregada para HolographicViewConfiguration: https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration
+## Versión 2.1.0 (11 de marzo de 2020)<a name="v2.1.0"></a>
+* Transporte de red conmutada para usar [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) a través de UDP. Conexiones seguras use [SRTP](https://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol) ahora. Tenga en cuenta que el [reproductor de comunicación remota holográfica](holographic-remoting-player.md) todavía es compatible con todas las versiones anteriores de Holographic Remoting. Para beneficiarse del nuevo transporte de red, el reproductor de comunicación remota holográfica y la aplicación remota en cuestión deben usar la versión 2.1.0.
+* Compatibilidad agregada para [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_). 
+
+## Versión 2.0.20 (2 de febrero de 2020)<a name="v2.0.20"></a>
+* Se corrigieron varios errores que provocan bloqueos.
+
+## Versión 2.0.18 (17 de diciembre de 2019)<a name="v2.0.18"></a>
+* Compatibilidad agregada para [HolographicViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration)
 * Se corrigieron varios errores que provocan bloqueos.
 * Se corrigió un error en el que se necesitaba una devolución de llamada HolographicSpace. CameraAdded para que un HolographicCamera se aceptara y se mostrara como una cámara agregada en el HoloraphicFrame.
 
@@ -54,7 +61,7 @@ ms.locfileid: "75181965"
 
 * Primera versión pública de Holographic Remoting para HoloLens 2.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)
 * [Escritura de una aplicación de host de Holographic Remoting](holographic-remoting-create-host.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)

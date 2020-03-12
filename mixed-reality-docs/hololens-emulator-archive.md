@@ -3,15 +3,15 @@ title: Archivo del emulador de HoloLens
 description: Lista de las compilaciones publicadas del emulador de Microsoft HoloLens.
 author: hamalawi
 ms.author: moelhama
-ms.date: 2/12/2020
+ms.date: 3/10/2020
 ms.topic: article
 keywords: HoloLens, emulador, compilaciones, versiones
-ms.openlocfilehash: 4696330e62d2b7b5d58c73e13713e0731f5ec3bc
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 7aed01ecc155e4ea93bbbf9c347f117b319d2bc7
+ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250670"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031774"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archivo de emulador de HoloLens 2
 
@@ -19,6 +19,7 @@ Las compilaciones del emulador de HoloLens (1ª generación) y de HoloLens 2 se 
 
 |  Compilar |  Fecha de lanzamiento |  Notas | 
 |----------|----------|----------|
+|  [10.0.18362.1056 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2121323) | 10 de marzo de 2020 | Compilación de la versión 2020 de HoloLens de marzo 2.  Para ver las notas de la versión de HoloLens 2 generales, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1053 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2118321) | 11 de febrero de 2020 | Versión de febrero de 2020 de HoloLens 2.  Para ver las notas de la versión de HoloLens 2 generales, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1044 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2114824) | 13 de enero de 2020 | Compilación de enero de 2020 HoloLens 2.  Para ver las notas de la versión de HoloLens 2 generales, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
 |  [10.0.18362.1042 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2112589) | 6 de diciembre de 2019 | Compilación de diciembre de 2019 HoloLens 2.  Soluciona un problema en el que una aplicación holográfica que se ejecuta en el emulador se suspenderá de forma inesperada al mostrar el panel de PIN.  Habilita la conectividad a un emulador remoto cuando se usa la API de simulación de percepción o la aplicación de control de simulación de percepción.  Para ver las notas de la versión de HoloLens 2 generales, consulte https://docs.microsoft.com/hololens/hololens-release-notes |
@@ -42,5 +43,5 @@ Las compilaciones del emulador de HoloLens (1ª generación) y de HoloLens 2 se 
 
 ## <a name="see-also"></a>Vea también
 * [Instalación de las herramientas](install-the-tools.md)
-* [Uso del emulador HoloLens](using-the-hololens-emulator.md)
+* [Uso del emulador de HoloLens](using-the-hololens-emulator.md)
 * [Emulador de HoloLens avanzado y entrada del simulador de realidad mixta](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)

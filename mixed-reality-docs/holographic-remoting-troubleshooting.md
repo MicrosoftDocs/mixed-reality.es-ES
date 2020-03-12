@@ -3,15 +3,15 @@ title: Solución de problemas y limitaciones de la comunicación remota holográ
 description: Pasos de solución de problemas para la comunicación remota holográfica en HoloLens 2.
 author: FlorianBagarMicrosoft
 ms.author: flbagar
-ms.date: 12/17/2019
+ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, solución de problemas, ayuda
-ms.openlocfilehash: 05333c8911010945a543cf603b9925eb30c841db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 79258832d29741c56a1e7e89baeb7d728c806dd1
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181975"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79092363"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Solución de problemas de Holographic Remoting
 
@@ -40,6 +40,7 @@ Las siguientes API **no** se admiten actualmente cuando se usa Holographic Remot
 * [HolographicCameraPose.OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
   - No genera ningún error, pero el búfer de profundidad no se realizará de forma remota.
+  - Compatible a partir de la versión [2.1.0](holographic-remoting-version-history.md#v2.1.0)
 * [HolographicDisplay.TryGetViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
   - Al consultar HolographicViewConfigurationKind. PhotoVideoCamera, siempre se devolverá un ```nullptr```.
   - Se admite a partir de la versión [2.0.18](holographic-remoting-version-history.md#v2.0.18)
@@ -88,9 +89,9 @@ Las siguientes API **no** se admiten actualmente cuando se usa Holographic Remot
 * [SpatialGraphInteropPreview.TryCreateFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.trycreateframeofreference)
 * [SpatialInteractionSource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Historial de versiones de Holographic Remoting](holographic-remoting-version-history.md)
-* [Escritura de una aplicación de host de Holographic Remoting](holographic-remoting-create-host.md)
+* [Escritura de una aplicación remota holográfica Remoting](holographic-remoting-create-host.md)
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)
 * [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 12/27/2019
 ms.topic: article
 keywords: Mixed reality, Community, MVP, Meetup
-ms.openlocfilehash: 08cb0142a2e26d3c855b742ab3b8d0054f698efb
-ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
+ms.openlocfilehash: 7814db195e105c2fdf9ba894dc1877e2cbdc4675
+ms.sourcegitcommit: fcd4ca74d59bd4cf469b71f07169defd0887ac21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78202785"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084582"
 ---
 # <a name="mixed-reality-community"></a>Comunidad de realidad mixta
 
@@ -36,8 +36,8 @@ Si ejecuta una comunidad que le gustaría incluir en esta página, envíe un [co
 |**Nite de Chicago AWE**|Unidos|Chicago|[Vínculo](https://www.meetup.com/AWENiteChicago/)|
 |**Grupo de usuarios de realidad mixta-Países Bajos**|Países Bajos|Rijswijk|[Vínculo](https://www.mixug.com)|
 |**VR Filipinas**|Filipinas|N/D|[Vínculo](https://www.facebook.com/vrphilippines/)|
+|**XRLA**|Unidos|Los Ángeles|[Vínculo](https://www.meetup.com/XRLA_Meetup/)|
 <!--
-|Row3     |         |         |         |
 |Row4     |         |         |         |
 |Row5     |         |         |         |
 |Row6     |         |         |         |
@@ -98,7 +98,7 @@ Los profesionales más valiosos de Microsoft, o MVP, son expertos tecnológicos 
 |![Dave Smit](images/BiographyImages/DaveSmits_270x270.jpg)</br>**Dave Smit**</br>*Amersfoort, Países Bajos*|Dave Smit es MVP de Microsoft desde 2014 y trabajando con HoloLens desde la primera versión iniciada. Ha realizado varios proyectos para que los clientes comiencen con modelos simples a aplicaciones que incluían sensores de seguimiento de movimiento que se van a usar en hologramas.|[Email](mailto:dave@familie-smits.com)|
 |![Eric Provencher](images/BiographyImages/EricProvencher_270x270.jpg)</br>**Eric Provencher**</br>*Montreal, QC, Canadá*|Eric es un marco de trabajo de realidad mixta y desarrollador de experiencia de usuario de CAE, uno de los primeros asociados de Microsoft Mixed Reality y un adoptador de Wave 1 HoloLens. Sus principales roles están liderando la arquitectura y el desarrollo de un marco de desarrollo multiplataforma interno muy similar a MRTK, así como el desarrollo y el mantenimiento de aplicaciones de aprendizaje y de simulación de atención sanitaria nuevas y existentes. Principalmente, compilan aplicaciones en Unity, en VR (Oculus Quest), AR (HoloLens 1 & 2), así como en pantalla (WebGL + iOS/Android).|[Email](mailto:erproven@gmail.com)|
 |![de Fabrice diente](images/BiographyImages/FabriceBarbin_270x270.jpg)</br>**Diente de Fabrice**</br>*Francia*|La empresa, el entusiasta de la innovación y la tecnología de los años, Fabrice es el CEO en [SYNERGIZ](http://www.synergiz.com), socio de Microsoft Mixed Reality, pionero en los casos de uso de HoloLens en Francia. Promocionar activamente las tecnologías de Microsoft como orador, MVP recompensado durante 12 años, Fabrice está interesado en un gran conjunto de productos: HoloLens, Kinect4Azure, IoT, Surface Hub, Ink, Touch, IA, Machine Learning, Cognitive Services, Azure|[Email](mailto:fbarbin@synergiz.com)|
-|![Francesco Clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco Clasadonte**</br>*Milán, Italia*|Fanciful y creativo, me pongo en todo lo que me apasiona. Durante tres años, he estado trabajando como investigador en Politecnico di Milano, centrándose en mi investigación sobre tecnologías interactivas para niños con Disabilites, obteniendo experiencia en el desarrollo de sistemas de IOT, objetos inteligentes, interacción del robot, diseño de iluminación, entorno multisensor y interfaces de usuario naturales en proyectos nacionales e internacionales.</br></br>Actualmente, estoy trabajando como consultor autónomo en los campos de IOT, soluciones Web, integración del sistema, centrándose en tecnologías emergentes e innovadoras como la realidad mixta y la inteligencia artificial.|[Email](mailto:klasaf@outlook.com)|
+|![Francesco Clasadonte](images/BiographyImages/FrancescoClasadonte_270x270.jpg)</br>**Francesco Clasadonte**</br>*Milán, Italia*|Fanciful y creativo, me pongo en todo lo que me apasiona. Durante tres años, he estado trabajando como investigador en Politecnico di Milano, centrándose en mi investigación sobre tecnologías interactivas para niños con Disabilites, obteniendo experiencia en el desarrollo de sistemas de IOT, objetos inteligentes, interacción del robot, diseño de iluminación, entorno multisensor y interfaces de usuario naturales en proyectos nacionales e internacionales.</br></br>Actualmente, estoy trabajando en [FifthIngenium](https://fifthingenium.com) como desarrollador creativo senior, en los campos de IoT, soluciones Web, integración del sistema, centrándose en tecnologías emergentes e innovadoras como la realidad mixta y la inteligencia artificial.|[Email](mailto:klasaf@outlook.com)|
 |![Gianni rosa gallina](images/BiographyImages/GianniRosaGallina_270x270.png)</br>**Gianni Rosa Gallina**</br>*Italia*|Gianni es un MVP de Microsoft desde 2011, centrándose en tecnologías emergentes, AI y en la realidad virtual/ampliada/mixta desde 2013. Actualmente, es el ingeniero de software senior de R & D en el laboratorio de innovación de Deltatre, el diseño y la creación de prototipos de soluciones de próxima generación para experiencias y servicios relacionados con deportes, desde aplicaciones de VR/MR hasta arquitecturas de Azure de un extremo a otro y flujos de trabajo de vídeo, pasando por Cognitive Services, AI y mucho más. Además de eso, es miembro activo de la comunidad local "Torino Technologies Group" (TTG), Organizer and Trainer para codificar gimnasio Torino Monthly encuentros, Author online Courses Author, Publish articles in the Blog and the Speaker in National and conferencias y eventos técnicos internacionales.|[Email](mailto:giannishub@hotmail.com)|
 |![Jessica Engstrom](images/BiographyImages/JessicaEngstrom_270x270.jpg)</br>**Jessica Engstrom**</br>*Estocolmo, Suecia*|MVP de Microsoft: desarrollo de la plataforma Windows, orador público, experiencia del usuario, bots y realidad mixta. Codificación después del hospedaje de podcast de trabajo. Grupo de usuarios y organizador de conferencias|[Email](mailto:jessica@catoholic.se)|
 |![Jimmy Engstrom](images/BiographyImages/JimmyEngstrom_270x270.jpg)</br>**Jimmy Engstrom**</br>*Estocolmo, Suecia*|MVP de Microsoft-desarrollo de la plataforma Windows, orador, increíble, realidad mixta, HoloLens y Windows Developer. Codificación después del hospedaje de podcast de trabajo. Grupo de usuarios y organizador de conferencias|[Email](mailto:jimmy@engstromjimmy.se)|
