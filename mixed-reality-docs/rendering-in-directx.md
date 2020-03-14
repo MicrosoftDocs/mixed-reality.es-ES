@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, representación, gráficos 3D, HolographicFrame, bucle de representación, bucle de actualización, tutorial, código de ejemplo, Direct3D
 ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940873"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375982"
 ---
 # <a name="rendering-in-directx"></a>Representación en DirectX
 
@@ -593,7 +593,7 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
 }
 ```
 
-## <a name="present"></a>Presentar
+## <a name="present"></a>Presente
 
 ### <a name="enable-the-holographic-frame-to-present-the-swap-chain"></a>Habilitación del marco holográfica para presentar la cadena de intercambio
 
@@ -743,6 +743,6 @@ if (FAILED(hr))
     return hr;
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)
 * [Uso del emulador HoloLens](using-the-hololens-emulator.md)

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modelado, guía de modelado, requisitos de recursos, directrices de creación, iniciador, selector 3D, textura, materiales, complejidad, triángulos, malla, polígonos, polinúmero, límites
 ms.openlocfilehash: 536fd9bc2002d679ee3bf73d5c906b84c51e5d46
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926579"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375632"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Crear modelos 3D para su uso en el hogar
 
@@ -60,7 +60,7 @@ La Página principal de Windows Mixed Reality no admite modelos con más de 10.0
 ### <a name="node-counts-and-submesh-limits"></a>Recuentos de nodos y límites de submallas
 La Página principal de Windows Mixed Reality no admite modelos con más de 64 nodos o submallas 32 por LOD. Los nodos son un concepto de la [especificación glTF](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy) que define los objetos de la escena. Las submallas se definen en la matriz de [primitivas](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes) de la malla en el objeto. 
 
-|  Función |  Descripción  |  Compatibilidad máxima | Documentación |
+|  Característica |  Descripción  |  Compatibilidad máxima | Documentación |
 |------|------|------|------|
 |  Nodos |  Objetos de la escena glTF |  64 por LOD | [Presenta](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#nodes-and-hierarchy)|
 |  Submallas |  Suma de primitivas en todas las mallas |  32 por LOD | [Presenta](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#meshes)|
@@ -235,10 +235,10 @@ Una vez realizados los cambios en el modelo de glTF, puede guardarlos directamen
 ### <a name="restrictions"></a>Restricciones
 Las animaciones no pueden tener más de 20 minutos y no pueden contener más de 36.000 fotogramas clave (20 minutos a 30 FPS). Además, cuando se usan animaciones basadas en destino de transformación, no se superan los 8192 vértices de destino de transformación o menos. Si se supera este recuento, el recurso animado no se admitirá en la Página principal de Windows Mixed Reality. 
 
-|Función|Máximo|
+|Característica|Máximo|
 |-----|-----|
 |Duración|20 minutos|
-|Fotogramas clave|36.000| 
+|Fotogramas clave|36,000| 
 |Vértices de destino de transformación|8192|
 
 ## <a name="gltf-implementation-notes"></a>Notas sobre la implementación de glTF
@@ -277,7 +277,7 @@ Solo se admite un atributo de vértice UV.
 * [Especificación de extensiones de empaquetado de textura de realidad mixta de HoloLens](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Especificación de extensiones de Microsoft DDS Textures glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)](implementing-3d-app-launchers.md)
 * [Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)](implementing-3d-app-launchers-win32.md)

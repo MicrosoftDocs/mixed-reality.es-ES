@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: asignación espacial, HoloLens, realidad mixta, reconstrucción superficial, malla
 ms.openlocfilehash: c4e2f9e49cfe4df9cf875d18b19d62e25c200d76
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926733"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375832"
 ---
 # <a name="spatial-mapping"></a>Asignación espacial
 
@@ -83,7 +83,7 @@ Algunos factores, detallados [aquí](environment-considerations-for-hololens.md)
 
 ![Ilustraciones de escenarios de uso de asignación espacial comunes: selección de ubicación, oclusión, física y navegación](images/sm-concepts-1000px.png)
 
-### <a name="placement"></a>Colocación
+### <a name="placement"></a>Ubicación
 
 La asignación espacial proporciona a las aplicaciones la oportunidad de presentar formas naturales y familiares de interacción con el usuario; ¿Qué puede ser más natural que colocar el teléfono en el escritorio?
 
@@ -129,7 +129,7 @@ Los principales desafíos técnicos que conlleva la implementación de la funcio
 
 Tenga en cuenta que la funcionalidad de NavMesh integrada en Unity no se puede usar con superficies de asignación espacial. Esto se debe a que las superficies de asignación espacial no se conocen hasta que se inicia la aplicación, mientras que los archivos de datos NavMesh deben generarse a partir de los recursos de origen con anterioridad. Tenga en cuenta también que, el sistema de asignación espacial no proporcionará [información sobre las superficies lejos](spatial-mapping.md#the-environment-scanning-experience) de la ubicación actual del usuario. Por lo tanto, la aplicación debe "recordar" superficies si se va a crear un mapa de un área muy grande.
 
-### <a name="visualization"></a>Visualiza
+### <a name="visualization"></a>Visualización
 
 La mayor parte del tiempo es adecuado para que las superficies espaciales sean invisibles; para minimizar la confusión visual y dejar que el mundo real se hable de sí mismo. Sin embargo, a veces es útil visualizar directamente las superficies de asignación espacial, a pesar de que sus homólogos reales ya están visibles.
 
@@ -245,7 +245,7 @@ Para que una API física (como [Havok](https://www.havok.com/)) proporcione una 
 
 Al realizar raycasts con las superficies espaciales, tenga en cuenta que estas superficies suelen ser complejas y las formas desordenadas tienen pocos detalles, al igual que el escritorio. Esto significa que un único Raycast suele ser insuficiente para proporcionar información suficiente sobre la forma de la superficie y la forma del espacio vacío cerca de ella. Por lo tanto, suele ser una buena idea realizar muchos raycasts dentro de un área pequeña y usar los resultados agregados para obtener un conocimiento más confiable de la superficie. Por ejemplo, si se usa el promedio de 10 raycasts para guiar la colocación de hologramas en una superficie, se producirá un resultado mucho más suave y menos ' de vibración ' que use solo un Raycast.
 
-Sin embargo, tenga en cuenta que cada Raycast puede tener un alto costo computacional. Por lo tanto, según el escenario de uso, debe intercambiar el costo computacional de raycasts adicionales (realizado cada fotograma) con el costo computacional del procesamiento de la [malla](spatial-mapping.md#mesh-processing) para suavizar y quitar los huecos en las superficies espaciales (se realiza cuando está espacial). las mallas se actualizan).
+Sin embargo, tenga en cuenta que cada Raycast puede tener un alto costo computacional. Por lo tanto, según el escenario de uso, debe intercambiar el costo computacional de raycasts adicionales (realizado cada fotograma) con el costo computacional del [procesamiento de malla](spatial-mapping.md#mesh-processing) para suavizar y quitar los huecos en las superficies espaciales (se realizan cuando se actualizan las mallas espaciales).
 
 ## <a name="the-environment-scanning-experience"></a>La experiencia de análisis del entorno
 
@@ -365,11 +365,11 @@ Estos son algunos ejemplos de los diferentes tipos de procesamiento de mallas qu
 * Del mismo modo, aunque los datos sintéticos o grabados pueden ser útiles para la depuración, no se vuelven demasiado a depender de los mismos casos de prueba. Esto puede retrasar la búsqueda de problemas importantes que se habrían detectado con anterioridad.
 * Es una buena idea realizar pruebas con usuarios reales (y idealmente no dirigidos), ya que es posible que no usen HoloLens o su aplicación exactamente del mismo modo que lo hace. De hecho, puede sorprenderle de qué grado de comportamiento, conocimiento y suposiciones de las personas pueden ser divergentes.
 
-## <a name="troubleshooting"></a>de solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 * Para que las mallas de superficie se orienten correctamente, cada GameObject debe estar activo antes de enviarse a SurfaceObserver para que se construya su malla. De lo contrario, las mallas se mostrarán en el espacio, pero girarán en ángulos extraños.
 * El GameObject que ejecuta el script que se comunica con SurfaceObserver debe establecerse en el origen. De lo contrario, todos los GameObjects que cree y envíe a SurfaceObserver para que sus mallas se construyan tendrán un desplazamiento igual al desplazamiento del objeto primario Game. Esto puede hacer que las mallas muestren varios medidores, lo que hace que sea muy difícil depurar lo que está ocurriendo.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Asignación espacial en DirectX](spatial-mapping-in-directx.md)
 * [Asignación espacial en Unity](spatial-mapping-in-unity.md)

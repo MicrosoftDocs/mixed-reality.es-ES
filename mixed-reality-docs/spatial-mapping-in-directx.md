@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, asignación espacial, entorno, interacción, DirectX, winrt, API, código de ejemplo, UWP, SDK, tutorial
 ms.openlocfilehash: 456fcf1c00e23a287a741673e94b3f8d2d2d346c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437447"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375822"
 ---
 # <a name="spatial-mapping-in-directx"></a>Asignación espacial en DirectX
 
@@ -74,7 +74,7 @@ Al desarrollar una aplicación mediante estas API, el flujo del programa básico
   - Desde aquí, la aplicación puede realizar el análisis o el [procesamiento](spatial-mapping.md#mesh-processing) de los datos de la malla y usarlo para la [representación](spatial-mapping.md#rendering) y la raycasting física [y la colisión](spatial-mapping.md#raycasting-and-collision).
   - Un detalle importante a tener en cuenta es que debe aplicar una escala a las posiciones del vértice de la malla (por ejemplo, en el sombreador de vértices que se usa para representar las mallas), para convertirlas desde las unidades de enteros optimizadas en las que se almacenan en el búfer, hasta los medidores. Puede recuperar esta escala llamando a [VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx).
 
-### <a name="troubleshooting"></a>de solución de problemas
+### <a name="troubleshooting"></a>Solucionar problemas
 * No olvide escalar las posiciones de los vértices de malla en el sombreador de vértices mediante la escala devuelta por [SpatialSurfaceMesh. VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)
 
 ## <a name="spatial-mapping-code-sample-walkthrough"></a>Tutorial de ejemplo de código de asignación espacial
@@ -216,7 +216,7 @@ m_surfaceObserver->SetBoundingVolume(
             );
 ```
 
-Si la aplicación tiene que hacer algo diferente cuando los datos de la asignación de superficie no están disponibles, puede escribir código para responder al caso en el que no se **permite** el [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) ; por ejemplo, no se permitirá en equipos con acceso envolvente dispositivos conectados porque estos dispositivos no tienen hardware para la asignación espacial. En el caso de estos dispositivos, debe basarse en la fase espacial para obtener información sobre el entorno del usuario y la configuración del dispositivo.
+Si la aplicación necesita hacer algo diferente cuando los datos de la asignación de superficie no están disponibles, puede escribir código para responder al caso en el que no se **permite** el [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) ; por ejemplo, no se permitirá en equipos con dispositivos envolventes conectados porque estos dispositivos no tienen hardware para la asignación espacial. En el caso de estos dispositivos, debe basarse en la fase espacial para obtener información sobre el entorno del usuario y la configuración del dispositivo.
 
 ### <a name="initialize-and-update-the-surface-mesh-collection"></a>Inicializar y actualizar la colección de mallas de Surface
 
@@ -673,6 +673,6 @@ context->OMSetRenderTargets(1, targets, pCameraResources->GetSurfaceDepthStencil
 m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Creación de un proyecto de DirectX holográfico](creating-a-holographic-directx-project.md)
 * [Windows. Perception. Spatial API](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mirados, entrada
 ms.openlocfilehash: a85797bfb443f33147c116e90a02c88abda63c67
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926570"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375652"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos y controladores de movimiento en Unity
 
@@ -124,7 +124,7 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 </tr><tr>
 <td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> falso</td>
+<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
@@ -525,7 +525,7 @@ Los tutoriales paso a paso, con ejemplos de personalización más detallados, es
 [Entrada MR ![213-controlador de movimiento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
 *Entrada MR 213-controlador de movimiento*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Mirada-cabeza y confirmación](gaze-and-commit.md)
 * [Controladores de movimiento](motion-controllers.md)

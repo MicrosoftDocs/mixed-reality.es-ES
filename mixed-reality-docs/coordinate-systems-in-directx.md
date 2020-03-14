@@ -7,11 +7,11 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Realidad mixta, localizador espacial, marco de referencia espacial, sistema de coordenadas espaciales, fase espacial, código de ejemplo, estabilización de imágenes, delimitador espacial, almacén de delimitador espacial, pérdida de seguimiento, tutorial
 ms.openlocfilehash: a0bce897c1982715af24f0bf7c398cdee10f017f
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436226"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375622"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemas de coordenadas en DirectX
 
@@ -574,7 +574,7 @@ Para la representación, a menudo puede obtener mejores resultados mediante la a
 
 ## <a name="create-holograms-using-a-device-attached-frame-of-reference"></a>Crear hologramas mediante un marco de referencia conectado al dispositivo
 
-Hay ocasiones en las que desea representar un holograma que [permanece adjunto](coordinate-systems.md#attached-frame-of-reference) a la ubicación del dispositivo, por ejemplo un panel con información de depuración o un mensaje informativo cuando el dispositivo solo puede determinar su orientación y no su posición en Espacia. Para ello, usamos un marco de referencia asociado.
+Hay ocasiones en las que desea representar un holograma que [permanece adjunto](coordinate-systems.md#attached-frame-of-reference) a la ubicación del dispositivo, por ejemplo un panel con información de depuración o un mensaje informativo cuando el dispositivo solo puede determinar su orientación y no su posición en el espacio. Para ello, usamos un marco de referencia asociado.
 
 La clase SpatialLocatorAttachedFrameOfReference define los sistemas de coordenadas que son relativos al dispositivo en lugar de al mundo real. Este marco tiene un encabezado fijo en relación con el entorno del usuario que apunta a la dirección a la que estaba situado el usuario cuando se creó el marco de referencia. A partir de entonces, todas las orientaciones de este marco de referencia son relativas a ese título fijo, incluso cuando el usuario gira el dispositivo.
 
@@ -730,7 +730,7 @@ Desde **HolographicTagAlongSampleMain:: Render**:
        );
 ```
 
-Eso es todo. Ahora, el holograma "persecución" es una posición de 2 metros delante de la dirección del usuario.
+Ya está. Ahora, el holograma "persecución" es una posición de 2 metros delante de la dirección del usuario.
 
 >[!NOTE]
 >En este ejemplo también se carga contenido adicional; Consulte StationaryQuadRenderer. cpp.
@@ -794,7 +794,7 @@ Desde **AppMain. cpp:**
 
 Las API de [asignación espacial](spatial-mapping-in-directx.md) hacen uso de los sistemas de coordenadas para obtener las transformaciones del modelo para las mallas de superficie.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Delimitadores espaciales](spatial-anchors.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: hologramas, estabilidad, hololens
 ms.openlocfilehash: ad48d057ee55d4d0d9ae3080d8030a481aef130f
-ms.sourcegitcommit: 5054f5c23965ce56599cb29ac9d9c6e48812dabd
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75623309"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375782"
 ---
 # <a name="hologram-stability"></a>Estabilidad de holograma
 
@@ -91,8 +91,8 @@ Las aplicaciones deben realizar acciones específicas para habilitar los distint
 
 Tipo de estabilización |    Auriculares inmersivo |    Generación 1 de HoloLens | HoloLens 2
 --- | --- | --- | ---
-Reproyección de profundidad |    Recomendaciones |   N/A |   Recomendaciones<br/><br/>Las aplicaciones de Unity deben usar Unity 2018.4.12 o posterior o Unity 2019,3 o posterior. De lo contrario, use la Reproyección plana automática.
-Reproyección plana automática | N/A |   Valor predeterminado recomendado |   Recomendado si la reproyección de profundidad no da los mejores resultados<br/><br/>Se recomienda que las aplicaciones de Unity usen Unity 2018.4.12 o posterior o Unity 2019,3 o posterior.  Las versiones anteriores de Unity funcionarán con resultados de Reproyección ligeramente reducidos.
+Reproyección de profundidad |    Recomendado |   N/D |   Recomendado<br/><br/>Las aplicaciones de Unity deben usar Unity 2018.4.12 o posterior o Unity 2019,3 o posterior. De lo contrario, use la Reproyección plana automática.
+Reproyección plana automática | N/D |   Valor predeterminado recomendado |   Recomendado si la reproyección de profundidad no da los mejores resultados<br/><br/>Se recomienda que las aplicaciones de Unity usen Unity 2018.4.12 o posterior o Unity 2019,3 o posterior.  Las versiones anteriores de Unity funcionarán con resultados de Reproyección ligeramente reducidos.
 Reproyección plana |   No recomendado |   Recomendado si el plano automático no da los mejores resultados |    Use si ninguna de las opciones de profundidad proporciona los resultados deseados.    
 
 ### <a name="verifying-depth-is-set-correctly"></a>La comprobación de profundidad está establecida correctamente
@@ -174,7 +174,7 @@ Aunque es difícil evitar completamente la separación de colores, hay varias t�
 
 Como antes, la representación en 60 FPS y el establecimiento del plano de estabilización son las técnicas más importantes para la estabilidad de los hologramas. En caso de una separación de colores apreciable, asegúrese primero de que la velocidad de fotogramas cumple las expectativas.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
 * [Color, luz y materiales](color,-light-and-materials.md)
 * [Interacciones instintivas](interaction-fundamentals.md)

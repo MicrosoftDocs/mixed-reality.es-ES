@@ -7,11 +7,11 @@ ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, estilo, fuente, tipografía, UI, UX
 ms.openlocfilehash: 9664d355e941d800ac1ac862860fc5889b6b7686
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437405"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375802"
 ---
 # <a name="typography"></a>Tipografía
 
@@ -83,14 +83,14 @@ En el caso de la interacción cercana en 0.45 m (45CM), el ángulo de visualizac
 *contenido en el intervalo de interacción Near y Far*
 
 ### <a name="the-minimum-legible-font-size"></a>El tamaño mínimo de fuente legible
-| Posición | Ángulo de visualización | Alto de texto | Tamaño de fuente * * |
+| Distancia | Ángulo de visualización | Alto de texto | Tamaño de fuente * * |
 |---------|---------|---------|---------|
 | 45CM (distancia de manipulación directa) | 0,4 °-0,5 ° | 3.14:3,9 mm | 8.9:11.13 pt |
 | 2m | 0.35 °-0,4 ° | 12.21 – 13.97 mm | 34.63-39.58 PT |
 
 
 ### <a name="the-comfortably-legible-font-size"></a>Tamaño de fuente cómodamente legible
-| Posición | Ángulo de visualización | Alto de texto | Tamaño de fuente * * |
+| Distancia | Ángulo de visualización | Alto de texto | Tamaño de fuente * * |
 |---------|---------|---------|---------|
 | 45CM (distancia de manipulación directa) | 0,65 °-0,8 ° | 5.1-6.3 mm | 14.47-17.8 pt |
 | 2m | 0,6 °-0,75 ° | 20.9-26.2 mm | 59.4-74.2 PT |
@@ -111,9 +111,9 @@ Segoe UI (la fuente predeterminada para Windows) funciona bien en la mayoría de
 
 :::row:::
     :::column:::
-    ### <a name="segoe-fontshttpsdownloadmicrosoftcomdownload1bc1bcf071a-78ee-4968-acbe-15461c274b61segoe20fonts20v1705zipbr"></a>[Fuentes Segoe](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
+    ### <a name="segoe-fontsbr"></a>[Fuentes Segoe](https://download.microsoft.com/download/1/B/C/1BCF071A-78EE-4968-ACBE-15461C274B61/Segoe%20fonts%20v1705.zip)<br>
     (Archivo zip)<br>
-    ### <a name="hololens-fonthttpsdownloadmicrosoftcomdownload38d38d659e2-4b9c-413a-b2e7-1956181dc427hololens20fontzipbr"></a>[Fuente de HoloLens](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
+    ### <a name="hololens-fontbr"></a>[Fuente de HoloLens](https://download.microsoft.com/download/3/8/D/38D659E2-4B9C-413A-B2E7-1956181DC427/Hololens%20font.zip)<br>
     (Archivo zip)<br>
     <br>
     *Imagen: la fuente HoloLens proporciona los glifos de símbolos usados en Windows Mixed Reality.*
@@ -129,6 +129,6 @@ Segoe UI (la fuente predeterminada para Windows) funciona bien en la mayoría de
 ---
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Texto en Unity](text-in-unity.md)
 * [Color, luz y materiales](color,-light-and-materials.md)

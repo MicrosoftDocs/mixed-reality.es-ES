@@ -7,15 +7,15 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, representación holográfica, Holographic, envolvente, punto de enfoque, búfer de profundidad, solo orientación, posicional, opaco, transparente, clip
 ms.openlocfilehash: 1a2e66d5c028109a58ea8682668521f50158add9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436959"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375592"
 ---
 # <a name="camera-in-unity"></a>Cámara en Unity
 
-Cuando se gasta un auricular de realidad mixta, se convierte en el centro del mundo holográfica. El componente de [cámara](https://docs.unity3d.com/Manual/class-Camera.html) Unity controlará automáticamente la representación de Stereoscopic y seguirá el movimiento y la rotación del cabezal cuando el proyecto tenga seleccionada la opción "realidad virtual" con "Windows Mixed Reality" como dispositivo (en la otra configuración sección de la configuración del reproductor de la tienda Windows). Esto puede aparecer como "Windows Holographic" en versiones anteriores de Unity.
+Cuando se gasta un auricular de realidad mixta, se convierte en el centro del mundo holográfica. El componente de [cámara](https://docs.unity3d.com/Manual/class-Camera.html) Unity controlará automáticamente la representación de Stereoscopic y seguirá el movimiento y la rotación del cabezal cuando el proyecto tenga seleccionada la opción "realidad virtual" con "Windows Mixed Reality" como dispositivo (en la sección otras opciones de configuración del reproductor de la tienda Windows). Esto puede aparecer como "Windows Holographic" en versiones anteriores de Unity.
 
 Sin embargo, para optimizar completamente la calidad visual y la [estabilidad del holograma](hologram-stability.md), debe establecer la configuración de la cámara que se describe a continuación.
 
@@ -76,7 +76,7 @@ De forma predeterminada:
 * Los **auriculares envolventes** realizarán una Reproyección posicional, ajustando los hologramas para una predicción inesperada en la posición y la orientación, si la aplicación proporciona un búfer de profundidad para un fotograma determinado.  Si no se proporciona un búfer de profundidad, el sistema solo corregirá errores de predicciones en la orientación.
 * Los **auriculares holográficas** como HoloLens realizarán una Reproyección posicional tanto si la aplicación proporciona su búfer de profundidad como si no.  La Reproyección posicional es posible sin búferes de profundidad en HoloLens, ya que la representación suele ser dispersa con un fondo estable proporcionado por el mundo real.
 
-Si sabe que está creando una [experiencia de solo orientación](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) con contenido rígidomente bloqueado por el cuerpo (por ejemplo, contenido de vídeo de 360 grados), puede establecer explícitamente el modo de Reproyección para que sea Orientation solo [estableciendo HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) a [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
+Si sabe que está creando una [experiencia de solo orientación](coordinate-systems-in-unity.md#building-an-orientation-only-or-seated-scale-experience) con contenido rígidomente bloqueado por el cuerpo (por ejemplo, contenido de vídeo de 360 grados), puede establecer explícitamente el modo de Reproyección para que sea Orientation solo estableciendo [HolographicSettings. ReprojectionMode](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.ReprojectionMode.html) en [HolographicReprojectionMode. OrientationOnly](https://docs.unity3d.com/ScriptReference/XR.WSA.HolographicSettings.HolographicReprojectionMode.html).
 
 ## <a name="sharing-your-depth-buffers-with-windows"></a>Uso compartido de los búferes de profundidad con Windows
 
@@ -93,7 +93,7 @@ Para establecer si la aplicación de Unity proporcionará un búfer de profundid
 
 Proporcionar un búfer de profundidad a Windows puede mejorar la calidad visual, siempre y cuando Windows pueda asignar con precisión los valores normalizados de profundidad por píxel en el búfer de profundidad a distancias en metros, con los planos cercanos y lejanos que haya establecido en Unity en la cámara principal.  Si las pasadas de representación controlan los valores de profundidad de maneras típicas, generalmente debería estar bien aquí, aunque las pasadas de representación translúcidas que escriben en el búfer de profundidad mientras se muestran a los píxeles de color existentes pueden confundir la Reproyección.  Si sabe que las fases de representación van a dejar muchos de los píxeles de profundidad finales con valores de profundidad inexactos, es probable que obtenga una mejor calidad visual si desactiva "habilitar el uso compartido del búfer de profundidad".
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Estabilidad de hologramas](hologram-stability.md)
 * [Cámara principal de MixedRealityToolkit. recurso prefabricado](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Input/Prefabs)

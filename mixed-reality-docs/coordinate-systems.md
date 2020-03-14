@@ -7,15 +7,15 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escalado colocado, escalado permanente, escalado de habitación, escala mundial, grado de 360, colocado, permanente, de habitación, mundo, escala, posición, orientación, estacionaria, conectado, fase, delimitador, delimitador espacial, bloque mundial, bloqueo mundial, bloqueo de cuerpo, bloqueo de cuerpo, límites, persistencia, uso compartido, pérdida de seguimiento, delimitador espacial en la nube
 ms.openlocfilehash: 228f46f1962c39012571234da47ccec07aa67118
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436148"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375642"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
-En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](hologram.md) en su mundo que buscan y suenan como objetos reales. Esto implica el posicionamiento y la orientación precisos de esos hologramas en lugares del mundo que son significativos para el usuario, tanto si el mundo es su habitación física como si es un dominio virtual que ha creado. Cuando se establece la razón de la posición y la orientación de los hologramas, o de cualquier otra geometría como [el rayo o](gaze-and-commit.md) las posiciones de la [mano](hands-and-tools.md), Windows proporciona varios sistemas de coordenadas del mundo real en los que se puede expresar la geometría, conocida como  **sistemas de coordenadas espaciales**.
+En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](hologram.md) en su mundo que buscan y suenan como objetos reales. Esto implica el posicionamiento y la orientación precisos de esos hologramas en lugares del mundo que son significativos para el usuario, tanto si el mundo es su habitación física como si es un dominio virtual que ha creado. Cuando se trata sobre la posición y la orientación de los hologramas, o de cualquier otra geometría como [el rayo o](gaze-and-commit.md) las [posiciones de mano](hands-and-tools.md), Windows proporciona varios sistemas de coordenadas del mundo real en los que se puede expresar la geometría, conocido como **sistemas de coordenadas espaciales**.
 
 <br>
 
@@ -227,7 +227,7 @@ A veces, al empezar a usar un casco en un entorno que ha sufrido muchos cambios 
 
 A veces, un hogar u otro espacio puede tener dos áreas idénticas. Por ejemplo, dos salones de conferencia idénticos, dos áreas de esquina idénticas, dos pósteres idénticos de gran tamaño que cubren el campo de vista del dispositivo. En estos escenarios, el dispositivo puede, en ocasiones, confundirse entre las partes idénticas y marcarlas como las mismas en su representación interna. Esto puede hacer que los hologramas de algunas áreas aparezcan en otras ubicaciones. Es posible que el dispositivo empiece a perder el seguimiento con frecuencia, ya que la representación interna del entorno está dañada. En este caso, se recomienda restablecer el conocimiento medioambiental del sistema. Tenga en cuenta que al restablecer el mapa, se pierden todas las ubicaciones de anclaje espacial. Esto hará que los auriculares realicen el seguimiento bien en las áreas únicas del entorno. Sin embargo, el problema puede volver a producirse si el dispositivo se vuelve a confundir entre las mismas áreas.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Presentación de GDC 2017 en sistemas de coordenadas espaciales y representación holográfica](https://channel9.msdn.com/events/GDC/GDC-2017/GDC2017-008)
 * [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)
 * [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)

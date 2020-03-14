@@ -1,25 +1,25 @@
 ---
 title: 'Caso práctico: el logro de más informática personal'
-description: Hoy en día, las oportunidades de mañana están descubiertas al compilar productos. Las soluciones que estos productos proporcionan muestran lo que es necesario para avanzar en el futuro.
+description: Las oportunidades del futuro se desvelan con los productos que creamos hoy. Las soluciones que estos productos proporcionan revelan qué necesitamos para avanzar en el futuro.
 author: danielescudero
 ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, caso práctico, visión, escenarios
 ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
-ms.sourcegitcommit: c4d0132ea755c861c504dad46957e791b9c705d5
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896522"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375612"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Caso práctico: el logro de más informática personal
 
-Hoy en día, las oportunidades de mañana están descubiertas al compilar productos. Las soluciones que estos productos proporcionan muestran lo que es necesario para avanzar en el futuro. Con la realidad mixta esto es especialmente cierto: La información significativa proviene de empezar a trabajar con el trabajo real: dispositivos reales, clientes reales, problemas reales.
+Las oportunidades del futuro se desvelan con los productos que creamos hoy. Las soluciones que estos productos proporcionan revelan qué necesitamos para avanzar en el futuro. Con la realidad mixta esto es especialmente cierto: la información significativa proviene de empezar a trabajar con el trabajo real: dispositivos reales, clientes reales, problemas reales.
 
 En Microsoft, soy parte del equipo de diseño que ayuda a los asociados empresariales a crear experiencias para su negocio con Windows Mixed Reality. En el último año, nuestro equipo se ha centrado en HoloLens y comprende cómo el dispositivo Holographic insignia de Microsoft puede ofrecer valor a los clientes hoy en día. En estrecha colaboración con diseñadores y desarrolladores de estas empresas, nuestro equipo se centra en descubrir soluciones que podrían ser técnicamente inviables, financieramente poco prácticas o imposibles sin HoloLens.
 
-![Universidad oeste reservada](images/case-western-reserve-university.jpg)<br>
+![la Universidad de reserva occidental del caso oeste](images/case-western-reserve-university.jpg)<br>
 *HoloAnatomy del caso de la Universidad de reserva occidental*
 
 La creación de estas soluciones ayuda a los equipos internos de Microsoft a prepararse para la próxima generación de informática. Aprendiendo cómo interactúan las personas y las empresas con tecnologías básicas como la realidad mixta, voz e AI, ayuda a Microsoft a crear mejores dispositivos, plataformas y herramientas para desarrolladores. Si es un diseñador o un desarrollador que está explorando este espacio, comprender lo que nuestros equipos están aprendiendo de los asociados hoy en día es fundamental prepararse para las oportunidades de realidad mixta de mañana.
@@ -39,7 +39,7 @@ Vivimos nuestras vidas entre dos mundos: el físico y el digital. Ambos tienen f
 
 El espectro de la realidad mixta se ha ampliado a medida que los desarrolladores han empezado a explorar las oportunidades de inmersión y presencia. Incorporar a los usuarios en el mundo digital con experiencias envolventes (realidad virtual) y crear objetos digitales en el mundo físico con experiencias holográficas (realidad aumentada). Pero ¿cuáles son las ventajas de asignar el mundo físico al mundo digital? ¿Qué ocurre cuando se les da a los equipos que ven?
 
-La tecnología de visión de cámara fundamental detrás de los hologramas actúa como un par de ojos para que el equipo vea el entorno en su torno: Los objetos del mundo, las personas que lo rodean, cambian a medida que se producen. Una descripción digital del contexto en el mundo físico. Esto conduce a una enorme cantidad de información, las implicaciones en las que solo estamos empezando a entender.
+La tecnología de visión de cámara fundamental detrás de los hologramas actúa como un par de ojos del equipo para ver el entorno en su torno: objetos del mundo, personas que le rodean, cambios a medida que se producen. Una descripción digital del contexto en el mundo físico. Esto conduce a una enorme cantidad de información, las implicaciones en las que solo estamos empezando a entender.
 
 ### <a name="culminating-core-technologies"></a>Culminando tecnologías básicas
 
@@ -53,11 +53,11 @@ Mixed reality proporciona un medio para combinar estas tecnologías en una exper
 
 ### <a name="less-interface-in-your-face"></a>Menos interfaz en su superficie
 
-Un dispositivo culminante que conecta el mundo físico al mundo digital nos permite diseñar experiencias más naturales, sin complicadas abstracciones. Tenga en cuenta las experiencias que ha creado: Cuando se quitan las barreras de la abstracción, ¿qué parte de la interfaz queda? ¿Qué partes del flujo de la aplicación cambian cuando conoce el usuario y su contexto? ¿Cuántos menús y botones quedan?
+Un dispositivo culminante que conecta el mundo físico al mundo digital nos permite diseñar experiencias más naturales, sin complicadas abstracciones. Tenga en cuenta las experiencias que ha creado: cuando se quitan las barreras de la abstracción, ¿qué parte de la interfaz queda? ¿Qué partes del flujo de la aplicación cambian cuando conoce el usuario y su contexto? ¿Cuántos menús y botones quedan?
 
 Por ejemplo, piense en experiencias compartidas en realidad mixta como el laboratorio de propulsión de jet de la herramienta de vista de la NASA para científicos. En lugar de compilar un sistema para ver los datos de Martian (resumir los datos en pantallas o pantallas), han introducido científicos dentro de los datos y los colocan de forma eficaz en la superficie de Mars a medida que colaboran.
 
-![La vista de la NASA](images/nasa-onsight.jpg)<br>
+![la vista de la NASA](images/nasa-onsight.jpg)<br>
 *NASA/propulsión vista*
 
 En lugar de buscar el botón para atraer la atención a algunos Martian geología, los científicos pueden apuntar directamente a él. No hay ningún menú, ningún bolígrafo ni curva de aprendizaje para usar la herramienta de forma eficaz. Mediante el aprovechamiento de las capacidades conocidas del mundo físico, las interacciones más naturales en la realidad mixta pueden eludir la visión técnica profunda en incluso en las herramientas del sector más avanzadas.
@@ -76,7 +76,7 @@ Windows Mixed Reality es un esfuerzo por crear una plataforma para un ecosistema
 
 ## <a name="designing-for-tomorrows-experiences-today"></a>Diseño para las experiencias de mañana hoy
 
-![Diseño para las experiencias de mañana hoy](images/designing-for-tomorrows-experiences-today-450px.jpg) 
+![el diseño de las experiencias de mañana](images/designing-for-tomorrows-experiences-today-450px.jpg) 
 <br>
 Cada una de las tecnologías principales detrás de esta nueva clase de experiencias consiste en permitir a los diseñadores y desarrolladores crear experiencias atractivas y eficaces hoy en día. Mediante la reducción de la abstracción, podemos interactuar más directamente con el mundo digital, lo que nos permite diseñar de maneras que aumenten y amplíen las capacidades humanas. La tecnología de voz (a través de bots y asistentes digitales como Cortana) permite a los usuarios llevar a cabo conversaciones y escenarios cada vez más complejos, mientras que la tecnología de AI (a través de herramientas como Microsoft Cognitive Services) está provocando que las empresas reconsideren el modo en que los usuarios interactuará con todo de los medios sociales para proporcionar administración de la cadena de suministro.
 
@@ -86,7 +86,7 @@ Estos tipos de interacciones se basarán en una nueva clase de herramientas de d
 
 El año pasado de las asociaciones para desarrolladores tiene áreas de oportunidad descubiertas que se revelan con los clientes y crean soluciones empresariales correctas. Desde científicos y técnicos hasta diseñadores y clientes, surgieron cinco áreas de oportunidad en las que los asociados de Microsoft encuentran valor con realidad mixta. Estas áreas ya proporcionan una visión general de las necesidades futuras de plataformas como Windows Mixed Reality y pueden ayudarle a entender cómo estas nuevas experiencias afectarán a las maneras en las que aprendemos, colaboran, comunicamos y creamos.
 
-### <a name="1-creation-and-design"></a>1. Creación y diseño
+### <a name="1-creation-and-design"></a>1. creación y diseño
 
 Una de las principales oportunidades de la realidad mixta es la posibilidad de ver y manipular diseños 3D en tiempo real, en una configuración real, en un tamaño y escala verdaderos. Las herramientas de diseño y de prototipos han escapar los límites de las pantallas, por lo que se suele reservar para materiales tangibles y físicos, como madera y arcilla.
 
@@ -98,7 +98,7 @@ Una de las principales oportunidades de la realidad mixta es la posibilidad de v
 
 Experiencias como esta resaltan la necesidad de experiencias de colaboración principales, la capacidad de los usuarios de ver y comunicarse con objetos compartidos. El objetivo de Autodesk es ampliar el producto de diseño profesional e ingenieros a artistas digitales, estudiantes y aficionados. A medida que se reduce el nivel de conocimientos 3D de los usuarios, la capacidad de interactuar con los objetos de forma natural resulta fundamental.
 
-### <a name="2-assembly-and-manufacturing"></a>2. Ensamblado y fabricación
+### <a name="2-assembly-and-manufacturing"></a>2. ensamblado y fabricación
 
 Desde la creciente cantidad de especialización en plantas de fábrica hasta los avances rápidos de la administración de la cadena de suministro, el acceso sin problemas a la información relevante es fundamental. La realidad mixta ofrece la capacidad de sintetizar conjuntos de datos extensos y proporcionar pantallas visuales que ayudan en áreas como la navegación y las operaciones. A menudo, estos son campos muy técnicos y de nicho en los que la integración con servicios y conjuntos de aplicaciones personalizados es fundamental para reducir la complejidad y proporcionar una experiencia correcta.
 
@@ -110,7 +110,7 @@ El fabricante del ascensor [ThyssenKrupp](https://www.youtube.com/watch?v=8OWhGi
 
 ThyssenKrupp destaca aquí un concepto eficaz que se puede entregar rápidamente a los usuarios para que la información importante, relevante contextualmente. A medida que nos desplazamos a una nueva clase de experiencias, las grandes cantidades de información posible para el contenido que es relevante para el usuario serán clave.
 
-### <a name="3-training-and-development"></a>3. Entrenamiento y desarrollo
+### <a name="3-training-and-development"></a>3. entrenamiento y desarrollo
 
 La representación de objetos e información en tres dimensiones ofrece nuevas maneras de explicar escenarios visualmente y con comprensión espacial. El entrenamiento se convierte en un área clave de oportunidad, aprovechando la capacidad de representar digitalmente objetos grandes y complejos (como motores jet) para crear simulaciones de entrenamiento para una fracción del costo de una solución física.
 
@@ -122,7 +122,7 @@ La representación de objetos e información en tres dimensiones ofrece nuevas m
 
 El entrenamiento con componentes virtuales (y la reducción de la necesidad de simuladores de entrenamiento físicos costosos) es una manera clave de ofrecer valor en escenarios empresariales hoy en día. Como se expande en este escenario (como hemos visto en áreas como medicamentos), Computer Vision es especialmente importante para reconocer objetos únicos en el entorno, comprender el contexto del usuario y ofrecer instrucciones pertinentes.
 
-### <a name="4-communication-and-understanding"></a>4. Comunicación y comprensión
+### <a name="4-communication-and-understanding"></a>4. comunicación y comprensión
 
 Las interacciones entre dos personas (tanto si los participantes están en dispositivos de realidad mixta como si están en un equipo o teléfono tradicional) pueden proporcionar una sensación de inmersión dentro de un nuevo entorno o una sensación de presencia cuando se comunican prácticamente con otros. En escenarios empresariales, este sentido de presencia es una ventaja para los equipos móviles, lo que ayuda a aumentar la comprensión de los proyectos y a reducir la necesidad de viajar.
 
@@ -134,7 +134,7 @@ El fabricante de la tecnología comercial [Trimble](https://www.youtube.com/watc
 
 Las experiencias compartidas son un área importante de inversión para Microsoft, con aplicaciones como Skype que exploran nuevas formas de representar a los seres humanos en el espacio digital. Los equipos están explorando grabaciones de vídeo volumétricas, avatares y recreaciones del espacio físico de un participante.
 
-### <a name="5-entertainment-and-engagement"></a>5. Entretenimiento y Engagement
+### <a name="5-entertainment-and-engagement"></a>5. entretenimiento y participación
 
 La naturaleza de la inmersión en la realidad mixta puede tener un gran impacto en la forma en que los clientes interactúan con el entretenimiento y el marketing. Los artistas y los estudios de entretenimiento han explorado la realidad mixta como un medio atractivo para contar historias, mientras que las empresas están explorando las implicaciones de la comercialización de la marca. Desde las demostraciones de productos de las salas de exposición privadas a las piezas de la visión indicadas en Trade Expos, el contenido se puede entregar de maneras más envolventes y personalizadas.
 
@@ -155,7 +155,7 @@ Es difícil decir cuál será el futuro de la realidad mixta en lo que se refier
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60" padding-left="0px"><img alt="Picture of Mark Vitazko" width="60" height="60" src="images/mark-vitazko.jpg"></td>
-<td style="border-style: none"><b>Marcar Vitazko</b><br>Diseñador de la experiencia del usuario@Microsoft</td>
+<td style="border-style: none"><b>Marcar Vitazko</b><br>@Microsoft del diseñador de la experiencia del usuario</td>
 </tr>
 </table>
  

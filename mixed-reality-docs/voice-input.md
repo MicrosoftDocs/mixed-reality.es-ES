@@ -7,11 +7,11 @@ ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada
 ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723194"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375992"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -42,7 +42,7 @@ Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -57,7 +57,7 @@ Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer
 
 ## <a name="the-select-command"></a>Comando "seleccionar"
 
-**HoloLens (1ª generación)**
+**HoloLens (1ª generación)**
 
 Incluso sin agregar específicamente compatibilidad con voz a su aplicación, los usuarios pueden activar los hologramas simplemente diciendo el comando de voz del sistema "Select". Esto se comporta igual que una [pulsación aérea](gaze-and-commit.md#composite-gestures) en HoloLens, presionando el botón seleccionar en el [clic de hololens](hardware-accessories.md#hololens-clicker)o presionando el desencadenador en un controlador de [movimiento de Windows Mixed Reality](motion-controllers.md). Oirá un sonido y verá que aparece una información sobre herramientas con "seleccionar" como confirmación. "Select" está habilitado por un algoritmo de detección de palabras clave de baja energía, por lo que siempre está disponible para que lo indique en cualquier momento con un impacto mínimo en la duración de la batería, incluso con sus manos en el lateral.
 
@@ -121,7 +121,7 @@ También puede decir "Hola Cortana" para abrir Cortana en cualquier momento. No 
         *Imagen: un usuario puede decir el comando "ajustar" que ve en la barra de la aplicación para ajustar la posición de la aplicación*
     :::column-end:::
         :::column:::
-        ![space](images/spacer-20x582.png)<br>
+        espacio ![](images/spacer-20x582.png)<br>
         ![al mirar una ventana de la aplicación o un holograma, un usuario puede decir el comando "ajustar" que aparecen en la barra de la aplicación para ajustar la posición de la aplicación en el mundo](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
@@ -282,11 +282,11 @@ En el caso de las aplicaciones que desean aprovechar las opciones de procesamien
 
 Todo este procesamiento de audio se acelera en hardware, lo que significa que las características agotan una gran cantidad de energía que si se realizara el mismo procesamiento en la CPU de HoloLens. Evite ejecutar otro procesamiento de entrada de audio en la CPU para maximizar la duración de la batería del sistema y aprovechar el procesamiento de entrada de audio descargado integrado.
 
-## <a name="languages"></a>Idiomas
+## <a name="languages"></a>Lenguajes
 
 HoloLens 2 también admite idiomas adicionales. Tenga en cuenta que los comandos de voz siempre se ejecutarán en el idioma para mostrar del sistema aunque se instalen varios teclados o cuando las aplicaciones intenten crear un reconocedor de voz en otro idioma.
 
-## <a name="troubleshooting"></a>de solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 Si tiene algún problema con "Select" y "Hola Cortana", intente cambiar a un espacio más silencioso, desplazarse fuera del origen del ruido o hablar de más alto. En este momento, todo el reconocimiento de voz en HoloLens se ajusta y optimiza específicamente a los hablantes nativos de Estados Unidos inglés.
 
@@ -304,7 +304,7 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede a
 
 ---
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Entrada MR 212: voz](holograms-212.md)

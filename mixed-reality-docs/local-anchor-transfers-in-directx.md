@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, sincronizar, delimitador espacial, transferencia, multijugador, vista, escenario, tutorial, código de ejemplo, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
 ms.openlocfilehash: f961862c3c49872484683e264fb9c62b5d0b60ee
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437957"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376032"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferencias de delimitadores locales en DirectX
 
@@ -284,7 +284,7 @@ El BLOB contiene una representación del entorno en las proximidades de SpatialA
 
 ### <a name="export-of-multiple-spatialanchors"></a>Exportación de varios SpatialAnchors
 
-Al igual que la exportación de un único SpatialAnchor, el BLOB contiene una representación del entorno en las proximidades de todo el SpatialAnchors especificado. Además, el BLOB contiene información sobre las conexiones entre el SpatialAnchors incluido, si se encuentran en el mismo espacio físico. Esto significa que, si se importan dos SpatialAnchors cercanos, se puede localizar un holograma asociado al *segundo* SpatialAnchor aunque el dispositivo solo reconozca el entorno en torno a la *primera* SpatialAnchor, ya que hay suficientes datos para la transformación de proceso entre los dos SpatialAnchors se incluyó en el BLOB. Si los dos SpatialAnchors se exportaron individualmente (dos llamadas independientes a TryExportSpatialAnchors), es posible que no haya suficientes datos incluidos en el BLOB para los hologramas adjuntos al segundo SpatialAnchor que se puedan localizar cuando se encuentre el primero.
+Al igual que la exportación de un único SpatialAnchor, el BLOB contiene una representación del entorno en las proximidades de todo el SpatialAnchors especificado. Además, el BLOB contiene información sobre las conexiones entre el SpatialAnchors incluido, si se encuentran en el mismo espacio físico. Esto significa que, si se importan dos SpatialAnchors cercanos, se puede localizar un holograma asociado al *segundo* SpatialAnchor aunque el dispositivo solo reconozca el entorno en torno a la *primera* SpatialAnchor, ya que los datos necesarios para calcular la transformación entre los dos SpatialAnchors se incluyeron en el BLOB. Si los dos SpatialAnchors se exportaron individualmente (dos llamadas independientes a TryExportSpatialAnchors), es posible que no haya suficientes datos incluidos en el BLOB para los hologramas adjuntos al segundo SpatialAnchor que se puedan localizar cuando se encuentre el primero.
 
 ![Varios delimitadores exportados mediante una única llamada a TryExportAnchorsAsync](images/multipleanchors.png) ![Varios delimitadores exportados mediante una llamada TryExportAnchorsAsync independiente para cada delimitador](images/separateanchors.png)
 
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-Eso es todo. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
+Ya está. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Biblioteca de patrones de procesamiento paralelo (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

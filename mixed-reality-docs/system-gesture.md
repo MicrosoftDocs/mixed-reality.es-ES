@@ -7,11 +7,11 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño
 ms.openlocfilehash: 9cfee1104cb9b8135dae51bea73850062fadd25c
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182005"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375912"
 ---
 # <a name="system-gesture"></a>Gestos del sistema
 
@@ -27,13 +27,13 @@ El gesto del sistema es un gesto de mano que se usa para invocar el menú Inicio
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
-        <td>Eclosión</td>
+        <td>Flores</td>
         <td>✔️</td>
         <td>❌</td>
         <td>❌</td>
@@ -52,7 +52,7 @@ El gesto del sistema es un gesto de mano que se usa para invocar el menú Inicio
     </tr>
 </table>
 
-## <a name="bloom"></a>Eclosión
+## <a name="bloom"></a>Flores
 Para abrir el menú Inicio en HoloLens (1ª generación), hemos diseñado "floración", que es un gesto simbólico que imita el Blossom de la flor. Es distintivo para la interacción con Surefooted, fácil de realizar y rápida recuperación. Para llevar a cabo el gesto de floración en HoloLens (1ª generación), mantenga su mano con su mano y cerca de la mano y, a continuación, abra la mano mediante la distribución de los dedos.
 
 :::row:::
@@ -113,7 +113,7 @@ También puede realizar el gesto de inicio con una sola mano. Para ello, manteng
 
 ---
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Control con los ojos](eye-tracking.md)

@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, so, plataforma, acantilado House, casa, Inicio, entorno, Inicio, menú Inicio, menú Inicio, PIN, aplicación, iniciar aplicaciones, colocar aplicaciones, teletransportar, trasladar, navegar
 ms.openlocfilehash: 9de4cb44505d6cf4d0d3e4bd0fd9c5ee681063a5
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438152"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375902"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Navegar por la Página principal de Windows Mixed Reality
 
@@ -134,7 +134,7 @@ Windows Mixed Reality tiene varias aplicaciones integradas, como:
 * **Escritorio** (auriculares envolventes) para ver el monitor de escritorio en un casco envolvente
 * **Explorador de archivos** Acceder a archivos y carpetas ubicados en el dispositivo
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Vistas de aplicación](app-views.md)
 * [Controladores de movimiento](motion-controllers.md)
 * [Accesorios de hardware](hardware-accessories.md)

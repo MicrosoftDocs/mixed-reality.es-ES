@@ -10,8 +10,8 @@ ms.openlocfilehash: 62f54dbcf5327cdd5f13622704684a2cb0606d7d
 ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092307"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375662"
 ---
 # <a name="holographic-remoting-version-history"></a>Historial de versiones de Holographic Remoting
 
@@ -61,7 +61,7 @@ ms.locfileid: "79092307"
 
 * Primera versión pública de Holographic Remoting para HoloLens 2.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)
 * [Escritura de una aplicación de host de Holographic Remoting](holographic-remoting-create-host.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)

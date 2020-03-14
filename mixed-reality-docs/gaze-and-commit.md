@@ -7,11 +7,11 @@ ms.date: 10/31/2019
 ms.topic: article
 keywords: Realidad mixta, premiración, destino, interacción, diseño, seguimiento ocular, seguimiento del cabezal
 ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441127"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375852"
 ---
 # <a name="gaze-and-commit"></a>Miras y confirmaciones
 
@@ -50,7 +50,7 @@ A continuación se muestran algunos ejemplos de cómo puede beneficiarse de un d
     </tr>
      <tr>
         <td>Mirada con la cabeza y confirmación</td>
-        <td>✔️ Se recomienda</td>
+        <td>✔️ Recomendado</td>
         <td>✔️ Recomendado (tercera opción: <a href="interaction-fundamentals.md">Ver las demás opciones</a>)</td>
         <td>➕ Opción alternativa</td>
     </tr>
@@ -290,13 +290,13 @@ Hay tres cosas que hay que tener en cuenta:
 
 
 
-## <a name="see-also"></a>Consulta también
-* [Interacción basada en ojos](eye-gaze-interaction.md)
-* [Seguimiento ocular en HoloLens 2](eye-tracking.md)
+## <a name="see-also"></a>Vea también
+* [Interacción basada en los ojos](eye-gaze-interaction.md)
+* [Seguimiento de los ojos en HoloLens 2](eye-tracking.md)
 * [Mirada y permanencia](gaze-and-dwell.md)
-* [Manipulación práctica directa](direct-manipulation.md)
-* [Gestos prácticos](gaze-and-commit.md#composite-gestures)
-* [Manos y confirmación](point-and-commit.md)
+* [Manos: manipulación directa](direct-manipulation.md)
+* [Manos: gestos](gaze-and-commit.md#composite-gestures)
+* [Manos: apuntar y confirmar](point-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Entrada de voz](voice-input.md)
 

@@ -7,14 +7,14 @@ ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, inmersivo, VR, Mr, introducción, holograma, Academia, tutorial
 ms.openlocfilehash: 0600383b3cca3f580f014597217afc6ae78836dd
-ms.sourcegitcommit: 2cf3f19146d6a7ba71bbc4697a59064b4822b539
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926640"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375602"
 ---
 >[!NOTE]
->Los tutoriales de la Academia de realidad mixta se han diseñado con HoloLens (1º generación) y con auriculares de realidad mixta en mente.  Como tal, creemos que es importante dejar estos tutoriales en vigor para los desarrolladores que sigan buscando instrucciones para el desarrollo de esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para seguir trabajando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
+>Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
 
 <br>
 
@@ -26,7 +26,7 @@ Este tutorial le guiará a través de la creación de una aplicación básica de
 
 <table>
 <tr>
-<th>Recurso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Sr Basics 100: Introducción a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -81,7 +81,7 @@ En tercer lugar, permítanos considerar el plano de recorte cercano en Unity y e
 
 **En el caso de las aplicaciones de hololens**, el plano de recorte cercano se puede establecer en los contadores de 0,85 [recomendados de hololens](camera-in-unity.md#clip-planes) .
 
-1. Con la **cámara principal** aún seleccionada en el panel **jerarquía** , busque el componente **cámara** en el panel **Inspector** y cambie el campo **Near Clip plano** del valor predeterminado **0,3** a HoloLens recomendado **0,85** .
+1. Con la **cámara principal** aún seleccionada en el **Panel jerarquía** , busque el componente **cámara** en el panel **Inspector** y cambie el campo **Near Clip plano** del valor predeterminado **0,3** a HoloLens recomendado **0,85**.
 
 **En el caso de las aplicaciones de realidad mixta destinadas a auriculares envolventes**, podemos usar la configuración predeterminada que proporciona Unity.
 
@@ -164,7 +164,7 @@ Ahora que hemos creado el cubo, es el momento de realizar una comprobación ráp
 2. Abra **Window > XR > la emulación holográfica**.
 3. Cambiar el **modo de emulación** de **ninguno** a **remoto a dispositivo**.
 4. En **equipo remoto**, escriba la dirección IP de su HoloLens indicada anteriormente.
-5. Haz clic en **Connect**.
+5. Haga clic en **Conectar**.
 6. Asegúrese de que el estado de la **conexión** cambia a verde **conectado**.
 7. Ahora puede hacer clic en **reproducir** en el editor de Unity.
 
@@ -194,7 +194,7 @@ Ahora estamos listos para compilar el proyecto en Visual Studio e implementarlo 
 6.  El **tipo de compilación de UWP** debe ser **D3D**.
 7.  El **SDK de UWP** podría dejarse en la **versión más reciente instalada**.
 8.  Compruebe **los C# proyectos de Unity** en depuración.
-9.  Haz clic en **Compilación**.
+9.  Haga clic en **Generar**.
 10. En el explorador de archivos, haga clic en **nueva carpeta** y asigne el nombre **"app"** a la carpeta.
 11. Con la carpeta de **aplicaciones** seleccionada, haga clic en el botón **Seleccionar carpeta** .
 12. Cuando Unity termine de compilar, aparecerá una ventana del explorador de archivos de Windows.
@@ -234,7 +234,7 @@ Asegúrese de que el dispositivo está conectado a través del cable USB.
 
 Ahora que la aplicación está implementada, intente mover todo el cubo y observe que permanece en todo el mundo.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
 * [Procedimientos recomendados para trabajar con Unity y Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)

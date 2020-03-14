@@ -7,11 +7,11 @@ ms.date: 03/21/2018
 ms.topic: article
 keywords: mixed reality, Holographic, ar, VR, Mr, XR, realidad aumentada, realidad virtual, explicación
 ms.openlocfilehash: e3205590ce46e0fc9113421e0dbaeb87fe6bc0c2
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334023"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376042"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es la realidad mixta?
 
@@ -89,7 +89,7 @@ Hay dos tipos principales de dispositivos que proporcionan experiencias de Windo
 </tr><tr>
 <td><strong>Dispositivo de ejemplo</strong></td><td> Microsoft HoloLens<br><br> <img alt="Microsoft HoloLens 2 image" width="300" height="169" src="images/HoloLens2.jpg" /></td><td> Samsung HMD Odyssey +<br><br> <img alt="Samsung HMD Odyssey+ image" width="300" height="169" src="images/Samsung-HMD-Odyssey.jpg" /></td>
 </tr><tr>
-<td><strong>Mostrar</strong></td><td> Ver: visualización. Permite al usuario ver el entorno físico mientras tiene los auriculares.</td><td> Presentación opaca. Bloquea el entorno físico mientras se contiene el casco.</td>
+<td><strong>Muestra</strong></td><td> Ver: visualización. Permite al usuario ver el entorno físico mientras tiene los auriculares.</td><td> Presentación opaca. Bloquea el entorno físico mientras se contiene el casco.</td>
 </tr><tr>
 <td><strong>Marcha</strong></td><td> Movimiento de seis grados de libertad completo, rotación y traslación.</td><td> Movimiento de seis grados de libertad completo, rotación y traslación.</td>
 </tr>
@@ -113,7 +113,7 @@ A menudo, es mejor pensar en qué tipo de experiencia desea crear una aplicació
 * **Hacia la derecha (casi digital reality).** Los usuarios experimentan un entorno completamente digital y no saben lo que ocurre en el entorno físico.
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [¿Qué es un holograma?](hologram.md)
 * [Descripción de los conceptos básicos de la realidad mixta](index.md#understand-the-basics)
