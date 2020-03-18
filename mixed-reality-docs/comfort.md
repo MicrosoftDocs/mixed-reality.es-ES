@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, diseño, comodidad, HoloLens 2, HoloLens (1.ª generación)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74491158"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376072"
 ---
 # <a name="comfort"></a>Comodidad
 
@@ -173,7 +173,7 @@ Se considera que el ángulo de mirada óptimo (en reposo) está entre 10-20 grad
 
 Los usuarios pueden acumular fatiga muscular en los casos en los que deben mantener una mano levantada a lo largo de una experiencia. Así mismo, pueden encontrar agotador el hecho de tener que realizar gestos de pulsación en el aire de forma repetida durante largos períodos de tiempo. Por lo tanto, te recomendamos diseñar experiencias que eviten la necesidad de realizar gestos de manera constante y repetida. Este objetivo puede lograrse mediante la incorporación de pausas breves y al ofrecer una combinación de gestos y voz para interactuar con la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Gaze](gaze-and-commit.md)
 * [Estabilidad de hologramas](hologram-stability.md)
 * [Interacciones instintivas](interaction-fundamentals.md)

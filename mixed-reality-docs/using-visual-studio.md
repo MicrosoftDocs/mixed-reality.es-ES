@@ -8,11 +8,11 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realidad mixta, depurar, implementar
 ms.openlocfilehash: b7e6a8d538670a53de20a2f3a2850639e756da1a
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830838"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376112"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Uso de Visual Studio para implementaciones y depuraciones
 
@@ -136,8 +136,8 @@ Puedes usar Visual Studio para depurar una aplicación universal de Windows ins
 6. Elige el tipo de código que quieras depurar (administrado, nativo, mixto).
 7. Haz clic en **Adjuntar** o **Iniciar**.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Instalación de las herramientas](install-the-tools.md)
-* [Uso del emulador HoloLens](using-the-hololens-emulator.md)
+* [Uso del emulador de HoloLens](using-the-hololens-emulator.md)
 * [Implementación y depuración de aplicaciones para la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/xaml/mt613243.aspx)
 * [Habilitar el dispositivo para el desarrollo](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
