@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, rendimiento, optimización, CPU, GPU
-ms.openlocfilehash: 7d8a0c95d59ec7e42e11bc1e1b6b40c702e01529
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 287b95363acff00ab7a0407475e0a419fc076611
+ms.sourcegitcommit: 184227dc591ca2791f523d520555730ba1e95b5c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438235"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79479578"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
 
@@ -19,7 +19,7 @@ Este artículo es una introducción a la comprensión del significado del rendim
 
 A continuación se enumeran los valores de velocidad de fotogramas de rendimiento para cada plataforma de destino.
 
-| Plataforma | Velocidad de fotogramas de destino |
+| Platform | Velocidad de fotogramas de destino |
 |----------|-------------------|
 | [HoloLens](hololens-hardware-details.md) | 60 FPS |
 | [Windows Mixed Reality ultra PC](immersive-headset-hardware-details.md) | 90 FPS |
@@ -98,7 +98,8 @@ La velocidad de relleno se centra en reducir el número de operaciones que se de
 4) Número de píxeles que se van a representar (resolución de pantalla)
 
 #### <a name="reduce-polygon-count"></a>Reducir el número de polígonos
-Los recuentos de polígonos más altos producen más operaciones para la GPU; al reducir el número de polígonos de la escena, se reducirá el tiempo de representación. Hay otros factores implicados en el sombreado de la geometría que puede ser caro, pero el recuento de polígonos es la métrica más simple para determinar el costo que una escena va a representar.
+
+Los recuentos de polígonos más altos producen más operaciones para la GPU; al [reducir el número de polígonos](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) de la escena, se reducirá el tiempo de representación. Hay otros factores implicados en el sombreado de la geometría que puede ser caro, pero el recuento de polígonos es la métrica más simple para determinar el costo que una escena va a representar.
 
 #### <a name="limit-overdraw"></a>Sobredibujar límite
 
@@ -123,15 +124,20 @@ Normalmente, los sombreadores realizan muchas transformaciones y cálculos de il
     - Por lo general, el número de vértices es mucho menor que el número de píxeles (720p es de 921.600 píxeles, 1080p es 2.073.600 píxeles, etc.)
 
 #### <a name="remove-gpu-stages"></a>Quitar fases de GPU
+
 Los efectos posteriores al procesamiento pueden ser muy costosos y aumentar la velocidad de relleno de la aplicación. Esto incluye técnicas de suavizado de contorno como MSAA. En HoloLens, se recomienda evitar estas técnicas por completo, así como otras fases del sombreador, como la geometría, el casco y los sombreadores de cálculo.
 
 ## <a name="memory-recommendations"></a>Recomendaciones de memoria
+
 Las operaciones de asignación y desasignación de memoria excesiva pueden dar lugar a un rendimiento incoherente, marcos inmovilizados y otro comportamiento perjudicial. Es especialmente importante comprender las consideraciones de memoria al desarrollar en Unity, ya que la administración de la memoria se controla mediante el recolector de elementos no utilizados.
 
 #### <a name="object-pooling"></a>Agrupación de objetos
 
 La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable durante una aplicación.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 - [Recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md)
 - [Configuración recomendada para Unity](recommended-settings-for-unity.md)
+- [Optimizar modelos 3D](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [Prácticas recomendadas para convertir y optimizar modelos 3D en tiempo real](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
+
