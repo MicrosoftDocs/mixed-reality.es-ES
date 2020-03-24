@@ -1,332 +1,333 @@
 ---
-title: 'Tutoriales de introducción: 3. Crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta'
-description: Realiza este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+title: 'Tutoriales de introducción: 3. Creación de la interfaz de usuario y configuración de Mixed Reality Toolkit'
+description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: f1d042150d1c81940e672b174c6c02ac71e05883
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: c389c7a3d16770dcbf57d9acdcfd81c6507f7cd6
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77555054"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376142"
 ---
-# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. crear la interfaz de usuario y configurar el kit de herramientas de realidad mixta
+# <a name="3-creating-user-interface-and-configure-mixed-reality-toolkit"></a>3. Creación de la interfaz de usuario y configuración de Mixed Reality Toolkit
 <!-- TODO: Consider renaming to 'Configuring Mixed Reality Toolkit profiles and creating user interfaces' -->
 
-En el tutorial anterior, aprendió sobre algunas de las funcionalidades que el kit de herramientas de realidad mixta (MRTK) tiene que ofrecer al iniciar su primera aplicación para HoloLens 2. En este tutorial aprenderá a crear y organizar botones junto con paneles de texto de la interfaz de usuario y a usar interacción predeterminada (Touch) para interactuar con cada botón. También explorarás la incorporación de acciones y efectos sencillos, como cambiar el tamaño, el sonido y color de los objetos. Este módulo presentará conceptos básicos sobre la modificación de perfiles de MRTK, empezando por desactivar la visualización de la malla de [asignación espacial](spatial-mapping.md) .
+En el tutorial anterior, descubriste algunas de las funcionalidades que ofrece Mixed Reality Toolkit (MRTK) e iniciaste tu primera aplicación para HoloLens 2. En este tutorial, aprenderás a crear y organizar los botones junto con los paneles de texto de la interfaz de usuario, y a usar la interacción predeterminada (táctil) para interactuar con cada botón. También explorarás la incorporación de acciones y efectos sencillos, como cambiar el tamaño, el sonido y color de los objetos. En este módulo se presentan los conceptos básicos sobre cómo modificar los perfiles de MRTK. Para empezar, se desactiva la visualización de malla de [asignación espacial](spatial-mapping.md).
 
 ## <a name="objectives"></a>Objetivos
 
 * Personalizar y configurar los perfiles de Mixed Reality Toolkit
-* Interacción con hologramas mediante elementos y botones de la interfaz de usuario
+* Interacción con hologramas mediante botones y elementos de la interfaz de usuario
 * Entrada e interacciones básicas del seguimiento de la mano
 
-## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Configuración de los perfiles de kit de herramientas de realidad mixta (cambiar la opción de visualización de reconocimiento espacial)
+## <a name="how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option"></a>Configuración de los perfiles de Mixed Reality Toolkit (opción para cambiar la visualización de reconocimiento espacial)
 <!-- TODO: Consider renaming to 'How to customize the MRTK profiles' -->
 
-En esta sección, aprenderá a personalizar y configurar los perfiles predeterminados de MRTK.
+En esta sección, aprenderás a personalizar y configurar los perfiles predeterminados de MRTK.
 
-En este ejemplo concreto se muestra cómo ocultar la malla de reconocimiento espacial cambiando la configuración del observador de la malla espacial. Sin embargo, puede seguir estos mismos principios para personalizar cualquier configuración o valor en los perfiles de MRTK.
+En este ejemplo concreto se muestra cómo ocultar la malla de reconocimiento espacial cambiando la configuración del observador de la malla espacial. Puedes seguir estos mismos principios para personalizar cualquier parámetro o valor de los perfiles de MRTK.
 
-Los principales pasos que se deben seguir para ocultar la malla de reconocimiento espacial son:
+Los principales pasos que se deben seguir para ocultar la malla de reconocimiento espacial son los siguientes:
 
 1. Clonar el perfil de configuración predeterminado
-2. Habilitación del sistema de reconocimiento espacial
-3. Clonar el perfil del sistema de reconocimiento espacial predeterminado
-4. Clonar el perfil de observador de la malla de reconocimiento espacial predeterminado
-5. Cambiar la visibilidad de la malla de reconocimiento espacial
+2. Habilitar el sistema de reconocimiento espacial.
+3. Clonar el perfil del sistema de reconocimiento espacial predeterminado.
+4. Clonar el perfil del observador de la malla de reconocimiento espacial predeterminado.
+5. Cambiar la visibilidad de la malla de reconocimiento espacial.
 
 > [!NOTE]
-> De forma predeterminada, los perfiles de MRTK no son editables. Estas son las plantillas de perfil predeterminadas que se deben clonar antes de que se puedan editar. Hay varias capas anidadas de perfiles. Por lo tanto, es habitual clonar y editar varios perfiles al configurar uno o varios valores.
+> De forma predeterminada, los perfiles de MRTK no son editables. Estas son las plantillas de perfil predeterminadas que se deben clonar para poder editarse. Hay varias capas anidadas de perfiles. Por lo tanto, es habitual clonar y editar varios perfiles al configurar uno o varios parámetros.
 
-### <a name="1-clone-the-default-configuration-profile"></a>1. clonar el perfil de configuración predeterminado
+### <a name="1-clone-the-default-configuration-profile"></a>1. Clonar el perfil de configuración predeterminado
 
 > [!NOTE]
-> El perfil de configuración es el perfil de nivel superior. Por lo tanto, para poder editar cualquier otro perfil, primero debe clonar el perfil de configuración.
+> El perfil de configuración es el perfil de nivel superior. Por lo tanto, para poder editar cualquier otro perfil, antes debe clonar el perfil de configuración.
 
-Con el objeto **MixedRealityToolkit** seleccionado en la ventana jerarquía, en la ventana inspector, cambie el **Perfil de configuración** de Mixed Reality Toolkit a **DefaultHoloLens2ConfigurationProfile**:
+Con el objeto **MixedRealityToolkit** seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, cambia el valor de **Configuration Profile** (Perfil de configuración) de Mixed Reality Toolkit a **DefaultHoloLens2ConfigurationProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-1.png)
 
-Con el objeto **MixedRealityToolkit** aún seleccionado, en la ventana del inspector, haga clic en el botón **copiar & personalizar** para abrir la ventana Perfil de clonación:
+Con el objeto **MixedRealityToolkit** todavía seleccionado, en la ventana Inspector, haz clic en el botón **Copy & Customize** (Copiar y personalizar) para abrir la ventana Clone Profile (Clonar perfil):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-2.png)
 
-En la ventana clonar perfil, haga clic en el botón **clonar** para crear una copia modificable de la **DefaultHololens2ConfigurationProfile**:
+En la ventana Clone Profile (Clonar perfil), haz clic en el botón **Clone** (Clonar) para crear una copia modificable de **DefaultHololens2ConfigurationProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-3.png)
 
-El perfil de configuración recién creado se asigna ahora como el perfil de configuración de la escena:
+El perfil de configuración recién creado se asigna ahora como perfil de configuración de la escena:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step1-4.png)
 
-En el menú de Unity, seleccione **archivo** > **Guardar** para guardar la escena.
+En el menú de Unity, selecciona **File** > **Save** (Archivo > Guardar) para guardar la escena.
 
 > [!TIP]
-> Recuerde guardar el trabajo en el tutorial.
+> Recuerda guardar el trabajo a lo largo del tutorial.
 
-### <a name="2-enable-the-spatial-awareness-system"></a>2. habilitar el sistema de reconocimiento espacial
+### <a name="2-enable-the-spatial-awareness-system"></a>2. Habilitar el sistema de reconocimiento espacial
 
-Con el objeto **MixedRealityToolkit** todavía seleccionado en la ventana jerarquía, en la ventana inspector, seleccione la pestaña **reconocimiento espacial** y active la casilla **Habilitar sistema de reconocimiento espacial** :
+Con el objeto **MixedRealityToolkit** todavía seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, selecciona la pestaña **Reconocimiento espacial** y, a continuación, activa la casilla **Enable Spatial Awareness System** (Habilitar el sistema de reconocimiento espacial):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step2-1.png)
 
-### <a name="3-clone-the-default-spatial-awareness-system-profile"></a>3. clonar el perfil del sistema de reconocimiento espacial predeterminado
+### <a name="3-clone-the-default-spatial-awareness-system-profile"></a>3. Clonar el perfil del sistema de reconocimiento espacial predeterminado
 
-En la pestaña **reconocimiento espacial** , haga clic en el botón **clonar** para abrir la ventana Perfil de clonación:
+En la pestaña **Spatial Awareness** (Reconocimiento espacial), haz clic en el botón **Clone** (Clonar) para abrir la ventana Clone Profile (Clonar perfil):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step3-1.png)
 
-En la ventana clonar perfil, haga clic en el botón **clonar** para crear una copia modificable de la **DefaultMixedRealitySpatialAwarenessSystemProfile**:
+En la ventana Clone Profile (Clonar perfil), haz clic en el botón **Clone** (Clonar) para crear una copia modificable de **DefaultMixedRealitySpatialAwarenessSystemProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step3-2.png)
 
-Ahora el perfil del sistema de reconocimiento espacial recién creado se asigna automáticamente al perfil de configuración:
+Ahora, el perfil del sistema de reconocimiento espacial recién creado se asigna automáticamente al perfil de configuración:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step3-3.png)
 
-### <a name="4-clone-the-default-spatial-awareness-mesh-observer-profile"></a>4. clonar el perfil de observador de la malla de reconocimiento espacial predeterminado
+### <a name="4-clone-the-default-spatial-awareness-mesh-observer-profile"></a>4. Clonar el perfil del observador de la malla de reconocimiento espacial predeterminado
 
-Con la pestaña **reconocimiento espacial** todavía seleccionada, expanda la sección observador de la **malla espacial de Windows Mixed Reality** y haga clic en el botón **clonar** para abrir la ventana Perfil de clonación:
+Con la pestaña **Spatial Awareness** (Reconocimiento espacial) aún seleccionada, expande la sección **Windows Mixed Reality Spatial Mesh Observer** (Observador de malla espacial de Windows Mixed Reality) y, a continuación, haz clic en el botón **Clone** (Clonar) para abrir la ventana Clone Profile (Clonar perfil):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step4-1.png)
 
-En la ventana clonar perfil, haga clic en el botón **clonar** para crear una copia modificable de la **DefaultMixedRealitySpatialAwarenessMeshObserverProfile**:
+En la ventana Clone Profile (Clonar perfil), haz clic en el botón **Clone** (Clonar) para crear una copia modificable de **DefaultMixedRealitySpatialAwarenessMeshObserverProfile**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step4-2.png)
 
-El perfil de observador de la malla de reconocimiento espacial recién creado se asigna automáticamente al perfil del sistema de reconocimiento espacial:
+Ahora, el perfil del observador de malla de reconocimiento espacial recién creado se asigna automáticamente al perfil del sistema de reconocimiento espacial:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step4-3.png)
 
-### <a name="5-change-the-visibility-of-the-spatial-awareness-mesh"></a>5. cambiar la visibilidad de la malla de reconocimiento espacial
+### <a name="5-change-the-visibility-of-the-spatial-awareness-mesh"></a>5. Cambiar la visibilidad de la malla de reconocimiento espacial
 
-En la **configuración del observador de la malla espacial**, cambie la **opción de visualización** a **oclusión** para que la malla de asignación espacial sea invisible mientras sigue funcionando:
+En **Spatial Mesh Observer Settings** (Configuración del observador de malla espacial), cambia **Display Option** (Opción de visualización) a **Occlusion** (Oclusión) para que la malla de asignación espacial sea invisible y, al mismo tiempo, funcional:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section1-step5-1.png)
 
 > [!NOTE]
-> Aunque la malla de asignación espacial no es visible, sigue estando presente y funcional. Por ejemplo, los hologramas detrás de la malla de asignación espacial, como un holograma detrás de un muro física, no estarán visibles.
+> Aunque la malla de asignación espacial no está visible, sigue existiendo y es funcional. Por ejemplo, los hologramas situados detrás de la malla de asignación espacial, como un holograma detrás de un muro físico, no estarán visibles.
 
-Acabas de aprender a modificar una configuración en el perfil de MRTK. Como puede ver, para personalizar la configuración de MRTK, primero debe crear copias de los perfiles predeterminados. Dado que los perfiles predeterminados no son editables, siempre tendrá como referencia si desea revertir a la configuración predeterminada. Para obtener más información acerca de los perfiles de MRTK y su arquitectura, puede visitar la guía de configuración del perfil de el [Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+Acabas de aprender a modificar una configuración en el perfil de MRTK. Como puedes ver, para personalizar la configuración de MRTK, debes crear copias de los perfiles predeterminados. Dado que los perfiles predeterminados no son editables, siempre los tendrás como referencia si quieres revertir la configuración predeterminada. Para obtener más información sobre los perfiles de MRTK y su arquitectura, puedes visitar la [guía de configuración de perfiles de Mixed Reality Toolkit](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-## <a name="hand-tracking-gestures-and-interactable-buttons"></a>Gestos de seguimiento de mano y botones interactivos
+## <a name="hand-tracking-gestures-and-interactable-buttons"></a>Botones de interacción y gestos de seguimiento de la mano
 
-En esta sección, aprenderá a usar el seguimiento de manos para presionar un botón y desencadenar eventos para producir una acción cuando se presiona el botón.
+En esta sección, aprenderás a usar el seguimiento de manos para presionar un botón y desencadenar eventos para provocar una acción al presionar el botón.
 
-En este ejemplo concreto se muestra cómo cambiar el color de un cubo cuando se presiona el botón y cambiarlo a su color original cuando se suelta el botón. Sin embargo, puede seguir estos mismos principios para crear otros eventos.
+En este ejemplo concreto, se muestra cómo cambiar el color de un cubo cuando se presiona el botón y cambiarlo a su color original cuando se suelta. Sin embargo, puedes seguir estos mismos principios para crear otros eventos.
 
-Los principales pasos que se deben seguir para cambiar el color del cubo son:
+Los principales pasos que se deben seguir para cambiar el color del cubo son los siguientes:
 
-1. Agregar un botón que se pueda presionar recurso prefabricado a la escena
+1. Agregar un objeto prefabricado de botón presionable a la escena
 2. Agregar un cubo a la escena
 3. Configurar el tipo de evento InteractableOnPressReceiver
-4. Configurar el cubo para recibir el evento on press
-5. Definir la acción que va a desencadenar el evento on press
-6. Configurar el cubo para recibir el evento on Release
-7. Definir la acción que va a desencadenar el evento on Release
+4. Configurar el cubo para recibir el evento On Press (Al presionar)
+5. Definir la acción que desencadenará el evento On Press (Al presionar)
+6. Configurar el cubo para recibir el evento On Release (Al soltar)
+7. Definir la acción que desencadenará el evento On Release (Al soltar)
 8. Probar el botón mediante la simulación en el editor
 
-### <a name="1-add-a-pressable-button-prefab-to-the-scene"></a>1. agregar un botón que se pueda presionar recurso prefabricado a la escena
+### <a name="1-add-a-pressable-button-prefab-to-the-scene"></a>1. Agregar un objeto prefabricado de botón presionable a la escena
 
 > [!TIP]
-> Un <a href="https://docs.unity3d.com/Manual/Prefabs.html" target="_blank">recurso prefabricado</a> es un GameObject preconfigurado que se almacena como un recurso de Unity y se puede reutilizar en todo el proyecto.
+> Un <a href="https://docs.unity3d.com/Manual/Prefabs.html" target="_blank">objeto prefabricado</a> es un objeto GameObject preconfigurado almacenado como un recurso de Unity que se puede reutilizar en todo el proyecto.
 
-En la **ventana de proyecto**, busque **PressableButtonHoloLens2** para buscar el recurso prefabricado que va a usar en este ejemplo:
+En la **ventana del proyecto**, busca **PressableButtonHoloLens2** para buscar el objeto prefabricado que usarás en este ejemplo:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step1-1.png)
 
-En el resultado de la **búsqueda** , seleccione **PressableButtonHoloLens2** recurso prefabricado y **arrástrelo** a la ventana de la **jerarquía** para agregarlo a la escena:
+En el resultado de la **búsqueda**, selecciona el objeto prefabricado **PressableButtonHoloLens2** y **arrástralo** a la ventana **Hierarchy** (Jerarquía) para agregarlo a la escena:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step1-2.png)
 
 > [!TIP]
-> Para mostrar la escena tal como se muestra en la imagen siguiente, haga doble clic en el objeto PressableButtonHoloLens2 en la ventana de jerarquía para ponerlo en el foco y, a continuación, use el Gizmo de la <a href="https://docs.unity3d.com/Manual/SceneViewNavigation.html" target="_blank">escena</a>, situado en la esquina superior derecha de la ventana de la escena, para ajustar el ángulo de visualización a lo largo del eje Z hacia delante.
+> Para mostrar la escena tal y como se muestra en la imagen siguiente, haz doble clic en el objeto PressableButtonHoloLens2 en la ventana Hierarchy (Jerarquía) para ponerlo en el foco y, a continuación, usa el <a href="https://docs.unity3d.com/Manual/SceneViewNavigation.html" target="_blank">gizmo de escena</a>, situado en la esquina superior derecha de la ventana Scene (Escena) para ajustar el ángulo de visualización a lo largo del eje Z.
 
-Con el objeto **PressableButtonHoloLens2** aún seleccionado, en la ventana del **Inspector** :
+Con el objeto **PressableButtonHoloLens2** todavía seleccionado, en la ventana **Inspector**:
 
-* Cambiar su **posición** de transformación para colocarla delante de la cámara, que se coloca en el origen, por ejemplo, x = 0, y = 0 y z = 0,5
+* Cambia su **posición** de transformación para que se coloque delante de la cámara, que está situada en el origen; por ejemplo, x = 0, y = 0 y z = 0,5.
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step1-3.png)
 
 > [!NOTE]
-> En general, 1 unidad de posición en Unity es aproximadamente equivalente a 1 metro en el mundo físico. Sin embargo, hay excepciones para esto, por ejemplo, cuando los objetos son elementos secundarios de objetos escalados.
+> En general, 1 unidad de posición en Unity equivale, aproximadamente, a 1 metro en el mundo físico. Sin embargo, existen excepciones; por ejemplo, cuando los objetos son elementos secundarios de los objetos con escala.
 
-### <a name="2-add-a-cube-to-the-scene"></a>2. agregar un cubo a la escena
+### <a name="2-add-a-cube-to-the-scene"></a>2. Agregar un cubo a la escena
 
-Haga clic con el botón secundario en una zona vacía dentro de la ventana de jerarquía y seleccione **objeto 3d** > **cubo** para agregar un cubo a la escena:
+Haz clic con el botón derecho en una zona vacía dentro de la ventana Hierarchy (Jerarquía) y selecciona **3D Object** > **Cube** (Objeto 3D > Cubo) para agregar un cubo a la escena:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step2-1.png)
 
-Con el objeto de **cubo** todavía seleccionado, en la ventana del **Inspector** :
+Con el objeto **Cube** todavía seleccionado, en la ventana **Inspector**:
 
-* Cambie su **posición** de transformación para que se encuentre cerca del botón que se pueda presionar, pero no se superponga con él, por ejemplo, x = 0, y = 0,04 y z = 0,5
-* Cambie la **escala** de transformación a un tamaño adecuado, por ejemplo, x = 0,02, y = 0,02 y z = 0,02
+* Cambia su **posición** de transformación para que esté cerca del botón que se pueda presionar, pero no se solape con él; por ejemplo, x = 0, y = 0,04 y z = 0,5
+* Cambia su **escala** de transformación a un tamaño adecuado; por ejemplo, x = 0,02, y = 0,02 y z = 0,02.
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step2-2.png)
 
-### <a name="3-configure-the-interactableonpressreceiver-event-type"></a>3. configurar el tipo de evento InteractableOnPressReceiver
+### <a name="3-configure-the-interactableonpressreceiver-event-type"></a>3. Configurar el tipo de evento InteractableOnPressReceiver
 
-En la ventana jerarquía, seleccione el objeto **PressableButtonHoloLens2** y, a continuación, en el **menú**de la ventana del **Inspector** , seleccione **contraer todos los componentes** para obtener una visión general de todos los componentes de este objeto:
+En la ventana Hierarchy (Jerarquía), selecciona el objeto **PressableButtonHoloLens2** y, a continuación, en la ventana **Inspector**, en el **menú de hamburguesa**, selecciona **Collapse All Components** (Contraer todos los componentes) para obtener una visión general de todos los componentes de este objeto:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-1.png)
 
-Expanda el componente **interactuable (Script)** y, a continuación, busque y expanda la sección **eventos** > **receptores** :
+Expande el componente **Interactable (Script)** (Interactuable [script]) y, a continuación, busca y expande la sección **Events** > **Receivers** (Eventos > Receptores):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-2.png)
 
-Haga clic en el botón **Agregar evento** para crear un nuevo receptor de eventos del tipo de receptor de eventos **InteractableOnPressReceiver**:
+Haz clic en el botón **Add Event** (Agregar evento) para crear un nuevo receptor de eventos del tipo **InteractableOnPressReceiver**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-3.png)
 
 > [!NOTE]
-> El tipo de receptor de eventos denominado InteractableOnPressReceiver permite al botón responder a un evento presionado cuando una mano a la que se hace un seguimiento presiona el botón.
+> El tipo de receptor de eventos InteractableOnPressReceiver permite que el botón responda a un evento presionado cuando una mano con seguimiento presiona el botón.
 
-En el caso del receptor de eventos recién creado, cambie el **filtro de interacción** a **Near y Far**:
+En el caso del receptor de eventos recién creado, cambia **Interaction Filter** (Filtro de interacción) a **Near and Far** (Cerca y lejos):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step3-4.png)
 
-### <a name="4-configure-the-cube-to-receive-the-on-press-event"></a>4. configurar el cubo para recibir el evento on press
+### <a name="4-configure-the-cube-to-receive-the-on-press-event"></a>4. Configurar el cubo para recibir el evento On Press (Al presionar)
 
-En la ventana jerarquía, **haga clic y arrastre** el **cubo** al campo objeto de **propiedades de evento** para el evento **on press ()** para asignar el cubo como receptor del evento on press ():
+En la ventana Hierarchy (Jerarquía), **haz clic y arrastra** **Cube** (Cubo) al campo de objeto **Event Properties** (Propiedades de evento) para el evento **On Press ()** (Al presionar []) para asignar el cubo como receptor del evento On Press () (Al presionar []):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step4-1.png)
 
-### <a name="5-define-the-action-to-be-triggered-by-the-on-press-event"></a>5. definir la acción que va a desencadenar el evento on press
+### <a name="5-define-the-action-to-be-triggered-by-the-on-press-event"></a>5. Definir la acción que desencadenará el evento On Press (Al presionar)
 
-Haga clic en la lista desplegable acción, actualmente **no hay ninguna función**asignada y seleccione **MeshRenderer** ** > material material para** establecer la propiedad material del cubo que se cambiará cuando se desencadene el evento on press ():
+Haz clic en la lista desplegable de acción, asignada actualmente a **No Function** (Ninguna función) y selecciona **MeshRenderer** > **Material** para establecer la propiedad de material del cubo que se cambiará cuando se desencadene el evento On Press () (Al presionar []):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step5-1.png)
 
-Haga clic en el icono de **círculo** pequeño situado junto al campo material, actualmente rellenado con **ninguno (material)** , para abrir la ventana Seleccionar material:
+Haz clic en el pequeño icono de **círculo** situado junto al campo de material, actualmente con el valor**None (Material)** Ninguno (material), para abrir la ventana Select Material (Seleccionar material):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step5-2.png)
 
-En la ventana Seleccionar material, **busque** **MRTK_Standard** y seleccione un material adecuado, por ejemplo, **MRTK_Standard_Cyan** para que el color del cubo cambie a Aguamarina cuando se presione el botón:
+En la ventana Select Material (Seleccionar material), **busca** **MRTK_Standard** y selecciona un material adecuado; por ejemplo, **MRTK_Standard_Cyan** para que el color del cubo cambie a cian al presionar el botón:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step5-3.png)
 
-### <a name="6-configure-the-cube-to-receive-the-on-release-event"></a>6. configurar el cubo para recibir el evento on Release
+### <a name="6-configure-the-cube-to-receive-the-on-release-event"></a>6. Configurar el cubo para recibir el evento On Release (Al soltar)
 
-**Repetir** Paso 4 para el evento on Release para asignar el **cubo** como receptor del evento **on Release ()** .
+**Repite** el paso 4 para el evento On Release (Al soltar) para asignar el **cubo** como receptor del evento **On Release ()** (Al soltar []).
 
-### <a name="7-define-the-action-to-be-triggered-by-the-on-release-event"></a>7. definir la acción que va a desencadenar el evento on Release
+### <a name="7-define-the-action-to-be-triggered-by-the-on-release-event"></a>7. Definir la acción que desencadenará el evento On Release (Al soltar)
 
-**Repetir** Paso 5 para el evento on release, pero elija el **MRTK_Standard_LightGray** material para que el color del cubo vuelva a su color gris claro original al soltar el botón:
+**Repite** el paso 5 para el evento On Release (Al soltar), pero elige el material **MRTK_Standard_LightGray** para que el color del cubo vuelva a su gris claro original al soltar el botón:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step7-1.png)
 
-### <a name="8-test-the-button-using-the-in-editor-simulation"></a>8. probar el botón mediante la simulación en el editor
+### <a name="8-test-the-button-using-the-in-editor-simulation"></a>8. Probar el botón mediante la simulación en el editor
 
-Presione el botón **reproducir** para entrar en el modo de juego y use la simulación de entrada del editor para probar el botón que acaba de configurar.
+Presiona el botón **Play** (Jugar) para entrar en el modo de juego y usa la simulación de entrada del editor para probar el botón que acabas de configurar.
 
-Botón no presionado (barra espaciadora + rueda hacia atrás del mouse):
+Botón sin presionar (barra espaciadora + rueda hacia atrás del ratón):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step8-1.png)
 
-Botón presionado (barra espaciadora + rueda de desplazamiento hacia delante):
+Botón presionado (barra espaciadora + rueda hacia adelante del ratón):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section2-step8-2.png)
 
 > [!TIP]
-> Para obtener información sobre cómo usar la simulación de entrada del editor, puede consultar el [uso de la simulación de entrada de la mano del editor para probar una](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene) guía de escenas en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+> Para obtener información sobre cómo usar la simulación de entrada del editor, puedes consultar la guía [Uso de la simulación de entrada de mano en el editor para probar una escena](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene) del [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
 ## <a name="creating-a-panel-of-buttons-using-mrtks-grid-object-collection"></a>Creación de un panel de botones con la colección de objetos de cuadrícula de MRTK
 
-En esta sección, aprenderá a alinear automáticamente varios botones en una interfaz de usuario ordenada mediante la herramienta de colección de objetos de cuadrícula de MRTK.
+En esta sección, aprenderás a alinear automáticamente varios botones en una interfaz de usuario nueva mediante la herramienta GridObjectCollection de MRTK.
 
-En este ejemplo concreto se muestra cómo crear un panel con cinco botones alineados horizontalmente. Sin embargo, puede seguir estos mismos principios para crear otros diseños.
+En este ejemplo concreto se muestra cómo crear un panel con cinco botones alineados horizontalmente. Sin embargo, puedes seguir estos mismos principios para crear diseños.
 
-Los principales pasos que se deben seguir para lograrlo son:
+Los principales pasos que debes seguir para lograrlo son:
 
-1. Primaria de los objetos de botón en un objeto primario
-2. Agregar y configurar el componente de colección de objetos de cuadrícula (Script)
-3. Prueba de los botones mediante la simulación en el editor
+1. Asignar los objetos de botón a un objeto principal
+2. Agregar y configurar el componente Grid Object Collection (Script) (Colección de objetos de cuadrícula [script])
+3. Probar los botones mediante la simulación en el editor
 
-### <a name="1-parent-the-button-objects-to-a-parent-object"></a>1. primaria de los objetos de botón en un objeto primario
+### <a name="1-parent-the-button-objects-to-a-parent-object"></a>1. Asignar los objetos de botón a un objeto principal
 
-Haga clic con el botón derecho en una zona vacía dentro de la ventana de jerarquía y seleccione **crear vacío**:
+Haz clic con el botón derecho en una zona vacía dentro de la ventana Hierarchy (Jerarquía) y selecciona **Create Empty** (Crear objeto vacío):
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step1-1.png)
 
-Haga clic con el botón derecho en el objeto recién creado, seleccione **cambiar nombre**y asígnele un nombre adecuado, por ejemplo, **ButtonCollection**:
+Haz clic con el botón derecho en el objeto que acabas de crear, selecciona **Rename** (Cambiar nombre) y asígnale un nombre adecuado; por ejemplo, **ButtonCollection**:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step1-2.png)
 
-Seleccione el objeto **PressableButtonHoloLens2** y **arrástrelo** sobre el objeto **ButtonCollection** para convertirlo en un elemento secundario del objeto ButtonCollection:
+Selecciona el objeto **PressableButtonHoloLens2** y **arrástralo** encima del objeto **ButtonCollection** para convertirlo en un elemento secundario de este objeto:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step1-3.png)
 
-Haga clic con el botón secundario en el objeto **PressableButtonHoloLens2** y seleccione **duplicar** para crear una copia de él:
+Haz clic con el botón derecho en el objeto **PressableButtonHoloLens2** y selecciona **Duplicar** para crear una copia de este:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step1-4.png)
 
-**Repita** este paso cuatro veces más hasta que tenga un total de cinco objetos PressableButtonHoloLens2.
+**Repite** este paso cuatro veces más hasta que tengas un total de cinco objetos PressableButtonHoloLens2.
 
-### <a name="2-add-and-configure-the-grid-object-collection-script-component"></a>2. agregar y configurar el componente de colección de objetos de cuadrícula (Script)
+### <a name="2-add-and-configure-the-grid-object-collection-script-component"></a>2. Agregar y configurar el componente Grid Object Collection (Script) (Colección de objetos de cuadrícula [script])
 
-Con el objeto ButtonCollection seleccionado en la ventana jerarquía, en la ventana inspector, haga clic en el botón **Agregar componente** , busque y seleccione **colección de objetos de cuadrícula** para agregar un componente de colección de objetos de cuadrícula (Script) al objeto ButtonCollection:
+Con el objeto ButtonCollection seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, haz clic en el botón **Add Component** (Agregar componente) y, a continuación, busca y selecciona **Grid Object Collection** (Colección de objetos de cuadrícula) para agregar un componente Grid Object Collection (Script) (Colección de objetos de cuadrícula [script]) al objeto ButtonCollection:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step2-1.png)
 
-Configure la colección de objetos de cuadrícula (Script) de la siguiente manera:
+Configura el componente Grid Object Collection (Script) (Colección de objetos de cuadrícula [script]) como se indica a continuación:
 
-* Cambie **NUM Rows** a 1 para que todos los botones estén alineados en una sola fila.
-* Cambiar el **ancho de celda** a 0,05 para descartar los botones de la fila
+* Cambia **Num Rows** (Número de filas) a 1 para que todos los botones estén alineados en una sola fila.
+* Cambia **Cell Width** (Ancho de celda) a 0,05 para espaciar los botones dentro de la fila.
 
-A continuación, haga clic en el botón **Actualizar colección** para aplicar la nueva configuración:
+A continuación, haz clic en el botón **Actualizar colección** para aplicar la nueva configuración:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step2-2.png)
 
 > [!NOTE]
-> Los cambios de configuración que acaba de aplicar representan los cambios mínimos necesarios para lograr el objetivo de colocar los botones en una sola fila. Sin embargo, en proyectos futuros, en función de factores como, por ejemplo, la orientación de los objetos primarios y secundarios, es posible que necesite ajustar otras opciones de configuración como, por ejemplo, el tipo de orientación. Para obtener más información sobre la colección de objetos de cuadrícula de MRTK, puede visitar la guía de [scripts de colección de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html#object-collection-scripts) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+> Los cambios de configuración que acabas de aplicar representan los cambios mínimos necesarios para lograr el objetivo de colocar los botones en una sola fila. Sin embargo, en proyectos futuros, en función de factores como, por ejemplo, la orientación de los objetos principales y secundarios, es posible que necesites ajustar otras opciones de configuración, como, por ejemplo, el tipo de orientación. Para obtener más información sobre la colección de objetos de cuadrícula de MRTK, puedes visitar la guía de [scripts de colección de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html#object-collection-scripts) del [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-Con el objeto ButtonCollection todavía seleccionado en la ventana de la jerarquía, en la ventana del inspector, cambie la **posición** de transformación del objeto ButtonCollection para que sus objetos de botón secundarios se coloquen delante de la cámara, que se coloca en el origen, por ejemplo, x = 0, y = 0 y z = 0,5:
+Con el objeto ButtonCollection aún seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, cambia la **posición** de transformación del objeto ButtonCollection para que los objetos de botón secundarios se sitúen delante de la cámara, que se encuentra en el origen; por ejemplo, x = 0, y = 0 y z = 0,5:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step2-3.png)
 
 > [!NOTE]
-> La primera vez que se agregó el recurso prefabricado PressableButtonHoloLens2 a la escena en la sección [gestos de seguimiento de mano y botones interactuables](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) anteriores, se coloca delante de la cámara. Sin embargo, dado que la colección de objetos Grid controla su posición de los objetos secundarios inmediatos, la posición Z de los objetos secundarios PressableButtonHoloLens2 se restableció a 0 según la distancia predeterminada de la colección de objetos de cuadrícula del valor 0. Esto, y para mantener la relación posicional de elementos primarios y secundarios organizada, es el motivo por el que se ha movido la posición del objeto primario ButtonCollection hacia delante en lugar de configurar la distancia desde el valor primario para mover los objetos secundarios PressableButtonHoloLens2 hacia delante.
+> La primera vez que se agregó el objeto prefabricado PressableButtonHoloLens2 a la escena en la sección [Botones de interacción y gestos de seguimiento de la mano](mrlearning-base-ch2.md#hand-tracking-gestures-and-interactable-buttons) anterior, lo colocaste delante de la cámara. Sin embargo, dado que la colección de objetos de cuadrícula controla la posición de sus objetos secundarios inmediatos, la posición Z de los objetos secundarios de PressableButtonHoloLens2 se restableció a 0 de acuerdo con la distancia predeterminada de la colección de objetos de cuadrícula del valor principal de 0. Por este motivo, y para mantener organizada la relación de posición entre el objeto principal y el secundario, hemos movido la posición del objeto ButtonCollection hacia adelante en lugar de configurar la distancia del valor principal para que mueva los objetos secundarios de PressableButtonHoloLens2 hacia adelante.
 
-### <a name="3-test-the-buttons-using-the-in-editor-simulation"></a>3. probar los botones mediante la simulación en el editor
+### <a name="3-test-the-buttons-using-the-in-editor-simulation"></a>3. Probar los botones mediante la simulación en el editor
 
-Presione el botón reproducir para entrar en el modo de juego y use la simulación de entrada del editor para probar cada uno de los botones de en el panel de botones recién creado:
+Presiona el botón Play (Jugar) para entrar en el modo de juego y usa la simulación de entrada del editor para probar cada uno de los botones del panel de botones que acabas de crear:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section3-step3-1.png)
 
 > [!TIP]
-> Actualmente, cuando se presiona cualquiera de los cinco botones, el color del cubo cambia a aguamarina. Para que la experiencia sea más interesante, use lo que acaba de aprender para configurar cada botón y cambiar el cubo a un color diferente.
+> Actualmente, cuando se presiona cualquiera de los cinco botones, el color del cubo cambia a cian. Para que la experiencia sea más interesante, usa lo que acabas de aprender para configurar cada botón y cambiar el cubo a otro color.
 
-## <a name="adding-text-into-your-scene"></a>Agregar texto a la escena
+## <a name="adding-text-into-your-scene"></a>Adición de texto a la escena
 
-En esta sección, aprenderá a agregar texto a sus experiencias de realidad mixta con TextMesh pro de Unity, que preparó en la sección [Import TextMesh Pro Essential Resources](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources) del tutorial anterior.
+En esta sección, aprenderás a agregar texto a tus experiencias de realidad mixta con TextMesh Pro de Unity, que preparaste en la sección [Importación de recursos esenciales de TextMesh Pro](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources) del tutorial anterior.
 
-En este ejemplo concreto, agregará una etiqueta simple debajo de la colección de botones que creó en la sección anterior.
+En este ejemplo concreto, agregarás una etiqueta sencilla bajo la colección de botones que creaste en la sección anterior.
 
-Haga clic con el botón derecho en el objeto ButtonCollection y seleccione **objeto 3d** > **Text-TextMeshPro** para crear un objeto TextMeshPro como elemento secundario del objeto ButtonCollection:
+Haz clic con el botón derecho en el objeto ButtonCollection y selecciona **3D Object** > **Text - TextMeshPro** (Objeto 3D > Texto - TextMeshPro) para crear un objeto TextMeshPro como elemento secundario del objeto ButtonCollection:
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section4-step1-1.png)
 
-Con el objeto TextMeshPro que se acaba de crear, denominado Text (TMP), aún seleccionado, en la ventana del inspector, cambie su posición y tamaño para que la etiqueta se coloque en el interior de la colección de botones, por ejemplo:
+Con el objeto TextMeshPro que acabas de crear, denominado Text (TMP), aún seleccionado, en la ventana Inspector, cambia su posición y tamaño para que la etiqueta se coloque estratégicamente bajo la colección de botones; por ejemplo:
 
-* Cambie la transformación de rectángulo **Y** a-0,0425
-* Cambiar el **ancho** de la transformación Rect a 0,24
-* Cambiar el **alto** de la transformación Rect a 0,024
+* Cambia el valor de **Pos Y** de transformación de rectángulo a 0,0425.
+* Cambia el valor **Width** (Ancho) de transformación de rectángulo a 0,24.
+* Cambia el valor **Height** (Altura) de transformación de rectángulo a 0,024.
 
-A continuación, actualice el texto para que refleje el contenido de la etiqueta y elija Propiedades de fuente para que el texto quepa dentro de la etiqueta, por ejemplo:
+A continuación, actualiza el texto para que refleje el propósito de la etiqueta y elige las propiedades de la fuente para que el texto se ajuste a la etiqueta; por ejemplo:
 
-* Cambiar el texto de la malla de texto Pro ( **script) a** la colección de botones
-* Cambiar el **estilo de fuente** de la malla de texto Pro (Script) a negrita
-* Cambiar el **tamaño de fuente** de la malla de texto Pro (Script) a 0,2
-* Cambiar la **alineación** de la malla de texto Pro (Script) al centro y el medio
+* Cambia el valor **Text** (Texto) de Text Mesh Pro (Script) a Button Collection (Colección de botones).
+* Cambia el valor **Font Style** (Estilo de fuente) de Text Mesh Pro (Script) a Bold (Negrita).
+* Cambia el valor **Font Size** (Tamaño de fuente) de Text Mesh Pro (Script) a 0,2.
+* Cambia el valor **Alignment** (Alineación) de Text Mesh Pro (Script) a Center and Middle (Centro y medio).
 
 ![mrlearning-base](images/mrlearning-base/tutorial2-section4-step1-2.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En este tutorial, aprendió a clonar, personalizar y configurar una configuración de Perfil de MRTK. También aprendió a interactuar con los botones para desencadenar eventos mediante las manos del seguimiento en HoloLens 2. Por último, aprendió a crear una interfaz de usuario simple mediante el componente de colección de objetos de cuadrícula de MRTK y el pro de malla de texto de Unity.
+En este tutorial, has aprendido a clonar, personalizar y configurar las opciones de un perfil de MRTK. También has aprendido a interactuar con botones para desencadenar eventos mediante el seguimiento de manos en HoloLens 2. Por último, has aprendido a crear una sencilla interfaz de usuario mediante el componente de colección de objetos de cuadrícula de MRTK y Text Mesh Pro de Unity.
 
-[Siguiente tutorial: 4. colocar contenido dinámico y usar solucionadores](mrlearning-base-ch3.md)
+[Tutorial siguiente: 4. Colocación del contenido dinámico y uso de solucionadores](mrlearning-base-ch3.md)

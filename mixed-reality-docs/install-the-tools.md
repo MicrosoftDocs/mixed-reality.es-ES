@@ -3,16 +3,16 @@ title: Instalación de las herramientas
 description: Empieza aquí a prepararte para el desarrollo de realidad mixta. En este artículo deberían aparecer siempre las versiones más actuales de Unity, Visual Studio y las demás herramientas recomendadas para el desarrollo con HoloLens y con los cascos envolventes de Windows Mixed Reality.
 author: thetuvix
 ms.author: alexturn
-ms.date: 2/12/2020
+ms.date: 3/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: actualizadas, herramientas, introducción, conceptos básicos, unity, visual studio, toolkit
-ms.openlocfilehash: 8eb9511ab027eb32c5608acd1bde4e0ac15431ef
-ms.sourcegitcommit: a580166a19294f835b8e09c780f663f228dd5de0
+ms.openlocfilehash: 447260d9115ba58c9ed5ea286732e3406bb07154
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250770"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376132"
 ---
 # <a name="install-the-tools"></a>Instalación de las herramientas
 
@@ -37,7 +37,7 @@ Se recomienda instalar el motor de juego de Unity como la manera más sencilla d
 | ![Logotipo de Windows](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10** (vínculo de instalación manual)</a> | Instala la versión más reciente de Windows 10 para que el sistema operativo del equipo coincida con la plataforma para la que vas a compilar las aplicaciones de realidad mixta. | **Instalación de Windows 10** <br> <ul><li>Puedes instalar la versión más reciente de Windows 10 mediante Windows Update en Configuración o mediante la creación de soportes de instalación a través del vínculo de la columna izquierda.<li>Consulta las [notas de la versión actual](release-notes-october-2018.md) para más información acerca de las características de realidad mixta más recientes disponibles en cada versión de Windows 10.</ul> **Habilita el modo para desarrolladores en el equipo** en Configuración > Actualización y seguridad > Para programadores. <br><br> **Nota para equipos empresariales o de administración corporativa:** si el equipo lo administra un departamento de TI de la organización, es posible que debas ponerte en contacto con ellos para la actualización. <br><br> **Versiones "N" de Windows:** Los cascos envolventes de Windows Mixed Reality no son compatibles con las versiones "N" de Windows. |
 | ![Logotipo de Visual Studio](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2019 (16.2 o superior)** (vínculo de instalación)</a> | Entorno de desarrollo integrado (IDE) completo para Windows, etc. Vas a utilizar Visual Studio para escribir código, depurar, realizar pruebas e implementar. | **Cargas de trabajo para instalar:** <ul><li>Desarrollo de escritorio con C++</li><li>Desarrollo para la Plataforma universal de Windows (UWP)</li></ul>**Nota acerca de Unity:** A menos que intencionadamente estés intentando instalar una versión más reciente (no LTS) de Unity para un propósito específico, se recomienda *no* instalar la carga de trabajo de Unity como parte de la instalación de Visual Studio y, en su lugar, instalar la secuencia 2018.4 LTS de Unity como se indica a continuación.<br> <br>**Nota:** Hay algunos problemas conocidos con la depuración de aplicaciones de realidad mixta en Visual Studio 2019, versión 16.0.  Asegúrate de actualizar Visual Studio 2019 a la versión 16.2 o superior. |
 | ![Logotipo de Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com//windows/downloads/windows-10-sdk" target="_blank">**SDK de Windows 10 (10.0.18362.0)** (vínculo de instalación manual)</a> | Proporciona los encabezados, bibliotecas, metadatos y herramientas más recientes para compilar aplicaciones de Windows 10 en HoloLens 2. | Para compilar aplicaciones de HoloLens 2, debes instalar el SDK de Windows, compilación 18362 o posterior.<br> <br> Si solo vas a desarrollar aplicaciones para cascos de Windows Mixed Reality o HoloLens (1.ª generación), puedes usar el SDK de Windows que instala Visual Studio 2017. |
-| ![Logotipo de Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2118321" target="_blank">**Emulador de HoloLens 2 (actualización de febrero de 2020)** (vínculo de instalación: 10.0.18362.1053)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulador de HoloLens (Gen 1)** (vínculo de instalación: 10.0.17763.134)</a> | El emulador te permite ejecutar aplicaciones en una imagen de máquina virtual de HoloLens sin necesidad de un dispositivo HoloLens físico.<br> <br> | Consulta [Uso del emulador de HoloLens](using-the-hololens-emulator.md) para más información sobre cómo empezar a trabajar con el emulador.<br> <br> **El sistema debe admitir Hyper-V** para que la instalación del emulador se realice correctamente. Consulta la sección Requisitos del sistema que aparece a continuación para obtener los detalles. <br>|
+| ![Logotipo de Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2121323" target="_blank">**Emulador de HoloLens 2 (actualización de marzo de 2020)** (vínculo de instalación: 10.0.18362.1056)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulador de HoloLens (Gen 1)** (vínculo de instalación: 10.0.17763.134)</a> | El emulador te permite ejecutar aplicaciones en una imagen de máquina virtual de HoloLens sin necesidad de un dispositivo HoloLens físico.<br> <br> | Consulta [Uso del emulador de HoloLens](using-the-hololens-emulator.md) para más información sobre cómo empezar a trabajar con el emulador.<br> <br> **El sistema debe admitir Hyper-V** para que la instalación del emulador se realice correctamente. Consulta la sección Requisitos del sistema que aparece a continuación para obtener los detalles. <br>|
 
 ## <a name="choose-your-engine"></a>Elige el motor
 

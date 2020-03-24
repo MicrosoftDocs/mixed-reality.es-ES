@@ -7,12 +7,12 @@ ms.date: 11/01/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 9c219313ad6e73cde78efd8e5e718a466ebd6137
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
+ms.openlocfilehash: 56adb4bfc66768684c8269c0f0cafd70c486ea8a
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554405"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376212"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicialización de tu proyecto y primera aplicación
 
@@ -156,7 +156,7 @@ Descarga el paquete personalizado de Unity:
 
 * [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.3.0/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.3.0.unitypackage)
 
-En el menú de Unity, selecciona **Assets** (Recursos) > **Import Package** (Importar paquete) > **Custom Package...** (Paquete personalizado) para abrir la ventana Importar paquete...:
+En el menú de Unity, selecciona **Assets** > **Import Package** > **Custom Package...** (Recursos > Importar paquete > Paquete personalizado...) para abrir la ventana Import package... (Importar paquete...):
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section4-step1-1.png)
 
@@ -197,7 +197,7 @@ Con el objeto MixedRealityToolkit seleccionado en la ventana Hierarchy (Jerarqu�
 > [!IMPORTANT]
 > Normalmente, se usa el perfil DefaultHoloLens2ConfigurationProfile para desarrollar para HoloLens 2. Sin embargo, para este tutorial, usarás DefaultMixedRealityToolkitConfigurationProfile y, a continuación, en el siguiente tutorial, [Crear la interfaz de usuario y configurar Mixed Reality Toolkit](mrlearning-base-ch2.md), cambiarás a DefaultHoloLens2ConfigurationProfile.
 
-En el menú de Unity, selecciona **File** (Archivo) > **Save As...** (Guardar como...) para abrir la ventana Save Scene (Guardar escena):
+En el menú de Unity, selecciona **File** > **Save As...** (Archivo > Guardar como...) para abrir la ventana Save Scene (Guardar escena):
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section6-step1-3.png)
 
@@ -236,6 +236,9 @@ Configura Visual Studio para HoloLens 2. Para ello, selecciona la configuraci�
 
 ![mrlearning-base](images/mrlearning-base/tutorial1-section7-step2-2.png)
 
+> [!NOTE]
+> Si no ves Device (Dispositivo) como opción, puede que necesites cambiar el proyecto de inicio predeterminado del proyecto IC2Lpp al proyecto de UWP. En el **Explorador de soluciones**, haz clic con el botón derecho en **yourprojectname (Windows Universal)** y selecciona **Establecer como proyecto de inicio**. 
+
 Conecta HoloLens 2 a tu equipo.
 
 > [!IMPORTANT]
@@ -257,6 +260,6 @@ Para realizar una implementación en el dispositivo sin necesidad de que se inic
 Ya has implementado tu primera aplicación de HoloLens 2. A medida que avances, deberías ver una malla de asignación espacial que cubre todas las superficies que HoloLens 2 ha percibido. Además, deberías ver los indicadores en las manos y los dedos para el seguimiento de manos, así como un contador de velocidad de fotogramas para supervisar el rendimiento de la aplicación. Estos son solo algunas de las partes fundamentales, incluidas de fábrica en Mixed Reality Toolkit. En los tutoriales siguientes, comenzarás a agregar más contenido e interactividad a la escena, para que puedas explorar por completo las funcionalidades de HoloLens 2 y Mixed Reality Toolkit.
 
 > [!NOTE]
-> Es posible que veas el generador de perfiles de diagnóstico en la aplicación. Puedes activar y desactivar su visibilidad mediante el comando de voz **Toogle Diagnostics** (Activar el diagnóstico). Sin embargo, por lo general es recomendable mantener siempre visible el generador de perfiles durante el desarrollo para saber si los cambios a la aplicación pueden haber tenido un impacto en el rendimiento (por ejemplo, la aplicación HoloLens 2 debería [ejecutarse continuamente a 60 FPS](understanding-performance-for-mixed-reality.md)).
+> Es posible que veas el generador de perfiles de diagnóstico en la aplicación. Puedes activar y desactivar su visibilidad mediante el comando de voz **Toogle Diagnostics** (Alternar diagnóstico). Sin embargo, por lo general es recomendable mantener siempre visible el generador de perfiles durante el desarrollo para saber si los cambios a la aplicación pueden haber tenido un impacto en el rendimiento (por ejemplo, la aplicación HoloLens 2 debería [ejecutarse continuamente a 60 FPS](understanding-performance-for-mixed-reality.md)).
 
 [Tutorial siguiente: 3. Creación de la interfaz de usuario y configuración de Mixed Reality Toolkit](mrlearning-base-ch2.md)

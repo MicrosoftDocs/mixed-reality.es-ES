@@ -1,240 +1,241 @@
 ---
-title: 'Tutoriales de anclaje espacial de Azure: 1. Introducción a los delimitadores espaciales de Azure'
-description: Realiza este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
+title: 'Tutoriales sobre Azure Spatial Anchors: 1. Introducción a Azure Spatial Anchors'
+description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
-ms.openlocfilehash: 0163b61bfbf8bd583532092581d94f63e1c2a624
-ms.sourcegitcommit: bd536f4f99c71418b55c121b7ba19ecbaf6336bb
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fa0ebc409fa38f664bdd0966906c6fd77f7a6081
+ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77554684"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79376152"
 ---
-# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a los anclajes espaciales de Azure
+# <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a Azure Spatial Anchors
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Introducción
 
-Esta es la segunda serie de los tutoriales de HoloLens 2. En esta serie de tutoriales de tres partes, conocerá los aspectos básicos de los delimitadores espaciales de Azure.
+Esta es la segunda serie de los tutoriales de HoloLens 2. En esta serie de tutoriales de tres partes, aprenderás los aspectos básicos de Azure Spatial Anchors.
 
-En este primer tutorial, [Introducción a los anclajes espaciales de Azure](mrlearning-asa-ch1.md), explorará los distintos pasos necesarios para iniciar y detener una sesión de Azure y crear, cargar y descargar los delimitadores de Azure en un único dispositivo.
+En este primer tutorial, [Introducción a Azure Spatial Anchors](mrlearning-asa-ch1.md), explorarás los distintos pasos necesarios para iniciar y detener una sesión de Azure y crear, cargar y descargar anclajes de Azure en un único dispositivo.
 
-En el segundo tutorial, [guardado, recuperación y uso compartido de los anclajes espaciales de Azure](mrlearning-asa-ch2.md), aprenderá a guardar los anclajes espaciales de Azure en varias sesiones de la aplicación guardando la información del delimitador en el almacenamiento de HoloLens 2 y compartiendo esta información de delimitador en otros dispositivos para una alineación de delimitador de varios dispositivos.
+En el segundo tutorial, [Guardar, recuperar y compartir Azure Spatial Anchors](mrlearning-asa-ch2.md), aprenderás a guardar Azure Spatial Anchors en varias sesiones de aplicación al guardar la información de anclaje en el almacenamiento de HoloLens 2 y a compartir esta información en otros dispositivos para alinear el anclaje en varios dispositivos.
 
-En el tercer tutorial, en el que se [muestran los comentarios del delimitador espacial de Azure](mrlearning-asa-ch3.md), aprenderá a proporcionar a los usuarios comentarios sobre los eventos y Estados de delimitador al usar delimitadores espaciales de Azure.
+En el tercer tutorial, [Mostrar comentarios de Azure Spatial Anchors](mrlearning-asa-ch3.md), aprenderás a proporcionar a los usuarios comentarios sobre los eventos y estados de anclaje al usar Azure Spatial Anchors.
 
 ## <a name="objectives"></a>Objetivos
 
-* Conozca los aspectos básicos del desarrollo con los anclajes espaciales de Azure para HoloLens 2
+* Aprender los aspectos básicos del desarrollo con Azure Spatial Anchors para HoloLens 2
 * Crear, cargar y descargar anclajes espaciales
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 >[!TIP]
->Si aún no ha completado la serie de [tutoriales de introducción](mrlearning-base.md) , se recomienda que complete los tutoriales en primer lugar.
+>Si aún no has completado la serie de [tutoriales de introducción](mrlearning-base.md), es recomendable que lo hagas en primer lugar.
 
-* Un equipo Windows 10 configurado con las [herramientas instaladas](install-the-tools.md) correctas
+* Un equipo Windows 10 configurado con las [herramientas correctas instaladas](install-the-tools.md)
 * SDK de Windows 10 10.0.18362.0 o posterior
 * Capacidad básica para programar con C#
 * Un dispositivo HoloLens 2 [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode)
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X instalado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
-* Complete la sección [creación de un recurso de anclajes espaciales](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) de la guía de [Inicio rápido: creación de una aplicación de HoloLens en Unity que usa anclajes espaciales de Azure](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens) .
+* Completa la sección [Creación de un recurso de Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) del tutorial [Inicio rápido: Creación de una aplicación HoloLens en Unity que use Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens).
 
 > [!IMPORTANT]
 > La versión de Unity recomendada para esta serie de tutoriales es Unity 2019.2.X. Esta sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
 
-## <a name="creating-the-unity-project"></a>Crear el proyecto de Unity
+## <a name="creating-the-unity-project"></a>Creación del proyecto de Unity
 <!-- TODO: Consider renaming to 'Creating and preparing the Unity scene and project'-->
 
-En esta sección, creará un nuevo proyecto de Unity y lo preparará para el desarrollo de MRTK.
+En esta sección, crearás un nuevo proyecto de Unity y lo prepararás para el desarrollo con MRTK.
 
-Para ello, en primer lugar, siga las instrucciones de [inicialización del proyecto y de la primera aplicación](mrlearning-base-ch1.md), sin incluir la información de compilación de la [aplicación en el dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device) , que incluye los pasos siguientes:
+Para ello, antes debes seguir las instrucciones de [Inicialización de tu proyecto y primera aplicación](mrlearning-base-ch1.md), a excepción de la sección [Compilación de la aplicación para el dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device), que incluyen los pasos siguientes:
 
-1. [Cree un nuevo proyecto de Unity](mrlearning-base-ch1.md#create-new-unity-project) y asígnele un nombre adecuado, por ejemplo, *tutoriales de MRTK*.
+1. [Crear un proyecto de Unity](mrlearning-base-ch1.md#create-new-unity-project) y asignarle un nombre adecuado; por ejemplo, *Tutoriales de MRTK*.
 
 2. [Configurar el proyecto de Unity para Windows Mixed Reality](mrlearning-base-ch1.md#configure-the-unity-project-for-windows-mixed-reality)
 
-3. [Importar recursos esenciales de TextMesh Pro](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
+3. [Importar recursos de TextMesh Pro Essential](mrlearning-base-ch1.md#import-textmesh-pro-essential-resources)
 
-4. [Importar el kit de herramientas de realidad mixta](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)
+4. [Importar Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit)
 
-5. [Configuración del proyecto de Unity para el kit de herramientas de realidad mixta](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit)
+5. [Configurar el proyecto de Unity para Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit)
 
-6. [Agregue el kit de herramientas de realidad mixta a la escena de Unity](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) y proporcione a la escena un nombre adecuado, por ejemplo, *AzureSpatialAnchors*
+6. [Agregar Mixed Reality Toolkit a la escena de Unity](mrlearning-base-ch1.md#configure-the-mixed-reality-toolkit) y asignar un nombre adecuado a la escena; por ejemplo, *AzureSpatialAnchors*
 
-A continuación, siga las instrucciones de configuración de [perfiles de el kit de herramientas de realidad mixta (cambiar la opción de visualización de reconocimiento espacial)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) para cambiar el perfil de configuración de MRTK para la escena a **DefaultHoloLens2ConfigurationProfile** y cambiar las opciones de presentación de la malla de reconocimiento espacial a **oclusión**.
+A continuación, sigue las instrucciones de [Configuración de los perfiles de Mixed Reality Toolkit (modificación de la opción de visualización reconocimiento espacial)](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option) para cambiar el perfil de configuración de MRTK de la escena a **DefaultHoloLens2ConfigurationProfile** y las opciones de presentación de la malla de reconocimiento espacial a **Occlusion** (Oclusión).
 
 > [!CAUTION]
-> Como se mencionó en el [proyecto de configuración del proyecto de Unity para las instrucciones del kit de herramientas de realidad mixta](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit) vinculadas anteriormente, se recomienda encarecidamente no habilitar MSBuild para Unity.
+> Como se mencionó en las instrucciones vinculadas más arriba, [Configuración del proyecto de Unity para Mixed Reality Toolkit](mrlearning-base-ch1.md#configure-the-unity-project-for-the-mixed-reality-toolkit), es altamente recomendable no habilitar MSBuild para Unity.
 
-## <a name="adding-inbuilt-unity-packages"></a>Agregar paquetes de Unity integrados
+## <a name="adding-inbuilt-unity-packages"></a>Adición de paquetes de Unity integrados
 <!-- TODO: Consider renaming to 'Installing AR Foundation' -->
 
-En esta sección, instalará el paquete de AR Foundation integrado de Unity porque lo requiere el SDK de anclaje espacial de Azure que se importará en la sección siguiente.
+En esta sección, instalarás el paquete integrado de AR Foundation porque así lo requiere el SDK de Azure Spatial Anchors que importarás en la siguiente sección.
 
-En el menú de Unity, seleccione **ventana** > **Administrador de paquetes**:
+En el menú de Unity, selecciona **Window** > **Package Manager** (Ventana > Administrador de paquetes):
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section2-step1-1.png)
 
 > [!NOTE]
-> Puede que tarde unos segundos en aparecer en la lista.
+> Puede que el paquete de AR Foundation tarde unos segundos en aparecer en la lista.
 
-En la ventana del administrador de paquetes, seleccione **ar Foundation** e instale el paquete haciendo clic en el botón **instalar** :
+En la ventana Package Manager (Administrador de paquetes), selecciona **AR Foundation** e instala el paquete haciendo clic en el botón **Instalar**:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section2-step1-2.png)
 
-## <a name="importing-the-tutorial-assets"></a>Importar los activos del tutorial
+## <a name="importing-the-tutorial-assets"></a>Importación de los recursos del tutorial
 
-Descargue e **importe** los siguientes paquetes personalizados **de Unity en el orden en que**aparecen:
+Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen**:
 
-* [AzureSpatialAnchors. unitypackage Tools](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (versión 2.1.1)
-* [MRTK. HoloLens2. Unity. tutoriales. assets. GettingStarted. 2.3.0.2. unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
-* [MRTK. HoloLens2. Unity. tutoriales. assets. AzureSpatialAnchors. 2.3.0.0. unitypackage Tools](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
+* [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.1.1/AzureSpatialAnchors.unitypackage) (versión 2.1.1)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.3.0.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.3.0.0.unitypackage)
 
 > [!TIP]
-> Para obtener un recordatorio sobre cómo importar un paquete personalizado de Unity, puede consultar las instrucciones para [importar el kit de herramientas de realidad mixta](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit) .
+> Para obtener un recordatorio sobre cómo importar un paquete personalizado de Unity, consulta [Importación de Mixed Reality Toolkit](mrlearning-base-ch1.md#import-the-mixed-reality-toolkit).
 
-Después de haber importado los recursos del tutorial, la ventana del proyecto debería tener un aspecto similar al siguiente:
+Después de importar los recursos del tutorial, la ventana Project (Proyecto) debería tener un aspecto similar al siguiente:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section3-step1-1.png)
 
 ## <a name="creating-and-preparing-the-scene"></a>Creación y preparación de la escena
 <!-- TODO: Consider renaming to 'Preparing the scene' -->
 
-En esta sección, va a preparar la escena agregando algunos de los tutoriales de Prefabs.
+En esta sección, agregarás algunos objetos prefabricados del tutorial para preparar la escena.
 
-En la ventana del proyecto, vaya a **activos** > **MRTK. Tutoriales. AzureSpatialAnchors** > carpeta **Prefabs** Mientras mantiene presionado el botón CTRL, haga clic en **ButtonParent**, **DebugWindow**, **instrucciones**y **ParentAnchor** para seleccionar los cuatro Prefabs:
+Desde la ventana Proyecto, desplázate hasta **Assets** (Recursos) > **MRTK.Tutorials.AzureSpatialAnchors** > carpeta **Prefabs** (Objetos prefabricados). Mientras mantienes presionado el botón CTRL, haz clic en **ButtonParent**, **DebugWindow**, **Instructions** y **ParentAnchor** para seleccionar los cuatro objetos prefabricados:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section4-step1-1.png)
 
-Con las cuatro Prefabs todavía seleccionadas, arrástrelas a la ventana de jerarquía para agregarlas a la escena:
+Con los cuatro objetos prefabricados aún seleccionados, arrástralos a la ventana Hierarchy (Jerarquía) para agregarlos a la escena:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section4-step1-2.png)
 
-Para centrarse en los objetos de la escena, puede hacer doble clic en el objeto ParentAnchor y, a continuación, hacer zoom ligeramente hacia afuera:
+Para centrarte en los objetos de la escena, puedes hacer doble clic en el objeto ParentAnchor y, a continuación, volver a alejarte ligeramente:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section4-step1-3.png)
 
 > [!TIP]
-> Si encuentra iconos grandes en la escena, por ejemplo, los iconos ' t ' de gran tamaño que distraen, puede ocultarlos cambiando <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">el Gizmos</a> a la posición de apagado.
+> Si te molestan los grandes iconos de la escena; por ejemplo, los grandes iconos "T" enmarcados, puedes ocultarlos. Para hacerlo, desactiva los <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">gizmos</a>.
 
-## <a name="configuring-the-buttons-to-operate-the-scene"></a>Configuración de los botones para que funcione la escena
+## <a name="configuring-the-buttons-to-operate-the-scene"></a>Configuración de los botones para el funcionamiento de la escena
 
-En esta sección, agregará scripts a la escena para crear una serie de eventos de botón que muestran los aspectos básicos de cómo se comportan los delimitadores locales y los delimitadores espaciales de Azure en una aplicación.
+En esta sección, agregarás scripts a la escena para crear una serie de eventos de botón que muestran los aspectos básicos del comportamiento en la aplicación de los anclajes locales y Azure Spatial Anchors.
 
-### <a name="1-configure-the-pressable-button-holo-lens-2-script-component"></a>1. configurar el componente de botón presionado Hololens Lens 2 (Script)
+### <a name="1-configure-the-pressable-button-holo-lens-2-script-component"></a>1. Configurar el componente Pressable Button Holo Lens 2 (Script) (Botón presionable de HoloLens 2 [script])
 
-En la ventana jerarquía, expanda el objeto **ButtonParent** y seleccione el primer objeto secundario denominado **StartAzureSession**:
+En la ventana Hierarchy (Jerarquía), expande el objeto **ButtonParent** y selecciona el primer objeto secundario denominado **StartAzureSession**:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-1.png)
 
-En la ventana del inspector, busque el componente del botón que se ha **presionado Hololens Lens 2 (Script)** y agregue un nuevo agente de escucha de eventos al evento **pressed ()** . para ello, haga clic en el icono de **+** :
+En la ventana Inspector, busca el componente **Pressable Button Holo Lens 2 (Script)** (Botón presionable de HoloLens 2 [script]) y agrega un nuevo cliente de escucha de eventos al evento **Button Pressed ()** (Botón presionado []). Para hacerlo, haz clic en el icono **+** :
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-2.png)
 
-Con el objeto StartAzureSession todavía seleccionado en la ventana de jerarquía, haga clic en el objeto **ParentAnchor** de la ventana de la jerarquía y arrástrelo hasta el campo no vacío **(objeto)** del agente de escucha de eventos que acaba de agregar para hacer que el objeto ParentAnchor escuche los eventos presionados por el botón de este botón:
+Con el objeto StartAzureSession aún seleccionado en la ventana Hierarchy (Jerarquía), haz clic en el objeto **ParentAnchor** y arrástralo desde la ventana Hierarchy (Jerarquía) al campo **None (Object)** (Ninguno [objeto]) del cliente de escucha de eventos que acabas de agregar para que el objeto ParentAnchor escuche los eventos de botón presionado de este botón:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-3.png)
 
-Haga clic en la lista desplegable **no función** del mismo agente de escucha de eventos y, a continuación, seleccione **AnchorModuleScript** > **StartAzureSession ()** para establecer la función StartAzureSession () como la acción que se desencadena cuando se activa el botón eventos presionados desde este botón:
+Haz clic en la lista desplegable **No Function** (Ninguna función) del mismo cliente de escucha de eventos y, a continuación, selecciona **AnchorModuleScript** > **StartAzureSession ()** para establecer la función StartAzureSession () como la acción que se desencadena cuando se activa el evento de botón presionado desde este botón:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step1-4.png)
 
-### <a name="2-configure-the-interactable-script-component"></a>2. configurar el componente interactuable (Script)
+### <a name="2-configure-the-interactable-script-component"></a>2. Configurar el componente Interactable (Script) (Interactuable [script])
 
-Con el objeto StartAzureSession todavía seleccionado en la ventana de la jerarquía, en la ventana del inspector, busque el componente **interactuable (Script)** y repita el mismo proceso que en el paso 1 anterior para el evento **OnClick ()** :
+Con el objeto StartAzureSession todavía seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, busca el componente **Interactable (Script)** (Interactuable [script]) y repite el mismo proceso que en el paso 1 anterior para el evento **OnClick ()** :
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step2-1.png)
 
-### <a name="3-configure-the-remaining-buttons"></a>3. configurar los botones restantes
+### <a name="3-configure-the-remaining-buttons"></a>3. Configurar los botones restantes
 
-Para cada uno de los botones restantes, complete el proceso que se describe en los pasos 1 y 2 anteriores para asignar funciones a los eventos **Button pressed ()** y **OnClick ()** :
+Para cada uno de los botones restantes, completa el proceso descrito en los pasos 1 y 2 anteriores para asignar funciones a los eventos **Button Pressed ()** (Botón presionado []) y **OnClick ()** :
 
-* Para el objeto **StopAzureSession** , asigne la función AnchorModuleScript > **StopAzureSession ()** .
-* Para el objeto **CreateAzureAnchor** , asigne la función AnchorModuleScript > **CreateAzureAnchor ()** .
-  * a continuación, arrastre **ParentAnchor** de nuevo al campo vacío **ninguno (objeto de juego)** .
-* Para el objeto **RemoveLocalAnchor** , asigne la función AnchorModuleScript > **RemoveLocalAnchor ()** .
-  * a continuación, arrastre **ParentAnchor** de nuevo al campo vacío **ninguno (objeto de juego)** .
-* Para el objeto **FindAzureAnchor** , asigne la función AnchorModuleScript > **FindAzureAnchor ()** .
-* Para el objeto **DeleteAzureAnchor** , asigne la función AnchorModuleScript > **DeleteAzureAnchor ()** .
+* Para el objeto **StopAzureSession**, asigna la funciónAnchorModuleScript > **StopAzureSession ()** .
+* Para el objeto **CreateAzureAnchor**, asigna la función AnchorModuleScript > **CreateAzureAnchor ()** .
+  * A continuación, vuelve a arrastrar **ParentAnchor** al campo **None (Game Object)** (Ninguno [Objeto del juego]).
+* Para el objeto **RemoveLocalAnchor**, asigna la función AnchorModuleScript > **RemoveLocalAnchor ()** .
+  * A continuación, vuelve a arrastrar **ParentAnchor** al campo **None (Game Object)** (Ninguno [Objeto del juego]) vacío.
+* Para el objeto **FindAzureAnchor**, asigna la función AnchorModuleScript > **FindAzureAnchor ()** .
+* Para el objeto **DeleteAzureAnchor**, asigna la función AnchorModuleScript > **DeleteAzureAnchor ()** .
 
-### <a name="4-connect-the-scene-to-the-azure-resource"></a>4. conectar la escena al recurso de Azure
+### <a name="4-connect-the-scene-to-the-azure-resource"></a>4. Conexión de la escena al recurso de Azure
 
-En la ventana jerarquía, seleccione el objeto **ParentAnchor** y, en la ventana del inspector, desplácese hacia abajo hasta el componente **Administrador de delimitadores espaciales (Script)** .
+En la ventana Hierarchy (Jerarquía), selecciona el objeto **ParentAnchor** y, en la ventana Inspector, desplázate hacia abajo hasta el componente **Spatial Anchor Manager (Script)** (Administrador del anclaje espacial [script]).
 
-A continuación, en la sección **credenciales** , pegue el identificador y la clave de la cuenta de anclaje espacial que creó como parte de los [requisitos previos](mrlearning-asa-ch1.md#prerequisites)de este tutorial, en los campos de clave de cuenta de los **delimitadores** espaciales y los **delimitadores espaciales** correspondientes:
+A continuación, en la sección **Credentials** (Credenciales), pega el identificador y la clave de la cuenta de Spatial Anchors, que creaste como parte de los [Requisitos previos](mrlearning-asa-ch1.md#prerequisites) de este tutorial, en los campos **Spatial Anchors Account Id** (Id. de cuenta de Spatial Anchors) y **Spatial Anchors Account Key** (Clave de cuenta de Spatial Anchors):
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section5-step4-1.png)
 
-## <a name="trying-the-basic-behaviors-of-azure-spatial-anchors"></a>Prueba de los comportamientos básicos de los anclajes espaciales de Azure
+## <a name="trying-the-basic-behaviors-of-azure-spatial-anchors"></a>Prueba de los comportamientos básicos de Azure Spatial Anchors
 
-Ahora que la escena está configurada para mostrar los aspectos básicos de los anclajes espaciales de Azure, es el momento de implementar la aplicación para que pueda experimentar los anclajes espaciales de Azure de primera mano.
+Ahora que la escena está configurada para mostrar los aspectos básicos de Azure Spatial Anchors, es el momento de implementar la aplicación para que puedas experimentar Azure Spatial Anchors de primera mano.
 
-### <a name="1-add-additional-required-capabilities"></a>1. agregar funcionalidades adicionales necesarias
+### <a name="1-add-additional-required-capabilities"></a>1. Agregar las funcionalidades adicionales necesarias
 
-En el menú de Unity, seleccione **editar** > **configuración del proyecto...** para abrir la ventana Configuración del reproductor:
+En el menú de Unity, selecciona **Edit** > **Project Settings...** (Editar > Configuración del proyecto...) para abrir la ventana Player Settings (Configuración del jugador):
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-1.png)
 
-En la ventana Configuración del reproductor, seleccione **reproductor** y, a continuación, **configuración de publicación**:
+En la ventana Player Settings (Configuración del jugador), selecciona **Player** (Jugador) y, a continuación, **Publishing Settings** (Configuración de publicación):
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-2.png)
 
-En la **configuración de publicación**, desplácese hacia abajo hasta la sección **capacidades** y compruebe que las capacidades **InternetClient**, **Microphone**y **SpatialPerception** , que ha habilitado al crear el proyecto al principio del tutorial, están habilitadas. A continuación, habilite las funcionalidades de **InternetClientServer**, **PrivateNetworkClientServer**, **RemovableStorage**y **Webcam** :
+En **Publishing Settings** (Configuración de publicación), desplázate hasta la sección **Capabilities** (Funcionalidades) y comprueba que las funcionalidades **InternetClient**, **Microphone** y **SpatialPerception** que habilitaste al crear el proyecto al principio del tutorial estén activadas. A continuación, habilita las funcionalidades **InternetClientServer**, **PrivateNetworkClientServer**, **RemovableStorage** y **Webcam**:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step1-3.png)
 
-### <a name="2-deploy-the-app-to-your-hololens-2"></a>2. implementación de la aplicación en HoloLens 2
+### <a name="2-deploy-the-app-to-your-hololens-2"></a>2. Implementar la aplicación en HoloLens 2
 
-Los anclajes espaciales de Azure no se pueden ejecutar en Unity, por lo que para probar la funcionalidad de los anclajes espaciales de Azure, debe implementar el proyecto en el dispositivo.
+Azure Spatial Anchors no se puede ejecutar en Unity, de modo que, para probar la funcionalidad Azure Spatial Anchors, debes implementar el proyecto en el dispositivo.
 
 > [!TIP]
-> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones [compilar la aplicación en el dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device) .
+> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puedes consultar las instrucciones de [Compilación de la aplicación para el dispositivo](mrlearning-base-ch1.md#build-your-application-to-your-device).
 
-### <a name="3-run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>3. Ejecute la aplicación en HoloLens 2 y siga las instrucciones de la aplicación.
+### <a name="3-run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>3. Ejecutar la aplicación en HoloLens 2 y seguir las instrucciones desde la aplicación
 
 > [!CAUTION]
-> Los delimitadores espaciales de Azure usan Internet para guardar y cargar los datos de delimitador, por lo que debe asegurarse de que el dispositivo está conectado a Internet.
+> Azure Spatial Anchors usa Internet para guardar y cargar los datos de anclaje, por lo que debes asegurarte de que el dispositivo está conectado a Internet.
 
-Cuando la aplicación se ejecuta en el dispositivo, siga las instrucciones en pantalla que se muestran en el panel de instrucciones del tutorial de delimitador espacial de Azure:
+Cuando la aplicación se ejecute en el dispositivo, sigue las instrucciones en pantalla que se muestran en el panel de instrucciones del tutorial de Azure Spatial Anchors:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section6-step3-1.png)
 
-## <a name="anchoring-an-experience"></a>Delimitar una experiencia
+## <a name="anchoring-an-experience"></a>Anclaje de una experiencia
 
-En las secciones anteriores, ha aprendido los aspectos básicos de los delimitadores espaciales de Azure. Usamos un cubo para representar y visualizar el objeto de juego primario con el delimitador adjunto. En esta sección, aprenderá a anclar una experiencia completa colocándolo como un elemento secundario del objeto ParentAnchor.
+En las secciones anteriores, has aprendido los aspectos básicos de Azure Spatial Anchors. Hemos usado un cubo para representar y visualizar el objeto de juego principal con el anclaje adjunto. En esta sección, aprenderás a anclar una experiencia completa colocándola como elemento secundario del objeto ParentAnchor.
 
-### <a name="1-add-the-rocket-launcher-experience"></a>1. agregar la experiencia del selector de Rocket
+### <a name="1-add-the-rocket-launcher-experience"></a>1. Incorporación de la experiencia del lanzacohetes
 
-En la ventana de proyecto, navegue a los **recursos** > **MRTK. Tutoriales. GettingStarted** > **Prefabs** > carpeta **RocketLauncher** y seleccione el **RocketLauncher_Complete** recurso prefabricado:
+En la ventana Project (Proyecto), navega hasta la carpeta **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** > **RocketLauncher** (Recursos > MRTK.Tutorials.GettingStarted > Objetos prefabricados > RocketLauncher) y selecciona el objeto prefabricado **RocketLauncher_Complete**:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section7-step1-1.png)
 
-Con el RocketLauncher_Complete recurso prefabricado todavía seleccionado, arrástrelo sobre el objeto **ParentAnchor** de la ventana jerarquía para convertirlo en un elemento secundario del objeto ParentAnchor:
+Con el objeto prefabricado RocketLauncher_Complete todavía seleccionado, arrástralo sobre el objeto **ParentAnchor** en la ventana Hierarchy (Jerarquía) para convertirlo en un elemento secundario del objeto ParentAnchor:
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section7-step1-2.png)
 
-### <a name="2-reposition-the-rocket-launcher-experience"></a>2. cambiar la posición de la experiencia del selector de Rocket
+### <a name="2-reposition-the-rocket-launcher-experience"></a>2. Cambio de posición de la experiencia del lanzacohetes
 
-Coloque, gire y escale el objeto de **RocketLauncher_Complete** a una escala y orientación adecuadas, y asegúrese también de que el objeto **ParentAnchor** todavía está expuesto, por ejemplo:
+Coloca, gira y escala el objeto **RocketLauncher_Complete** a una escala y orientación adecuadas, al mismo tiempo que se garantiza que el objeto **ParentAnchor** sigue expuesto; por ejemplo:
 
-* **Posición** de transformación X = 0, Y = 0, Z = 3,75
-* Transformación de **giro** X = 0, Y = 90, Z = 0
-* **Escala** de transformación X = 10, Y = 10, Z = 10
+* Transforma el valor de **Position** (Posición) X = 0, Y = 0, Z = 3,75
+* Transforma el valor de **Rotation** (Rotación) X = 0, Y = 90, Z = 0
+* Transforma el valor de **Scale** (Escala) X = 10, Y = 10, Z = 10
 
 ![mrlearning-asa](images/mrlearning-asa/tutorial1-section7-step2-1.png)
 
-En la aplicación, los usuarios ahora pueden volver a colocar toda la experiencia del selector de Rocket moviendo el cubo.
+Ahora, en la aplicación, los usuarios pueden mover el cubo para cambiar la posición de la experiencia del lanzacohetes por completo.
 
 > [!TIP]
-> Hay una variedad de flujos de experiencia del usuario para cambiar la posición de las experiencias, incluido el uso de un objeto de cambio de posición (por ejemplo, el cubo que se usa en este tutorial), el uso de un botón para alternar un rectángulo de selección que rodea la experiencia, el uso de la posición y la rotación. Gizmos y mucho más.
+> Hay una variedad de flujos de experiencia del usuario para cambiar la posición de las experiencias, incluido el uso de un objeto de cambio de posición (como el cubo que se usa en este tutorial), el uso de un botón para activar o desactivar el cuadro de límite que rodea la experiencia, el uso de gizmos de posición y rotación, etc.
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En este tutorial, ha aprendido los aspectos básicos de los delimitadores espaciales de Azure. El tutorial le proporcionó varios botones que le permiten explorar los distintos pasos necesarios para iniciar y detener una sesión de anclajes espaciales de Azure y crear, cargar y descargar los anclajes espaciales de Azure en un único dispositivo.
+En este tutorial, has aprendido los aspectos básicos de Azure Spatial Anchors. El tutorial te ha proporcionado varios botones que te permiten explorar los distintos pasos necesarios para iniciar y detener una sesión de Azure Spatial Anchors y crear, cargar y descargar Azure Spatial Anchors en un único dispositivo.
 
-En la siguiente lección, aprenderá a guardar los identificadores de delimitador de Azure en HoloLens 2 para su recuperación, incluso después de reiniciar la aplicación, y cómo transferir los identificadores de delimitador entre varios dispositivos para lograr la alineación espacial.
+En la siguiente lección, aprenderás a guardar los identificadores de anclaje de Azure en HoloLens 2 para su recuperación, incluso después de reiniciar la aplicación, así como la forma de transferir los identificadores de anclaje entre varios dispositivos para lograr la alineación espacial.
 
-[Lección siguiente: 2. guardar, recuperar y compartir anclajes espaciales de Azure](mrlearning-asa-ch2.md)
+[Siguiente lección: 2. Guardado, recuperación y uso compartido de Azure Spatial Anchors](mrlearning-asa-ch2.md)
