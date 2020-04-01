@@ -7,18 +7,20 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, CPU, GPU, representación, recolección de elementos no utilizados, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: f889d899ba55f4b3040080f6632cd27db86d6fc3
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 18691ab7993b2802268d3c4ce05532dfa5bd1723
+ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160021"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendaciones de rendimiento para Unity
 
 Este artículo se basa en la explicación que se indica en las [recomendaciones de rendimiento para la realidad mixta](understanding-performance-for-mixed-reality.md), pero se centra en los conocimientos específicos del entorno del motor Unity.
 
-También es muy aconsejable que los desarrolladores revisen el [artículo sobre la configuración del entorno recomendada para Unity](Recommended-settings-for-unity.md). En este artículo se incluye contenido con algunas de las configuraciones de escenas más importantes para la creación de aplicaciones de realidad mixta de gran rendimiento. Algunas de estas configuraciones recomendadas también se indican a continuación.
+## <a name="use-recommended-unity-project-settings"></a>Uso de la configuración del proyecto de Unity
+
+El primer paso más importante al optimizar el rendimiento de las aplicaciones de realidad mixta en Unity es asegurarse de que estás usando la [configuración de entorno recomendada para Unity](recommended-settings-for-unity.md). En este artículo se incluye contenido con algunas de las configuraciones de escenas más importantes para la creación de aplicaciones de realidad mixta de gran rendimiento. Algunas de estas configuraciones recomendadas también se indican a continuación.
 
 ## <a name="how-to-profile-with-unity"></a>Cómo generar perfiles con Unity
 

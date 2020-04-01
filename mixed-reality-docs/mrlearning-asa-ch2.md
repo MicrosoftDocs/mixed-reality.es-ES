@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 4de40bb0b66ed299fa4a571490b33a0454f25817
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 36f25229469e848a3f0612a5971cc8e9381262f5
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031703"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362005"
 ---
 # <a name="2-saving-retrieving-and-sharing-azure-spatial-anchors"></a>2. Guardar, recuperar y compartir Azure Spatial Anchors
 
@@ -52,7 +52,10 @@ Si compilas la aplicación actualizada en HoloLens, puedes conservar Azure Spati
 5. Reinicia la aplicación.
 6. Obtén el anclaje de Azure del disco (carga el id. de anclaje que acabas de guardar).
 7. Inicia una sesión de Azure.
-8. Busca el anclaje de Azure (coloca la experiencia del lanzacohetes en la ubicación del paso 3).
+8. busca el anclaje de Azure (coloca la experiencia del lanzacohetes en la ubicación del paso 3).
+
+> [!NOTE]
+> Para reiniciar completamente la aplicación, después de salir de la vista de aplicación envolvente, la ventana de la aplicación en el ambiente principal debe cerrarse antes de volver a iniciar la aplicación desde el menú Inicio. Para obtener más información, puedes consultar la documentación de [Usar aplicaciones en HoloLens](https://docs.microsoft.com/hololens/holographic-home#using-apps-on-hololens).
 
 ## <a name="share-azure-anchors-between-multiple-devices"></a>Compartir anclajes de Azure entre varios dispositivos
 
@@ -75,7 +78,7 @@ Si compilas la aplicación actualizada en dos dispositivos HoloLens, ahora puede
 2. En el dispositivo HoloLens 1: inicia una sesión de Azure.
 3. En el dispositivo HoloLens 1: crea un anclaje de Azure (crea anclajes en la ubicación de la experiencia del lanzacohetes).
 4. En el dispositivo HoloLens 1: comparte el id. de anclaje de Azure con la red
-5. En el dispositivo HoloLens 2: reinicia la aplicación.
+5. En el dispositivo HoloLens 2: Inicia la aplicación.
 6. En el dispositivo HoloLens 2: obtén el identificador de anclaje compartido de la red (captura el identificador de anclaje que se acaba de compartir desde el dispositivo HoloLens 1).
 7. En el dispositivo HoloLens 2: inicia una sesión de Azure.
 8. En el dispositivo HoloLens 2: busca el anclaje de Azure (coloca la experiencia del lanzacohetes en la ubicación del paso 3).

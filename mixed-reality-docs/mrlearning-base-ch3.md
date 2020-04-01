@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2825f99f49eca6fd7277d02828bfe1bc3c23291a
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 8a85ab560d0e6b36b589970b4d5b8a441ed2bbe2
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031220"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362034"
 ---
 # <a name="4-placing-dynamic-content-and-using-solvers"></a>4. Colocación del contenido dinámico y uso de solucionadores
 <!-- Consider renaming to 'Placing dynamic content using Solvers' -->
@@ -39,7 +39,7 @@ En este tutorial, revisaremos la implementación de los solucionadores Orbital y
 En esta sección, mejorarás la colección de botones que creaste en el tutorial anterior para que siga la dirección de la mirada del usuario. Además, también configurarás el solucionador para que la colección de botones siempre:
 
 * se gire en paralelo a la dirección de lectura del usuario, para proporcionar una lectura natural de izquierda a derecha;
-* se coloque ligeramente por debajo de la dirección de mirada horizontal del usuario para no obstaculizar otros objetos que se agregarán más adelante en este tutorial.
+* se coloque por debajo de la dirección de mirada horizontal del usuario para no obstaculizar otros objetos que se agregarán más adelante en este tutorial;
 * se coloque, aproximadamente, a la distancia de la longitud de un brazo del usuario para que los botones se puedan presionar fácilmente.
 
 Para ello, usarás el **solucionador Orbital**, que bloquea el objeto en una posición y desplazamiento especificados respecto al objeto al que se hace referencia.

@@ -7,12 +7,12 @@ ms.date: 05/02/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 419b381c1240b2cc10708eab03245ed3aabfa859
-ms.sourcegitcommit: 61291e83536c8cb2e8401a8e66060128ede35922
+ms.openlocfilehash: 65bcef6a7c10450816d7a928302b0b266b132f0f
+ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416137"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362064"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interacción con objetos 3D
 
@@ -268,7 +268,7 @@ En el componente **Hand Interaction Touch (Script)** (Interacción con la mano t
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-1.png)
 
-Ve a **Assets** > **MixedRealityToolkit.SDK** > **StandardAssets** > Materials (Assets > MixedRealityToolkit.SDK > StandardAssets > Materiales) para ver los clips de audio que se incluyen con el MRTK y asigna un clip de audio adecuado al campo **Clip de audio**; por ejemplo, el clip de audio MRTK_Gem:
+Ve a **Assets** > **MixedRealityToolkit.SDK** > **StandardAssets** > **Audio** para ver los clips de audio que se incluyen con el MRTK y, a continuación, asigna un clip de audio adecuado al campo **Clip de audio**; por ejemplo, el clip de audio MRTK_Gem:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section6-step4-2.png)
 
