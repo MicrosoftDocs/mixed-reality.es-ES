@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, Native, aplicación nativa, motor personalizado, middleware
-ms.openlocfilehash: 8a3cfef506f47a7cc49bff2851b9fc14c8a830b4
-ms.sourcegitcommit: 9de2cb11321e6517db69e8c93459a205900a2174
+ms.openlocfilehash: 04b2404889dc74f191543466beb7ae1e516d0d42
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160011"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549378"
 ---
 # <a name="openxr"></a>OpenXR
 
@@ -62,7 +62,7 @@ En julio de 2020, el tiempo de ejecución de OpenXR mixed reality de Windows adm
 | [<br />de interacción de mano (replanteamiento/objetivo, toque de aire, agarre)](hands-and-tools.md) | **`MSFT_preview` extensión disponible:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_interaction_preview">XR_MSFT_hand_interaction_preview</a></code><p>**`MSFT` versión**: abril 2020 *(planeada)*</p> |
 | [Articulation de mano + malla de mano](hands-and-tools.md) | **`MSFT_preview` extensión disponible:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_tracking_preview">XR_MSFT_hand_tracking_preview</a></code><br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_hand_tracking_mesh_preview">XR_MSFT_hand_tracking_mesh_preview</a></code><p>**versión de`MSFT`** : 2020 de mayo *(planeada)*</p> |
 | Interoperabilidad con otros SDK de HoloLens (por ejemplo, [QR](qr-code-tracking.md)) | **`MSFT_preview` extensión disponible:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_spatial_graph_bridge_preview">XR_MSFT_spatial_graph_bridge_preview</a></code><p>**versión de`MSFT`** : 2020 de mayo *(planeada)*</p> |
-| [Mirada con ojo](eye-tracking.md) | <p>**`MSFT_preview`** : abril 2020 *(planeada)*</p><p>**`MSFT` o `EXT` versión**: 2020 de mayo *(planeada)*</p> |
+| [Mirada con ojo](eye-tracking.md) | <p>**`EXT` extensión definida**: *(aún no se admite)*<br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_eye_gaze_interaction" target="_blank">XR_EXT_eye_gaze_interaction</a></code><p>**Compatibilidad con vista previa**: 2020 de abril *(planeada)*</p><p>**Compatibilidad completa**: mayo 2020 *(planeada)*</p> |
 | [<br />de captura de realidad mixta (tercera representación de la cámara PV)](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) | **`MSFT_preview` extensión disponible:**<br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_secondary_view_configuration_preview">XR_MSFT_secondary_view_configuration_preview</a></code><br /><code><a href="https://microsoft.github.io/OpenXR-MixedReality/openxr_preview/specs/openxr.html#XR_MSFT_first_person_observer_preview">XR_MSFT_first_person_observer_preview</a></code><br /><p>**`MSFT` versión**: junio 2020 *(planeada)*</p> |
 | [Modelos de representación de controlador de movimiento](motion-controllers.md#rendering-the-motion-controller-model) | <p>**`MSFT_preview`** : abril 2020 *(planeada)*</p><p>**versión de`MSFT`** : 2020 de julio *(planeada)*</p> |
 | [Comprensión de escenas (planos, mallas)](scene-understanding.md) | <p>**`MSFT_preview`** : 2020 de mayo *(planeada)*</p><p>**versión de`MSFT`** : 2020 de julio *(planeada)*</p> |

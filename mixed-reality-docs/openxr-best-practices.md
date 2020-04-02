@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, Native, aplicación nativa, motor personalizado, middleware, procedimientos recomendados, rendimiento, calidad, estabilidad
-ms.openlocfilehash: c0ddbd0604760ccae34d347e93b918be4aead269
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: 0a0bbd37521be52ec328b4f32e53969c0ec7fef4
+ms.sourcegitcommit: 46bd1a56d272a5880f410751fa8429d65d816431
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362016"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80549364"
 ---
 # <a name="openxr-app-best-practices"></a>Prácticas recomendadas de aplicaciones de OpenXR
 
@@ -25,8 +25,8 @@ Para obtener más recomendaciones sobre el rendimiento específicas de HoloLens 
 
 ### <a name="gamma-correct-rendering"></a>Representación gamma-correcta
 
-Se debe tener cuidado para asegurarse de que la canalización de representación sea correcta. Al representar en un intercambio, el formato de vista de destino de representación debe coincidir con el formato intercambio (por ejemplo, DXGI_FORMAT_B8G8R8A8_UNORM_SRGB para el formato intercambio y la vista representación-destino).
-La excepción es si la canalización de representación de la aplicación realiza una conversión sRGB manual en el código del sombreador, en cuyo caso la aplicación debe solicitar un formato sRGB intercambio pero usar el formato lineal para la vista de representación-destino (por ejemplo, solicitar DXGI_FORMAT_B8G8R8A8_UNORM_SRGB como el el formato intercambio, pero usa DXGI_FORMAT_B8G8R8A8_UNORM como vista de destino de representación) para evitar que el contenido se corrija con doble gamma.
+Se debe tener cuidado para asegurarse de que la canalización de representación sea correcta. Al representar en un intercambio, el formato de vista de destino de representación debe coincidir con el formato intercambio (por ejemplo, `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` para el formato intercambio y la vista representación-destino).
+La excepción es si la canalización de representación de la aplicación realiza una conversión sRGB manual en el código del sombreador, en cuyo caso la aplicación debe solicitar un formato sRGB intercambio pero usar el formato lineal para la vista de destino de representación (por ejemplo, solicitar `DXGI_FORMAT_B8G8R8A8_UNORM_SRGB` como el formato intercambio, pero usar `DXGI_FORMAT_B8G8R8A8_UNORM` como vista de destino de representación) para evitar que el contenido se corrija con doble gamma.
 
 ### <a name="submit-depth-buffer-for-projection-layers"></a>Enviar búfer de profundidad para capas de proyección
 
