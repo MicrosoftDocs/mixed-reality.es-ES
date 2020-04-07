@@ -6,12 +6,12 @@ ms.author: kegodin
 ms.date: 11/02/2019
 ms.topic: article
 keywords: Windows Mixed Reality, sonido espacial, diseño, estilo
-ms.openlocfilehash: 34923e1ebfc8e46ea8e67a4444fe3c2691efd4db
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 08844f6d837407d52ad2ab84b78440ce856151fc
+ms.sourcegitcommit: b1ca4194eff452804ce5852208cce9815c6a4500
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75182015"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80677982"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>Cómo usar sonido en aplicaciones de realidad mixta
 
@@ -46,20 +46,20 @@ Los tipos de interacción en la realidad mixta incluyen gestos, manipulación di
 
 ### <a name="gesture-interactions"></a>Interacciones de gestos
 En realidad mixta, los usuarios pueden interactuar con los botones mediante un mouse. Normalmente, las acciones de botón se producen cuando el usuario suelta en lugar de presionar el botón para dar al usuario la oportunidad de cancelar la interacción. Use sonidos para reforzar estas fases. Para ayudar a los usuarios a centrarse en botones distantes, considere también el uso de un sonido de desplazamiento del puntero.
-* Botón: los sonidos de la prensa deben ser cortos y táctiles.<br/>Ejemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Button: "unpress" los sonidos deben tener una sensación similar. Un tono más alto que el sonido de la prensa refuerza el sentido de la finalización.<br/>Ejemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
+* Botón: los sonidos de la prensa deben ser cortos y táctiles.<br/>Ejemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Button: "unpress" los sonidos deben tener una sensación similar. Un tono más alto que el sonido de la prensa refuerza el sentido de la finalización.<br/>Ejemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 * En el caso de los sonidos del mouse, considere la posibilidad de usar un sonido sutil y no amenazante, como un thud o golpe de baja frecuencia.
 
 ### <a name="direct-manipulation"></a>Manipulación directa
 En HoloLens 2, el seguimiento de mano articulado admite la manipulación directa de los elementos de la interfaz de usuario. Los sonidos son importantes cuando no hay otros comentarios físicos.
 
 Un sonido de *presionar un botón* es importante en la manipulación directa porque el usuario no obtiene ninguna otra indicación cuando llega a la parte inferior del trazo de tecla. Los indicadores sonoros de viajes clave pueden ser pequeños, sutiles y ocluidos. Al igual que con las interacciones de gestos, las pulsaciones de botón deberían obtener un sonido corto y táctil, como un clic. Las desimprentas deben tener un sonido de clic similar pero con un tono elevado.
-* Ejemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
-* Ejemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_ButtonUnpress)
+* Ejemplo: [MRTK_ButtonPress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonPress.wav)
+* Ejemplo: [MRTK_ButtonUnpress. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_ButtonUnpress.wav)
 
 Es difícil confirmar visualmente una acción de captura o de lanzamiento. La mano del usuario suele estar en la forma de cualquier efecto visual y los objetos de cuerpo rígidos no tienen un aspecto visual del mundo real "captando". Los sonidos pueden comunicar eficazmente las interacciones de captación y versión correctas.
-* Las acciones de captación deben tener un sonido de tacto corto y ligeramente silenciado que confiere la idea de cerrar los dedos alrededor de un objeto. A veces también hay un sonido "whoosh" que conduce hasta el sonido de captación para comunicar el movimiento de la mano.<br/>Ejemplo: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
-* Las acciones de lanzamiento deben obtener un sonido de igual corta y táctil. Normalmente, es más baja que el sonido de la toma y en orden inverso, con un impacto y, a continuación, un "whoosh" para comunicar que el objeto está en su lugar.<br/>Ejemplo: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MixedRealityToolkit.SDK/StandardAssets/Audio/MRTK_Move_End.wav)
+* Las acciones de captación deben tener un sonido de tacto corto y ligeramente silenciado que confiere la idea de cerrar los dedos alrededor de un objeto. A veces también hay un sonido "whoosh" que conduce hasta el sonido de captación para comunicar el movimiento de la mano.<br/>Ejemplo: [MRTK_Move_Start. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_Start.wav)
+* Las acciones de lanzamiento deben obtener un sonido de igual corta y táctil. Normalmente, es más baja que el sonido de la toma y en orden inverso, con un impacto y, a continuación, un "whoosh" para comunicar que el objeto está en su lugar.<br/>Ejemplo: [MRTK_Move_End. wav](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio/MRTK_Move_End.wav)
 
 Una interacción de *dibujo* debe obtener un sonido persistente y en bucle cuyo volumen esté determinado por el movimiento de la mano del usuario. Debe ser silenciosa cuando la mano del usuario sigue siendo la más alta cuando la mano se mueve rápidamente.
 
