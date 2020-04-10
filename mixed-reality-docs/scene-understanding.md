@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 4b959b7b7ec58fc30ed0fe93b568d123cbe70bb1
-ms.sourcegitcommit: 7e8b9de561cbc8483e84511f3e9cbd779f3a999f
+ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/27/2019
-ms.locfileid: "75502676"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003341"
 ---
 # <a name="scene-understanding"></a>Conocimiento de escenas
 
@@ -40,7 +40,7 @@ Si no tiene un dispositivo y desea tener acceso a escenas de ejemplo para probar
 Si busca detalles específicos sobre cómo desarrollar para la comprensión de escenas o detalles sobre cómo funciona la comprensión de escenas y cómo desarrollar para ello, consulte la documentación de [información general sobre el SDK de introducción](scene-understanding-SDK.md) a la escena.
 
 
-### <a name="sample"></a>Muestra
+### <a name="sample"></a>Ejemplo
 
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
@@ -53,7 +53,7 @@ Si busca detalles específicos sobre cómo desarrollar para la comprensión de e
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Característica</strong></td>
+        <td><strong>Ofrecen</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -73,11 +73,11 @@ Si busca detalles específicos sobre cómo desarrollar para la comprensión de e
 
 <br>
 
-Muchos de los escenarios principales para las aplicaciones compatibles con el entorno (selección de ubicación, oclusión, física, etc.) son direccionables por la asignación espacial y la comprensión de escenas, y en esta sección se resaltan estas diferencias. Una diferencia principal entre la comprensión de escenas y la asignación espacial es un equilibrio entre la precisión máxima y la latencia y la estructura y simplicidad. Si su aplicación requiere los triángulos de malla posible y de menor latencia que solo desea acceder directamente a la asignación espacial pero está realizando un procesamiento de mayor nivel, puede considerar la posibilidad de cambiar al modelo de comprensión de la escena, tal como debe proporcionar. con un superconjunto de funcionalidad. Tenga en cuenta también que, dado que la comprensión de la escena proporciona la malla de asignación espacial como parte de su representación, siempre tendrá acceso a los datos de asignación espacial más completos y precisos posibles.
+Muchos de los escenarios principales para las aplicaciones compatibles con el entorno (selección de ubicación, oclusión, física, etc.) son direccionables por la asignación espacial y la comprensión de escenas, y en esta sección se resaltan estas diferencias. Una diferencia principal entre la comprensión de escenas y la asignación espacial es un equilibrio entre la precisión máxima y la latencia y la estructura y simplicidad. Si su aplicación requiere los triángulos de malla posible y de menor latencia a los que solo desea acceder, utilice la asignación espacial directamente. Si va a realizar un procesamiento de nivel superior, puede considerar la posibilidad de cambiar al modelo de comprensión de la escena, ya que debe proporcionarle un superconjunto de funcionalidad. Tenga en cuenta también que, dado que el conocimiento de escenas proporciona una instantánea de la malla de asignación espacial como parte de su representación, siempre tendrá acceso a los datos de asignación espacial más completos y precisos posibles.
 
 En las secciones siguientes se vuelven a visitar los escenarios principales de asignación espacial en el contexto de la nueva escena que comprende el SDK.
 
-### <a name="placement"></a>Colocación
+### <a name="placement"></a>Ubicación
 
 La comprensión de la escena proporciona nuevas construcciones diseñadas específicamente para simplificar los escenarios de colocación. Una escena puede calcular primitivas denominadas SceneQuads que describen las superficies planas en las que se pueden colocar hologramas. SceneQuads se han diseñado específicamente en torno a la selección de ubicación y describen una superficie 2D y proporcionan una API para la selección de ubicación en esa superficie. Anteriormente, al usar la malla del triángulo para realizar la selección de ubicación, se tenía que examinar todas las áreas de la cuádruple y realizar el rellenado y el procesamiento posterior de huecos para identificar buenas ubicaciones para la colocación de objetos. Esto no siempre es necesario con cuatro, ya que la escena que comprende el tiempo de ejecución es capaz de deducir las áreas de la cuádruple que no se han analizado e invalidar las áreas de la cuádruple que no forman parte de la superficie.
 
@@ -105,7 +105,7 @@ La [oclusión de asignación espacial](spatial-mapping.md#occlusion) sigue siend
 
 Si sus requisitos pueden tolerar el aumento de la latencia de la comprensión de la escena, los desarrolladores de aplicaciones deben considerar la posibilidad de usar la escena para comprender la malla estanca y, presumiblemente, la malla de asignación espacial al unísono con representaciones planas. Esto proporcionaría un escenario "lo mejor de ambos mundos" en el que la oclusión estanca simplificada se casado con geometría no plana más precisa que proporciona los mapas de oclusión más realistas posibles.
 
-### <a name="physics"></a>Física
+### <a name="physics"></a>Efectos
 
 La comprensión de escenas genera mallas estancos que descomponen el espacio con semántica, específicamente para abordar muchas limitaciones de la física que imponen las mallas de asignación espacial. Las estructuras estancas garantizan que siempre se alcanzan las conversiones de rayos físicos y la descomposición semántica permite una generación más sencilla de mallas de navegación para la navegación en interiores. Como se describe en la sección sobre la [oclusión](#occlusion), la creación de una escena con EnableSceneObjectMeshes y EnableWorldMesh producirá la malla más completa posible. La propiedad estanca de la malla del entorno impedirá que las pruebas de posicionamiento no se realicen en las superficies de posicionamiento y los datos de la malla garantizarán que la física interactúe con todos los objetos de la escena, y no solo con la estructura de la habitación.
 

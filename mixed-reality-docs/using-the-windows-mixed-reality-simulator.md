@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 04/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, simulador, pruebas
-ms.openlocfilehash: a7cbd5b5ca1c0ed0e4f81715d337d5eec68117f0
-ms.sourcegitcommit: f5c1dedb3b9e29f27f627025b9e7613931a7ce18
+ms.openlocfilehash: 686cac4e9ab4b3354767e22cd87d37ffbb508dea
+ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64580704"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81003301"
 ---
 # <a name="using-the-windows-mixed-reality-simulator"></a>Usar el simulador de realidad mixta de Windows
 
@@ -22,8 +22,8 @@ El simulador de realidad mixta de Windows le permite probar aplicaciones de real
 1. **Habilitar el modo de desarrollador** desde configuración-> Update y > de seguridad para desarrolladores
 2. Inicio del **portal de realidad mixta** desde el escritorio
 3. Si esta es la primera vez que inicia el portal, deberá pasar por la experiencia de instalación.
-   1. Haga **clic** en introducción
-   2. Haga **clic** en Acepto para aceptar el contrato
+   1. Haga **clic en Introducción**
+   2. Haga **clic en Acepto para** aceptar el contrato
    3. Haga clic en **configurar para simulación (para desarrolladores)** para continuar con la instalación sin un dispositivo físico.
    4. Haga clic en **configurar** para confirmar su elección
 4. Haga clic en el botón **para desarrolladores** en el lado izquierdo del portal de realidad mixta.
@@ -32,13 +32,15 @@ El simulador de realidad mixta de Windows le permite probar aplicaciones de real
 
 Ahora debería ejecutarse con simulación.
 
+Si desea deshabilitar el modo de Desarrollador en configuración, primero debe activar el conmutador de alternancia de simulación en **OFF** en la sección **para desarrolladores** del portal de realidad mixta.
+
 ## <a name="deploying-apps-to-the-mixed-reality-simulator"></a>Implementación de aplicaciones en el simulador de realidad mixta
 
 Dado que el simulador se ejecuta en el equipo local sin una máquina virtual, puede simplemente implementar las aplicaciones universales de Windows en el **equipo local** durante la depuración.
 
 ## <a name="basic-simulator-input"></a>Entrada básica del simulador
 
-Controlar el simulador es muy similar a muchos juegos de vídeo 3D comunes y el emulador de [HoloLens](using-the-hololens-emulator.md). Hay opciones de entrada mediante el teclado, el mouse o un mando de Xbox.
+Controlar el simulador es muy similar a muchos juegos de vídeo 3D comunes y el [emulador de HoloLens](using-the-hololens-emulator.md). Hay opciones de entrada mediante el teclado, el mouse o un mando de Xbox.
 
 Puede controlar el simulador dirigiendo las acciones de un usuario simulado con un casco envolvente. Sus acciones mueven el usuario simulado y causan interacciones con las aplicaciones que responden como lo harían en un casco envolvente.
 * **Andar hacia delante, hacia atrás, a la izquierda y a la derecha**: usa las teclas W, A, S y D del teclado o el stick izquierdo en un mando de Xbox.
