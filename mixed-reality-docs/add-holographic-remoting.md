@@ -1,17 +1,17 @@
 ---
 title: Incorporación de Holographic Remoting
 description: Explica cómo usar la comunicación remota holográfica para representar hologramas en una HoloLens a través de la red.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, comunicación remota holográfica, representación remota, representación en red, HoloLens, hologramas remotos
-ms.openlocfilehash: 523486c26c03bd4b3d5ed8e8cafd994f12678e3b
-ms.sourcegitcommit: ff330a7e36e5ff7ae0e9a08c0e99eb7f3f81361f
+ms.openlocfilehash: 2f6ade5552c993f66281d0be8a7e62c8f076deac
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122050"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277713"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>Incorporación de la comunicación remota holográfica (HoloLens (1ª generación))
 
@@ -30,7 +30,7 @@ Los desarrolladores de HoloLens que usen la comunicación remota de Holographic 
 
 En esta página se describe cómo agregar la comunicación remota holográfica a una aplicación de escritorio o UWP.
 
-Holographic Remoting permite que la aplicación tenga como destino HoloLens con contenido holográfica hospedado en un equipo de escritorio o en un dispositivo UWP, como la Xbox One, lo que permite el acceso a más recursos del sistema y permite integrar [vistas](app-views.md) envolventes remotas en software de equipo de escritorio existente. Una aplicación host de comunicación remota recibe un flujo de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y transmite los fotogramas de contenido de nuevo a HoloLens. La conexión se realiza mediante Wi-Fi estándar. Para usar la comunicación remota, usará un paquete NuGet para agregar la comunicación remota holográfica a su aplicación de escritorio o UWP, y escribir código para controlar la conexión y representar en una vista envolvente. Las bibliotecas auxiliares se incluyen en el ejemplo de código que simplifican la tarea de controlar la conexión del dispositivo.
+Holographic Remoting permite que la aplicación tenga como destino una HoloLens con contenido holográfica hospedado en un equipo de escritorio o en un dispositivo UWP, como la Xbox One, lo que permite el acceso a más recursos del sistema y permite integrar [vistas envolventes](app-views.md) remotas en software de equipo de escritorio existente. Una aplicación host de comunicación remota recibe un flujo de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y transmite los fotogramas de contenido de nuevo a HoloLens. La conexión se realiza mediante Wi-Fi estándar. Para usar la comunicación remota, usará un paquete NuGet para agregar la comunicación remota holográfica a su aplicación de escritorio o UWP, y escribir código para controlar la conexión y representar en una vista envolvente. Las bibliotecas auxiliares se incluyen en el ejemplo de código que simplifican la tarea de controlar la conexión del dispositivo.
 
 Una conexión remota típica tendrá un mínimo de 50 ms de latencia. La aplicación de reproducción puede informar de la latencia en tiempo real.
 
@@ -45,7 +45,7 @@ Siga estos pasos para obtener el paquete NuGet para la comunicación remota de H
 3. En el panel que aparece, haga clic en **examinar** y busque "Holographic Remoting".
 4. Seleccione **Microsoft. Holographic. Remoting** y haga clic en **instalar**.
 5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar**.
-6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en Acepto para aceptar el contrato de licencia.
+6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en **acepto para aceptar el contrato de licencia** .
 
 ### <a name="create-the-holographicstreamerhelpers"></a>Crear HolographicStreamerHelpers
 

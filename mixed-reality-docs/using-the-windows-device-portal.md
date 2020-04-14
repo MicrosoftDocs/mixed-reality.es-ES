@@ -1,18 +1,18 @@
 ---
 title: Uso de Portal de dispositivos Windows
 description: Portal de dispositivos Windows para HoloLens te permite configurar y administrar de forma remota el dispositivo mediante Wi-Fi o USB. Device Portal es un servidor web en el dispositivo HoloLens al que puedes conectarte desde un navegador web del equipo. Portal de dispositivos incluye muchas herramientas que te ayudarán a administrar tu HoloLens, así como a depurar y optimizar tus aplicaciones.
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 6a5a0ef164cbbe80f74f0fe6cc42e08834d2a4b4
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 9cd9b33fed12802e5b41afa3fee850356911a989
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278033"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso de Portal de dispositivos Windows
 

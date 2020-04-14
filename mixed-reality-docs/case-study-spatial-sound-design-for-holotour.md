@@ -1,17 +1,17 @@
 ---
 title: 'Caso práctico: diseño de sonido espacial para HoloTour'
 description: Para crear un paseo virtual 3D realmente envolvente para Microsoft HoloLens, los vídeos panorámicos y los escenarios holográficas solo forman parte de la fórmula.
-author: JSyltebo
+author: jsyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, HoloTour, sonido espacial, caso práctico
-ms.openlocfilehash: f2dd704089d9c76b7ba175a4a1ad5cebf9ec6c68
-ms.sourcegitcommit: 8bf7f315ba17726c61fb2fa5a079b1b7fb0dd73f
+ms.openlocfilehash: 5c6331bd93447f53c1dd4c9941bfa13a5eadc1bd
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "75181930"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278143"
 ---
 # <a name="case-study-spatial-sound-design-for-holotour"></a>Caso práctico: diseño de sonido espacial para HoloTour
 
@@ -65,7 +65,7 @@ Hay algunas maneras adicionales de resaltar la direccionalización y mejorar la 
 * **Emisor de Spline:** Estos emisores se mueven en el espacio 3D en relación con la posición visual del objeto al que están asociados. Un ejemplo es el tren en Machu Picchu, donde usamos un emisor de spline para dar una sensación distintiva de direccionalidad y movimiento.
 * **Música y SFX:** Algunos aspectos de HoloTour que representan un enfoque más estilizado o cinematográfico usan música y efectos sonoros para aumentar el impacto emocional. En el combate Gladiator al final del paseo por la Roma, por ejemplo, los efectos especiales como whooshes y los separadores ayudan a fortalecer el efecto de las etiquetas que aparecen en segundo plano.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Sonido espacial](spatial-sound.md)
 * [Diseño de sonido espacial](spatial-sound-design.md)
 * [Sonido espacial en Unity](spatial-sound-in-unity.md)

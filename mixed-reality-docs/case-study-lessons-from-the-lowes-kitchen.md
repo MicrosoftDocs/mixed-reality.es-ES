@@ -1,17 +1,17 @@
 ---
 title: 'Caso práctico: lecciones de la cocina de Lowe'
 description: El equipo de HoloLens quiere compartir algunas de las prácticas recomendadas que se derivaron del proyecto HoloLens de Lowe.
-author: BrandonBray
+author: brandonbray
 ms.author: kevincol
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, Lowe, HoloLens, cocina, caso práctico
-ms.openlocfilehash: 24759f90b8b84ec19e644fb8dff44f64c3ab81d2
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: a6bd7a09f77fb71dc23dc640525ff250abac8f12
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63522344"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278133"
 ---
 # <a name="case-study---lessons-from-the-lowes-kitchen"></a>Caso práctico: lecciones de la cocina de Lowe
 
@@ -42,7 +42,7 @@ Algunos de los aspectos más importantes que se deben tener en cuentan al desarr
 
 **Alineación de precisión** En el escenario de Lowe, era primordial para la experiencia tener una alineación de precisión de los hologramas en la cocina física. Se describen técnicas que ayudan a garantizar una experiencia que convenci a los usuarios de que su entorno físico ha cambiado.
 
-**Experiencias de Holographic** compartidas Los acoplados son la forma principal en que se consume la experiencia del Lowe. Una persona puede cambiar la encimera y la otra persona verá los cambios. Hemos llamado a este "experiencias compartidas".
+**Experiencias de Holographic compartidas** Los acoplados son la forma principal en que se consume la experiencia del Lowe. Una persona puede cambiar la encimera y la otra persona verá los cambios. Hemos llamado a este "experiencias compartidas".
 
 **Interactuar con los clientes** Los diseñadores de Lowe no usan HoloLens, pero necesitan ver lo que ven los clientes. Mostramos cómo capturar lo que el cliente está viendo en una aplicación de UWP.
 <br>

@@ -1,17 +1,17 @@
 ---
 title: Creación de un proyecto de DirectX holográfica
 description: Explica cómo crear una nueva aplicación holográfica basada en la plantilla de aplicación de Windows Mixed Reality.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, aplicación holográfica, nueva aplicación, aplicación para UWP, aplicación de plantilla, hologramas, nuevo proyecto, tutorial, descarga, código de ejemplo
-ms.openlocfilehash: d99478a0d98d0593b7b82f25080d20913789cb6c
-ms.sourcegitcommit: f4812e1312c4751a22a2de56771c475b22a4ba24
+ms.openlocfilehash: 30f2c630b2919fbc304dc96d13cab74e22ed4adc
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74940861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277923"
 ---
 # <a name="creating-a-holographic-directx-project"></a>Creación de un proyecto de DirectX holográfica
 
@@ -25,7 +25,7 @@ La aplicación de realidad mixta, sin embargo, tiene algunas funcionalidades adi
 * Controle la entrada de [mirada](gaze-and-commit.md) y reconozca un [gesto](gaze-and-commit.md#composite-gestures)sencillo.
 * Entrar en el modo de representación estéreo de pantalla completa.
 
-## <a name="how-do-i-get-started"></a>¿Por dónde se empieza?
+## <a name="how-do-i-get-started"></a>¿Cómo comenzar?
 
 En primer lugar, [Instale las herramientas](install-the-tools.md)siguiendo las instrucciones de descarga de Visual Studio 2019 y las plantillas de aplicación de Windows Mixed Reality. Las plantillas de aplicación de realidad mixta están disponibles en Visual Studio Marketplace como [descarga web](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)o mediante su instalación como extensión a través de la interfaz de usuario de Visual Studio.
 
@@ -44,7 +44,7 @@ Para crear un nuevo proyecto en Visual Studio 2019:
    *Plantilla de proyecto C++de aplicación para UWP de Holographic DirectX 11/WinRT en Visual Studio 2019*
    >[!IMPORTANT]
    >Asegúrese de que el nombre de la plantilla de proyecto incluyeC++"(/WinRT)".  Si no es así, tiene instalada una versión anterior de las plantillas de proyecto holográfica.  Para obtener las plantillas de proyecto más recientes, [instálela](install-the-tools.md) como una extensión de Visual Studio 2019.
-5. Haz clic en **Siguiente**.
+5. Haga clic en **Siguiente**.
 5. Rellene los cuadros de texto **nombre de proyecto** y **Ubicación** , y pulse o haga clic en **crear**. Se crea el proyecto de aplicación holográfica.
 6. Para el desarrollo dirigido solo a HoloLens 2, asegúrese de que la versión de **destino** y la **versión mínima** están establecidas en **Windows 10, versión 1903**.  Si también tiene como destino HoloLens (1º gen) o auriculares de escritorio mixto de la realidad, puede establecer la **versión mínima** en **Windows 10, versión 1809** , aunque esto requerirá algunas <a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code" target="_blank">comprobaciones adaptables</a> de la versión en el código al usar las nuevas características de HoloLens 2.
    ![captura de pantalla de la configuración de Windows 10, versión 1903 como destino y versiones mínimas](images/new-uwp-project.png)<br>
@@ -54,7 +54,7 @@ Para crear un nuevo proyecto en Visual Studio 2019:
 
 Para crear un nuevo proyecto en Visual Studio 2017:
 1. Inicie **Visual Studio**.
-2. En el menú **archivo** , elija **nuevo** y seleccione **proyecto** en el menú contextual. Se abrirá el cuadro de diálogo **nuevo proyecto** .
+2. En el menú **archivo** , elija **nuevo** y seleccione **proyecto** en el menú contextual. Se abre el cuadro de diálogo **Nuevo proyecto**.
 3. Expanda **instalado** a la izquierda y expanda el nodo del lenguaje **Visual C++**  .
 4. Vaya al nodo **Windows Universal > Holographic** y seleccione **aplicación holográfica DirectX 11 (Windows universal) (C++/WinRT)** .
    ![captura de pantalla de la plantilla C++de proyecto de aplicación para UWP de Holographic DirectX 11/WinRT en Visual Studio 2017](images/holographic-directx-app-cpp-new-project.png)<br>
@@ -178,7 +178,7 @@ El método **Render** de `AppMain.cpp` toma el <a href="https://docs.microsoft.c
 
 La plantilla de aplicación de Windows Mixed Reality ahora admite la compilación con la marca de mitigación de Spectre habilitada (/Qspectre). Asegúrese de instalar la versión mitigada Spectre de las bibliotecas en tiempo de C++ ejecución de Microsoft Visual (MSVC) antes de compilar una configuración con la mitigación de Spectre habilitada. Para instalar las C++ bibliotecas mitigadas Spectre, inicie el instalador de Visual Studio y seleccione **modificar**. Vaya a **componentes individuales** y busque "Spectre". Seleccione las casillas correspondientes a las plataformas de destino y la versión de MSVC que necesita para compilar el código de Spectre mitigado para y haga clic en **modificar** para iniciar la instalación.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Obtención de HolographicSpace](getting-a-holographicspace.md)
 * <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspaceh" target="_blank">HolographicSpace</a>
 * [Representación en DirectX](rendering-in-directx.md)

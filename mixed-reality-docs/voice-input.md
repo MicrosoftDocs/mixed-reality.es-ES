@@ -1,17 +1,17 @@
 ---
 title: Entrada de voz
 description: La entrada de voz es una entrada básica para los auriculares de la realidad de HoloLens y Windows Mixed Reality. Voice se puede usar para comandos, dictado, Cortana y mucho más.
-author: Hak0n
+author: hak0n
 ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada
-ms.openlocfilehash: f2ae18d4063c7c4a63346a1202cacaa7fbbdf959
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 6cf94e6bc828c6f07ee81cb121cb64601df41c4e
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375992"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277983"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -275,7 +275,7 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 
 ## <a name="communication"></a>Comunicación
 
-En el caso de las aplicaciones que desean aprovechar las opciones de procesamiento de entrada de audio personalizadas proporcionadas por HoloLens, es importante comprender las distintas [categorías de flujo de audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) que puede consumir la aplicación. Windows 10 admite varias categorías de secuencias diferentes y HoloLens usa tres de ellas para habilitar el procesamiento personalizado con el fin de optimizar la calidad de audio del micrófono adaptada a la voz, la comunicación y otras que se pueden usar para el audio del entorno ambiente. escenarios de captura (es decir, "videocámara").
+En el caso de las aplicaciones que desean aprovechar las opciones de procesamiento de entrada de audio personalizadas proporcionadas por HoloLens, es importante comprender las distintas [categorías de flujo de audio](https://msdn.microsoft.com/library/windows/desktop/hh404178(v=vs.85).aspx) que puede consumir la aplicación. Windows 10 admite varias categorías de secuencias diferentes y HoloLens usa tres de ellas para habilitar el procesamiento personalizado con el fin de optimizar la calidad de audio del micrófono adaptada a la voz, la comunicación y otras que se pueden usar para escenarios de captura de audio de entorno ambiente (es decir, "videocámara").
 * La categoría AudioCategory_Communications Stream está personalizada para escenarios de calidad y narración de llamadas y proporciona al cliente una secuencia de audio mono 16kHz 24bit de la voz del usuario
 * La categoría AudioCategory_Speech Stream está personalizada para el motor de voz de HoloLens (Windows) y le proporciona una secuencia de 16kHz 24bit mono de la voz del usuario. Los motores de voz de terceros pueden usar esta categoría si es necesario.
 * La categoría AudioCategory_Other Stream está personalizada para la grabación de audio del entorno ambiente y proporciona al cliente una secuencia de audio estéreo de 24 bits de 48 bits.

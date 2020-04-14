@@ -1,17 +1,17 @@
 ---
 title: Canales de datos personalizados de Holographic Remoting
 description: Los canales de datos personalizados se pueden usar para enviar datos de usuario a través de la conexión de Holographic Remoting ya establecida.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 8bfa19b7af0f3429130aabf70d9d11083bc56a52
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 12fa47b6b3a46521a9e6029cab61fa1c628c06e9
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278103"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>Canales de datos personalizados de Holographic Remoting
 
@@ -113,7 +113,7 @@ Para cerrar un canal de datos personalizado, use el método ```IDataChannel::Clo
 m_customDataChannel.Close();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Escritura de una aplicación remota holográfica Remoting](holographic-remoting-create-host.md)
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)

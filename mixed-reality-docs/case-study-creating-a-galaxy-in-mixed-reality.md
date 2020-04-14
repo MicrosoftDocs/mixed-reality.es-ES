@@ -1,17 +1,17 @@
 ---
 title: 'Caso práctico: creación de una galaxia en una realidad mixta'
 description: Antes de que se enviara a Microsoft HoloLens, hemos preguntado a nuestra comunidad de desarrolladores qué tipo de aplicación les gustaría ver una compilación de equipo interna con experiencia para el nuevo dispositivo. Se comparten más de 5000 ideas y, después de un sondeo de Twitter de 24 horas, el ganador era una idea denominada "explorador de Galaxy".
-author: KarimLUCCIN
+author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, Windows Mixed Reality, compartir ideas, caso práctico
-ms.openlocfilehash: 696662eb92371708389f8a128dcee6a61acf1816
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: f13395250c8a73718408c051ab95d2ec4bf62014
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436881"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278183"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Caso práctico: creación de una galaxia en una realidad mixta
 
@@ -23,7 +23,7 @@ Andy Zibits, el director de arte del proyecto y Karim Luccin, el ingeniero de gr
 
 [Nuestro equipo](galaxy-explorer.md#meet-the-team) , compuesto por dos diseñadores, tres desarrolladores, cuatro artistas, un productor y un evaluador, tenía seis semanas para compilar una aplicación totalmente funcional que permitiría a los usuarios obtener información sobre la inmensaidad y la belleza de nuestra forma de ordeño.
 
-Queríamos sacar el máximo partido de la capacidad de HoloLens para representar objetos 3D directamente en tu espacio de vida, por lo que decidimos que queríamos crear una galaxia de aspecto realista en la que los usuarios pudieran hacer zoom para ampliar y ver los estrellas individuales, cada uno con sus propias trayectorias. .
+Queríamos sacar el máximo partido de la capacidad de HoloLens para representar objetos 3D directamente en tu espacio de vida, por lo que decidimos que queríamos crear una galaxia de aspecto realista en la que los usuarios podrían hacer zoom para ampliar y ver los estrellas individuales, cada uno con sus propias trayectorias.
 
 En la primera semana de desarrollo, surgimos con unos pocos objetivos para nuestra representación de la forma láctea de Galaxy: era necesario tener una profundidad, un movimiento y un volumétrico (lleno de estrellas) que le ayuden a crear la forma de la galaxia.
 
@@ -41,7 +41,7 @@ Iniciamos pruebas de esfuerzo con miles de objetos de punto en distintos patrone
 
 ### <a name="creating-the-position-of-the-stars"></a>Crear la posición de las estrellas
 
-Uno de nuestros miembros del equipo ya ha escrito C# el código que generaría estrellas en su posición inicial. Las estrellas se encuentran en una elipse y su posición puede describirse mediante (**curveOffset**, **ellipseSize**, **elevation**), donde **curveOffset** es el ángulo de la estrella a lo largo de la elipse, **ellipseSize** es la dimensión de la elipse. a lo largo de X y Z, y eleva la elevación adecuada de la estrella dentro de la galaxia. Por lo tanto, podemos crear un búfer ([ComputeBuffer de Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que se inicializaría con cada atributo de estrella y lo enviaría en la GPU donde residiría para el resto de la experiencia. Para dibujar este búfer, usamos [DrawProcedural de Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite ejecutar un sombreador (código en una GPU) en un conjunto arbitrario de puntos sin tener una malla real que represente la galaxia:
+Uno de nuestros miembros del equipo ya ha escrito C# el código que generaría estrellas en su posición inicial. Las estrellas se encuentran en una elipse y su posición puede describirse mediante (**curveOffset**, **ellipseSize**, **elevation**), donde **curveOffset** es el ángulo de la estrella a lo largo de la elipse, **ellipseSize** es la dimensión de la elipse a lo largo de X y Z, y eleva la elevación adecuada de la estrella dentro de la galaxia. Por lo tanto, podemos crear un búfer ([ComputeBuffer de Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que se inicializaría con cada atributo de estrella y lo enviaría en la GPU donde residiría para el resto de la experiencia. Para dibujar este búfer, usamos [DrawProcedural de Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite ejecutar un sombreador (código en una GPU) en un conjunto arbitrario de puntos sin tener una malla real que represente la galaxia:
 
 **CPU**
 
@@ -74,7 +74,7 @@ Comenzamos con patrones circulares sin procesar con miles de partículas. Esto n
 
 Se han intentado varios patrones y sistemas de partículas que se han girado, como estos.
 
-Nuestro equipo realizó una investigación sobre la manera en que galaxiesó la función y creamos un sistema de partículas personalizado específicamente para la galaxia, de modo que podríamos trasladar las partículas a las elipses en función de "[teoría de ola de densidad](https://en.wikipedia.org/wiki/Density_wave_theory)", que theorizes que los brazos de una galaxia son áreas mayor densidad, pero en flujo constante, como un atasco de tráfico. Parece estable y sólido, pero en realidad las estrellas están pasando y salen de los brazos a medida que se mueven a lo largo de sus puntos suspensivos respectivos. En nuestro sistema, los objetos nunca existen en la CPU, por lo que se generan las tarjetas y se orientan todas en la GPU, por lo que todo el sistema es simplemente el estado inicial + hora. Progresaría de la siguiente manera:
+Nuestro equipo realizó una investigación sobre la manera en que galaxiesó la función y creamos un sistema de partículas personalizado específicamente para la galaxia, de modo que podríamos trasladar las partículas a las elipses en función de "[teoría de ola de densidad](https://en.wikipedia.org/wiki/Density_wave_theory)", que theorizes que los brazos de una galaxia son áreas de mayor densidad pero en flujo constante, como un atasco de tráfico. Parece estable y sólido, pero en realidad las estrellas están pasando y salen de los brazos a medida que se mueven a lo largo de sus puntos suspensivos respectivos. En nuestro sistema, los objetos nunca existen en la CPU, por lo que se generan las tarjetas y se orientan todas en la GPU, por lo que todo el sistema es simplemente el estado inicial + hora. Progresaría de la siguiente manera:
 
 ![Progresión del sistema de partículas con representación de GPU](images/spiral-galaxy-arms-500px.jpg)
 
@@ -203,6 +203,6 @@ Hemos abierto el código para la aplicación Galaxy Explorer y lo hemos puesto a
 </table>
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Explorador de Galaxy en GitHub](https://github.com/Microsoft/GalaxyExplorer)
 * [Actualizaciones de proyectos del explorador de Galaxy en YouTube](https://www.youtube.com/playlist?list=PLZCHH_4VqpRj0Nl46J0LNRkMyBNU4knbL)

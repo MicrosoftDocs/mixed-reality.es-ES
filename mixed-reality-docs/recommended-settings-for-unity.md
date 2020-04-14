@@ -1,17 +1,17 @@
 ---
 title: Configuración recomendada para Unity
 description: Unity ofrece algunos comportamientos específicos de la realidad mixta que se pueden alternar a través de la configuración del proyecto.
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configuración, realidad mixta
-ms.openlocfilehash: 2ab7eb0f9a7e06506ef8c57103518d8ef0a775df
-ms.sourcegitcommit: d0da0214fdd2bbac5a91a5d895bf0e87413b29b2
+ms.openlocfilehash: 9b4e04e10e95f6c4f12a25a6f34236d9d2bf99a2
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597638"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278013"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -44,18 +44,18 @@ En las aplicaciones de realidad mixta, la escena se representa dos veces, una ve
 
 Para habilitar esta característica en el proyecto de Unity
 
-1)  Abra la configuración de el **reproductor XR** (vaya a **Editar** > **configuración del proyecto** > **Player** > **configuración de XR**)
-2) Seleccione **una instancia de paso único** en el menú desplegable **método de representación de estéreo** (se debe activar la casilla se admite la**realidad virtual** )
+1)  Abre **Player XR Settings** (Configuración del reproductor XR) (ve a **Editar** > **Configuración del proyecto** > **Reproductor** > **XR Settings** [Configuración de XR]).
+2) Selecciona **Single Pass Instanced** (Con instancia de un solo paso) en el menú desplegable **Stereo Rendering Method** (Método de representación en estéreo) (la casilla **Virtual Reality Supported** [Compatibilidad con realidad virtual] debe estar marcada)
 
 Lea los siguientes artículos de Unity para obtener más información sobre este enfoque de representación.
 
-- [Cómo maximizar el rendimiento de AR y VR con la representación avanzada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Cómo maximizar el rendimiento de AR y VR con la representación en estéreo avanzada](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
 - [Creación de instancias de un solo paso](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Un problema común con la representación con instancias de paso único se produce si los desarrolladores ya tienen sombreadores personalizados no escritos para la creación de instancias. Después de habilitar esta característica, los desarrolladores pueden observar que algunos GameObjects solo se representan en un ojo. Esto se debe a que los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
+> Un problema común con la representación con instancia de un solo paso se produce si los desarrolladores ya tienen sombreadores personalizados no escritos para la creación de instancias. Después de habilitar esta característica, los desarrolladores pueden observar que algunos objetos GameObjects solo se representan en un ojo. Esto se debe a que los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
 >
-> Consulte [representación de un solo paso estéreo para HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) desde Unity para saber cómo solucionar este problema.
+> Consulta [Representación en estéreo de un solo paso para HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) de Unity para solucionar este problema.
 
 ### <a name="enable-depth-buffer-sharing"></a>Habilitar uso compartido de búfer de profundidad
 
@@ -63,7 +63,7 @@ Para lograr una mejor estabilidad del holograma a partir de la percepción del u
 
 Para habilitar esta característica en el proyecto de Unity
 
-1) Abra la configuración de el **reproductor XR** (vaya a **Editar** > **configuración del proyecto** > **Player** > **configuración de XR**)
+1) Abre **Player XR Settings** (Configuración del reproductor XR) (ve a **Editar** > **Configuración del proyecto** > **Reproductor** > **XR Settings** [Configuración de XR]).
 2) Active la casilla **Habilitar uso compartido de búfer de profundidad** en SDK de **realidad virtual** > la expansión de la **realidad mixta de Windows** (se debe activar la casilla se admite la**realidad virtual** )
 
 Además, se recomienda seleccionar profundidad de **16 bits** en la configuración de **formato de profundidad** de este panel, especialmente para el desarrollo de HoloLens. Si selecciona 16 bits en comparación con 24 bits, se reducirán significativamente los requisitos de ancho de banda, ya que será necesario desplace o procese menos datos.
@@ -116,10 +116,10 @@ Para alternar la pantalla de presentación de Holographic:
 
 |  Pantalla de presentación de mostrar Unity  |  Imagen de bienvenida holográfica  |  Comportamiento |
 |----------|----------|----------|
-|  En  |  Ninguna  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  En  |  Personalizados  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Desactivada  |  Ninguna  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
-|  Desactivada  |  Personalizados  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Activado  |  Ninguno  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Activado  |  Personalizar  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Desactivar  |  Ninguno  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
+|  Desactivar  |  Personalizar  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 
 Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
 
@@ -149,7 +149,7 @@ Para no participar en el comportamiento de pausa automática:
 
 Para definir el comportamiento personalizado cuando se pierde el seguimiento, controle los [eventos de pérdida de seguimiento](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Funcionalidades
+### <a name="capabilities"></a>Capacidades
 
 Para que una aplicación aproveche ciertas funciones, debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones de manifiesto se pueden realizar en Unity para que se incluyan en cada exportación de proyecto subsiguiente.
 
@@ -161,7 +161,7 @@ Las capacidades se pueden habilitar para una aplicación de realidad mixta:
 Las funcionalidades aplicables para habilitar las API de uso frecuente para aplicaciones holográficas son:
 <br>
 
-|  Funcionalidad  |  API que requieren funcionalidad |
+|  Capability  |  API que requieren funcionalidad |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver |
 |  Web  |  Fotocaptura y videocaptura |
@@ -169,7 +169,7 @@ Las funcionalidades aplicables para habilitar las API de uso frecuente para apli
 |  Micrófono  |  VideoCapture (al capturar audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (y para usar el generador de perfiles de Unity) |
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
 * [Análisis de rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)

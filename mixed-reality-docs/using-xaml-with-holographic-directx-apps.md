@@ -1,17 +1,17 @@
 ---
 title: Uso de XAML con aplicaciones de DirectX holográficas
 description: Explica el impacto de cambiar entre las vistas XAML 2D y las vistas de envolvente en la aplicación DirectX y cómo hacer un uso eficaz de una vista XAML y una vista envolvente.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, UWP, administración de vistas de aplicaciones, XAML, teclado, tutorial, DirectX
-ms.openlocfilehash: 32b2feea0cb6b8aba972c1772451ca7b5b9946d5
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 4136e674cfc1737dba9dcc1f70bd68edd4e95a41
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63548700"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277963"
 ---
 # <a name="using-xaml-with-holographic-directx-apps"></a>Uso de XAML con aplicaciones de DirectX holográficas
 

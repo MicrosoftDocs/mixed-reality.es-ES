@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Notas de la versión, versión, Windows 10, compilación, 19h1, so, mayo 2019
-ms.openlocfilehash: f5163e128c3f1e1b68d827b09078b565a58c5a4d
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 97bf4c3b5c24fc6f0c763b8dd9f146bbaa01187a
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438319"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277633"
 ---
 # <a name="release-notes---may-2019"></a>Notas de la versión: mayo 2019
 
@@ -35,7 +35,7 @@ Con la actualización 2019 de Windows 10, se ha incorporado la capacidad de inic
 #### <a name="how-to-launch"></a>Cómo iniciar
 Para iniciar una aplicación Win32 en Windows Mixed Reality, abra el panel PIN a través del botón de Windows del controlador y seleccione "todas las aplicaciones" en el lado derecho del panel.  Encontrará una carpeta llamada "aplicaciones clásicas", vaya a ella y podrá seleccionar e iniciar la mayoría de las aplicaciones Win32 instaladas en el equipo.
 
-![Win32 Pin_Panel](images/mr-win32-slates-pinspanel.png)
+![Pin_Panel Win32](images/mr-win32-slates-pinspanel.png)
 
 #### <a name="please-help-us-improve"></a>Ayúdenos a mejorar.
 Veremos continuamente cómo mejorar la compatibilidad.  Si encuentra que su aplicación favorita de Win32 clásica no se comporta correctamente en Windows Mixed Reality, envíe sus comentarios a través de nuestro [centro de opiniones](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
@@ -43,6 +43,10 @@ Veremos continuamente cómo mejorar la compatibilidad.  Si encuentra que su apli
 ## <a name="hololens-1st-gen-long-term-servicing"></a>Servicio a largo plazo de HoloLens (1º generación)
 
 HoloLens (1ª generación) está entrando en el estado de mantenimiento a largo plazo (LTS). Las actualizaciones futuras se centrarán en las correcciones de seguridad y el problema, a la vez que se mantiene la paridad de características con la [versión 2018 de octubre de Windows 10](release-notes-october-2018.md) para HoloLens (también conocida como RS5). 
+
+## <a name="known-issues"></a>Problemas conocidos
+
+Estamos realizando un seguimiento de un problema que requiere que un monitor esté conectado al equipo para que los auriculares más envolventes funcionen correctamente. Los usuarios de equipos de mochila pueden querer usar un adaptador de pantalla activo (o un emulador de EDID) para asegurarse de que el casco envolvente siga representando cuando no haya ningún monitor de PC en uso. 
 
 ## <a name="provide-feedback-and-report-issues"></a>Proporcionar comentarios e informar de problemas
 
@@ -61,7 +65,7 @@ Use la [aplicación de centro de comentarios en el equipo con Windows 10 o en](g
 * [Notas de la versión (mayo de 2016)](release-notes-may-2016.md)
 * [Notas de la versión (marzo de 2016)](release-notes-march-2016.md)
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Compatibilidad con auriculares envolvente (vínculo externo)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
 * [Compatibilidad con HoloLens (vínculo externo)](https://support.microsoft.com/products/hololens)
 * [Instalación de las herramientas](install-the-tools.md)

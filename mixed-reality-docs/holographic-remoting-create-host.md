@@ -1,17 +1,17 @@
 ---
 title: Escritura de una aplicación remota holográfica Remoting
 description: Al crear un contenido remoto de aplicaciones remotas holográficas, que se representa en un equipo remoto, se puede transmitir a HoloLens 2. En este artículo se describe cómo se puede lograr esto.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 76e37499fd32a82e6846c6c7cac1a292ef6b553a
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 6c6da16d83f593d9987bf7e534f9f663f11abd01
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278123"
 ---
 # <a name="writing-a-holographic-remoting-remote-app"></a>Escritura de una aplicación remota holográfica Remoting
 
@@ -352,7 +352,7 @@ Para comprobar si la reproyección de profundidad es correclty al trabajar en Ho
 
 Los canales de datos personalizados se pueden usar para enviar datos de usuario a través de la conexión remota ya establecida. Vea [canales de datos personalizados](holographic-remoting-custom-data-channels.md) para obtener más información.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)
 * [Canales de datos personalizados de control remoto de holografías](holographic-remoting-custom-data-channels.md)
 * [Establecimiento de una conexión segura con Holographic Remoting](holographic-remoting-secure-connection.md)

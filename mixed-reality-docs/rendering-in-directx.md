@@ -1,17 +1,17 @@
 ---
 title: Representación en DirectX
 description: Explica la representación holográfica para Windows Mixed Reality.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, representación, gráficos 3D, HolographicFrame, bucle de representación, bucle de actualización, tutorial, código de ejemplo, Direct3D
-ms.openlocfilehash: 6b2e2dca9115d7093e94019d5ed91201f6ee3424
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: a781093e0054a986b81a0e284e03076dd018f8c0
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375982"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277513"
 ---
 # <a name="rendering-in-directx"></a>Representación en DirectX
 

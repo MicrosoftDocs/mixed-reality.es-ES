@@ -1,21 +1,20 @@
 ---
-title: Keyboard
-description: ''
+title: Teclado
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: a16d0a2a8dddf1d9a338cdaff3247e8955c47029
-ms.sourcegitcommit: 6844930427b658ae31f642c395cd8a3b3cdbf857
+ms.openlocfilehash: 90f20d96fca9bebfcbce8283bedd3cb8422d9ea8
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75723174"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278083"
 ---
-# <a name="keyboard"></a>Keyboard
+# <a name="keyboard"></a>Teclado
 
-![Keyboard](images/UX/UX_Hero_Keyboard.jpg)
+![Teclado](images/UX/UX_Hero_Keyboard.jpg)
 
 La aplicación de realidad mixta puede invocar el teclado del sistema en cualquier momento. Tenga en cuenta que el teclado del sistema se comportará según las funcionalidades de la plataforma de destino; por ejemplo, el teclado de HoloLens 2 es compatible con las interacciones directas, mientras que el teclado de HoloLens (1ª generación) admite la entrada de gestos de toque y movimiento de aire.
 
@@ -32,7 +31,7 @@ La aplicación de realidad mixta puede invocar el teclado del sistema en cualqui
 
 ---
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

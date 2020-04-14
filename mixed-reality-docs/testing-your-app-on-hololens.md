@@ -1,17 +1,17 @@
 ---
 title: Prueba de la aplicación en HoloLens
 description: Instrucciones y sugerencias para probar la aplicación de HoloLens
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 02/24/2019
 ms.topic: article
 keywords: HoloLens, probar
-ms.openlocfilehash: 9a189bf139c97fc13034d94f05aa8f5974cc19b9
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 3ab5eeec4046b81dc41db51ae138eb9d1069d1ff
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437384"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277593"
 ---
 # <a name="testing-your-app-on-hololens"></a>Prueba de la aplicación en HoloLens
 
@@ -112,5 +112,5 @@ Algunos desarrolladores de aplicaciones pueden querer automatizar las pruebas de
 
 Para proporcionar a la aplicación la mejor posibilidad de [publicarla en la tienda Windows](submitting-an-app-to-the-microsoft-store.md), valide y pruébelo localmente antes de enviarla para su certificación. Si la aplicación está destinada a la familia de dispositivos Windows. Holographic, el kit para la [certificación de aplicaciones de Windows](https://msdn.microsoft.com/library/windows/apps/xaml/mt186449.aspx) solo ejecutará pruebas de análisis estático local en su equipo. No se ejecutará ninguna prueba en HoloLens.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Envío de una aplicación a la tienda Windows](submitting-an-app-to-the-microsoft-store.md)

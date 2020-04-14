@@ -1,17 +1,17 @@
 ---
 title: 'Caso práctico: búsqueda de agujeros en su realidad'
 description: En este caso práctico se explica cómo implementar el efecto "Magic Window" en HoloLens, lo que permite al usuario ver detrás de las paredes, debajo del suelo, y en aperturas virtuales dentro de su entorno real.
-author: EricRehmeyer
+author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, ventana mágica, Parallax
-ms.openlocfilehash: a1b9f0b2e576379846a867f3d3bffef7d8ec277e
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: c829656c98b7c87f8b969dbbd16115f6a0bbaf27
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436665"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278153"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Caso práctico: búsqueda de agujeros en su realidad
 
@@ -108,7 +108,7 @@ A continuación se muestran algunas ideas de dónde puede adoptar esta idea:
 </tr>
 </table>
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [MR Basics 101: proyecto completo con dispositivo](holograms-101.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Delimitadores espaciales](spatial-anchors.md)

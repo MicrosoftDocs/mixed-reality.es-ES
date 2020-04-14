@@ -1,17 +1,17 @@
 ---
 title: Referencia de la API del portal de dispositivos
 description: Referencia de API para Windows Device portal en HoloLens
-author: JonMLyons
-ms.author: JLyons
+author: jonmlyons
+ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos de Windows, API
-ms.openlocfilehash: 4b5b48c13b1b7ec8bfdf447f42097a8448b6a0e6
-ms.sourcegitcommit: 06ac2200d10b50fb5bcc413ce2a839e0ab6d6ed1
+ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694436"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278243"
 ---
 # <a name="device-portal-api-reference"></a>Referencia de la API del portal de dispositivos
 
@@ -24,16 +24,16 @@ Todo lo que se encuentra en el [portal de dispositivos de Windows](using-the-win
 Desinstala una aplicación
 
 Parámetros
-* configura Nombre de archivo del paquete que se va a desinstalar.
+* paquete: nombre de archivo del paquete que se va a desinstalar.
 
 **/API/App/packagemanager/Package (POST)**
 
 Instala una aplicación
 
 Parámetros
-* configura Nombre de archivo del paquete que se va a instalar.
+* paquete: nombre de archivo del paquete que se va a instalar.
 
-Útiles
+Payload
 * cuerpo http compatible con varias partes
 
 **/API/App/packagemanager/packages (GET)**
@@ -131,7 +131,7 @@ Obtiene el IPD almacenado (distancia interpupillary) en milímetros.
 Establece la configuración de IPD
 
 Parámetros
-* IPD Nuevo valor de IPD que se establecerá en milímetros
+* IPD: nuevo valor de IPD que se establecerá en milímetros
 
 **/API/Holographic/os/webmanagement/Settings/https (GET)**
 
@@ -163,7 +163,7 @@ Obtener la fase térmica del dispositivo (0 normal, 1 cálido, 2 crítico)
 
 **/API/Holographic/Simulation/control/MODE (GET)**
 
-Obtención del modo de simulación
+Obtener el modo de simulación
 
 **/API/Holographic/Simulation/control/MODE (POST)**
 
@@ -191,7 +191,7 @@ Cree un flujo de control (se requiere prioridad) o publique los datos en un fluj
 Elimina una grabación.
 
 Parámetros
-* musicales Nombre de la grabación que se va a eliminar.
+* grabación: nombre de la grabación que se va a eliminar.
 
 **/API/Holographic/Simulation/Playback/File (POST)**
 
@@ -206,21 +206,21 @@ Obtener todas las grabaciones.
 Obtiene el estado de reproducción actual de una grabación.
 
 Parámetros
-* musicales Nombre de la grabación.
+* grabación: nombre de la grabación.
 
 **/API/Holographic/Simulation/Playback/Session/File (eliminar)**
 
 Descargar una grabación.
 
 Parámetros
-* musicales Nombre de la grabación que se va a descargar.
+* grabación: nombre de la grabación que se va a descargar.
 
 **/API/Holographic/Simulation/Playback/Session/File (POST)**
 
 Carga de una grabación.
 
 Parámetros
-* musicales Nombre de la grabación que se va a cargar.
+* grabación: nombre de la grabación que se va a cargar.
 
 **/API/Holographic/Simulation/Playback/Session/files (GET)**
 
@@ -231,28 +231,28 @@ Obtiene todas las grabaciones cargadas.
 Pausar una grabación.
 
 Parámetros
-* musicales Nombre de la grabación.
+* grabación: nombre de la grabación.
 
 **/API/Holographic/Simulation/Playback/Session/Play (POST)**
 
 Reproducir una grabación.
 
 Parámetros
-* musicales Nombre de la grabación.
+* grabación: nombre de la grabación.
 
 **/API/Holographic/Simulation/Playback/Session/STOP (POST)**
 
 Detener una grabación.
 
 Parámetros
-* musicales Nombre de la grabación.
+* grabación: nombre de la grabación.
 
 **/API/Holographic/Simulation/Playback/Session/Types (GET)**
 
 Obtiene los tipos de datos en una grabación cargada.
 
 Parámetros
-* musicales Nombre de la grabación.
+* grabación: nombre de la grabación.
 
 ## <a name="perception-simulation-recording"></a>Grabación de simulación de percepción
 
@@ -261,12 +261,12 @@ Parámetros
 Iniciar una grabación. Solo puede haber una grabación activa al mismo tiempo. Debe establecerse una de las clases Head, Hand, spatialMapping o Environment.
 
 Parámetros
-* Head Establézcalo en 1 para registrar los datos principales.
-* útiles Establézcalo en 1 para registrar los datos de la mano.
-* spatialMapping : Establézcalo en 1 para registrar la asignación espacial.
-* entorno Establézcalo en 1 para registrar los datos del entorno.
-* Name Nombre de la grabación.
-* singleSpatialMappingFrame : Establézcalo en 1 para registrar solo un marco de asignación espacial.
+* Head: establézcalo en 1 para registrar los datos principales.
+* manos: establézcalo en 1 para registrar los datos de la mano.
+* spatialMapping: establézcalo en 1 para registrar la asignación espacial.
+* entorno: establézcalo en 1 para registrar los datos del entorno.
+* Nombre: nombre de la grabación.
+* singleSpatialMappingFrame: establézcalo en 1 para registrar solo un marco de asignación espacial.
 
 **/API/Holographic/Simulation/Recording/status (GET)**
 
@@ -283,7 +283,7 @@ Detener la grabación actual. La grabación se devolverá como un archivo.
 Descarga un archivo de realidad mixta desde el dispositivo. Use OP = parámetro de consulta de transmisión por secuencias.
 
 Parámetros
-* extensión Nombre, hex64 codificado, del archivo de vídeo que se va a obtener
+* Filename: nombre, hex64 codificado, del archivo de vídeo que se va a obtener
 * OP: Stream
 
 **/API/Holographic/MRC/File (eliminar)**
@@ -291,7 +291,7 @@ Parámetros
 Elimina una grabación de realidad mixta del dispositivo.
 
 Parámetros
-* extensión Nombre, hex64 codificado, del archivo que se va a eliminar
+* Filename: nombre, hex64 codificado, del archivo que se va a eliminar.
 
 **/API/Holographic/MRC/files (GET)**
 
@@ -304,7 +304,7 @@ Toma una fotografía de realidad mixta y crea un archivo en el dispositivo.
 Parámetros
 * hololens: Capture hologramas: true o false (el valor predeterminado es false)
 * PV: capturar la cámara PV: true o false (el valor predeterminado es false)
-* RenderFromCamera : (Solo HoloLens 2) representar desde la perspectiva de la cámara de foto/vídeo: true o false (el valor predeterminado es true).
+* RenderFromCamera: (solo HoloLens 2) presentación desde la perspectiva de la cámara de foto/vídeo: true o false (el valor predeterminado es true).
 
 **/API/Holographic/MRC/Settings (GET)**
 
@@ -323,7 +323,7 @@ Obtiene el estado de la realidad mixta grabada (en ejecución, detenida)
 Obtiene la imagen en miniatura del archivo especificado.
 
 Parámetros
-* extensión Nombre, hex64 codificado, del archivo para el que se solicita la miniatura
+* Filename: nombre, hex64 codificado, del archivo para el que se solicita la miniatura
 
 **/API/Holographic/MRC/video/control/Start (POST)**
 
@@ -334,9 +334,9 @@ Parámetros
 * PV: capturar la cámara PV: true o false (el valor predeterminado es false)
 * MIC: Capture Microphone: true o false (el valor predeterminado es false)
 * bucle invertido: captura de audio de la aplicación: true o false (el valor predeterminado es false)
-* RenderFromCamera : (Solo HoloLens 2) representar desde la perspectiva de la cámara de foto/vídeo: true o false (el valor predeterminado es true).
-* vstab : (Solo HoloLens 2) habilitar la estabilización de vídeo: true o false (el valor predeterminado es true)
-* vstabbuffer: (Solo HoloLens 2) latencia del búfer de estabilización de vídeo: de 0 a 30 fotogramas (el valor predeterminado es 15 fotogramas)
+* RenderFromCamera: (solo HoloLens 2) presentación desde la perspectiva de la cámara de foto/vídeo: true o false (el valor predeterminado es true).
+* Vstab: (solo HoloLens 2) habilitar estabilización de vídeo: true o false (el valor predeterminado es true)
+* vstabbuffer: (solo HoloLens 2) latencia de búfer de estabilización de vídeo: de 0 a 30 fotogramas (el valor predeterminado es 15 fotogramas)
 
 **/API/Holographic/MRC/video/control/STOP (POST)**
 
@@ -364,19 +364,19 @@ Parámetros opcionales (solo HoloLens 2)
 
 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_high.MP4 (GET)**
+**/API/Holographic/Stream/live_high. MP4 (GET)**
 
 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_med.MP4 (GET)**
+**/API/Holographic/Stream/live_med. MP4 (GET)**
 
 Una secuencia de 854x480p 30 fps 2.5 Mbit.
 
-**/API/Holographic/Stream/live_low.MP4 (GET)**
+**/API/Holographic/Stream/live_low. MP4 (GET)**
 
 Una secuencia de 428x240p 15fps 0,6 Mbit.
 
-## <a name="networking"></a>Redes
+## <a name="networking"></a>Funciones de red
 
 **/API/Networking/ipconfig (GET)**
 
@@ -397,7 +397,7 @@ Obtiene el nombre de la máquina.
 Establece el nombre de la máquina
 
 Parámetros
-* Name Nuevo nombre de equipo, hex64 codificado, para establecer en
+* Nombre: nuevo nombre del equipo, hex64 codificado, para establecer en
 
 ## <a name="performance-data"></a>Datos de rendimiento
 
@@ -415,7 +415,7 @@ Devuelve las estadísticas de rendimiento del sistema (e/s de lectura/escritura,
 Devolver datos
 * JSON con información del sistema: CPU, GPU, memoria, red, e/s
 
-## <a name="power"></a>Alimentación
+## <a name="power"></a>Potencia
 
 **/API/Power/Battery (GET)**
 
@@ -442,16 +442,16 @@ Apaga el dispositivo de destino
 Detiene una aplicación moderna
 
 Parámetros
-* configura Nombre completo del paquete de la aplicación, hex64 codificado
-* forcestop : Forzar la detención de todos los procesos (= sí)
+* paquete: nombre completo del paquete de la aplicación, hex64 codificado
+* forcestop: forzar la detención de todos los procesos (= sí)
 
 **/API/TaskManager/App (POST)**
 
 Inicia una aplicación moderna
 
 Parámetros
-* AppID PRAID de la aplicación que se va a iniciar, hex64 codificada
-* configura Nombre completo del paquete de la aplicación, hex64 codificado
+* AppID: PRAID de la aplicación que se va a iniciar, hex64 codificada
+* paquete: nombre completo del paquete de la aplicación, hex64 codificado
 
 ## <a name="wifi-management"></a>Administración de WiFi
 
@@ -497,7 +497,7 @@ Parámetros
 
 Carga un perfil de WPR e inicia el seguimiento con el perfil cargado.
 
-Útiles
+Payload
 * cuerpo http compatible con varias partes
 
 Devolver datos
@@ -522,7 +522,7 @@ Devolver datos
 Inicia una sesión de seguimiento de WPR (rendimiento)
 
 Parámetros
-* perfiles Nombre del perfil. Los perfiles disponibles se almacenan en perfprofiles/profiles. JSON.
+* Perfil: nombre del perfil. Los perfiles disponibles se almacenan en perfprofiles/profiles. JSON.
 
 Devolver datos
 * Al iniciar, devuelve el estado de la sesión de WPR.

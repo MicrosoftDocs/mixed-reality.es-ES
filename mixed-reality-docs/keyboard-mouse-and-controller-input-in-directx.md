@@ -1,17 +1,17 @@
 ---
 title: Teclado, mouse y entrada del controlador en DirectX
 description: Explica cómo crear una aplicación para Windows Mixed Reality que usa el teclado, el mouse y los controladores de juegos.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, teclado, Mouse, dispositivo de juego, controladora Xbox, HoloLens, escritorio, tutorial, código de ejemplo
-ms.openlocfilehash: 1e61cb50a561492fdc6849b5b231e97fab1bb6cf
-ms.sourcegitcommit: 05fa75193059a2dac4b580a9eef7b6c4bb64d8d7
+ms.openlocfilehash: 27f1bf72435ce6889ba3f7b83664367a4440b162
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278093"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>Teclado, mouse y entrada del controlador en DirectX
 
@@ -265,5 +265,5 @@ Hay algunas diferencias importantes en el modo en que este código se puede usar
 * La entrada mediante teclado puede ser una manera excelente de controlar los aspectos de depuración de la aplicación o el motor de juegos, sobre todo porque el usuario no tendrá que usar el teclado. El cableado es el mismo que se usa con las API de eventos de CoreWindow. En este escenario, puede optar por implementar una manera de configurar la aplicación para que enrute los eventos de teclado a un modo de "depuración de solo entrada" durante las sesiones de depuración.
 * Los controladores Bluetooth también funcionan.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Accesorios de hardware](hardware-accessories.md)

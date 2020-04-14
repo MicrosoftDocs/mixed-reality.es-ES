@@ -1,17 +1,17 @@
 ---
 title: Solución de problemas y limitaciones de la comunicación remota holográfica
 description: Pasos de solución de problemas para la comunicación remota holográfica en HoloLens 2.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, solución de problemas, ayuda
-ms.openlocfilehash: 79258832d29741c56a1e7e89baeb7d728c806dd1
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c6d8333bf22c3abb254a9f1b6e30a785effa9999
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277353"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Solución de problemas de Holographic Remoting
 
@@ -89,7 +89,7 @@ Las siguientes API **no** se admiten actualmente cuando se usa Holographic Remot
 * [SpatialGraphInteropPreview.TryCreateFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview.trycreateframeofreference)
 * [SpatialInteractionSource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Historial de versiones de Holographic Remoting](holographic-remoting-version-history.md)
 * [Escritura de una aplicación remota holográfica Remoting](holographic-remoting-create-host.md)
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)

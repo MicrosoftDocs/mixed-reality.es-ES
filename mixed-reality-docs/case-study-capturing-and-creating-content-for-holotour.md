@@ -1,17 +1,17 @@
 ---
 title: 'Caso práctico: HoloTour'
 description: HoloTour para Microsoft HoloLens proporciona paseos en 3D sobre las ubicaciones de iconos en todo el mundo. Este caso práctico le guiará a través del proceso de captura y creación del contenido que se usa para HoloTour.
-author: DannyAskew
+author: dannyaskew
 ms.author: daaske
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloTour, HoloLens, Windows Mixed Reality
-ms.openlocfilehash: 035bec9b0d46a31978bc91f23bfb3a5ee47d6247
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 59c3dffd48009aa792643ea27b59f8f6f85b64d7
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73436928"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278193"
 ---
 # <a name="case-study---holotour"></a>Caso práctico: HoloTour
 
@@ -152,5 +152,5 @@ Esperamos que el uso compartido de soluciones a algunos de los desafíos más im
 
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 * [Vídeo: Microsoft HoloLens: HoloTour](https://www.youtube.com/watch?v=pLd9WPlaMpY)

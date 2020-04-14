@@ -1,17 +1,17 @@
 ---
 title: Acerca de esta guía de diseño
 description: Microsoft ha creado esta guía para diseñadores, desarrolladores, administradores de programas e investigadores, cuyo trabajo abarca dispositivos holográficos (por ejemplo, HoloLens) y envolventes (por ejemplo, los cascos Windows Mixed Reality de Acer y HP).
-author: MRWied
+author: mrwied
 ms.author: jonwie
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, introducción, guía
-ms.openlocfilehash: fd2b8d704c9053d9eeb63ab2cceca1e4257d86ed
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 114a3808d57b2bd78044ce743d568bd5effe25bb
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73437097"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277523"
 ---
 # <a name="about-this-design-guidance"></a>Acerca de esta guía de diseño
 
@@ -25,9 +25,9 @@ Con usted, estamos introduciendo una nueva era enormemente emocionante de inform
 
 Siempre que sea posible, ofreceremos orientación de diseño accionable con código relacionado en GitHub. Dicho esto, como estamos aprendiendo directamente con usted, no siempre podremos ofrecer instrucciones específicas y accionables aquí. Algunos de los elementos que compartimos estarán en el espíritu de las ' lecciones que hemos aprendido ' y ' no vamos a bajar ese camino '.
 
-Y sabemos que muchas innovaciones se generarán en la comunidad de diseño de mayor tamaño. Por lo tanto, esperamos tener noticias suyas, aprender de usted y trabajar en estrecha colaboración con usted. En nuestro caso, haremos todo lo posible para compartir la información, incluso si son exploratorios y pronto con el propósito de permitir a los desarrolladores y diseñadores el diseño del diseño, los procedimientos recomendados y los controles de código abierto, los patrones y las aplicaciones de ejemplo relacionados que puede usar. directamente en su propio trabajo.
+Y sabemos que muchas innovaciones se generarán en la comunidad de diseño de mayor tamaño. Por lo tanto, esperamos tener noticias suyas, aprender de usted y trabajar en estrecha colaboración con usted. En nuestro caso, haremos todo lo posible para compartir la información, incluso si son exploratorios y pronto con el objetivo de permitir a los desarrolladores y diseñadores el diseño del diseño, los procedimientos recomendados y los controles de código abierto, patrones y aplicaciones de ejemplo relacionados que puede usar directamente en su propio trabajo.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 A continuación se muestra una introducción rápida de cómo se organiza esta guía de diseño. 
 * **[Información general](design.md)** : Obtenga información sobre el proceso de diseño, los conceptos básicos y los factores de interacción que se deben tener en cuenta.
@@ -58,7 +58,7 @@ Aunque es importante centrarse en problemas específicos del cliente, también q
 
 ![Conozca a los creadores donde están](images/500px-creators.jpg) <br>
 
-Esperamos que muchas audiencias encuentren esta guía para ser útiles. Tiene diferentes conjuntos de aptitudes (iniciales, intermedios y avanzados), usan diferentes herramientas (Unity, C++DirectX C#,, etc.), están familiarizados con las distintas plataformas (Windows, iOS y Android), provienen de diferentes conocimientos (móviles, empresariales, juegos ) y están trabajando en distintos equipos de tamaño (solo, pequeño, mediano, grande). Por lo tanto, esta guía se puede ver con diferentes perspectivas y necesidades. Siempre que sea posible, intentaremos tener en cuenta esta diversidad y haremos lo que sea más importante como sea posible a tantas personas como sea posible. Además, sabemos que muchos de los ya están en GitHub. Por lo tanto, se vincularán directamente a los foros y repositorioss de GitHub para que se le satisfagan donde ya está. 
+Esperamos que muchas audiencias encuentren esta guía para ser útiles. Tiene diferentes conjuntos de aptitudes (principiantes, intermedios, avanzados), usan diferentes herramientas (Unity C++, C#DirectX,, etc.), están familiarizados con las distintas plataformas (Windows, iOS y Android), proceden de distintos niveles (móviles, empresariales, juegos) y están trabajando en equipos de tamaño diferente (solo, pequeño, mediano y grande). Por lo tanto, esta guía se puede ver con diferentes perspectivas y necesidades. Siempre que sea posible, intentaremos tener en cuenta esta diversidad y haremos lo que sea más importante como sea posible a tantas personas como sea posible. Además, sabemos que muchos de los ya están en GitHub. Por lo tanto, se vincularán directamente a los foros y repositorioss de GitHub para que se le satisfagan donde ya está. 
 
 ### <a name="share-as-much-as-possible-from-experimental-to-explicit"></a>Comparta todo lo posible, desde experimental hasta explícito
 

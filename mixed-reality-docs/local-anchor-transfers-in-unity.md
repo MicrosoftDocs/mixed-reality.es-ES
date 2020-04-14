@@ -1,24 +1,24 @@
 ---
 title: Transferencias de delimitadores locales en Unity
 description: Transfiera los anclajes entre varios dispositivos de HoloLens en una aplicación de Unity.
-author: fieldsJacksonG
+author: fieldsjacksong
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Uso compartido, delimitador, WorldAnchor, MR Sharing 250, WorldAnchorTransferBatch, SpatialPerception, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
-ms.openlocfilehash: 82bcd07417fd5aa1b265ebc3c8edc939101dd783
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: fd071f736add094fd65ae4d889f8008eefd8515d
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63516138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278063"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Transferencias de delimitadores locales en Unity
 
-En situaciones en las que no se pueden usar delimitadores espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
+En situaciones en las que no se pueden usar <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">delimitadores espaciales de Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
 
 >[!NOTE]
->Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores espaciales de <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
+>Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">espaciales de Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
 
 ### <a name="setting-the-spatialperception-capability"></a>Establecimiento de la funcionalidad SpatialPerception
 
@@ -34,12 +34,12 @@ Cómo habilitar la funcionalidad *SpatialPerception* :
 
 ### <a name="anchor-transfer"></a>Transferencia de delimitador
 
-**System.IO** *UnityEngine. XR. WSA. Sharing*<br>
+**Espacio de nombres:** *UnityEngine. XR. WSA. Sharing*<br>
 **Tipo**: *WorldAnchorTransferBatch*
 
 Para transferir un [WorldAnchor](coordinate-systems-in-unity.md), debe establecer el delimitador que se va a transferir. El usuario de un HoloLens examina su entorno y, de forma manual o mediante programación, elige un punto en el espacio para que sea el delimitador de la experiencia compartida. Los datos que representan este punto se pueden serializar y transmitir a los otros dispositivos que compartan la experiencia. Después, cada dispositivo deserializa los datos de delimitador e intenta buscar ese punto en el espacio. Para que la transferencia de delimitador funcione, cada dispositivo debe haber explorado en el entorno suficiente, de modo que se pueda identificar el punto representado por el delimitador.
 
-### <a name="setup"></a>Programa de instalación
+### <a name="setup"></a>Instalación
 
 El código de ejemplo de esta página tiene algunos campos que se deben inicializar:
 1. *GameObject rootGameObject* es un *GameObject* en Unity que tiene un componente *WorldAnchor* en él. Un usuario de la experiencia compartida colocará esta *GameObject* y exportará los datos a los demás usuarios.
@@ -106,7 +106,7 @@ private void OnExportComplete(SerializationCompletionReason completionReason)
 }
 ```
 
-### <a name="importing"></a>Importa
+### <a name="importing"></a>Importar
 
 Después de recibir todos los bytes del remitente, se pueden volver a importar los datos en un *WorldAnchorTransferBatch* y bloquear el objeto de juego raíz en la misma ubicación física. Nota: la importación a veces producirá un error temporal y se debe volver a intentar:
 

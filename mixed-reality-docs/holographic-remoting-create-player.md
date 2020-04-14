@@ -1,17 +1,17 @@
 ---
 title: Escritura de un reproductor remoto Holographic Remoting
 description: Mediante la creación de una aplicación de reproductor remoto holográfica personalizada, puede crear una aplicación personalizada capaz de mostrar el contenido representado en una máquina remota a HoloLens 2. En este artículo se describe cómo se puede lograr esto.
-author: FlorianBagarMicrosoft
+author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: eaa6549eb34d3a37c21b3decb348bf43594a110f
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: b276558e43fc545be9e5c0be6feded229904ee97
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79092414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278223"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Escritura de una aplicación de reproductor remoto holográfica personalizada
 
@@ -218,7 +218,7 @@ A partir de la versión [2.1.0](holographic-remoting-version-history.md#v2.1.0) 
 - la transformación de proyección de ```Remote``` refleja las distancias de plano Near y Far especificadas por la aplicación remota.
 - ```Merged``` las distancias de plano Near y Far desde la aplicación remota y la aplicación de reproductor personalizada se combinan. De forma predeterminada, esto se realiza tomando el mínimo de las distancias de plano cercanos y el máximo de las distancias de plano lejano. En caso de que se invierta el lado remoto o el local, por ejemplo, < Near, se voltean las distancias de plano Near/Far remoto.
 
-## Opcional: establecer BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
+## <a name="optional-set-blitremoteframetimeout"></a>Opcional: establecer BlitRemoteFrameTimeout<a name="BlitRemoteFrameTimeout"></a>
 >[!IMPORTANT]
 > ```PlayerContext::BlitRemoteFrameTimeout``` se admite a partir de la versión [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
 
@@ -250,7 +250,7 @@ Para obtener más información, consulte la documentación de ```PlayerFrameStat
 
 Los canales de datos personalizados se pueden usar para enviar datos de usuario a través de la conexión remota ya establecida. Vea [canales de datos personalizados](holographic-remoting-custom-data-channels.md) para obtener más información.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 * [Escritura de una aplicación remota holográfica Remoting](holographic-remoting-create-host.md)
 * [Canales de datos personalizados de control remoto de holografías](holographic-remoting-custom-data-channels.md)
 * [Establecimiento de una conexión segura con Holographic Remoting](holographic-remoting-secure-connection.md)

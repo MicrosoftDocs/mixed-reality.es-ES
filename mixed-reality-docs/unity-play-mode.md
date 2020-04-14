@@ -1,17 +1,17 @@
 ---
 title: Modo de reproducción de Unity
 description: Usar el modo de reproducción en el editor de Unity para obtener una vista previa de los cambios en un dispositivo sin necesidad de implementar una aplicación.
-author: JonMLyons
+author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, comunicación remota, comunicación remota holográfica, reproductor remoto Holographic
-ms.openlocfilehash: 6164d7ae1bc2d9ac13135f17132aca089e63ecdf
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: dca7ffba1270802fcabed8a88fe7428ef2981553
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277563"
 ---
 # <a name="unity-play-mode"></a>Modo de reproducción de Unity
 
@@ -25,7 +25,7 @@ Con Holographic Remoting, puedes experimentar tu aplicación en HoloLens mientra
 3. En Unity, vaya al menú **ventana** y seleccione **emulación holográfica**.
 4. Establezca el **modo de emulación** en **remoto en dispositivo**.
 5. En **equipo remoto**, escriba la dirección IP de su HoloLens.
-6. Haz clic en **Connect**. Debería ver el cambio de estado de la **conexión** a **conectado** y ver que la pantalla aparece en blanco en HoloLens.
+6. Haga clic en **Conectar**. Debería ver el cambio de estado de la **conexión** a **conectado** y ver que la pantalla aparece en blanco en HoloLens.
 7. Haga clic en el botón **reproducir** para iniciar el modo de reproducción y experimentar la aplicación en su HoloLens.
 
 Holographic Remoting requiere una conexión Wi-Fi y rápida de PC. Vea [Holographic Remoting Player](holographic-remoting-player.md) para obtener detalles completos.

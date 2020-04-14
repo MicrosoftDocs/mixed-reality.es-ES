@@ -1,21 +1,21 @@
 ---
 title: Obtención de un HolographicSpace
 description: Explica la API de HolographicSpace, un concepto básico de representación de Holographic y entrada espacial.
-author: MikeRiches
+author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HolographicSpace, CoreWindow, entrada espacial, representación, cadena de intercambio, marco holográfica, bucle de actualización, bucle de juego, marco de referencia, localización, código de ejemplo, tutorial
-ms.openlocfilehash: 828352203b20ec38275796b3f172e7ecc5df3f00
-ms.sourcegitcommit: 915d3cc63a5571ba22ac4608589f3eca8da1bc81
+ms.openlocfilehash: 76211c8a5394e2e296748253df4eac063841746c
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63525448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277833"
 ---
 # <a name="getting-a-holographicspace"></a>Obtención de un HolographicSpace
 
-La clase <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> es su portal en el mundo holográfica. Controla la representación envolvente, proporciona datos de la cámara y proporciona acceso a las API de razonamiento espacial. Creará una para el identificador de usuario de la aplicación de <a href="https://docs.microsoft.com/api/windows.ui.core.corewindow" target="_blank">UWP o la</a> aplicación Win32.
+La clase <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> es su portal en el mundo holográfica. Controla la representación envolvente, proporciona datos de la cámara y proporciona acceso a las API de razonamiento espacial. Creará una para el identificador de usuario de la <a href="https://docs.microsoft.com/api/windows.ui.core.corewindow" target="_blank">aplicación de UWP o la</a> aplicación Win32.
 
 ## <a name="set-up-the-holographic-space"></a>Configuración del espacio holográfica
 
@@ -27,7 +27,7 @@ En el caso de una **aplicación para UWP** a partir [de la *plantilla holográfi
 m_holographicSpace = HolographicSpace::CreateForCoreWindow(window);
 ```
 
-En el caso de una **aplicación de Win32** que se [inicie en el ejemplo *BasicHologram* de Win32](creating-a-holographic-directx-project.md#creating-a-win32-project), consulte **App:: CreateWindowAndHolographicSpace** para obtener un ejemplo de cómo crear un HWND y, después, convertirlo en un HWND envolvente mediante la creación de un asociado <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank"> HolographicSpace</a>:
+En el caso de una **aplicación de Win32** que se [inicie en el ejemplo de Win32 *BasicHologram* ](creating-a-holographic-directx-project.md#creating-a-win32-project), consulte **App:: CreateWindowAndHolographicSpace** para obtener un ejemplo de cómo crear un HWND y luego convertirlo en un HWND envolvente mediante la creación de un <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>asociado:
 ```cpp
 void App::CreateWindowAndHolographicSpace(HINSTANCE hInstance, int nCmdShow)
 {
@@ -118,7 +118,7 @@ m_cameraRemovedToken = m_holographicSpace.CameraRemoved(
     std::bind(&AppMain::OnCameraRemoved, this, _1, _2));
 ```
 
-Los controladores de eventos deben completar algún trabajo para que la representación holográfica fluya sin problemas y para que la aplicación se pueda representar en absoluto. Lea el código y los comentarios de los detalles: puede buscar **OnCameraAdded** y **OnCameraRemoved** en la clase principal para entender cómo controla la asignación **m_cameraResources** mediante **DeviceResources**.
+Los controladores de eventos deben completar algún trabajo para que la representación holográfica fluya sin problemas y para que la aplicación se pueda representar en absoluto. Lea el código y los comentarios de los detalles: puede buscar **OnCameraAdded** y **OnCameraRemoved** en la clase principal para entender cómo controla la asignación de **m_cameraResources** mediante **DeviceResources**.
 
 En este momento, nos centramos en AppMain y en la configuración que permite que la aplicación Conozca las cámaras holográficas. Teniendo esto en cuenta, es importante tener en cuenta los dos requisitos siguientes:
 

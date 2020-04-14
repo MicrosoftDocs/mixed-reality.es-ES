@@ -1,17 +1,17 @@
 ---
 title: Descripción del rendimiento de la realidad mixta
 description: Temas avanzados y detalles sobre la optimización del rendimiento de las aplicaciones de Windows Mixed Reality
-author: Troy-Ferrell
+author: troy-ferrell
 ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, rendimiento, optimización, CPU, GPU
-ms.openlocfilehash: 287b95363acff00ab7a0407475e0a419fc076611
-ms.sourcegitcommit: 184227dc591ca2791f523d520555730ba1e95b5c
+ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79479578"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277483"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
 
@@ -101,7 +101,7 @@ La velocidad de relleno se centra en reducir el número de operaciones que se de
 
 Los recuentos de polígonos más altos producen más operaciones para la GPU; al [reducir el número de polígonos](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) de la escena, se reducirá el tiempo de representación. Hay otros factores implicados en el sombreado de la geometría que puede ser caro, pero el recuento de polígonos es la métrica más simple para determinar el costo que una escena va a representar.
 
-#### <a name="limit-overdraw"></a>Sobredibujar límite
+#### <a name="limit-overdraw"></a>Sobredibujo del límite
 
 El sobredibujo alto se produce cuando se representan varios objetos, pero no se muestran en la pantalla, ya que están ocultos por un objeto occluding. Imagine que mira una pared que tiene objetos detrás. Toda la geometría se procesaría para la representación, pero solo es necesario representar la pared opaca. Esto produce operaciones innecesarias.
 
@@ -133,7 +133,7 @@ Las operaciones de asignación y desasignación de memoria excesiva pueden dar l
 
 #### <a name="object-pooling"></a>Agrupación de objetos
 
-La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable durante una aplicación.
+La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable en una aplicación.
 
 ## <a name="see-also"></a>Vea también
 - [Recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md)
