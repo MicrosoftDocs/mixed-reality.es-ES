@@ -8,18 +8,18 @@ ms.date: 08/27/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, directx
-ms.openlocfilehash: 7b1a67f05941fc862ad3f36834efe071b0d1c57b
-ms.sourcegitcommit: 23b130d03fea46a50a712b8301fe4e5deed6cf9c
+ms.openlocfilehash: 3bd5fea55a8dad2982a1a14680169eb51764c1df
+ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/24/2019
-ms.locfileid: "75334233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81277732"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Conocer las herramientas y la arquitectura
 
 ![Esfera 3D abstracta](images/07_Development.png)
 
-## <a name="expand-your-design-processcase-study-expanding-the-design-process-for-mixed-realitymd"></a>[Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
+## <a name="expand-your-design-process"></a>[Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
 
 Cuando Microsoft lanzó el dispositivo HoloLens para un público de desarrolladores ansiosos en 2016, el equipo ya se había asociado con estudios dentro y fuera de Microsoft para crear las experiencias de lanzamiento del dispositivo. Estos equipos aprendieron con la práctica y la búsqueda de oportunidades y retos en el nuevo campo del diseño de realidad mixta. [Leer más](case-study-expanding-the-design-process-for-mixed-reality.md)
 
@@ -44,9 +44,9 @@ Cuando Microsoft lanzó el dispositivo HoloLens para un público de desarrollado
         La compatibilidad lista para la producción de HoloLens 2 también se incluirá en Unreal Engine 4.23.    
     :::column-end:::
     :::column:::    
-        [![WebVR](images/WebVR_logo.png)](development.md#webvr)<br>
-        **[WebVR](development.md#webvr)**<br>
-        WebVR es una especificación abierta que permite experimentar VR en el explorador. 
+        [![JavaScript](images/web-logo.png)](development.md#javascript)<br>
+        **[JavaScript](development.md#javascript)**<br>
+        La API de dispositivo JavaScript y WebXR es una especificación abierta que permite experimentar la realidad mixta en el explorador de cualquier plataforma.    
     :::column-end:::        
     :::column:::    
         [![Native](images/VisualStudio-small_logo.png)](development.md#native)<br>
@@ -62,27 +62,27 @@ Cuando Microsoft lanzó el dispositivo HoloLens para un público de desarrollado
 ## <a name="unity"></a>Unity
 
 
-### <a name="unity-development-overviewunity-development-overviewmd"></a>[Introducción al desarrollo de Unity](unity-development-overview.md)
+### <a name="unity-development-overview"></a>[Introducción al desarrollo de Unity](unity-development-overview.md)
 Se recomienda dedicar tiempo a explorar los tutoriales de Unity. Si necesitas recursos, Unity tiene un almacén de recursos completo. 
 
 <br>
 
-### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unitymrtk-getting-startedmd"></a>[Kit de herramientas de Mixed Reality (MRTK) para Unity de Microsoft](mrtk-getting-started.md)
+### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unity"></a>[Kit de herramientas de Mixed Reality (MRTK) para Unity de Microsoft](mrtk-getting-started.md)
 MRTK v2 con Unity es un kit de desarrollo multiplataforma de código abierto para aplicaciones de realidad mixta. MRTK versión 2 está diseñado para acelerar el desarrollo de aplicaciones destinadas a Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR.
 
 <br>
 
-### <a name="open-source-sample-apps-and-step-by-step-tutorialstutorialsmd"></a>[Aplicaciones de código abierto de ejemplo y tutoriales paso a paso](tutorials.md)
+### <a name="open-source-sample-apps-and-step-by-step-tutorials"></a>[Aplicaciones de código abierto de ejemplo y tutoriales paso a paso](tutorials.md)
 Los tutoriales de HoloLens 2 están diseñados para ayudar a los desarrolladores a obtener información sobre las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta. Los tutoriales se basan en el kit de herramientas de Mixed Reality 2.0 (MRTK 2.0).
 
 <br>
 
-### <a name="hand-interaction-examples-scene-mrtk-for-unityhttpsmicrosoftgithubiomixedrealitytoolkit-unitydocumentationgettingstartedwiththemrtkhtmlopen-and-run-the-handinteractionexamples-scene-in-editor"></a>[Escena de ejemplos de interacción de la mano (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor)
+### <a name="hand-interaction-examples-scene-mrtk-for-unity"></a>[Escena de ejemplos de interacción de la mano (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor)
 La escena de ejemplo HandInteractionExamples.unity contiene varios tipos de interacciones y controles de interfaz de usuario que resaltan la entrada de mano articulada.
 >[!NOTE]
 >Requiere la instalación de los paquetes MRTK Foundation y Example Unity.
 
-### <a name="eye-tracking-examples-mrtk-for-unityhttpsmicrosoftgithubiomixedrealitytoolkit-unitydocumentationeyetrackingeyetracking_examplesoverviewhtml"></a>[Ejemplos de seguimiento de los ojos (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html)
+### <a name="eye-tracking-examples-mrtk-for-unity"></a>[Ejemplos de seguimiento de los ojos (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html)
 En esta página se explica cómo empezar a trabajar rápidamente con el seguimiento de los ojos en MRTK mediante la creación que toma como base nuestros ejemplos de seguimiento de los ojos de MRTK proporcionados.
 >[!NOTE]
 >Requiere la instalación de los paquetes MRTK Foundation y Example Unity.
@@ -93,17 +93,17 @@ En esta página se explica cómo empezar a trabajar rápidamente con el seguimie
 
 ## <a name="unreal"></a>Unreal
 
-### <a name="unreal-development-overviewunreal-development-overviewmd"></a>[Introducción al desarrollo de Unreal](unreal-development-overview.md)
+### <a name="unreal-development-overview"></a>[Introducción al desarrollo de Unreal](unreal-development-overview.md)
 Obtén información sobre cómo compilar una aplicación de realidad mixta con Unreal.
 
 <br>
 
 ---
 
-## <a name="webvr"></a>WebVR    
+## <a name="javascript"></a>JavaScript   
 
-### <a name="babylon-development-overviewhttpsdocbabylonjscom"></a>[Introducción al desarrollo de Babylon](https://doc.babylonjs.com/)  
-Obtén información sobre cómo compilar una aplicación de realidad mixta con Babylon. Se recomienda dedicar tiempo a explorar los tutoriales de Babylon.
+### <a name="javascript-development-overview"></a>[Introducción al desarrollo con JavaScript](javascript-development-overview.md)   
+Obtén información sobre cómo compilar una aplicación de realidad mixta con JavaScript para cualquier plataforma.
 
 <br>
 
@@ -112,12 +112,12 @@ Obtén información sobre cómo compilar una aplicación de realidad mixta con B
 ## <a name="native"></a>Nativo
 
 
-### <a name="native-development-overviewdirectx-development-overviewmd"></a>[Introducción al desarrollo nativo](directx-development-overview.md)
+### <a name="native-development-overview"></a>[Introducción al desarrollo nativo](directx-development-overview.md)
 El camino más rápido para compilar una aplicación de realidad mixta nativa.
 
 <br>
 
-### <a name="directx-uwp-app-templates-for-mixed-realityhttpsmarketplacevisualstudiocomitemsitemnamewindowsmixedrealityteamwindowsmixedrealityapptemplatesvsix"></a>[Plantillas de aplicación para UWP de DirectX para la realidad mixta](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)
+### <a name="directx-uwp-app-templates-for-mixed-reality"></a>[Plantillas de aplicación para UWP de DirectX para la realidad mixta](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)
 Todos los aspectos esenciales que necesitas para empezar a escribir una aplicación de realidad mixta con DirectX.
 
 <br>
