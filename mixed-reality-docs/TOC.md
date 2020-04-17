@@ -235,7 +235,7 @@
 #### [Funcionamiento: estudios de Captura de realidad mixta](how-it-works-mixed-reality-capture-studios.md)
 ### Control remoto de holografías
 #### [Holographic Remoting Player](holographic-remoting-player.md)
-#### [Escritura de una aplicación de host de control remoto de holografías](holographic-remoting-create-host.md)
+#### [Escritura de una aplicación remota de control remoto de holografías](holographic-remoting-create-host.md)
 #### [Escritura de un reproductor de control remoto de holografías personalizado](holographic-remoting-create-player.md)
 #### [Canales de datos personalizados de control remoto de holografías](holographic-remoting-custom-data-channels.md)
 #### [Conexión segura con el control remoto de holografías](holographic-remoting-secure-connection.md)
