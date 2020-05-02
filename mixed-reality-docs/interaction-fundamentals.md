@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hololens, MMR, multimodal
 ms.openlocfilehash: 6b54d6e844c1b501a0835fc3a48deb4932ba551d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74539735"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instintivas
@@ -176,7 +176,7 @@ Si la experiencia requiere varios modelos de interacción, ten en cuenta que muc
 > Trabajamos constantemente en nuevas instrucciones que estarán disponibles para los desarrolladores y diseñadores, para informarles sobre cómo, cuándo y por qué usar varios modelos de interacción de MR.
  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Comodidad](comfort.md)
 * [Interacción basada en los ojos](eye-gaze-interaction.md)
 * [Seguimiento de los ojos en HoloLens 2](eye-tracking.md)

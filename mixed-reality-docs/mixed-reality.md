@@ -8,10 +8,10 @@ ms.topic: article
 keywords: realidad mixta, holográfico, ar, vr, mr, xr, realidad aumentada, realidad virtual, explicación
 ms.localizationpriority: high
 ms.openlocfilehash: 7b0dcbdb88f880d4c1632fae874ba6a610f023fb
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81278053"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es la realidad mixta?

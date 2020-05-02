@@ -1,5 +1,4 @@
 ---
-layout: LandingPage
 title: Introducción a Mixed Reality
 description: Para ayudar a un usuario nuevo en el ámbito de la realidad mixta, descubre qué es y comprende sus capacidades.
 author: grbury
@@ -8,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de inicio, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto
-ms.openlocfilehash: f6f72df63628bba590ac7af098d0b405e6721cc2
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 71777327d9eca488ceffdaa1ee4d7a78efe56713
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375572"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82137890"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 

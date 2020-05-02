@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Seguimiento de los ojos, Mixed Reality, Entrada, Mirada con los ojos, Enfoque con los ojos, HoloLens 2, Selección basada en la mirada con los ojos
 ms.openlocfilehash: 89f5031635f2b67ba4c9afdf605559c2b9da4ac2
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73437831"
 ---
 # <a name="eye-gaze-and-commit"></a>Mirada con los ojos y confirmación
@@ -39,7 +39,7 @@ El fundido de salida no tiene que ser tan lento como el de entrada. Esto solo es
 
 **Busca señales de sincronización de la mirada y confirmación**: La sincronización de las señales de entrada es un desafío menor para las pulsaciones en el aire y las presiones de botón. Es algo para tener en cuenta en caso de que desees usar acciones de confirmación más complicadas que pueden implicar comandos de voz largos o complicados gestos con las manos. Imagina que miras un objetivo y dices un comando de voz largo. Teniendo en cuenta el tiempo necesario para pronunciar el comando y el tiempo que tarda el sistema en detectar lo que has dicho, la mirada con los ojos se habrá dirigido a un nuevo objetivo del escenario. Por tanto, debes explicar a los usuarios que deben fijar la mirada en un destino hasta que se haya reconocido el comando o controlar la entrada de forma que se determine el comienzo del comando y lo que el usuario había estado mirando en ese momento.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Interacción basada en ojos] (eye-gaze-interaction.md)
 * [Seguimiento de los ojos en HoloLens 2] (eye-tracking.md)
 * [Mirada y confirmación](gaze-and-commit.md)
