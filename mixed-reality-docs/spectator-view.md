@@ -8,15 +8,15 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Vista del espectador, iPhone, iOS, iPad, OpenCV, cámara, ARKit, HoloLens, realidad mixta, MixedRealityToolkit, demo, grabar
 ms.openlocfilehash: 9bc1c2809c7d780d439d9efb58f464b41de3dccd
-ms.sourcegitcommit: 4d43a8f40e3132605cee9ece9229e67d985db645
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74491164"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Vista del espectador para HoloLens y HoloLens 2
 
-![Rotulador](images/SpecViewPhoneHero.jpg)
+![Marcador](images/SpecViewPhoneHero.jpg)
 
 ## <a name="overview"></a>Introducción
 
@@ -56,11 +56,11 @@ En la tabla siguiente se muestran varias funcionalidades de la vista de espectad
 | Portátil                             |            ✔            |                                             |
 | Inalámbrico                             |            ✔            |                                             |
 | Hardware adicional necesario         |     Teléfono Android, iPhone    | HoloLens + plataforma + trípode + cámara de vídeo + equipo + Unity |
-| Inversión en hardware                  |           Bajo            |                     Alto                    |
+| Inversión en hardware                  |           Baja            |                     Alto                    |
 | Multiplataforma                       |           Android, iOS   |                                             |
 | Contenido sincronizado                 |            ✔            |                      ✔                      |
 | Duración de la instalación en tiempo de ejecución               |         Instantánea          |                     Lenta                    |
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 * [Captura de realidad mixta](mixed-reality-capture.md) 
 * [Captura de realidad mixta para desarrolladores](mixed-reality-capture-for-developers.md)

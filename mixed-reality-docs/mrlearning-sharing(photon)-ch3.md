@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales sobre las funcionalidades multiusuario: 3. Conexión de varios usuarios'
+title: 'Tutoriales sobre las funcionalidades multiusuario: 4. Uso compartido de movimientos de objetos con varios usuarios'
 description: Completa este curso para aprender a implementar experiencias compartidas con varios usuarios en una aplicación de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,70 +7,56 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: cbe0d8d2db6c34ba262fe9c946b68366ed3dbb93
-ms.sourcegitcommit: 5b2ba01aa2e4a80a3333bfdc850ab213a1b523b9
+ms.openlocfilehash: 41b62eb2d9f400d0af341c9fcce887c72af7a3aa
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031227"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81610618"
 ---
-# <a name="3-connecting-multiple-users"></a>3. Conexión de varios usuarios
+# <a name="3-sharing-object-movements-with-multiple-users"></a>3. Uso compartido de movimientos de objetos con varios usuarios
 
-En esta lección, aprenderemos cómo conectar varios usuarios como parte de una experiencia compartida en directo. Al final de esta lección, podrás abrir la aplicación en varios dispositivos y ver el avatar, representado por una esfera para cada persona que se una.
+En este tutorial, aprenderás a compartir los movimientos de objetos para que todos los participantes de una experiencia compartida puedan colaborar y ver las interacciones de los demás.
 
 ## <a name="objectives"></a>Objetivos
 
-* Configurar PUN en la aplicación
-* Configurar los jugadores
-* Aprender a conectar varios usuarios en una experiencia compartida
+* Configurar el proyecto para compartir los movimientos de los objetos
+* Aprender a crear una aplicación de colaboración de varios usuarios básica
 
-## <a name="instructions"></a>Instrucciones
+## <a name="preparing-the-scene"></a>Preparación de la escena
 
-1. En la carpeta Assets->Resources->Prefabs (Recursos -> Recursos-> Objetos prefabricados) del panel Proyecto, arrastra y coloca el objeto prefabricado NetworkLobby en la jerarquía, tal y como se muestra en la imagen siguiente.
+En esta sección, agregaras elementos prefabricados del tutorial para preparar la escena.
 
-    ![Module3Chapter3step1im](images/module3chapter3step1im.PNG)
+En la ventana Proyecto, navega hasta la carpeta **Recursos** > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** (Elementos prefabricados) y arrastra el elemento prefabricado **TableAnchor** para colocarlo encima del objeto **SharedPlayground** de la ventana Jerarquía y agregarlo a la escena como elemento secundario del objeto SharedPlayground:
 
-2. Al expandir NetworkLobby, verás un objeto secundario denominado NetworkRoom. Con el objeto NetworkRoom seleccionado, ve al panel Inspector y haz clic en Add Component (Agregar componente). Busca PhotonView y agrega el componente.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section1-step1-1.png)
 
-    ![Module3Chapter3tep2im](images/module3chapter3step2im.PNG)
+## <a name="configuring-pun-to-instantiate-the-objects"></a>Configuración de PUN para crear instancias de los objetos
 
-3. Crea un nuevo objeto de juego vacío en la jerarquía. Haz clic con el botón derecho en la jerarquía y selecciona Vacío en el menú contextual. Asegúrate de que la posición está establecida en x = 0, y = 0, z = 0 y asigna al objeto el nombre PhotonUser.
+En esta sección, configurarás el proyecto para usar el elemento prefabricado RocketLauncher_Complete_Variant creado en la sección anterior y definir el lugar en el que se creará una instancia de este.
 
-    ![Module3Chapter3step3im](images/module3chapter3step3im.PNG)
+En la ventana Proyecto, navega hasta la carpeta **Recursos** > **MRTK.Tutorials.MultiUserCapabilities** > **Recursos**.
 
-4. Haz clic en Agregar componente y escribe Generic Net Sync (Sincronización de red genérica). Selecciona la clase Generic Net Sync (Sincronización de red genérica). Cuando aparezca la clase, haz clic en la casilla Usuario para activarla.
+En la ventana Jerarquía, expande el objeto **NetworkLobby** y selecciona el objeto secundario **NetworkRoom**. A continuación, en la ventana Inspector, busca el componente **Photon Room (Script)** (Sala de Photon [script]) y configúralo de la manera siguiente:
 
-    ![module3chapter3updateStep4im](images/module3chapter3updateStep4im.png)
+* En el campo **Photon User Prefab** (Elemento prefabricado de usuario de Photon), asigna el elemento **PhotonUser** de la carpeta Recursos.
 
-5. Haz clic de nuevo en Add Component (Agregar componente) y escribe Photon View (Vista de Photon). Selecciona la clase Photon View (Vista de Photon) que aparece en la lista desplegable.
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section2-step1-1.png)
 
-    ![module3chapter3updateStep5im](images/module3chapter3updateStep5im.png)
+Con el objeto secundario **NetworkLobby** seleccionado, en la ventana Jerarquía, expande el objeto **TableAnchor**. A continuación, en la ventana Inspector, busca el componente **Photon Room (Script)** (Sala de Photon [script]) y configúralo de la manera siguiente:
 
-6. Haz clic en el icono Archivo de la clase Generic Net Sync (Sincronización de red genérica). Arrástralo y colócalo en el campo Observed Components (Componentes observados) de Photon View (Vista Photon).
+* En el campo **Rocket Launcher Location** (Ubicación del iniciador de Rocket), asigna el objeto secundario **Table** desde la ventana Jerarquía.
 
-    ![module3chapter3updateStep6im.png](images/module3chapter3updateStep6im.png)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section2-step1-2.png)
 
-7. A continuación, creamos esferas para representar a cada persona que se une a una experiencia compartida. Haz clic con el botón secundario en el objeto PhotonUser que acabas de crear, desplázate hacia abajo hasta 3D Object (Objeto 3D) y haz clic en Sphere (Esfera). Se creará un objeto de juego de esfera como elemento secundario del objeto PhotonUser.
+## <a name="trying-the-experience-with-shared-object-movement"></a>Prueba de la experiencia con el movimiento de objetos compartidos
 
-    ![Module3Chapter3step4im](images/module3chapter3step4im.PNG)
+Si ahora compilas e implementas el proyecto de Unity en tu dispositivo HoloLens y, después, vuelves a Unity, presiona el botón Reproducir para entrar en el Modo Juego. Mientras la aplicación se ejecuta en HoloLens, verás que el objeto se mueve en Unity cuando lo mueves en HoloLens:
 
-8. Reduce verticalmente la esfera a x = 0,06, y = 0,06 y z = 0,06.
-
-    ![Module3hapter3step5im](images/module3chapter3step5im.PNG)
-
-9. Arrastra el objeto de juego PhotonUser a la carpeta Prefabs del panel Project (Proyecto) y, a continuación, elimínalo de la escena. Ya has creado un objeto prefabricado que se puede usar al generar nuevos jugadores o crear instancias a partir de estos en una experiencia compartida.
-
-    ![Module3Chapter3step6im](images/module3chapter3step6im.PNG)
-
-    >[!NOTE]
-    >Comprueba que el objeto de juego se haya copiado correctamente en la carpeta Prefabs antes de eliminarlo de la jerarquía.
-
-10. Crea un objeto nuevo en la jerarquía siguiendo las instrucciones del paso 3 y asígnale el nombre SharedPlayground. A continuación, haz clic en Add Component (Agregar componente) y busca un administrador de red genérico.  Vuelve a hacer clic en el componente Generic Network Manager (Administrador de red genérico). Cambia la posición del objeto a x = 0, y = 0 y z = 0.
-
-    ![Module3Chapter3step7im](images/module3chapter3step7im.PNG)
+![mrlearning-sharing](images/mrlearning-sharing/tutorial3-section3-step1-1.gif)
 
 ## <a name="congratulations"></a>Enhorabuena
 
-Una vez completados todos los pasos anteriores y finalizado el proceso de compilación, presiona el botón Play (Jugar) y conecta el dispositivo HoloLens 2. Deberías ver una esfera a tu alrededor a medida que mueves la cabeza. Se mostrará para cualquier usuario que se una a tu proyecto de Unity.
+Has configurado correctamente el proyecto para que los movimientos de los objetos se sincronicen y los usuarios puedan ver cuándo otros usuarios mueven los objetos. En el siguiente tutorial, implementarás la funcionalidad para que la experiencia compartida se alinee con el mundo físico y los usuarios se vean entre sí en su ubicación física real, y para que los objetos se muestren en la misma posición física y rotación para todos los usuarios.
 
-[Siguiente lección: 4. Uso compartido de movimientos de objetos con varios usuarios](mrlearning-sharing(photon)-ch4.md)
+[Tutorial siguiente: 4. Integración de Azure Spatial Anchors en una experiencia compartida](mrlearning-sharing(photon)-ch4.md)
