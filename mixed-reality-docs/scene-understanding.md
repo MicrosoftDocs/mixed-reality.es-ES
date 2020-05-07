@@ -1,19 +1,19 @@
 ---
-title: Conocimiento de escenas
+title: Descripción de escenas
 description: Introducción a las funcionalidades de comprensión de escenas para HoloLens
 author: szymons
 ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3d56f375c38b1dee6ab9eb97219a5e37fe698c63
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 615da20df95f4a435216457e8b9f16bb7d7d069b
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003341"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604966"
 ---
-# <a name="scene-understanding"></a>Conocimiento de escenas
+# <a name="scene-understanding"></a>Descripción de escenas
 
 La comprensión de la escena proporciona a los desarrolladores de realidad mixta una representación de entorno estructurada de alto nivel diseñada para facilitar el desarrollo de aplicaciones con conciencia del entorno. La comprensión de la escena realiza esto combinando la eficacia de los tiempos de ejecución de la realidad mixta existentes, como la [asignación espacial](spatial-mapping.md) menos precisa y los nuevos tiempos de ejecución controlados por AI. Mediante la combinación de estas tecnologías, la comprensión de escenas genera representaciones de entornos 3D que son similares a los que se han usado en marcos como Unity o ARKit/ARCore. El punto de entrada que comprende la escena comienza con un observador de escenas, al que llama su aplicación para calcular una nueva escena. En la actualidad, la tecnología es capaz de generar 3 categorías de objetos distintas pero relacionadas: mallas de entornos estancos simplificados que infieren la estructura de habitación plana sin desorden, regiones de plano para la selección de ubicación a las que llamamos cuádruples y una instantánea de la malla de [asignación espacial](spatial-mapping.md) que se alinea con los datos de cuádruples y estancos que se muestran.
 
@@ -29,7 +29,7 @@ Este artículo solo sirve para introducir la escena que comprende el tiempo de e
 
 Puede descargar la aplicación de ejemplo de descripción de la escena en el sitio de GitHub de ejemplo:
 
-[Ejemplo de información de escena](https://github.com/sceneunderstanding-microsoft/unitysample)
+[Ejemplo de información de escena](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)
 
 Si no tiene un dispositivo y desea tener acceso a escenas de ejemplo para probar la introducción de escenas, hay escenas en la carpeta de recursos de ejemplo:
 
@@ -53,13 +53,13 @@ Si busca detalles específicos sobre cómo desarrollar para la comprensión de e
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
-        <td>Conocimiento de escenas</td>
+        <td>Descripción de escenas</td>
         <td>❌</td>
         <td>✔️</td>
         <td>❌</td>
@@ -68,7 +68,7 @@ Si busca detalles específicos sobre cómo desarrollar para la comprensión de e
 
 ## <a name="common-usage-scenarios"></a>Escenarios de uso comunes
 
-![ilustraciones de escenarios de uso de la asignación espacial común: selección de ubicación, oclusión, física y navegación](images/sm-concepts-1000px.png)<br>
+![Ilustraciones de escenarios de uso de asignación espacial comunes: selección de ubicación, oclusión, física y navegación](images/sm-concepts-1000px.png)<br>
 *Escenarios comunes de uso de la asignación espacial: selección de ubicación, oclusión, física y navegación.*
 
 <br>
@@ -87,7 +87,7 @@ La comprensión de la escena proporciona nuevas construcciones diseñadas espec�
        **Image #1** -SceneQuads con inferencia deshabilitada, capturando áreas de colocación para regiones examinadas.
     :::column-end:::
         :::column:::
-       ![cuádruples con la inferencia habilitada, la selección de ubicación ya no se limita a las áreas examinadas.](images/SUWatertight.png)<br>
+       ![Cuádruples con inferencia habilitada, la selección de ubicación ya no se limita a las áreas examinadas.](images/SUWatertight.png)<br>
         **Imagen #2** -cuádruples con inferencia habilitada, la selección de ubicación ya no se limita a las áreas examinadas.
     :::column-end:::
 :::row-end:::
@@ -121,7 +121,7 @@ Aunque se puede usar la visualización de la [asignación espacial](spatial-mapp
 
 Además, el número total de superficies devueltas por la asignación espacial está limitado por la memoria caché espacial interna, mientras que la versión de la malla de la asignación espacial puede tener acceso a datos de asignación espacial que no están almacenados en caché. Por este motivo, la comprensión de la escena es más adecuada para capturar representaciones de malla para espacios más grandes (por ejemplo, más de una habitación) para la visualización o el procesamiento de malla adicional. La malla mundial devuelta con EnableWorldMesh tendrá un nivel de detalle coherente en todo el mundo, lo que puede dar lugar a una visualización más agradable si se representa como trama de alambres.
 
-### <a name="see-also"></a>Consulta también
+### <a name="see-also"></a>Consulte también
 
 * [SDK de introducción a la escena](scene-understanding-SDK.md)
 * [Asignación espacial](spatial-mapping.md)

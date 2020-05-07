@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, diseño, comodidad, HoloLens 2, HoloLens (1.ª generación)
 ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79376072"
 ---
 # <a name="comfort"></a>Comodidad
@@ -107,7 +107,7 @@ Afortunadamente, tenemos algunas sugerencias para implementar la locomoción del
 ### <a name="guidance-for-holographic-devices"></a>Instrucciones para dispositivos holográficos
 
 Un método para permitir que el usuario se mueva a otra ubicación en un entorno virtual de gran tamaño es dar la impresión de que está moviendo un objeto pequeño en la escena. Este efecto se puede lograr de la siguiente manera:
-   1. Proporciona una interfaz en la que el usuario pueda seleccionar un punto del entorno virtual al que quiera moverse.
+   1. Proporciona una interfaz en la que el usuario pueda seleccionar un punto del entorno virtual al que quiere moverse.
    2. Tras la selección, reduce la representación de la escena a un disco alrededor del punto deseado.
    3. Mientras se mantiene el punto seleccionado, permite al usuario moverlo como si fuera un objeto pequeño. A continuación, el usuario puede acercar la selección a sus pies.
    4. Una vez se anule la selección, reanuda la representación de toda la escena.
@@ -173,7 +173,7 @@ Se considera que el ángulo de mirada óptimo (en reposo) está entre 10-20 grad
 
 Los usuarios pueden acumular fatiga muscular en los casos en los que deben mantener una mano levantada a lo largo de una experiencia. Así mismo, pueden encontrar agotador el hecho de tener que realizar gestos de pulsación en el aire de forma repetida durante largos períodos de tiempo. Por lo tanto, te recomendamos diseñar experiencias que eviten la necesidad de realizar gestos de manera constante y repetida. Este objetivo puede lograrse mediante la incorporación de pausas breves y al ofrecer una combinación de gestos y voz para interactuar con la aplicación.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [Gaze](gaze-and-commit.md)
 * [Estabilidad de hologramas](hologram-stability.md)
 * [Interacciones instintivas](interaction-fundamentals.md)

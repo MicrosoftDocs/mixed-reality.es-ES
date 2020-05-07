@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: f293e779b041cdf4aa636cf317b7eaca70e16410
-ms.sourcegitcommit: 37816514b8fe20669c487774b86e80ec08edcadf
+ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81003331"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604956"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
 
@@ -25,7 +25,7 @@ El SDK de SceneUnderstanding se descarga a través de NuGet.
 
 **Nota:** la versión más reciente depende de los paquetes de versión preliminar y tendrá que habilitar los paquetes de versión preliminar para verlos.
 
-A partir de la versión 0.5.2022-RC, la descripción de la escena C# admite C++ proyecciones de idioma para y permite a las aplicaciones desarrollar aplicaciones para las plataformas Win32 o UWP. A partir de esta versión, SceneUnderstanding es compatible con la compatibilidad del editor de Unity con el SceneObserver, que se usa únicamente para comunicarse con HoloLens2. 
+A partir de la versión 0.5.2022-RC, la comprensión de la escena admite proyecciones de lenguaje para C# y C++ que permiten a las aplicaciones desarrollar aplicaciones para las plataformas Win32 o UWP. A partir de esta versión, SceneUnderstanding es compatible con la compatibilidad del editor de Unity con el SceneObserver, que se usa únicamente para comunicarse con HoloLens2. 
 
 SceneUnderstanding requiere Windows SDK versión 18362 o posterior. 
 
@@ -97,11 +97,11 @@ A continuación se presenta un ejemplo de una estructura en su forma plana y ló
 
 En esta ilustración se resalta la diferencia entre el diseño físico y lógico de la escena. A la izquierda, vemos el diseño jerárquico de los datos que la aplicación ve al enumerar la escena. A la derecha, vemos que la escena se compone de 12 componentes distintos a los que se puede tener acceso individualmente si es necesario. Al procesar una nueva escena, esperamos que las aplicaciones recorran esta jerarquía de manera lógica; sin embargo, al realizar un seguimiento entre las actualizaciones de la escena, algunas aplicaciones solo pueden estar interesadas en determinados componentes que se comparten entre dos escenas.
 
-## <a name="api-overview"></a>Introducción a API
+## <a name="api-overview"></a>Introducción a la API
 
 En la sección siguiente se proporciona información general de alto nivel sobre las construcciones de comprensión de la escena. Al leer esta sección se proporciona una descripción de cómo se representan las escenas y para qué se usan los distintos componentes. En la siguiente sección se proporcionan ejemplos de código concretos e información adicional con el glosario en esta información general.
 
-Todos los tipos que se describen a continuación residen en el espacio de nombres `Microsoft.MixedReality.SceneUnderstanding`.
+Todos los tipos que se describen a continuación residen `Microsoft.MixedReality.SceneUnderstanding` en el espacio de nombres.
 
 ### <a name="scenecomponents"></a>SceneComponents
 
@@ -119,13 +119,13 @@ SceneObjects puede tener cualquiera de las siguientes opciones:
 <tr>
 <th>SceneObjectKind</th> <th>Descripción</th>
 </tr>
-<tr><td>Fondo</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
+<tr><td>Información previa</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
 <tr><td>Reloj</td><td>Una pared física. Se supone que las paredes son estructuras de entorno inmóviles.</td></tr>
-<tr><td>Palabra</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no están en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
+<tr><td>Floor</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no están en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
 <tr><td>Ceiling</td><td>La superficie superior de una habitación.</td></tr>
-<tr><td>Platform</td><td>Una superficie plana grande en la que se pueden colocar hologramas. Tienden a representar las tablas, los extremos y otras superficies horizontales grandes.</td></tr>
-<tr><td>Mundo</td><td>Etiqueta reservada para los datos geométricos que es independiente de la etiqueta. La malla generada al establecer la marca de actualización EnableWorldMesh se clasificaría como World.</td></tr>
-<tr><td>Desconocida</td><td>Este objeto de escena todavía se puede clasificar y asignar a un tipo. Esto no se debe confundir con el fondo, ya que este objeto podría ser cualquier cosa, el sistema no ha incorporado todavía una clasificación suficientemente fuerte para él.</td></tr>
+<tr><td>Plataforma</td><td>Una superficie plana grande en la que se pueden colocar hologramas. Tienden a representar las tablas, los extremos y otras superficies horizontales grandes.</td></tr>
+<tr><td>World</td><td>Etiqueta reservada para los datos geométricos que es independiente de la etiqueta. La malla generada al establecer la marca de actualización EnableWorldMesh se clasificaría como World.</td></tr>
+<tr><td>Desconocido</td><td>Este objeto de escena todavía se puede clasificar y asignar a un tipo. Esto no se debe confundir con el fondo, ya que este objeto podría ser cualquier cosa, el sistema no ha incorporado todavía una clasificación suficientemente fuerte para él.</td></tr>
 </tr>
 </table>
 
@@ -265,7 +265,7 @@ Observe que es el SceneObject que tiene la transformación relativa al origen de
 
 La comprensión de la escena ha realizado un intento deliberado de alinearse con representaciones de escenas 3D tradicionales al tratar con transformaciones. Por lo tanto, cada escena se limita a un sistema de coordenadas único, de forma muy similar a la mayoría de las representaciones comunes del entorno 3D. Cada SceneObjects proporciona su ubicación como posición y orientación dentro de ese sistema de coordenadas. Si la aplicación está tratando con escenas que amplían el límite de lo que proporciona un único origen, puede delimitar SceneObjects a SpatialAnchors, o generar varias escenas y combinarlas juntas, pero para simplificar, se supone que las escenas estancas existen en su propio origen localizado por un NodeId definido por Scene. OriginSpatialGraphNodeId.
 
-El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas. Vea [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) y [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obtener más información sobre las API de percepción de Windows y los [objetos nativos de realidad mixta en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obtener más información sobre cómo obtener una SpatialCoordinateSystem que se corresponda con el origen mundial de Unity, así como el método de extensión `.ToUnity()` para la conversión entre `System.Numerics.Matrix4x4` y `UnityEngine.Matrix4x4`.
+El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas. Vea [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) y [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obtener más información sobre las API de percepción de Windows y los [objetos nativos de realidad mixta en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obtener más información sobre cómo obtener una SpatialCoordinateSystem que se corresponda `.ToUnity()` con el origen mundial de `System.Numerics.Matrix4x4` Unity `UnityEngine.Matrix4x4`, así como el método de extensión para convertir entre y.
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Cada `SceneObject` tiene una propiedad `Position` y `Orientation` que se puede utilizar para colocar el contenido correspondiente en relación con el origen del `Scene`contenedor. Por ejemplo, en el ejemplo siguiente se da por supuesto que el juego es un elemento secundario de la raíz de la escena y asigna su posición y giro local para alinear con una `SceneObject`determinada:
+Cada `SceneObject` una tiene `Position` una `Orientation` propiedad y que se puede usar para colocar el contenido correspondiente en relación con el origen `Scene`de la que contiene. Por ejemplo, en el ejemplo siguiente se da por supuesto que el juego es un elemento secundario de la raíz de la escena y asigna su posición y giro local para `SceneObject`alinear con un determinado:
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -343,9 +343,9 @@ foreach (var sceneObject in myScene.SceneObjects)
 
 Los pasos 1-4 son muy dependientes de la implementación o el marco de trabajo en particular, pero los temas deben ser similares. Es importante tener en cuenta que la cuádruple simplemente representa un plano 2D enlazado que está localizado en el espacio. Teniendo el motor o el marco de trabajo de saber dónde está el cuádruple y la raíz de los objetos en relación con la cuádruple, los hologramas se ubicarán correctamente con respecto al mundo real. Para obtener información más detallada, consulte nuestros ejemplos en cuatro que muestran implementaciones específicas.
 
-### <a name="mesh"></a>Tamiz
+### <a name="mesh"></a>Malla
 
-Las mallas representan representaciones geométricas de objetos o entornos. De forma similar a la [asignación espacial](spatial-mapping.md), los datos del índice de malla y del vértice que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los búferes de vértices y de índices que se usan para representar mallas de triángulo en todas las API de representación modernas. Las posiciones de los vértices se proporcionan en el sistema de coordenadas de la `Scene`. Las API específicas que se usan para hacer referencia a estos datos son las siguientes:
+Las mallas representan representaciones geométricas de objetos o entornos. De forma similar a la [asignación espacial](spatial-mapping.md), los datos del índice de malla y del vértice que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los búferes de vértices y de índices que se usan para representar mallas de triángulo en todas las API de representación modernas. Las posiciones de los vértices se proporcionan en el `Scene`sistema de coordenadas de. Las API específicas que se usan para hacer referencia a estos datos son las siguientes:
 
 ```cs
 void GetTriangleIndices(int[] indices);
@@ -362,7 +362,7 @@ mesh.GetTriangleIndices(indices);
 mesh.GetVertexPositions(positions);
 ```
 
-Los búferes de índice/vértices se deben > = los recuentos de índice o vértices, pero de lo contrario se puede cambiar el tamaño de forma arbitraria, lo que permite reutilizar la memoria de forma eficaz.
+Los búferes de índice/vértices se deben >= los recuentos de índice o vértices, pero de lo contrario se puede cambiar el tamaño de forma arbitraria, lo que permite reutilizar la memoria de forma eficaz.
 
 ## <a name="developing-with-scene-understandings"></a>Desarrollo con conocimientos de escenas
 
@@ -378,10 +378,10 @@ Si tiene un HoloLens2, puede guardar cualquier escena que haya capturado guardan
 
 Si no tiene un dispositivo HoloLens2 pero desea jugar con la comprensión de la escena, tendrá que descargar una escena capturada previamente. El ejemplo de comprensión de la escena se incluye actualmente con escenas serializadas que se pueden descargar y usar por su comodidad. Puede encontrarlos aquí:
 
-[Escenas de ejemplo de la escena](https://github.com/sceneunderstanding-microsoft/unitysample/tree/master/Assets/Resources/SerializedScenesForPCPath)
+[Escenas de ejemplo de la escena](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
 ## <a name="see-also"></a>Vea también
 
 * [Asignación espacial](spatial-mapping.md)
 * [Descripción de escenas](scene-understanding.md)
-* [Ejemplo de Unity](https://github.com/sceneunderstanding-microsoft/unitysample)
+* [Ejemplo de Unity](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples)

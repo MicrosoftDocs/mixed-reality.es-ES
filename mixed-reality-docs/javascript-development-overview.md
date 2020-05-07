@@ -6,18 +6,18 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR, WinMR, WebAR, WebVR, WindowsMixedReality, HoloLens, Windows Mixed Reality, Web VR, webxr, Web Mr, ar website, 360, 360 video, 360 videos, 360 Photo, 360 fotos, 360 contenido, Web envolvente, inmersivo-Web, IW, immersiveweb
-ms.openlocfilehash: 5756af9f48f4bb25477e75fb1f7c09e7239bdab9
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a1288e8f477f42b0937e797623fb83fe8f63685c
+ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278486"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82835614"
 ---
 # <a name="mixed-reality-development-with-javascript-overview"></a>Información general sobre el desarrollo de realidad mixta con JavaScript
 
 ## <a name="mixed-reality-applications-on-the-web"></a>Aplicaciones de realidad mixta en la web
 
-Las características de realidad mixta están disponibles en la web mediante el uso de las [API de dispositivo WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) y [API de WebVR en desuso] ([información general de WebXR](webxr-overview.md). En el caso de los exploradores que no son compatibles con las características de WebXR completas, puede agregar [rellenos de WebXR](https://github.com/immersive-web/webxr-polyfill) a su sitio Web.
+Las características de realidad mixta están disponibles en la web mediante el uso de las [API de dispositivo WebXR](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API) y las [API de WebVR en desuso](webxr-overview.md). En el caso de los exploradores que no son compatibles con las características de WebXR completas, puede agregar [rellenos de WebXR](https://github.com/immersive-web/webxr-polyfill) a su sitio Web.
 
 ## <a name="what-is-webxr-polyfill"></a>Qué es WebXR polyfill
 
@@ -55,7 +55,7 @@ La plataforma [nativa Babylon](https://www.babylonjs.com/native/) permite a cual
 
 [ReAct Native](https://reactnative.dev/) es otra biblioteca de código abierto que permite a los desarrolladores compilar con JavaScript e implementar en varias plataformas. Puede descargar [reAct Native en github](https://github.com/facebook/react-native) y obtener más información en el [blog de reAct Native](https://reactnative.dev/blog/).
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 * [Información general de WebXR](webxr-overview.md)
 * [Especificación de la API de dispositivo WebXR](https://immersive-web.github.io/webxr/)
