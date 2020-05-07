@@ -7,12 +7,12 @@ ms.date: 05/02/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 65bcef6a7c10450816d7a928302b0b266b132f0f
-ms.sourcegitcommit: 536fd45b48a70bbeca1454cef517ae007225e533
+ms.openlocfilehash: b807ac7e51e4009d2c44d3b7c67fbdf3488ccbd9
+ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80362064"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82604996"
 ---
 # <a name="5-interacting-with-3d-objects"></a>5. Interacción con objetos 3D
 
@@ -30,9 +30,9 @@ En este tutorial, obtendrás información sobre el contenido 3D básico y la exp
 
 Descarga e importa el paquete personalizado de Unity:
 
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.2/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.2.unitypackage)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.3/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage)
 
-Después de importar los recursos del tutorial, la ventana del proyecto debería tener un aspecto similar al siguiente:
+Después de importar los recursos del tutorial, la ventana Project (Proyecto) debería tener un aspecto similar al siguiente:
 
 ![mrlearning-base](images/mrlearning-base/tutorial4-section1-step1-1.png)
 
