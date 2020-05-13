@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 3eb54f84e30b2354907204895e62accdb9ad54f9
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82604956"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228020"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
 
@@ -101,7 +101,7 @@ En esta ilustración se resalta la diferencia entre el diseño físico y lógico
 
 En la sección siguiente se proporciona información general de alto nivel sobre las construcciones de comprensión de la escena. Al leer esta sección se proporciona una descripción de cómo se representan las escenas y para qué se usan los distintos componentes. En la siguiente sección se proporcionan ejemplos de código concretos e información adicional con el glosario en esta información general.
 
-Todos los tipos que se describen a continuación residen `Microsoft.MixedReality.SceneUnderstanding` en el espacio de nombres.
+Todos los tipos que se describen a continuación residen en el `Microsoft.MixedReality.SceneUnderstanding` espacio de nombres.
 
 ### <a name="scenecomponents"></a>SceneComponents
 
@@ -119,7 +119,7 @@ SceneObjects puede tener cualquiera de las siguientes opciones:
 <tr>
 <th>SceneObjectKind</th> <th>Descripción</th>
 </tr>
-<tr><td>Información previa</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
+<tr><td>Segundo plano</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
 <tr><td>Reloj</td><td>Una pared física. Se supone que las paredes son estructuras de entorno inmóviles.</td></tr>
 <tr><td>Floor</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no están en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
 <tr><td>Ceiling</td><td>La superficie superior de una habitación.</td></tr>
@@ -158,7 +158,7 @@ El primer paso para trabajar con SceneUnderstanding es que la aplicación pueda 
 Las escenas se calculan mediante una SceneObserver. Antes de crear una escena, la aplicación debe consultar el dispositivo para asegurarse de que admite SceneUnderstanding, así como para solicitar acceso de usuario para obtener información que necesita SceneUnderstanding.
 
 ```cs
-if (SceneObserver.IsSupported())
+if (!SceneObserver.IsSupported())
 {
     // Handle the error
 }
@@ -265,7 +265,7 @@ Observe que es el SceneObject que tiene la transformación relativa al origen de
 
 La comprensión de la escena ha realizado un intento deliberado de alinearse con representaciones de escenas 3D tradicionales al tratar con transformaciones. Por lo tanto, cada escena se limita a un sistema de coordenadas único, de forma muy similar a la mayoría de las representaciones comunes del entorno 3D. Cada SceneObjects proporciona su ubicación como posición y orientación dentro de ese sistema de coordenadas. Si la aplicación está tratando con escenas que amplían el límite de lo que proporciona un único origen, puede delimitar SceneObjects a SpatialAnchors, o generar varias escenas y combinarlas juntas, pero para simplificar, se supone que las escenas estancas existen en su propio origen localizado por un NodeId definido por Scene. OriginSpatialGraphNodeId.
 
-El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas. Vea [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) y [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obtener más información sobre las API de percepción de Windows y los [objetos nativos de realidad mixta en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obtener más información sobre cómo obtener una SpatialCoordinateSystem que se corresponda `.ToUnity()` con el origen mundial de `System.Numerics.Matrix4x4` Unity `UnityEngine.Matrix4x4`, así como el método de extensión para convertir entre y.
+El siguiente código de Unity, por ejemplo, muestra cómo usar las API de Windows y la percepción de Windows para alinear los sistemas de coordenadas. Vea [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) y [SpatialGraphInteropPreview](https://docs.microsoft.com//uwp/api/windows.perception.spatial.preview.spatialgraphinteroppreview) para obtener más información sobre las API de percepción de Windows y los [objetos nativos de realidad mixta en Unity](https://docs.microsoft.com//windows/mixed-reality/unity-xrdevice-advanced) para obtener más información sobre cómo obtener una SpatialCoordinateSystem que se corresponda con el origen mundial de Unity, así como el `.ToUnity()` método de extensión para convertir entre `System.Numerics.Matrix4x4` y `UnityEngine.Matrix4x4` .
 
 ```cs
 public class SceneRootComponent : MonoBehavior
@@ -295,7 +295,7 @@ public class SceneRootComponent : MonoBehavior
 }
 ```
 
-Cada `SceneObject` una tiene `Position` una `Orientation` propiedad y que se puede usar para colocar el contenido correspondiente en relación con el origen `Scene`de la que contiene. Por ejemplo, en el ejemplo siguiente se da por supuesto que el juego es un elemento secundario de la raíz de la escena y asigna su posición y giro local para `SceneObject`alinear con un determinado:
+Cada `SceneObject` una tiene `Position` una `Orientation` propiedad y que se puede usar para colocar el contenido correspondiente en relación con el origen de la que contiene `Scene` . Por ejemplo, en el ejemplo siguiente se da por supuesto que el juego es un elemento secundario de la raíz de la escena y asigna su posición y giro local para alinear con un determinado `SceneObject` :
 
 ```cs
 void SetLocalTransformFromSceneObject(GameObject gameObject, SceneObject sceneObject)
@@ -345,7 +345,7 @@ Los pasos 1-4 son muy dependientes de la implementación o el marco de trabajo e
 
 ### <a name="mesh"></a>Malla
 
-Las mallas representan representaciones geométricas de objetos o entornos. De forma similar a la [asignación espacial](spatial-mapping.md), los datos del índice de malla y del vértice que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los búferes de vértices y de índices que se usan para representar mallas de triángulo en todas las API de representación modernas. Las posiciones de los vértices se proporcionan en el `Scene`sistema de coordenadas de. Las API específicas que se usan para hacer referencia a estos datos son las siguientes:
+Las mallas representan representaciones geométricas de objetos o entornos. De forma similar a la [asignación espacial](spatial-mapping.md), los datos del índice de malla y del vértice que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los búferes de vértices y de índices que se usan para representar mallas de triángulo en todas las API de representación modernas. Las posiciones de los vértices se proporcionan en el sistema de coordenadas de `Scene` . Las API específicas que se usan para hacer referencia a estos datos son las siguientes:
 
 ```cs
 void GetTriangleIndices(int[] indices);

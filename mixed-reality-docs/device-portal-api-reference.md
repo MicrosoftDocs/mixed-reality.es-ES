@@ -1,19 +1,19 @@
 ---
-title: Referencia de la API del portal de dispositivos
+title: Referencia de la API del Portal de dispositivos
 description: Referencia de API para Windows Device portal en HoloLens
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos de Windows, API
-ms.openlocfilehash: 236de35c2c736fc5a0289b7be1f1548f0a08fa26
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278243"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227970"
 ---
-# <a name="device-portal-api-reference"></a>Referencia de la API del portal de dispositivos
+# <a name="device-portal-api-reference"></a>Referencia de la API del Portal de dispositivos
 
 Todo lo que se encuentra en el [portal de dispositivos de Windows](using-the-windows-device-portal.md) se basa en la API de REST que puede usar para tener acceso a los datos y controlar el dispositivo mediante programación.
 
@@ -163,7 +163,7 @@ Obtener la fase térmica del dispositivo (0 normal, 1 cálido, 2 crítico)
 
 **/API/Holographic/Simulation/control/MODE (GET)**
 
-Obtener el modo de simulación
+Obtención del modo de simulación
 
 **/API/Holographic/Simulation/control/MODE (POST)**
 
@@ -183,6 +183,10 @@ Abra una conexión de socket web para un flujo de control.
 **/API/Holographic/Simulation/control/Stream (POST)**
 
 Cree un flujo de control (se requiere prioridad) o publique los datos en un flujo creado (streamId obligatorio). Se espera que los datos expuestos sean del tipo "application/octet-stream".
+
+**/API/Holographic/Simulation/display/Stream (GET/WebSocket)**
+
+Solicitar una secuencia de vídeo de simulación que contenga el contenido representado en la pantalla del sistema cuando esté en modo de ' simulación '.  Inicialmente, se enviará un encabezado de descriptor de formato simple, seguido de las texturas codificadas en H. 264, cada una precedida por un encabezado que indica el índice ocular y el tamaño de la textura.
 
 ## <a name="perception-simulation-playback"></a>Reproducción de la simulación de percepción
 
@@ -376,7 +380,7 @@ Una secuencia de 854x480p 30 fps 2.5 Mbit.
 
 Una secuencia de 428x240p 15fps 0,6 Mbit.
 
-## <a name="networking"></a>Funciones de red
+## <a name="networking"></a>Redes
 
 **/API/Networking/ipconfig (GET)**
 
@@ -415,7 +419,7 @@ Devuelve las estadísticas de rendimiento del sistema (e/s de lectura/escritura,
 Devolver datos
 * JSON con información del sistema: CPU, GPU, memoria, red, e/s
 
-## <a name="power"></a>Potencia
+## <a name="power"></a>Power
 
 **/API/Power/Battery (GET)**
 
