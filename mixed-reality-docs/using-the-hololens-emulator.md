@@ -3,16 +3,16 @@ title: Uso del emulador de HoloLens
 description: Uso del emulador de HoloLens para probar aplicaciones de realidad mixta en el equipo sin un dispositivo HoloLens físico.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 4/13/2020
+ms.date: 5/12/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulator
-ms.openlocfilehash: bbdf389a1b7bf42e3dfb1fffb09cf6d3b1a65b6a
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278023"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83227990"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso del emulador de HoloLens
 
@@ -28,7 +28,7 @@ Si buscas desarrollar aplicaciones para cascos envolventes (VR) de Windows Mixed
 Descargue el emulador HoloLens.
 
 Versiones: 
-* [Emulador de HoloLens 2 (actualización de abril de 2020)](https://go.microsoft.com/fwlink/?linkid=2126826).
+* [Emulador de HoloLens 2 (Windows Holographic, versión 2004)](https://go.microsoft.com/fwlink/?linkid=2129088).
 * [Emulador de HoloLens (Gen 1) y plantillas de proyecto holográficas](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Puedes encontrar notas de la versión y compilaciones anteriores del emulador de HoloLens en la página [Archivo del emulador de HoloLens](hololens-emulator-archive.md).
@@ -78,6 +78,8 @@ El cursor en HoloLens (1ª generación) sigue el movimiento y el giro de la cabe
 * **Gesto de eclosionar/sistema**: presiona la tecla de Windows o la tecla F2 del teclado, o bien el botón B en un mando de Xbox.
 * **Movimiento de manos para desplazarse**: mantén presionados la tecla Alt y el botón derecho del mouse simultáneamente y arrastra el mouse hacia arriba o hacia abajo; o, en un mando de Xbox, mantén presionados el gatillo derecho y el botón A y mueve el stick derecho hacia arriba y hacia abajo.
 * **Movimiento y orientación de las manos** (solo el emulador de HoloLens 2): mantén presionada la tecla Alt y arrastra el mouse hacia arriba, hacia abajo, a la izquierda o a la derecha para mover la mano, o bien usa las teclas de dirección y Q o E para girar e inclinar la mano. En un mando de Xbox, mantén presionado el botón superior izquierdo o derecho y usa la palanca de mando izquierda para mover la mano a la izquierda, a la derecha, hacia delante y hacia atrás, la palanca de mando derecha para girarla, y arriba y abajo en Dpad para subirla o bajarla.
+
+¿Tienes un casco envolvente de Windows Mixed Reality?  A partir del emulador de HoloLens 2 (Windows Holographic, versión 2004), puedes usar el casco envolvente y los controladores de movimiento de Windows Mixed Reality para controlar el emulador de HoloLens 2 y verlo en modo estereoscópico.  Consulta [Uso de un casco envolvente y controladores de movimiento de Windows Mixed Reality con el emulador de HoloLens 2](#using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator).
 
 ## <a name="anatomy-of-the-hololens-2-emulator"></a>Anatomía del emulador de HoloLens 2 
 
@@ -164,6 +166,34 @@ La pestaña Actualizaciones te permite controlar si el emulador debe comprobar o
 
 ![Pestaña "Actualizaciones" del emulador de HoloLens](images/emulator-updates-500px.png)
 
+### <a name="using-a-windows-mixed-reality-immersive-headset-and-motion-controllers-with-the-hololens-2-emulator"></a>Uso de un casco envolvente y controladores de movimiento de Windows Mixed Reality con el emulador de HoloLens 2
+
+A partir del emulador de HoloLens 2 (Windows Holographic, versión 2004), puedes usar los controladores de movimiento y el casco de Windows Mixed Reality para ver el emulador de HoloLens 2 en modo estereoscópico e interactuar con él.  Esto te permite realizar movimientos más rápidos y naturales con la cabeza y las manos sin un dispositivo HoloLens 2.  Ten en cuenta que esto no reemplaza por completo a un dispositivo HoloLens 2, sino que tiene como objetivo proporcionar una experiencia mejorada más allá de interactuar con el emulador mediante el teclado, el mouse y el controlador para juegos en una ventana de escritorio 2D.  Para habilitar esta característica, haz lo siguiente:
+
+1. Asegúrate de que Windows Mixed Reality esté configurado en el equipo y de que el casco envolvente de Windows Mixed Reality esté conectado.
+2. Inicia el emulador de HoloLens 2.
+3. Haz clic en el botón de la barra de herramientas o presiona F7 para abrir el panel de simulación.
+4. Desplázate hasta la parte inferior del panel.
+5. Activa la casilla con la etiqueta "Use HMD for simulation" (Usar HMD para la simulación).
+6. Se iniciará Windows Mixed Reality y la pantalla del emulador cambiará ligeramente.  Si no tienes ningún casco, el emulador coloca ambos ojos en el centro de la cabeza y muestra un solo ojo.  Con un casco, el emulador genera una salida estereoscópica real, pero solo representa la vista de un ojo en la ventana de escritorio, mientras que la de ambos ojos se representa en el casco.
+7. Tienes la opción de activar uno o ambos controladores de movimiento.  La entrada del controlador se asigna a la entrada de mano en el emulador.  Por ejemplo, para pulsar, presiona el gatillo del controlador de movimiento.  Para desplazarte, usa la palanca de mando.  Para consultar una lista completa de los controles, visita [Entrada de datos avanzada en el emulador de HoloLens y el simulador de Mixed Reality](advanced-hololens-emulator-and-mixed-reality-simulator-input.md).
+
+¿Tienes problemas para ver el contenido en el casco?
+
+- Si la pantalla está en blanco tanto en el casco como en el Portal de realidad mixta, pero el contenido se muestra en la ventana del emulador de HoloLens 2 del escritorio, comprueba que la aceleración de gráficos mediante hardware esté habilitada en el emulador.  La compatibilidad con cascos envolventes de Windows Mixed Reality requiere que la aceleración de gráficos mediante hardware esté habilitada en el emulador.
+- Si ves contenido en el casco, pero los hologramas están borrosos o ves una imagen doble, sigue estos pasos para ajustar la vista estereoscópica para tus ojos:
+
+1. Desactiva temporalmente "Use HMD for simulation" (Usar HMD para la simulación).
+2. Inicia el Editor del Registro (regedit.exe).
+3. Ve a HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PerceptionSimulation.
+4. Crea un nuevo valor DWORD denominado "EnableEyePoseControl" y establece su valor en 1.
+5. Habilita "Use HMD for simulation" (Usar HMD para la simulación) en el emulador.
+6. Cuando aparezca el contenido en el casco, usa las teclas de dirección para ajustar la rotación de los ojos.  Mantén presionada la tecla Alt Izq para ajustar el ojo izquierdo y la tecla Alt Gr para ajustar el ojo derecho.  Usa las teclas "Q" y "E" para ajustar el giro de cada ojo y, de nuevo, mantén presionada la tecla Alt correspondiente a cada ojo.  Usa las teclas "+" y "-" para ajustar la distancia entre los ojos.  (Ten en cuenta que las teclas +/- del teclado numérico no funcionarán,  debes usar los botones del teclado principal).
+7. Cuando la vista estereoscópica parezca correcta, presiona "S" para guardar los cambios.  La nueva configuración se guardará para futuros inicios del emulador.
+8. Si quieres abandonar los cambios y volver a la configuración anterior, presiona "L" para cargar la configuración predeterminada o anterior.
+9. Cambia el valor de "EnableEyePoseControl" del registro a 0, deshabilita la opción "Use HMD for simulation" (Usar HMD para la simulación) y vuelve a habilitarla.
+
+Ten en cuenta que si guardaste una configuración y quieres quitarla, puede eliminar el valor denominado "DisplayConfiguration" de HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PerceptionSimulation.  Si en este momento estás usando el casco con el emulador, tendrás que desactivar la opción "Use HMD for simulation" (usar HMD para la simulación) y volver a activarla para que este cambio se aplique.
 
 ## <a name="anatomy-of-the-hololens-1st-gen-emulator"></a>Anatomía del emulador de HoloLens (1ª generación)
 
@@ -218,6 +248,11 @@ Las habitaciones simuladas son útiles para probar la aplicación en varios ento
 También puedes grabar tus propias habitaciones para usar en el emulador mediante la página Simulación del [Portal de dispositivos Windows](using-the-windows-device-portal.md) de tu dispositivo HoloLens (1ª generación).
 
 En el emulador, solo verás los hologramas que representes. Sin embargo, no verás la habitación simulada detrás de los hologramas. Esto es diferente del dispositivo HoloLens real, donde puedes ver que ambos se fusionan. Si quieres ver la habitación simulada en el emulador de HoloLens, debes actualizar la aplicación para representar la malla de asignación espacial en la escena.
+
+## <a name="known-issues"></a>Problemas conocidos
+
+* Al desinstalar el emulador de HoloLens 2, es posible que la imagen de disco duro (Flash.vhdx) se quede en tu disco duro, en la carpeta Windows Kits\10\Emulation\HoloLens\<número de compilación.  La eliminación de este archivo no implica ningún riesgo.
+* La aceleración de gráficos mediante hardware puede hacer que las aplicaciones holográficas se bloqueen en algunos sistemas con gráficos de AMD o Intel.  Este problema se soluciona al deshabilitar la aceleración de gráficos mediante hardware en la ventana Herramientas del emulador.
 
 ## <a name="troubleshooting"></a>Solucionar problemas
 

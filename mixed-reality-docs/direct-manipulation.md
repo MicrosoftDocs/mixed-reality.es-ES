@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: 6811fe0b09ecff1ddc76d9df9ddc440f9c934ce3
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
+ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75723254"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83228000"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
 
@@ -41,7 +41,7 @@ La manipulación directa utiliza prestaciones, lo que significa que es fácil de
      <td>Manipulación directa con las manos</td>
      <td>❌ No se admite</td>
      <td>✔️ Recomendado</td>
-     <td>➕ Una alternativa, se recomienda <a href="point-and-commit.md">apuntar y confirmar con las manos</a>.</td>
+     <td>➕ Se admite.  En el caso de la interfaz de usuario, se recomienda <a href="point-and-commit.md">apuntar y confirmar con las manos</a> en su lugar.</td>
     
 </tr>
 </table>
