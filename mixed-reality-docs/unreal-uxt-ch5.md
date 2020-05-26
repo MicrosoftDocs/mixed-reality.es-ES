@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: df5ea22e7097fdd3b788ec298bc1cd78c315b585
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840404"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519997"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Adición de un botón y restablecimiento de la ubicación de las piezas
 
@@ -46,13 +46,13 @@ En esta sección se siguen mostrando las funcionalidades del complemento UX Tool
 
 ![Crear una variable](images/unreal-uxt/5-var.PNG)
 
-4.  Arrastra la variable de WhiteKing desde **My Blueprint > Variables** (Mi plano técnico > Variables) hasta el gráfico de eventos de botón sencillo. Elige **Get WhiteKing** (Obtener WhiteKing). 
+4.  Arrastra la variable de WhiteKing desde **My Blueprint > Variables** (Mi plano técnico > Variables) hasta el gráfico de eventos de botón de restablecimiento. Elige **Get WhiteKing** (Obtener WhiteKing). 
 
 5.  Arrastra la marca de salida de WhiteKing y suéltala para colocar un nodo nuevo. Selecciona la función**Reset Location** (Restaurar ubicación). Por último, arrastra la marca de ejecución de salida de **On Button Pressed** (Al presionar un botón) a la marca de ejecución de entrada de **Reset Location** (Restablecer ubicación). **Compila** y **guarda** el plano técnico ResetButton y, a continuación, vuelve a la ventana principal. 
 
 ![Llamar a la función Reset Location (Restablecer ubicación) desde On Button Pressed (Al presionar un botón)](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Arrastra **SimpleButton** a la ventanilla y establece su ubicación en X = 50, Y =-25, Z = 10. En **Default** (Predeterminada), establece el valor de la variable WhiteKing en **WhiteKing**.
+6.  Arrastra **ResetButton** a la ventanilla y establece su ubicación en X = 50, Y =-25, Z = 10. En **Default** (Predeterminada), establece el valor de la variable WhiteKing en **WhiteKing**.
 
 ![Definir la variable](images/unreal-uxt/5-buttonlevel.PNG)
 

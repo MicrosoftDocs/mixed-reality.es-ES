@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 35b18e4bb289438f94433827846e94d1014385db
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: b3f0b5f9ca5347c337091539b1cc0e214515c989
+ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840384"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83519976"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetado e implementación en el dispositivo o emulador
 
@@ -34,6 +34,10 @@ En esta sección se te orientará a lo largo de los pasos necesarios para prepar
 4.  Una vez conectado, en el editor de UE4, haz clic en la flecha desplegable situada a la derecha del botón Play (Jugar) y selecciona VR Preview (Vista previa de VR).
 
 ## <a name="package-and-deploy-your-app"></a>Empaquetar e implementar la aplicación 
+
+>[!NOTE]
+>Si esta es la primera vez que empaquetas una aplicación de Unreal para HoloLens, deberás descargar los archivos auxiliares desde el iniciador de Epic. Para ello, ve a la pestaña **Biblioteca** en el iniciador de Epic Games. Selecciona la flecha desplegable situada junto a **Iniciar** y selecciona **Opciones**. En **Target Platforms** (Plataformas de destino), selecciona **HoloLens 2** y haz clic en **Aplicar**. 
+>![Configuración del proyecto: Descripción](images/unreal-uxt/6-installationoptions.PNG)
 
 1.  Ve a **Edit > Project Settings** (Editar > Configuración del proyecto). En **Project > Description > About > Project Name** (Proyecto > Descripción > Acerca de > Nombre del proyecto), asigna un nombre al proyecto. En **Project > Description > Publisher > Company Distinguished Name** (Proyecto > Descripción > Editor > Empresa > Nombre distintivo), escribe “CN={NOMBRE DE EMPRESA}”. Si dejas alguno de estos campos en blanco, se producirá un error. 
 
