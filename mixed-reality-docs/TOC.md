@@ -20,6 +20,7 @@
 ### [Desplazamiento por la página principal de Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 ### [Guía para entusiastas](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide)
 ### [Entretenimiento basado en la ubicación](location-based-experiences.md)
+## [Accesorios de hardware](hardware-accessories.md)
 ## [Recursos de la comunidad](community.md)
 # Diseño
 ## [Empezar a diseñar y a crear prototipos](design.md)
@@ -117,6 +118,7 @@
 ###### [1. Introducción a Azure Spatial Anchors](mrlearning-asa-ch1.md)
 ###### [2. Guardado, recuperación y uso compartido de Azure Spatial Anchors](mrlearning-asa-ch2.md)
 ###### [3. Visualización de comentarios de Azure Spatial Anchors](mrlearning-asa-ch3.md)
+###### [4. Azure Spatial Anchors para iOS y Android](mrlearning-asa-ch4.md)
 ##### Tutoriales de los servicios de voz de Azure
 ###### [1. Integración y uso de reconocimiento de voz y de transcripción](mrlearning-speechSDK-ch1.md)
 ###### [2. Adición de un modo sin conexión para la traducción de voz a texto local](mrlearning-speechSDK-ch2.md)
