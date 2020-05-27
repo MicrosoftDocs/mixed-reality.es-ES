@@ -1,19 +1,19 @@
 ---
-title: Miras y confirmaciones
+title: Mirada y confirmación
 description: 'Información general sobre el modelo de entrada "mirar y confirmar": uso de la entrada de ojo o del cabezal.'
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Realidad mixta, premiración, destino, interacción, diseño, seguimiento ocular, seguimiento del cabezal
-ms.openlocfilehash: df152f6a3a6e4ae2d6c32a0c56fbb615bcfa7aa8
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: c44c1a75e831869a3ed4d12bb6c9e87c478daf56
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375852"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866895"
 ---
-# <a name="gaze-and-commit"></a>Miras y confirmaciones
+# <a name="gaze-and-commit"></a>Mirada y confirmación
 
 La acción de _mirar y confirmar_ es un modelo de entrada fundamental que está estrechamente relacionado con la forma en que estamos interactuando con nuestros equipos mediante el mouse: _punto & clic_.
 En esta página, se presentan dos tipos de entradas de miradas (de encabezado y ojo) y distintos tipos de acciones de confirmación. 
@@ -56,9 +56,9 @@ A continuación se muestran algunos ejemplos de cómo puede beneficiarse de un d
     </tr>
          <tr>
         <td>Mirada con los ojos y confirmación</td>
-        <td>❌ no disponible</td>
+        <td>❌No disponible</td>
         <td>✔️ Recomendado (tercera opción: <a href="interaction-fundamentals.md">Ver las demás opciones</a>)</td>
-        <td>❌ no disponible</td>
+        <td>❌No disponible</td>
     </tr>
 </table>
 
@@ -80,7 +80,7 @@ Hemos compilado algunos grandes Pro y con en la tabla siguiente para diferenciar
     </colgroup>
    <tr>
         <td><strong>Apuntar a la mirada</strong></td>
-        <td><strong>Destino de la mirada</strong></td>
+        <td><strong>Establecer el destino de la mirada con la cabeza</strong></td>
     </tr>
     <tr>
         <td>Fast!</td>
@@ -123,7 +123,7 @@ Tanto si usa la vista de encabezado o miras hacia abajo para el modelo de entrad
         En general, se recomienda *no* mostrar un cursor, ya que esto puede resultar más rápido y molesto para el usuario. En su lugar, resalte los destinos visuales de forma sutilmente o use un cursor de ojo muy débil para proporcionar confianza sobre lo que el usuario está a punto de interactuar. Para obtener más información, consulte nuestra [Guía de diseño para la entrada basada en ojo](eye-tracking.md) en HoloLens 2.
     :::column-end:::
         :::column:::
-       ![un cursor visual de ejemplo para mostrar fijamente](images/cursor.jpg)<br>
+       ![Un cursor visual de ejemplo para mostrar la mirada](images/cursor.jpg)<br>
        *Imagen: un cursor visual de ejemplo para mostrar la mirada*
     :::column-end:::
 :::row-end:::
@@ -132,14 +132,14 @@ Tanto si usa la vista de encabezado o miras hacia abajo para el modelo de entrad
 
 ---
 
-## <a name="commit"></a>Confirmación
+## <a name="commit"></a>Commit
 Después de hablar sobre las distintas formas de _mirarnos_ en un destino, vamos a hablar un poco más sobre la parte de _confirmación_ en la _mirada y la confirmación_.
 Después de establecer como destino un objeto o un elemento de la interfaz de usuario, el usuario puede interactuar o hacer clic en él mediante una entrada secundaria. Esto se conoce como paso de confirmación del modelo de entrada. 
 
 Se admiten los siguientes métodos de confirmación:
 - Gesto de puntear en el aire (es decir, levantar la mano del usuario y reunir el dedo del índice y el control de posición)
 - Decir _"seleccionar"_ o uno de los comandos de voz de destino
-- Presionar un solo botón en un [clic de HoloLens](hardware-accessories.md#hololens-clicker)
+- Presionar un solo botón en un [clic de HoloLens](https://docs.microsoft.com/hololens/hololens1-clicker)
 - Presione el botón ' A ' en un controlador para juegos de Xbox
 - Presione el botón ' A ' en un controlador adaptable de Xbox
 
@@ -149,7 +149,7 @@ Pulsar en el aire es hacer el gesto de pulsar con la mano vertical. Para realiza
 
 :::row:::
     :::column:::
-       ![dedo en la posición preparada](images/readyandpress-ready.jpg)<br>
+       ![Dedo en la posición listo](images/readyandpress-ready.jpg)<br>
        **Dedo en la posición listo**<br>
     :::column-end:::
     :::column:::
@@ -192,7 +192,7 @@ Para obtener más información, así como una lista completa de los comandos de 
         *Imagen: clic de HoloLens*
     :::column-end:::
         :::column:::
-       ![Clic en HoloLens](images/hololens-clicker-500px.jpg)<br>
+       ![HoloLens Clicker](images/hololens-clicker-500px.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -212,7 +212,7 @@ Para obtener más información, así como una lista completa de los comandos de 
         *Imagen: controlador inalámbrico Xbox*
     :::column-end:::
         :::column:::
-       ![Controlador inalámbrico Xbox](images/xboxcontroller.jpg)<br>
+       ![Controlador inalámbrico de Xbox](images/xboxcontroller.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -263,7 +263,7 @@ La navegación se puede utilizar para crear gestos de zoom o desplazamiento cont
 
 La navegación con raíles se refiere a la capacidad de reconocer movimientos en cierto eje hasta que se alcanza un umbral determinado en dicho eje. Esto solo es útil cuando el desarrollador habilita el movimiento en más de un eje en una aplicación, por ejemplo, si una aplicación está configurada para reconocer los gestos de navegación por el eje X, Y, pero también especifica el eje X con raíles. En este caso, el sistema reconocerá los movimientos de mano en el eje X siempre y cuando permanezcan dentro de un raíl imaginario (guía) en el eje X, si el movimiento de mano también se produce en el eje Y.
 
-En las aplicaciones 2D, los usuarios pueden usar gestos de navegación vertical para desplazarse, hacer zoom o arrastrar dentro de la aplicación. Esto inserta entradas táctiles virtuales en la aplicación para simular gestos táctiles del mismo tipo. Los usuarios pueden seleccionar cuál de estas acciones tienen lugar alternando entre las herramientas de la barra situada encima de la aplicación, ya sea seleccionando el botón o diciendo ' < herramienta de desplazamiento/arrastrar/zoom > '.
+En las aplicaciones 2D, los usuarios pueden usar gestos de navegación vertical para desplazarse, hacer zoom o arrastrar dentro de la aplicación. Esto inserta entradas táctiles virtuales en la aplicación para simular gestos táctiles del mismo tipo. Los usuarios pueden seleccionar cuál de estas acciones tienen lugar alternando entre las herramientas de la barra situada encima de la aplicación, ya sea seleccionando el botón o diciendo ' <herramienta de desplazamiento/arrastrar/zoom> '.
 
 [Más información sobre los gestos compuestos](gaze-and-commit.md#composite-gestures)
 
@@ -290,7 +290,7 @@ Hay tres cosas que hay que tener en cuenta:
 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Interacción basada en los ojos](eye-gaze-interaction.md)
 * [Seguimiento de los ojos en HoloLens 2](eye-tracking.md)
 * [Mirada y permanencia](gaze-and-dwell.md)

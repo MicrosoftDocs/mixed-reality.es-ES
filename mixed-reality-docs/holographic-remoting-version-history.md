@@ -6,17 +6,23 @@ ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: cd6d076c00fd21ca6fa60cafb94eb9d89796825a
-ms.sourcegitcommit: 48456c607a2d0dcf035a77e8ba67615396b0a211
+ms.openlocfilehash: b128f91947fa8700502f7541cba23c726238a067
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484305"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866855"
 ---
 # <a name="holographic-remoting-version-history"></a>Historial de versiones de Holographic Remoting
 
 > [!IMPORTANT]
 > Esta guía es específica de Holographic Remoting en HoloLens 2.
+
+## <a name="version-213-may-25-2020"></a>Versión 2.1.3 (25 de mayo de 2020)<a name="v2.1.3"></a>
+* Se ha cambiado el comportamiento del evento [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) . En versiones anteriores **no** se garantizaba que un [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera?view=winrt-18362) agregado también tenga un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) válido al crear el siguiente fotograma a través de [HolographicSpace. CreateNextFrame](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe?view=winrt-18362#Windows_Graphics_Holographic_HolographicSpace_CreateNextFrame). A partir de la versión 2.1.3, [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded?view=winrt-18362) se sincroniza con los datos de pose procedentes del reproductor de comunicación remota holográfica y los usuarios pueden esperar que cuando se agrega una cámara, también haya una [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose?view=winrt-18362) válida disponible para esa cámara en el siguiente fotograma.
+* Se ha agregado **deshabilitado** a DepthBufferStreamResolution, que se puede usar para deshabilitar el streaming de búfer de profundidad a través de RemoteContext. ConfigureDepthVideoStream. Tenga en cuenta que, si se usa [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer?view=winrt-18362#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) , se producirá un error con *E_ILLEGAL_METHOD_CALL*.
+* La pantalla de inicio del reproductor remoto Holographic se ha rediseñado y ahora no bloquea la vista de usuarios.
+* Mejoras de estabilidad y correcciones de BUF.
 
 ## <a name="version-212-april-5-2020"></a>Versión 2.1.2 (5 de abril de 2020)<a name="v2.1.2"></a>
 * Se corrigió el problema de compatibilidad con versiones anteriores de audio entre el reproductor remoto Holographic y las aplicaciones remotas con una versión inferior a la 2.1.0.
@@ -55,9 +61,9 @@ ms.locfileid: "81484305"
 
 ## <a name="version-209-september-19-2019"></a>Versión 2.0.9 (19 de septiembre de 2019)<a name="v2.0.9"></a>
 * Compatibilidad agregada para [SpatialAnchorExporter](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter)
-* Agregada nueva ```IPlayerContext2``` de interfaz (implementada por ```PlayerContext```) que proporciona los siguientes miembros:
+* Nueva interfaz agregada ```IPlayerContext2``` (implementada por ```PlayerContext``` ) que proporciona los siguientes miembros:
   - Propiedad [BlitRemoteFrameTimeout](holographic-remoting-create-player.md#BlitRemoteFrameTimeout) .
-* Se agregó ```Failed_RemoteFrameTooOld``` valor a ```BlitResult```
+* ```Failed_RemoteFrameTooOld```Valor agregado a```BlitResult```
 * Mejoras en la estabilidad y confiabilidad
 
 ## <a name="version-208-august-20-2019"></a>Versión 2.0.8 (20 de agosto de 2019)<a name="v2.0.8"></a>
@@ -69,7 +75,7 @@ ms.locfileid: "81484305"
 
 * Primera versión pública de Holographic Remoting para HoloLens 2.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Escritura de una aplicación de reproductor remoto holográfica personalizada](holographic-remoting-create-player.md)
 * [Escritura de una aplicación de host de Holographic Remoting](holographic-remoting-create-host.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)

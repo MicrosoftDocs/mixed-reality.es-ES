@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada
-ms.openlocfilehash: 6cf94e6bc828c6f07ee81cb121cb64601df41c4e
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277983"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866925"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -25,7 +25,7 @@ La entrada de voz se basa en el [mismo motor](https://msdn.microsoft.com/library
 
 ## <a name="voice-and-gaze"></a>Voz y miras
 
-Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer clic en el mecanismo de destino, ya sea con un cursor ("Select") o para canalizar implícitamente el comando a una aplicación que se está viendo. En este caso, es posible que no sea necesario que muestre ningún cursor de miras _("verlo, decirlo")_ . Por supuesto, algunos comandos de voz no requieren un destino, como "ir a Inicio" o "Hola Cortana".
+Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer clic en el mecanismo de destino, ya sea con un cursor ("Select") o para canalizar implícitamente el comando a una aplicación que se está viendo. En este caso, es posible que no sea necesario que muestre ningún cursor de miras _("verlo, decirlo")_. Por supuesto, algunos comandos de voz no requieren un destino, como "ir a Inicio" o "Hola Cortana".
 
 <br>
 
@@ -42,7 +42,7 @@ Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -57,9 +57,9 @@ Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer
 
 ## <a name="the-select-command"></a>Comando "seleccionar"
 
-**HoloLens (1ª generación)**
+**HoloLens (1.ª generación)**
 
-Incluso sin agregar específicamente compatibilidad con voz a su aplicación, los usuarios pueden activar los hologramas simplemente diciendo el comando de voz del sistema "Select". Esto se comporta igual que una [pulsación aérea](gaze-and-commit.md#composite-gestures) en HoloLens, presionando el botón seleccionar en el [clic de hololens](hardware-accessories.md#hololens-clicker)o presionando el desencadenador en un controlador de [movimiento de Windows Mixed Reality](motion-controllers.md). Oirá un sonido y verá que aparece una información sobre herramientas con "seleccionar" como confirmación. "Select" está habilitado por un algoritmo de detección de palabras clave de baja energía, por lo que siempre está disponible para que lo indique en cualquier momento con un impacto mínimo en la duración de la batería, incluso con sus manos en el lateral.
+Incluso sin agregar específicamente compatibilidad con voz a su aplicación, los usuarios pueden activar los hologramas simplemente diciendo el comando de voz del sistema "Select". Esto se comporta igual que una [pulsación aérea](gaze-and-commit.md#composite-gestures) en HoloLens, presionando el botón seleccionar en el [clic de hololens](https://docs.microsoft.com/hololens/hololens1-clicker)o presionando el desencadenador en un controlador de [movimiento de Windows Mixed Reality](motion-controllers.md). Oirá un sonido y verá que aparece una información sobre herramientas con "seleccionar" como confirmación. "Select" está habilitado por un algoritmo de detección de palabras clave de baja energía, por lo que siempre está disponible para que lo indique en cualquier momento con un impacto mínimo en la duración de la batería, incluso con sus manos en el lateral.
 
 <br>
 
@@ -91,8 +91,8 @@ También puede decir "Hola Cortana" para abrir Cortana en cualquier momento. No 
 **Comandos específicos de HoloLens**
 * "¿Qué puedo decir?"
 * "Ir a Inicio"-en lugar de a la [floración](system-gesture.md#bloom) para ir al [menú Inicio](navigating-the-windows-mixed-reality-home.md#start-menu)
-* "Iniciar <app>"
-* "Mueva <app> aquí"
+* "Launch <app> "
+* "Moverse <app> aquí"
 * "Tomar una imagen"
 * "Iniciar grabación"
 * "Detener grabación"
@@ -121,8 +121,8 @@ También puede decir "Hola Cortana" para abrir Cortana en cualquier momento. No 
         *Imagen: un usuario puede decir el comando "ajustar" que ve en la barra de la aplicación para ajustar la posición de la aplicación*
     :::column-end:::
         :::column:::
-        espacio ![](images/spacer-20x582.png)<br>
-        ![al mirar una ventana de la aplicación o un holograma, un usuario puede decir el comando "ajustar" que aparecen en la barra de la aplicación para ajustar la posición de la aplicación en el mundo](images/microphone-600px.png)<br>
+        ![space](images/spacer-20x582.png)<br>
+        ![Al mirar una ventana de la aplicación o un holograma, un usuario puede decir el comando "ajustar" que aparecen en la barra de la aplicación para ajustar la posición de la aplicación en el mundo.](images/microphone-600px.png)<br>
     :::column-end:::
 :::row-end:::
 
@@ -169,11 +169,11 @@ Algunos comandos, como los comandos para la manipulación rápida anterior, se p
 Si desea una lista completa, simplemente indique "Mostrar todos los comandos" en cualquier momento. 
 
 
-## <a name="dictation"></a>Dictado
+## <a name="dictation"></a>Dictation
 
 En lugar de escribir con [grifos de aire](gaze-and-commit.md#composite-gestures), el dictado de voz puede ser más eficaz para escribir texto en una aplicación. Esto puede acelerar en gran medida la entrada con menos esfuerzo para el usuario.
 
-![dictado de voz comienza seleccionando el botón micrófono](images/micbuttonfordictation.png)<br>
+![El dictado de voz comienza seleccionando el botón micrófono](images/micbuttonfordictation.png)<br>
 *El dictado de voz comienza seleccionando el botón micrófono del teclado.*
 
 Siempre que el teclado Holographic esté activo, puede cambiar al modo de dictado en lugar de escribir. Seleccione el micrófono en el lateral del cuadro de entrada de texto para comenzar.
@@ -183,7 +183,7 @@ Siempre que el teclado Holographic esté activo, puede cambiar al modo de dictad
 
 Considera la posibilidad de agregar comandos de voz a cualquier experiencia que compiles. La voz es una manera eficaz y cómoda de controlar el sistema y las aplicaciones. Dado que los usuarios hablan con variantes regionales y acentos diversos, la opción adecuada de palabras clave de voz asegurará que los comandos de los usuarios se interpretan de forma inequívoca.
 
-### <a name="best-practices"></a>Procedimiento recomendado
+### <a name="best-practices"></a>Procedimientos recomendados
 
 A continuación se muestran algunas prácticas que te ayudarán a realizar sin problemas las tareas de reconocimiento de voz.
 * **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "reproducir vídeo" es mejor que "reproducir el vídeo seleccionado actualmente"
@@ -240,15 +240,15 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 
 :::row:::
     :::column:::
-       ![1. Estado normal del cursor](images/voicefeedbackstates-regular.jpg)<br>
+       ![1. estado normal del cursor](images/voicefeedbackstates-regular.jpg)<br>
        **1. estado normal del cursor**<br>
     :::column-end:::
     :::column:::
-       ![2. Comunica los comentarios de voz y, a continuación, desaparece](images/voicefeedbackstates-voice.jpg)<br>
+       ![2. comunica comentarios de voz y luego desaparece](images/voicefeedbackstates-voice.jpg)<br>
         **2. comunica comentarios de voz y luego desaparece**<br>
     :::column-end:::
     :::column:::
-       ![* 3. Estado normal del cursor](images/voicefeedbackstates-regular.jpg)<br>
+       ![3. Estado normal del cursor](images/voicefeedbackstates-regular.jpg)<br>
        **3. vuelve al estado normal del cursor**<br>
     :::column-end:::
 :::row-end:::
@@ -286,7 +286,7 @@ Todo este procesamiento de audio se acelera en hardware, lo que significa que la
 
 HoloLens 2 también admite idiomas adicionales. Tenga en cuenta que los comandos de voz siempre se ejecutarán en el idioma para mostrar del sistema aunque se instalen varios teclados o cuando las aplicaciones intenten crear un reconocedor de voz en otro idioma.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Si tiene algún problema con "Select" y "Hola Cortana", intente cambiar a un espacio más silencioso, desplazarse fuera del origen del ruido o hablar de más alto. En este momento, todo el reconocimiento de voz en HoloLens se ajusta y optimiza específicamente a los hablantes nativos de Estados Unidos inglés.
 
@@ -297,16 +297,16 @@ En el caso de la versión 2017 de Windows Mixed Reality Developer Edition, la l�
 ---
 
 ## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Entrada de voz en MRTK (kit de herramientas de realidad mixta) para Unity
-Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede asignar fácilmente comandos de voz en cualquier objeto. Use el **Perfil de entrada de voz** de MRTK para definir sus palabras clave. Mediante la asignación del script **SpeechInputHandler** , puede hacer que cualquier objeto responda a las palabras clave definidas en el perfil de entrada de voz. SpeechInputHandler también proporciona una etiqueta de confirmación de voz para mejorar la confianza del usuario.
+Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, puede asignar fácilmente comandos de voz en cualquier objeto. Use el **Perfil de entrada de voz** de MRTK para definir sus palabras clave. Mediante la asignación del script **SpeechInputHandler** , puede hacer que cualquier objeto responda a las palabras clave definidas en el perfil de entrada de voz. SpeechInputHandler también proporciona una etiqueta de confirmación de voz para mejorar la confianza del usuario.
 
 * [Comando MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
 
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
-* [Entrada MR 212: voz](holograms-212.md)
+* [MR Input 212: voz](holograms-212.md)
 * [Entrada de voz en DirectX](voice-input-in-directx.md)
 * [Entrada de voz en Unity](voice-input-in-unity.md)

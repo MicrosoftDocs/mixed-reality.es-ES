@@ -1,55 +1,42 @@
 ---
 title: Accesorios de hardware
-description: Describe los tipos de accesorios disponibles para usar con HoloLens y Windows Mixed Reality, y cómo configurarlos.
+description: Describe los tipos de accesorios disponibles para usar con Windows Mixed Reality y cómo configurarlos.
 author: mattzmsft
 ms.author: mazeller
-ms.date: 03/21/2018
+ms.date: 05/20/2020
 ms.topic: article
 keywords: procedimientos, accesorios, Bluetooth, BT, controlador, controlador para juegos, haga clic en Xbox
-ms.openlocfilehash: 566d4217fb674057e1dc3d9791b247185bf61d32
-ms.sourcegitcommit: 0a1af2224c9cbb34591b6cb01159b60b37dfff0c
+ms.openlocfilehash: 556fc77ffb588c02ea17e8c97293f527469216f8
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79375702"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866875"
 ---
 # <a name="hardware-accessories"></a>Accesorios de hardware
 
-Los dispositivos de Windows Mixed Reality admiten accesorios. Puede emparejar los accesorios admitidos a HoloLens con Bluetooth, mientras que puede usar Bluetooth o USB para emparejar los accesorios admitidos con un casco envolvente a través del equipo al que está conectado.
+Los dispositivos de Windows Mixed Reality admiten accesorios. Puede usar Bluetooth o USB para emparejar los accesorios admitidos con un casco envolvente mediante el equipo al que está conectado.
 
-Dos escenarios comunes para usar accesorios con HoloLens son los sustitutos del gesto de pulsación de aire y el teclado virtual. Para ello, los dos accesorios más comunes son el **clic de HoloLens** y los **teclados Bluetooth**. Microsoft HoloLens incluye una radio Bluetooth 4,1 y admite los perfiles [HID](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Human_Interface_Device_Profile_.28HID.29) Bluetooth y [Bluetooth GATT](https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles#Generic_Attribute_Profile_.28GATT.29) .
+Para obtener información sobre el uso de accesorios Bluetooth con HoloLens, consulte [conexión a dispositivos Bluetooth y USB-C](https://docs.microsoft.com/hololens/hololens-connect-devices).
 
-Los auriculares que se encuentran en la realidad mixta de Windows requieren accesorios para la entrada más allá de la [mirada](gaze-and-commit.md) y la [voz](voice-input.md). Los accesorios admitidos son el **teclado y el mouse**, el **controlador de juegos**y **[los controladores de movimiento](motion-controllers.md)** .
+Los auriculares que se encuentran en la realidad mixta de Windows requieren accesorios para la entrada más allá de la [mirada](gaze-and-commit.md) y la [voz](voice-input.md). Los accesorios admitidos son el **teclado y el mouse**, el **controlador de juegos**y **[los controladores de movimiento](motion-controllers.md)**.
 
 ## <a name="pairing-bluetooth-accessories"></a>Emparejamiento de accesorios Bluetooth
 
-Emparejar un periférico Bluetooth con Microsoft HoloLens es similar a emparejar un periférico Bluetooth con un dispositivo móvil o de escritorio de Windows 10:
+Emparejar un periférico Bluetooth con un casco inmersivo es similar a emparejar un periférico Bluetooth con un dispositivo móvil o de escritorio de Windows 10:
+
 1. En el menú Inicio, abra la aplicación de **configuración** .
 2. Ir a **dispositivos**
 3. Activar el radio Bluetooth Si está desactivado con el conmutador deslizante
 4. Coloque el dispositivo Bluetooth en modo de emparejamiento. Esto varía de un dispositivo a un dispositivo. En la mayoría de los dispositivos Bluetooth, esto se hace presionando y manteniendo uno o más botones.
 5. Espere a que el nombre del dispositivo se muestre en la lista de dispositivos Bluetooth. Cuando lo haga, seleccione el dispositivo y, a continuación, seleccione el botón **emparejar** . Si tiene muchos dispositivos Bluetooth cerca, puede que tenga que desplazarse hasta la parte inferior de la lista de dispositivos Bluetooth para ver el dispositivo que está intentando emparejar.
-6. Cuando se emparejan periféricos Bluetooth con capacidad de entrada (por ejemplo, teclados Bluetooth), es posible que se muestre un PIN de 6 dígitos o 8 dígitos. Asegúrese de escribir ese pin en el periférico y, a continuación, presione Entrar para completar el emparejamiento con Microsoft HoloLens.
+6. Cuando se emparejan periféricos Bluetooth con capacidad de entrada (por ejemplo, teclados Bluetooth), es posible que se muestre un PIN de 6 dígitos o 8 dígitos. Asegúrese de escribir ese pin en el periférico y, a continuación, presione Entrar para completar el emparejamiento con el casco.
 
 ## <a name="motion-controllers"></a>Controladores de movimiento
 
 Los auriculares envolventes admiten [controladores de movimiento](motion-controllers.md) de Windows Mixed Reality, pero no HoloLens. Estos controladores ofrecen un seguimiento preciso y con capacidad de respuesta del movimiento en el campo de vista mediante los sensores en el casco envolvente, lo que significa que no es necesario instalar hardware en las paredes del espacio. Cada controlador incluye varios métodos de entrada.
 
 ![Controladores de movimiento de Windows Mixed Reality](images/winmr-ck-1080x1080-350px.jpg)
-
-## <a name="hololens-clicker"></a>Clic en HoloLens
-
-El clic de HoloLens es el primer dispositivo periférico creado específicamente para HoloLens y se incluye con la edición HoloLens Development. El clic de HoloLens permite al usuario hacer clic y desplazarse con un movimiento de mano mínimo como sustituto del gesto de pulsación de aire. No se sustituye por todos los [gestos](gaze-and-commit.md#composite-gestures). Por ejemplo, los gestos de [floración](system-gesture.md#bloom) y [cambio de tamaño o](gaze-and-commit.md#composite-gestures) movimiento usan movimientos de mano. El clic de HoloLens es un dispositivo de sensor de orientación con un sencillo botón. Se conecta a HoloLens con Bluetooth de baja energía (BTLE).
-
-![El clic de HoloLens](images/hololens-clicker-500px.jpg)
-
-Para seleccionar un [holograma](hologram.md), mira en él y, después, haz clic en. La orientación del clic en no es importante para esta operación. Para desplazarse o desplazarse, haga clic y mantenga presionado el botón, y después gire el clic hacia arriba o hacia abajo o hacia la izquierda o la derecha. Al desplazarse, alcanzará la velocidad más rápida con un mínimo de +/-15 ° de rotación de la muñeca. Mover más no se desplazará más rápido.
-
-Hay dos LED dentro del clic:
-* El LED blanco indica si el dispositivo está emparejando (parpadeando) o cargándose (sólido)
-* El LED ámbar indica que el dispositivo tiene batería baja (parpadeo) o ha sufrido un error (sólido)
-
-Puede esperar 2 semanas o más de uso normal con una carga completa (es decir, 2-3 horas en un cargador de pared). Cuando la batería es baja, el LED ámbar parpadea 10 veces en un período de 5 segundos si presiona el botón o lo activa de suspensión. El LED ámbar parpadeará más rápido en un período de 5 segundos si el clic está en el modo de batería de nivel crítico.
 
 ## <a name="bluetooth-keyboards"></a>Teclados Bluetooth
 
@@ -68,20 +55,15 @@ Otras marcas de los controladores de mandos de Bluetooth pueden funcionar con di
 Siempre que el periférico admita los perfiles HID o GATT de Bluetooth, podrá emparejarse con HoloLens. Otros dispositivos HID y GATT de Bluetooth Además del teclado, el mouse y el clic de HoloLens pueden requerir que una aplicación complementaria en Microsoft HoloLens sea totalmente funcional.
 
 Entre los periféricos no admitidos se incluyen:
+
 * No se admiten periféricos en los perfiles de audio Bluetooth.
 * Los dispositivos de audio Bluetooth, como los altavoces y los auriculares, pueden aparecer como disponibles en la aplicación de configuración, pero no se pueden usar con Microsoft HoloLens como punto de conexión de audio.
 * Los teléfonos y equipos habilitados para Bluetooth no se admiten para la transferencia de archivos.
 
 ## <a name="unpairing-a-bluetooth-peripheral"></a>Desemparejar un periférico Bluetooth
+
 1. En el menú Inicio, abra la aplicación de **configuración** .
 2. Ir a **dispositivos**
 3. Activar la radio Bluetooth Si está desactivada
 4. Busque el dispositivo en la lista de dispositivos Bluetooth disponibles
 5. Seleccione el dispositivo en la lista y, a continuación, seleccione el botón **quitar** .
-
-## <a name="disabling-bluetooth-on-microsoft-hololens"></a>Deshabilitación de Bluetooth en Microsoft HoloLens
-
-Se desactivarán los componentes de RF del radio Bluetooth y se deshabilitará toda la funcionalidad de Bluetooth en Microsoft HoloLens.
-1. En el menú Inicio, abra la aplicación de **configuración** .
-2. Ir a **dispositivos**
-3. Mover el interruptor del control deslizante para Bluetooth a la posición de apagado
