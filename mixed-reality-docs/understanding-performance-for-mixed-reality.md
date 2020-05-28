@@ -6,20 +6,20 @@ ms.author: trferrel
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, rendimiento, optimización, CPU, GPU
-ms.openlocfilehash: 54e1eec5445fe655a0b498be5c18f08efe2270f0
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 4a0f4cd9caea5dd601ad663801e760261980c429
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81277483"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111024"
 ---
-# <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
+# <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento en la realidad mixta
 
 Este artículo es una introducción a la comprensión del significado del rendimiento de la aplicación de realidad mixta.  La experiencia del usuario se puede degradar considerablemente si la aplicación no se ejecuta con una velocidad de fotogramas óptima. Los hologramas aparecerán inestables y el seguimiento de los cabezales del entorno no será preciso, lo que conduce a una mala experiencia para el usuario. El rendimiento se debe considerar como una característica de primera clase para el desarrollo de la realidad mixta y no para una tarea fina.
 
 A continuación se enumeran los valores de velocidad de fotogramas de rendimiento para cada plataforma de destino.
 
-| Platform | Velocidad de fotogramas de destino |
+| Plataforma | Velocidad de fotogramas de destino |
 |----------|-------------------|
 | [HoloLens](hololens-hardware-details.md) | 60 FPS |
 | [Windows Mixed Reality ultra PC](immersive-headset-hardware-details.md) | 90 FPS |
@@ -82,7 +82,7 @@ Al representar un fotograma en la GPU, una aplicación suele estar enlazada por 
 
 - El **ancho de banda de memoria** es la velocidad de lecturas y escrituras que la GPU puede realizar desde la memoria
     - Para identificar las limitaciones de ancho de banda, reduzca la calidad de la textura y compruebe si la velocidad de fotogramas ha mejorado.
-    - En Unity, esto se puede hacer cambiando la **calidad** de la textura en **Editar** > **configuración del proyecto** >  **[configuración de calidad](https://docs.unity3d.com/Manual/class-QualitySettings.html)** .
+    - En Unity, esto se puede hacer cambiando la **calidad** de la textura en **Editar**configuración de  >  **Project Settings**  >  **[calidad configuración](https://docs.unity3d.com/Manual/class-QualitySettings.html)** de proyecto.
 - La **velocidad de relleno** hace referencia a los píxeles que la GPU puede dibujar por segundo.
     - Para identificar las limitaciones de la velocidad de relleno, reduzca la resolución de pantalla y compruebe si se ha mejorado la velocidad de fotogramas. 
     - En Unity, esto se puede hacer a través de la propiedad *[XRSettings. renderViewportScale](https://docs.unity3d.com/ScriptReference/XR.XRSettings-renderViewportScale.html)*
@@ -101,7 +101,7 @@ La velocidad de relleno se centra en reducir el número de operaciones que se de
 
 Los recuentos de polígonos más altos producen más operaciones para la GPU; al [reducir el número de polígonos](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) de la escena, se reducirá el tiempo de representación. Hay otros factores implicados en el sombreado de la geometría que puede ser caro, pero el recuento de polígonos es la métrica más simple para determinar el costo que una escena va a representar.
 
-#### <a name="limit-overdraw"></a>Sobredibujo del límite
+#### <a name="limit-overdraw"></a>Sobredibujar límite
 
 El sobredibujo alto se produce cuando se representan varios objetos, pero no se muestran en la pantalla, ya que están ocultos por un objeto occluding. Imagine que mira una pared que tiene objetos detrás. Toda la geometría se procesaría para la representación, pero solo es necesario representar la pared opaca. Esto produce operaciones innecesarias.
 
@@ -133,9 +133,9 @@ Las operaciones de asignación y desasignación de memoria excesiva pueden dar l
 
 #### <a name="object-pooling"></a>Agrupación de objetos
 
-La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable en una aplicación.
+La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable durante una aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md)
 - [Configuración recomendada para Unity](recommended-settings-for-unity.md)
 - [Optimizar modelos 3D](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)

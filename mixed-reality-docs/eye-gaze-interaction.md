@@ -1,17 +1,17 @@
 ---
-title: Interacción con miras oculares
+title: Interacción basada en el control con los ojos
 description: HoloLens 2 ofrece un nuevo nivel de conocimiento del contexto y del comportamiento humano dentro de la experiencia holográfica al proporcionar a los desarrolladores la capacidad de usar información sobre lo que están mirando los usuarios. En esta página se tratan las recomendaciones de diseño para los desarrolladores que quieren usar miradamente como entrada.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo
-ms.openlocfilehash: 93d2cfd82b5aa2a410268c5594b5772bcc0b21c7
-ms.sourcegitcommit: a5dc182da237f63f0487d40a2e11894027208b6c
+ms.openlocfilehash: 2ae7723f116771986edc757f1c9d4f454b0a256f
+ms.sourcegitcommit: b0d15083ec1095e08c9d776e5bae66b4449383bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73441108"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84111038"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>Interacción mirada en la vista en HoloLens 2
 
@@ -19,7 +19,7 @@ ms.locfileid: "73441108"
 
 Una de nuestras nuevas funcionalidades interesantes en HoloLens 2 es el seguimiento ocular.
 En la página [seguimiento de la vista de HoloLens 2](eye-tracking.md) , hemos mencionado la necesidad de que cada usuario pase por una [calibración](https://docs.microsoft.com/hololens/hololens-calibration), proporcionó algunas instrucciones para desarrolladores y casos de uso resaltados para el seguimiento ocular.
-La entrada de mirada sigue siendo un nuevo tipo de entrada de usuario y hay mucho que aprender. Aunque la entrada de ojo mirada solo se usa muy sutilmente en nuestra experiencia de Shell de Holographic (la interfaz de usuario que se ve al iniciar su HoloLens 2), varias aplicaciones, como ["Mr](https://www.microsoft.com/p/mr-playground/9nb31lh723s2)", muestran excelentes ejemplos sobre cómo se puede Agregar la entrada ocular a la magia de su experiencia holográfica.
+La entrada de mirada sigue siendo un nuevo tipo de entrada de usuario y hay mucho que aprender. Aunque la entrada de ojo mirada solo se usa muy sutilmente en nuestra experiencia de Shell holográfica (la interfaz de usuario que ve al iniciar su HoloLens 2), varias aplicaciones, como la ["animación de HoloLens"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), muestran excelentes ejemplos de cómo puede agregarse la entrada ocular a la magia de su experiencia holográfica.
 En esta página, se describen las consideraciones de diseño para la integración de la entrada ocular para interactuar con las aplicaciones holográficas.
 Aprenderá sobre las principales ventajas y también los desafíos únicos que acompañan a la entrada de mirada.  
 En función de estas, se proporcionan varias recomendaciones de diseño para ayudarle a crear interfaces de usuario compatibles con la vista de ojo. 
@@ -34,13 +34,13 @@ En función de estas, se proporcionan varias recomendaciones de diseño para ayu
     <col width="25%" />
 </colgroup>
 <tr>
-     <td><strong>Ofrecen</strong></td>
+     <td><strong>Característica</strong></td>
      <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
 </tr>
 <tr>
-     <td>Miras hacia abajo</td>
+     <td>Control con los ojos</td>
      <td>❌</td>
      <td>✔️</td>
      <td>❌</td>
@@ -105,7 +105,7 @@ En el caso de un cursor, esto puede dar lugar a un efecto de "cursor fleeing" de
 
     - **Necesidad de sincronizar las entradas multimodal:** La combinación de movimientos oculares rápidos con entradas adicionales más complejas, como comandos de voz largos o gestos de mano, asume el riesgo de que el usuario ya tenga que buscar antes de que el comando de entrada adicional finalice y se reconozca. Por lo tanto, si crea sus propios controles de entrada (por ejemplo, gestos de mano personalizados), asegúrese de registrar la aparición de esta entrada o de una duración aproximada para correlacionarla con lo que un usuario había examinado en el pasado.
     
-3. **Comentarios sutiles para la entrada de seguimiento ocular:** Resulta útil proporcionar comentarios cuando se examina un destino para indicar que el sistema funciona según lo previsto, pero debe mantenerse sutil. Esto puede incluir una mezcla lenta, de arriba y de salida, que resalta visualmente o realiza otros comportamientos de destino sutiles, como movimientos lentos, como un aumento ligeramente del tamaño de destino, para indicar que el sistema ha detectado correctamente que el usuario está viendo un destino sin interrumpir innecesariamente el flujo de trabajo actual del usuario. 
+3. **Comentarios sutiles para la entrada de seguimiento ocular:** Resulta útil proporcionar comentarios cuando se examina un destino para indicar que el sistema funciona según lo previsto, pero debe mantenerse sutil. Esto puede incluir la mezcla lenta, de arriba y de salida, los elementos visuales y otros comportamientos de destino sutiles, como los movimientos lentos, como un aumento ligeramente del tamaño de destino, para indicar que el sistema ha detectado correctamente que el usuario está viendo un destino sin interrumpir innecesariamente el flujo de trabajo actual del usuario. 
 
 4. **Evite aplicar movimientos oculares no naturales como entrada:** No obligue a los usuarios a realizar movimientos oculares específicos (gestos de mirados) para desencadenar acciones en la aplicación.
 
@@ -117,11 +117,11 @@ En el caso de un cursor, esto puede dar lugar a un efecto de "cursor fleeing" de
 Esta página le proporcionó una buena introducción para empezar a entender la mirada como una entrada en realidad mixta. Para empezar a desarrollar, eche un vistazo a nuestra información sobre [la vista de la mirada en Unity](https://aka.ms/mrtk-eyes) y [la mirada en DirectX](gaze-in-directx.md).
 
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [Comodidad](comfort.md)
 * [Miras a la vista en DirectX](gaze-in-directx.md)
 * [Mirada a la vista de Unity (kit de herramientas de realidad mixta)](https://aka.ms/mrtk-eyes)
-* [Seguimiento ocular en HoloLens 2](eye-tracking.md)
-* [Miras y confirmaciones](gaze-and-commit.md)
+* [Seguimiento de los ojos en HoloLens 2](eye-tracking.md)
+* [Mirada y confirmación](gaze-and-commit.md)
 * [Mirada y permanencia](gaze-and-dwell.md)
 * [Entrada de voz](voice-design.md)
