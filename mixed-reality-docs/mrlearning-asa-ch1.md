@@ -7,24 +7,26 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: d0fd22ad6fbefc6889373b00847721cfc0655ce3
-ms.sourcegitcommit: 92ff5478a5c55b4e2c5cc2f44f1588702f4ec5d1
+ms.openlocfilehash: 2a171d601d094375a56734e8d7890c9d3e17c887
+ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605006"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866915"
 ---
 # <a name="1-getting-started-with-azure-spatial-anchors"></a>1. Introducción a Azure Spatial Anchors
 
 ## <a name="overview"></a>Introducción
 
-Esta es la segunda serie de los tutoriales de HoloLens 2. En esta serie de tutoriales de tres partes, aprenderás los aspectos básicos de Azure Spatial Anchors.
+Esta es la segunda serie de los tutoriales de HoloLens 2. En esta serie de tutoriales de cuatro partes, aprenderás los aspectos básicos de Azure Spatial Anchors.
 
 En este primer tutorial, [Introducción a Azure Spatial Anchors](mrlearning-asa-ch1.md), explorarás los distintos pasos necesarios para iniciar y detener una sesión de Azure y crear, cargar y descargar anclajes de Azure en un único dispositivo.
 
 En el segundo tutorial, [Guardar, recuperar y compartir Azure Spatial Anchors](mrlearning-asa-ch2.md), aprenderás a guardar Azure Spatial Anchors en varias sesiones de aplicación al guardar la información de anclaje en el almacenamiento de HoloLens 2 y a compartir esta información en otros dispositivos para alinear el anclaje en varios dispositivos.
 
 En el tercer tutorial, [Mostrar comentarios de Azure Spatial Anchors](mrlearning-asa-ch3.md), aprenderás a proporcionar a los usuarios comentarios sobre los eventos y estados de anclaje al usar Azure Spatial Anchors.
+
+En el cuarto tutorial, [Azure Spatial Anchors para iOS y Android](mrlearning-asa-ch4.md), aprenderás a compilar e implementar tu proyecto en dispositivos iOS y Android.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -42,6 +44,13 @@ En el tercer tutorial, [Mostrar comentarios de Azure Spatial Anchors](mrlearning
 * Un dispositivo HoloLens 2 [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode)
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X instalado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
 * Completa la sección [Creación de un recurso de Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) del tutorial [Inicio rápido: Creación de una aplicación HoloLens en Unity que use Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens).
+* Si piensas implementar en Android
+    * Un dispositivo Android <a href="https://developer.android.com/studio/debug/dev-options" target="_blank">habilitado para desarrollo</a> y <a href="https://developers.google.com/ar/discover/supported-devices" target="_blank">compatible con ARCore</a>, con conexión USB a tu equipo Windows o macOS
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X instalado y el módulo de compatibilidad con la compilación de Android agregado
+* Si piensas implementar en iOS
+    * Un equipo macOS que tenga instalada la versión más reciente de <a href="https://geo.itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a> y <a href="https://cocoapods.org" target="_blank">CocoaPods</a>
+    * Un dispositivo iOS <a href="https://developer.apple.com/documentation/arkit/verifying_device_support_and_user_permission" target="_blank">compatible con ARKit</a>, con conexión USB a tu equipo macOS
+    * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.2.X instalado y el módulo de compatibilidad con la compilación de iOS agregado
 
 > [!IMPORTANT]
 > La versión de Unity recomendada para esta serie de tutoriales es Unity 2019.2.X. Esta sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
