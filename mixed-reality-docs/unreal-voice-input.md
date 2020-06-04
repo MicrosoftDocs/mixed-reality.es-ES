@@ -1,36 +1,73 @@
 ---
 title: Entrada de voz
-description: Explica cómo usar la entrada de voz
-author: AndreyChistyakov
-ms.author: anchisty
+description: Tutorial sobre la configuración y el uso de la entrada de voz en HoloLens 2 e inreal Engine
+author: hferrone
+ms.author: v-haferr
 ms.date: 04/08/2020
 ms.topic: article
-keywords: Windows Mixed Reality, HoloLens
-ms.openlocfilehash: d61a9f9d40c76c8872ff0a1b39d65f95ae88d2b7
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+keywords: Windows Mixed Reality, inreal, inreal Engine 4, UE4, HoloLens 2, voz, entrada de voz, reconocimiento de voz, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos
+ms.openlocfilehash: c5de0cd912674ccd681fd398fb6fe5fd345ab6f2
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835331"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330637"
 ---
-# <a name="voice-input"></a>Entrada de voz
+# <a name="voice-input-in-unreal"></a>Entrada de voz en inreal
 
-Para habilitar el reconocimiento de voz en HoloLens, el desarrollador debe habilitar "micrófono" en el editor desareal en configuración del proyecto > Platform > HoloLens > funcionalidades. El dispositivo también debe tener habilitado el reconocimiento de voz en configuración > privacidad > voz y usar el idioma inglés.
+## <a name="overview"></a>Información general
+La entrada de voz le permite interactuar con un holograma sin tener que usar gestos de mano y es compatible con HoloLens (1ª generación) y HoloLens 2. Está basado en el mismo motor que admite la voz en todas las demás aplicaciones universales de Windows y puede Agregar una sensación natural a la manera de interactuar en la realidad mixta. 
+
+Las características de voz admitidas incluyen:
+- [Comando SELECT](https://docs.microsoft.com/windows/mixed-reality/voice-input#the-select-command)
+- [Hola, Cortana](https://docs.microsoft.com/windows/mixed-reality/voice-input#hey-cortana)
+- "Verlo, decirlo" para la interacción de botón y etiqueta
+- Dictado
+
+Para obtener más información, consulte la documentación principal de [entrada de voz](voice-input.md) .
+
+## <a name="enabling-speech-recognition"></a>Habilitación del reconocimiento de voz
+
+Para habilitar el reconocimiento de voz en HoloLens:
+1. Seleccione **configuración del proyecto > plataforma > HoloLens > funcionalidades** y habilite el **micrófono**. 
+2. Habilitado recogniztion de voz en **configuración > privacidad > voz** y seleccione **Inglés**.
+
+> [!NOTE]
+> El reconocimiento de voz siempre funciona en el idioma de visualización de Windows configurado en la aplicación de **configuración** . Se recomienda habilitar también el reconocimiento de **voz en línea** para obtener la mejor calidad de servicio.
 
 ![Configuración del reconocimiento de voz de Windows](images/unreal/speech-recognition-settings.png)
 
-Se recomienda habilitar también el reconocimiento de voz en línea para obtener la mejor calidad posible del servicio. [Aquí](voice-input.md) encontrará detalles técnicos para el reconocimiento de voz en HoloLens
+3. Se mostrará un cuadro de diálogo cuando se inicie la aplicación por primera vez para preguntar si desea habilitar el micrófono. Si selecciona **sí** , se iniciará la entrada de voz en la aplicación.
 
-Después, el usuario verá un cuadro de diálogo que le permitirá habilitar el micrófono cuando se inicie la aplicación por primera vez. Si un usuario selecciona Sí, la aplicación comenzará a obtener entrada de voz.
+La entrada de voz no requiere ninguna API especial de Windows Mixed Reality; se basa en la API de asignación de [entrada](https://docs.unrealengine.com/Gameplay/Input/index.html) de Engine 4 inreal Engine existente. 
 
-La entrada de voz no requiere una API especial de Windows Mixed Reality y, en su lugar, se basa en la API de asignación de entrada de Engine 4 existente. [Aquí](https://docs.unrealengine.com/en-US/Gameplay/Input/index.html) encontrará información detallada sobre cómo usar la API de entrada
+## <a name="adding-speech-mappings"></a>Agregar asignaciones de voz
+La conexión de voz a la acción es un paso importante cuando se usa la entrada de voz. Estas asignaciones supervisan las palabras clave de la aplicación para la voz que un usuario podría decir y, a continuación, activa una acción vinculada. Puede buscar las asignaciones de voz:
+1. Seleccione **editar > configuración del proyecto**, desplácese hasta la sección **motor** y haga clic en **entrada**.
 
-Se han agregado las asignaciones de voz a la sección de enlaces de la entrada del motor, que se encuentra debajo de las asignaciones de acciones y ejes. 
+Para agregar una nueva asignación de voz para un comando de salto:
+1. Haga clic en el **+** icono situado junto a **elementos** de la matriz y rellene los siguientes valores:
+    * **jumpWord** para **el nombre de acción**
+    * **saltar** la **palabra clave de voz**
+
+> [!NOTE]
+> Cualquier palabra o frase en inglés (s) se puede usar como palabra clave. 
 
 ![Información de entrada del motor de UE4](images/unreal/engine-input.png)
- 
-Este es un ejemplo de supervisión agregada para el mundo "salto". Se puede usar cualquier palabra o frase en inglés. 
 
-Después de agregar una asignación de voz a través de la configuración del proyecto, un desarrollador puede usar la lógica no real estándar para controlar la entrada, como en el ejemplo siguiente: 
+Las asignaciones de voz se pueden usar como componentes de entrada como asignaciones de acción o de eje o como nodos de plano en el gráfico de eventos. Por ejemplo, puede vincular el comando de salto para imprimir dos registros diferentes en función de Cuándo se pronuncia la palabra:
+
+1. Haga doble clic en un plano para abrirlo en el **gráfico de eventos**.
+2. **Haga clic con el botón derecho** y busque el nombre de la **acción** de la asignación de voz (en este caso, **jumpWord**) y presione **entrar**. Esto agrega un nodo de **acción de entrada** al gráfico.
+3. Arrastre y coloque el anclaje **presionado** en el nodo de la **cadena de impresión** , tal como se muestra en la imagen siguiente. Puede dejar el PIN **liberado** vacío, no ejecutará nada para las asignaciones de voz.
  
-![Acción simple para voz](images/unreal/input-action-bp.png)
+![Acción simple para voz](images/unreal/voice-input-img-03.png)
+
+4. Juegue a la aplicación, por ejemplo, la palabra **Jump** y vea que la consola imprime los registros.
+
+Esta es toda la configuración que necesitará para empezar a agregar entradas de voz a las aplicaciones de HoloLens en el mundo real. Puede encontrar más información sobre la voz e interactividad en los vínculos siguientes y asegúrese de pensar en la experiencia que está creando para los usuarios.
+
+## <a name="see-also"></a>Consulte también
+* [Mirada y confirmación](gaze-and-commit.md)
+* [Interacciones instintivas](interaction-fundamentals.md)
+* [MR Input 212: voz](holograms-212.md)
