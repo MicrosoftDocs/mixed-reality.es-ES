@@ -6,12 +6,12 @@ ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos de Windows, API
-ms.openlocfilehash: 8c9d60f458cddd3ba258aed0ee82f7aa16c10ba6
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227970"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451330"
 ---
 # <a name="device-portal-api-reference"></a>Referencia de la API del Portal de dispositivos
 
@@ -33,7 +33,7 @@ Instala una aplicación
 Parámetros
 * paquete: nombre de archivo del paquete que se va a instalar.
 
-Payload
+Carga
 * cuerpo http compatible con varias partes
 
 **/API/App/packagemanager/packages (GET)**
@@ -320,7 +320,15 @@ Establece la configuración de captura de realidad mixta predeterminada.  Alguno
 
 **/API/Holographic/MRC/status (GET)**
 
-Obtiene el estado de la realidad mixta grabada (en ejecución, detenida)
+Obtiene el estado de la captura de realidad mixta en el portal de dispositivos de Windows.
+
+***Respuesta***
+
+La respuesta contiene una propiedad JSON que indica si el portal de dispositivos de Windows está grabando vídeo o no.
+
+``` javascript
+{"IsRecording" : boolean}
+```
 
 **/API/Holographic/MRC/Thumbnail (GET)**
 
@@ -419,7 +427,7 @@ Devuelve las estadísticas de rendimiento del sistema (e/s de lectura/escritura,
 Devolver datos
 * JSON con información del sistema: CPU, GPU, memoria, red, e/s
 
-## <a name="power"></a>Power
+## <a name="power"></a>Potencia
 
 **/API/Power/Battery (GET)**
 
@@ -501,7 +509,7 @@ Parámetros
 
 Carga un perfil de WPR e inicia el seguimiento con el perfil cargado.
 
-Payload
+Carga
 * cuerpo http compatible con varias partes
 
 Devolver datos
@@ -531,6 +539,6 @@ Parámetros
 Devolver datos
 * Al iniciar, devuelve el estado de la sesión de WPR.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Uso del Portal de dispositivos Windows](using-the-windows-device-portal.md)
 * [Referencia de API principal del portal de dispositivos (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
