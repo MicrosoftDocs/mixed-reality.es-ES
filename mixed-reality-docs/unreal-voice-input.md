@@ -6,31 +6,23 @@ ms.author: v-haferr
 ms.date: 04/08/2020
 ms.topic: article
 keywords: Windows Mixed Reality, inreal, inreal Engine 4, UE4, HoloLens 2, voz, entrada de voz, reconocimiento de voz, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos
-ms.openlocfilehash: c5de0cd912674ccd681fd398fb6fe5fd345ab6f2
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 134a8c5bbeb700a973d3732d24fa9078feb568ef
+ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84551791"
 ---
 # <a name="voice-input-in-unreal"></a>Entrada de voz en inreal
 
 ## <a name="overview"></a>Información general
-La entrada de voz le permite interactuar con un holograma sin tener que usar gestos de mano y es compatible con HoloLens (1ª generación) y HoloLens 2. Está basado en el mismo motor que admite la voz en todas las demás aplicaciones universales de Windows y puede Agregar una sensación natural a la manera de interactuar en la realidad mixta. 
-
-Las características de voz admitidas incluyen:
-- [Comando SELECT](https://docs.microsoft.com/windows/mixed-reality/voice-input#the-select-command)
-- [Hola, Cortana](https://docs.microsoft.com/windows/mixed-reality/voice-input#hey-cortana)
-- "Verlo, decirlo" para la interacción de botón y etiqueta
-- Dictado
-
-Para obtener más información, consulte la documentación principal de [entrada de voz](voice-input.md) .
+La entrada de voz en no real permite interactuar con un holograma sin tener que usar gestos de mano y solo es compatible con HoloLens 2. Aunque la entrada de voz en HoloLens 2 se basa en el mismo motor que admite la voz en todas las demás aplicaciones universales de Windows, no real usa un motor más limitado de su propiedad para procesar la entrada de voz. Esto limita las características de entrada de voz en no real a las asignaciones de voz predefinidas, que se trata en las secciones siguientes. 
 
 ## <a name="enabling-speech-recognition"></a>Habilitación del reconocimiento de voz
 
 Para habilitar el reconocimiento de voz en HoloLens:
 1. Seleccione **configuración del proyecto > plataforma > HoloLens > funcionalidades** y habilite el **micrófono**. 
-2. Habilitado recogniztion de voz en **configuración > privacidad > voz** y seleccione **Inglés**.
+2. Habilitado el reconocimiento de voz en **configuración > privacidad > voz** y seleccione **Inglés**.
 
 > [!NOTE]
 > El reconocimiento de voz siempre funciona en el idioma de visualización de Windows configurado en la aplicación de **configuración** . Se recomienda habilitar también el reconocimiento de **voz en línea** para obtener la mejor calidad de servicio.
@@ -53,7 +45,7 @@ Para agregar una nueva asignación de voz para un comando de salto:
 > [!NOTE]
 > Cualquier palabra o frase en inglés (s) se puede usar como palabra clave. 
 
-![Información de entrada del motor de UE4](images/unreal/engine-input.png)
+![Configuración de entrada del motor de UE4](images/unreal/engine-input.png)
 
 Las asignaciones de voz se pueden usar como componentes de entrada como asignaciones de acción o de eje o como nodos de plano en el gráfico de eventos. Por ejemplo, puede vincular el comando de salto para imprimir dos registros diferentes en función de Cuándo se pronuncia la palabra:
 
@@ -67,7 +59,9 @@ Las asignaciones de voz se pueden usar como componentes de entrada como asignaci
 
 Esta es toda la configuración que necesitará para empezar a agregar entradas de voz a las aplicaciones de HoloLens en el mundo real. Puede encontrar más información sobre la voz e interactividad en los vínculos siguientes y asegúrese de pensar en la experiencia que está creando para los usuarios.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
+* [Entrada de voz](voice-input.md)
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [MR Input 212: voz](holograms-212.md)
+
