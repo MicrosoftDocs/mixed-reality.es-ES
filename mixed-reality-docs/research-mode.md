@@ -3,15 +3,15 @@ title: Modo de investigación de HoloLens
 description: Con el modo de investigación en HoloLens, una aplicación puede acceder a las secuencias de sensor del dispositivo clave (profundidad, seguimiento del entorno y interreflectividad de INFRARROJOs).
 author: hferrone
 ms.author: v-haferr
-ms.date: 05/03/2018
+ms.date: 06/10/2020
 ms.topic: article
 keywords: modo de investigación, CV, RS4, Computer Vision, investigación, HoloLens, HoloLens 2
-ms.openlocfilehash: ec6f7b73a1f25932f10c10a7f0daaf78e536c0c4
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: 62b82e3a36452d4b104bf04999e556ec19d2a5e3
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533107"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720401"
 ---
 # <a name="hololens-research-mode"></a>Modo de investigación de HoloLens
 
@@ -97,7 +97,7 @@ El modo de investigación es una extensión del modo de programador. Antes de co
 
 * Abra el **menú inicio > configuración** y seleccione **actualizaciones**.
 * Seleccione **para desarrolladores** y habilite el **modo de desarrollador**.
-* Desplácese hacia abajo y habilite el **portal de dispositivos**.
+* Desplázate hacia abajo y habilita **Portal de dispositivos**.
 
 Una vez habilitadas las características de desarrollador, [Conéctese al portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens) para habilitar las características del modo de investigación.
 
@@ -129,7 +129,7 @@ Puede encontrar aplicaciones de ejemplo sobre cómo obtener acceso a las diversa
 
 Puede usar el [seguimiento de problemas](https://github.com/Microsoft/HololensForCV/issues) en el repositorio de HoloLensForCV para seguir los problemas conocidos.
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 * [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 * [Repositorio de GitHub de HoloLensForCV](https://github.com/Microsoft/HoloLensForCV)

@@ -1,67 +1,92 @@
 ---
 title: 3. Configuración del proyecto para la realidad mixta
-description: Parte 3 de un tutorial para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit.
-author: sw5813
-ms.author: suwu
+description: Parte 3 de 6 de una serie de tutoriales para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: b5b5e2de787279602341e60f2bfa29aa05ea9b31
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82840624"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330309"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configuración del proyecto para la realidad mixta
 
-En esta sección se te orienta a lo largo del proceso de configuración de la aplicación para el desarrollo para realidad mixta. 
+## <a name="overview"></a>Introducción
+
+En el tutorial anterior, ha dedicado tiempo a configurar el proyecto de aplicación de ajedrez. En esta sección se le guiará en la configuración de la aplicación para el desarrollo de realidad mixta, lo que significa la adición de una sesión de AR. Usará un recurso de datos ARSessionConfig para esta tarea, que dispone una gran cantidad de opciones útiles de AR, como el mapeo espacial y la oclusión. Si desea profundizar más, en la documentación de Unreal Engine se incluyen más detalles sobre el recurso [ARSessionConfig](https://docs.unrealengine.com/en-US/PythonAPI/class/ARSessionConfig.html) y la clase [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html).
 
 ## <a name="objectives"></a>Objetivos
+* Trabajo con la configuración de AR de Unreal Engine 
+* Uso de un recurso de datos ARSessionConfig
+* Configuración de un peón y el modo de juego
 
-* Entender cómo configurar un proyecto de realidad mixta con ARSessionConfig, Pawn y GameMode
+## <a name="adding-the-session-asset"></a>Adición del recurso de sesión
+Las sesiones de AR en Unreal no aparecen por sí mismas. Para usar una sesión, necesita un recurso de datos ARSessionConfig con el que trabajar, que será la tarea siguiente:
 
-## <a name="configure-the-session"></a>Configuración de la sesión
-
-1. En el explorador de contenido, vuelve a la carpeta **Content** (Contenido). Haz clic en **Add New > Miscellaneous > Data Asset** (Agregar nuevo > Varios > Recursos de datos). 
-
-2. Elige **ARSessionConfig** como clase y haz clic en **Select** (Seleccionar). Asigna al recurso el nombre "ARSessionConfig".
+1. Haga clic en **Add New > Miscellaneous > Data Asset** (Agregar nuevo > Varios > Recursos de datos) en **Content Browser** (Explorador de contenido). Asegúrese de que se encuentra en el nivel raíz de la carpeta **Content** (Contenido). 
+    * Seleccione **ARSessionConfig**, haga clic en **Select** (Seleccionar) y asigne al recurso el nombre **ARSessionConfig**.
 
 ![Crear un recurso de datos](images/unreal-uxt/3-createasset.PNG)
 
-3. Haz doble clic en ARSessionConfig para abrirlo. El recurso de datos ARSessionConfig contiene una serie de valores de AR útiles, como el mapeo espacial y la oclusión. Para obtener más información sobre ARSessionConfig, echa un vistazo a la documentación de Unreal Engine sobre [UARSessionConfig](https://docs.unrealengine.com/en-US/API/Runtime/AugmentedReality/UARSessionConfig/index.html). Para nuestra aplicación de ajedrez, no es necesario modificar la configuración, así que solo tienes que seleccionar **Save** (Guardar) y volver a la ventana principal. 
+3. Haga doble clic en **ARSessionConfig** para abrirlo, deje la configuración predeterminada y haga clic en **Save** (Guardar). Vuelve a la ventana principal. 
 
 ![Configuración de sesión de AR](images/unreal-uxt/3-arsessionconfig.PNG)
 
-4. En la barra de herramientas situada encima de la ventanilla, haz clic en **Blueprints > Open Level Blueprint** (Planos técnicos > Abrir plano técnico de nivel). El plano técnico de nivel es un plano especial que actúa como un gráfico de eventos global de nivel superior. Vamos a iniciar una sesión de AR aquí, de modo que la configuración de la sesión de AR se aplique al principio del nivel.  
+Después de hacer esto, el paso siguiente consiste en asegurarse de que la sesión de AR se inicia cuando se carga el nivel. Por suerte, Unreal tiene un tipo especial de plano técnico denominado **Level Blueprint** (Plano técnico de nivel) que actúa como un gráfico de eventos global de nivel superior. La conexión del recurso ARSessionConfig en **Level Blueprint** (Plano técnico de nivel) garantiza que la sesión de AR se activará cuando se inicie la reproducción del juego.
 
-5. Saca el modo de ejecución **Event BeginPlay** (Event BeginPlay) y suéltalo. Busca el nodo **Start AR Session** (Iniciar sesión de AR). Haz clic en **Session Config** (Configuración de sesión) y selecciona el recurso **ARSessionConfig** que acabas de crear. Selecciona **Compile** (Compilar) y, a continuación, **Save** (Guardar). Vuelve a la ventana principal.
+1. Haga clic en **Blueprints > Open Level Blueprint** (Planos técnicos > Abrir plano técnico de nivel) en la barra de herramientas del editor: 
 
-![Iniciar sesión de AR](images/unreal-uxt/3-startarsession.PNG)
+![Abrir plano técnico de nivel](images/unreal-uxt/3-level-blueprint.PNG)
+
+5. Arrastre el nodo de ejecución (icono de flecha hacia la izquierda) fuera de **Event BeginPlay** (Evento BeginPlay) y suéltelo. Busque **Start AR Session** (Iniciar sesión de AR).  
+    * Haga clic en la lista desplegable **Select Asset** (Seleccionar recurso) en **Session Config** (Configuración de sesión) y elija el recurso **ARSessionConfig**. 
+    * Pulse en **Compile** (Compilar), luego en **Save** (Guardar) y vuelva a la ventana principal.
+
+![Iniciar sesión de AR](images/unreal-uxt/3-start-ar-session.PNG)
 
 ## <a name="create-a-pawn"></a>Creación de un peón
+En este punto, el proyecto todavía necesita un objeto que sea el jugador. En Unreal, **Pawn** (Peón) representa al usuario del juego; pero, en este caso, será la experiencia de HoloLens 2.
 
-1.  En la carpeta Content (Contenido), crea un nuevo plano técnico que herede de **DefaultPawn**. En Unreal, un peón representa al usuario en el juego o, en este caso, la experiencia de HoloLens 2. Cambia el nombre del nuevo peón a "MRPawn" y haz doble clic en él para abrirlo. 
+1. Haga clic en **Add New > Blueprint Class** (Agregar nuevo > Clase de plano técnico) en la carpeta **Content** (Contenido) y expanda la sección **All Classes** (Todas las clases) en la parte inferior. 
+    * Busque **DefaultPawn**, haga clic en **Select** (Seleccionar) y haga doble clic en el recurso para abrirlo. 
 
 ![Crear un nuevo peón que herede de DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
-2.  De forma predeterminada, el peón tiene un componente de malla y uno de colisión, ya que, en la mayoría de los proyectos de Unreal, los peones controlados por el usuario son objetos sólidos que colisionan con otros componentes. En esta situación, dado que el usuario es el peón, queremos poder realizar el paso a través de hologramas sin generar colisiones. En el panel Components (Componentes), selecciona **CollisionComponent**. En el panel Details (Detalles), desplázate hacia abajo hasta la sección Collision (Colisión) y haz clic en la lista desplegable junto a Collision Presets (Valores preestablecidos de colisión). Cámbialo de Pawn (Peón) a **NoCollision**. Haz lo mismo para **MeshComponent**. **Compila** y, a continuación, **guarda** el plano técnico. Vuelve a la ventana principal. 
+> [!NOTE]
+> De forma predeterminada, los peones tienen componentes de malla y colisión. En la mayoría de los proyectos de Unreal, los peones son objetos sólidos que pueden colisionar con otros componentes. Dado que el peón y el usuario son los mismos en la realidad mixta, querrá poder pasar a través de hologramas sin colisiones. 
+
+2. Seleccione **CollisionComponent** en el panel **Components** (Componentes) y desplácese hacia abajo hasta la sección **Collision** (Colisión) del panel **Details** (Detalles). 
+    * Haga clic en la lista desplegable **Collision Presets** (Valores preestablecidos de colisión) y cambie el valor a **NoCollision**. 
+    * Haga lo mismo para **MeshComponent**, después **compile** y **guarde** el plano técnico. 
 
 ![Ajustar los valores preestablecidos de colisión del peón](images/unreal-uxt/3-nocollision.PNG)
 
-## <a name="create-a-game-mode"></a>Creación de un modo de juego
+Con el trabajo que ha realizado aquí, vuelva a la ventana principal.
 
-1.  En la carpeta Content (Contenido) del explorador de contenido, crea un nuevo plano técnico con la **Game Mode Base** (Base del modo de juego) principal. Asígnale el nombre MRGameMode y haz doble clic en él para abrirlo. En Unreal, el modo de juego determina una serie de opciones de configuración para el juego o la experiencia, incluido el peón predeterminado que se usará. 
+## <a name="create-a-game-mode"></a>Creación de un modo de juego
+La última pieza del rompecabezas de la configuración de la realidad mixta es el modo de juego. El modo de juego determina una serie de opciones de configuración para el juego o la experiencia, incluido el peón predeterminado que se usará.
+
+1.  Haga clic en **Add New > Blueprint Class** (Agregar nuevo > Clase de plano técnico) en la carpeta **Content** (Contenido) y expanda la sección **All Classes** (Todas las clases) en la parte inferior. 
+    * Busque **Game Mode Base** (Base de modo de juego), asígnele el nombre **MRGameMode** y haga doble clic en él para abrirlo. 
 
 ![MRGameMode en el explorador de contenido](images/unreal-uxt/3-gamemode.PNG)
 
-2.  En el panel de detalles, busca la sección Classes (Clases). Cambia la clase de peón predeterminada de DefaultPawn a la **MRPawn** que acaba de crear. Selecciona **Compile** (Compilar) y, a continuación, **Save** (Guardar). Vuelve a la ventana principal. 
+2.  Vaya a la sección **Classes** (Clases) en el panel **Details** (Detalles) y cambie **Default Pawn Class** (Clase de peón predeterminado) a **MRPawn**. 
+    * Pulse en **Compile** (Compilar), luego en **Save** (Guardar) y vuelva a la ventana principal. 
 
 ![Establecer la clase de peón predeterminada](images/unreal-uxt/3-setpawn.PNG)
 
-3.  El último paso en la configuración del proyecto consiste en indicar a Unreal que debe usar de forma predeterminada MRGameMode. Ve a la sección **Edit > Projects Settings > Maps & Modes** (Editar > Configuración de proyectos > Mapas y modos), en Projects (Proyectos). En la sección Default Modes (Modos predeterminados), haz clic en la lista desplegable y elige **MRGameMode**. En la sección Default Maps (Mapas predeterminados) que hay justo a continuación, cambia **EditorStartupMap** y **GameDefaultMap** a **Main** (Principal). De este modo, cuando cierres el editor y vuelvas a abrirlo, se seleccionará el mapa principal de forma predeterminada. Del mismo modo, al reproducir el juego, el mapa principal será el nivel que se inicie. 
+3.  Seleccione **Edit > Projects Settings** (Editar > Configuración de proyectos) y haga clic en **Maps & Modes** (Mapas y modos) en la lista de la izquierda. 
+    * Expanda **Default Modes** (Modos predeterminados) y cambie **Default Game Mode** (Modo de juego predeterminado) a **MRGameMode**. 
+    * Expanda **Default Maps** (Mapas predeterminados) y cambie **EditorStartupMap** y **GameDefaultMap** a **Main** (Principal). De este modo, cuando cierre el editor y vuelva a abrirlo o cuando juegue una partida, se seleccionará el mapa principal de forma predeterminada.
 
 ![Configuración del proyecto: mapas y modos](images/unreal-uxt/3-mapsandmodes.PNG)
+
+Una vez que el proyecto se haya configurado completamente para la realidad mixta, está listo para pasar al siguiente tutorial y empezar a agregar datos proporcionados por el usuario a la escena. 
 
 [Sección siguiente: 4. Creación de escenas interactivas](unreal-uxt-ch4.md)

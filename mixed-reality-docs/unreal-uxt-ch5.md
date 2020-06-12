@@ -1,63 +1,89 @@
 ---
 title: 5. Adición de un botón y restablecimiento de la ubicación de las piezas
-description: Parte 5 de un tutorial para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit.
-author: sw5813
-ms.author: suwu
+description: Parte 5 de 6 de una serie de tutoriales para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 77fe2b59db970a2ac4b531d69efec6794478f7d5
-ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
+ms.openlocfilehash: 49cab5c5a8c6736b800b5ba05de2c88edf008008
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83519997"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330272"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Adición de un botón y restablecimiento de la ubicación de las piezas
 
-En esta sección se siguen mostrando las funcionalidades del complemento UX Tools de Mixed Reality Toolkit y se siguen compilando las características de la aplicación de ajedrez. Crearás una nueva función y aprenderás a obtener referencias a actores de tu nivel en un plano técnico.
+
+## <a name="overview"></a>Introducción
+
+En el tutorial anterior, agregó actores de interacción manual a los componentes Peón y Manipulador en el tablero de ajedrez para que fueran interactivos. En esta sección, continuará trabajando con el complemento UX Tools de Mixed Reality Toolkit compilando las características de la aplicación de ajedrez. Esto incluye la creación de una nueva función y el aprendizaje sobre cómo obtener referencias a actores en un plano técnico. Al final de esta sección, estará listo para empaquetar e implementar la aplicación de realidad mixta en un dispositivo o emulador.
 
 ## <a name="objectives"></a>Objetivos
 
-* Agregar un botón al proyecto
-* Crear una nueva función “Reset Location” (Restablecer ubicación) que envíe un elemento de vuelta a su ubicación original
-* Configurar el botón para que desencadene la función recién creada cuando se presione
+* Adición de un botón interactivo
+* Creación de una función para restablecer la ubicación de las piezas
+* Enlace del botón para que desencadene la función cuando se presione
 
-## <a name="create-a-function-to-reset-location"></a>Crear una función para restablecer la ubicación
+## <a name="creating-a-reset-function"></a>Creación de una función de restablecimiento
+La primera tarea consiste en crear un plano técnico de función que reestablezca una pieza de ajedrez a su posición original en la escena. 
 
-1.  Abre **WhiteKing**. En el panel **My Blueprint** (Mi plano técnico), haz clic en el botón "+" situado junto a la sección **Functions** (Funciones) para crear una nueva función. Asigna a esta función el nombre "Reset Location" (Restablecer ubicación). 
+1.  Abra **WhiteKing**, haga clic en el icono **+** situado junto a la sección **Functions** (Funciones) de **My Blueprint** (Mi plano técnico) y asígnele el nombre **Reset Location**. 
 
-2.  En el plano técnico **Reset Location** (Restablecer ubicación) que acabas de crear, arrastra la marca de ejecución y suéltala en cualquier punto de la cuadrícula de Blueprint para llamar a un nodo **SetActorRelativeTransform**. Esta función define la transformación (ubicación, rotación y escala) de un actor en relación con su elemento principal. Usaremos esta función para restablecer la posición del rey en el tablero, incluso si la posición original del tablero ha cambiado. Crea un nodo **Make Transform** (Crear transformación) con la ubicación X = -26, Y = 4, Z = 0 y conéctalo a la entrada New Relative Transform (Nueva transformación relativa). 
+2.  Arrastre la ejecución desde **Reset Location** y suéltela en la cuadrícula del plano técnico para crear un nodo **SetActorRelativeTransform**. 
+    * Esta función define la transformación (ubicación, rotación y escala) de un actor en relación con su elemento principal. Usará esta función para restablecer la posición del rey en el tablero, incluso si la posición original del tablero ha cambiado. 
+    
+3. Haga clic con el botón derecho en el gráfico de eventos, seleccione **Make Transform** (Realizar transformación) y cambie su **Location** (Ubicación) a **X =-26**, **Y = 4**, **Z = 0**.
+    * Conecte su **Return Value** (Valor devuelto) a la marca de **New Relative Transform** (Nueva transformación relativa) en **SetActorRelativeTransform**. 
 
 ![Función Reset Location (Restablecer ubicación)](images/unreal-uxt/5-function.PNG)
 
-3.  Compila y guarda **WhiteKing**. Vuelve a la ventana principal. 
+**Compile** y **guarde** el proyecto antes de volver a la ventana principal. 
 
-## <a name="add-a-button"></a>Adición de un botón
 
-1.  En la carpeta **Blueprints**, crea un nuevo plano técnico como subclase de SimpleButton. SimpleButton es un actor de plano técnico de botón 3D que se proporciona como parte del complemento UX Tools. Asigna a este botón el nombre "ResetButton" y haz doble clic para abrir el plano técnico. 
+## <a name="adding-a-button"></a>Agregar un botón
+Ahora que la función está configurada correctamente, la siguiente tarea consiste en crear un botón que la desencadene cuando se toque. 
+
+1.  Haga clic en **Add New > Blueprint Class** (Agregar nuevo > Clase de plano técnico), expanda la sección **All Classes** (Todas las clases) y busque **SimpleButton**. 
+    * Asigne a este botón el nombre **ResetButton** y haga doble clic para abrir el plano técnico.
+
+> [!NOTE]
+> **SimpleButton** es un actor de plano técnico de botón 3D que forma parte del complemento UX Tools. . 
 
 ![Subclase del nuevo plano técnico de SimpleButton](images/unreal-uxt/5-subclass.PNG)
 
-2.  En el panel **Components** (Componentes), haz clic en **PressableButton (Inherited)** . En el panel de detalles, desplázate hasta la sección **Eventos**. Haz clic en el botón verde con el signo más junto a **On Button Pressed** (Al presionar un botón). Esto agregará un nuevo evento **On Button Pressed** (Al presionar un botón) al gráfico de eventos, que se invocará cuando se presione el botón. Desde aquí, llamaremos a la función Reset Location (Restablecer ubicación) de WhiteKing. Para ello, primero necesitamos obtener una referencia al actor de WhiteKing de nuestro nivel. 
+2. Haga clic en **PressableButton (Inherited)** [PressableButton (heredado)] del panel **Components** (Componentes) y desplácese hacia abajo en el panel **Details** (Detalles) hasta la sección **Events** (Eventos). 
+    * Haga clic en el botón verde **+** situado junto a **On Button Pressed** (Al presionar un botón) para agregar un evento al gráfico de eventos, que se llamará cuando se presione el botón. 
+    
+Desde aquí, llamará a la función **Reset Location** de **WhiteKing**, que necesita una referencia al actor **WhiteKing** en el nivel. 
 
-3.  En el panel **My Blueprint**, busca la sección **Variables** y haz clic en el botón **+** para agregar una nueva variable. Asigna a esta variable el nombre "WhiteKing". En el panel de detalles, selecciona la lista desplegable situada junto a **Variable Type** (Tipo de variable), busca "WhiteKing" y selecciona **Object Reference** (Referencia de objetos). Por último, activa la casilla situada junto a **Instance Editable** (Instance editable). Esto permitirá que la variable se defina desde el nivel principal. 
+1.  Desplácese hasta la sección **Variables** en el panel **Details** (Detalles), haga clic en el botón **+** y asigne a la variable el nombre **WhiteKing**. 
+    * Seleccione la lista desplegable situada junto a **Variable Type** (Tipo de variable), busque **WhiteKing** y seleccione **Object Reference** (Referencia de objetos). 
+    * Marque la casilla situada junto a **Instance Editable** (Instance editable). Esto permitirá que la variable se defina desde el nivel principal. 
 
 ![Crear una variable](images/unreal-uxt/5-var.PNG)
 
-4.  Arrastra la variable de WhiteKing desde **My Blueprint > Variables** (Mi plano técnico > Variables) hasta el gráfico de eventos de botón de restablecimiento. Elige **Get WhiteKing** (Obtener WhiteKing). 
+2.  Arrastre la variable de WhiteKing desde **My Blueprint > Variables** (Mi plano técnico > Variables) hasta el gráfico de eventos del botón de restablecimiento y elija **Get WhiteKing** (Obtener WhiteKing). 
 
-5.  Arrastra la marca de salida de WhiteKing y suéltala para colocar un nodo nuevo. Selecciona la función**Reset Location** (Restaurar ubicación). Por último, arrastra la marca de ejecución de salida de **On Button Pressed** (Al presionar un botón) a la marca de ejecución de entrada de **Reset Location** (Restablecer ubicación). **Compila** y **guarda** el plano técnico ResetButton y, a continuación, vuelve a la ventana principal. 
+## <a name="firing-the-function"></a>Activación de la función
+Lo único que queda es activar oficialmente la función de restablecimiento cuando se presiona el botón.
+
+1.  Arrastra la marca de salida de WhiteKing y suéltala para colocar un nodo nuevo. Selecciona la función**Reset Location** (Restaurar ubicación). Por último, arrastra la marca de ejecución de salida de **On Button Pressed** (Al presionar un botón) a la marca de ejecución de entrada de **Reset Location** (Restablecer ubicación). **Compila** y **guarda** el plano técnico ResetButton y, a continuación, vuelve a la ventana principal. 
 
 ![Llamar a la función Reset Location (Restablecer ubicación) desde On Button Pressed (Al presionar un botón)](images/unreal-uxt/5-callresetloc.PNG)
 
-6.  Arrastra **ResetButton** a la ventanilla y establece su ubicación en X = 50, Y =-25, Z = 10. En **Default** (Predeterminada), establece el valor de la variable WhiteKing en **WhiteKing**.
+2.  Arrastre **ResetButton** a la ventanilla y establezca su ubicación en **X = 50**, **Y =-25** y **Z = 10**. En **Default** (Valor predeterminado), establezca el valor de la variable **WhiteKing** en **WhiteKing**.
 
 ![Definir la variable](images/unreal-uxt/5-buttonlevel.PNG)
 
-Ahora tienes una aplicación de realidad mixta con un tablero y una pieza de ajedrez manipulables, así como un botón totalmente funcional que restablecerá la ubicación de la pieza cuando se presione. La aplicación completada hasta este momento se puede encontrar en [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp). No dudes en profundizar más allá de este tutorial y configurar el resto de las piezas de ajedrez de modo que se restablezca todo el tablero cuando el usuario presione el botón.
+Ejecute la aplicación, mueva la pieza de ajedrez a una nueva ubicación y presione el botón grande rosa para ver la lógica de restablecimiento en acción.
+
+Ahora tiene una aplicación de realidad mixta con un tablero y una pieza de ajedrez con los que puede interactuar, así como un botón totalmente funcional que restablecerá la ubicación de la pieza. Puede encontrar la aplicación completada hasta este momento en su repositorio de [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/tree/master/ChessApp). No dude en profundizar más allá de este tutorial y configurar el resto de las piezas de ajedrez de modo que se restablezca todo el tablero cuando se presione el botón.
 
 ![Escena final en la ventanilla](images/unreal-uxt/5-endscene.PNG)
+
+Está listo para pasar a la sección final de este tutorial, donde aprenderá a empaquetar e implementar correctamente la aplicación en un dispositivo o emulador.
 
 [Sección siguiente: 6. Empaquetado y implementación en el dispositivo o emulador](unreal-uxt-ch6.md)

@@ -1,40 +1,58 @@
 ---
 title: Introducción al desarrollo con Unreal
 description: Información general sobre el desarrollo para realidad mixta con Unreal Engine 4
-author: sw5813
-ms.author: suwu
+author: hferrone
+ms.author: v-haferr
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms
-ms.openlocfilehash: 08ba760acc1a35d8f47de6a7bf6cbc020c8aca3f
-ms.sourcegitcommit: 189a47b8712dd5b620e19815f5cf6d1ac0f29880
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development
+ms.openlocfilehash: 3e3862bd701d6e873f623abc9f9cda0b3085e753
+ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82851569"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330162"
 ---
 # <a name="unreal-development-overview"></a>Introducción al desarrollo con Unreal
 
-Ahora, Unreal Engine 4 es totalmente compatible con el desarrollo para dispositivos con Windows Mixed Reality (VR) y HoloLens 2 (AR). Si no estás familiarizado con el desarrollo con Unreal, la página <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">Introducción a Unreal Engine 4</a> te resultará ideal para explorarlo. Si necesitas recursos, Unreal dispone de un <a href="https://www.unrealengine.com/marketplace//store" target="_blank">Marketplace</a> completo. 
+La introducción a <a href="https://docs.microsoft.com/en-us/windows/mixed-reality" target="_blank" title="los documentos de realidad mixta"> aplicaciones de realidad mixta</a> es una gran tarea. Los nuevos conceptos, las plataformas y el hardware de vanguardia pueden parecer un obstáculo. Sin embargo, si es un desarrollador de Unreal, tiene suerte. Ahora se incluye compatibilidad con los <a href="https://www.microsoft.com/en-us/windows/windows-mixed-reality" target="_blank" title="documentos de Windows Mixed Reality">Windows Mixed Reality</a> (VR) y con los <a href="https://www.microsoft.com/en-us/hololens/hardware" target="_blank" title="documentos de HoloLens 2">HoloLens 2</a> (AR) en <a href="https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_25/index.html" target="_blank" title="las notas de la versión de Unreal Engine 4.25 más reciente</a>la versión más reciente">. En esta actualización se incluye:
+* Compatibilidad del complemento UX Tools de Mixed Reality
+* Compatibilidad con OpenXR
+* Control remoto de la aplicación desde una aplicación de escritorio
+* Un mejor rendimiento
+* Captura de realidad mixta
+* Compatibilidad inicial con Azure Spatial Anchors
 
-Una vez que hayas adquirido un conocimiento básico del desarrollo con Unreal, consulta el tutorial de la sección siguiente para obtener información sobre cómo compilar y ejecutar aplicaciones en HoloLens. No olvides visitar los <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">foros de realidad mixta de Unreal</a> para interactuar con la comunidad que compila aplicaciones de realidad mixta en Unreal. Es un lugar idóneo en el que buscar soluciones a los problemas con los que puedes encontrarte.
-
-## <a name="tutorial"></a>Tutorial
-
-Aprende a [compilar e implementar una aplicación de ajedrez sencilla](unreal-uxt-ch1.md) para HoloLens 2 con nuestro tutorial detallado. En este tutorial se usa el complemento UX Tools para desarrollar aplicaciones con componentes de experiencia de usuario interactivos, como un botón y un manipulador. Para obtener más información sobre el complemento UX Tools, consulta la siguiente sección sobre MRTK. 
+Si no está familiarizado con el desarrollo en Unreal, no empiece a ciegas. Explore la <a href="https://docs.unrealengine.com//GettingStarted/index.html" target="_blank">serie de tutoriales</a> de Unreal para ponerse al día y buscar recursos y soporte técnico en <a href="https://www.unrealengine.com/marketplace//store" target="_blank">marketplace</a> de Unreal y en los <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">foros</a> de la realidad mixta. Estos recursos son vínculos a la comunidad de creadores y solucionadores de problemas en el mercado de realidad mixta de hoy en día.
 
 ## <a name="mixed-reality-toolkit-for-unreal"></a>Mixed Reality Toolkit para Unreal
 
-[Mixed Reality Toolkit para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) es un conjunto de componentes, en forma de complementos, ejemplos y documentación, diseñado para acelerar el desarrollo de aplicaciones de realidad mixta con Unreal Engine. El primer componente que se publica como parte de este kit de herramientas es [UX Tools para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal), un complemento que se puede agregar al proyecto de HoloLens 2 para proporcionar características de experiencia de usuario para aplicaciones de HoloLens 2. La documentación de Mixed Reality Toolkit y UX Tools para Unreal se puede encontrar en sus respectivos repositorios de GitHub. 
+[Mixed Reality Toolkit para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) es un conjunto de componentes diseñados para acelerar el desarrollo en Unreal. Cada componente incluye complementos, ejemplos y documentación para configurar experiencias envolventes. 
+
+[UX Tools para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) es el primer componente que se va a publicar y actualmente solo se admite en HoloLens 2. El complemento del componente incluye código, planos técnicos y recursos de ejemplo de las características comunes de UX, como:
+* Simulación de entrada
+* Actor de interacción con la mano
+* Componente de botón presionable
+* Componente de manipulador
+* Componente de seguimiento del comportamiento
+
+Puede profundizar en el repositorio GitHub de [UX Tools para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) para obtener información detallada sobre la característica e información sobre cómo configurar el proyecto.
+
+## <a name="tutorial"></a>Tutorial
+
+Crear algo con sus propias manos es la mejor manera de aprender una nueva habilidad. Aprender a [compilar e implementar una aplicación de ajedrez sencilla](unreal-uxt-ch1.md) para HoloLens 2 con el complemento UX Tools es una excelente manera de empezar. 
+
+La serie completa de tutoriales proporciona un contacto práctico con escenarios y componentes de UX interactivos comunes. Trabajará en la configuración del proyecto, agregará interacciones a la escena y lo implementará en un dispositivo o emulador. Lo único que necesita es Windows 10, un emulador y Visual Studio 2019.
+
 
 ## <a name="performance"></a>Rendimiento
 
-Una aplicación de HoloLens 2 debe ejecutarse a 60 fotogramas por segundo para que los hologramas presenten estabilidad y capacidad de respuesta. Para lograrlo en la aplicación, te recomendamos que sigas nuestras [recomendaciones de rendimiento para Unreal](performance-recommendations-for-unreal.md). 
+El desarrollo para la realidad mixta incluye puntos de control de rendimiento que dependen de la plataforma. Una aplicación de HoloLens 2 debe ejecutarse a 60 fotogramas por segundo para que los hologramas presenten estabilidad y capacidad de respuesta. Afortunadamente, Unreal proporciona [recomendaciones de rendimiento](performance-recommendations-for-unreal.md) para lograrlo en sus aplicaciones.
 
 ## <a name="guides-to-specific-features"></a>Guías para características específicas
 
-Para obtener información sobre cómo usar características específicas en Unreal, consulta las guías siguientes: 
+Hay varias características clave del desarrollo de la realidad mixta que nuestra serie de tutoriales no cubre. Consulte las siguientes guías para obtener más información y aplicaciones prácticas: 
 * [Seguimiento de las manos](unreal-hand-tracking.md)
 * [Seguimiento de los ojos](unreal-gaze-input.md)
 * [Asignación espacial](unreal-spatial-mapping.md)
@@ -42,6 +60,7 @@ Para obtener información sobre cómo usar características específicas en Unre
 * [Entrada de voz](unreal-voice-input.md)
 * [Cámara de HoloLens](unreal-hololens-camera.md)
 * [Códigos QR](unreal-qr-codes.md)
+
 
 ## <a name="supported-features"></a>Funciones admitidas
 

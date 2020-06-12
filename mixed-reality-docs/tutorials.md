@@ -8,12 +8,12 @@ ms.date: 10/22/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academia, tutorial
-ms.openlocfilehash: db60ff35156ea20aadd1ba04f9304aa27a2488cb
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: e5961a178d571d2f71e98ff4c3c729d6feb0fd40
+ms.sourcegitcommit: 7011ac6fde80e5c45f04192fa1db6e1eb559e3b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835654"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327965"
 ---
 # <a name="tutorials-and-sample-apps"></a>Tutoriales y aplicaciones de ejemplo
 
@@ -28,7 +28,7 @@ Los tutoriales de HoloLens 2 están diseñados para ayudar a los desarrolladores
 * Tutoriales de introducción
     * Unity: [1 de 7 Introducción y objetivos](mrlearning-base.md)
     * Unreal: [1 de 6 Introducción](unreal-uxt-ch1.md)
-* Tutoriales de Azure Spatial Anchors: [1 de 3; Introducción a Azure Spatial Anchors](mrlearning-asa-ch1.md)
+* Tutoriales de Azure Spatial Anchors: [1 de 4; Introducción a Azure Spatial Anchors](mrlearning-asa-ch1.md)
 * Tutoriales de Azure Speech Services: [1 de 4; Integración y uso del reconocimiento de voz y la transcripción](mrlearning-speechSDK-ch1.md)
 * Tutoriales de funcionalidades para varios usuarios: [1 de 5; Configuración de Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
 

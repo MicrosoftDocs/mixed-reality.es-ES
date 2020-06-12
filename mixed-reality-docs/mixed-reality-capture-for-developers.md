@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, vídeo, captura, cámara
-ms.openlocfilehash: 0d51945444a411563b67af8569fee7ffe3449957
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 1116e9a0923129aa2b18d838917eebf12adae694
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451350"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720421"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidad mixta para desarrolladores
 
@@ -97,12 +97,12 @@ Esto se hace automáticamente por Unity.
 ##### <a name="enable-the-photovideocamera-holographicviewconfiguration-in-unreal"></a>Habilitación de PhotoVideoCamera HolographicViewConfiguration en la realidad
 
 > [!NOTE]
-> Esto requiere un **motor inreal 4,25** o una versión más reciente.
+> Se requiere **Unreal Engine 4.25** o versión posterior.
 
 Para participar en la representación de la cámara PV:
 
-1. Llamar a **SetEnabledMixedRealityCamera** y **ResizeMixedRealityCamera**
-    * Use los valores de **tamaño X** Y **tamaño y** para establecer las dimensiones de vídeo.
+1. Llame a **SetEnabledMixedRealityCamera** y **ResizeMixedRealityCamera**
+    * Use los valores **Tamaño X** y **Tamaño Y** para establecer las dimensiones del vídeo.
 
 ![Tercera cámara](images/unreal-camera-3rd.PNG)
 
@@ -224,23 +224,33 @@ Efecto de vídeo de MRC (**Windows. Media. MixedRealityCapture. MixedRealityCapt
 |  Nombre de propiedad  |  Tipo  |  Valor predeterminado  |  Descripción |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (videograbación)  |  Describir en qué secuencia de captura se utiliza este efecto. Audio no disponible. |
-|  HologramCompositionEnabled  |  boolean  |  VERDADERO  |  Marca para habilitar o deshabilitar los hologramas en la captura de vídeo. |
-|  RecordingIndicatorEnabled  |  boolean  |  VERDADERO  |  Marca para habilitar o deshabilitar el indicador de grabación en pantalla durante la captura de hologramas. |
-|  VideoStabilizationEnabled  |  boolean  |  FALSO  |  Marca para habilitar o deshabilitar la estabilización de vídeo con el seguimiento de HoloLens. |
+|  HologramCompositionEnabled  |  boolean  |  TRUE  |  Marca para habilitar o deshabilitar los hologramas en la captura de vídeo. |
+|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  Marca para habilitar o deshabilitar el indicador de grabación en pantalla durante la captura de hologramas. |
+|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  Marca para habilitar o deshabilitar la estabilización de vídeo con el seguimiento de HoloLens. |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Establezca el número de fotogramas históricos que se usan para la estabilización de vídeo. 0 es 0-latencia y casi "gratis" desde una perspectiva de eficacia y rendimiento. 15 se recomienda para obtener una mayor calidad (a costa de 15 fotogramas de latencia y memoria). |
 |  GlobalOpacityCoefficient  |  FLOAT  |  0,9 (HoloLens) 1,0 (auricular envolvente)  |  Establezca el coeficiente de opacidad global del holograma en el intervalo de 0,0 (totalmente transparente) a 1,0 (totalmente opaco). |
-|  BlankOnProtectedContent  |  boolean  |  FALSO  |  Marca para habilitar o deshabilitar la devolución de un marco vacío si hay una aplicación de UWP 2D que muestra contenido protegido. Si esta marca es falsa y una aplicación de UWP en 2D muestra contenido protegido, la aplicación de UWP de 2D se reemplazará por una textura de contenido protegido tanto en el casco como en la captura de realidad mixta. |
-|  ShowHiddenMesh  |  boolean  |  FALSO  |  Marca para habilitar o deshabilitar que muestra la malla de área oculta y el contenido adyacente de la cámara holográfica. |
+|  BlankOnProtectedContent  |  boolean  |  FALSE  |  Marca para habilitar o deshabilitar la devolución de un marco vacío si hay una aplicación de UWP 2D que muestra contenido protegido. Si esta marca es falsa y una aplicación de UWP en 2D muestra contenido protegido, la aplicación de UWP de 2D se reemplazará por una textura de contenido protegido tanto en el casco como en la captura de realidad mixta. |
+|  ShowHiddenMesh  |  boolean  |  FALSE  |  Marca para habilitar o deshabilitar que muestra la malla de área oculta y el contenido adyacente de la cámara holográfica. |
 | Outlocate | Size | 0, 0 | Establezca el tamaño de salida deseado después de recortar para la estabilización de vídeo. Se elige un tamaño de recorte predeterminado si es 0 o se especifica un tamaño de salida no válido. |
-| PreferredHologramPerspective | UINT32 | 0 (Mostrar) | Enumeración usada para indicar qué configuración de la vista de cámara holográfica debe capturarse: 0 (Mostrar) significa que no se le pedirá a la aplicación que se represente desde la cámara de foto/vídeo, 1 (PhotoVideoCamera) solicitará a la aplicación que se represente desde la cámara de foto/vídeo (si la aplicación lo admite) |
+| PreferredHologramPerspective | UINT32 | **Representación de** la configuración de la cámara en el portal de dispositivos de Windows | Enumeración usada para indicar qué configuración de la vista de cámara holográfica debe capturarse: 0 (Mostrar) significa que no se le pedirá a la aplicación que se represente desde la cámara de foto/vídeo, 1 (PhotoVideoCamera) solicitará a la aplicación que se represente desde la cámara de foto/vídeo (si la aplicación lo admite). Solo se admite en HoloLens 2 |
+
+>[!NOTE]
+> Puede cambiar el valor predeterminado de **PreferredHologramPerspective** en el portal de dispositivos de Windows. para ello, vaya a la [Página de captura de realidad mixta](using-the-windows-device-portal.md#mixed-reality-capture) y desactive la opción **representar de la cámara**. El valor predeterminado es **1 (PhotoVideoCamera)**, pero se puede desactivar para establecerlo en **0 (Mostrar)**.
+>
+> El valor predeterminado de **PreferredHologramPerspective** era **0 (Mostrar)** antes de la actualización del 2020 de junio (windows Holographic, versión 2004 compilación 19041,1106 y windows Holographic, versión 1903 compilación 18362,1064).
 
 Efecto de audio de MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
 | Nombre de propiedad | Tipo | Valor predeterminado | Descripción |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (MIC y audio del sistema) | Enumeración que se usa para indicar qué orígenes de audio se deben usar: 0 (solo audio de MIC), 1 (solo audio del sistema), 2 (MIC y audio del sistema) |
-| LoopbackGain | FLOAT | 1.0 | Obtener para aplicar al volumen de audio del sistema. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
-| MicrophoneGain | FLOAT | 1.0 | Obtener para aplicar al volumen de MIC. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
+| LoopbackGain | FLOAT | Configuración de **ganancia de audio de aplicación** en el portal de dispositivos de Windows | Obtener para aplicar al volumen de audio del sistema. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
+| MicrophoneGain | FLOAT | Configuración de **ganancia de audio de MIC** en el portal de dispositivos de Windows | Obtener para aplicar al volumen de MIC. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
+
+>[!NOTE]
+> Puede cambiar el valor predeterminado de **LoopbackGain** o **MicrophoneGain** en el portal de dispositivos de Windows. para ello, vaya a la página de [captura de realidad mixta](using-the-windows-device-portal.md#mixed-reality-capture) y ajuste el control deslizante junto a su configuración correspondiente. Ambos valores tienen como valor predeterminado **1,0**, pero se pueden establecer en cualquier valor entre **0,0** y **5,0**.
+>
+> Se ha agregado el uso del portal de dispositivos de Windows para configurar los valores de ganancia predeterminados con la actualización de junio de 2020 (Windows Holographic, versión 2004 compilación 19041,1106 y Windows Holographic, versión 1903 compilación 18362,1064).
 
 ### <a name="simultaneous-mrc-limitations"></a>Limitaciones de MRC simultáneas
 
@@ -276,7 +286,7 @@ Con la actualización 2018 de abril de Windows 10, ya no hay una limitación en 
 
 Antes de la actualización del 2018 de abril de Windows 10, la grabadora personalizada de MRC de una aplicación se excluyeba mutuamente con el sistema de MRC (captura de fotografías, captura de vídeos o streaming desde el portal de dispositivos de Windows).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Captura de realidad mixta](mixed-reality-capture.md)
 * [Vista del espectador](spectator-view.md)

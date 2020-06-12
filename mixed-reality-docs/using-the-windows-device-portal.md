@@ -1,18 +1,18 @@
 ---
 title: Uso de Portal de dispositivos Windows
 description: Portal de dispositivos Windows para HoloLens te permite configurar y administrar de forma remota el dispositivo mediante Wi-Fi o USB. Device Portal es un servidor web en el dispositivo HoloLens al que puedes conectarte desde un navegador web del equipo. Portal de dispositivos incluye muchas herramientas que te ayudarán a administrar tu HoloLens, así como a depurar y optimizar tus aplicaciones.
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 9cd9b33fed12802e5b41afa3fee850356911a989
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
+ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81278033"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84451369"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso de Portal de dispositivos Windows
 
@@ -152,17 +152,44 @@ Usa la página Vista 3D para ver cómo HoloLens interpreta el entorno. Navega po
 *Página Captura de realidad mixta de Portal de dispositivos Windows en Microsoft HoloLens*
 
 Usa la página Mixed Reality Capture (Captura de realidad mixta) para guardar flujos multimedia desde HoloLens.
-* **Configuración**: controla las secuencias multimedia que se capturan comprobando la siguiente configuración:
+* **Configuración de captura**: controla las secuencias multimedia que se capturan comprobando la siguiente configuración:
   * **Hologramas**: captura el contenido holográfico en la secuencia de vídeo. Los hologramas se representan en mono y no estéreo.
   * **PV camera** (Cámara de vídeo o fotos): captura la secuencia de vídeo de la cámara de vídeo o fotos.
   * **Mic Audio** (Audio de micrófono): captura el audio de la matriz del micrófono.
   * **App Audio** (Audio de la aplicación): captura el audio de la aplicación que está en ejecución actualmente.
   * **Render from Camera** (Representar desde la cámara): alinea la captura para que provenga de la perspectiva de la cámara de vídeo o fotos, en caso de que [la aplicación en ejecución la admita](mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in) (solo HoloLens 2).
   * **Live preview quality** (Calidad de vista previa dinámica): selecciona la resolución de pantalla, la velocidad de fotogramas y la velocidad de streaming de la vista previa dinámica.
+* **Configuración de audio** (solo HoloLens 2):
+  * **Audio Media Category** (Categoría de medio de audio): seleccione la categoría que se usa al procesar el micrófono. **Predeterminada**: incluye parte del entorno, mientras que **Comunicaciones** aplica la cancelación del ruido de fondo.
+  * **App Audio Gain** (Ganancia de audio de aplicación): la ganancia aplicada al volumen de audio de la aplicación.
+  * **Mic Audio Gain** (Ganancia de audio de micrófono): la ganancia aplicada al volumen de audio del micrófono.
+* **Photo and Video Settings** (Configuración de foto y vídeo) (HoloLens 2, versión 2004 o posterior):
+  * **Capture Profile** (Perfil de captura): seleccione el perfil usado al tomar fotos y grabar vídeos. El perfil determina qué resoluciones y velocidades de fotogramas están disponibles.
+  * **Resolución de foto**: la resolución con la que se tomará la foto.
+  * **Video Resolution and Frame-rate** (Resolución de vídeo y velocidad de fotogramas): la resolución y la velocidad de fotogramas con las que se grabará el vídeo.
+  * **Video Stabilization Buffer** (Búfer de estabilización de vídeo): tamaño de búfer usado al grabar un vídeo. Cuanto mayor sea el valor, mejor puede compensar los movimientos rápidos.
 * Haz clic o pulsa en el botón **Vista previa dinámica** para mostrar el flujo de captura. **Stop live preview** (Detener la vista previa dinámica) detiene la secuencia de captura.
 * Haz clic o pulsa en **Grabar** para comenzar a grabar la secuencia de realidad mixta, con la configuración especificada. **Detener grabación** finaliza la grabación y la guarda.
 * Haz clic o pulsa en **Hacer una foto** para tomar una imagen estática de la secuencia de captura.
+* Haga clic o pulse en **Restaurar configuración predeterminada** para restaurar la configuración predeterminada para las opciones de audio, foto y vídeo.
 * **Vídeos y fotos**: muestra una lista de las capturas de vídeo y fotos tomadas en el dispositivo.
+
+Todas las opciones de esta página se aplican a las capturas tomadas mediante el Portal de dispositivos Windows, pero algunas se aplican también a MRC del sistema (menú Inicio, botones de hardware, comandos de voz globales, Miracast) y a las grabadoras de MRC personalizadas.
+|  Valor  |  Se aplica a MRC del sistema  |  Se aplica a grabadoras de MRC personalizadas |
+|----------|----------|----------|
+|  Hologramas  |  No  |  No |
+|  Cámara de foto y vídeo  |  No  |  No |
+|  Mic Audio (Audio de micrófono)  |  No  |  No |
+|  App Audio (Audio de la aplicación)  |  No  |  No |
+|  Render from Camera (Representar desde la cámara)  |  Sí    |  Sí (se puede invalidar) |
+|  Live preview quality (Calidad de vista previa dinámica)  |  No  |  No |
+|  Audio Media Category (Categoría de medio de audio)  |  Sí  |  No |
+|  App Audio Gain (Ganancia de audio de aplicación)  |  Sí  |  Sí (se puede invalidar) |
+|  Mic Audio Gain (Ganancia de audio de micrófono)  |  Sí  |  Sí (se puede invalidar) |
+|  Capture Profile (Perfil de captura)  |  Sí  |  No |
+|  Resolución de foto  |  Sí  |  No |
+|  Video Resolution and Frame-rate (Resolución de vídeo y velocidad de fotogramas)  |  Sí  |  No |
+|  Video Stabilization Buffer (Búfer de estabilización de vídeo)  |  Sí  |  Sí (se puede invalidar) |
 
 > [!NOTE]
 > Hay [limitaciones de MRC simultáneas](mixed-reality-capture-for-developers.md#simultaneous-mrc-limitations):
