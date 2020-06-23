@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 01/15/2020
 ms.topic: article
 keywords: Edge, nuevo, Web envolvente, Microsoft Edge, explorador, VR
-ms.openlocfilehash: 2576762786c9234377308f226036c830e01d9133
-ms.sourcegitcommit: d73d9012941fa1b13eb7d2f45ccc481d6365827a
+ms.openlocfilehash: d61780045e795850012536a36fde67b9934c76aa
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885623"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216236"
 ---
 # <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality y el nuevo Microsoft Edge
 
@@ -30,7 +30,7 @@ El nuevo Microsoft Edge [adopta el proyecto de código abierto de cromo](https:/
 
 Los auriculares Windows Mixed Reality VR con auriculares que desean usar el nuevo Microsoft Edge en la Página principal de la realidad mixta deben **actualizarse a la versión 1903 o posterior de Windows 10 para ofrecer compatibilidad nativa con aplicaciones Win32 (como el nuevo Microsoft Edge)** en la Página principal de la realidad mixta. Active Windows Update o [Instale manualmente la versión más reciente de Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 
-Para obtener la mejor experiencia posible de Microsoft Edge en la Página principal de la realidad mixta, también se recomienda esperar **algunas optimizaciones clave de Windows Mixed Reality para que la nueva Microsoft Edge llegue a la actualización acumulativa 2020-01 para Windows 10, versión 1903 (o posterior)** , que debe estar disponible en Windows Update a finales de enero.
+Para obtener la mejor experiencia posible de Microsoft Edge en la Página principal de la realidad mixta, también se recomienda esperar **algunas optimizaciones clave de Windows Mixed Reality para que la nueva Microsoft Edge llegue a la actualización acumulativa 2020-01 para Windows 10, versión 1903 (o posterior)**, que debe estar disponible en Windows Update a finales de enero.
 
 >[!IMPORTANT]
 >Si opta por descargar el nuevo Microsoft Edge antes de realizar estas actualizaciones, habrá algunos problemas conocidos con su comportamiento en Windows Mixed Reality (que puede leer a continuación).
@@ -46,12 +46,13 @@ Para obtener la mejor experiencia posible de Microsoft Edge en la Página princi
 - La aplicación WebVR Showcase está presente en la Página principal de la realidad mixta, a pesar de que WebVR ya no se admite.
 - Mejoras generales en el inicio del teclado y los objetos visuales.
 
-### <a name="additional-known-issues"></a>Problemas conocidos adicionales
+### <a name="additional-known-issues"></a>Otros problemas conocidos
 
 -   Los sitios web abiertos en Windows Mixed Reality se perderán cuando se cierre el portal de realidad mixta, aunque las ventanas de Microsoft Edge permanecerán donde se colocaron en la Página principal de la realidad mixta.
+- Las experiencias de WebXR, incluida la extensión del visor 360, no se pueden iniciar correctamente en equipos con una configuración de GPU híbrida. Es posible que pueda solucionar este problema seleccionando la GPU dedicada como GPU predeterminada en el software de tarjeta gráfica.
 -   El audio de las ventanas de Microsoft Edge no está espacial.
--   Se **corrigió en la versión de extensión de 360 Viewer 2.3.8**: abrir un vídeo de 360 desde YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. El reinicio de Microsoft Edge debe actualizar de manera invisible la extensión del visor de 360 para resolver este problema. Puede confirmar qué versión de la extensión tiene escribiendo `edge://system/` en la barra de direcciones y seleccionando el botón de **expansión** junto a "extensiones".
--   Durante las sesiones de realidad mixta de Windows, los monitores virtuales aparecerán como monitores físicos genéricos en Configuración > pantalla de > del sistema.
+-   Se **corrigió en la versión de extensión de 360 Viewer 2.3.8**: abrir un vídeo de 360 desde YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. El reinicio de Edge debe actualizar de manera invisible la extensión del visor de 360 para resolver este problema. Puede confirmar qué versión de la extensión tiene escribiendo `edge://system/` en la barra de direcciones y seleccionando el botón de **expansión** junto a "extensiones".
+-   Durante las sesiones de realidad mixta de Windows, los monitores virtuales aparecerán como monitores físicos genéricos en configuración > pantalla de > del sistema.
 
 
 

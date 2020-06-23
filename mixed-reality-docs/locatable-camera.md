@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: cámara, hololens, cámara de color, frontal cara, hololens 2, CV, Computer Vision, fiducial, Marks, código QR, QR, Foto, vídeo
-ms.openlocfilehash: b8e9d926db09d277b3fde7572dd68257599c8d5e
-ms.sourcegitcommit: 09d9fa153cd9072f60e33a5f83ced8167496fcd7
+ms.openlocfilehash: e158eb2e708164cbd68620f3f46d3039c2eaa730
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83520020"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216226"
 ---
 # <a name="locatable-camera"></a>Cámara localizable
 
@@ -33,7 +33,7 @@ HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo
   |  1344x756 |  1344x756 |  1344x756 |  67deg |  Modo de vídeo de hiperjuego grande con sobrebarrido | 
   |  896x504 |  896x504 |  896x504 |  48deg |  Modo de baja energía/baja resolución para las tareas de procesamiento de imágenes | 
 
-### <a name="hololens-2"></a>HoloLens 2
+### <a name="hololens-2"></a>HoloLens 2
 
 * Centrar automáticamente la cámara de foto/vídeo (PV) con el equilibrio de blancos automático, la exposición automática y la canalización de procesamiento de imágenes completas.
 * El LED de privacidad en blanco orientado al mundo se iluminará cada vez que la cámara esté activa.
@@ -115,10 +115,10 @@ public:
         MFPinholeCameraIntrinsics cameraIntrinsics;
         UINT32 sizeCameraExtrinsics = 0;
         UINT32 sizeCameraIntrinsics = 0;
-        UINT64 sampleTimeQpc = 0;
+        UINT64 sampleTimeHns = 0;
  
         // query sample for calibration and validate
-        if (FAILED(pSample->GetUINT64(MFSampleExtension_DeviceTimestamp, &sampleTimeQpc)) ||
+        if (FAILED(pSample->GetUINT64(MFSampleExtension_DeviceTimestamp, &sampleTimeHns)) ||
             FAILED(pSample->GetBlob(MFSampleExtension_CameraExtrinsics, (UINT8*)& cameraExtrinsics, sizeof(cameraExtrinsics), &sizeCameraExtrinsics)) ||
             FAILED(pSample->GetBlob(MFSampleExtension_PinholeCameraIntrinsics, (UINT8*)& cameraIntrinsics, sizeof(cameraIntrinsics), &sizeCameraIntrinsics)) ||
             (sizeCameraExtrinsics != sizeof(cameraExtrinsics)) ||
@@ -149,7 +149,7 @@ public:
         }
  
         // locate dynamic node
-        auto timestamp = PerceptionTimestampHelper::FromSystemRelativeTargetTime(TimeSpanFrodmQpcTicks(sampleTimeQpc));
+        auto timestamp = PerceptionTimestampHelper::FromSystemRelativeTargetTime(TimeSpan{ sampleTimeHns });
         auto coordinateSystem = m_frameOfReference.GetStationaryCoordinateSystemAtTimestamp(timestamp);
         auto location = m_locator.TryLocateAtTimestamp(timestamp, coordinateSystem);
         if (!location)
@@ -161,31 +161,11 @@ public:
  
         return CameraFrameLocation{ coordinateSystem, cameraToDynamicNode * dynamicNodeToCoordinateSystem, cameraIntrinsics };
     }
- 
+
 private:
     GUID m_currentDynamicNodeId{ GUID_NULL };
     SpatialLocator m_locator{ nullptr };
     SpatialLocatorAttachedFrameOfReference m_frameOfReference{ nullptr };
- 
-    // Convert a duration value from a source tick frequency to a destination tick frequency.
-    static inline int64_t SourceDurationTicksToDestDurationTicks(int64_t sourceDurationInTicks, int64_t sourceTicksPerSecond, int64_t destTicksPerSecond)
-    {
-        int64_t whole = (sourceDurationInTicks / sourceTicksPerSecond) * destTicksPerSecond;                          // 'whole' is rounded down in the target time units.
-        int64_t part = (sourceDurationInTicks % sourceTicksPerSecond) * destTicksPerSecond / sourceTicksPerSecond;    // 'part' is the remainder in the target time units.
-        return whole + part;
-    }
- 
-    static inline TimeSpan TimeSpanFromQpcTicks(int64_t qpcTicks)
-    {
-        static const int64_t qpcFrequency = []
-        {
-            LARGE_INTEGER frequency;
-            QueryPerformanceFrequency(&frequency);
-            return frequency.QuadPart;
-        }();
- 
-        return TimeSpan{ SourceDurationTicksToDestDurationTicks(qpcTicks, qpcFrequency, winrt::clock::period::den) / winrt::clock::period::num };
-    }
 };
 ```
 
@@ -274,7 +254,7 @@ Ejemplos:
 * Identificar y reconocer objetos en el salón
 * Identifique y reconozca a personas de la habitación (por ejemplo, coloque las tarjetas de contacto holográfica en caras)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Ejemplo de cámara localizable](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Cámara localizable en Unity](locatable-camera-in-unity.md)
 * [Captura de realidad mixta](mixed-reality-capture.md)
