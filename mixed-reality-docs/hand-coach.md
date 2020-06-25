@@ -6,20 +6,17 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, autocar de mano, auriculares envolvente, MRTK, manos, ayudando a manos
-ms.openlocfilehash: c5f0a0c241ff71dc93f370a5a8caa627128bfb1a
-ms.sourcegitcommit: 1ec628a9107194c0a9d4073b5ca09ee816030e85
+ms.openlocfilehash: 38da046256dce3242b464a0741f2afa7fb19ff3c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2020
-ms.locfileid: "78202745"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345674"
 ---
 # <a name="hand-coach"></a>Autocar manual
+![Ejemplo: autocar manual](images/HandCoach/MRTK_handCoach.jpg)<br>
 
 El autocar de mano es una práctica con modelo 3D que se desencadena cuando el sistema no detecta las manos del usuario. Esto se implementa como un componente de "enseñanza" que ayuda a guiar al usuario cuando no se ha impartido el gesto. Si los usuarios no han realizado el gesto especificado durante un período, las manos se repetirán con un retraso. El autocar manual se puede usar para representar presionar un botón o recoger un holograma.  
-
-
-![ejemplo: el autocar manual](images/HandCoach/MRTK_handCoach.jpg)<br>
-*Ejemplo de HandCoach de MRTK*
 
 ## <a name="hand-coach-provided"></a>Autocar proporcionado
 
@@ -27,38 +24,38 @@ El modelo de interacción actual representa una gran variedad de controles de ge
 
 :::row:::
     :::column:::
-       ![ejemplo de Near Select](images/HandCoach/NearSelect.gif)<br>
+       ![Ejemplo de Near Select](images/HandCoach/NearSelect.gif)<br>
        **Ejemplo de Near Selected muestra cómo seleccionar botones o cerrar objetos interactivos**<br>
     :::column-end:::
     :::column:::
-       ![ejemplo de](images/HandCoach/AirTap.gif) de TAP de Air<br>
+       ![Ejemplo de TAP de Air](images/HandCoach/AirTap.gif)<br>
         **Ejemplo de TAP de Air: se usa para mostrar cómo seleccionar objetos que están lejos**<br>
     :::column-end:::
     :::column:::
-       ![ejemplo de movimiento](images/HandCoach/Move.gif)<br>
+       ![Ejemplo de movimiento](images/HandCoach/Move.gif)<br>
        **Ejemplo de movimiento de un objeto en el espacio: se usa para mostrar cómo mover un holograma en el espacio**<br>
     :::column-end:::
     :::column:::
-       ![ejemplo de giro](images/HandCoach/Rotate.gif)<br>
+       ![Ejemplo de giro](images/HandCoach/Rotate.gif)<br>
        **Ejemplo de Rotate: se usa para mostrar cómo se giran los hologramas u objetos**<br>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       ![ejemplo de escala](images/HandCoach/Scale.gif)<br>
+       ![Ejemplo de escala](images/HandCoach/Scale.gif)<br>
        **Ejemplo de escalado: se usa para mostrar cómo manipular los hologramas para ser más grandes o más pequeños**<br>
     :::column-end:::
     :::column:::
-       ![ejemplo de Palm up](images/HandCoach/PalmUp.gif)<br>
+       ![Ejemplo de Palm up](images/HandCoach/PalmUp.gif)<br>
         **Ejemplo de Palm up: uso sugerido, para abrir menús**<br>
     :::column-end:::
     :::column:::
-       ![ejemplo de HandFlip](images/HandCoach/HandFlip.gif)<br>
+       ![Ejemplo de HandFlip](images/HandCoach/HandFlip.gif)<br>
        **La forma de voltear la mano: otra manera de abrir los menús de la mano**<br>
     :::column-end:::
     :::column:::
-       ![ejemplo de desplazamiento](images/HandCoach/Scoll.gif)<br>
+       ![Ejemplo de desplazamiento](images/HandCoach/Scoll.gif)<br>
        **Ejemplo de scroll: se usa para desplazarse por una lista o un documento largo**<br>
     :::column-end:::
 :::row-end:::
@@ -73,7 +70,7 @@ Al animar las manos, debe ser obvio y shoudn't causar cualquier confusión. La a
 
 Por ejemplo, si desea que un usuario presione un botón, se desencadenaría una mano al presionar un botón.
 
-![ejemplo: el autocar de mano cerca de TAP](images/HandCoach/NearSelect_unity.gif)<br>
+![Ejemplo: autocar de mano cerca de TAP](images/HandCoach/NearSelect_unity.gif)<br>
 *Manos del coche que muestra cómo pulsar cerca de una gema*  
 
 ### <a name="hand-scale"></a>Escala de mano
@@ -88,19 +85,19 @@ No se espera que los usuarios puedan escuchar un conjunto de instrucciones a tra
 ## <a name="can-i-create-my-own"></a>¿Puedo crear mis propios?
 
 Sí. Le recomendamos que cree su propio gesto único para su juego y contribuya de nuevo a la comunidad.
-Hemos proporcionado un archivo Maya de una mano RIGGED que se puede usar para la aplicación que se puede descargar aquí: <a href="files/HandCoach_MRTK.zip">descargar HandCoach_MRTK. zip</a>
+Hemos proporcionado un archivo Maya de una mano RIGGED que se puede usar para la aplicación que se puede descargar aquí: <a href="files/HandCoach_MRTK.zip">descargar HandCoach_MRTK.zip</a>
 
-![ejemplo de manos animadas en Maya](images/HandCoach/MayaSelect_Gif.gif)<br>
+![Ejemplo de manos animadas en Maya](images/HandCoach/MayaSelect_Gif.gif)<br>
 *Ejemplo de Poking de mano animada un cuadro en Maya*
 
 
 **Herramienta de creación recomendada**
 
-Entre los artistas 3D, muchos optan por usar [Maya de Autodesk, que es capaz de usar HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) para transformar el modo en que se crean los recursos. El archivo de manos proporcionado es un archivo binario Maya, por lo que se recomienda usar Maya para animar y exportar las manos. Si prefiere usar otro programa 3D, aquí se muestra un <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip">Descargue HandCoachMRTK_FBX. zip</a> para crear su propia configuración del controlador. 
+Entre los artistas 3D, muchos optan por usar [Maya de Autodesk, que es capaz de usar HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) para transformar el modo en que se crean los recursos. El archivo de manos proporcionado es un archivo binario Maya, por lo que se recomienda usar Maya para animar y exportar las manos. Si prefiere usar otro programa 3D, aquí se muestra un <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip">Descargue HandCoachMRTK_FBX.zip</a> para crear su propia configuración del controlador. 
 
 Si se usa el archivo de la mano que se va a descargar, se recomienda reducir el tamaño de las manos en Unity a 0,6.
 
-![ejemplo: plataforma de autocar manual en Maya](images/HandCoach/MayaExample.png)<br>
+![Ejemplo: plataforma de autocar manual en Maya](images/HandCoach/MayaExample.png)<br>
 *Manos de RIGGED*
 
 ### <a name="technical-specs"></a>Especificaciones técnicas
@@ -116,7 +113,7 @@ Si se usa el archivo de la mano que se va a descargar, se recomienda reducir el 
 *   Cuando se sienta satisfecho con la animación:
     *   Seleccionar todas las uniones y los fotogramas clave de la hornea
     *   Elimine los controladores, seleccione Unions and Mesh y Export como FBX
-    *  Si hay varias animaciones, puede usar el exportador de juegos integrado de Maya: https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
+    *  Si hay varias animaciones, puede usar el exportador de juegos integrado de Maya:https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Game-Exporter-htm.html
 
 ## <a name="exporting-from-maya"></a>Exportar desde Maya
 
@@ -131,7 +128,7 @@ Una vez que esté satisfecho con la animación
 
      ![Ejemplo: Ubicación del menú](images/HandCoach/ControllerRig.png)<br>
 
-* Exportar como FBX: seleccione JNT + Mesh: File > Exportar selección (cuadro de opción) > Selección de exportación
+* Exportar como FBX: seleccione JNT + Mesh: file > exportar selección (cuadro de opción) > selección de exportación
 
      ![Ejemplo: Ubicación del menú](images/HandCoach/OptionBox.png)<br>
 
@@ -142,7 +139,7 @@ Una vez que esté satisfecho con la animación
 
  Al exportar como FBX y incorporarse a Unity, escale las manos hacia abajo hasta 0,6. Encontramos que este era el equilibrio perfecto para mostrar las manos. 
 
-![ejemplo: configuración de Unity](images/HandCoach/HandHintScale.png)<br>
+![Ejemplo: configuración de Unity](images/HandCoach/HandHintScale.png)<br>
 *Se encontró la configuración de Unity para HandCoach_R recurso prefabricado en MRTK*
 
 
@@ -170,7 +167,7 @@ Una vez que esté satisfecho con la animación
 * Escalar las manos demasiado grandes
 * colocar las manos demasiado cerca del usuario
 * Las manos solo deben impartirse una vez. La enseñanza en exceso puede causar confusión y desenredado
-*   En Unity, descargue la versión más reciente de MRTK aquí: https://github.com/microsoft/MixedRealityToolkit-Unity
+*   En Unity, descargue la versión más reciente de MRTK aquí:https://github.com/microsoft/MixedRealityToolkit-Unity
     *   Material: Teaching_Hand2
     *   Scripts: Consulte las instrucciones de MRTK para el <a href= "https://github.com/MixedRealityToolkit-Unity/blob/'HandCoachUX'/Documentation/README_HandCoach.md">autocar de MRTK</a>
     *   Configuración por proyecto

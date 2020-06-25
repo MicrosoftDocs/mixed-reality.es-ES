@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 2f958d45f72d6c39d4222840615c5b177db7c76f
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: eb2c6d88ce5a5ba637976a7d67abfdc2763c1674
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83228020"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345685"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
 
@@ -47,7 +47,7 @@ En el lado izquierdo hay un diagrama del tiempo de ejecución de realidad mixta 
 
 Dado que cada escena almacena sus datos en el espacio de memoria de la aplicación, puede suponer que todas las funciones del objeto de escena o de sus datos internos siempre se ejecutan en el proceso de la aplicación.
 
-### <a name="layout"></a>Diseño
+### <a name="layout"></a>Layout
 
 Para trabajar con la comprensión de la escena, puede ser útil conocer y entender cómo representa los componentes el tiempo de ejecución de forma lógica y física. La escena representa los datos con un diseño específico que se eligió para ser sencillo al tiempo que se mantiene una estructura subyacente que se pliable para satisfacer los requisitos futuros sin necesidad de revisiones importantes. Para ello, la escena almacena todos los componentes (bloques de creación de todos los objetos de escena) en una lista plana y define la jerarquía y la composición a través de referencias en las que determinados componentes hacen referencia a otros.
 
@@ -119,7 +119,7 @@ SceneObjects puede tener cualquiera de las siguientes opciones:
 <tr>
 <th>SceneObjectKind</th> <th>Descripción</th>
 </tr>
-<tr><td>Segundo plano</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
+<tr><td>Fondo</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
 <tr><td>Reloj</td><td>Una pared física. Se supone que las paredes son estructuras de entorno inmóviles.</td></tr>
 <tr><td>Floor</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no están en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
 <tr><td>Ceiling</td><td>La superficie superior de una habitación.</td></tr>
@@ -199,7 +199,7 @@ byte[] newSceneData = new byte[newSceneBuffer.Size];
 newSceneBuffer.GetData(newSceneData);
 Scene mySceneDeSerialized = Scene.Deserialize(newSceneData);
 
-// Save newSceneBlob for later
+// Save newSceneData for later
 ```
 
 ### <a name="sceneobject-enumeration"></a>Enumeración SceneObject
@@ -380,7 +380,7 @@ Si no tiene un dispositivo HoloLens2 pero desea jugar con la comprensión de la 
 
 [Escenas de ejemplo de la escena](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples/tree/master/Assets/Resources/SerializedScenesForPCPath)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 * [Asignación espacial](spatial-mapping.md)
 * [Descripción de escenas](scene-understanding.md)

@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada
-ms.openlocfilehash: a5411c338a854660652cfc89aa2d48d85ee89778
-ms.sourcegitcommit: e65f1463aec3c040a1cd042e61fc2bd156a42ff8
+ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83866925"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345705"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -57,7 +57,7 @@ Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer
 
 ## <a name="the-select-command"></a>Comando "seleccionar"
 
-**HoloLens (1.ª generación)**
+**HoloLens (1ª generación)**
 
 Incluso sin agregar específicamente compatibilidad con voz a su aplicación, los usuarios pueden activar los hologramas simplemente diciendo el comando de voz del sistema "Select". Esto se comporta igual que una [pulsación aérea](gaze-and-commit.md#composite-gestures) en HoloLens, presionando el botón seleccionar en el [clic de hololens](https://docs.microsoft.com/hololens/hololens1-clicker)o presionando el desencadenador en un controlador de [movimiento de Windows Mixed Reality](motion-controllers.md). Oirá un sonido y verá que aparece una información sobre herramientas con "seleccionar" como confirmación. "Select" está habilitado por un algoritmo de detección de palabras clave de baja energía, por lo que siempre está disponible para que lo indique en cualquier momento con un impacto mínimo en la duración de la batería, incluso con sus manos en el lateral.
 
@@ -67,7 +67,7 @@ Incluso sin agregar específicamente compatibilidad con voz a su aplicación, lo
 
 :::row:::
     :::column:::
-        **HoloLens 2**<br><br>
+        **HoloLens 2**<br><br>
         Para usar el comando "seleccionar" de voz en HoloLens 2, primero debe abrir el cursor de miración para usarlo como puntero. El comando para ponerlo al día es fácil de recordar (simplemente, por ejemplo, "Select").<br><br>
         Para salir del modo, simplemente vuelva a usar las manos, ya sea mediante el toque de aire, cerca de un botón con los dedos o usando el gesto del sistema.<br>
         <br>
@@ -169,7 +169,7 @@ Algunos comandos, como los comandos para la manipulación rápida anterior, se p
 Si desea una lista completa, simplemente indique "Mostrar todos los comandos" en cualquier momento. 
 
 
-## <a name="dictation"></a>Dictation
+## <a name="dictation"></a>Dictado
 
 En lugar de escribir con [grifos de aire](gaze-and-commit.md#composite-gestures), el dictado de voz puede ser más eficaz para escribir texto en una aplicación. Esto puede acelerar en gran medida la entrada con menos esfuerzo para el usuario.
 
@@ -282,9 +282,9 @@ En el caso de las aplicaciones que desean aprovechar las opciones de procesamien
 
 Todo este procesamiento de audio se acelera en hardware, lo que significa que las características agotan una gran cantidad de energía que si se realizara el mismo procesamiento en la CPU de HoloLens. Evite ejecutar otro procesamiento de entrada de audio en la CPU para maximizar la duración de la batería del sistema y aprovechar el procesamiento de entrada de audio descargado integrado.
 
-## <a name="languages"></a>Lenguajes
+## <a name="languages"></a>Idiomas
 
-HoloLens 2 también admite idiomas adicionales. Tenga en cuenta que los comandos de voz siempre se ejecutarán en el idioma para mostrar del sistema aunque se instalen varios teclados o cuando las aplicaciones intenten crear un reconocedor de voz en otro idioma.
+HoloLens 2 [es compatible con varios idiomas](https://docs.microsoft.com/hololens/hololens2-language-support). Tenga en cuenta que los comandos de voz siempre se ejecutarán en el idioma para mostrar del sistema aunque se instalen varios teclados o cuando las aplicaciones intenten crear un reconocedor de voz en otro idioma.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
@@ -304,7 +304,7 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, puede as
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [MR Input 212: voz](holograms-212.md)
