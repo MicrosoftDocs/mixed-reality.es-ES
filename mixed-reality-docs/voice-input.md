@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada
-ms.openlocfilehash: 78ff63f2f794bb2b3a4868e38ccaff0582ccca8c
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 37364e90aa1d8a7b607a99f4c9b830972f7f80b3
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345705"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441832"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -96,6 +96,8 @@ También puede decir "Hola Cortana" para abrir Cortana en cualquier momento. No 
 * "Tomar una imagen"
 * "Iniciar grabación"
 * "Detener grabación"
+* "Mostrar rayo manos"
+* "Ocultar rayo manos"
 * "Aumentar el brillo"
 * "Reducir el brillo"
 * "Aumentar el volumen"
@@ -282,7 +284,7 @@ En el caso de las aplicaciones que desean aprovechar las opciones de procesamien
 
 Todo este procesamiento de audio se acelera en hardware, lo que significa que las características agotan una gran cantidad de energía que si se realizara el mismo procesamiento en la CPU de HoloLens. Evite ejecutar otro procesamiento de entrada de audio en la CPU para maximizar la duración de la batería del sistema y aprovechar el procesamiento de entrada de audio descargado integrado.
 
-## <a name="languages"></a>Idiomas
+## <a name="languages"></a>Lenguajes
 
 HoloLens 2 [es compatible con varios idiomas](https://docs.microsoft.com/hololens/hololens2-language-support). Tenga en cuenta que los comandos de voz siempre se ejecutarán en el idioma para mostrar del sistema aunque se instalen varios teclados o cuando las aplicaciones intenten crear un reconocedor de voz en otro idioma.
 
@@ -304,7 +306,7 @@ Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, puede as
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [MR Input 212: voz](holograms-212.md)

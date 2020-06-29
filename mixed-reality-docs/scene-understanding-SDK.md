@@ -6,12 +6,12 @@ ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: eb2c6d88ce5a5ba637976a7d67abfdc2763c1674
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: 71b5509065ecf6fc700b7f448083754d330e9371
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345685"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441812"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
 
@@ -311,6 +311,9 @@ Las Quad se diseñaron para facilitar escenarios de selección de ubicación 2D 
 
 Las Quad tienen extensiones rectangulares, pero representan superficies 2D con forma arbitraria. Para habilitar la selección de ubicación en estas superficies 2D que interactúan con las utilidades de los cuatro entornos en 3D para que esta interacción sea posible. Actualmente, la comprensión de la escena proporciona dos funciones, **FindCentermostPlacement** y **GetOcclusionMask**. FindCentermostPlacement es una API de alto nivel que busca una posición en la cuádruple donde se puede colocar un objeto e intenta encontrar la mejor ubicación para el objeto, lo que garantiza que el cuadro de límite que proporcione residirá en la superficie subyacente.
 
+> [!NOTE]
+> Las coordenadas de la salida son relativas a la cuádruple en "espacio cuádruple" con la esquina superior izquierda (x = 0, y = 0), del mismo modo que lo haría con otros tipos de rectángulo de Windows. No olvide tener esto en cuenta al trabajar con los orígenes de sus propios objetos. 
+
 En el ejemplo siguiente se muestra cómo buscar la ubicación centermost colocar y delimitar un holograma a la cuádruple.
 
 ```cs
@@ -341,7 +344,12 @@ foreach (var sceneObject in myScene.SceneObjects)
 }
 ```
 
-Los pasos 1-4 son muy dependientes de la implementación o el marco de trabajo en particular, pero los temas deben ser similares. Es importante tener en cuenta que la cuádruple simplemente representa un plano 2D enlazado que está localizado en el espacio. Teniendo el motor o el marco de trabajo de saber dónde está el cuádruple y la raíz de los objetos en relación con la cuádruple, los hologramas se ubicarán correctamente con respecto al mundo real. Para obtener información más detallada, consulte nuestros ejemplos en cuatro que muestran implementaciones específicas.
+Los pasos 1-4 son muy dependientes de la implementación o el marco de trabajo en particular, pero los temas deben ser similares. Es importante tener en cuenta que la cuádruple simplemente representa un plano 2D enlazado que está localizado en el espacio. Teniendo el motor o el marco de trabajo de saber dónde está el cuádruple y la raíz de los objetos en relación con la cuádruple, los hologramas se ubicarán correctamente con respecto al mundo real. 
+
+<!-- 
+// TODO: Add sample link when released
+For more detailed information please see our samples on quads which show specific implementations.
+-->
 
 ### <a name="mesh"></a>Malla
 

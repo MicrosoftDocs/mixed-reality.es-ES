@@ -1,19 +1,19 @@
 ---
-title: Marco holográfica
+title: Marco holográfico
 description: Los usuarios ven el mundo de la realidad mixta a través del marco holográfica.
 author: cre8ivepark
 ms.author: dongpark
-ms.date: 03/21/2018
+ms.date: 06/25/2020
 ms.topic: article
 keywords: HoloLens, Windows Mixed Reality, marco holográfica, campo de vista
-ms.openlocfilehash: 2145ba3b13bbd903299ad342292dfa8f5c05c023
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 0eae511d6dcbe5b379c8368d8878df6114d805aa
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73434645"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441772"
 ---
-# <a name="holographic-frame"></a>Marco holográfica
+# <a name="holographic-frame"></a>Marco holográfico
 
 Los usuarios ven el mundo de la realidad mixta a través de una ventanilla rectangular que funciona con el casco. En el dispositivo HoloLens, esta área rectangular se denomina trama holográfica y permite a los usuarios ver contenido digital superpuesto en el mundo real que les rodea. El diseño de experiencias optimizadas para el marco holográfica crea oportunidades, mitiga los desafíos y mejora la experiencia del usuario de las aplicaciones de realidad mixta.
 
@@ -37,22 +37,7 @@ Las experiencias con muchos objetos o componentes deben considerar la posibilida
 
 Una técnica para lograrlo es proporcionar puntos persistentes (también conocidos como puntos de referencia) en la experiencia que delimita el contenido en el mundo real. Por ejemplo, un punto de referencia podría ser un objeto físico en el mundo real, como una tabla en la que aparece contenido digital, o un objeto digital, como un conjunto de pantallas digitales donde aparece el contenido con frecuencia. Los objetos también se pueden colocar en el periferia del marco holográfica para animar al usuario a buscar contenido clave, mientras que la detección de contenido más allá de la periferia puede ser asistida por [directores de atención](holographic-frame.md#attention-directors).
 
-La colocación de objetos en la periferia puede animar a los usuarios a mirar al lado y esto puede ser asistido por directores de atención, como se describe a continuación.
-
-<br>
-
----
-
-## <a name="user-comfort"></a>Comodidad del usuario
-
-En el caso de experiencias de realidad mixta con objetos grandes o muchos objetos, es fundamental tener en cuenta la cantidad de movimiento de cabeza y cuello necesaria para interactuar con el contenido. Las experiencias pueden dividirse en tres categorías en términos de movimiento principal: **horizontal** (lateral a lado), **vertical** (arriba y abajo) o **envolvente** (horizontal y vertical). Siempre que sea posible, limite la mayoría de las interacciones a las categorías horizontal o vertical, idealmente con la mayoría de las experiencias que tienen lugar en el centro del marco holográfica mientras el encabezado del usuario está en una posición neutra. Evite las interacciones que hagan que el usuario mueva su vista constantemente a una posición de encabezado no natural (por ejemplo, siempre buscando tener acceso a una interacción del menú clave).
-
-![región óptima del contenido es de 0 a 35 grados por debajo del horizonte](images/optimal-field-of-view-2.png)<br>
-*La región óptima del contenido es de 0 a 35 grados por debajo del horizonte*
-
-El movimiento horizontal del cabezal es más [cómodo](comfort.md) para interacciones frecuentes, mientras que los movimientos verticales se deben reservar para eventos poco comunes. Por ejemplo, una experiencia que implique una escala de tiempo horizontal larga debe limitar el movimiento del cabezal vertical para las interacciones (como la búsqueda en un menú).
-
-Considere la posibilidad de promover el movimiento del cuerpo completo, en lugar de simplemente el movimiento del encabezado, colocando objetos alrededor del espacio del usuario. Las experiencias con objetos móviles o de gran tamaño deben prestar especial atención al movimiento principal, sobre todo cuando requieren un movimiento frecuente a lo largo de los ejes horizontal y vertical.
+La colocación de objetos en la periferia puede animar a los usuarios a mirar al lado y esto puede ser asistido por directores de atención, como se describe a continuación. Consulte la [comodidad](comfort.md#holographic-frame-considerations) para obtener información más detallada sobre las consideraciones sobre los fotogramas holográficas.
 
 <br>
 
@@ -76,7 +61,7 @@ Como alternativa, considere la posibilidad de colocar los elementos de la interf
 
 ### <a name="gaze-and-gaze-targeting"></a>Destinar y mirar hacia abajo
 
-El marco holográfica presenta una herramienta para que el desarrollador desencadene las interacciones, así como evaluar dónde se encuentra la atención de un usuario. [Mira](gaze-and-commit.md) una de las [interacciones clave de HoloLens](interaction-fundamentals.md), en la que la mirada se puede emparejar con [gestos](gaze-and-commit.md#composite-gestures) (por ejemplo, con el toque de aire) o con la [voz](voice-input.md) (lo que permite realizar interacciones más cortas y naturales basadas en voz). Por lo tanto, esto hace que el marco holográfica sea un espacio para observar el contenido digital, así como para interactuar con él. Si la experiencia llama para interactuar con varios objetos en torno al espacio del usuario (por ejemplo, selección múltiple de objetos alrededor del espacio del usuario con el gesto de miras +), considere la posibilidad de colocar dichos objetos en la vista del usuario o limitar la cantidad de encabezado necesaria. movimiento para promover la [comodidad del usuario](comfort.md).
+El marco holográfica presenta una herramienta para que el desarrollador desencadene las interacciones, así como evaluar dónde se encuentra la atención de un usuario. [Mira](gaze-and-commit.md) una de las [interacciones clave de HoloLens](interaction-fundamentals.md), en la que la mirada se puede emparejar con [gestos](gaze-and-commit.md#composite-gestures) (por ejemplo, con el toque de aire) o con la [voz](voice-input.md) (lo que permite realizar interacciones más cortas y naturales basadas en voz). Por lo tanto, esto hace que el marco holográfica sea un espacio para observar el contenido digital, así como para interactuar con él. Si la experiencia llama para interactuar con varios objetos en torno al espacio del usuario (por ejemplo, selección múltiple de objetos alrededor del espacio del usuario con el gesto de miras +), considere la posibilidad de colocar dichos objetos en la vista del usuario o limitar la cantidad de movimiento de cabezales necesario para promover la [comodidad del usuario](comfort.md).
 
 Fijamente también puede usarse para realizar un seguimiento de la atención del usuario a través de una experiencia y ver los objetos o partes de la escena a los que el usuario pagó más la atención. Esto puede usarse especialmente para depurar una experiencia, lo que permite herramientas analíticas como mapas térmicos para ver dónde los usuarios están gastando más tiempo o faltan determinados objetos o interacción. El seguimiento de la mirada también puede proporcionar una herramienta eficaz para facilitar la experiencia (vea el ejemplo de [cocina de Lowe](holographic-frame.md#lowes-kitchen) ).
 
@@ -114,7 +99,7 @@ Una experiencia del almacén de Lowe invita a los clientes a un boceto a gran es
 
 Las superficies físicas actúan como puntos de referencia estáticos para el usuario en la experiencia, ya que la Asociación de un Lowe guía al usuario a través de diferentes opciones de producto y finaliza. De esta manera, el asociado puede dirigir verbalmente la atención del usuario al "frigorífico" o "centro de la cocina" para presentar el contenido digital.
 
-![una asociación de Lowe usa una tableta para guiar a los clientes a través de la experiencia de HoloLens.](images/loweskitchen-750px.jpg)<br>
+![Una asociación de Lowe usa una tableta para guiar a los clientes a través de la experiencia de HoloLens.](images/loweskitchen-750px.jpg)<br>
 *Una asociación de Lowe usa una tableta para guiar a los clientes a través de la experiencia de HoloLens.*
 
 La experiencia del usuario se administra, en parte, mediante una experiencia de tableta controlada por el asociado de Lowe. En este caso, parte del rol del asociado también sería limitar el movimiento excesivo del cabezal y dirigir su atención sin problemas a través de los puntos de interés de la cocina. La experiencia de Tablet PC también proporciona la Asociación del Lowe con los datos de fijamente en forma de una vista mapa térmico de la cocina, lo que ayuda a comprender dónde está el usuario (por ejemplo, en un área concreta de armario) para proporcionarle instrucciones de remodelado con más precisión.
@@ -125,11 +110,11 @@ Para obtener una visión más profunda de la experiencia de cocina de Lowe, cons
 
 ---
 
-### <a name="fragments"></a>Fragmentos
+### <a name="fragments"></a>Fragments
 
 En los fragmentos de juegos de HoloLens, el salón se transforma en una escena de crímenes virtuales que muestra pistas y evidencias, así como en una sala de reuniones virtual, en la que se habla de caracteres que se encuentran en sus sillas y que se inclinan en las paredes.
 
-![fragmentos se diseñaron para que se realizaran en el inicio de un usuario, con caracteres que interactúan con superficies y objetos del mundo real.](images/fragments-750px.jpg)<br>
+![Los fragmentos se diseñaron para que se realizaran en el inicio de un usuario, con caracteres que interactúan con superficies y objetos del mundo real.](images/fragments-750px.jpg)<br>
 *Los fragmentos se diseñaron para que se realizaran en el inicio de un usuario, con caracteres que interactúan con superficies y objetos del mundo real.*
 
 Cuando los usuarios inician la experiencia inicialmente, se les da un breve período de ajuste, donde se requiere muy poca interacción, en su lugar para que se examinen. Esto también ayuda a garantizar que el salón está correctamente asignado para el contenido interactivo del juego.
@@ -144,19 +129,19 @@ A lo largo de la experiencia, los caracteres se convierten en puntos focales y a
 
 En el destino: la experiencia de Mars destacada en el [centro de espacio](https://blogs.windows.com/devices/2016/09/19/hololens-experience-destination-mars-now-open-at-kennedy-space-center-visitor-complex/)de la NASA, los visitantes fueron invitados a una carrera envolvente hacia la superficie de Mars, guiada por la representación virtual de legendarias Astronaut.
 
-![un Aldrin de rumores virtual se convierte en el punto focal de los usuarios en el destino: Mars.](images/destinationmars-750px.png)<br>
+![Un Aldrin de rumores virtual se convierte en el punto focal de los usuarios en el destino: Mars.](images/destinationmars-750px.png)<br>
 *Un Aldrin de rumores virtual se convierte en el punto focal de los usuarios en el destino: Mars.*
 
 Como experiencia envolvente, se recomienda que estos usuarios examinen, moviendo su cabeza en todas las direcciones para ver el panorama de la Martian virtual. Aunque para garantizar la comodidad de los usuarios, la narración de Aldrin y la presencia virtual ofrecían un punto focal a lo largo de la experiencia. Esta grabación virtual de los rumores (creados por los [estudios de captura de realidad mixta de Microsoft](https://www.microsoft.com/mixed-reality/capture-studios)) se encuentra en el tamaño real y humano, en la esquina de la habitación, lo que permite a los usuarios verlos en vista casi completa. La narración de los rumores dirige a los usuarios para que se centren en diferentes puntos del entorno (por ejemplo, un conjunto de Rocks Martian en el piso o en una gama de montaña de la distancia) con cambios de escenas específicos u objetos introducidos por él.
 
-![los narradores virtuales van a seguir el movimiento de un usuario, creando un punto focal eficaz a lo largo de la experiencia.](images/gazereset-750px.png)<br>
+![Los narradores virtuales se convertirán a seguir el movimiento de un usuario, creando un punto focal eficaz a lo largo de la experiencia.](images/gazereset-750px.png)<br>
 *Los narradores virtuales se convertirán a seguir el movimiento de un usuario, creando un punto focal eficaz a lo largo de la experiencia.*
 
 La representación realista de los rumores proporcionó un punto focal eficaz, junto con técnicas sutiles para convertir los rumores al usuario como si estuviera allí, hablando. A medida que el usuario se mueve sobre la experiencia, los zumbidos pasarán a un umbral antes de volver a un estado neutro si el usuario se mueve demasiado allá de la periferia. Si el usuario mira por los rumores por completo (por ejemplo, para ver algo en otro lugar de la escena) y, a continuación, vuelve a rumores, la posición direccional del narrador volverá a centrarse en el usuario. Las técnicas como esta proporcionan una gran sensación de inmersión y creación de un punto focal dentro del marco holográfica, lo que reduce el movimiento excesivo y promueve la [comodidad del usuario](comfort.md).
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Comodidad](comfort.md)
-* [Escalar](scale.md)
+* [Escala](scale.md)
 * [Control con la cabeza y permanencia](gaze-and-dwell.md)
 * [Estabilidad de hologramas](hologram-stability.md)

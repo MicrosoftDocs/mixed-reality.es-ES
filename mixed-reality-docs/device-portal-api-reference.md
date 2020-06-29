@@ -1,17 +1,17 @@
 ---
 title: Referencia de la API del Portal de dispositivos
 description: Referencia de API para Windows Device portal en HoloLens
-author: jonmlyons
-ms.author: jlyons
+author: hamalawi
+ms.author: moelhama
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, portal de dispositivos de Windows, API
-ms.openlocfilehash: 17268c9a20d3da0ee90e5d6cead4342d3badf800
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: b9b9ada49b4f9810dc97c9da2873d4ccb60df424
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451330"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441802"
 ---
 # <a name="device-portal-api-reference"></a>Referencia de la API del Portal de dispositivos
 
@@ -33,7 +33,7 @@ Instala una aplicación
 Parámetros
 * paquete: nombre de archivo del paquete que se va a instalar.
 
-Carga
+Payload
 * cuerpo http compatible con varias partes
 
 **/API/App/packagemanager/packages (GET)**
@@ -372,19 +372,19 @@ Parámetros opcionales (solo HoloLens 2)
 * Vstab: habilitar estabilización de vídeo: true o false (el valor predeterminado es false)
 * vstabbuffer: latencia del búfer de estabilización de vídeo: de 0 a 30 fotogramas (el valor predeterminado es 15 fotogramas)
 
-**/API/Holographic/Stream/Live.MP4 (GET)**
+**live.mp4/API/Holographic/Stream/(GET)**
 
 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_high. MP4 (GET)**
+**live_high.mp4/API/Holographic/Stream/(GET)**
 
 1280x720p 30 fps 5Mbit.
 
-**/API/Holographic/Stream/live_med. MP4 (GET)**
+**live_med.mp4/API/Holographic/Stream/(GET)**
 
 Una secuencia de 854x480p 30 fps 2.5 Mbit.
 
-**/API/Holographic/Stream/live_low. MP4 (GET)**
+**live_low.mp4/API/Holographic/Stream/(GET)**
 
 Una secuencia de 428x240p 15fps 0,6 Mbit.
 
@@ -509,7 +509,7 @@ Parámetros
 
 Carga un perfil de WPR e inicia el seguimiento con el perfil cargado.
 
-Carga
+Payload
 * cuerpo http compatible con varias partes
 
 Devolver datos
@@ -534,7 +534,7 @@ Devolver datos
 Inicia una sesión de seguimiento de WPR (rendimiento)
 
 Parámetros
-* Perfil: nombre del perfil. Los perfiles disponibles se almacenan en perfprofiles/profiles. JSON.
+* Perfil: nombre del perfil. Los perfiles disponibles se almacenan en perfprofiles/profiles.jsen
 
 Devolver datos
 * Al iniciar, devuelve el estado de la sesión de WPR.

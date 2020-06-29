@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: coordinate system, spatial coordinate system, world-scale, world, scale, position, orientation, anchor, spatial anchor, world-locked, world-locking, persistence, sharing
-ms.openlocfilehash: f65cf582db43399814737d581ece4694646a144c
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 8d270f96add795fdb54e0a91ebc9d38a34640da1
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438030"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441792"
 ---
 # <a name="spatial-anchors"></a>Delimitadores espaciales
 
@@ -22,11 +22,11 @@ También puede conservar y compartir los delimitadores espaciales en las sesione
 * Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para crear un delimitador de nube, la aplicación puede compartir un anclaje espacial en varios dispositivos de HoloLens, iOS y Android. Cuando cada dispositivo representa un holograma mediante el mismo delimitador espacial, los usuarios verán que el holograma aparece en el mismo lugar del mundo real. Esto permite compartir experiencias en tiempo real.
 * También se puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para la persistencia de hologramas asincrónicos en dispositivos Android, iOS y HoloLens. Al compartir un delimitador espacial en la nube duradera, varios dispositivos pueden observar el mismo holograma persistente a lo largo del tiempo, aunque los dispositivos no estén presentes juntos simultáneamente.
 
-En el caso de las experiencias de escalado permanente o de escala de sala para auriculares de escritorio anclados que permanecerán dentro de un diámetro de 5 metros, normalmente puede usar el [marco de fase de referencia](coordinate-systems.md#stage-frame-of-reference) en lugar de los delimitadores espaciales, lo que proporciona un sistema de coordenadas único en el que representar todo el contenido. Sin embargo, si la aplicación intenta permitir que los usuarios pasen más de 5 metros en HoloLens, quizás funcionando en todo el piso de un edificio, necesitará anclajes espaciales para mantener el contenido estable.
+En el caso de las experiencias de escalado permanente o de escala de sala para auriculares de escritorio anclados que permanecerán dentro de un diámetro de 5 metros, normalmente puede usar el [marco de fase de referencia](coordinate-systems.md#stage-frame-of-reference) en lugar de los delimitadores espaciales, lo que proporciona un sistema de coordenadas único en el que se va a representar todo el contenido. Sin embargo, si la aplicación intenta permitir que los usuarios pasen más de 5 metros en HoloLens, quizás funcionando en todo el piso de un edificio, necesitará anclajes espaciales para mantener el contenido estable.
 
 Aunque los delimitadores espaciales son estupendos para los hologramas que deben permanecer fijos en el mundo, una vez colocados, no se pueden mover. Hay alternativas a los delimitadores más adecuadas para los hologramas dinámicos que etiquetan junto con el usuario. Es mejor colocar hologramas dinámicos mediante un marco estático de referencia (la base de las coordenadas del mundo de Unity) o un marco de referencia adjunto.
 
-## <a name="best-practices"></a>Procedimiento recomendado
+## <a name="best-practices"></a>Procedimientos recomendados
 
 Estas directrices de delimitación espacial te ayudarán a representar hologramas estables que realizan un seguimiento preciso del mundo real.
 
@@ -52,7 +52,7 @@ La advertencia clave para mantener la estabilidad del holograma es seguir la reg
 
 ### <a name="render-highly-dynamic-holograms-using-the-stationary-frame-of-reference-instead-of-a-local-spatial-anchor"></a>Representar hologramas muy dinámicos mediante el marco estático de referencia en lugar de usar un delimitador espacial local
 
-Si tiene un holograma muy dinámico, como un carácter que recorre una habitación o una interfaz de usuario flotante que sigue a la pared cerca del usuario, es mejor omitir los delimitadores espaciales locales y representar esos hologramas directamente en el sistema de coordenadas proporcionado por el [ marco estacionario de referencia](coordinate-systems.md#stationary-frame-of-reference). I Unity consigue esto colocando hologramas directamente en coordenadas universales sin WorldAnchor. Los hologramas de un marco estacionario de referencia pueden experimentar un desplazamiento cuando el usuario está lejos del holograma. Pero es menos probable que se aprecie en los hologramas dinámicos: el holograma se mueve constantemente de todas formas o su movimiento lo mantiene constantemente cerca del usuario donde se minimizará el desplazamiento.
+Si tiene un holograma muy dinámico, como un carácter que recorre una habitación o una interfaz de usuario flotante que sigue a la pared cerca del usuario, es mejor omitir los delimitadores espaciales locales y representar esos hologramas directamente en el sistema de coordenadas proporcionado por el [marco estacionario de referencia](coordinate-systems.md#stationary-frame-of-reference). En Unity, puede lograr esto colocando hologramas directamente en coordenadas universales sin WorldAnchor. Los hologramas de un marco estacionario de referencia pueden experimentar un desplazamiento cuando el usuario está lejos del holograma. Pero es menos probable que se aprecie en los hologramas dinámicos: el holograma se mueve constantemente de todas formas o su movimiento lo mantiene constantemente cerca del usuario donde se minimizará el desplazamiento.
 
 Un caso interesante de hologramas dinámicos es un objeto animado desde un sistema de coordenadas delimitado a otro. Por ejemplo, podría tener dos metros de Castles de 10, cada uno en su propio delimitador espacial con un nivel de espacio de arranque que activa un Cannonball en el otro. En el momento en que se activa el Cannonball, puede representarlo en la ubicación adecuada en el marco estacionario de referencia para que coincida con el cañón en el sistema de coordenadas anclado del primer golpe. Después, seguirá su trayectoria de 10 metros por el aire en el marco estático de referencia. A medida que el Cannonball alcanza el otro, puede optar por moverlo en el segundo sistema de coordenadas anclado del enmalle para permitir cálculos físicos con los cuerpos rígidos de los encargados.
 
@@ -71,7 +71,7 @@ Esto es especialmente importante para los delimitadores locales que hayas guarda
 
 Para los delimitadores espaciales en la nube, el almacenamiento puede escalar según las necesidades del escenario. Puede almacenar tantos delimitadores de nube como sea necesario y liberarlos solo cuando sepa que los usuarios no necesitarán localizar de nuevo los hologramas en ese anclaje.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
