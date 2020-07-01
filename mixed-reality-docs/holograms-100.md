@@ -6,19 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, inmersivo, VR, Mr, introducción, holograma, Academia, tutorial
-ms.openlocfilehash: fe0fb256e5aed7aa83f8bb9b1e8ba7bb873a0613
-ms.sourcegitcommit: ee8c7e821cb337cbccd8af64b13ee5f50109a776
+ms.openlocfilehash: 58a1785ef74872c633cf65d6a32e24d517367359
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082059"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570309"
 ---
->[!NOTE]
+# <a name="mr-basics-100-getting-started-with-unity"></a>Aspectos básicos de realidad mixta (100): Introducción a Unity
+
+>[!IMPORTANT]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
-
-<br>
-
-# <a name="mr-basics-100-getting-started-with-unity"></a>Sr Basics 100: Introducción a Unity
 
 Este tutorial le guiará a través de la creación de una aplicación básica de realidad mixta compilada con Unity.
 
@@ -28,7 +26,7 @@ Este tutorial le guiará a través de la creación de una aplicación básica de
 <tr>
 <th>Curso</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td>Sr Basics 100: Introducción a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
+<td>Aspectos básicos de realidad mixta (100): Introducción a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
@@ -40,12 +38,12 @@ Este tutorial le guiará a través de la creación de una aplicación básica de
 
 >[!VIDEO https://www.youtube.com/embed/2L5IFO0hnYA]
 
-Para compilar una aplicación con Unity, primero debe crear un proyecto. Este proyecto está organizado en algunas carpetas, lo más importante es la carpeta assets. Se trata de la carpeta que contiene todos los recursos que se importan desde herramientas de creación de contenido digital como Maya, Max Cinema 4D o Photoshop, todo el código que se crea con Visual Studio o su editor de código favorito y cualquier número de archivos de contenido que Unity crea al crear escenas , animaciones y otros tipos de recursos de Unity en el editor.
+Para compilar una aplicación con Unity, primero debe crear un proyecto. Este proyecto está organizado en algunas carpetas, lo más importante es la carpeta assets. Se trata de la carpeta que contiene todos los recursos que se importan desde herramientas de creación de contenido digital como Maya, Max Cinema 4D o Photoshop, todo el código que se crea con Visual Studio o su editor de código favorito y cualquier número de archivos de contenido que Unity crea al crear escenas, animaciones y otros tipos de recursos de Unity en el editor.
 
 Para compilar e implementar aplicaciones UWP, Unity puede exportar el proyecto como una solución de Visual Studio que contendrá todos los archivos de recursos y de código necesarios.
 
 1. Iniciar Unity
-2. Seleccionar **nuevo**
+2. Seleccione **Nuevo paso**.
 3. Escriba un nombre de proyecto (por ejemplo, "MixedRealityIntroduction")
 4. Escriba una ubicación para guardar el proyecto
 5. Asegúrese de que la opción alternancia **3D** está seleccionada
@@ -93,7 +91,7 @@ Por último, permítanos ahorrar nuestro progreso hasta ahora. Para guardar los 
 
 >[!VIDEO https://www.youtube.com/embed/ItRoiXccC0g]
 
-En este capítulo, se establecerá una configuración de proyecto de Unity que nos ayude a dirigirse al SDK de Windows Holographic para el desarrollo. También estableceremos algunos valores de calidad para nuestra aplicación. Por último, se asegurará de que los destinos de compilación estén establecidos en tienda Windows.
+En este capítulo, se establecerá una configuración de proyecto de Unity que nos ayude a dirigirse al SDK de Windows Holographic para el desarrollo. También estableceremos algunos valores de calidad para nuestra aplicación. Por último, se asegurará de que los destinos de compilación estén establecidos en Plataforma universal de Windows.
 
 ### <a name="unity-performance-and-quality-settings"></a>Configuración de rendimiento y calidad de Unity
 
@@ -104,7 +102,7 @@ En este capítulo, se establecerá una configuración de proyecto de Unity que n
 Dado que mantener una velocidad de fotogramas elevada en HoloLens es tan importante, queremos que la configuración de calidad esté optimizada para un rendimiento más rápido. Para obtener información más detallada sobre el rendimiento, [recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md).
 
 1. Seleccione **editar > configuración del proyecto > calidad**
-2. Seleccione la **lista desplegable** en el logotipo de la **tienda Windows** y seleccione **muy baja**. Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna tienda Windows y la fila **muy baja** es verde.
+2. Seleccione la **lista desplegable** en el logotipo de **plataforma universal de Windows** y seleccione **muy baja**. Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna Plataforma universal de Windows y una fila **muy baja** es verde.
 
 En el **caso de las aplicaciones de realidad mixta destinadas a ocluidos**, puede dejar la configuración de calidad a sus valores predeterminados.
 
@@ -117,21 +115,13 @@ En el **caso de las aplicaciones de realidad mixta destinadas a ocluidos**, pued
 Necesitamos que Unity sepa que la aplicación que se está intentando exportar debe crear una [vista envolvente](app-views.md) en lugar de una vista 2D. Para ello, se habilita la compatibilidad con la realidad virtual en Unity que tiene como destino el SDK de Windows 10.
 
 1. Vaya a **editar > configuración del proyecto > Player**.
-2. En el **panel Inspector** de configuración del reproductor, seleccione el icono de la **tienda Windows** .
-3. Expanda el grupo de **configuración de XR** .
+2. En el **panel Inspector** de configuración del reproductor, seleccione el icono de **plataforma universal de Windows** .
+3. Expanda el grupo **XR Settings** (Configuración de XR).
 4. En la sección **representación** , active la casilla **compatibilidad con realidad virtual** para agregar una nueva lista de **SDK de realidad virtual** .
-5. Compruebe que **Windows Mixed Reality** aparece en la lista. Si no es así, seleccione el botón **+** situado en la parte inferior de la lista y elija **Windows Mixed Reality**.
+5. Compruebe que **Windows Mixed Reality** (Mixed Reality de Windows) aparece en la lista. En caso contrario, seleccione el botón **+** situado en la parte inferior de la lista y elija **Windows Mixed Reality** (Mixed Reality de Windows).
 
 >[!NOTE]
->Si no ve el icono de la **tienda Windows** , asegúrese de que ha seleccionado el back-end de scripting .net de la tienda Windows antes de la instalación. Si no es así, es posible que tenga que volver a instalar Unity con la instalación de Windows correcta.
-
-**Comprobar la configuración de .NET**
-
-![Comprobar la configuración de .NET](images/configoptions-375px.png)
-
-1. Vaya a **editar > configuración del proyecto > Player** (es posible que todavía lo tenga en el paso anterior).
-2. En el **panel Inspector** de configuración del reproductor, seleccione el icono de la **tienda Windows** .
-3. En la sección configuración de **otros valores** , asegúrese de que el **back-end de scripting** está establecido en **.net.**
+>Si no ve el icono de **plataforma universal de Windows** , asegúrese de que ha seleccionado plataforma universal de Windows compatibilidad con la compilación durante la instalación. Si no, es posible que deba volver a instalar Unity con la instalación correcta de Windows.
 
 Trabajo maravilla en la obtención de la configuración del proyecto aplicada. A continuación, vamos a agregar un holograma.
 
@@ -153,7 +143,7 @@ La creación de un cubo en el proyecto de Unity es igual que crear cualquier otr
 
 Ahora que hemos creado el cubo, es el momento de realizar una comprobación rápida del dispositivo. Puede hacerlo directamente desde el editor de Unity.
 
-### <a name="initial-setup"></a>Configuración inicial
+### <a name="initial-setup"></a>Instalación inicial
 
 1. En el equipo de desarrollo, en Unity, Abra **archivo >** ventana de configuración de compilación.
 2. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**
@@ -186,20 +176,19 @@ Ahora estamos listos para compilar el proyecto en Visual Studio e implementarlo 
 
 ### <a name="export-to-the-visual-studio-solution"></a>Exportar a la solución de Visual Studio
 
-1.  Abra el **archivo > ventana Configuración de compilación** .
-2.  Haga clic en **Agregar escenas abiertas** para agregar la escena.
-3.  Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**.
-4.  En configuración de la **tienda Windows** , asegúrese de que el **SDK** es **universal 10**.
-5.  En dispositivo de destino, deje en **cualquier dispositivo** para ocluidos muestra o cambie a **HoloLens**.
-6.  El **tipo de compilación de UWP** debe ser **D3D**.
-7.  El **SDK de UWP** podría dejarse en la **versión más reciente instalada**.
-8.  Compruebe **los C# proyectos de Unity** en depuración.
-9.  Haga clic en **Generar**.
-10. En el explorador de archivos, haga clic en **nueva carpeta** y asigne el nombre **"app"** a la carpeta.
-11. Con la carpeta de **aplicaciones** seleccionada, haga clic en el botón **Seleccionar carpeta** .
-12. Cuando Unity termine de compilar, aparecerá una ventana del explorador de archivos de Windows.
-13. Abra la carpeta de la **aplicación** en el explorador de archivos.
-14. Abra la solución de Visual Studio generada (MixedRealityIntroduction. sln en este ejemplo).
+1. Abra el **archivo > ventana Configuración de compilación** .
+1. Haga clic en **Agregar escenas abiertas** para agregar la escena.
+1. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**.
+1. En **plataforma universal de Windows** configuración, asegúrese de que el **SDK** es **universal 10**.
+1. En dispositivo de destino, deje en **cualquier dispositivo** para ocluidos muestra o cambie a **HoloLens**.
+1. El **tipo de compilación de UWP** debe ser **D3D**.
+1. El **SDK de UWP** podría dejarse en la **versión más reciente instalada**.
+1. Haga clic en **Generar**.
+1. En el explorador de archivos, haga clic en **nueva carpeta** y asigne el nombre **"app"** a la carpeta.
+1. Con la carpeta de **aplicaciones** seleccionada, haga clic en el botón **Seleccionar carpeta** .
+1. Cuando Unity termine de compilar, aparecerá una ventana del explorador de archivos de Windows.
+1. Abra la carpeta de la **aplicación** en el explorador de archivos.
+1. Abra la solución de Visual Studio generada (MixedRealityIntroduction. sln en este ejemplo).
 
 ### <a name="compile-the-visual-studio-solution"></a>Compilar la solución de Visual Studio
 
@@ -234,9 +223,9 @@ Asegúrese de que el dispositivo está conectado a través del cable USB.
 
 Ahora que la aplicación está implementada, intente mover todo el cubo y observe que permanece en todo el mundo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
 * [Procedimientos recomendados para trabajar con Unity y Visual Studio](best-practices-for-working-with-unity-and-visual-studio.md)
-* [Principios de MR 101](holograms-101.md)
-* [Aspectos básicos de MR 101E](holograms-101e.md)
+* [Aspectos básicos de realidad mixta (101)](holograms-101.md)
+* [Aspectos básicos de realidad mixta (101E)](holograms-101e.md)

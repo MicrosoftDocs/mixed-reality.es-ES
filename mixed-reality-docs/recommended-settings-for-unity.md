@@ -6,12 +6,12 @@ ms.author: trferrel
 ms.date: 03/26/2019
 ms.topic: article
 keywords: Unity, configuración, realidad mixta
-ms.openlocfilehash: 9b4e04e10e95f6c4f12a25a6f34236d9d2bf99a2
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278013"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570330"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -25,11 +25,11 @@ Es importante modificar la configuración de **calidad de Unity** de su entorno 
 
 En Unity 2018 LTS +, el nivel de calidad del proyecto se puede establecer de la siguiente manera:
 
-En **editar** > **configuración del proyecto** > **calidad** > establezca el **valor predeterminado** haciendo clic en la flecha hacia abajo hasta el nivel de calidad **muy bajo** .
+En **Editar**  >  **configuración del proyecto**  >  **calidad** > establezca el **valor predeterminado** haciendo clic en la flecha hacia abajo hasta el nivel de calidad **muy bajo** .
 
 ### <a name="lighting-settings"></a>Configuración de iluminación
 
-Similar a la configuración de la escena de calidad, es importante establecer una configuración de iluminación óptima para la aplicación de realidad mixta. En Unity, la configuración de iluminación que normalmente tendrá el mayor impacto en el rendimiento de la escena es la **iluminación global en tiempo real**. Para desactivarlo, vaya a **ventana** > **representación** de > **configuración de iluminación** > **iluminación global en tiempo real**.
+Similar a la configuración de la escena de calidad, es importante establecer una configuración de iluminación óptima para la aplicación de realidad mixta. En Unity, la configuración de iluminación que normalmente tendrá el mayor impacto en el rendimiento de la escena es la **iluminación global en tiempo real**. Para desactivarlo, vaya a la **ventana**  >  **representación**de  >  **luz configuración de iluminación**  >  **global en tiempo real**.
 
 Hay otro valor de iluminación, **iluminación global horneada**. Esta configuración puede proporcionar resultados visualmente impactantes y sorprendentes en auriculares envolventes, pero generalmente no es aplicable para el desarrollo de HoloLens. La **Illumniation global cocida** solo se calcula para GameObjects estáticas que normalmente no se encuentran en escenas de HoloLens debido a la naturaleza de un entorno desconocido y cambiante.
 
@@ -44,18 +44,18 @@ En las aplicaciones de realidad mixta, la escena se representa dos veces, una ve
 
 Para habilitar esta característica en el proyecto de Unity
 
-1)  Abre **Player XR Settings** (Configuración del reproductor XR) (ve a **Editar** > **Configuración del proyecto** > **Reproductor** > **XR Settings** [Configuración de XR]).
-2) Selecciona **Single Pass Instanced** (Con instancia de un solo paso) en el menú desplegable **Stereo Rendering Method** (Método de representación en estéreo) (la casilla **Virtual Reality Supported** [Compatibilidad con realidad virtual] debe estar marcada)
+1)  Abra la configuración de el **reproductor XR** (vaya a **Editar**  >  **configuración del proyecto**  >  **reproductor**  >  **XR configuración**)
+2) Seleccione **una instancia de paso único** en el menú desplegable **método de representación de estéreo** (se debe activar la casilla se admite la**realidad virtual** )
 
 Lea los siguientes artículos de Unity para obtener más información sobre este enfoque de representación.
 
-- [Cómo maximizar el rendimiento de AR y VR con la representación en estéreo avanzada](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Cómo maximizar el rendimiento de AR y VR con la representación avanzada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
 - [Creación de instancias de un solo paso](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Un problema común con la representación con instancia de un solo paso se produce si los desarrolladores ya tienen sombreadores personalizados no escritos para la creación de instancias. Después de habilitar esta característica, los desarrolladores pueden observar que algunos objetos GameObjects solo se representan en un ojo. Esto se debe a que los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
+> Un problema común con la representación con instancias de paso único se produce si los desarrolladores ya tienen sombreadores personalizados no escritos para la creación de instancias. Después de habilitar esta característica, los desarrolladores pueden observar que algunos GameObjects solo se representan en un ojo. Esto se debe a que los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
 >
-> Consulta [Representación en estéreo de un solo paso para HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) de Unity para solucionar este problema.
+> Consulte [representación de un solo paso estéreo para HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) desde Unity para saber cómo solucionar este problema.
 
 ### <a name="enable-depth-buffer-sharing"></a>Habilitar uso compartido de búfer de profundidad
 
@@ -63,8 +63,8 @@ Para lograr una mejor estabilidad del holograma a partir de la percepción del u
 
 Para habilitar esta característica en el proyecto de Unity
 
-1) Abre **Player XR Settings** (Configuración del reproductor XR) (ve a **Editar** > **Configuración del proyecto** > **Reproductor** > **XR Settings** [Configuración de XR]).
-2) Active la casilla **Habilitar uso compartido de búfer de profundidad** en SDK de **realidad virtual** > la expansión de la **realidad mixta de Windows** (se debe activar la casilla se admite la**realidad virtual** )
+1) Abra la configuración de el **reproductor XR** (vaya a **Editar**  >  **configuración del proyecto**  >  **reproductor**  >  **XR configuración**)
+2) Active la casilla **Habilitar uso compartido de búfer de profundidad** en SDK de **realidad virtual**Windows la expansión de la  >  **realidad mixta** (se debe activar la casilla se**admite la realidad virtual** )
 
 Además, se recomienda seleccionar profundidad de **16 bits** en la configuración de **formato de profundidad** de este panel, especialmente para el desarrollo de HoloLens. Si selecciona 16 bits en comparación con 24 bits, se reducirán significativamente los requisitos de ancho de banda, ya que será necesario desplace o procese menos datos.
 
@@ -85,7 +85,7 @@ Si usa el [sombreador estándar del kit de herramientas de realidad mixta](https
 
 ### <a name="building-for-il2cpp"></a>Compilar para IL2CPP
 
-Unity ha dejado de admitir el back-end de scripting de .NET y, por tanto, recomienda que los desarrolladores usen **IL2CPP** para sus compilaciones de Visual Studio de UWP. Aunque esto aporta varias ventajas, la compilación de la solución de Visual Studio desde Unity para **Il2CPP** puede ser significativamente más lenta que el anterior método de .net. Por lo tanto, se recomienda encarecidamente seguir los procedimientos recomendados para crear **IL2CPP** para ahorrar en el tiempo de iteración de desarrollo.
+Unity ha dejado de admitir el back-end de scripting de .NET y, por tanto, recomienda que los desarrolladores usen **IL2CPP** para sus compilaciones de Visual Studio de UWP. Aunque esto aporta varias ventajas, la compilación de la solución de Visual Studio desde Unity para **IL2CPP** puede ser significativamente más lenta que el anterior método de .net. Por lo tanto, se recomienda encarecidamente seguir los procedimientos recomendados para crear **IL2CPP** para ahorrar en el tiempo de iteración de desarrollo.
 
 1) Aproveche las compilaciones incrementales compilando el proyecto en el mismo directorio cada vez, reutilizando los archivos creados previamente
 2) Deshabilitar exámenes de software antimalware para el proyecto & carpetas de compilación
@@ -108,7 +108,7 @@ HoloLens tiene una CPU y una GPU de clase móvil, lo que significa que las aplic
 
 Para alternar la pantalla de presentación de Holographic:
 
-1) Vaya a **editar** > **configuración del proyecto** > página del **reproductor**
+1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del**reproductor**
 2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
 3) Aplique la imagen deseada en la propiedad **imagen de bienvenida de Windows holographic > Holographic** .
     - Al alternar la opción **Mostrar pantalla de presentación de Unity** , se habilitará o deshabilitará la pantalla de presentación con la marca Unity. Si no tiene una licencia de Unity Pro, siempre se mostrará la pantalla de presentación con la marca Unity.
@@ -116,10 +116,10 @@ Para alternar la pantalla de presentación de Holographic:
 
 |  Pantalla de presentación de mostrar Unity  |  Imagen de bienvenida holográfica  |  Comportamiento |
 |----------|----------|----------|
-|  Activado  |  Ninguno  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Activado  |  Personalizar  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Desactivar  |  Ninguno  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
-|  Desactivar  |  Personalizar  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Activado  |  None  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Activado  |  Personalizada  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Desactivado  |  None  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
+|  Desactivado  |  Personalizada  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 
 Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
 
@@ -131,7 +131,7 @@ Si se produce una pérdida de seguimiento, el comportamiento predeterminado de U
 
 Para personalizar la imagen de seguimiento perdida:
 
-1) Vaya a **editar** > **configuración del proyecto** > página del **reproductor**
+1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del**reproductor**
 2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
 3) Aplique la imagen deseada en la propiedad **imagen de pérdida de seguimiento de > de Windows Holographic** .
 
@@ -141,7 +141,7 @@ Es posible que algunas aplicaciones no requieran seguimiento (por ejemplo, [apli
 
 Para no participar en el comportamiento de pausa automática:
 
-1) Vaya a la página **editar** > **configuración del proyecto** > **Player** .
+1) Vaya a la página **Editar**  >  **configuración de proyecto**del  >  **reproductor**
 2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
 3) Modifique la casilla **de verificación de Windows Holographic > en el seguimiento de pérdida y Mostrar imagen** .
 
@@ -149,19 +149,19 @@ Para no participar en el comportamiento de pausa automática:
 
 Para definir el comportamiento personalizado cuando se pierde el seguimiento, controle los [eventos de pérdida de seguimiento](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Capacidades
+### <a name="capabilities"></a>Funcionalidades
 
 Para que una aplicación aproveche ciertas funciones, debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones de manifiesto se pueden realizar en Unity para que se incluyan en cada exportación de proyecto subsiguiente.
 
 Las capacidades se pueden habilitar para una aplicación de realidad mixta:
 
-1) Vaya a **editar** > **configuración del proyecto** > página del **reproductor**
+1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del**reproductor**
 2) Haga clic en la pestaña **tienda Windows** , abra la sección **configuración de publicación** y busque la lista de **capacidades** .
 
 Las funcionalidades aplicables para habilitar las API de uso frecuente para aplicaciones holográficas son:
 <br>
 
-|  Capability  |  API que requieren funcionalidad |
+|  Capacidad  |  API que requieren funcionalidad |
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver |
 |  Web  |  Fotocaptura y videocaptura |
@@ -169,8 +169,8 @@ Las funcionalidades aplicables para habilitar las API de uso frecuente para apli
 |  Micrófono  |  VideoCapture (al capturar audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (y para usar el generador de perfiles de Unity) |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
-* [Análisis de rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
+* [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
 * [Recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md)

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 10/02/2018
 ms.topic: article
 keywords: puerto, portabilidad, Unity, middleware, motor, UWP
-ms.openlocfilehash: 06501742d4b5c30036982deef2ec2a88171912bf
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 73126ae90ed12988177cc9192b7db41bae30fcc2
+ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278043"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570314"
 ---
 # <a name="porting-guides"></a>Guías de migración
 
@@ -70,9 +70,10 @@ Con cualquier actualización de Unity, existe la posibilidad de que tenga que ac
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Unity paso 4: dirigir la aplicación para que se ejecute en Plataforma universal de Windows (UWP)
 
 Después de instalar las herramientas, debe ejecutar la aplicación como una aplicación universal de Windows.
+
 * Siga los pasos [detallados paso a paso a través](https://unity3d.com/partners/microsoft/porting-guides) del proporcionado por Unity. Tenga en cuenta que debe permanecer en la versión más reciente de LTS (cualquier versión de 20xx. 4) para Windows MR.
 * Para obtener más recursos de desarrollo para UWP, eche un vistazo a la [Guía de desarrollo de juegos de Windows 10](https://docs.microsoft.com/windows/uwp/gaming/e2e).
-* Tenga en cuenta que Unity continúa mejorando la compatibilidad con IL2CPP; IL2CPP hace que algunos puertos UWP sean mucho más fáciles. Si tiene como destino actualmente el back-end de scripting de .net, considere la posibilidad de convertir para aprovechar el back-end de IL2CPP.
+* Tenga en cuenta que Unity continúa mejorando la compatibilidad con IL2CPP; IL2CPP hace que algunos puertos UWP sean mucho más fáciles. Si tiene como destino actualmente el back-end de scripting de .NET, considere la posibilidad de convertir para aprovechar el back-end de IL2CPP.
 
 Nota: Si la aplicación tiene dependencias en servicios específicos del dispositivo, como la realización de una coincidencia de vapor, tendrá que deshabilitarlos en este paso. En un momento posterior, puede enlazar a los servicios equivalentes que Windows proporciona.
 
@@ -104,7 +105,7 @@ XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 
 Esto establece el sistema de coordenadas universal de Unity para realizar el seguimiento del [marco estacionario de referencia](coordinate-systems.md#spatial-coordinate-systems). En el modo de seguimiento estacionario, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el avance es-Z) aparecerá delante del usuario cuando se inicie la aplicación. Para recentrar el origen del usuario, puede llamar a la XR de Unity [. Método InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) .
 
-Si va a migrar una experiencia **de escalado permanente** o una **experiencia a escala de habitación**, colocará contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](coordinate-systems.md#spatial-coordinate-systems)** , que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución. Para estas experiencias, debe asegurarse de que Unity está establecido en el tipo de espacio de seguimiento de **RoomScale** . Aunque RoomScale es el valor predeterminado, querrá establecerlo explícitamente y asegurarse de que se devuelve true para detectar situaciones en las que el usuario ha desplazado el equipo fuera del salón que han calibrado:
+Si va a migrar una experiencia **de escalado permanente** o una **experiencia a escala de habitación**, colocará contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](coordinate-systems.md#spatial-coordinate-systems)**, que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución. Para estas experiencias, debe asegurarse de que Unity está establecido en el tipo de espacio de seguimiento de **RoomScale** . Aunque RoomScale es el valor predeterminado, querrá establecerlo explícitamente y asegurarse de que se devuelve true para detectar situaciones en las que el usuario ha desplazado el equipo fuera del salón que han calibrado:
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))
@@ -143,7 +144,7 @@ El algoritmo se basa en un blog de Daniel Smilkov: [el rectángulo más grande d
 Cada juego o aplicación que tiene como destino un HMD existente tendrá un conjunto de entradas que controla, los tipos de entradas que necesita para la experiencia y las API específicas a las que llama para obtener esas entradas. Hemos invertido en intentar que sea tan sencillo y sencillo como sea posible para aprovechar las ventajas de las entradas disponibles en Windows Mixed Reality.
 1. Lea la **[Guía de portabilidad de entrada para Unity](input-porting-guide-for-unity.md)** para obtener más información sobre cómo Windows Mixed Reality expone entradas y cómo se asigna a lo que la aplicación puede hacer hoy.
 2. Elija si va a usar la API de entrada de SDK entre las plataformas de la plataforma de datos de Unity o la API de entrada específica de la MR. Las API Input. GetButton/Input. GetAxis generales se usan en las aplicaciones de Unity VR hoy en día para [Oculus INPUT](https://docs.unity3d.com/Manual/OculusControllers.html) y [OpenVR INPUT](https://docs.unity3d.com/Manual/OpenVRControllers.html). Si las aplicaciones ya usan estas API para los controladores de movimiento, esta es la ruta más sencilla; debe volver a asignar botones y ejes en el administrador de entrada.
-    * Puede tener acceso a los datos del controlador de movimiento en Unity mediante las API de entrada. GetButton/Input. GetAxis generales de la unidad de vídeo, o bien las API UnityEngine. XR. WSA. (anteriormente en el espacio de nombres UnityEngine. XR. WSA. Input en Unity 5,6)
+    * Puede tener acceso a los datos del controlador de movimiento en Unity mediante las API de entrada. GetButton/Input. GetAxis generales de la unidad de vídeo, o bien las API UnityEngine. XR. WSA.. (anteriormente en el espacio de nombres UnityEngine. XR. WSA. Input en Unity 5,6)
     * Vea el [ejemplo del kit de herramientas](https://github.com/Microsoft/HoloToolkit-Unity/pull/572) que combina controladores de mandos y de movimiento.
 
 ### <a name="unity-step-10-performance-testing-and-tuning"></a>Unity paso 10: pruebas y ajuste del rendimiento
@@ -152,7 +153,7 @@ Windows Mixed Reality estará disponible en una amplia gama de dispositivos, que
 
 Tanto [Unity](https://docs.unity3d.com/Manual/Profiler.html) como [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) incluyen los generadores de rendimiento y las directrices de publicación de [Microsoft](understanding-performance-for-mixed-reality.md) e [Intel](https://software.intel.com/articles/vr-content-developer-guide) sobre la optimización y la generación de perfiles de rendimiento. Hay una explicación exhaustiva del rendimiento disponible al [comprender el rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md). Además, hay detalles específicos para Unity en [recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Guía de portabilidad de entrada para Unity](input-porting-guide-for-unity.md)
 * [Instrucciones de compatibilidad de hardware de equipo mínima de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
