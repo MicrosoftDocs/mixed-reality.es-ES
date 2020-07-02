@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, CPU, GPU, representación, recolección de elementos no utilizados, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 28f09986cdb8c562aedfc9deae7b0369214ebc05
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: c6c68a6dd6e8ba59bee983e158e210aed27d2b17
+ms.sourcegitcommit: 4282d92e93869e4829338bdf7d981c3ee0260bfd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81277573"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216246"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendaciones de rendimiento para Unity
 
@@ -282,6 +282,8 @@ Además, se recomienda deshabilitar todas las proyecciones de sombras, ya que ta
 
 **Editar** > **Configuración del proyecto**, luego selecciona la categoría **Calidad** > selecciona **Calidad baja** para la Plataforma UWP. También puedes establecer solo la propiedad **Sombras** en **Disable Shadows** (Deshabilitar sombras).
 
+Se recomienda usar la iluminación posterior con los modelos en Unity.
+
 ### <a name="reduce-poly-count"></a>Reducción del recuento de polígonos
 
 Normalmente, se reduce el número de polígonos mediante alguna de las acciones siguientes
@@ -344,7 +346,7 @@ Una de las prácticas más comunes que conduce a una recolección excesiva de el
 Otras sugerencias rápidas:
 - Usa la clase [StringBuilder](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder?view=netframework-4.7.2) de C# para generar dinámicamente cadenas complejas en tiempo de ejecución.
 - Quita las llamadas a Debug.log() cuando ya no sean necesarias, ya que se ejecutan en todas las versiones de compilación de una aplicación.
-- Si la aplicación holográfica normalmente requiere una gran cantidad de memoria, considera la posibilidad de llamar a [ _**System.GC.Collect()**_ ](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) durante las fases de carga, como cuando se presenta una pantalla de carga o transición.
+- Si la aplicación holográfica normalmente requiere una gran cantidad de memoria, considera la posibilidad de llamar a [_**System.GC.Collect()**_](https://docs.microsoft.com/dotnet/api/system.gc.collect?view=netframework-4.7.2) durante las fases de carga, como cuando se presenta una pantalla de carga o transición.
 
 #### <a name="object-pooling"></a>Agrupación de objetos
 

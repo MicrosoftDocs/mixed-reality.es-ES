@@ -3,16 +3,16 @@ title: 6. Empaquetado e implementación en el dispositivo o emulador
 description: Parte 6 de 6 de una serie de tutoriales para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 99c431920c72cf85fed5a0eec6fc72ddf9fb112c
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 99407a4069f914bf077e6323dde3e12978f6b765
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330250"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345695"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetado e implementación en el dispositivo o emulador
 
@@ -48,30 +48,40 @@ Una vez conectado, haga clic en la flecha desplegable situada a la derecha del b
 
 1.  Ve a **Edit > Project Settings** (Editar > Configuración del proyecto). 
     * Añada un nombre de proyecto en **Project > Description > About > Project Name** (Proyecto > Descripción > Acerca de > Nombre del proyecto). 
-    * Añada **CN={NOMBRE DE LA EMPRESA}** en **Project > Description > Publisher > Company Distinguished Name** (Proyecto > Descripción > Editor > Nombre distintivo de la empresa).
+    * Añada **CN=NombreDeLaEmpresa** en **Project > Description > Publisher > Company Distinguished Name** (Proyecto > Descripción > Editor > Nombre distintivo de la empresa).
 
 > [!IMPORTANT]
-> Si dejas alguno de estos campos en blanco, se producirá un error. 
+> Si deja alguno de estos campos en blanco, se producirá un error al intentar generar un nuevo certificado en el paso 3. 
+
+> [!IMPORTANT]
+> El nombre del editor debe tener el [formato de nombres distintivos de LADPv3](https://www.ietf.org/rfc/rfc2253.txt). Un nombre de editor con un formato incorrecto dará lugar al error "Signing key not found. The app could not be digitally signed." (Clave de firma no encontrada. No se pudo firmar digitalmente la aplicación.) al realizar el empaquetado.
 
 ![Configuración del proyecto: descripción](images/unreal-uxt/6-cn.PNG)
 
 2.  Habilite **Build for HoloLens Emulation** (Compilar para emulación de HoloLens) y/o **Build for HoloLens Device** (Compilar para dispositivo HoloLens) en **Platforms > HoloLens** (Plataformas > HoloLens).
 
-3.  Haga clic en **Generate new** (Generar nuevo) en la sección **Packaging** (Empaquetado) [junto a **Signing Certificate** (Certificado de firma)] y, a continuación, vuelva a la ventana principal.
+3.  Haga clic en **Generate new** (Generar nuevo) en la sección **Packaging** (Empaquetado) [junto a **Signing Certificate** (Certificado de firma)].
+
+> [!IMPORTANT]
+> Si utiliza un certificado ya generado, el nombre del editor del certificado debe ser el mismo que el nombre del editor de la aplicación. En caso contrario, se producirá el error "Signing key not found. The app could not be digitally signed." (Clave de firma no encontrada. No se pudo firmar digitalmente la aplicación.) error.
 
 ![Configuración del proyecto - Plataformas - HoloLens](images/unreal-uxt/6-packaging.PNG)
 
-4.  Ve a **File > Package Project** (Archivo > Proyecto de paquete) y selecciona **HoloLens**. 
+4. Haga clic en **None** (Ninguno) con fines de prueba cuando se le pida que cree una contraseña de clave privada.
+
+![Generación de un nuevo certificado](images/unreal-uxt/6-private-key-testing.png)
+
+5. Ve a **File > Package Project** (Archivo > Proyecto de paquete) y selecciona **HoloLens**. 
     * Crea una nueva carpeta en la que guardar el paquete y haz clic en **Select Folder** (Seleccionar carpeta). 
 
-5.  Abra el [Portal de dispositivos Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal) después de empaquetar la aplicación, vaya a **Vistas > Aplicaciones** y busque la sección **Implementar aplicación**.
+6.  Abra el [Portal de dispositivos Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal) después de empaquetar la aplicación, vaya a **Vistas > Aplicaciones** y busque la sección **Implementar aplicación**.
 
-6.  Haga clic en **Examinar...** , vaya al archivo **ChessApp.appxbundle** y haga clic en **Abrir**. 
+7.  Haga clic en **Examinar...** , vaya al archivo **ChessApp.appxbundle** y haga clic en **Abrir**. 
 
     * Active la casilla situada junto a **Allow me to select framework packages** (Permitirme seleccionar paquetes de marcos) si es la primera vez que instala la aplicación en el dispositivo. 
     * En el siguiente cuadro de diálogo, incluya los archivos **VCLibs** y **appx** adecuados (arm64 para el dispositivo, x64 para el emulador). Puede encontrarlos en **HoloLens** dentro de la carpeta donde ha guardado el paquete.
 
-7.  Haz clic en **Instalar**
+8.  Haz clic en **Instalar**
     * Ahora puede ir a **All apps** (Todas las aplicaciones) y pulsar en la aplicación recién instalada para ejecutarla, o puede iniciar la aplicación directamente desde el **Portal de dispositivos Windows**. 
 
 Enhorabuena. La aplicación de realidad mixta de HoloLens está finalizada y lista para utilizarse. Sin embargo, este no es el final del camino. MRTK tiene muchas características independientes que puede agregar a los proyectos, como el mapeo espacial, la entrada de mirada y voz, e incluso los códigos QR. Puede encontrar más información sobre estas características en [Introducción al desarrollo con Unreal](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview).

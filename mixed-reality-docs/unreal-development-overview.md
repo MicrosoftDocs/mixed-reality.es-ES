@@ -3,16 +3,16 @@ title: Introducción al desarrollo con Unreal
 description: Información general sobre el desarrollo para realidad mixta con Unreal Engine 4
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development
-ms.openlocfilehash: 3e3862bd701d6e873f623abc9f9cda0b3085e753
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 0e3f40c7aa05a9c5f93d7eb9dc9793b6daeb8b90
+ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330162"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720371"
 ---
 # <a name="unreal-development-overview"></a>Introducción al desarrollo con Unreal
 
@@ -38,6 +38,9 @@ Si no está familiarizado con el desarrollo en Unreal, no empiece a ciegas. Expl
 * Componente de seguimiento del comportamiento
 
 Puede profundizar en el repositorio GitHub de [UX Tools para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) para obtener información detallada sobre la característica e información sobre cómo configurar el proyecto.
+
+## <a name="additional-files"></a>Archivos adicionales
+Si esta es la primera vez que crea o implementa una aplicación de Unreal para HoloLens, deberá [descargar los archivos auxiliares](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app) desde el iniciador de Epic.
 
 ## <a name="tutorial"></a>Tutorial
 

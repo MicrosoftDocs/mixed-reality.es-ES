@@ -3,16 +3,16 @@ title: Uso del emulador de HoloLens
 description: Uso del emulador de HoloLens para probar aplicaciones de realidad mixta en el equipo sin un dispositivo HoloLens físico.
 author: pbarnettms
 ms.author: pbarnett
-ms.date: 5/12/2020
+ms.date: 6/8/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulator
-ms.openlocfilehash: f525276d127bc0bbb682d7cea6821028258c6177
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: dba0b1a1260c62ac7f26bc80678439d12183d77f
+ms.sourcegitcommit: dc60c6ca075e7086b87478f1d7e87ebe02160c0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83227990"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84631502"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso del emulador de HoloLens
 
@@ -28,7 +28,7 @@ Si buscas desarrollar aplicaciones para cascos envolventes (VR) de Windows Mixed
 Descargue el emulador HoloLens.
 
 Versiones: 
-* [Emulador de HoloLens 2 (Windows Holographic, versión 2004)](https://go.microsoft.com/fwlink/?linkid=2129088).
+* [Emulador de HoloLens 2 (Windows Holographic, versión 2004, actualización de junio de 2020)](https://go.microsoft.com/fwlink/?linkid=2132415).
 * [Emulador de HoloLens (Gen 1) y plantillas de proyecto holográficas](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Puedes encontrar notas de la versión y compilaciones anteriores del emulador de HoloLens en la página [Archivo del emulador de HoloLens](hololens-emulator-archive.md).
@@ -251,7 +251,7 @@ En el emulador, solo verás los hologramas que representes. Sin embargo, no ver�
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-* Al desinstalar el emulador de HoloLens 2, es posible que la imagen de disco duro (Flash.vhdx) se quede en tu disco duro, en la carpeta Windows Kits\10\Emulation\HoloLens\<número de compilación.  La eliminación de este archivo no implica ningún riesgo.
+* Al desinstalar el emulador de HoloLens 2, es posible que la imagen de disco duro (Flash.vhdx) se quede en tu disco duro, en la carpeta Windows Kits\10\Emulation\HoloLens\<build number>.  La eliminación de este archivo no implica ningún riesgo.
 * La aceleración de gráficos mediante hardware puede hacer que las aplicaciones holográficas se bloqueen en algunos sistemas con gráficos de AMD o Intel.  Este problema se soluciona al deshabilitar la aceleración de gráficos mediante hardware en la ventana Herramientas del emulador.
 
 ## <a name="troubleshooting"></a>Solucionar problemas

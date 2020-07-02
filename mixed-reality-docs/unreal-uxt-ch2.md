@@ -3,16 +3,16 @@ title: 2. Inicialización de tu proyecto y primera aplicación
 description: Parte 2 de 6 de una serie de tutoriales para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: e8f03a87ec6b92e4c62cf3f88f519146254e7387
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: 150fee721bb9cd72d287737aca4262bd87dccba8
+ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330385"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345735"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicialización de tu proyecto y primera aplicación
 
@@ -28,7 +28,7 @@ Antes de continuar, asegúrese de que tiene todos los requisitos previos de la p
 * Creación de actores y eventos de nivel de script con planos técnicos
 
 ## <a name="creating-a-new-unreal-project"></a>Creación de un nuevo proyecto de Unreal
-Lo primero que necesita es un proyecto con el que trabajar.
+Lo primero que necesita es un proyecto con el que trabajar. Si esta es la primera vez que crea una aplicación de Unreal para HoloLens, deberá [descargar los archivos auxiliares](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch6#packaging-and-deploying-the-app) desde el iniciador de Epic.
 
 1. Iniciar Unreal Engine
 
@@ -42,6 +42,9 @@ Lo primero que necesita es un proyecto con el que trabajar.
 
 4. Defina **C++** , **Scalable 3D or 2D, Mobile/Tablet** (Móvil o tableta escalable 3D o 2D) y **No Starter Content** (Sin contenido de inicio) como **Configuración del proyecto**. 
     * Elija una ubicación para guardarlo y haga clic en **Crear un proyecto**. 
+
+> [!NOTE]
+> Debe seleccionar un proyecto de C++ en lugar de un proyecto de plano técnico para compilar el complemento de herramientas de la experiencia del usuario, que configurará más adelante en la sección 4.
 
 ![Configuración del proyecto inicial](images/unreal-uxt/2-project-settings.PNG)
 

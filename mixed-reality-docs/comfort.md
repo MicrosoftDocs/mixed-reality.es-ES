@@ -3,18 +3,20 @@ title: Comodidad
 description: Durante la visualización natural, el sistema visual humano se basa en varias fuentes de información o "indicaciones" para interpretar las formas 3D y la posición relativa de los objetos.
 author: erickjpaul
 ms.author: erpau
-ms.date: 04/5/2019
+ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, diseño, comodidad, HoloLens 2, HoloLens (1.ª generación)
-ms.openlocfilehash: 178044ce8c76de75b7cce5e10664ce65d108f0f8
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 12dc632e4cba925abb1c4ac9e17364f94a6804c9
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376072"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441822"
 ---
 # <a name="comfort"></a>Comodidad
+
+## <a name="overview"></a>Introducción
 
 Durante la visualización natural, el sistema visual humano se basa en varias fuentes de información o "indicaciones" para interpretar las formas 3D y las posiciones relativas de los objetos. Algunas indicaciones dependen de un solo ojo (indicaciones monoculares), lo que incluye la [perspectiva lineal](https://en.wikipedia.org/wiki/Perspective_(graphical)), el [tamaño conocido](https://en.wikipedia.org/wiki/Size#Perception_of_size), la oclusión, el [desenfoque de profundidad de campo](https://en.wikipedia.org/wiki/Depth_of_field) y la [acomodación](https://en.wikipedia.org/wiki/Accommodation_(eye)). Otras indicaciones dependen de ambos ojos (señales binoculares) e incluyen la [vergencia](https://en.wikipedia.org/wiki/Vergence) (básicamente las rotaciones relativas de los ojos necesarias para ver un objeto) y la [disparidad binocular](https://en.wikipedia.org/wiki/Stereopsis) (el patrón de diferencias entre las proyecciones de la escena en la parte posterior de los ojos). Para garantizar la máxima comodidad de los cascos de realidad virtual, es importante que los diseñadores y los desarrolladores puedan crear y presentar contenido imitando el funcionamiento de estas señales en el mundo real. Desde una perspectiva física, también es importante diseñar contenido que no requiera movimientos agotadores del cuello o de los brazos. En este artículo, analizaremos las consideraciones clave que hay que tener en cuenta para lograr estos objetivos.
 
@@ -107,7 +109,7 @@ Afortunadamente, tenemos algunas sugerencias para implementar la locomoción del
 ### <a name="guidance-for-holographic-devices"></a>Instrucciones para dispositivos holográficos
 
 Un método para permitir que el usuario se mueva a otra ubicación en un entorno virtual de gran tamaño es dar la impresión de que está moviendo un objeto pequeño en la escena. Este efecto se puede lograr de la siguiente manera:
-   1. Proporciona una interfaz en la que el usuario pueda seleccionar un punto del entorno virtual al que quiere moverse.
+   1. Proporciona una interfaz en la que el usuario pueda seleccionar un punto del entorno virtual al que quiera moverse.
    2. Tras la selección, reduce la representación de la escena a un disco alrededor del punto deseado.
    3. Mientras se mantiene el punto seleccionado, permite al usuario moverlo como si fuera un objeto pequeño. A continuación, el usuario puede acercar la selección a sus pies.
    4. Una vez se anule la selección, reanuda la representación de toda la escena.
@@ -125,37 +127,28 @@ En videojuegos de tiros en primera persona, los indicadores en pantalla (HUD) pr
 
 ## <a name="text-legibility"></a>Legibilidad del texto
 
-Una legibilidad del texto óptima puede ayudar a reducir la fatiga ocular y mantener la comodidad del usuario, especialmente en las aplicaciones o escenarios que requieren que los usuarios lean mientras llevan puesto un HMD. La legibilidad del texto depende de una serie de factores, entre los que se incluyen varias propiedades de visualización (por ejemplo, la densidad de píxeles, el brillo y el contraste), propiedades de la lente (por ejemplo, la aberración cromática) y propiedades del texto o la fuente (por ejemplo, las características de fuente específicas como el peso, el espaciado, las serifas, etc., el color de la fuente y el color de fondo).  
+Una legibilidad del texto óptima puede ayudar a reducir la fatiga ocular y mantener la comodidad del usuario, especialmente en las aplicaciones o escenarios que requieren que los usuarios lean mientras usan un HMD. La legibilidad del texto depende de diversos factores, entre los que se incluyen:
+* Propiedades de visualización, como la densidad de píxeles, el brillo y el contraste. 
+* Propiedades de la lente, como la aberración cromática
+* Propiedades del texto o la fuente, como el grosor, el espaciado, las serifas y el color de la fuente o el fondo.  
 
-En general, te recomendamos que pruebes aplicaciones específicas para mejorar la legibilidad y definas tamaños de fuente lo más grandes posible para lograr una experiencia cómoda. A continuación, ofrecemos instrucciones generales que proporcionan un punto de partida para el desarrollo. Ten en cuenta que todos los tamaños de fuente se notifican en grados de [ángulo visual](https://en.wikipedia.org/wiki/Visual_angle) en lugar de tamaños físicos específicos, lo que proporciona una guía para cualquier distancia dentro de la zona de colocación de hologramas óptima, ya que tiene en cuenta tanto el tamaño del texto como la distancia a la que aparece para el espectador. 
+En general, se recomienda probar aplicaciones específicas para mejorar la legibilidad y definir tamaños de fuente lo más grandes posible para lograr una experiencia cómoda. Puede encontrar instrucciones más detalladas para dispositivos holográficos y envolvente en nuestras páginas [Tipografía](typography.md) y [Texto en Unity](text-in-unity.md).
 
-Consulta las páginas [Tipografía](typography.md) y [Texto en Unity](text-in-unity.md) para obtener instrucciones más detalladas.
+## <a name="holographic-frame-considerations"></a>Consideraciones sobre el marco holográfico
 
-### <a name="guidance-for-holographic-devices"></a>Instrucciones para dispositivos holográficos
+Para las experiencias de realidad mixta con objetos grandes o muchos objetos, es fundamental tener en cuenta la cantidad de movimiento de cabeza y cuello necesaria para interactuar con el contenido. Las experiencias pueden dividirse en tres categorías en términos de movimiento de la cabeza: 
+* **Horizontal** (de lado a lado)
+* **Vertical** (arriba y abajo)
+* **Envolvente** (horizontal y vertical)
+ 
+Siempre que sea posible, limite la mayoría de las interacciones a las categorías horizontal o vertical; lo ideal es que la mayoría de las experiencias tengan lugar en el centro del marco holográfico con la cabeza del usuario en una posición neutra. Evite las interacciones que hagan que el usuario mueva la vista constantemente a una posición de la cabeza no natural (por ejemplo, siempre mirando hacia arriba para acceder a una interacción del menú clave).
 
-En el caso de los dispositivos holográficos, la representación de texto negro u oscuro sobre un fondo blanco o claro proporciona la relación de contraste más coherente, ya que el fondo tapará las interferencias del mundo real detrás de la representación. La representación de texto blanco o claro sobre un fondo negro u oscuro permite que se muestre en mayor medida el entorno del mundo real, lo que puede interferir con la legibilidad del texto. 
+![La región óptima del contenido es de 0 a 35 grados por debajo del horizonte](images/optimal-field-of-view-2.png).<br>
+*La región óptima del contenido es de 0 a 35 grados por debajo del horizonte*.
 
-#### <a name="hololens-1st-gen"></a>HoloLens (1.ª generación)
+El movimiento horizontal de la cabeza es más para las interacciones frecuentes, mientras que los movimientos verticales se deben reservar para eventos poco comunes. Por ejemplo, una experiencia que implique una escala de tiempo horizontal larga debe limitar el movimiento vertical de la cabeza para las interacciones (como mirar hacia abajo un menú).
 
-El tamaño de fuente mínimo legible (medido desde la línea base de la fuente hasta la parte superior) es de aproximadamente 0,35°, y un tamaño de fuente cómodo es de al menos 0,5° para leer el contenido presentado a una distancia de 2 m del usuario. 
-
-#### <a name="hololens-2"></a>HoloLens 2
-
-El tamaño de fuente mínimo legible (medido desde la línea base de la fuente hasta la parte superior) es aproximadamente de al menos: 
-   - 0,4°-0,5° a 45 cm (distancia de manipulación directa) 
-   - 0,35°-0,4° a 2 m
-   
-El tamaño de fuente para una lectura cómoda (medido desde la línea base de la fuente hasta la parte superior) es aproximadamente de al menos: 
-   - 0,65 °-0,8° a 45 cm (distancia de manipulación directa)
-   - 0.6°-0,75° a 2 m
-
-Ten en cuenta que los tamaños de fuente deben ser ligeramente mayores para el texto en distancias de manipulación directa debido al conflicto entre la vergencia y la acomodación descrito anteriormente (los ojos de los usuarios se acomodan a una distancia de 2 m en la pantalla de HoloLens, por lo que es posible que los usuarios vean borroso el contenido que se representa a 45 cm, por ejemplo). 
-
-### <a name="guidance-for-immersive-devices"></a>Instrucciones para dispositivos envolventes
-
-Los dispositivos envolventes suelen tener relaciones de contraste mayores debido a la oclusión completa del entorno externo, pero pueden tener una densidad menor de píxel efectivo en parte debido a la ampliación de las lentes delante de las pantallas. 
-
-En el caso de los HMD envolventes de Windows Mixed Reality, el tamaño de fuente vertical mínimo legible (medido desde la línea base de la fuente hasta la parte superior) es de aproximadamente 0,7-0,9°, y un tamaño de fuente vertical cómodo es de aproximadamente 1,0° para leer el contenido presentado a una distancia de 2 m del usuario.
+Considere la posibilidad de promover el movimiento del cuerpo completo, en lugar de simplemente la cabeza. Para ello, coloque objetos alrededor del espacio del usuario. Las experiencias con objetos móviles o de gran tamaño deben prestar especial atención al movimiento de la cabeza, sobre todo cuando requieren un movimiento frecuente a lo largo de los ejes horizontal y vertical.
 
 ## <a name="gaze-direction"></a>Dirección de la mirada
 
@@ -166,14 +159,11 @@ Para evitar la fatiga ocular y en el cuello, el contenido debe diseñarse de mod
 
 Se considera que el ángulo de mirada óptimo (en reposo) está entre 10-20 grados por debajo del horizonte, ya que la cabeza tiende a inclinarse ligeramente hacia abajo, especialmente durante las actividades.
 
-![Campo visual (FOV) permitido determinado por el rango de movimiento del cuello](images/optimal-field-of-view-2.png)<br>
-*Campo visual (FOV) permitido determinado por el rango de movimiento del cuello*
-
 ## <a name="arm-positions"></a>Posiciones de los brazos
 
 Los usuarios pueden acumular fatiga muscular en los casos en los que deben mantener una mano levantada a lo largo de una experiencia. Así mismo, pueden encontrar agotador el hecho de tener que realizar gestos de pulsación en el aire de forma repetida durante largos períodos de tiempo. Por lo tanto, te recomendamos diseñar experiencias que eviten la necesidad de realizar gestos de manera constante y repetida. Este objetivo puede lograrse mediante la incorporación de pausas breves y al ofrecer una combinación de gestos y voz para interactuar con la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Gaze](gaze-and-commit.md)
 * [Estabilidad de hologramas](hologram-stability.md)
 * [Interacciones instintivas](interaction-fundamentals.md)

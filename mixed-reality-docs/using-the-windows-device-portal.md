@@ -7,12 +7,12 @@ ms.date: 02/24/2019
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 4c84670e616d822bb8a9701a82f779a66ec19fe1
-ms.sourcegitcommit: f24ac845e184c2f90e8b15adab9addb913f5cb83
+ms.openlocfilehash: 234f8a5f2550c4437445ec3ac2726a3588f8bdbe
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84451369"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441851"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso de Portal de dispositivos Windows
 
@@ -44,8 +44,12 @@ Esta documentación trata específicamente sobre el Portal de dispositivos Windo
 ## <a name="connecting-over-wi-fi"></a>Conexión mediante Wi-Fi
 
 1. [Conecta HoloLens a una red Wi-Fi](connecting-to-wi-fi-on-hololens.md).
-2. Busca la dirección IP de tu dispositivo.
-   * Busca la dirección IP del dispositivo en **Configuración > Red e Internet > Wi-Fi > Opciones avanzadas**.
+2. Busque la dirección IP del dispositivo mediante una de las siguientes acciones:
+   * Vaya a **Configuración > Red e Internet > Wi-Fi > Opciones avanzadas**.
+   * Vaya a **Configuración > Red e Internet** y seleccione **Propiedades de hardware**.
+
+![Configuración de HoloLens 2](images/windows-device-portal-img-16.png)
+
 3. Desde un explorador web de tu equipo, ve a https://<TU_DIRECCIÓN_IP_HOLOLENS>
    * Se mostrará el siguiente mensaje en el explorador: "Hay un problema con el certificado de seguridad de este sitio web". Esto ocurre porque el certificado emitido en Device Portal es un certificado de prueba. Puedes ignorar este error de certificado por ahora y continuar.
 
@@ -175,6 +179,7 @@ Usa la página Mixed Reality Capture (Captura de realidad mixta) para guardar fl
 * **Vídeos y fotos**: muestra una lista de las capturas de vídeo y fotos tomadas en el dispositivo.
 
 Todas las opciones de esta página se aplican a las capturas tomadas mediante el Portal de dispositivos Windows, pero algunas se aplican también a MRC del sistema (menú Inicio, botones de hardware, comandos de voz globales, Miracast) y a las grabadoras de MRC personalizadas.
+
 |  Valor  |  Se aplica a MRC del sistema  |  Se aplica a grabadoras de MRC personalizadas |
 |----------|----------|----------|
 |  Hologramas  |  No  |  No |

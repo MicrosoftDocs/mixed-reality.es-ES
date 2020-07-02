@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: ec078015304e1cddc9b042fb5e94cf1904a302cb
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 9a19ad59e520a2743aafd954910f43c6f51d6c8a
+ms.sourcegitcommit: 5612e8bfb9c548eac42182702cec87b160efbbfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79376092"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441862"
 ---
 # <a name="6-exploring-advanced-input-options"></a>6. Exploración de opciones avanzadas de entrada
 
@@ -38,10 +38,15 @@ Los principales pasos que debes seguir para lograrlo son:
 5. Implementar el evento de respuesta para el comando de voz
 
 ### <a name="1-clone-the-default-input-system-profile"></a>1. Clonar el perfil del sistema de entrada predeterminado
-
 En la ventana Hierarchy (Jerarquía), selecciona el objeto **MixedRealityToolkit**. A continuación, en la ventana Inspector, selecciona la pestaña **Input** (Entrada) y clona **DefaultHoloLens2InputSystemProfile** para sustituirlo por tu propio valor de **Input System Profile** (Perfil de sistema de entrada):
 
 ![mrlearning-base](images/mrlearning-base/tutorial5-section1-step1-1.png)
+
+> [!NOTE]
+> Si utiliza MRTK 2.4.0 o posterior:
+> * Seleccione el objeto **MixedRealityToolkit** en la pestaña Hierarchy (Jerarquía) y, después, haga clic en la pestaña **Input** (Entrada) en la ventana Inspector y expanda la sección **Pointers** (Punteros). 
+> * Clone el objeto **DefaultMixedRealityInputPointerProfile** y reemplácelo por su propio valor de **Input Pointer Profile** (Perfil de puntero de entrada) personalizable.
+> * Compruebe que **Is Eye Tracked Enabled** (Seguimiento visual habilitado) sea true en la sección **Gaze Settings** (Configuración de mirada). 
 
 > [!TIP]
 > Para obtener un recordatorio sobre cómo clonar perfiles de MRTK, puedes consultar las instrucciones de [Configuración de los perfiles de Mixed Reality Toolkit](mrlearning-base-ch2.md#how-to-configure-the-mixed-reality-toolkit-profiles-change-spatial-awareness-display-option).

@@ -3,16 +3,16 @@ title: 3. Configuración del proyecto para la realidad mixta
 description: Parte 3 de 6 de una serie de tutoriales para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit
 author: hferrone
 ms.author: v-haferr
-ms.date: 5/5/2020
+ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: d22c3d8c9048f53171298642768877d7bcdcb972
-ms.sourcegitcommit: 1b8090ba6aed9ff128e4f32d40c96fac2e6a220b
+ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
+ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879557"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configuración del proyecto para la realidad mixta
 
@@ -37,17 +37,21 @@ Las sesiones de AR en Unreal no aparecen por sí mismas. Para usar una sesión, 
 
 ![Configuración de sesión de AR](images/unreal-uxt/3-arsessionconfig.PNG)
 
-Después de hacer esto, el paso siguiente consiste en asegurarse de que la sesión de AR se inicia cuando se carga el nivel. Por suerte, Unreal tiene un tipo especial de plano técnico denominado **Level Blueprint** (Plano técnico de nivel) que actúa como un gráfico de eventos global de nivel superior. La conexión del recurso ARSessionConfig en **Level Blueprint** (Plano técnico de nivel) garantiza que la sesión de AR se activará cuando se inicie la reproducción del juego.
+Una vez hecho esto, el paso siguiente consiste en asegurarse de que la sesión de AR se inicia cuando se carga el nivel y se detiene cuando este finaliza. Por suerte, Unreal tiene un tipo especial de plano técnico denominado **Level Blueprint** (Plano técnico de nivel) que actúa como un gráfico de eventos global de nivel superior. La conexión del recurso ARSessionConfig en **Level Blueprint** (Plano técnico de nivel) garantiza que la sesión de AR se activará cuando se inicie la reproducción del juego.
 
 1. Haga clic en **Blueprints > Open Level Blueprint** (Planos técnicos > Abrir plano técnico de nivel) en la barra de herramientas del editor: 
 
 ![Abrir plano técnico de nivel](images/unreal-uxt/3-level-blueprint.PNG)
 
-5. Arrastre el nodo de ejecución (icono de flecha hacia la izquierda) fuera de **Event BeginPlay** (Evento BeginPlay) y suéltelo. Busque **Start AR Session** (Iniciar sesión de AR).  
+5. Arrastre el nodo de ejecución (icono de flecha hacia la izquierda) fuera de **Event BeginPlay** (Evento BeginPlay) y suéltelo. Busque el nodo **Start AR Session** (Iniciar sesión de AR) y presione Entrar.  
     * Haga clic en la lista desplegable **Select Asset** (Seleccionar recurso) en **Session Config** (Configuración de sesión) y elija el recurso **ARSessionConfig**. 
-    * Pulse en **Compile** (Compilar), luego en **Save** (Guardar) y vuelva a la ventana principal.
 
 ![Iniciar sesión de AR](images/unreal-uxt/3-start-ar-session.PNG)
+
+6. Haga clic con el botón derecho en EventGraph y cree un nuevo nodo **Event EndPlay**. Arrastre la marca de ejecución y suéltela. Busque el nodo **Start AR Session** (Iniciar sesión de AR) y presione Entrar. Si la sesión de AR no se detiene cuando el nivel finaliza, algunas características pueden dejar de funcionar si reinicia la aplicación durante el streaming a un casco de realidad mixta. 
+    * Pulse en **Compile** (Compilar), luego en **Save** (Guardar) y vuelva a la ventana principal.
+
+![Detener sesión de AR](images/unreal-uxt/3-stoparsession.PNG)
 
 ## <a name="create-a-pawn"></a>Creación de un peón
 En este punto, el proyecto todavía necesita un objeto que sea el jugador. En Unreal, **Pawn** (Peón) representa al usuario del juego; pero, en este caso, será la experiencia de HoloLens 2.
