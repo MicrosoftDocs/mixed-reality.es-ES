@@ -1,19 +1,19 @@
 ---
-title: Reproductor remoto holográfica
+title: Holographic Remoting Player
 description: Holographic Remoting Player es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a Microsoft HoloLens en tiempo real mediante una conexión Wi-Fi.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: e5255fb5537201058c491f5e4c682bb1c22d0edb
-ms.sourcegitcommit: d6ac8f1f545fe20cf1e36b83c0e7998b82fd02f8
+ms.openlocfilehash: 8b1d58b2c2ce8f379a87059bb5add0f85f507259
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278213"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061138"
 ---
-# <a name="holographic-remoting-player"></a>Reproductor remoto holográfica
+# <a name="holographic-remoting-player"></a>Holographic Remoting Player
 
 >[!IMPORTANT]
 >Holographic Remoting para HoloLens 2 es un cambio de versión principal. [Las aplicaciones remotas para **hololens (1ª generación)** ](add-holographic-remoting.md) deben usar el paquete NuGet versión **1. x.** x y [las aplicaciones remotas para **hololens 2** ](holographic-remoting-create-host.md) deben usar **2. x**. x. Esto implica que las aplicaciones remotas escritas para HoloLens 2 no son compatibles con HoloLens (1º gen) y viceversa.
@@ -24,11 +24,14 @@ El reproductor de comunicación remota holográfica solo se puede usar con aplic
 
 El reproductor de comunicación remota holográfica está disponible para HoloLens (1ª generación) y HoloLens 2.  Las aplicaciones de PC que admiten la comunicación remota holográfica con HoloLens deben actualizarse para admitir la comunicación remota holográfica con HoloLens 2. Póngase en contacto con su proveedor de aplicaciones si tiene preguntas sobre qué versiones se admiten.
 
+>[!TIP]
+>A partir de la versión [2.2.0](holographic-remoting-version-history.md#v2.2.0) , el reproductor de comunicación remota holográfica también está disponible para equipos Windows que ejecutan [Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md).
+
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Conexión al reproductor de acceso remoto holográfica
 
 Siga las instrucciones de la aplicación para conectarse al reproductor de acceso remoto holográfica. Deberá escribir la dirección IP del dispositivo HoloLens, que puede ver en la pantalla principal del reproductor de comunicación remota, como se indica a continuación:
 
-![Reproductor remoto holográfica](images/holographicremotingplayer.png)
+![Holographic Remoting Player](images/holographicremotingplayer.png)
 
 Siempre que vea la pantalla principal, sabrá que no tiene una aplicación conectada.
 
@@ -55,9 +58,9 @@ En **HoloLens 2** , la aplicación le mostrará:
 * **Render** : el número de marcos que el reproductor remoto representa en el último segundo. Tenga en cuenta que esto es independiente del número de fotogramas que llegaron a través de la red (consulte **fotogramas de vídeo**). Además, se muestra el tiempo de Delta de representación promedio/máximo en milisegundos en el último segundo entre los fotogramas representados.
 
 * **Fotogramas de vídeo** : el primer número que se muestra es los fotogramas de vídeo omitidos, el segundo es fotogramas de vídeo reutilizados y el tercero recibe fotogramas de vídeo. Todos los números representan el recuento en el último segundo.
-    * ```Received frames``` es el número de fotogramas de vídeo que llegaron en el último segundo. En condiciones normales, debe ser 60 pero, si no es así, es un indicador de que los fotogramas se han quitado debido a problemas de red o a que el lado remoto o remoto no produce fotogramas con la tasa esperada.
-    * ```Reused frames``` es el número de fotogramas de vídeo usados más de una vez en el último segundo. Por ejemplo, si los fotogramas de vídeo llegan tarde, el bucle de representación del reproductor todavía representa un fotograma, pero debe *volver a usar* el fotograma de vídeo que ya ha usado para el fotograma anterior.
-    * ```Skipped frames``` es el número de fotogramas de vídeo que no ha usado el bucle de representación del reproductor. Por ejemplo, la vibración de red puede tener el efecto de que los fotogramas de vídeo que llegan ya no se distribuyen uniformemente. Por ejemplo, si algunas están atrasadas y otras llegan en el tiempo con el resultado de que no tienen una diferencia de 16,66 milisegundos al ejecutarse en 60Hz. Puede ocurrir que más de un fotograma llegue entre dos TICs del bucle de representación del reproductor. En este caso, el jugador *omite* uno o varios fotogramas, ya que se supone que siempre muestra el fotograma de vídeo recibido más recientemente.
+    * ```Received frames```es el número de fotogramas de vídeo que llegaron en el último segundo. En condiciones normales, debe ser 60 pero, si no es así, es un indicador de que los fotogramas se han quitado debido a problemas de red o a que el lado remoto o remoto no produce fotogramas con la tasa esperada.
+    * ```Reused frames```es el número de fotogramas de vídeo usados más de una vez en el último segundo. Por ejemplo, si los fotogramas de vídeo llegan tarde, el bucle de representación del reproductor todavía representa un fotograma, pero debe *volver a usar* el fotograma de vídeo que ya ha usado para el fotograma anterior.
+    * ```Skipped frames```es el recuento de fotogramas de vídeo que no ha usado el bucle de representación del reproductor. Por ejemplo, la vibración de red puede tener el efecto de que los fotogramas de vídeo que llegan ya no se distribuyen uniformemente. Por ejemplo, si algunas están atrasadas y otras llegan en el tiempo con el resultado de que no tienen una diferencia de 16,66 milisegundos al ejecutarse en 60Hz. Puede ocurrir que más de un fotograma llegue entre dos TICs del bucle de representación del reproductor. En este caso, el jugador *omite* uno o varios fotogramas, ya que se supone que siempre muestra el fotograma de vídeo recibido más recientemente.
 
     >[!NOTE]
     >Cuando se enfrenta a la vibración de la red, los fotogramas omitidos y reutilizados suelen ser los mismos. Por el contrario, si solo ve Marcos omitidos, es un indicador de que el reproductor no alcanza la velocidad de fotogramas de destino. En este caso, debe seguir observando el tiempo de la diferencia máxima de representación al diagnosticar problemas.
@@ -75,7 +78,7 @@ En la pantalla principal, puede decir **"deshabilitar diagnósticos"** para desa
 * Se recomienda una tarjeta de gráficos GeForce GTX 970 o AMD Radeon R9 290 o superior.
 * Se recomienda conectar el equipo a la red a través de Ethernet para reducir el número de saltos inalámbricos.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [HoloLens (1ª generación): agregar la comunicación remota holográfica](add-holographic-remoting.md)
 * [HoloLens 2: escritura de una aplicación remota Holographic Remoting](holographic-remoting-create-host.md)
 * [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

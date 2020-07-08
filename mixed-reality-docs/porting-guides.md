@@ -1,29 +1,31 @@
 ---
 title: Guías de migración
-description: Paso a paso tutorial en el que se explica cómo migrar una aplicación envolvente existente a Windows Mixed Reality.
-author: chimerascorn
+description: Un tutorial paso a paso que explica cómo migrar una aplicación envolvente existente a Windows Mixed Reality.
+author: JBrentJ
 ms.author: alexturn
-ms.date: 10/02/2018
+ms.date: 07/07/2020
 ms.topic: article
 keywords: puerto, portabilidad, Unity, middleware, motor, UWP
-ms.openlocfilehash: 73126ae90ed12988177cc9192b7db41bae30fcc2
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: 5cf66ce857806ab6fcf8c94b94c7a9a540339b97
+ms.sourcegitcommit: fef42e2908e49822f2d13b05d2f9260bf0d72158
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570314"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86061158"
 ---
 # <a name="porting-guides"></a>Guías de migración
 
-Windows 10 incluye compatibilidad con auriculares envolventes y holográficas directamente. Si ha creado contenido para otro dispositivo, como Oculus Rift o HTC Naopak, tienen dependencias en las bibliotecas que existen por encima de la API de la plataforma del sistema operativo. Incorporar contenido existente a Windows Mixed Reality implica redestinar el uso de estos otros SDK a las API de Windows. Las [API de la plataforma Windows para la realidad mixta](https://docs.microsoft.com/uwp/api/Windows.Perception) solo funcionan en el modelo de aplicación plataforma universal de Windows (UWP). Por lo tanto, si la aplicación aún no se ha creado para UWP, la migración a UWP formará parte de la experiencia de migración.
+## <a name="overview"></a>Información general
+
+Windows 10 incluye compatibilidad directa con auriculares envolventes y holográficas. Si ha creado contenido para otros dispositivos, como Oculus Rift o HTC Naopak, tienen dependencias en las bibliotecas que existen por encima de la API de la plataforma del sistema operativo. Incorporar contenido existente a Windows Mixed Reality implica redestinar el uso de estos otros SDK a las API de Windows. Las [API de la plataforma Windows para la realidad mixta](https://docs.microsoft.com/uwp/api/Windows.Perception) funcionan con el modelo de aplicación Windows x86 y el plataforma universal de Windows (UWP). Si la aplicación aún no está compilada para UWP, cambiar a UWP formará parte de la experiencia de migración.
 
 ## <a name="porting-overview"></a>Introducción a la migración
 
-En un nivel superior, estos son los pasos necesarios para migrar contenido existente:
+En un nivel alto, los siguientes pasos están relacionados con el traslado de contenido existente:
 1. **Asegúrese de que el equipo ejecuta Windows 10 Fall Creators Update (16299).** Ya no se recomienda recibir compilaciones de vista previa del anillo de Insider SKIP Preview, ya que esas compilaciones no serán las más estables para el desarrollo de realidad mixta.
 2. **Actualice a la versión más reciente de los gráficos o del motor de juegos.** Los motores de juegos deberán admitir la versión 10.0.15063.0 del SDK de Windows 10 (Publicada en el 2017 de abril) o superior.
 3. **Actualice cualquier middleware, complemento o componente.** Si la aplicación contiene componentes, es una buena idea actualizar a la versión más reciente. Las versiones más recientes de los complementos más comunes son compatibles con UWP.
-4. **Quite las dependencias de los SDK duplicados**. En función del dispositivo al que se dirija el contenido, deberá quitar o compilar de forma condicional ese SDK (por ejemplo, SteamVR) para que pueda tener como destino las API de Windows en su lugar.
+4. **Quite las dependencias de los SDK duplicados**. En función del dispositivo al que se dirija el contenido, deberá quitar o compilar condicionalmente ese SDK (por ejemplo, SteamVR) para que pueda establecer como destino las API de Windows en su lugar.
 5. **Trabaje con problemas de compilación.** En este momento, el ejercicio de portabilidad es específico de la aplicación, el motor y las dependencias de componentes que tiene.
 
 ## <a name="common-porting-steps"></a>Pasos de portabilidad comunes
@@ -34,21 +36,21 @@ En la página [instalar las herramientas](install-the-tools.md#for-immersive-vr-
 
 ### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>Paso 2 común: actualizar al vuelo más reciente de Windows 10
 
-La plataforma Windows Mixed Reality está aún en desarrollo activo y, para ser más eficaz, se recomienda que esté en el vuelo "Windows Insider Fast". Para tener acceso a los vuelos de Windows, debe [unirse al programa Windows Insider](https://insider.windows.com/).
+La plataforma Windows Mixed Reality todavía está en desarrollo activo. Se recomienda [unirse al programa Windows Insider](https://insider.windows.com/) para tener acceso al vuelo "Windows Insider Fast".
 1. Instalación de [Windows 10 Creators Update](https://www.microsoft.com/software-download/windows10)
 2. [Únase](https://insider.windows.com/) al programa Windows Insider.
 3. Habilitar el [modo de desarrollador](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
-4. Cambie a los [vuelos rápidos de Windows Insider](https://blogs.technet.microsoft.com/uktechnet/2016/07/01/joining-insider-preview) a través de configuración: > actualización & sección de seguridad
+4. Cambiar a los [vuelos rápidos de Windows Insider](https://blogs.technet.microsoft.com/uktechnet/2016/07/01/joining-insider-preview) a través de la **configuración > actualización & sección de seguridad**
 
-### <a name="common-step-3-upgrade-to-the-most-recent-build-of-visual-studio"></a>Paso 3 común: actualizar a la compilación más reciente de Visual Studio
+### <a name="common-step-3-upgrade-to-the-most-recent-build-of-visual-studio-uwp-only"></a>Paso 3 común: actualizar a la compilación más reciente de Visual Studio (solo UWP)
 * Vea [instalar la](install-the-tools.md#installation-checklist) página de herramientas en Visual Studio 2019
 
-### <a name="common-step-4-be-ready-for-the-store"></a>Paso 4 común: estar listo para la tienda
-* Use el kit para la [certificación de aplicaciones de Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) (también conocido como Wack) al principio y a menudo.
+### <a name="common-step-4-be-ready-for-the-store-uwp-only"></a>Paso 4 común: estar listo para la tienda (solo UWP)
+* Use el kit para la [certificación de aplicaciones de Windows](https://developer.microsoft.com/windows/develop/app-certification-kit) (también conocido como Wack) pronto y con frecuencia.
 * Usar el [analizador de portabilidad](https://docs.microsoft.com/dotnet/standard/portability-analyzer) ([Descargar](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer))
 
 ### <a name="common-step-5-choose-the-correct-adapter"></a>Paso 5 común: elegir el adaptador correcto
-* En sistemas como notebooks con dos GPU, [el destino es el adaptador correcto](rendering-in-directx.md#hybrid-graphics-pcs-and-mixed-reality-applications). Esto se aplica a las aplicaciones de Unity, además de a las aplicaciones de DirectX nativas, donde se crea un ID3D11Device, ya sea de forma explícita o implícita (Media Foundation), para su funcionalidad.
+* En sistemas como notebooks con dos GPU, [el destino es el adaptador correcto](rendering-in-directx.md#hybrid-graphics-pcs-and-mixed-reality-applications). Esto se aplica a las aplicaciones de Unity y de DirectX nativas donde se crea un ID3D11Device, ya sea de forma explícita o implícita (Media Foundation), para su funcionalidad.
 
 ## <a name="unity-porting-guidance"></a>Guía de portabilidad de Unity
 
@@ -61,35 +63,51 @@ Siga todos los pasos comunes. En el paso #3, seleccione la carga de trabajo **de
 2. Guarde una copia del proyecto antes de empezar.
 3. Revise la [documentación](https://docs.unity3d.com/Manual/UpgradeGuides.html) disponible en Unity en portabilidad.
 4. Siga las [instrucciones](https://docs.unity3d.com/Manual/APIUpdater.html) del sitio de Unity para usar su actualizador de API automática.
-5. Compruebe si hay cambios adicionales que necesite realizar para que el proyecto se ejecute y, a continuación, trabaje con los errores y advertencias restantes. Nota: Si tiene un middleware del que depende, puede que tenga que actualizar el middleware para que pueda ir (más detalles en el paso 3 a continuación).
+5. Compruebe si hay cambios adicionales que necesite realizar para que el proyecto se ejecute y, a continuación, trabaje con los errores y advertencias restantes. 
+
+> [!Note] 
+> Si tiene un middleware del que depende, compruebe que está usando la versión más reciente (más información en el paso 3 a continuación).
 
 ### <a name="unity-step-3-upgrade-your-middleware-to-the-latest-versions"></a>Unity paso 3: actualización del middleware a las versiones más recientes
 
-Con cualquier actualización de Unity, existe la posibilidad de que tenga que actualizar uno o más paquetes de middleware de los que depende su juego o aplicación. Además, si se trata de la versión más reciente de todo el middleware, aumentará la probabilidad de éxito durante el resto del proceso de portabilidad. Muchos paquetes de middleware han agregado recientemente compatibilidad con Plataforma universal de Windows (UWP) y la actualización a las versiones más recientes le permitirá aprovechar ese trabajo.
+Con cualquier actualización de Unity, existe la posibilidad de actualizar uno o más paquetes de middleware de los que depende su juego o aplicación. Además, al estar al día con el middleware más reciente, se aumenta la probabilidad de éxito a lo largo del resto del proceso de portabilidad. Muchos paquetes de middleware han agregado recientemente compatibilidad con Plataforma universal de Windows (UWP) y la actualización a las versiones más recientes le permitirá aprovechar ese trabajo.
 
 ### <a name="unity-step-4-target-your-application-to-run-on-universal-windows-platform-uwp"></a>Unity paso 4: dirigir la aplicación para que se ejecute en Plataforma universal de Windows (UWP)
 
+Si el destino es Windows x86, puede omitir este paso y continuar con el paso 5.
+
 Después de instalar las herramientas, debe ejecutar la aplicación como una aplicación universal de Windows.
 
-* Siga los pasos [detallados paso a paso a través](https://unity3d.com/partners/microsoft/porting-guides) del proporcionado por Unity. Tenga en cuenta que debe permanecer en la versión más reciente de LTS (cualquier versión de 20xx. 4) para Windows MR.
+* Siga los pasos [detallados paso a paso a través](https://unity3d.com/partners/microsoft/porting-guides) del proporcionado por Unity. Debe permanecer en la versión más reciente de LTS (cualquier versión de 20xx. 4) para Windows MR.
 * Para obtener más recursos de desarrollo para UWP, eche un vistazo a la [Guía de desarrollo de juegos de Windows 10](https://docs.microsoft.com/windows/uwp/gaming/e2e).
-* Tenga en cuenta que Unity continúa mejorando la compatibilidad con IL2CPP; IL2CPP hace que algunos puertos UWP sean mucho más fáciles. Si tiene como destino actualmente el back-end de scripting de .NET, considere la posibilidad de convertir para aprovechar el back-end de IL2CPP.
 
-Nota: Si la aplicación tiene dependencias en servicios específicos del dispositivo, como la realización de una coincidencia de vapor, tendrá que deshabilitarlos en este paso. En un momento posterior, puede enlazar a los servicios equivalentes que Windows proporciona.
+> [!NOTE]
+> Unity continúa mejorando la compatibilidad con IL2CPP; IL2CPP facilita algunos puertos UWP. Si tiene como destino actualmente el back-end de scripting de .NET, considere la posibilidad de convertir para aprovechar el back-end de IL2CPP.
 
-### <a name="unity-step-5-deprecated"></a>Unity paso 5: (desusado)
+* Puede omitir "Unity STEP 5", ya que tiene como destino UWP en lugar de x86.
 
-El paso 5 ya no es necesario. Lo dejamos aquí para que la indización de los pasos siga siendo la misma.
+> [!NOTE] 
+> Si la aplicación tiene dependencias en servicios específicos del dispositivo, como la realización de una coincidencia de vapor, deberá deshabilitarlos en este paso. Puede enlazar a los servicios equivalentes que Windows proporciona más adelante.
 
-### <a name="unity-step-6-get-your-windows-mixed-reality-hardware-set-up"></a>Unity paso 6: configurar el hardware de Windows Mixed Reality
+### <a name="unity-step-5-target-your-application-to-run-on-windows-x86"></a>Unity paso 5: dirigir la aplicación para que se ejecute en Windows x86
+
+Desde dentro de la aplicación Unity:
+
+* Vaya a archivo-> configuración de compilación
+* Seleccione "PC, Mac, Linux independiente"
+* Establecer la plataforma de destino en "Windows"
+* Establecer la arquitectura en "x86" seleccionar "cambiar plataforma"
+
+
+### <a name="unity-step-6-setup-your-windows-mixed-reality-hardware"></a>Unity paso 6: configuración del hardware de Windows Mixed Reality
 1. Revisión de los pasos de la [configuración de auriculares inmersivo](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-start
 )
 2. Obtener información sobre cómo [usar el simulador de realidad mixta de Windows](using-the-windows-mixed-reality-simulator.md) y [navegar por la Página principal de Windows Mixed Reality](navigating-the-windows-mixed-reality-home.md)
 
 ### <a name="unity-step-7-target-your-application-to-run-on-windows-mixed-reality"></a>Unity paso 7: dirigir la aplicación para que se ejecute en Windows Mixed Reality
 1. En primer lugar, debe quitar o compilar condicionalmente cualquier otra compatibilidad de biblioteca específica de un SDK de VR determinado. Esos activos cambian con frecuencia la configuración y las propiedades del proyecto de manera que sean incompatibles con otros SDK de VR, como Windows Mixed Reality.
-    * Por ejemplo, si el proyecto hace referencia al SDK de SteamVR, tendrá que actualizar el proyecto para excluir esas llamadas de API de Prefabs y script al exportar para el destino de compilación de la tienda Windows.
-    * Próximamente se incluirán pasos específicos para la exclusión condicional de otros SDK de VR.
+    * Por ejemplo, si el proyecto hace referencia al SDK de SteamVR, deberá actualizar el proyecto para excluir esas llamadas de API de Prefabs y script al exportar para el destino de compilación de la tienda Windows.
+    * Pronto estarán disponibles los pasos específicos para excluir condicionalmente otros SDK de VR.
 2. En el proyecto de Unity, [el destino es el SDK de Windows 10](holograms-100.md#target-windows-10-sdk) .
 3. Para cada escena, [Configure la cámara](holograms-100.md#chapter-2---setup-the-camera) .
 
@@ -103,7 +121,7 @@ Si va a migrar una **experiencia de escalado de**una instalación, debe asegurar
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 ```
 
-Esto establece el sistema de coordenadas universal de Unity para realizar el seguimiento del [marco estacionario de referencia](coordinate-systems.md#spatial-coordinate-systems). En el modo de seguimiento estacionario, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el avance es-Z) aparecerá delante del usuario cuando se inicie la aplicación. Para recentrar el origen del usuario, puede llamar a la XR de Unity [. Método InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) .
+En el código anterior se establece el sistema de coordenadas universal de Unity para realizar el seguimiento del [marco estacionario de referencia](coordinate-systems.md#spatial-coordinate-systems). En el modo de seguimiento estacional, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el avance es-Z) aparece delante del usuario cuando se inicia la aplicación. Para recentrar el origen del usuario, puede llamar a la XR de Unity [. Método InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) .
 
 Si va a migrar una experiencia **de escalado permanente** o una **experiencia a escala de habitación**, colocará contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](coordinate-systems.md#spatial-coordinate-systems)**, que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución. Para estas experiencias, debe asegurarse de que Unity está establecido en el tipo de espacio de seguimiento de **RoomScale** . Aunque RoomScale es el valor predeterminado, querrá establecerlo explícitamente y asegurarse de que se devuelve true para detectar situaciones en las que el usuario ha desplazado el equipo fuera del salón que han calibrado:
 
@@ -120,13 +138,13 @@ else
 
 Una vez que la aplicación establece correctamente el tipo de espacio de seguimiento de RoomScale, el contenido colocado en el plano y = 0 aparecerá en el suelo. El origen en (0,0) será el lugar específico en el piso en el que se encuentra el usuario durante la configuración de la habitación, con-Z que representa la dirección de avance que estaban teniendo lugar durante la instalación.
 
-En el código de script, puede llamar al método TryGetGeometry en el tipo UnityEngine. experimental. XR. Boundary para obtener un polígono de límite, especificando un tipo de límite de TrackedArea. Si el usuario ha definido un límite (se obtiene una lista de vértices), sabe que es seguro ofrecer una **experiencia de escala de habitación** al usuario, donde puede recorrer la escena que cree.
+En el código de script, puede llamar al método TryGetGeometry en el tipo UnityEngine. experimental. XR. Boundary para obtener un polígono de límite, especificando un tipo de límite de TrackedArea. Si el usuario definía un límite (se obtiene una lista de vértices), es seguro ofrecer una experiencia de **escalado** a la habitación al usuario, donde puede recorrer la escena que cree.
 
-Tenga en cuenta que el sistema representará automáticamente el límite cuando el usuario lo aproxime. No es necesario que la aplicación use este polígono para representar el límite.
+El sistema representará automáticamente el límite cuando el usuario lo aproxime. No es necesario que la aplicación use este polígono para representar el límite.
 
-Para obtener más información, consulte la página de los [sistemas de coordenadas en Unity](coordinate-systems-in-unity.md) .
+Para obtener más información, consulte la página [de los sistemas de coordenadas en Unity](coordinate-systems-in-unity.md) .
 
-Algunas aplicaciones usan un rectángulo para restringir su interacción. La recuperación del rectángulo inscrito más grande no se admite directamente en la API de UWP o Unity. El código de ejemplo vinculado a la siguiente muestra cómo buscar un rectángulo dentro de los límites de seguimiento. Se basa en la heurística, por lo que es posible que no encuentre la solución óptima; sin embargo, los resultados suelen ser coherentes con las expectativas. Los parámetros del algoritmo se pueden optimizar para buscar resultados más precisos a costa del tiempo de procesamiento. El algoritmo está en una bifurcación del kit de herramientas de realidad mixta que usa la versión 5,6 de MRTP Preview de Unity. Esto no está disponible públicamente. El código debe usarse directamente en 2017,2 y versiones posteriores de Unity. El código se trasladará al MRTK actual en un futuro próximo.
+Algunas aplicaciones usan un rectángulo para restringir su interacción. La recuperación del rectángulo inscrito más grande no se admite directamente en la API de UWP o Unity. El código de ejemplo vinculado a la siguiente muestra cómo buscar un rectángulo dentro de los límites de seguimiento. Por lo tanto, es posible que no encuentre la solución óptima, sin embargo, los resultados son coherentes con las expectativas. Los parámetros del algoritmo se pueden optimizar para buscar resultados más precisos a costa del tiempo de procesamiento. El algoritmo está en una bifurcación del kit de herramientas de realidad mixta que usa la versión 5,6 de MRTP Preview de Unity. Esto no está disponible públicamente. El código debe usarse directamente en 2017,2 y versiones posteriores de Unity. El código se trasladará al MRTK actual en un futuro próximo.
 
 [archivo zip de código en github](https://github.com/KevinKennedy/MixedRealityToolkit-Unity/releases/tag/5.6.MRTP20) Archivos importantes:
 * Assets/HoloToolkit/Stage/scripts/StageManager. CS-ejemplo de uso
@@ -143,7 +161,7 @@ El algoritmo se basa en un blog de Daniel Smilkov: [el rectángulo más grande d
 
 Cada juego o aplicación que tiene como destino un HMD existente tendrá un conjunto de entradas que controla, los tipos de entradas que necesita para la experiencia y las API específicas a las que llama para obtener esas entradas. Hemos invertido en intentar que sea tan sencillo y sencillo como sea posible para aprovechar las ventajas de las entradas disponibles en Windows Mixed Reality.
 1. Lea la **[Guía de portabilidad de entrada para Unity](input-porting-guide-for-unity.md)** para obtener más información sobre cómo Windows Mixed Reality expone entradas y cómo se asigna a lo que la aplicación puede hacer hoy.
-2. Elija si va a usar la API de entrada de SDK entre las plataformas de la plataforma de datos de Unity o la API de entrada específica de la MR. Las API Input. GetButton/Input. GetAxis generales se usan en las aplicaciones de Unity VR hoy en día para [Oculus INPUT](https://docs.unity3d.com/Manual/OculusControllers.html) y [OpenVR INPUT](https://docs.unity3d.com/Manual/OpenVRControllers.html). Si las aplicaciones ya usan estas API para los controladores de movimiento, esta es la ruta más sencilla; debe volver a asignar botones y ejes en el administrador de entrada.
+2. Decida si va a usar la API de entrada de SDK entre las plataformas de la de Unity o la API de entrada específica de la MR. Las API Input. GetButton/Input. GetAxis generales se usan en las aplicaciones de Unity VR hoy en día para [Oculus INPUT](https://docs.unity3d.com/Manual/OculusControllers.html) y [OpenVR INPUT](https://docs.unity3d.com/Manual/OpenVRControllers.html). Si las aplicaciones ya usan estas API para los controladores de movimiento, esta es la ruta más sencilla; debe volver a asignar botones y ejes en el administrador de entrada.
     * Puede tener acceso a los datos del controlador de movimiento en Unity mediante las API de entrada. GetButton/Input. GetAxis generales de la unidad de vídeo, o bien las API UnityEngine. XR. WSA.. (anteriormente en el espacio de nombres UnityEngine. XR. WSA. Input en Unity 5,6)
     * Vea el [ejemplo del kit de herramientas](https://github.com/Microsoft/HoloToolkit-Unity/pull/572) que combina controladores de mandos y de movimiento.
 
@@ -153,7 +171,7 @@ Windows Mixed Reality estará disponible en una amplia gama de dispositivos, que
 
 Tanto [Unity](https://docs.unity3d.com/Manual/Profiler.html) como [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) incluyen los generadores de rendimiento y las directrices de publicación de [Microsoft](understanding-performance-for-mixed-reality.md) e [Intel](https://software.intel.com/articles/vr-content-developer-guide) sobre la optimización y la generación de perfiles de rendimiento. Hay una explicación exhaustiva del rendimiento disponible al [comprender el rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md). Además, hay detalles específicos para Unity en [recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Guía de portabilidad de entrada para Unity](input-porting-guide-for-unity.md)
 * [Instrucciones de compatibilidad de hardware de equipo mínima de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
