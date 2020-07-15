@@ -112,34 +112,47 @@
 ### Unity
 #### Tutoriales de HoloLens 2
 ##### Tutoriales de introducción
-###### [1. Introducción y objetivos](mrlearning-base.md)
-###### [2. Inicialización del proyecto y primera aplicación](mrlearning-base-ch1.md)
-###### [3. Creación de la interfaz de usuario y configuración de Mixed Reality Toolkit](mrlearning-base-ch2.md)
-###### [4. Colocación del contenido dinámico y uso de solucionadores](mrlearning-base-ch3.md)
-###### [5. Interacción con objetos 3D](mrlearning-base-ch4.md)
-###### [6. Exploración de opciones avanzadas de entrada](mrlearning-base-ch5.md)
-###### [7. Creación de una aplicación de ejemplo de módulo lunar](mrlearning-base-ch6.md)
+###### [1. Introducción](mr-learning-base-01.md)
+###### [2. Inicialización del proyecto y primera aplicación](mr-learning-base-02.md)
+###### [3. Configuración de los perfiles de Mixed Reality Toolkit](mr-learning-base-03.md)
+###### [4. Posicionamiento de los objetos en la escena](mr-learning-base-04.md)
+###### [5. Creación de contenido dinámico mediante el uso de solucionadores](mr-learning-base-05.md)
+###### [6. Creación de la interfaz de usuario](mr-learning-base-06.md)
+###### [7. Interacción con objetos 3D](mr-learning-base-07.md)
+###### [8. Uso del seguimiento de los ojos](mr-learning-base-08.md)
+###### [9. Uso de los comandos de voz](mr-learning-base-09.md)
 ##### Tutoriales sobre Azure Spatial Anchors
-###### [1. Introducción a Azure Spatial Anchors](mrlearning-asa-ch1.md)
-###### [2. Guardado, recuperación y uso compartido de Azure Spatial Anchors](mrlearning-asa-ch2.md)
-###### [3. Visualización de comentarios de Azure Spatial Anchors](mrlearning-asa-ch3.md)
-###### [4. Azure Spatial Anchors para iOS y Android](mrlearning-asa-ch4.md)
+###### [1. Introducción](mr-learning-asa-01.md)
+###### [2. Introducción a Azure Spatial Anchors](mr-learning-asa-02.md)
+###### [3. Almacenamiento, recuperación y uso compartido de Azure Spatial Anchors](mr-learning-asa-03.md)
+###### [4. Visualización de comentarios de Azure Spatial Anchors](mr-learning-asa-04.md)
+###### [5. Azure Spatial Anchors para iOS y Android](mr-learning-asa-05.md)
+##### Tutoriales sobre las funcionalidades multiusuario
+###### [1. Introducción](mr-learning-sharing-01.md)
+###### [2. Configuración de Photon Unity Networking](mr-learning-sharing-02.md)
+###### [3. Conexión de varios usuarios](mr-learning-sharing-03.md)
+###### [4. Uso compartido de movimientos de objetos con varios usuarios](mr-learning-sharing-04.md)
+###### [5. Integración de Azure Spatial Anchors en una experiencia compartida](mr-learning-sharing-05.md)
 ##### Tutoriales de los servicios de voz de Azure
 ###### [1. Integración y uso de reconocimiento de voz y de transcripción](mrlearning-speechSDK-ch1.md)
 ###### [2. Adición de un modo sin conexión para la traducción de voz a texto local](mrlearning-speechSDK-ch2.md)
 ###### [3. Adición del componente Speech Translation de Azure Cognitive Services](mrlearning-speechSDK-ch3.md)
 ###### [4. Configuración de reconocimiento de intenciones y comprensión del lenguaje natural](mrlearning-speechSDK-ch4.md)
-##### Tutoriales sobre las funcionalidades multiusuario
-###### [1. Configuración de Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
-###### [2. Conexión de varios usuarios](mrlearning-sharing(photon)-ch2.md)
-###### [3. Uso compartido de movimientos de objetos con varios usuarios](mrlearning-sharing(photon)-ch3.md)
-###### [4. Integración de Azure Spatial Anchors en una experiencia compartida](mrlearning-sharing(photon)-ch4.md)
 ##### Tutoriales de audio espacial
 ###### [1. Agregar audio espacial al proyecto](unity-spatial-audio-ch1.md)
 ###### [2. Sonidos de interacción del botón de espacialización](unity-spatial-audio-ch2.md)
 ###### [3. Espacialización del audio de un vídeo](unity-spatial-audio-ch3.md)
 ###### [4. Habilitar y deshabilitar el audio espacial en tiempo de ejecución](unity-spatial-audio-ch4.md)
 ###### [5. Usar la reverberación para agregar distancia al audio espacial](unity-spatial-audio-ch5.md)
+#### Tutoriales de Azure Cloud Services
+##### [1. Azure Cloud Services para HoloLens 2](mr-learning-azure-01.md)
+##### [2. Integración de Azure Storage](mr-learning-azure-02.md)
+##### [3. Integración de Azure Custom Vision](mr-learning-azure-03.md)
+##### [4. Integración de Azure Spatial Anchors](mr-learning-azure-04.md)
+##### [5. Integración de Azure Bot Service](mr-learning-azure-05.md)
+#### Tutoriales de la comunicación remota holográfica del equipo
+##### [1. Introducción a la comunicación remota holográfica del equipo](mr-learning-pc-holographic-remoting-01.md)
+##### [2. Creación de una aplicación para equipos de comunicación remota holográfica](mr-learning-pc-holographic-remoting-02.md)
 #### Aplicaciones de ejemplo de código abierto de HoloLens 2
 ##### [Superficies](sampleapp-surfaces.md)
 ##### [Tabla periódica de los elementos 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
@@ -217,15 +230,17 @@
 
 ## Unreal
 ### [Introducción al desarrollo de Unreal](unreal-development-overview.md)
-### [Seguimiento de las manos en Unreal](unreal-hand-tracking.md)
 ### [Entrada de mirada en Unreal](unreal-gaze-input.md)
+### [Seguimiento de las manos en Unreal](unreal-hand-tracking.md)
+### [Cámara de HoloLens en Unreal](unreal-hololens-camera.md)
+### [Códigos QR en Unreal](unreal-qr-codes.md)
 ### [Asignación espacial en Unreal](unreal-spatial-mapping.md)
 ### [Audio espacial en Unreal](unreal-spatial-audio.md)
 ### [Delimitadores espaciales en Unreal](unreal-spatial-anchors.md)
-### [Entrada de voz en Unreal](unreal-voice-input.md)
-### [Cámara de HoloLens en Unreal](unreal-hololens-camera.md)
-### [Códigos QR en Unreal](unreal-qr-codes.md)
 ### [Streaming en Unreal](unreal-streaming.md)
+### [Implementación en el dispositivo en Unreal](unreal-deploying.md)
+### [Entrada de voz en Unreal](unreal-voice-input.md)
+### [WinRT en Unreal](unreal-winrt.md)
 ### [Recomendaciones de rendimiento para Unreal](performance-recommendations-for-unreal.md)
 
 ## JavaScript
