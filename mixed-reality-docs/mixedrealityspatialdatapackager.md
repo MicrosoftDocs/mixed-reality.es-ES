@@ -5,13 +5,13 @@ author: alfred-msft
 ms.author: yuripek
 ms.date: 05/16/2019
 ms.topic: article
-keywords: LBE, MixedRealitySpatialDataPackager. exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: 3beb8f9168bfb6fd921d6d5c1eb6d250c70a714d
-ms.sourcegitcommit: 83698638b93c5ba77b3ffc399f1706482539f27b
+keywords: LBE, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
+ms.openlocfilehash: 4a285cbd7423d7cacaf52370e6e19acf42672289
+ms.sourcegitcommit: cfca6cb016d8683fa2c611a97d493a4947935dbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74539680"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402744"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentación del Empaquetador de datos espaciales de realidad mixta
 
@@ -31,7 +31,7 @@ ms.locfileid: "74539680"
     <col width="25%" />
     </colgroup>
     <tr>
-        <td><strong>Ofrecen</strong></td>
+        <td><strong>Característica</strong></td>
         <td><a href="hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
@@ -60,7 +60,7 @@ Requisitos y limitaciones clave:
 
 ## <a name="mapping-best-practices"></a>Procedimientos recomendados de asignación
 
-1. Borrar asignaciones existentes en el panel de control (Configuración-> entorno mixto de realidad >-> Borrar datos de entorno)
+1. Borrar asignaciones existentes en el panel de control (configuración-> entorno mixto de realidad >-> borrar datos de entorno)
 2. Asegúrese de que haya suficiente iluminación para un buen seguimiento y si la ejecución del modo de mapa bloqueado intente mantener la misma iluminación
 3. Cuando sea posible, mantenga el intervalo dinámico de iluminación bajo evitando áreas de iluminación alta junto a áreas oscuras y sombreadas.
 4. Minimizar las superficies en blanco y sin texturas, por ejemplo, colocar un intervalo de pósters distintos en las paredes blancas
@@ -71,7 +71,7 @@ Requisitos y limitaciones clave:
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Ejecución de un empaquetador de datos espaciales de realidad mixta con un script complementario
 
-Hemos proporcionado MRSpatialPackagerHelperScript. PS1 que ejecuta el paquete de asignación de las herramientas. 
+Hemos proporcionado MRSpatialPackagerHelperScript.ps1 que ejecutan las herramientas del Empaquetador de mapas. 
 
 
 Los parámetros de script se definen a continuación:
@@ -135,14 +135,14 @@ Started SPECTRUM
 IMPORT SUCCESS
 ```
 
-### <a name="how-to-export-using-mixedrealitypackagerexe"></a>Cómo exportar con MixedRealityPackager. exe
+### <a name="how-to-export-using-mixedrealityspatialdatapackagerexe"></a>Cómo exportar con MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe export <folderpath to mapx files> <source package family name>    
 ```
 
 La exportación de mapas fuera del dispositivo genera dos archivos MAPX, Het. MAPX y SA. MAPX. Durante el proceso de exportación, se quitan todos los delimitadores espaciales, a excepción de la aplicación especificada y el límite creado por el usuario (si existe). El nombre de familia del paquete de origen debe coincidir con una aplicación instalada existente o se producirá un error en el archivo exe.
 
-### <a name="how-to-import-using-mixedrealitypackagerexe"></a>Cómo importar mediante MixedRealityPackager. exe
+### <a name="how-to-import-using-mixedrealityspatialdatapackagerexe"></a>Cómo importar mediante MixedRealitySpatialDataPackager.exe
 ```
 MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target package family name> <user SID>
 ```
@@ -150,7 +150,7 @@ La importación elimina los datos espaciales existentes y los reemplaza con los 
 
 
 ***
-## <a name="error-messages"></a>Mensajes de error
+## <a name="error-messages"></a>mensajes de error
 Además, los mensajes de error siguientes también irán acompañados de un valor HRESULT.
 
 ### <a name="if-there-was-an-error-invalid-arguments"></a>Si se produjo un error argumentos no válidos
