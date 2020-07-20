@@ -1,0 +1,99 @@
+### YamlMime:Landing
+title: Le damos la bienvenida a Mixed Reality
+summary: Sumérjase en el mundo en expansión de las aplicaciones de Mixed Reality mediante Windows Mixed Reality, Mixed Reality Toolkit (MRTK), Unity, Unreal y mucho más sobre los cascos envolventes de HoloLens y Windows.
+metadata:
+  title: Le damos la bienvenida a Mixed Reality
+  description: Aprenda a usar las herramientas y características de Mixed Reality en dispositivos como HoloLens 2.
+  ms.topic: landing-page
+  author: hferrone
+  ms.author: v-haferr
+  ms.date: 07/03/2020
+  ms.openlocfilehash: afb6d40c969d90af5bf1b5f6844ab357eb255f15
+  ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 07/17/2020
+  ms.locfileid: "86451343"
+landingContent:
+- title: Descubra nuevos mundos envolventes
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ¿Qué es Mixed Reality?
+      url: get-started-with-mr.md
+    - text: Descripción del entorno de Mixed Reality
+      url: case-study-expanding-the-design-process-for-mixed-reality.md
+    - text: Participación en la comunidad
+      url: community.md
+- title: Diseñe para Mixed Reality
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Empezar a diseñar y a crear prototipos
+      url: design.md
+    - text: Exploración de los conceptos de diseño básicos
+      url: core-concepts-landingpage.md
+    - text: Información sobre los conceptos básicos de la interacción
+      url: interaction-fundamentals.md
+    - text: Incorporación de elementos de la experiencia del usuario
+      url: app-patterns-landingpage.md
+- title: Desarrolle para Mixed Reality
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Elección del recorrido de desarrollo de Mixed Reality
+      url: development.md
+    - text: Instalación de las herramientas
+      url: install-the-tools.md
+    - text: Seguimiento de tutoriales
+      url: tutorials.md
+    - text: Inicio del recorrido de Unity
+      url: unity-development-overview.md
+    - text: Inicio del recorrido de Unreal
+      url: unreal-development-overview.md
+    - text: Inicio del recorrido de JavaScript
+      url: javascript-development-overview.md
+    - text: Inicio del recorrido nativo (OpenXR/WinRT)
+      url: directx-development-overview.md
+- title: Distribuya las aplicaciones
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Guía de diseño del iniciador de aplicaciones 3D
+      url: 3d-app-launcher-design-guidance.md
+    - text: Integración de las compras desde la aplicación
+      url: in-app-purchases.md
+    - text: Carga en Microsoft Store
+      url: submitting-an-app-to-the-microsoft-store.md
+- title: Profundice en HoloLens
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ¿Qué es HoloLens?
+      url: https://docs.microsoft.com/hololens/
+    - text: Hardware de HoloLens 2
+      url: https://docs.microsoft.com/hololens/hololens2-hardware
+    - text: Familiarización con HoloLens 2
+      url: https://docs.microsoft.com/hololens/hololens2-basic-usage
+    - text: Implementación de HoloLens en un entorno comercial
+      url: https://docs.microsoft.com/hololens/hololens-requirements
+- title: Servicios para desarrolladores de Azure
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Introducción a los servicios en la nube
+      url: mixed-reality-cloud-services.md
+    - text: Información sobre Azure Spatial Anchors
+      url: https://docs.microsoft.com/azure/spatial-anchors/
+    - text: Desarrollo con Azure Remote Rendering
+      url: https://docs.microsoft.com/azure/remote-rendering/
+- title: Descubra las novedades
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Información sobre los servicios de Azure
+      url: azure-services.md
+    - text: La nueva versión de Microsoft Edge
+      url: new-microsoft-edge.md
+    - text: Unión a la comunidad de Mixed Reality
+      url: community.md
