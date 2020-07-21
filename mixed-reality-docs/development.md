@@ -8,12 +8,12 @@ ms.date: 04/27/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, unreal, directx
-ms.openlocfilehash: 97a6e130af45a9444ead5e6ed40168351c4dbbf6
-ms.sourcegitcommit: ba4c8c2a19bd6a9a181b2cec3cb8e0402f8cac62
+ms.openlocfilehash: 3c874e45e555ec6defa611bd5404abbb18e6612e
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82835294"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447861"
 ---
 # <a name="learn-the-tools-and-architecture"></a>Conocer las herramientas y la arquitectura
 
@@ -140,8 +140,8 @@ Todos los aspectos esenciales que necesitas para empezar a escribir una aplicaci
 
 :::row:::
     :::column:::
-       [![Comprender los conceptos básicos](images/icon-lightbulb.png)](index.md#understand-the-basics)<br>
-        **[Comprender los conceptos básicos](index.md#understand-the-basics)**<br>
+       [![Comprender los conceptos básicos](images/icon-lightbulb.png)](get-started-with-mr.md#understand-the-basics)<br>
+        **[Comprender los conceptos básicos](get-started-with-mr.md#understand-the-basics)**<br>
         Obtén una mejor comprensión de lo que define la realidad mixta y cómo se usa.
     :::column-end:::
     :::column:::
