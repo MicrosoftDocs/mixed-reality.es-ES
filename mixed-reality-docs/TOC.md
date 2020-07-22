@@ -134,20 +134,22 @@
 ###### [8. Uso del seguimiento de los ojos](mr-learning-base-08.md)
 ###### [9. Uso de los comandos de voz](mr-learning-base-09.md)
 ##### Tutoriales sobre Azure Spatial Anchors
-###### [1. Introducción a Azure Spatial Anchors](mrlearning-asa-ch1.md)
-###### [2. Guardado, recuperación y uso compartido de Azure Spatial Anchors](mrlearning-asa-ch2.md)
-###### [3. Visualización de comentarios de Azure Spatial Anchors](mrlearning-asa-ch3.md)
-###### [4. Azure Spatial Anchors para iOS y Android](mrlearning-asa-ch4.md)
+###### [1. Introducción](mr-learning-asa-01.md)
+###### [2. Introducción a Azure Spatial Anchors](mr-learning-asa-02.md)
+###### [3. Guardado, recuperación y uso compartido de Azure Spatial Anchors](mr-learning-asa-03.md)
+###### [4. Visualización de comentarios de Azure Spatial Anchors](mr-learning-asa-04.md)
+###### [5. Azure Spatial Anchors para iOS y Android](mr-learning-asa-05.md)
+##### Tutoriales sobre las funcionalidades multiusuario
+###### [1. Introducción](mr-learning-sharing-01.md)
+###### [2. Configuración de Photon Unity Networking](mr-learning-sharing-02.md)
+###### [3. Conexión de varios usuarios](mr-learning-sharing-03.md)
+###### [4. Uso compartido de movimientos de objetos con varios usuarios](mr-learning-sharing-04.md)
+###### [5. Integración de Azure Spatial Anchors en una experiencia compartida](mr-learning-sharing-05.md)
 ##### Tutoriales de los servicios de voz de Azure
 ###### [1. Integración y uso de reconocimiento de voz y de transcripción](mrlearning-speechSDK-ch1.md)
 ###### [2. Adición de un modo sin conexión para la traducción de voz a texto local](mrlearning-speechSDK-ch2.md)
 ###### [3. Adición del componente Speech Translation de Azure Cognitive Services](mrlearning-speechSDK-ch3.md)
 ###### [4. Configuración de reconocimiento de intenciones y comprensión del lenguaje natural](mrlearning-speechSDK-ch4.md)
-##### Tutoriales sobre las funcionalidades multiusuario
-###### [1. Configuración de Photon Unity Networking](mrlearning-sharing(photon)-ch1.md)
-###### [2. Conexión de varios usuarios](mrlearning-sharing(photon)-ch2.md)
-###### [3. Uso compartido de movimientos de objetos con varios usuarios](mrlearning-sharing(photon)-ch3.md)
-###### [4. Integración de Azure Spatial Anchors en una experiencia compartida](mrlearning-sharing(photon)-ch4.md)
 ##### Tutoriales de audio espacial
 ###### [1. Agregar audio espacial al proyecto](unity-spatial-audio-ch1.md)
 ###### [2. Sonidos de interacción del botón de espacialización](unity-spatial-audio-ch2.md)
