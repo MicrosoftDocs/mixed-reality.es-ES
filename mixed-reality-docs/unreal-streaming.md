@@ -1,21 +1,21 @@
 ---
 title: Streaming en Unreal
 description: Guía de streaming de Unreal a HoloLens 2
-author: suwu
+author: sw5813
 ms.author: suwu
-ms.date: 6/8/2020
+ms.date: 7/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, realidad mixta, streaming, PC, control remoto de aplicaciones holográficas, Holographic Remoting Player, documentación
 appliesto:
 - HoloLens
 - HoloLens 2
-ms.openlocfilehash: 78a019f5b74b254c1f32ec85dc639df47648555f
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: d25efbcf83e45749cc4eb8b99581b71105c59c9d
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84888916"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303536"
 ---
 # <a name="streaming-in-unreal"></a>Streaming en Unreal
 
@@ -32,7 +32,8 @@ Para empezar, deberá descargar [Holographic Remoting Player](holographic-remoti
 Durante el streaming, tiene acceso prácticamente a las mismas funcionalidades de HoloLens que cuando se ejecuta una aplicación en un dispositivo. Esto incluye [seguimiento de articulación de la mano](unreal-hand-tracking.md) (si utiliza HoloLens 2), [asignación espacial](unreal-spatial-mapping.md) y [delimitadores espaciales](unreal-spatial-anchors.md), pero descarta las características de esta [lista de limitaciones](holographic-remoting-troubleshooting.md). 
 
 > [!NOTE]
-> La calidad de streaming depende en gran medida de la intensidad de la señal de su red WiFi.
+> * La calidad de streaming depende en gran medida de la intensidad de la señal de su red WiFi.
+> * Todas las funciones se habilitan automáticamente para la aplicación Holographic Remoting Player. Si encuentra una funcionalidad que requiere permiso del usuario (p. ej., el seguimiento ocular) para funcionar en streaming, pero no cuando se ejecuta en el dispositivo, asegúrese de haber habilitado las funcionalidades adecuadas en la configuración del proyecto.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -50,7 +51,7 @@ Durante el streaming, tiene acceso prácticamente a las mismas funcionalidades d
     </tr>
      <tr>
         <td>Editor de Unreal</td>
-        <td>✔</td>
+        <td>✔️</td>
         <td>✔️</td>
         <td>❌</td>
     </tr>

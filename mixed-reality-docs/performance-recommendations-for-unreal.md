@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, performance, optimization, settings, documentation
-ms.openlocfilehash: 9f128a3ef09f29fc745c21b09b7ec97f5db33605
-ms.sourcegitcommit: 7f50210b71a65631fd1bc3fdb215064e0db34333
+ms.openlocfilehash: a7972962eeb2b1480a7da38210b5ee77104f508b
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84533127"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303645"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Recomendaciones de rendimiento para Unreal
 
@@ -32,10 +32,11 @@ Puede encontrar cada una de las siguientes opciones en **Edit > Project Settings
     * Desplácese hasta la sección **Engine** (Motor), seleccione **Rendering** (Representación), expanda la sección **Culling** (Selección) y quite la marca de **Occlusion Culling** (Selección de la oclusión).
         + Si necesita la selección de la oclusión para una escena detallada que se está representando, se recomienda que habilite **Support Software Occlusion Culling** (Compatibilidad de la selección de la oclusión del software) en **Engine > Rendering** (Motor > Representación). Esto permite que Unreal realice el trabajo en la CPU y evita las consultas de oclusión de GPU, que tienen un rendimiento bajo en HoloLens 2.
 
-![Configuración de destino móvil](images/unreal/performance-recommendations-img-02.png)
+![Deshabilitación de la selección de la oclusión](images/unreal/performance-recommendations-img-02.png)
 
-3. Actualización de la representación VR:
-    * Desplácese hasta la sección **Engine** (Motor), seleccione **Rendering** (Representación), expanda la sección **VR** y habilite ambas opciones, **Instanced Stereo** (Estéreo con instancias) y **Mobile Multi-View** (Multivista móvil).
-        + Es posible que tenga que desactivar **Mobile Post-Processing** (Posprocesamiento móvil) para poder activar **Mobile Multi-View** (Multivista móvil).
+3. Uso del modo multivista móvil:
+    * Desplácese hasta la sección **Engine** (Motor), seleccione **Rendering** (Representación), expanda la sección **VR** y habilite ambas opciones, **Instanced Stereo** (Estéreo con instancias) y **Mobile Multi-View** (Multivista móvil). La opción Mobile HDR (Alto rango dinámico móvil) debe estar desactivada.
 
-![Configuración de destino móvil](images/unreal/performance-recommendations-img-03.png)
+![Configuración de representación de VR](images/unreal/performance-recommendations-img-03.png)
+
+4. Establecimiento de la opción **Maximum number of CSM cascades to render** (Número máximo de cascadas de CSM para representar) en **1** y **Max Movable Spotlights / Point Lights** (Número máximo de luces de puntuales y concentradas movibles) en **0**. 

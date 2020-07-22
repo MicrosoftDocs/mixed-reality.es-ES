@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 99407a4069f914bf077e6323dde3e12978f6b765
-ms.sourcegitcommit: 7ca383ef1c5dc895ca2a289435f2e9d4c1ee6e65
+ms.openlocfilehash: c49e2a69cb97a996da4bf601a105c2176ccf267f
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345695"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303546"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetado e implementación en el dispositivo o emulador
 
@@ -30,15 +30,15 @@ En este caso, el [control remoto de holografías](https://docs.microsoft.com/win
 
 Si va a realizar esta ruta con la aplicación de ajedrez, necesitará algunos elementos:
 
-1.  Instale **Holographic Remoting Player** desde Microsoft Store en HoloLens 2 y ejecute la aplicación.
+1.  Instale **Holographic Remoting Player** desde Microsoft Store en HoloLens 2 y ejecute la aplicación. Anote la dirección IP que se muestra en la aplicación.
 
-2.  Vaya a **Edit > Project Settings** (Editar > Configuración del proyecto) y marque la **habilitación del control remoto** en la sección **Holographic Remoting** (Control remoto de holografías).
+2.  Cuando vuelva a estar en el editor de Unreal, vaya a **Edit > Project Settings** (Editar > Configuración del proyecto) y marque la opción **Habilitar la comunicación remota** en la sección **Holographic Remoting** (Comunicación remota de holografías).
 
-3.  Reinicie el editor, [busque la dirección IP del dispositivo](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens#connect-over-wi-fi), escríbala y haga clic en **Connect** (Conectar).
+3.  Reinicie el editor y, a continuación, escriba la dirección IP del dispositivo (como se muestra en la aplicación Holographic Remoting Player) y haga clic en **Conectar**.
 
-Una vez conectado, haga clic en la flecha desplegable situada a la derecha del botón **Play** (Jugar) y seleccione **VR Preview** (Vista previa de VR). Se ejecutará la aplicación en la ventana de vista previa de VR, que se transmite en secuencias a los auriculares de HoloLens. 
+Una vez conectado, haga clic en la flecha desplegable situada a la derecha del botón **Play** (Jugar) y seleccione **VR Preview** (Vista previa de VR). La aplicación se ejecutará en la ventana VR Preview (Vista previa de VR), de la que se hace streaming al casco de HoloLens. 
 
-## <a name="packaging-and-deploying-the-app"></a>Empaquetado e implementación de la aplicación 
+## <a name="packaging-and-deploying-the-app-via-device-portal"></a>Empaquetado e implementación de la aplicación mediante el Portal de dispositivos
 
 >[!NOTE]
 >Si esta es la primera vez que empaquetas una aplicación de Unreal para HoloLens, deberás descargar los archivos auxiliares desde el iniciador de Epic. 

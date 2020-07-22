@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: 40a8441177582a55b58acbfbd15c7b506853e4da
-ms.sourcegitcommit: 6d9d01d53137435c787f247f095d5255581695fc
+ms.openlocfilehash: 2a63f53464e354ae49f8c63fafbf592508bd5e3b
+ms.sourcegitcommit: 0eb99fae933d4374af2c032af4e9ceda1807e532
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83228000"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156786"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
 
@@ -327,9 +327,9 @@ Al hacerlo, mueves la mano accidentalmente por unos botones holográficos intera
 ---
 
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Manipulación en MRTK (Mixed Reality Toolkit) para Unity
-Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede conseguir un comportamiento de manipulación común con el script **ManipulationHandler**. Con ManipulationHandler, puede agarrar y mover objetos directamente con las manos o con el haz de mano. También admite la manipulación con dos manos para escalar y girar un objeto.
+Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede conseguir un comportamiento de manipulación común con el script **ObjectManipulator**. Con ManipulationHandler, puede agarrar y mover objetos directamente con las manos o con el haz de mano. También admite la manipulación con dos manos para escalar y girar un objeto.
 
-* [MRTK: manipulación](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ManipulationHandler.html)
+* [MRTK: manipulación](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)
 
 
 ---

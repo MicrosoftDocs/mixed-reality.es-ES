@@ -7,12 +7,12 @@ ms.date: 06/27/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 75ddce9063bb9d33f5fe2343fe30178222a5f8ac
-ms.sourcegitcommit: 9df82dba06a91a8d2cedbe38a4328f8b86bb2146
+ms.openlocfilehash: 7a0fa915a80763300eff470e29356034d6a0f841
+ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79031625"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303676"
 ---
 # <a name="2-using-speech-recognition-to-execute-commands"></a>2. Usar el reconocimiento de voz para ejecutar comandos
 
@@ -46,7 +46,7 @@ Para volver a habilitarlo, indica la palabra de activación **Activate terminal*
 > La aplicación necesita conectarse a Azure, por lo que debes asegurarte de que el equipo o dispositivo está conectado a Internet.
 
 > [!TIP]
-> Si prevés que no podrás conectarte a Azure con frecuencia, también puedes implementar comandos de voz mediante MRTK, para lo que debes seguir las instrucciones de [Habilitar comandos de voz](mrlearning-base-ch5.md#enabling-voice-commands).
+> Si prevé que no podrá conectarse a Azure con frecuencia, también puede implementar comandos de voz mediante MRTK, para lo que debe seguir las instrucciones de [Uso de comandos de voz](mr-learning-base-09.md).
 
 ## <a name="congratulations"></a>Enhorabuena
 
