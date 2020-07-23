@@ -7,18 +7,18 @@ ms.date: 3/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: actualizadas, herramientas, introducción, conceptos básicos, unity, visual studio, toolkit
-ms.openlocfilehash: d29d27c8549a2ecdc98fa27df745fee07d1c056e
-ms.sourcegitcommit: b392847529961ac36bbff154ce0830f8b2dbd766
+ms.openlocfilehash: ac3e4967ce687f7cb3009de64748841f88562a92
+ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86300547"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447949"
 ---
 # <a name="install-the-tools"></a>Instalación de las herramientas
 
 Consigue las herramientas necesarias para compilar aplicaciones para Microsoft HoloLens y los cascos envolventes de Windows Mixed Reality (VR). No hay ningún SDK independiente para el desarrollo con Windows Mixed Reality. Tendrás que usar Visual Studio con el SDK de Windows 10.
 
-¿No tienes un dispositivo de realidad mixta? Puedes instalar el [emulador de HoloLens](using-the-hololens-emulator.md) para probar algunas funciones de las aplicaciones de realidad mixta sin necesidad de un dispositivo HoloLens. También puedes utilizar el [simulador de Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md) para probar las aplicaciones de realidad mixta con unos cascos envolventes.
+¿No tienes un dispositivo de realidad mixta? Puedes instalar el [emulador de HoloLens](using-the-hololens-emulator.md) para probar algunas funciones de las aplicaciones de realidad mixta sin necesidad de un dispositivo HoloLens. También puedes utilizar el [simulador de Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md) para probar las aplicaciones de realidad mixta con unos cascos envolventes. Si usa Unity, puede usar la simulación de entrada de [Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity) para probar varios tipos de interacciones de entrada, como el seguimiento de la mano y el ocular.
 
 Se recomienda instalar el motor de juego de Unity como la manera más sencilla de empezar a crear aplicaciones de realidad mixta. Sin embargo, también puedes compilar en DirectX si quieres utilizar un motor personalizado.
 
@@ -30,18 +30,18 @@ Se recomienda instalar el motor de juego de Unity como la manera más sencilla d
 ## <a name="installation-checklist"></a>Lista de comprobación de la instalación
 
 
-| Herramienta | Descripción | Notas |
-|---------|---------|---------|
-| ![Logotipo de Windows](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10** (vínculo de instalación manual)</a> | Instala la versión más reciente de Windows 10 para que el sistema operativo del equipo coincida con la plataforma para la que vas a compilar las aplicaciones de realidad mixta. | **Instalación de Windows 10** <br> <ul><li>Puedes instalar la versión más reciente de Windows 10 mediante Windows Update en Configuración o mediante la creación de soportes de instalación a través del vínculo de la columna izquierda.<li>Consulta las [notas de la versión actual](release-notes-october-2018.md) para más información acerca de las características de realidad mixta más recientes disponibles en cada versión de Windows 10.</ul> **Habilita el modo para desarrolladores en el equipo** en Configuración > Actualización y seguridad > Para programadores. <br><br> **Nota para equipos empresariales o de administración corporativa:** si el equipo lo administra un departamento de TI de la organización, es posible que debas ponerte en contacto con ellos para la actualización. <br><br> **Versiones "N" de Windows:** Los cascos envolventes de Windows Mixed Reality no son compatibles con las versiones "N" de Windows. |
-| ![Logotipo de Visual Studio](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2019 (16.2 o superior)** (vínculo de instalación)</a> | Entorno de desarrollo integrado (IDE) completo para Windows, etc. Vas a utilizar Visual Studio para escribir código, depurar, realizar pruebas e implementar. | Asegúrate de instalar las siguientes cargas de trabajo: <ul><li>**Desarrollo de escritorio con C++**</li><li>**Desarrollo para la Plataforma universal de Windows (UWP)**</li></ul>En la carga de trabajo de UWP, asegúrate de comprobar el siguiente componente opcional si vas a desarrollar para HoloLens:<ul><li>**Conectividad del dispositivo USB**</li></ul>**Nota acerca de Unity:** A menos que esté intentando instalar de manera intencionada una versión más reciente (no LTS) de Unity para un propósito específico, le recomendamos que *no* instale la carga de trabajo de Unity como parte de la instalación de Visual Studio y que, en su lugar, instale el flujo **Unity 2019 LTS** como se indica a continuación.<br> <br>**Nota:** Hay algunos problemas conocidos con la depuración de aplicaciones de realidad mixta en Visual Studio 2019, versión 16.0.  Asegúrate de actualizar a **Visual Studio 2019, versión 16.2 o superior**. |
-| ![Logotipo de Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com//windows/downloads/windows-10-sdk" target="_blank">**SDK de Windows 10 (10.0.18362.0)** (vínculo de instalación manual)</a> | Proporciona los encabezados, bibliotecas, metadatos y herramientas más recientes para compilar aplicaciones de Windows 10 en HoloLens 2. | Para compilar aplicaciones de HoloLens 2, debes instalar el SDK de Windows, compilación 18362 o posterior.<br> <br> Si solo vas a desarrollar aplicaciones para cascos de Windows Mixed Reality o HoloLens (1.ª generación), puedes usar el SDK de Windows que instala Visual Studio 2017. |
-| ![Logotipo de Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2132415" target="_blank">**Emulador de HoloLens 2 (Windows Holographic, versión 2004, actualización de junio de 2020)** (vínculo de instalación: 10.0.19041.1106)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulador de HoloLens (Gen 1)** (vínculo de instalación: 10.0.17763.134)</a> | El emulador te permite ejecutar aplicaciones en una imagen de máquina virtual de HoloLens sin necesidad de un dispositivo HoloLens físico.<br> <br> | Consulta [Uso del emulador de HoloLens](using-the-hololens-emulator.md) para más información sobre cómo empezar a trabajar con el emulador.<br> <br> **El sistema debe admitir Hyper-V** para que la instalación del emulador se realice correctamente. Consulta la sección Requisitos del sistema que aparece a continuación para obtener los detalles. <br>|
+| Herramienta | Notas |
+|---------|---------|
+| ![Logotipo de Windows](images/Windows10_logo.png)<br><br><a href="https://www.microsoft.com/software-download/windows10" target="_blank">**Windows 10** (vínculo de instalación manual)</a><br><br>Instala la versión más reciente de Windows 10 para que el sistema operativo del equipo coincida con la plataforma para la que vas a compilar las aplicaciones de realidad mixta.  | **Instalación de Windows 10** <br> Puedes instalar la versión más reciente de Windows 10 mediante Windows Update en Configuración o mediante la creación de soportes de instalación a través del vínculo de la columna izquierda. <br><br>Consulta las [notas de la versión actual](release-notes-october-2018.md) para más información acerca de las características de realidad mixta más recientes disponibles en cada versión de Windows 10. **Habilita el modo para desarrolladores en el equipo** en Configuración > Actualización y seguridad > Para programadores. <br><br> **Nota para equipos empresariales y de administración corporativa**<br>Si administra el equipo un departamento de TI de la organización, es posible que deba ponerse en contacto con ellos para la actualización. <br><br> **Versiones "N" de Windows**<br> Los cascos envolventes de Windows Mixed Reality no son compatibles con las versiones "N" de Windows. |
+| ![Logotipo de Visual Studio](images/visualstudio_logo.png)<br><br><a href="https://visualstudio.microsoft.com/downloads/" target="_blank">**Visual Studio 2019 (16.2 o superior)** (vínculo de instalación)</a> <br><br>Entorno de desarrollo integrado (IDE) completo para Windows, etc. Vas a utilizar Visual Studio para escribir código, depurar, realizar pruebas e implementar. | Asegúrate de instalar las siguientes cargas de trabajo: <br><br>**● Desarrollo de escritorio con C++**<br>**● Desarrollo para la Plataforma universal de Windows (UWP)**<br><br>En la carga de trabajo de UWP, asegúrate de comprobar el siguiente componente opcional si vas a desarrollar para HoloLens:<br><br>**● Conectividad con dispositivo USB**<br><br>**Nota acerca de Unity**<br>A menos que esté intentando instalar de manera intencionada una versión más reciente (no LTS) de Unity para un propósito específico, le recomendamos que *no* instale la carga de trabajo de Unity como parte de la instalación de Visual Studio y que, en su lugar, instale el flujo **Unity 2019 LTS** como se indica a continuación.<br><br>**Note**<br>Hay algunos problemas conocidos con la depuración de aplicaciones de realidad mixta en Visual Studio 2019, versión 16.0.  Asegúrate de actualizar a **Visual Studio 2019, versión 16.2 o superior**. |
+| ![Logotipo de Windows](images/Windows10_logo.png)<br><br><a href="https://developer.microsoft.com//windows/downloads/windows-10-sdk" target="_blank">**SDK de Windows 10 (10.0.18362.0)** (vínculo de instalación manual)</a> <br><br>Proporciona los encabezados, bibliotecas, metadatos y herramientas más recientes para compilar aplicaciones de Windows 10 en HoloLens 2. | **Para compilar aplicaciones de HoloLens 2, debe instalar Windows SDK, compilación 18362 o posterior.**<br> <br> Si solo vas a desarrollar aplicaciones para cascos de Windows Mixed Reality o HoloLens (1.ª generación), puedes usar el SDK de Windows que instala Visual Studio 2017. |
+| ![Logotipo de Visual Studio](images/HoloLensIcon.jpg)<br><br><a href="https://go.microsoft.com/fwlink/?linkid=2132415" target="_blank">**Emulador de HoloLens 2 (Windows Holographic, versión 2004, actualización de junio de 2020)** (vínculo de instalación: 10.0.19041.1106)</a><br> <br><a href="https://go.microsoft.com/fwlink/?linkid=2065980" target="_blank">**Emulador de HoloLens (Gen 1)** (vínculo de instalación: 10.0.17763.134)</a> <br><br>El emulador te permite ejecutar aplicaciones en una imagen de máquina virtual de HoloLens sin necesidad de un dispositivo HoloLens físico.<br> <br> | Consulta [Uso del emulador de HoloLens](using-the-hololens-emulator.md) para más información sobre cómo empezar a trabajar con el emulador.<br> <br> **El sistema debe admitir Hyper-V** para que la instalación del emulador se realice correctamente. Consulta la sección Requisitos del sistema que aparece a continuación para obtener los detalles. <br>|
 
 ## <a name="choose-your-engine"></a>Elige el motor
 
 :::row:::
     :::column:::
-        <a href="https://unity3d.com/unity/qa/lts-releases?version=2018.4" target="_blank">![Unity](images/unity_logo.png)<br>**Unity**</a><br>
+        <a href="https://unity3d.com/unity/qa/lts-releases" target="_blank">![Unity](images/unity_logo.png)<br>**Unity**</a><br>
         Normalmente, se recomienda la versión Unity LTS (soporte técnico a largo plazo) como la mejor versión con la que empezar nuevos proyectos, actualizándola a la revisión más reciente para aprovechar las actualizaciones más estables.<br>
         <br>
         La recomendación actual es usar **Unity 2019**, que es la compilación LTS necesaria para MRTK v2 que se describe a continuación.<br>
@@ -50,10 +50,6 @@ Se recomienda instalar el motor de juego de Unity como la manera más sencilla d
         <br>
         Consulta [Introducción al desarrollo de Unity](unity-development-overview.md) para empezar a desarrollar con Unity para los cascos envolventes HoloLens 2 o Windows Mixed Reality.<br>
         <br>
-        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/releases" target="_blank">![MRTK](images/final_mrtk-small_logo.png)<br>**Mixed Reality Toolkit (MRTK)** </a><br>
-        Mixed Reality Toolkit (MRTK) v2 para Unity es un kit de desarrollo multiplataforma de código abierto para aplicaciones de realidad mixta.<br>
-        <br>
-        MRTK v2 está diseñado para acelerar el desarrollo de aplicaciones destinadas a Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR. El proyecto está pensado para reducir las barreras en la creación de aplicaciones de realidad mixta y para contribuir al crecimiento conjunto de la comunidad.
     :::column-end:::
     :::column:::
         <a href="https://docs.unrealengine.com//GettingStarted/Installation/index.html" target="_blank">![Unreal](images/Unreal_logo.png)<br>**Unreal**</a><br>
@@ -78,12 +74,23 @@ Se recomienda instalar el motor de juego de Unity como la manera más sencilla d
 <br>
 
 ## <a name="mixed-reality-toolkit-mrtk"></a>Mixed Reality Toolkit (MRTK)
+![MRTK](images/UX/MRTK_UX_Hero.png)
 
-Mixed Reality Toolkit proporciona componentes y características que están pensadas para acelerar el desarrollo de aplicaciones destinadas a Microsoft HoloLens, cascos envolventes de Windows Mixed Reality y la plataforma OpenVR. El proyecto está pensado para reducir las barreras en la creación de aplicaciones de realidad mixta y para contribuir al crecimiento conjunto de la comunidad.
-* <a href="https://github.com/Microsoft/MixedRealityToolkit" target="_blank">Mixed Reality Toolkit</a>: una colección de scripts y componentes diseñados para acelerar el desarrollo de aplicaciones de realidad mixta.
-* <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">Mixed Reality Toolkit-Unity</a>: usa código del kit de herramientas básico y facilita su uso en Unity.
-* <a href="https://github.com/Microsoft/MixedRealityToolkit-Unreal" target="_blank">Mixed Reality Toolkit-Unreal</a>: un conjunto de componentes, en forma de complementos, muestras y documentación, diseñado para acelerar el desarrollo de aplicaciones de realidad mixta con Unreal Engine.
-* <a href="https://github.com/Microsoft/MixedRealityCompanionKit" target="_blank">Mixed Reality Companion Kit</a>: bits y componentes de código que no se pueden ejecutar directamente en HoloLens o en cascos envolventes (VR), sino que se emparejan para generar experiencias destinadas a Windows Mixed Reality.
+Mixed Reality Toolkit (MRTK) es un kit de desarrollo multiplataforma de código abierto para aplicaciones de realidad mixta. MRTK proporciona un sistema de entrada multiplataforma, componentes fundamentales y bloques de creación comunes para interacciones espaciales. El kit de herramientas está diseñado para acelerar el desarrollo de aplicaciones destinadas a Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR.
+
+:::row:::
+    :::column:::
+        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">![Unity](images/MRTK_Badge_Unity.png)<br>**Mixed Reality Toolkit - Unity (GitHub)** </a><br>
+    :::column-end:::
+    :::column:::
+        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unreal" target="_blank">![Unity](images/MRTK_Badge_Unreal.png)<br>**Mixed Reality Toolkit - Unreal (GitHub)** </a><br>
+    :::column-end:::
+:::row-end:::
+
+### <a name="other-tools"></a>Otras herramientas
+* <a href="https://github.com/Microsoft/MixedRealityCompanionKit" target="_blank">Mixed Reality Companion Kit (GitHub)</a>: bits y componentes de código que no se pueden ejecutar directamente en HoloLens o en cascos envolventes (VR), sino que se emparejan con estos para generar experiencias destinadas a Windows Mixed Reality.
+* <a href="https://github.com/Microsoft/MixedRealityToolkit" target="_blank">Mixed Reality Toolkit - Común (GitHub)</a>: colección de componentes y scripts compartidos.
+
 
 ## <a name="setting-up-your-pc-for-mixed-reality-development"></a>Configuración del equipo para el desarrollo de realidad mixta
 
