@@ -3,15 +3,15 @@ title: Configuración recomendada para Unity
 description: Unity ofrece algunos comportamientos específicos de la realidad mixta que se pueden alternar a través de la configuración del proyecto.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 03/26/2019
+ms.date: 07/07/2020
 ms.topic: article
 keywords: Unity, configuración, realidad mixta
-ms.openlocfilehash: e7628a8653fffbab9c792161ac8ff1666b47fa62
-ms.sourcegitcommit: f523b74a549721b6bec69cb5d2eca5b7673a793c
+ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
+ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85570330"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390122"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -23,9 +23,7 @@ Unity proporciona un conjunto de opciones predeterminadas que suelen ser el caso
 
 Es importante modificar la configuración de **calidad de Unity** de su entorno a **muy baja**. Esto ayudará a garantizar que la aplicación se ejecute de forma adecuada en la velocidad de fotogramas apropiada. Esto es muy importante para el desarrollo de HoloLens. Para el desarrollo en auriculares inmersivo, en función de las especificaciones del escritorio que se enciende en la experiencia de VR, todavía se puede lograr una velocidad de fotogramas sin los parámetros de calidad más bajos.
 
-En Unity 2018 LTS +, el nivel de calidad del proyecto se puede establecer de la siguiente manera:
-
-En **Editar**  >  **configuración del proyecto**  >  **calidad** > establezca el **valor predeterminado** haciendo clic en la flecha hacia abajo hasta el nivel de calidad **muy bajo** .
+En Unity 2019 LTS +, se puede establecer el nivel de calidad del proyecto; para ello, vaya a **Editar**  >  **configuración del proyecto**  >  **calidad** y establezca el **valor predeterminado** haciendo clic en la flecha hacia abajo y en el nivel de calidad **muy bajo** .
 
 ### <a name="lighting-settings"></a>Configuración de iluminación
 
@@ -44,18 +42,18 @@ En las aplicaciones de realidad mixta, la escena se representa dos veces, una ve
 
 Para habilitar esta característica en el proyecto de Unity
 
-1)  Abra la configuración de el **reproductor XR** (vaya a **Editar**  >  **configuración del proyecto**  >  **reproductor**  >  **XR configuración**)
-2) Seleccione **una instancia de paso único** en el menú desplegable **método de representación de estéreo** (se debe activar la casilla se admite la**realidad virtual** )
+1)  Abre **Player XR Settings** (Configuración del reproductor XR) (ve a **Editar** > **Configuración del proyecto** > **Reproductor** > **XR Settings** [Configuración de XR]).
+2) Selecciona **Single Pass Instanced** (Con instancia de un solo paso) en el menú desplegable **Stereo Rendering Method** (Método de representación en estéreo) (la casilla **Virtual Reality Supported** [Compatibilidad con realidad virtual] debe estar marcada)
 
 Lea los siguientes artículos de Unity para obtener más información sobre este enfoque de representación.
 
-- [Cómo maximizar el rendimiento de AR y VR con la representación avanzada de estéreo](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
+- [Cómo maximizar el rendimiento de AR y VR con la representación en estéreo avanzada](https://blogs.unity3d.com/2017/11/21/how-to-maximize-ar-and-vr-performance-with-advanced-stereo-rendering/)
 - [Creación de instancias de un solo paso](https://docs.unity3d.com/Manual/SinglePassInstancing.html)
 
 >[!NOTE]
-> Un problema común con la representación con instancias de paso único se produce si los desarrolladores ya tienen sombreadores personalizados no escritos para la creación de instancias. Después de habilitar esta característica, los desarrolladores pueden observar que algunos GameObjects solo se representan en un ojo. Esto se debe a que los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
+> Un problema común con la representación con instancia de un solo paso se produce si los desarrolladores ya tienen sombreadores personalizados no escritos para la creación de instancias. Después de habilitar esta característica, los desarrolladores pueden observar que algunos objetos GameObjects solo se representan en un ojo. Esto se debe a que los sombreadores personalizados asociados no tienen las propiedades adecuadas para la creación de instancias.
 >
-> Consulte [representación de un solo paso estéreo para HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) desde Unity para saber cómo solucionar este problema.
+> Consulta [Representación en estéreo de un solo paso para HoloLens](https://docs.unity3d.com/Manual/SinglePassStereoRenderingHoloLens.html) de Unity para solucionar este problema.
 
 ### <a name="enable-depth-buffer-sharing"></a>Habilitar uso compartido de búfer de profundidad
 
@@ -63,7 +61,7 @@ Para lograr una mejor estabilidad del holograma a partir de la percepción del u
 
 Para habilitar esta característica en el proyecto de Unity
 
-1) Abra la configuración de el **reproductor XR** (vaya a **Editar**  >  **configuración del proyecto**  >  **reproductor**  >  **XR configuración**)
+1) Abre **Player XR Settings** (Configuración del reproductor XR) (ve a **Editar** > **Configuración del proyecto** > **Reproductor** > **XR Settings** [Configuración de XR]).
 2) Active la casilla **Habilitar uso compartido de búfer de profundidad** en SDK de **realidad virtual**Windows la expansión de la  >  **realidad mixta** (se debe activar la casilla se**admite la realidad virtual** )
 
 Además, se recomienda seleccionar profundidad de **16 bits** en la configuración de **formato de profundidad** de este panel, especialmente para el desarrollo de HoloLens. Si selecciona 16 bits en comparación con 24 bits, se reducirán significativamente los requisitos de ancho de banda, ya que será necesario desplace o procese menos datos.
@@ -116,10 +114,10 @@ Para alternar la pantalla de presentación de Holographic:
 
 |  Pantalla de presentación de mostrar Unity  |  Imagen de bienvenida holográfica  |  Comportamiento |
 |----------|----------|----------|
-|  Activado  |  None  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Activado  |  Personalizada  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Desactivado  |  None  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
-|  Desactivado  |  Personalizada  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Activado  |  Ninguno  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Activado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Desactivado  |  Ninguno  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
+|  Desactivado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 
 Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
 
@@ -149,7 +147,7 @@ Para no participar en el comportamiento de pausa automática:
 
 Para definir el comportamiento personalizado cuando se pierde el seguimiento, controle los [eventos de pérdida de seguimiento](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Funcionalidades
+### <a name="capabilities"></a>Capacidades
 
 Para que una aplicación aproveche ciertas funciones, debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones de manifiesto se pueden realizar en Unity para que se incluyan en cada exportación de proyecto subsiguiente.
 
@@ -172,5 +170,5 @@ Las funcionalidades aplicables para habilitar las API de uso frecuente para apli
 ## <a name="see-also"></a>Consulte también
 
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
-* [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
+* [Análisis de rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
 * [Recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md)
