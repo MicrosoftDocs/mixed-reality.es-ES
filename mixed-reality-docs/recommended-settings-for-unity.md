@@ -3,15 +3,15 @@ title: Configuración recomendada para Unity
 description: Unity ofrece algunos comportamientos específicos de la realidad mixta que se pueden alternar a través de la configuración del proyecto.
 author: troy-ferrell
 ms.author: trferrel
-ms.date: 07/07/2020
+ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, configuración, realidad mixta
-ms.openlocfilehash: d2cc79ba0818985795c49f8812d33eba77b92b74
-ms.sourcegitcommit: 161f3c5a80f6988a9c4af26e29481fee06840e0f
+ms.openlocfilehash: 414e18686926fd8105726fb3811f3eef1d365bd9
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390122"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476727"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -147,7 +147,7 @@ Para no participar en el comportamiento de pausa automática:
 
 Para definir el comportamiento personalizado cuando se pierde el seguimiento, controle los [eventos de pérdida de seguimiento](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Capacidades
+### <a name="capabilities"></a>Funcionalidades
 
 Para que una aplicación aproveche ciertas funciones, debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones de manifiesto se pueden realizar en Unity para que se incluyan en cada exportación de proyecto subsiguiente.
 
@@ -167,7 +167,7 @@ Las funcionalidades aplicables para habilitar las API de uso frecuente para apli
 |  Micrófono  |  VideoCapture (al capturar audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (y para usar el generador de perfiles de Unity) |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
 * [Análisis de rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)

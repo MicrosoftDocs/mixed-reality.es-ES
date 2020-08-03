@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
 keywords: puerto, portabilidad, Unity, middleware, motor, UWP, Win32
-ms.openlocfilehash: ff97f843d6af62a5d49d7920abdf78fa4d1e46c9
-ms.sourcegitcommit: 2813f5b3027d47f7c6e9772338935eeccfa2aaec
+ms.openlocfilehash: ed6c613c8aa3649cffb42d08dbb18661f06b9a53
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86408203"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476937"
 ---
 # <a name="porting-guides"></a>Guías de migración
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Windows 10 incluye compatibilidad directa con auriculares envolventes y holográficas. Si ha creado contenido para otros dispositivos, como Oculus Rift o HTC Naopak, tienen dependencias en las bibliotecas que existen por encima de la API de la plataforma del sistema operativo. La incorporación de aplicaciones de la aplicación existente de Win32 Unity a Windows Mixed Reality implica la redestinación del uso de los SDK de VR específicos del proveedor a las API de VR entre proveedores de Unity.
 
@@ -33,7 +33,7 @@ En un nivel alto, los siguientes pasos están relacionados con el traslado de co
 
 ### <a name="common-step-1-make-sure-you-have-the-right-development-hardware"></a>Paso 1: asegurarse de que tiene el hardware de desarrollo correcto
 
-En la página [instalar las herramientas](install-the-tools.md#for-immersive-vr-headset-development) se muestra el hardware de desarrollo recomendado.
+En la página [instalar las herramientas](install-the-tools.md#immersive-vr-headset-requirements) se muestra el hardware de desarrollo recomendado.
 
 ### <a name="common-step-2-upgrade-to-the-latest-flight-of-windows-10"></a>Paso 2 común: actualizar al vuelo más reciente de Windows 10
 
@@ -154,7 +154,7 @@ Windows Mixed Reality estará disponible en una amplia gama de dispositivos, que
 
 Tanto [Unity](https://docs.unity3d.com/Manual/Profiler.html) como [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) incluyen los generadores de rendimiento y las directrices de publicación de [Microsoft](understanding-performance-for-mixed-reality.md) e [Intel](https://software.intel.com/articles/vr-content-developer-guide) sobre la optimización y la generación de perfiles de rendimiento. Hay una explicación exhaustiva del rendimiento disponible al [comprender el rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md). Además, hay detalles específicos para Unity en [recomendaciones de rendimiento para Unity](performance-recommendations-for-unity.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Guía de portabilidad de entrada para Unity](input-porting-guide-for-unity.md)
 * [Instrucciones de compatibilidad de hardware de equipo mínima de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)

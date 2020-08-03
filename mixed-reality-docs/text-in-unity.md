@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, fuente, tipografía, UI, UX
-ms.openlocfilehash: 6aa03eedf717fb73877db8660526e13444c43fe9
-ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
+ms.openlocfilehash: 63f0992a4623cf91c1b9c62c4ebf30de12529515
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87376577"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476947"
 ---
 # <a name="text-in-unity"></a>Texto en Unity
 
@@ -83,22 +83,24 @@ Segoe UI (la fuente predeterminada para Windows) funciona bien en la mayoría de
 ![Visualización del ángulo de ](images/Text_In_Unity_ViewingAngle.jpg)
  *visualización de la distancia, el ángulo y el alto del texto*
 
-## <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Calidad de representación de texto nítido con la dimensión adecuada
+## <a name="text-with-mixed-reality-toolkit-v2"></a>Texto con el kit de herramientas de realidad mixta V2
+
+### <a name="sharp-text-rendering-quality-with-proper-dimension"></a>Calidad de representación de texto nítido con la dimensión adecuada
 
 En función de estos factores de escala, hemos creado [texto Prefabs con texto de interfaz de usuario y malla de texto 3D](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text). Los desarrolladores pueden usar estos Prefabs para obtener texto nítido y un tamaño de fuente coherente.
 
 ![Calidad de representación de texto nítido con la dimensión adecuada](images/hug-text-06-1000px.png)<br>
 *Calidad de representación de texto nítido con la dimensión adecuada*
 
-## <a name="shader-with-occlusion-support"></a>Sombreador con compatibilidad con oclusión
+### <a name="shader-with-occlusion-support"></a>Sombreador con compatibilidad con oclusión
 
-El material de fuente predeterminado de Unity no admite la oclusión. Por este motivo, verá el texto detrás de los objetos de forma predeterminada. Hemos incluido un [sombreador simple que admite la oclusión](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit/StandardAssets/Shaders/Text3DShader.shader). La imagen siguiente muestra el texto con el material de fuente predeterminado (izquierda) y el texto con una oclusión adecuada (derecha).
+El material de fuente predeterminado de Unity no admite la oclusión. Por este motivo, verá el texto detrás de los objetos de forma predeterminada. Hemos incluido un [sombreador simple que admite la oclusión](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader). La imagen siguiente muestra el texto con el material de fuente predeterminado (izquierda) y el texto con una oclusión adecuada (derecha).
 
 ![Sombreador con compatibilidad con oclusión](images/hug-text-07-1000px.png)<br>
 *Sombreador con compatibilidad con oclusión*
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Text recurso prefabricado in the MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Prefabs/Text)
 * [Tipografía](typography.md)
 
