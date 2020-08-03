@@ -1,19 +1,19 @@
 ---
-title: Seguimiento del código QR
+title: Seguimiento de códigos QR
 description: Obtenga información sobre cómo detectar códigos QR en HoloLens 2.
 author: dorreneb
 ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: VR, LBE, entretenimiento basado en ubicación, VR Arcade, Arcade, inmersivo, QR, código QR, hololens2
-ms.openlocfilehash: e14fe14fd76bceaf506dd7b85a57825c3f18d223
-ms.sourcegitcommit: 6bc6757b9b273a63f260f1716c944603dfa51151
+ms.openlocfilehash: 6d3dc442c28e498cc00e14325398de2026261a17
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73438116"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476767"
 ---
-# <a name="qr-code-tracking"></a>Seguimiento del código QR
+# <a name="qr-code-tracking"></a>Seguimiento de códigos QR
 
 HoloLens 2 puede detectar códigos QR en el entorno alrededor del casco y establecer un sistema de coordenadas en la ubicación real del código.
 
@@ -21,14 +21,14 @@ HoloLens 2 puede detectar códigos QR en el entorno alrededor del casco y establ
 
 <table>
 <tr>
-<th>Función</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª generación)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Característica</th><th style="width:150px"> <a href="hololens-hardware-details.md">HoloLens (1ª generación)</a></th><th style="width:150px">HoloLens 2</th><th style="width:150px"> <a href="immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
-<td> Detección del código QR</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">Vea la nota</td>
+<td> Detección del código QR</td><td style="text-align: center;">️</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;">✔️</td>
 </tr>
 </table>
 
 >[!NOTE]
->En la actualidad, el paquete de NuGet siguiente no es compatible con los auriculares con una realidad mixta de Windows en equipos de escritorio.  Manténgase atento a las actualizaciones adicionales de soporte técnico de escritorio.
+>El seguimiento del código QR con auriculares con ventanas de gran nivel en equipos de escritorio es compatible con la versión 2004 y posteriores de Windows 10. Use la API Microsoft. MixedReality. QRCodeWatcher. IsSupported () para determinar si la característica es compatible con el dispositivo actual.
 
 ## <a name="getting-the-qr-package"></a>Obtención del paquete QR
 Puede descargar el paquete NuGet para la detección del código QR [aquí](https://nuget.org/Packages/Microsoft.MixedReality.QR).
@@ -38,29 +38,29 @@ Puede descargar el paquete NuGet para la detección del código QR [aquí](https
 ### <a name="adding-the-webcam-capability"></a>Agregar la funcionalidad de cámara web
 Tendrá que agregar la funcionalidad `webcam` al manifiesto para detectar códigos QR. Esta capacidad es necesaria, ya que los datos de los códigos detectados en el entorno del usuario pueden contener información confidencial.
 
-Se puede solicitar permiso llamando a `QRCodeWatcher.RequestAccessAsync()`:
+El permiso se puede solicitar mediante una llamada a `QRCodeWatcher.RequestAccessAsync()` :
 
-_C#:_
+_C#_
 ```cs
 await QRCodeWatcher.RequestAccessAsync();
 ```
 
-_C++:_
+_C_
 ```cpp
 co_await QRCodeWatcher.RequestAccessAsync();
 ```
 
 Se debe solicitar permiso antes de construir un objeto QRCodeWatcher.
 
-Aunque la detección del código QR requiere la capacidad de `webcam`, la detección se produce mediante las cámaras de seguimiento del dispositivo. Esto proporciona un hipergráfico de detección más amplio y una mayor duración de la batería en comparación con la detección con la cámara foto/vídeo (PV) del dispositivo.
+Aunque la detección del código QR requiere la `webcam` capacidad, la detección se produce mediante las cámaras de seguimiento del dispositivo. Esto proporciona un hipergráfico de detección más amplio y una mayor duración de la batería en comparación con la detección con la cámara foto/vídeo (PV) del dispositivo.
 
 ### <a name="detecting-qr-codes-in-unity"></a>Detección de códigos QR en Unity
 
 Puede usar la API de detección de código QR en Unity sin tomar una dependencia en MRTK. Para ello, debe instalar el paquete NuGet con [Nuget para Unity](https://github.com/GlitchEnzo/NuGetForUnity).
 
-Hay una aplicación de Unity de ejemplo que muestra un cuadrado holográfica sobre códigos QR, junto con los datos asociados, como el GUID, el tamaño físico, la marca de tiempo y los datos descodificados. Esta aplicación se puede encontrar en https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes.
+Hay una aplicación de Unity de ejemplo que muestra un cuadrado holográfica sobre códigos QR, junto con los datos asociados, como el GUID, el tamaño físico, la marca de tiempo y los datos descodificados. Esta aplicación se puede encontrar en https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes .
 
-### <a name="detecting-qr-codes-in-c"></a>Detección de códigos QR enC++
+### <a name="detecting-qr-codes-in-c"></a>Detectar códigos QR en C++
 
 ```cpp
 using namespace winrt::Windows::Foundation;
@@ -128,7 +128,7 @@ El SpatialCoordinateSystem de un código QR se alinea como se muestra. Este sist
 
 ![Sistema de coordenadas del código QR](images/Qr-coordinatesystem.png) 
 
-En el caso de un objeto QRCode C++ , el código siguiente muestra cómo crear un rectángulo y colocarlo mediante el sistema de coordenadas del código QR:
+En el caso de un objeto QRCode, el código de C++ siguiente muestra cómo crear un rectángulo y colocarlo mediante el sistema de coordenadas del código QR:
 
 ```cpp
 // Creates a 2D rectangle in the x-y plane, with the specified properties.
@@ -456,6 +456,6 @@ namespace Microsoft.MixedReality.QR
 }
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a>
