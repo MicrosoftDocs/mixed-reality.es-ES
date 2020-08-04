@@ -3,16 +3,16 @@ title: 'Tutoriales de introducción: 1. Introducción'
 description: En este curso le mostramos cómo usar Mixed Reality Toolkit (MRTK) para crear una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 02/26/2019
+ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 1ba98abe5de14c3e1aaf6164c19d3ca87da341d2
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 330863d36abe051e8fe17b87ce913b1b110e2d3d
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306822"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376437"
 ---
 # <a name="1-introduction"></a>1. Introducción
 

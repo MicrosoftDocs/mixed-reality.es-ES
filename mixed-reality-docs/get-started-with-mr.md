@@ -3,16 +3,16 @@ title: Introducción a Mixed Reality
 description: Para ayudar a un usuario nuevo en el ámbito de la realidad mixta, descubre qué es y comprende sus capacidades.
 author: grbury
 ms.author: grbury
-ms.date: 08/24/2019
+ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de inicio, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto
-ms.openlocfilehash: 720261164a4b2eedc47c1054f19edfb109ed3f83
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 010e0b9d73b5537d480a28ee510fe2ae1bde3b10
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86451381"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476927"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 
@@ -184,7 +184,7 @@ Una clave para mostrar contenido que parezca real en forma de holograma es imita
     :::column:::
        [![Probarlo](images/icon-hololensuser.jpg)](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)<br>
         **[Probar Mixed Reality](https://www.microsoft.com//windows/windows-mixed-reality?icid=SSM_Search_Promo_XCat_WindowsMixedReality_CTA1#storelocator)**<br>
-        Obtén una demostración de Mixed Reality y HoloLens en tu Microsoft Store local. 
+        Obtén una demostración de Mixed Reality y HoloLens en tu Microsoft Store local.
     :::column-end:::
     :::column:::
         [![Convertirme en creador](images/icon-design.jpg)](design.md)<br>
@@ -211,4 +211,4 @@ Una clave para mostrar contenido que parezca real en forma de holograma es imita
 
 
 >[!IMPORTANT]
->Todos los materiales de desarrollo de realidad mixta que se proporcionan en este sitio son únicamente para consulta. La aplicación, el uso de esta y su efecto en los usuarios finales es responsabilidad exclusivamente suya como desarrollador de la aplicación. Esto incluye la garantía de que la aplicación no causará molestias, lesiones ni ningún otro daño a un usuario final y la inclusión de las declinaciones de responsabilidad y advertencias adecuadas. Deberá en todo momento dar los pasos apropiados en el desarrollo y publicación de la aplicación para asegurarse de que esta es segura, y cumplir con todas las obligaciones que se indican en el [acuerdo para desarrolladores de aplicaciones con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). 
+>Todos los materiales de desarrollo de realidad mixta que se proporcionan en este sitio son únicamente para consulta. La aplicación, el uso de esta y su efecto en los usuarios finales es responsabilidad exclusivamente suya como desarrollador de la aplicación. Esto incluye la garantía de que la aplicación no causará molestias, lesiones ni ningún otro daño a un usuario final y la inclusión de las declinaciones de responsabilidad y advertencias adecuadas. Deberá en todo momento dar los pasos apropiados en el desarrollo y publicación de la aplicación para asegurarse de que esta es segura, y cumplir con todas las obligaciones que se indican en el [acuerdo para desarrolladores de aplicaciones con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
