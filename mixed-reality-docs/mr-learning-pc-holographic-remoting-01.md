@@ -3,16 +3,16 @@ title: 'Tutoriales de comunicación remota holográfica para PC: 1. Introducció
 description: Complete este curso para aprender cómo crear una experiencia de realidad mixta remota del PC a HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 05/19/2020
+ms.date: 07/29/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: cbbad9548abeb1b8392b99d187b5b051d5b4ddd4
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+ms.openlocfilehash: 4929634d70a082e835eb7bd6b5680719338a5e92
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86306734"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476977"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1. Introducción a la comunicación remota holográfica para PC
 
@@ -38,10 +38,11 @@ ms.locfileid: "86306734"
 * Un dispositivo HoloLens 2 [configurado para el desarrollo](using-visual-studio.md#enabling-developer-mode)
 * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.3.X montado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
 
->[RECOMENDADO] Haber completado la serie de tutoriales de introducción o contar con experiencia previa básica en el uso de Unity y MRTK
+Se **recomienda encarecidamente** completar la serie de tutoriales de [introducción](mr-learning-base-01.md) o contar con experiencia previa básica en el uso de Unity y MRTK antes de continuar.
 
 > [!IMPORTANT]
-> La versión de Unity recomendada para esta serie de tutoriales es Unity 2019.3.X. Sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
+> * La versión de Unity recomendada para esta serie de tutoriales es Unity 2019.3.X. Sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
+> * La comunicación remota holográfica con proyectos de MRTK solo funcionará con el XR heredado. De momento no se admite el SDK de XR.
 
 ## <a name="creating-and-preparing-the-unity-project"></a>Creación y preparación del proyecto de Unity
 
@@ -172,7 +173,7 @@ En esta sección, explorarás cómo habilitar el seguimiento ocular en el proyec
 
 En la ventana Jerarquía, expanda el objeto ModelParent. Expanda ***MarsCuriosity-> Rover*** para encontrar cinco piezas principales de MarsCuriosityRover: **POI-Camera**, **POI-Wheels**, **POI-Antena**, **POI-Spectrometer** y **POI-RUHF Antenna**.
 
-* Observe los cinco objetos de información sobre herramientas correspondientes con las piezas de MarsCuriosityRover en la ventana Jerarquía. 
+* Observe los cinco objetos de información sobre herramientas correspondientes con las piezas de MarsCuriosityRover en la ventana Jerarquía.
 * Configurará estos objetos para mejorar la experiencia al mirar las piezas de MarsCuriosityRover.
 
 ![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial1-Section6-Step1-1.png)

@@ -7,12 +7,12 @@ ms.date: 7/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulator
-ms.openlocfilehash: e7c89cc2d839edc46a73a765acad603341b52716
-ms.sourcegitcommit: 3c867622e99c07f95db92e88551d2b904ceb8def
+ms.openlocfilehash: 597a0a9103f8313d26449b996c1e7af6f5619b2c
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86383077"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376667"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso del emulador de HoloLens
 
@@ -253,6 +253,8 @@ En el emulador, solo verás los hologramas que representes. Sin embargo, no ver�
 
 * Al desinstalar el emulador de HoloLens 2, es posible que la imagen de disco duro (Flash.vhdx) se quede en tu disco duro, en la carpeta Windows Kits\10\Emulation\HoloLens\<build number>.  La eliminación de este archivo no implica ningún riesgo.
 * La aceleración de gráficos mediante hardware puede hacer que las aplicaciones holográficas se bloqueen en algunos sistemas con gráficos de AMD o Intel.  Este problema se soluciona al deshabilitar la aceleración de gráficos mediante hardware en la ventana Herramientas del emulador.
+* Después de instalar las actualizaciones más recientes de Windows a partir de julio de 2020, puede que la aceleración de gráficos por hardware en el emulador de HoloLens (1.ª generación) ya no esté disponible.
+El componente RemoteFX necesario para la aceleración de gráficos por hardware está en desuso y se quitará en una versión futura de Windows.  Para volver a habilitar la aceleración de gráficos por hardware, use el [cmdlet Enable-VMRemoteFXPhysicalVideoAdapter de PowerShell](https://docs.microsoft.com/powershell/module/hyper-v/enable-vmremotefxphysicalvideoadapter?view=win10-ps).  Para obtener información adicional, consulte la [documentación sobre el desuso y la eliminación de la compatibilidad de RemoteFX en Windows](https://support.microsoft.com/help/4570006/update-to-disable-and-remove-the-remotefx-vgpu-component). 
 
 ## <a name="troubleshooting"></a>Solucionar problemas
 

@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 473f47884bbc492451007436f80e8d9762cf1ab7
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: e81da5a4550f258b629443df9b2b655d81108c21
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720261"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376367"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Adición de un botón y restablecimiento de la ubicación de las piezas
 
@@ -59,8 +59,8 @@ Ahora que la función está configurada correctamente, la siguiente tarea consis
     
 Desde aquí, llamará a la función **Reset Location** de **WhiteKing**, que necesita una referencia al actor **WhiteKing** en el nivel. 
 
-1.  Desplácese hasta la sección **Variables** en el panel **Details** (Detalles), haga clic en el botón **+** y asigne a la variable el nombre **WhiteKing**. 
-    * Seleccione la lista desplegable situada junto a **Variable Type** (Tipo de variable), busque **WhiteKing** y seleccione **Object Reference** (Referencia de objetos). 
+1.  En el panel **My Blueprint** (My plano técnico), vaya a la sección **Variables**, haga clic en el botón **+** y asigne a la variable el nombre **WhiteKing**. 
+    * En el panel **Details** (Detalles), seleccione la lista desplegable situada junto a **Variable Type** (Tipo de variable), busque **WhiteKing** y seleccione **Object Reference** (Referencia de objetos). 
     * Marque la casilla situada junto a **Instance Editable** (Instance editable). Esto permitirá que la variable se defina desde el nivel principal. 
 
 ![Crear una variable](images/unreal-uxt/5-var.PNG)

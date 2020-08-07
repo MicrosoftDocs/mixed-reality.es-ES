@@ -1,27 +1,27 @@
 ---
 layout: LandingPage
-title: Tutoriales y aplicaciones de ejemplo
-description: Proporciona ejemplos de código y tutoriales sobre el desarrollo de realidad mixta.
+title: Tutoriales
+description: Proporciona tutoriales sobre el desarrollo de realidad mixta.
 author: keveleigh
 ms.author: kurtie
-ms.date: 10/22/2019
+ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academia, tutorial
-ms.openlocfilehash: b1c448e7a5289c6d099d73c3bcf18d0f552dbc51
-ms.sourcegitcommit: 96ae8258539b2f3edc104dd0dce8bc66f3647cdd
+keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial
+ms.openlocfilehash: dc446be531e2a2fa1b27cdaefbf3adfeb7814740
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303656"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477007"
 ---
-# <a name="tutorials-and-sample-apps"></a>Tutoriales y aplicaciones de ejemplo
+# <a name="tutorials"></a>Tutoriales 
 
 ![Usuario de HoloLens 2](images/08_Tutorials.png)
 
 Actualmente, todos nuestros tutoriales y aplicaciones de muestra se basan en Unity o Unreal. A medida que desarrollamos contenido para otros motores y plataformas, los encontrarás en el encabezado correspondiente de la tabla de contenido.
 
-## <a name="hololens-2-tutorials"></a>Tutoriales de HoloLens 2
+## <a name="hololens-2"></a>HoloLens 2 
 
 Los tutoriales de HoloLens 2 están diseñados para ayudar a los desarrolladores a obtener información sobre las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta. Los tutoriales de Unity se basan en [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity) y el tutorial de Unreal se basa en [UX Tools para Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
@@ -32,21 +32,7 @@ Los tutoriales de HoloLens 2 están diseñados para ayudar a los desarrolladores
 * Tutoriales sobre las funcionalidades multiusuario: [1 de 5 Introducción](mr-learning-sharing-01.md)
 * Tutoriales de Azure Speech Services: [1 de 4; Integración y uso del reconocimiento de voz y la transcripción](mrlearning-speechSDK-ch1.md)
 
-## <a name="open-source-sample-apps"></a>Aplicaciones de ejemplo de código abierto
-
-Las aplicaciones de ejemplo de código abierto son aplicaciones que crean nuestros equipos, y hemos proporcionado el código fuente para que los desarrolladores puedan verlo y aprender de nuestros proyectos.
-
-### <a name="hololens-2-open-source-sample-apps"></a>Aplicaciones de ejemplo de código abierto de HoloLens 2
-* [Superficies](sampleapp-surfaces.md)
-* [Tabla periódica de los elementos 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
-* [Galaxy Explorer 2.0](galaxy-explorer-update.md)
-
-### <a name="hololens-1st-gen-open-source-sample-apps"></a>Aplicaciones de ejemplo de código abierto de HoloLens (1ª gen)
-* [Tabla periódica de los elementos 1.0](periodic-table-of-the-elements.md)
-* [Galaxy Explorer 1.0](galaxy-explorer.md)
-* [Módulo lunar](lunar-module.md)
-
-## <a name="mixed-reality-academy-tutorials"></a>Tutoriales de Mixed Reality Academy
+## <a name="mixed-reality-academy"></a>Mixed Reality Academy 
 
 Mixed Reality Academy es un conjunto de tutoriales detallados en línea con los archivos de proyecto correspondientes:
 

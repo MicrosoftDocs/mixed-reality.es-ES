@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: f79985b2ce9e26971c23acf36a3538bf7f3c166e
-ms.sourcegitcommit: ff0e89b07d0b4a945967d64c5b8845a21dc5f476
+ms.openlocfilehash: 105e817e54f7de12afdcab9fde1dfce0c38ff4a7
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879557"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376387"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configuración del proyecto para la realidad mixta
 
@@ -57,7 +57,7 @@ Una vez hecho esto, el paso siguiente consiste en asegurarse de que la sesión d
 En este punto, el proyecto todavía necesita un objeto que sea el jugador. En Unreal, **Pawn** (Peón) representa al usuario del juego; pero, en este caso, será la experiencia de HoloLens 2.
 
 1. Haga clic en **Add New > Blueprint Class** (Agregar nuevo > Clase de plano técnico) en la carpeta **Content** (Contenido) y expanda la sección **All Classes** (Todas las clases) en la parte inferior. 
-    * Busque **DefaultPawn**, haga clic en **Select** (Seleccionar) y haga doble clic en el recurso para abrirlo. 
+    * Busque **DefaultPawn**, haga clic en **Select** (Seleccionar), asígnele el nombre **MRPawn** y haga doble clic en el recurso para abrirlo. 
 
 ![Crear un nuevo peón que herede de DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
@@ -66,9 +66,13 @@ En este punto, el proyecto todavía necesita un objeto que sea el jugador. En Un
 
 2. Seleccione **CollisionComponent** en el panel **Components** (Componentes) y desplácese hacia abajo hasta la sección **Collision** (Colisión) del panel **Details** (Detalles). 
     * Haga clic en la lista desplegable **Collision Presets** (Valores preestablecidos de colisión) y cambie el valor a **NoCollision**. 
-    * Haga lo mismo para **MeshComponent**, después **compile** y **guarde** el plano técnico. 
+    * Haga lo mismo con **MeshComponent**.
 
 ![Ajustar los valores preestablecidos de colisión del peón](images/unreal-uxt/3-nocollision.PNG)
+
+3. Haga clic en **Add Component > Camera**  (Agregar componente > Cámara) en el panel **Components** (Componentes) y asígnele el nombre **Camera**. Esto permite que la cámara del reproductor se mueva con el dispositivo HoloLens 2.
+
+4. **Compile** y **guarde** el plano técnico.
 
 Con el trabajo que ha realizado aquí, vuelva a la ventana principal.
 

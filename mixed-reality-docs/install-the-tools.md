@@ -3,16 +3,16 @@ title: Instalación de las herramientas
 description: Empieza aquí a prepararte para el desarrollo de realidad mixta. En este artículo deberían aparecer siempre las versiones más actuales de Unity, Visual Studio y las demás herramientas recomendadas para el desarrollo con HoloLens y con los cascos envolventes de Windows Mixed Reality.
 author: thetuvix
 ms.author: alexturn
-ms.date: 3/10/2020
+ms.date: 07/31/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: actualizadas, herramientas, introducción, conceptos básicos, unity, visual studio, toolkit
-ms.openlocfilehash: ac3e4967ce687f7cb3009de64748841f88562a92
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: f5c779aa0bb89fe66b53419b03ec1b4d3e6b562b
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86447949"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476914"
 ---
 # <a name="install-the-tools"></a>Instalación de las herramientas
 
@@ -39,115 +39,6 @@ Se recomienda instalar el motor de juego de Unity como la manera más sencilla d
 
 ## <a name="choose-your-engine"></a>Elige el motor
 
-:::row:::
-    :::column:::
-        <a href="https://unity3d.com/unity/qa/lts-releases" target="_blank">![Unity](images/unity_logo.png)<br>**Unity**</a><br>
-        Normalmente, se recomienda la versión Unity LTS (soporte técnico a largo plazo) como la mejor versión con la que empezar nuevos proyectos, actualizándola a la revisión más reciente para aprovechar las actualizaciones más estables.<br>
-        <br>
-        La recomendación actual es usar **Unity 2019**, que es la compilación LTS necesaria para MRTK v2 que se describe a continuación.<br>
-        <br>
-        Puede que a algunos desarrolladores les guste usar una versión diferente de Unity por motivos concretos. En esos casos, Unity admite instalaciones paralelas de distintas versiones.<br>
-        <br>
-        Consulta [Introducción al desarrollo de Unity](unity-development-overview.md) para empezar a desarrollar con Unity para los cascos envolventes HoloLens 2 o Windows Mixed Reality.<br>
-        <br>
-    :::column-end:::
-    :::column:::
-        <a href="https://docs.unrealengine.com//GettingStarted/Installation/index.html" target="_blank">![Unreal](images/Unreal_logo.png)<br>**Unreal**</a><br>
-        Unreal Engine 4 es un potente motor de creación de código abierto con compatibilidad total con la realidad mixta en C++ y Blueprints.<br>
-        <br>
-        A partir de Unreal Engine 4.25, la compatibilidad con HoloLens es completa y está lista para la producción.<br>
-        <br>
-        Consulta [Introducción al desarrollo con Unreal](unreal-development-overview.md) para empezar a desarrollar con Unreal para HoloLens 2.
-    :::column-end:::
-    :::column:::
-        ![Desarrollo de aplicaciones nativas](images/visualstudio-small_logo.png)<br>
-        [**Nativo (OpenXR)** ](openxr-getting-started.md)<br>
-        OpenXR es un estándar de API abierto libre de regalías de Khronos que proporciona a los motores acceso nativo a una amplia gama de dispositivos de muchos proveedores que abarcan todo el espectro de la realidad mixta.  En el proyecto <a href="https://github.com/microsoft/OpenXR-MixedReality/tree/master/samples/BasicXrApp" target="_blank">BasicXrApp</a> se muestra un ejemplo de OpenXR simple con dos archivos de proyecto de Visual Studio, uno para una aplicación de escritorio de Win32 y otro para una aplicación para UWP de HoloLens 2.<br>
-        <br>
-        <a href="https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX" target="_blank">**Nativo (WinRT)** </a><br>
-        Las <a href="https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX" target="_blank">plantillas de aplicaciones nativas de Windows Mixed Reality</a> proporcionan todos los aspectos esenciales que necesitas para empezar a escribir una aplicación de realidad mixta mediante DirectX con las API nativas. Incluye un bucle de representación (o "bucle de juego"), una clase auxiliar DeviceResources para administrar el dispositivo y el contexto de Direct3D, y un representador de hologramas de ejemplo sencillo. Disponible para Direct3D 11 y Direct3D 12.<br>
-        <br>
-        Consulta [Introducción al desarrollo nativo](directx-development-overview.md) para empezar a desarrollar aplicaciones nativas con WinRT u OpenXR para los cascos envolventes HoloLens 2 o Windows Mixed Reality.
-    :::column-end:::
-:::row-end:::
+Ahora que tiene Windows 10, Visual Studio y el SDK de Windows 10 listos para usar, vamos a elegir un motor con el cual crear. 
 
-<br>
-
-## <a name="mixed-reality-toolkit-mrtk"></a>Mixed Reality Toolkit (MRTK)
-![MRTK](images/UX/MRTK_UX_Hero.png)
-
-Mixed Reality Toolkit (MRTK) es un kit de desarrollo multiplataforma de código abierto para aplicaciones de realidad mixta. MRTK proporciona un sistema de entrada multiplataforma, componentes fundamentales y bloques de creación comunes para interacciones espaciales. El kit de herramientas está diseñado para acelerar el desarrollo de aplicaciones destinadas a Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR.
-
-:::row:::
-    :::column:::
-        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">![Unity](images/MRTK_Badge_Unity.png)<br>**Mixed Reality Toolkit - Unity (GitHub)** </a><br>
-    :::column-end:::
-    :::column:::
-        <a href="https://github.com/Microsoft/MixedRealityToolkit-Unreal" target="_blank">![Unity](images/MRTK_Badge_Unreal.png)<br>**Mixed Reality Toolkit - Unreal (GitHub)** </a><br>
-    :::column-end:::
-:::row-end:::
-
-### <a name="other-tools"></a>Otras herramientas
-* <a href="https://github.com/Microsoft/MixedRealityCompanionKit" target="_blank">Mixed Reality Companion Kit (GitHub)</a>: bits y componentes de código que no se pueden ejecutar directamente en HoloLens o en cascos envolventes (VR), sino que se emparejan con estos para generar experiencias destinadas a Windows Mixed Reality.
-* <a href="https://github.com/Microsoft/MixedRealityToolkit" target="_blank">Mixed Reality Toolkit - Común (GitHub)</a>: colección de componentes y scripts compartidos.
-
-
-## <a name="setting-up-your-pc-for-mixed-reality-development"></a>Configuración del equipo para el desarrollo de realidad mixta
-
-El SDK de Windows 10 funciona mejor en el sistema operativo Windows 10. Este SDK también es compatible con: Windows 8.1, Windows 8, Windows 7, Windows Server 2012 y Windows Server 2008 R2. Ten en cuenta que no todas las herramientas son compatibles con sistemas operativos anteriores. 
-
-### <a name="for-hololens-development"></a>Para el desarrollo de HoloLens
-
-Cuando configures el equipo para el desarrollo de HoloLens, asegúrate de que cumple con los requisitos del sistema de <a href="https://unity3d.com/unity/system-requirements" target="_blank">Unity</a> y de <a href="https://docs.microsoft.com//visualstudio/releases/2019/system-requirements" target="_blank">Visual Studio</a>. Si tienes previsto usar el emulador de HoloLens, deberás asegurarte de que el equipo también cumple con los [requisitos del sistema del emulador de HoloLens](using-the-hololens-emulator.md#hololens-emulator-system-requirements).
-
-Para empezar a trabajar con el emulador de HoloLens, consulta [Uso del emulador de HoloLens](using-the-hololens-emulator.md).
-
-Si tienes previsto desarrollar aplicaciones para HoloLens y para los cascos envolventes (VR) de Windows Mixed Reality, usa los requisitos y las recomendaciones del sistema que aparecen en la siguiente sección.
-
-### <a name="for-immersive-vr-headset-development"></a>Para el desarrollo para cascos envolventes
-
->[!NOTE]
->Las instrucciones siguientes son las especificaciones actuales mínimas y recomendadas para el *equipo de desarrollo* para cascos envolventes (VR) y puede que se actualicen con regularidad.
-
->[!WARNING]
->No confundas esto con las [instrucciones de compatibilidad con el hardware del equipo](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines), que describe las *especificaciones del equipo del usuario* de las que debes disponer para desarrollar aplicaciones o juegos con destino a cascos envolventes.
-
-Si el equipo de desarrollo para cascos envolventes no dispone de una HDMI completa o de puertos USB 3.0, necesitarás [adaptadores](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/recommended-adapters-for-windows-mixed-reality-capable-pcs) para conectar los cascos.
-
-Existen en la actualidad [problemas conocidos](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality) con algunas configuraciones de hardware, especialmente en portátiles que tienen gráficos híbridos.
-
-<table>
-<tr>
-<th></th><th> Mínimo</th><th> Recomendado</th>
-</tr><tr>
-<td> Procesador</td><td> <b>Portátil:</b> Intel Mobile Core i5 de con CPU de séptima generación, de doble núcleo con Hyper Threading <b>Dispositivo de escritorio:</b> Intel Desktop i5 con CPU de sexta generación, de doble núcleo con Hyper Threading <b>O</b> AMD FX4350 4.2Ghz Quad-Core equivalente</td><td> <b>Dispositivo de escritorio:</b> Intel Desktop i7 de sexta generación (6 núcleos) <b>O</b> AMD Ryzen 5 1600 (6 núcleos, 12 subprocesos)</td>
-</tr><tr>
-<td> GPU</td><td> <b>Portátil:</b> NVIDIA GTX 965M, AMD RX 460M (2GB) con GPU compatible con DX12 equivalente o superior <b>Dispositivo de escritorio:</b> NVIDIA GTX 960/1050, AMD Radeon RX 460 (2GB) con GPU compatible con DX12 equivalente o superior</td><td><b>Dispositivo de escritorio:</b> NVIDIA GTX 980/1060, AMD Radeon RX 480 (2GB) con GPU compatible con DX12 equivalente o superior</td>
-</tr><tr>
-<td> Versión de WDDM del controlador de GPU</td><td colspan="2"> Controlador WDDM 2.2</td>
-</tr><tr>
-<td> Potencia de diseño térmico</td><td colspan="2"> 15 W o más</td>
-</tr><tr>
-<td> Puertos de pantalla gráfica</td><td colspan="2"> 1 puerto de pantalla gráfica disponible para casco de realidad mixta (HDMI 1.4 o DisplayPort 1.2 para cascos de 60 Hz, HDMI 2.0 o DisplayPort 1.2 para cascos de 90 Hz)</td>
-</tr><tr>
-<td> Resolución de pantalla</td><td colspan="2"> Solución: SVGA (800 x 600) o con mayor profundidad de bits: 32 bits de color por píxel</td>
-</tr><tr>
-<td> Memory</td><td> 8 GB de RAM o más</td><td> 16 GB de RAM o más</td>
-</tr><tr>
-<td> Almacenamiento</td><td colspan="2"> &gt;Espacio libre adicional de 10 GB</td>
-</tr><tr>
-<td> Puertos USB</td><td colspan="2"> 1 puerto USB disponible para casco de realidad mixta (USB 3.0 Type-A) <b>Nota: el USB debe proporcionar un mínimo de 900 mA</b></td>
-</tr><tr>
-<td> Bluetooth</td><td colspan="2"> Bluetooth 4.0 (para la conectividad de los accesorios)</td>
-</tr>
-</table>
-
-## <a name="see-also"></a>Consulta también
-
-* [Introducción al desarrollo](development.md)
-* [Uso del emulador de HoloLens](using-the-hololens-emulator.md)
-* [Uso del simulador de Windows Mixed Reality](using-the-windows-mixed-reality-simulator.md)
-* [Introducción al desarrollo de Unity](unity-development-overview.md)
-* [Introducción al desarrollo de Unreal](unreal-development-overview.md)
-* [Introducción al desarrollo de DirectX](directx-development-overview.md)
-* [Archivo del emulador de HoloLens](hololens-emulator-archive.md)
+[!INCLUDE[](~/includes/tools-overview.md)]

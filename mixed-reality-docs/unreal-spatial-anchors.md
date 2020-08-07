@@ -1,5 +1,5 @@
 ---
-title: Anclajes espaciales en Unreal
+title: Anclajes espaciales locales en Unreal
 description: Guía para el uso de anclajes espaciales en Unreal
 author: hferrone
 ms.author: v-haferr
@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, spatial anchors
-ms.openlocfilehash: 58394f4e27aff5070d55ed5f0d62cd81ff579d1f
-ms.sourcegitcommit: 45da0a056fa42088ff81ccdd11232830fbe8430f
+ms.openlocfilehash: b102d506b1d670291c3b97ca34d277e2597af043
+ms.sourcegitcommit: 2f5f95a9ca1b02d94eb9163f0f4ff6b1e4126de2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720321"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87376053"
 ---
-# <a name="spatial-anchors-in-unreal"></a>Anclajes espaciales en Unreal
+# <a name="local-spatial-anchors-in-unreal"></a>Anclajes espaciales locales en Unreal
 
 ## <a name="overview"></a>Introducción
 
-Los anclajes espaciales se usan para guardar los hologramas en el espacio del mundo real entre sesiones de aplicación.  Aparecen mediante Unreal en forma de elementos **ARPin** y se guardan en el almacén de anclajes de HoloLens, que se carga en futuras sesiones. 
+Los anclajes espaciales se usan para guardar los hologramas en el espacio del mundo real entre sesiones de aplicación. Aparecen mediante Unreal en forma de elementos **ARPin** y se guardan en el almacén de anclajes de HoloLens, que se carga en futuras sesiones. Los anclajes locales son ideales como plan B para cuando no hay conectividad a Internet.
+
+> [!IMPORTANT]
+> Los anclajes locales se almacenan en el dispositivo, mientras que los Azure Spatial Anchors se almacenan en la nube. Si desea usar servicios en la nube de Azure para almacenar los anclajes, existe un documento que le guiará por la integración de [Azure Spatial Anchors](unreal-azure-spatial-anchors.md). Tenga en cuenta que puede tener anclajes locales y de Azure en el mismo proyecto sin que existan conflictos.
 
 ## <a name="checking-the-anchor-store"></a>Comprobación del almacén de anclajes
 
@@ -65,5 +68,6 @@ Cuando haya terminado con un anclaje, puede borrar delimitadores individuales o 
 > Tenga en cuenta que Spatial Anchors todavía están en versión beta, por lo que debe asegurarse de consultar la información y las características actualizadas.
 
 ## <a name="see-also"></a>Consulta también
+* [Azure Spatial Anchors](unreal-azure-spatial-anchors.md)
 * [Delimitadores espaciales](spatial-anchors.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
