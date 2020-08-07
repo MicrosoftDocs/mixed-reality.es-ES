@@ -4,164 +4,60 @@ title: Conocer las herramientas y la arquitectura
 description: Documentación para desarrolladores de realidad mixta para HoloLens y cascos envolventes.
 author: grbury
 ms.author: grbury
-ms.date: 04/27/2020
+ms.date: 07/31/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, unity, unreal, directx
-ms.openlocfilehash: 3c874e45e555ec6defa611bd5404abbb18e6612e
-ms.sourcegitcommit: 8daefb763d1f23fe02b95b766b00b373f04c5c2d
+ms.openlocfilehash: 56da3a795fe8b2cfcc5eca371bc00c87d72b4a8c
+ms.sourcegitcommit: ef0bf03833eda826ed0b884859b4573775112aba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86447861"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87476836"
 ---
-# <a name="learn-the-tools-and-architecture"></a>Conocer las herramientas y la arquitectura
+# <a name="introduction-to-mixed-reality-development"></a>Introducción al desarrollo con Mixed Reality
 
-![Esfera 3D abstracta](images/07_Development.png)
+![Esfera 3D abstracta](images/development-hero-image.png)
 
-## <a name="expand-your-design-process"></a>[Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
-
-Cuando Microsoft lanzó el dispositivo HoloLens para un público de desarrolladores ansiosos en 2016, el equipo ya se había asociado con estudios dentro y fuera de Microsoft para crear las experiencias de lanzamiento del dispositivo. Estos equipos aprendieron con la práctica y la búsqueda de oportunidades y retos en el nuevo campo del diseño de realidad mixta. [Leer más](case-study-expanding-the-design-process-for-mixed-reality.md)
-
-
-<br>
-
----
-
+Mixed Reality es un gran lugar, un nexo en el que el mundo real y el virtual se funden para generar nuevas cosas. Las posibilidades son infinitas, y todo comienza con usted. Elija el motor, descargue las herramientas y desempolve el teclado. Le damos la bienvenida al ecosistema de Mixed Reality, es el momento de crear.
 
 ## <a name="what-technology-path-are-you-interested-in"></a>¿Qué ruta tecnológica te interesa? 
 
+Hay varias rutas de desarrollo que puede seguir a través de nuestra documentación. El primer paso es encontrar la tecnología adecuada para usted. Si ya tiene una en mente, vaya directamente a la pestaña correspondiente a continuación. Si aún no se decide o recién está empezando, eche un vistazo a cada una y comprenda lo que ofrecen, las plataformas y herramientas disponibles, ¡y empiece a crear!
 
-:::row:::   
-    :::column:::    
-       [![Unity](images/unity_logo.png)](development.md#unity)<br>
-        **[Unity](development.md#unity)**<br>   
-        Crea una aplicación de realidad mixta completa y multiplataforma con Unity.
-    :::column-end:::    
-    :::column:::    
-        [![Unreal](images/Unreal_logo.png)](development.md#unreal)<br>
-        **[Unreal](development.md#unreal)**<br> 
-        Crea atractivas experiencias de realidad mixta compatibles con entornos de producción en Unreal Engine. 
-    :::column-end:::
-    :::column:::    
-        [![JavaScript](images/web-logo.png)](development.md#javascript)<br>
-        **[JavaScript](development.md#javascript)**<br>
-        La API de dispositivo JavaScript y WebXR es una especificación abierta que permite experimentar la realidad mixta en el explorador de cualquier plataforma.    
-    :::column-end:::        
-    :::column:::    
-        [![Native](images/VisualStudio-small_logo.png)](development.md#native)<br>
-        **[Native](development.md#native)**<br> 
-        Crea aplicaciones de realidad mixta mediante la codificación directa en las API de Windows Mixed Reality. 
-    :::column-end:::    
-:::row-end:::
+[!INCLUDE[](~/includes/tech-path-overview.md)]
 
-<br>
+## <a name="whats-next"></a>A continuación
 
----
+Ahora que tiene una ruta de tecnología en la mente, vamos a entregarle las herramientas que necesita para iniciar el recorrido.
 
-## <a name="unity"></a>Unity
+> [!div class="nextstepaction"]
+> [Instalación de las herramientas](install-the-tools.md)
 
-
-### <a name="unity-development-overview"></a>[Introducción al desarrollo de Unity](unity-development-overview.md)
-Se recomienda dedicar tiempo a explorar los tutoriales de Unity. Si necesitas recursos, Unity tiene un almacén de recursos completo. 
-
-<br>
-
-### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unity"></a>[Kit de herramientas de Mixed Reality (MRTK) para Unity de Microsoft](mrtk-getting-started.md)
-MRTK v2 con Unity es un kit de desarrollo multiplataforma de código abierto para aplicaciones de realidad mixta. MRTK versión 2 está diseñado para acelerar el desarrollo de aplicaciones destinadas a Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR.
-
-<br>
-
-### <a name="open-source-sample-apps-and-step-by-step-tutorials"></a>[Aplicaciones de código abierto de ejemplo y tutoriales paso a paso](tutorials.md)
-Los tutoriales de HoloLens 2 están diseñados para ayudar a los desarrolladores a obtener información sobre las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta. Los tutoriales se basan en el kit de herramientas de Mixed Reality 2.0 (MRTK 2.0).
-
-<br>
-
-### <a name="hand-interaction-examples-scene-mrtk-for-unity"></a>[Escena de ejemplos de interacción de la mano (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor)
-La escena de ejemplo HandInteractionExamples.unity contiene varios tipos de interacciones y controles de interfaz de usuario que resaltan la entrada de mano articulada.
->[!NOTE]
->Requiere la instalación de los paquetes MRTK Foundation y Example Unity.
-
-### <a name="eye-tracking-examples-mrtk-for-unity"></a>[Ejemplos de seguimiento de los ojos (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html)
-En esta página se explica cómo empezar a trabajar rápidamente con el seguimiento de los ojos en MRTK mediante la creación que toma como base nuestros ejemplos de seguimiento de los ojos de MRTK proporcionados.
->[!NOTE]
->Requiere la instalación de los paquetes MRTK Foundation y Example Unity.
-
-<br>
-
----
-
-## <a name="unreal"></a>Unreal
-
-### <a name="unreal-development-overview"></a>[Introducción al desarrollo de Unreal](unreal-development-overview.md)
-Obtén información sobre cómo compilar una aplicación de realidad mixta con Unreal.
-
-<br>
-
-### <a name="microsofts-mixed-reality-toolkit-mrtk-for-unreal"></a>[Mixed Reality Toolkit (MRTK) para Unreal de Microsoft](https://github.com/microsoft/MixedRealityToolkit-Unreal)
-Mixed Reality Toolkit para Unreal (MRTK-Unreal) es un conjunto de componentes, en forma de complementos, muestras y documentación, diseñado para acelerar el desarrollo de aplicaciones de realidad mixta con Unreal Engine.
-
-<br>
-
-### <a name="open-source-sample-apps-and-a-step-by-step-tutorial"></a>[Aplicaciones de código abierto de muestra y tutorial paso a paso](unreal-uxt-ch1.md)
-El tutorial para empezar a trabajar con el desarrollo de realidad mixta en Unreal guía a los desarrolladores por todo el proceso de creación de una aplicación de HoloLens 2 con [UX Tools para Unreal v0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
-
-<br>
-
----
-
-## <a name="javascript"></a>JavaScript   
-
-### <a name="javascript-development-overview"></a>[Introducción al desarrollo con JavaScript](javascript-development-overview.md)   
-Obtén información sobre cómo compilar una aplicación de realidad mixta con JavaScript para cualquier plataforma.
-
-<br>
-
----
-
-## <a name="native"></a>Nativo
-
-
-### <a name="native-development-overview"></a>[Introducción al desarrollo nativo](directx-development-overview.md)
-El camino más rápido para compilar una aplicación de realidad mixta nativa.
-
-<br>
-
-### <a name="directx-uwp-app-templates-for-mixed-reality"></a>[Plantillas de aplicación para UWP de DirectX para la realidad mixta](https://marketplace.visualstudio.com/items?itemName=WindowsMixedRealityteam.WindowsMixedRealityAppTemplatesVSIX)
-Todos los aspectos esenciales que necesitas para empezar a escribir una aplicación de realidad mixta con DirectX.
-
-<br>
-
----
-
-
-## <a name="what-would-you-like-to-do-next"></a>¿Qué quieres hacer ahora?
-
+<!-- 
+## What would you like to do next?
 
 :::row:::
     :::column:::
-       [![Comprender los conceptos básicos](images/icon-lightbulb.png)](get-started-with-mr.md#understand-the-basics)<br>
-        **[Comprender los conceptos básicos](get-started-with-mr.md#understand-the-basics)**<br>
-        Obtén una mejor comprensión de lo que define la realidad mixta y cómo se usa.
+       [![Understand the basics](images/icon-lightbulb.png)](get-started-with-mr.md#understand-the-basics)<br>
+        **[Understand the basics](get-started-with-mr.md#understand-the-basics)**<br>
+        Get a better understanding of what defines mixed reality and how it’s being used.
     :::column-end:::
     :::column:::
-        [![Convertirme en creador](images/icon-design.jpg)](design.md)<br>
-         **[Convertirme en creador](design.md)**<br>
-        Conoce los conceptos básicos que necesitas para empezar a diseñar y a crear prototipos.
+        [![Become a creator](images/icon-design.jpg)](design.md)<br>
+         **[Become a creator](design.md)**<br>
+        Learn the basic concepts you need to begin designing and prototyping.
     :::column-end:::
     :::column:::
-        [![Instalar las herramientas](images/icon-developer.jpg)](install-the-tools.md)<br>
-         **[Instalar las herramientas](install-the-tools.md)**<br>
-        Usa la lista de comprobación de instalación para obtener las herramientas que necesitas para crear aplicaciones para HoloLens y realidad mixta.
+        [![Install the tools](images/icon-developer.jpg)](install-the-tools.md)<br>
+         **[Install the tools](install-the-tools.md)**<br>
+        Use the installation checklist to get the tools you need to build apps for HoloLens and mixed reality.
     :::column-end:::
     :::column:::
-        [![Asistir a un evento](images/icon-calendar.jpg)](sf-academy-events.md)<br>
-         **[Asistir a un evento](sf-academy-events.md)**<br>
-        Observa el hardware y obtén un tutorial práctico para crear tu primera aplicación de HoloLens 2.
+        [![Come to an event](images/icon-calendar.jpg)](sf-academy-events.md)<br>
+         **[Come to an event](sf-academy-events.md)**<br>
+        See the hardware and get a hands-on tutorial to make your first HoloLens 2 application.
     :::column-end:::
 :::row-end:::
+-->
 
-
-<br>
-
-<br>
